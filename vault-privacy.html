@@ -245,6 +245,10 @@
     padding: 4px 0 4px 16px;
   }
 
+  .tech-detail ul li::before {
+    width: 4px; height: 4px;
+  }
+
   code {
     font-family: 'Courier New', monospace;
     font-size: 13px;
@@ -252,6 +256,47 @@
     background: var(--surface);
     padding: 1px 5px;
     border-radius: 3px;
+  }
+
+  /* ── TWO-COLUMN LIST (collects / does not collect) ── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 16px 0;
+  }
+
+  .col-card {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+  }
+
+  .col-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .col-label.yes { color: var(--glacial); }
+  .col-label.no  { color: var(--muted); }
+
+  .col-card ul { margin: 0; }
+
+  .col-card ul li {
+    font-size: 13px;
+    color: var(--haze);
+    border-bottom: none;
+    padding: 3px 0 3px 14px;
+    line-height: 1.6;
+  }
+
+  .col-card ul li::before {
+    width: 4px; height: 4px;
   }
 
   /* ── CLICK TO REVEAL ADDRESS ── */
@@ -271,12 +316,9 @@
     padding: 4px 0;
     margin-top: 4px;
     transition: color 0.2s;
-    border-bottom: 1px solid transparent;
   }
 
-  .address-toggle:hover {
-    color: var(--haze);
-  }
+  .address-toggle:hover { color: var(--haze); }
 
   .address-toggle .toggle-icon {
     font-size: 10px;
@@ -284,9 +326,7 @@
     display: inline-block;
   }
 
-  .address-toggle.open .toggle-icon {
-    transform: rotate(90deg);
-  }
+  .address-toggle.open .toggle-icon { transform: rotate(90deg); }
 
   .address-revealed {
     display: none;
@@ -302,16 +342,13 @@
     animation: fadeIn 0.2s ease;
   }
 
-  .address-revealed.visible {
-    display: block;
-  }
+  .address-revealed.visible { display: block; }
 
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-4px); }
     to   { opacity: 1; transform: translateY(0); }
   }
 
-  /* ── FOOTER ── */
   footer {
     border-top: 1px solid var(--border);
     padding: 24px 72px;
@@ -347,6 +384,7 @@
     main { padding: 48px 28px 64px; }
     footer { padding: 20px 28px; }
     .page-title { font-size: 28px; }
+    .two-col { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -362,7 +400,7 @@
   <main>
 
     <div class="page-title">Privacy Policy</div>
-    <div class="page-meta">Northlight Vault &nbsp;·&nbsp; Effective Date: May 16, 2026 &nbsp;·&nbsp; Last Updated: May 16, 2026</div>
+    <div class="page-meta">Northlight Vault &nbsp;·&nbsp; Effective Date: May 17, 2026 &nbsp;·&nbsp; Last Updated: May 17, 2026</div>
     <div class="aurora-line"></div>
 
     <!-- 1. WHO WE ARE -->
@@ -506,11 +544,47 @@
       <p><strong style="color:#ffffff;">Feedback data:</strong> We retain user feedback for 12 months from the date of submission. After 12 months, all feedback is deleted from our system, including your name, email, and feedback text. If you request deletion before this period ends, we will delete your feedback within 30 days of your request.</p>
     </section>
 
-    <!-- 7. ANALYTICS -->
+    <!-- 7. ANALYTICS, CRASH REPORTING, AND SOFTWARE UPDATES -->
     <section>
       <h2>7. Analytics, Crash Reporting, and Software Updates</h2>
-      <p><strong style="color:#ffffff;">Analytics and crash reporting:</strong> Northlight Vault does not currently use analytics or crash reporting tools.</p>
-      <p><strong style="color:#ffffff;">Software updates:</strong> Northlight Vault includes an automatic update check that connects to GitHub to determine whether a newer version is available. This request is made directly between your device and GitHub's servers. Northlight does not log or store connection data from update checks. <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement →</a></p>
+
+      <h3>Analytics</h3>
+      <p>Northlight Vault does not use analytics tools or collect data about how you use the app.</p>
+
+      <h3>Crash Reporting — Sentry</h3>
+      <p>Northlight Vault uses Sentry to capture crash reports when the app encounters a critical error. This is the only data that leaves your device, and it is sent directly to Sentry — not to Northlight.</p>
+
+      <div class="two-col">
+        <div class="col-card">
+          <div class="col-label yes">What Sentry collects when the app crashes</div>
+          <ul>
+            <li>Error message and stack trace</li>
+            <li>Native crash minidumps — a memory snapshot taken at the moment of the crash. These may contain local file paths or environment variable names that were in memory. Sentry processes minidumps to generate a readable crash report and deletes the raw minidump automatically.</li>
+            <li>Breadcrumbs — a short log of recent app events leading up to the crash (e.g., "opened folder", "error occurred")</li>
+            <li>Device information — operating system name and version, CPU architecture</li>
+            <li>App version number</li>
+          </ul>
+        </div>
+        <div class="col-card">
+          <div class="col-label no">What Sentry does not collect</div>
+          <ul>
+            <li>OAuth tokens or credentials of any kind</li>
+            <li>File names, folder names, or any content from your cloud storage</li>
+            <li>Your search queries or browsing history</li>
+            <li>Your email address or any personally identifying information</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="notice">
+        <p><strong style="color:#ffffff;">Data location:</strong> Sentry's servers are located in the European Union (<code>ingest.de.sentry.io</code>). Your crash data is subject to EU data protection laws and Sentry's privacy practices.</p>
+        <p><a href="https://sentry.io/privacy" target="_blank" rel="noopener">Sentry Privacy Policy →</a></p>
+      </div>
+
+      <p><strong style="color:#ffffff;">Performance tracing:</strong> Performance tracing is disabled. Sentry only activates when a crash or unhandled error occurs — it does not continuously monitor or transmit data about normal app usage.</p>
+
+      <h3>Software Updates</h3>
+      <p>Northlight Vault includes an automatic update check that connects to GitHub to determine whether a newer version is available. This request is made directly between your device and GitHub's servers. Northlight does not log or store connection data from update checks. <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement →</a></p>
     </section>
 
     <!-- 8. PIPEDA -->
@@ -578,17 +652,16 @@
     function toggleAddress(id, btn) {
       var el = document.getElementById(id);
       var isOpen = el.classList.contains('visible');
-
       if (isOpen) {
         el.classList.remove('visible');
         btn.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');
-        btn.querySelector('.toggle-icon').parentNode.childNodes[2].nodeValue = ' Show address';
+        btn.querySelector('.toggle-icon').nextSibling.textContent = ' Show address';
       } else {
         el.classList.add('visible');
         btn.classList.add('open');
         btn.setAttribute('aria-expanded', 'true');
-        btn.querySelector('.toggle-icon').parentNode.childNodes[2].nodeValue = ' Hide address';
+        btn.querySelector('.toggle-icon').nextSibling.textContent = ' Hide address';
       }
     }
   </script>
