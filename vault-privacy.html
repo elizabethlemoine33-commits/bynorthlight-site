@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Northlight Vault — Privacy Policy</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --midnight:   #0E0E14;
+    --surface:    #12121E;
+    --surface-2:  #10101C;
+    --border:     #1E2035;
+    --border-2:   #2A2A48;
+    --text:       #FFFFFF;
+    --cloud:      #C8CCE0;
+    --haze:       #B0B8D8;
+    --muted:      #8A92A8;
+    --structural: #5A6080;
+    --glacial:    #4FC3C8;
+    --boreal:     #5B8DD9;
+    --dusk:       #8B6FD4;
+    --aurora:     #C46FAA;
+  }
+
+  body {
+    background: var(--midnight);
+    color: var(--cloud);
+    font-family: 'Outfit', sans-serif;
+    min-height: 100vh;
+  }
+
+  .top-bar {
+    height: 2px;
+    background: linear-gradient(90deg, #4fc3c8 0%, #5b8dd9 30%, #8b6fd4 65%, #c46faa 100%);
+  }
+
+  header {
+    padding: 36px 72px 32px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .wordmark {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    letter-spacing: 0.07em;
+    background: linear-gradient(105deg, #4fc3c8 0%, #5b8dd9 33%, #8b6fd4 66%, #c46faa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .header-product {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  main {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 64px 72px 80px;
+  }
+
+  .page-title {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    letter-spacing: 0.04em;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+
+  .page-meta {
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .aurora-line {
+    width: 36px;
+    height: 2px;
+    background: linear-gradient(90deg, #4fc3c8, #8b6fd4);
+    border-radius: 2px;
+    margin: 24px 0 48px;
+  }
+
+  section { margin-bottom: 48px; }
+
+  h2 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: var(--text);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  h3 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    color: var(--haze);
+    margin: 24px 0 10px;
+  }
+
+  p {
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--cloud);
+    margin-bottom: 14px;
+  }
+
+  p:last-child { margin-bottom: 0; }
+
+  ul { list-style: none; margin: 12px 0 16px; }
+
+  ul li {
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--cloud);
+    padding: 8px 0 8px 18px;
+    position: relative;
+    border-bottom: 1px solid var(--border);
+  }
+
+  ul li:last-child { border-bottom: none; }
+
+  ul li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 50%;
+    transform: translateY(-50%);
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--structural);
+  }
+
+  ul li strong { color: var(--haze); font-weight: 600; }
+
+  .info-card {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 16px 0;
+  }
+
+  .info-card p {
+    font-size: 14px;
+    color: var(--haze);
+    margin-bottom: 6px;
+  }
+
+  .info-card p:last-child { margin-bottom: 0; }
+
+  a {
+    color: var(--glacial);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(79,195,200,0.25);
+    transition: border-color 0.2s;
+  }
+
+  a:hover { border-color: var(--glacial); }
+
+  .notice {
+    background: var(--surface);
+    border: 1px solid var(--border-2);
+    border-left: 3px solid var(--dusk);
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+
+  .notice p {
+    font-size: 14px;
+    color: var(--haze);
+    margin-bottom: 8px;
+  }
+
+  .notice p:last-child { margin-bottom: 0; }
+
+  .consent-box {
+    background: var(--surface-2);
+    border: 1px solid var(--border-2);
+    border-left: 3px solid var(--glacial);
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    margin: 16px 0;
+  }
+
+  .consent-box p {
+    font-size: 14px;
+    font-style: italic;
+    color: var(--haze);
+    margin-bottom: 0;
+  }
+
+  .tech-detail {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin: 12px 0;
+  }
+
+  .tech-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    color: var(--structural);
+    margin-bottom: 12px;
+  }
+
+  .tech-detail ul { margin: 0; }
+
+  .tech-detail ul li {
+    font-size: 14px;
+    color: var(--haze);
+    border-bottom: none;
+    padding: 4px 0 4px 16px;
+  }
+
+  code {
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    color: var(--dusk);
+    background: var(--surface);
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+
+  /* ── CLICK TO REVEAL ADDRESS ── */
+  .address-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: var(--muted);
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 4px 0;
+    margin-top: 4px;
+    transition: color 0.2s;
+    border-bottom: 1px solid transparent;
+  }
+
+  .address-toggle:hover {
+    color: var(--haze);
+  }
+
+  .address-toggle .toggle-icon {
+    font-size: 10px;
+    transition: transform 0.25s ease;
+    display: inline-block;
+  }
+
+  .address-toggle.open .toggle-icon {
+    transform: rotate(90deg);
+  }
+
+  .address-revealed {
+    display: none;
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    color: var(--haze);
+    line-height: 1.7;
+    margin-top: 8px;
+    padding: 10px 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    animation: fadeIn 0.2s ease;
+  }
+
+  .address-revealed.visible {
+    display: block;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 24px 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-left {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    color: var(--structural);
+  }
+
+  .footer-back {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--structural);
+    text-decoration: none;
+    border: none;
+    transition: color 0.2s;
+  }
+
+  .footer-back:hover { color: var(--muted); border: none; }
+
+  @media (max-width: 640px) {
+    header { padding: 28px 28px 24px; }
+    main { padding: 48px 28px 64px; }
+    footer { padding: 20px 28px; }
+    .page-title { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="top-bar"></div>
+
+  <header>
+    <a href="/index.html" class="wordmark">Northlight</a>
+    <div class="header-product">Vault &nbsp;·&nbsp; Privacy Policy</div>
+  </header>
+
+  <main>
+
+    <div class="page-title">Privacy Policy</div>
+    <div class="page-meta">Northlight Vault &nbsp;·&nbsp; Effective Date: May 16, 2026 &nbsp;·&nbsp; Last Updated: May 16, 2026</div>
+    <div class="aurora-line"></div>
+
+    <!-- 1. WHO WE ARE -->
+    <section>
+      <h2>1. Who We Are</h2>
+      <p>Northlight Vault is a desktop application developed and operated by Northlight.</p>
+      <div class="info-card">
+        <p><strong style="color:#ffffff;">Operator:</strong> Elizabeth Lemoine</p>
+        <p><strong style="color:#ffffff;">Business Registration:</strong> Pending (Nova Scotia)</p>
+        <p><strong style="color:#ffffff;">Contact:</strong> <a href="mailto:support@bynorthlight.ca">support@bynorthlight.ca</a></p>
+        <p><strong style="color:#ffffff;">Website:</strong> <a href="https://bynorthlight.ca">bynorthlight.ca</a></p>
+        <p style="margin-bottom:0;">
+          <strong style="color:#ffffff;">Physical Address:</strong>
+          <button class="address-toggle" onclick="toggleAddress('addr-1', this)" aria-expanded="false">
+            <span class="toggle-icon">▶</span> Show address
+          </button>
+          <span class="address-revealed" id="addr-1">
+            15 Kaleigh Drive, Eastern Passage, Nova Scotia B3G 1E3, Canada
+          </span>
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. COMMITMENT -->
+    <section>
+      <h2>2. Our Commitment to Your Privacy</h2>
+      <p>Northlight Vault is designed with privacy as a default. The app does not collect, transmit, or store your personal information on any Northlight servers. Everything stays on your device.</p>
+      <p>This policy explains how the app works with third-party cloud storage providers, what that means for your data, how we handle user feedback, and what rights you have as a Canadian user under the Personal Information Protection and Electronic Documents Act (PIPEDA).</p>
+    </section>
+
+    <!-- 3. INFORMATION WE COLLECT -->
+    <section>
+      <h2>3. Information We Collect</h2>
+
+      <h3>Personal Information in the App</h3>
+      <p>Northlight Vault does not collect personal information from your use of the app. Your files, browsing activity, and preferences remain on your device. The app stores the following locally on your device only:</p>
+
+      <div class="tech-detail">
+        <div class="tech-label">Authentication Tokens — Encrypted</div>
+        <ul>
+          <li>Access tokens and refresh tokens for connected cloud accounts are encrypted at rest using Windows Credential Manager via DPAPI (Data Protection API)</li>
+          <li>Tokens are written directly to Windows Credential Manager by Keytar (node-keytar)</li>
+          <li>The operating system encrypts them — they can only be decrypted during your active Windows session</li>
+          <li>Tokens never exist as plain text on disk</li>
+          <li>Tokens are deleted when you disconnect an account or uninstall Vault</li>
+        </ul>
+      </div>
+
+      <div class="tech-detail">
+        <div class="tech-label">Account Metadata — Unencrypted</div>
+        <ul>
+          <li>Display name, email address, and account provider are stored unencrypted in <code>AppData\Roaming\northlight-vault\config.json</code></li>
+          <li>This metadata contains no sensitive credentials — only information needed to show your connected account list in the sidebar</li>
+          <li>Metadata is deleted when you disconnect an account or uninstall Vault</li>
+        </ul>
+      </div>
+
+      <div class="tech-detail">
+        <div class="tech-label">App Preferences and Settings</div>
+        <ul>
+          <li>UI preferences, sort order, and other non-sensitive settings, stored locally</li>
+        </ul>
+      </div>
+
+      <p style="margin-top:16px;">All stored data remains on your device and is not accessible to Northlight or transmitted to any server.</p>
+
+      <h3>Personal Information in Feedback</h3>
+      <p>When you submit feedback through the in-app feedback form, we collect limited personal information to respond to you and improve the app. See Section 5 for full details.</p>
+    </section>
+
+    <!-- 4. THIRD-PARTY PROVIDERS -->
+    <section>
+      <h2>4. Third-Party Cloud Storage Providers</h2>
+      <p>To provide its core functionality, Northlight Vault connects to cloud storage services that you choose to authorise. Currently supported providers:</p>
+      <ul>
+        <li>Google Drive (Google LLC)</li>
+        <li>Microsoft OneDrive (Microsoft Corporation)</li>
+        <li>Dropbox (Dropbox, Inc.)</li>
+      </ul>
+
+      <h3>How it works</h3>
+      <p>When you browse files in Vault, the app retrieves file lists and metadata — names, dates, folder structure, file types — directly from your connected cloud provider and displays them on your device. This data is processed locally and is not sent to Northlight or stored on Northlight servers.</p>
+
+      <h3>Your cloud provider's responsibility</h3>
+      <p>Each provider has its own privacy policy governing how they handle your data. We encourage you to review them:</p>
+      <ul>
+        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Drive Privacy Policy</a></li>
+        <li><a href="https://privacy.microsoft.com" target="_blank" rel="noopener">Microsoft OneDrive Privacy Statement</a></li>
+        <li><a href="https://www.dropbox.com/privacy" target="_blank" rel="noopener">Dropbox Privacy Policy</a></li>
+      </ul>
+
+      <h3>Revoking access</h3>
+      <p>You can revoke Northlight Vault's access to any connected account at any time:</p>
+      <ul>
+        <li><strong>In Vault:</strong> Disconnect your account by clicking the × next to the account name in the sidebar</li>
+        <li><strong>Google Drive:</strong> <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a></li>
+        <li><strong>Microsoft OneDrive:</strong> <a href="https://account.microsoft.com/permissions" target="_blank" rel="noopener">account.microsoft.com/permissions</a></li>
+        <li><strong>Dropbox:</strong> <a href="https://dropbox.com/account/connected_apps" target="_blank" rel="noopener">dropbox.com/account/connected_apps</a></li>
+      </ul>
+    </section>
+
+    <!-- 5. USER FEEDBACK -->
+    <section>
+      <h2>5. User Feedback</h2>
+      <p>When you submit feedback through the in-app feedback form, you provide explicit consent before submission by checking a required consent checkbox.</p>
+
+      <h3>What we collect</h3>
+      <ul>
+        <li>Your name (optional)</li>
+        <li>Your email address (required)</li>
+        <li>Feedback type: bug report, feature idea, or general feedback</li>
+        <li>Cloud provider you were using, if applicable</li>
+        <li>Your feedback text</li>
+        <li>Northlight Vault version number, if reporting a bug</li>
+      </ul>
+
+      <h3>How we use it</h3>
+      <p>We store this information in ClickUp, a task management platform, so we can review your feedback, respond to you, and improve Northlight Vault. We do not use your information for marketing, and we do not share it with third parties.</p>
+
+      <h3>Data location and security</h3>
+      <div class="notice">
+        <p>Your feedback is stored in ClickUp, which is hosted on Amazon Web Services (AWS). ClickUp stores data across multiple AWS regions including Oregon (US), Ohio (US), Sydney (Australia), Singapore, and Dublin (Ireland), but does not guarantee localisation to a specific region. <strong style="color:#ffffff;">Your data may be stored in the United States or internationally.</strong></p>
+        <p>ClickUp is SOC 2 Type II certified and committed to compliance with global data protection legislation including GDPR, CCPA, and Canada's Consumer Privacy Protection Act. <a href="https://clickup.com/privacy" target="_blank" rel="noopener">ClickUp Privacy Policy →</a></p>
+      </div>
+
+      <h3>Your consent</h3>
+      <p>The feedback form displays a required consent checkbox before you can submit. The checkbox states:</p>
+      <div class="consent-box">
+        <p>"I consent to Northlight storing my name, email, and feedback in their task management system to respond to me and improve Northlight Vault. I understand my data is stored in the United States or internationally."</p>
+      </div>
+      <p>By checking this box and clicking Submit, you explicitly consent to us storing your name, email, and feedback in ClickUp for these purposes.</p>
+
+      <h3>Your rights</h3>
+      <p>You may request deletion of your feedback at any time by contacting <a href="mailto:support@bynorthlight.ca">support@bynorthlight.ca</a>. Include your email address and details of the feedback you submitted. We will delete your data within 30 days of your request.</p>
+    </section>
+
+    <!-- 6. DATA RETENTION -->
+    <section>
+      <h2>6. Data Retention</h2>
+      <p><strong style="color:#ffffff;">App data:</strong> Northlight Vault does not collect personal information from app usage, so there is nothing to retain or delete on our end. Local app data — authentication tokens, account metadata, and preferences — can be removed at any time by uninstalling the application or disconnecting accounts within the app.</p>
+      <p><strong style="color:#ffffff;">Feedback data:</strong> We retain user feedback for 12 months from the date of submission. After 12 months, all feedback is deleted from our system, including your name, email, and feedback text. If you request deletion before this period ends, we will delete your feedback within 30 days of your request.</p>
+    </section>
+
+    <!-- 7. ANALYTICS -->
+    <section>
+      <h2>7. Analytics, Crash Reporting, and Software Updates</h2>
+      <p><strong style="color:#ffffff;">Analytics and crash reporting:</strong> Northlight Vault does not currently use analytics or crash reporting tools.</p>
+      <p><strong style="color:#ffffff;">Software updates:</strong> Northlight Vault includes an automatic update check that connects to GitHub to determine whether a newer version is available. This request is made directly between your device and GitHub's servers. Northlight does not log or store connection data from update checks. <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement →</a></p>
+    </section>
+
+    <!-- 8. PIPEDA -->
+    <section>
+      <h2>8. Your Rights Under PIPEDA</h2>
+      <p>As a Canadian resident, you have the right to:</p>
+      <ul>
+        <li>Know whether Northlight holds personal information about you</li>
+        <li>Request access to any personal information we hold</li>
+        <li>Request correction of inaccurate information</li>
+        <li>Withdraw consent for the collection or use of your personal information</li>
+        <li>Lodge a complaint with the Office of the Privacy Commissioner of Canada</li>
+      </ul>
+      <p>To exercise any of these rights, contact us at <a href="mailto:support@bynorthlight.ca">support@bynorthlight.ca</a>. Please include relevant details, such as your email address if you submitted feedback.</p>
+      <p><a href="https://www.priv.gc.ca" target="_blank" rel="noopener">Office of the Privacy Commissioner of Canada →</a></p>
+    </section>
+
+    <!-- 9. CHILDREN -->
+    <section>
+      <h2>9. Children's Privacy</h2>
+      <p>Northlight Vault is not directed at anyone under the age of 18. If you are under 18, please do not use this app or submit feedback without parental consent.</p>
+    </section>
+
+    <!-- 10. CHANGES -->
+    <section>
+      <h2>10. Changes to This Policy</h2>
+      <p>We will notify users of material changes to this privacy policy through in-app messages and updated release notes. Material changes include:</p>
+      <ul>
+        <li>Adding new data collection practices</li>
+        <li>Changing data retention periods</li>
+        <li>Adding or removing third-party data processors</li>
+        <li>Changes to how we use or share personal information</li>
+      </ul>
+      <p>Minor clarifications or corrections do not require notification. Continued use of the app after notification of material changes constitutes acceptance of the updated policy.</p>
+    </section>
+
+    <!-- 11. CONTACT -->
+    <section>
+      <h2>11. Contact Us</h2>
+      <p>Questions about this privacy policy or your privacy rights?</p>
+      <div class="info-card">
+        <p><strong style="color:#ffffff;">Northlight</strong></p>
+        <p><a href="mailto:support@bynorthlight.ca">support@bynorthlight.ca</a></p>
+        <p><a href="https://bynorthlight.ca">bynorthlight.ca</a></p>
+        <p style="margin-top:8px; margin-bottom:0;">
+          <strong style="color:#ffffff;">Physical Address:</strong>
+          <button class="address-toggle" onclick="toggleAddress('addr-2', this)" aria-expanded="false">
+            <span class="toggle-icon">▶</span> Show address
+          </button>
+          <span class="address-revealed" id="addr-2">
+            15 Kaleigh Drive, Eastern Passage, Nova Scotia B3G 1E3, Canada
+          </span>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-left">© 2026 Northlight. All rights reserved.</div>
+    <a href="/index.html" class="footer-back">← Back to Northlight</a>
+  </footer>
+
+  <script>
+    function toggleAddress(id, btn) {
+      var el = document.getElementById(id);
+      var isOpen = el.classList.contains('visible');
+
+      if (isOpen) {
+        el.classList.remove('visible');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.querySelector('.toggle-icon').parentNode.childNodes[2].nodeValue = ' Show address';
+      } else {
+        el.classList.add('visible');
+        btn.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+        btn.querySelector('.toggle-icon').parentNode.childNodes[2].nodeValue = ' Hide address';
+      }
+    }
+  </script>
+
+</body>
+</html>

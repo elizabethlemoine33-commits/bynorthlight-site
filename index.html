@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Northlight — Strategy · Advisory · AI · Apps</title>
+<meta name="description" content="Strategy, operations, AI adoption, and app development for organisations ready to cut through the noise. Clear thinking. Real results.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --midnight:   #0E0E14;
+    --surface:    #12121E;
+    --border:     #1E2035;
+    --border-2:   #2A2A48;
+    --text:       #FFFFFF;
+    --cloud:      #C8CCE0;
+    --haze:       #B0B8D8;
+    --muted:      #8A92A8;
+    --structural: #5A6080;
+    --glacial:    #4FC3C8;
+    --boreal:     #5B8DD9;
+    --dusk:       #8B6FD4;
+    --aurora:     #C46FAA;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    background: var(--midnight);
+    color: var(--cloud);
+    font-family: 'Outfit', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── AURORA TOP BAR ── */
+  .top-bar {
+    height: 2px;
+    background: linear-gradient(90deg, #4fc3c8 0%, #5b8dd9 30%, #8b6fd4 65%, #c46faa 100%);
+    flex-shrink: 0;
+  }
+
+  /* ── MAIN ── */
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 72px;
+    max-width: 860px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Ambient glow */
+  main::after {
+    content: '';
+    position: absolute;
+    top: -120px; right: -120px;
+    width: 500px; height: 500px;
+    background: radial-gradient(ellipse, rgba(91,141,217,0.055) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  /* ── WORDMARK ── */
+  .wordmark {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 68px;
+    letter-spacing: 0.07em;
+    line-height: 1;
+    background: linear-gradient(105deg, #4fc3c8 0%, #5b8dd9 33%, #8b6fd4 66%, #c46faa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+  }
+
+  .descriptor {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 36px;
+  }
+
+  /* ── AURORA LINE ── */
+  .aurora-line {
+    width: 36px;
+    height: 2px;
+    background: linear-gradient(90deg, #4fc3c8, #8b6fd4);
+    border-radius: 2px;
+    margin-bottom: 32px;
+  }
+
+  /* ── TAGLINE ── */
+  .tagline {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    letter-spacing: 0.03em;
+    line-height: 1.15;
+    color: var(--text);
+    margin-bottom: 20px;
+  }
+
+  .tagline span {
+    background: linear-gradient(105deg, #4fc3c8 0%, #5b8dd9 40%, #8b6fd4 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ── BODY COPY ── */
+  .body-copy {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--cloud);
+    max-width: 520px;
+    margin-bottom: 36px;
+  }
+
+  /* ── EMAIL ── */
+  .contact-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--structural);
+    margin-bottom: 8px;
+  }
+
+  .email-link {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    color: var(--haze);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-2);
+    padding-bottom: 3px;
+    transition: color 0.2s, border-color 0.2s;
+    display: inline-block;
+  }
+
+  .email-link:hover {
+    color: var(--text);
+    border-color: var(--muted);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 20px 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .vault-note {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    color: var(--structural);
+    letter-spacing: 0.02em;
+  }
+
+  .footer-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-name {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    color: var(--structural);
+  }
+
+  .footer-privacy {
+    font-family: 'Outfit', sans-serif;
+    font-size: 12px;
+    color: var(--structural);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+
+  .footer-privacy:hover {
+    color: var(--muted);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    main {
+      padding: 60px 32px;
+    }
+
+    .wordmark {
+      font-size: 48px;
+    }
+
+    .tagline {
+      font-size: 26px;
+    }
+
+    footer {
+      padding: 20px 32px;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <div class="top-bar"></div>
+
+  <main>
+    <div class="wordmark">Northlight</div>
+    <div class="descriptor">Strategy &nbsp;·&nbsp; Advisory &nbsp;·&nbsp; AI &nbsp;·&nbsp; Apps</div>
+    <div class="aurora-line"></div>
+    <div class="tagline"><span>Clear thinking.</span><br>Real results.</div>
+    <div class="body-copy">
+      Strategy, operations, AI adoption, and app development for organisations ready to cut through the noise. More coming soon.
+    </div>
+    <div class="contact-label">Get in touch</div>
+    <a href="mailto:elizabeth@bynorthlight.ca" class="email-link">elizabeth@bynorthlight.ca</a>
+  </main>
+
+  <footer>
+    <div class="vault-note">Northlight Vault — coming soon</div>
+    <div class="footer-right">
+      <div class="footer-name">Elizabeth Lemoine</div>
+      <a href="/vault-privacy.html" class="footer-privacy">Vault Privacy Policy</a>
+    </div>
+  </footer>
+
+</body>
+</html>
