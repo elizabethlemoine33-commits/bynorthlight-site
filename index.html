@@ -13,6 +13,7 @@
   :root {
     --midnight:   #0E0E14;
     --surface:    #12121E;
+    --surface-2:  #10101C;
     --border:     #1E2035;
     --border-2:   #2A2A48;
     --text:       #FFFFFF;
@@ -26,9 +27,7 @@
     --aurora:     #C46FAA;
   }
 
-  html, body {
-    height: 100%;
-  }
+  html, body { height: 100%; }
 
   body {
     background: var(--midnight);
@@ -39,7 +38,7 @@
     flex-direction: column;
   }
 
-  /* ── AURORA TOP BAR ── */
+  /* ── TOP BAR ── */
   .top-bar {
     height: 2px;
     background: linear-gradient(90deg, #4fc3c8 0%, #5b8dd9 30%, #8b6fd4 65%, #c46faa 100%);
@@ -49,11 +48,8 @@
   /* ── MAIN ── */
   main {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 80px 72px;
-    max-width: 860px;
+    padding: 80px 72px 72px;
+    max-width: 960px;
     position: relative;
     overflow: hidden;
   }
@@ -66,6 +62,7 @@
     width: 500px; height: 500px;
     background: radial-gradient(ellipse, rgba(91,141,217,0.055) 0%, transparent 65%);
     pointer-events: none;
+    z-index: 0;
   }
 
   /* ── WORDMARK ── */
@@ -80,6 +77,7 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 10px;
+    position: relative; z-index: 1;
   }
 
   .descriptor {
@@ -90,18 +88,17 @@
     text-transform: uppercase;
     color: var(--muted);
     margin-bottom: 36px;
+    position: relative; z-index: 1;
   }
 
-  /* ── AURORA LINE ── */
   .aurora-line {
-    width: 36px;
-    height: 2px;
+    width: 36px; height: 2px;
     background: linear-gradient(90deg, #4fc3c8, #8b6fd4);
     border-radius: 2px;
     margin-bottom: 32px;
+    position: relative; z-index: 1;
   }
 
-  /* ── TAGLINE ── */
   .tagline {
     font-family: 'Jost', sans-serif;
     font-weight: 600;
@@ -110,6 +107,7 @@
     line-height: 1.15;
     color: var(--text);
     margin-bottom: 20px;
+    position: relative; z-index: 1;
   }
 
   .tagline span {
@@ -119,7 +117,6 @@
     background-clip: text;
   }
 
-  /* ── BODY COPY ── */
   .body-copy {
     font-family: 'Outfit', sans-serif;
     font-weight: 400;
@@ -128,9 +125,9 @@
     color: var(--cloud);
     max-width: 520px;
     margin-bottom: 36px;
+    position: relative; z-index: 1;
   }
 
-  /* ── EMAIL ── */
   .contact-label {
     font-family: 'Jost', sans-serif;
     font-size: 10px;
@@ -139,6 +136,7 @@
     text-transform: uppercase;
     color: var(--structural);
     margin-bottom: 8px;
+    position: relative; z-index: 1;
   }
 
   .email-link {
@@ -152,11 +150,246 @@
     padding-bottom: 3px;
     transition: color 0.2s, border-color 0.2s;
     display: inline-block;
+    position: relative; z-index: 1;
   }
 
-  .email-link:hover {
+  .email-link:hover { color: var(--text); border-color: var(--muted); }
+
+  /* ── WHAT WE'RE BUILDING ── */
+  .building-section {
+    margin-top: 56px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+    position: relative; z-index: 1;
+  }
+
+  .building-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--structural);
+    margin-bottom: 28px;
+  }
+
+  .building-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+
+  /* ── LAPTOP MOCKUP ── */
+  .laptop-wrap {
+    position: relative;
+    filter: drop-shadow(0 32px 60px rgba(91,141,217,0.18)) drop-shadow(0 6px 16px rgba(0,0,0,0.6));
+  }
+
+  .laptop-lid {
+    background: #1a1a2e;
+    border-radius: 10px 10px 0 0;
+    border: 2px solid #2a2a48;
+    border-bottom: none;
+    padding: 9px 9px 0;
+    position: relative;
+  }
+
+  .laptop-lid::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, #4fc3c8 0%, #5b8dd9 30%, #8b6fd4 65%, #c46faa 100%);
+    border-radius: 8px 8px 0 0;
+  }
+
+  .laptop-lid::after {
+    content: '';
+    position: absolute;
+    top: 5px; left: 50%; transform: translateX(-50%);
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: #2a2a48;
+  }
+
+  .laptop-screen {
+    background: #0e0e14;
+    border-radius: 3px;
+    overflow: hidden;
+    aspect-ratio: 16/10;
+    position: relative;
+  }
+
+  .laptop-screen img {
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
+  }
+
+  .laptop-screen::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(79,195,200,0.03) 0%, transparent 50%, rgba(139,111,212,0.03) 100%);
+    pointer-events: none;
+  }
+
+  .laptop-base {
+    background: linear-gradient(180deg, #1e1e32 0%, #16162a 100%);
+    border: 2px solid #2a2a48;
+    border-top: 1px solid #3a3a58;
+    border-radius: 0 0 7px 7px;
+    height: 16px;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .laptop-base::after {
+    content: '';
+    width: 28%; height: 8px;
+    background: #2a2a48; border-radius: 3px;
+  }
+
+  .laptop-stand {
+    width: 68%; height: 5px;
+    background: linear-gradient(180deg, #12121e, transparent);
+    border-radius: 0 0 5px 5px;
+    margin: 0 auto;
+  }
+
+  .laptop-glow {
+    position: absolute;
+    bottom: 8px; left: 50%;
+    transform: translateX(-50%);
+    width: 80%; height: 36px;
+    background: radial-gradient(ellipse, rgba(91,141,217,0.22) 0%, transparent 70%);
+    filter: blur(12px);
+    pointer-events: none;
+  }
+
+  /* ── VAULT CARD ── */
+  .vault-card {
+    background: var(--surface-2);
+    border: 1px solid var(--border-2);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    transition: border-color 0.25s;
+  }
+
+  .vault-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, #4fc3c8 0%, #5b8dd9 30%, #8b6fd4 65%, #c46faa 100%);
+  }
+
+  .vault-card:hover { border-color: #3a3a58; }
+
+  .vault-card-inner {
+    padding: 24px 24px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .vault-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+
+  .vault-logo {
+    width: 48px; height: 48px;
+    border-radius: 11px;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+  }
+
+  .vault-logo img {
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
+  }
+
+  .vault-name {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.05em;
     color: var(--text);
-    border-color: var(--muted);
+  }
+
+  .vault-product-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--structural);
+    margin-top: 2px;
+  }
+
+  .vault-tagline {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.03em;
+    line-height: 1.2;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+
+  .vault-tagline span {
+    background: linear-gradient(105deg, #4fc3c8 0%, #5b8dd9 40%, #8b6fd4 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .vault-blurb {
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--haze);
+    margin-bottom: 22px;
+  }
+
+  .vault-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: var(--glacial);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(79,195,200,0.3);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .vault-cta:hover { color: #fff; border-color: rgba(255,255,255,0.3); }
+
+  .vault-early {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 12px;
+    color: var(--structural);
+    margin-top: 10px;
+  }
+
+  .vault-early-dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--dusk);
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
   }
 
   /* ── FOOTER ── */
@@ -171,19 +404,6 @@
     gap: 12px;
   }
 
-  .vault-note {
-    font-family: 'Outfit', sans-serif;
-    font-size: 13px;
-    color: var(--structural);
-    letter-spacing: 0.02em;
-  }
-
-  .footer-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-
   .footer-name {
     font-family: 'Jost', sans-serif;
     font-size: 11px;
@@ -192,7 +412,13 @@
     color: var(--structural);
   }
 
-  .footer-privacy {
+  .footer-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-link {
     font-family: 'Outfit', sans-serif;
     font-size: 12px;
     color: var(--structural);
@@ -201,26 +427,19 @@
     transition: color 0.2s;
   }
 
-  .footer-privacy:hover {
-    color: var(--muted);
-  }
+  .footer-link:hover { color: var(--muted); }
 
   /* ── RESPONSIVE ── */
-  @media (max-width: 640px) {
-    main {
-      padding: 60px 32px;
-    }
+  @media (max-width: 768px) {
+    main { padding: 60px 32px 52px; }
+    footer { padding: 20px 32px; }
 
-    .wordmark {
-      font-size: 48px;
-    }
+    .wordmark { font-size: 48px; }
+    .tagline { font-size: 26px; }
 
-    .tagline {
-      font-size: 26px;
-    }
-
-    footer {
-      padding: 20px 32px;
+    .building-row {
+      grid-template-columns: 1fr;
+      gap: 28px;
     }
   }
 </style>
@@ -235,17 +454,61 @@
     <div class="aurora-line"></div>
     <div class="tagline"><span>Clear thinking.</span><br>Real results.</div>
     <div class="body-copy">
-      Strategy, operations, AI adoption, and app development for organisations ready to cut through the noise. More coming soon.
+      Strategy, operations, AI adoption, and app development for organisations ready to cut through the noise.
     </div>
     <div class="contact-label">Get in touch</div>
     <a href="mailto:elizabeth@bynorthlight.ca" class="email-link">elizabeth@bynorthlight.ca</a>
+
+    <!-- ── WHAT WE'RE BUILDING ── -->
+    <div class="building-section">
+      <div class="building-label">What we're building</div>
+      <div class="building-row">
+
+        <!-- Laptop mockup -->
+        <div style="position:relative;">
+          <div class="laptop-glow"></div>
+          <div class="laptop-wrap">
+            <div class="laptop-lid">
+              <div class="laptop-screen">
+                <img src="northlight-vault-screenshot-3.png" alt="Northlight Vault — cloud file browser">
+              </div>
+            </div>
+            <div class="laptop-base"></div>
+            <div class="laptop-stand"></div>
+          </div>
+        </div>
+
+        <!-- Vault card -->
+        <div class="vault-card">
+          <div class="vault-card-inner">
+            <div class="vault-header">
+              <div class="vault-logo">
+                <img src="Northlight_temp_logo.png" alt="Northlight Vault">
+              </div>
+              <div>
+                <div class="vault-name">Northlight Vault</div>
+                <div class="vault-product-label">Cloud File Browser &nbsp;·&nbsp; Windows</div>
+              </div>
+            </div>
+            <div class="vault-tagline"><span>All your cloud storage.</span><br>One place.</div>
+            <div class="vault-blurb">Browse files across Google Drive, OneDrive, and Dropbox in a single desktop app — without switching tabs.</div>
+            <a href="/vault.html" class="vault-cta">Learn more &amp; download →</a>
+            <div class="vault-early">
+              <span class="vault-early-dot"></span>
+              Free during early access
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </main>
 
   <footer>
-    <div class="vault-note">Northlight Vault — coming soon</div>
+    <div class="footer-name">Elizabeth Lemoine</div>
     <div class="footer-right">
-      <div class="footer-name">Elizabeth Lemoine</div>
-      <a href="/vault-privacy.html" class="footer-privacy">Vault Privacy Policy</a>
+      <a href="/vault.html" class="footer-link">Northlight Vault</a>
+      <a href="/vault-privacy.html" class="footer-link">Vault Privacy Policy</a>
     </div>
   </footer>
 
