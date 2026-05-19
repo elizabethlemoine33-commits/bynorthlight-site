@@ -34,6 +34,24 @@
     min-height: 100vh;
   }
 
+  /* ── SKIP NAV ── */
+  .skip-nav {
+    position: absolute;
+    top: -100px; left: 0;
+    background: var(--dusk);
+    color: #fff;
+    padding: 10px 20px;
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    border-radius: 0 0 6px 0;
+    z-index: 9999;
+    transition: top 0.2s;
+  }
+  .skip-nav:focus { top: 0; }
+
   /* ── TOP BAR ── */
   .top-bar {
     height: 2px;
@@ -597,7 +615,7 @@
   .footer-left {
     font-family: 'Outfit', sans-serif;
     font-size: 13px;
-    color: var(--structural);
+    color: var(--muted);
   }
 
   .footer-right {
@@ -609,12 +627,12 @@
   .footer-link {
     font-family: 'Outfit', sans-serif;
     font-size: 13px;
-    color: var(--structural);
+    color: var(--muted);
     text-decoration: none;
     transition: color 0.2s;
   }
 
-  .footer-link:hover { color: var(--muted); }
+  .footer-link:hover { color: var(--haze); }
 
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
@@ -641,92 +659,94 @@
 </head>
 <body>
 
-  <div class="top-bar"></div>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+  <div class="top-bar" role="presentation"></div>
 
   <header>
     <a href="/index.html" class="wordmark">Northlight</a>
-    <div class="header-right">Vault &nbsp;·&nbsp; Cloud File Browser</div>
+    <p class="header-right">Vault &nbsp;·&nbsp; Cloud File Browser</p>
   </header>
 
   <!-- ── HERO ── -->
-  <section class="hero">
+  <section class="hero" id="main-content">
     <div class="hero-left">
-      <div class="hero-eyebrow">Northlight Vault &nbsp;·&nbsp; v1.0.0</div>
+      <p class="hero-eyebrow">Northlight Vault &nbsp;·&nbsp; v1.0.0</p>
       <h1 class="hero-title">All your cloud storage.<br><span>One place.</span></h1>
       <p class="hero-subtitle">
         Northlight Vault is a Windows desktop app that brings your cloud storage together in one place. Browse, search, and open files across Google Drive, OneDrive, and Dropbox — without switching between apps or browser tabs.
       </p>
 
       <div class="early-access">
-        <span class="early-access-dot"></span>
+        <span class="early-access-dot" role="presentation"></span>
         Free during early access
       </div>
 
       <div class="download-wrap">
         <!-- UPDATE href TO GITHUB RELEASE URL WHEN PUBLISHED -->
         <a href="#" class="btn-download">
-          <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Download Vault v1.0.0 for Windows
         </a>
-        <div class="download-meta">
+        <p class="download-meta">
           Windows 10 or later &nbsp;·&nbsp; No account required &nbsp;·&nbsp;
-          By downloading, you agree to our <a href="/vault-privacy.html">Privacy Policy</a>
-        </div>
+          By downloading, you agree to our <a href="/vault-privacy.html">Northlight Vault Privacy Policy</a>
+        </p>
       </div>
     </div>
 
     <!-- ── LAPTOP MOCKUP ── -->
     <div class="hero-right">
-      <div class="laptop-glow"></div>
+      <div class="laptop-glow" role="presentation"></div>
       <div class="laptop-wrap">
         <div class="laptop-lid">
           <div class="laptop-screen">
-            <img src="northlight-vault-screenshot-3.png" alt="Northlight Vault — file browser">
+            <img src="northlight-vault-screenshot-3.png" alt="Northlight Vault app showing a Documents folder with Northlight project files listed across connected cloud accounts">
           </div>
         </div>
-        <div class="laptop-base"></div>
-        <div class="laptop-stand"></div>
+        <div class="laptop-base" role="presentation"></div>
+        <div class="laptop-stand" role="presentation"></div>
       </div>
     </div>
   </section>
 
   <!-- ── SCREENSHOTS ── -->
-  <section class="screenshots-section">
-    <div class="screenshots-label">Screenshots &nbsp;·&nbsp; <span style="color:#3a3d52;font-size:10px;">Click to enlarge</span></div>
+  <section class="screenshots-section" aria-label="App screenshots">
+    <p class="screenshots-label">Screenshots &nbsp;·&nbsp; <span style="color:var(--muted);font-size:10px;">Click to enlarge</span></p>
     <div class="screenshots-grid">
-      <img src="northlight-vault-screenshot-3.png" alt="Vault file browser — Documents view" class="screenshot-img" onclick="openLightbox(this)">
-      <img src="northlight-vault-screenshot-2.png" alt="Vault file browser — Northlight Projects folder" class="screenshot-img" onclick="openLightbox(this)">
-      <img src="northlight-vault-screenshot-4.png" alt="Vault — connected across Google Drive, OneDrive, and Dropbox" class="screenshot-img" onclick="openLightbox(this)">
-      <img src="northlight-vault-screenshot-1.png" alt="Vault — Help menu showing version and changelog" class="screenshot-img" onclick="openLightbox(this)">
+      <img src="northlight-vault-screenshot-3.png" alt="Vault file browser showing Documents folder with a list of Northlight files including PDFs, spreadsheets, and presentations" class="screenshot-img" onclick="openLightbox(this)" tabindex="0" onkeydown="if(event.key==='Enter')openLightbox(this)" role="button">
+      <img src="northlight-vault-screenshot-2.png" alt="Vault file browser showing the Northlight Projects subfolder with files from multiple cloud accounts" class="screenshot-img" onclick="openLightbox(this)" tabindex="0" onkeydown="if(event.key==='Enter')openLightbox(this)" role="button">
+      <img src="northlight-vault-screenshot-4.png" alt="Vault sidebar showing Google Drive, OneDrive, and Dropbox accounts all connected under a single elizabeth@bynorthlight.ca account" class="screenshot-img" onclick="openLightbox(this)" tabindex="0" onkeydown="if(event.key==='Enter')openLightbox(this)" role="button">
+      <img src="northlight-vault-screenshot-1.png" alt="Vault Help menu open showing options including View Changelog, Check for Updates, About Northlight Vault, and version number v1.0.0" class="screenshot-img" onclick="openLightbox(this)" tabindex="0" onkeydown="if(event.key==='Enter')openLightbox(this)" role="button">
     </div>
   </section>
 
   <hr class="divider">
 
   <!-- ── HOW IT WORKS ── -->
-  <section class="how-section">
-    <div class="section-label">How it works</div>
+  <section class="how-section" aria-labelledby="how-heading">
+    <h2 id="how-heading" class="section-label">How it works</h2>
     <div class="how-grid">
 
       <div class="how-card">
-        <div class="how-accent" style="background: linear-gradient(90deg, #4fc3c8, #5b8dd9);"></div>
-        <div class="how-number">01</div>
-        <div class="how-title">Connect your accounts</div>
-        <div class="how-body">Link your Google Drive, Microsoft OneDrive, and Dropbox accounts in seconds. No new account required — Vault connects to storage you already have.</div>
+        <div class="how-accent" style="background: linear-gradient(90deg, #4fc3c8, #5b8dd9);" role="presentation"></div>
+        <p class="how-number" aria-hidden="true">01</p>
+        <h3 class="how-title">Connect your accounts</h3>
+        <p class="how-body">Link your Google Drive, Microsoft OneDrive, and Dropbox accounts in seconds. No new account required — Vault connects to storage you already have.</p>
       </div>
 
       <div class="how-card">
-        <div class="how-accent" style="background: linear-gradient(90deg, #5b8dd9, #8b6fd4);"></div>
-        <div class="how-number">02</div>
-        <div class="how-title">Browse everything at once</div>
-        <div class="how-body">See all your files across every connected provider in a single interface. No more remembering which platform something is on.</div>
+        <div class="how-accent" style="background: linear-gradient(90deg, #5b8dd9, #8b6fd4);" role="presentation"></div>
+        <p class="how-number" aria-hidden="true">02</p>
+        <h3 class="how-title">Browse everything at once</h3>
+        <p class="how-body">See all your files across every connected provider in a single interface. No more remembering which platform something is on.</p>
       </div>
 
       <div class="how-card">
-        <div class="how-accent" style="background: linear-gradient(90deg, #8b6fd4, #c46faa);"></div>
-        <div class="how-number">03</div>
-        <div class="how-title">Open files instantly</div>
-        <div class="how-body">Click any file and it opens in its native app. Fast, simple, and always in the right place.</div>
+        <div class="how-accent" style="background: linear-gradient(90deg, #8b6fd4, #c46faa);" role="presentation"></div>
+        <p class="how-number" aria-hidden="true">03</p>
+        <h3 class="how-title">Open files instantly</h3>
+        <p class="how-body">Click any file and it opens in its native app. Fast, simple, and always in the right place.</p>
       </div>
 
     </div>
@@ -735,9 +755,9 @@
   <hr class="divider">
 
   <!-- ── SYSTEM REQUIREMENTS ── -->
-  <section class="requirements-section">
+  <section class="requirements-section" aria-labelledby="req-heading">
     <div style="padding-top:72px; padding-bottom:72px;">
-      <div class="section-label" style="margin-bottom:0;">System requirements</div>
+      <h2 id="req-heading" class="section-label" style="margin-bottom:0;">System requirements</h2>
       <div class="req-row">
         <div class="req-chip">Windows 10 or later</div>
         <div class="req-chip">Internet connection required</div>
@@ -750,20 +770,20 @@
   <hr class="divider">
 
   <!-- ── SUPPORTED PROVIDERS ── -->
-  <section class="providers-section">
+  <section class="providers-section" aria-labelledby="providers-heading">
     <div style="padding-top:72px;">
-      <div class="section-label" style="margin-bottom:0;">Supported cloud providers</div>
+      <h2 id="providers-heading" class="section-label" style="margin-bottom:0;">Supported cloud providers</h2>
       <div class="providers-row">
         <div class="provider-chip">
-          <span class="provider-dot" style="background:#4fc3c8;"></span>
+          <span class="provider-dot" style="background:#4fc3c8;" role="presentation"></span>
           Google Drive
         </div>
         <div class="provider-chip">
-          <span class="provider-dot" style="background:#5b8dd9;"></span>
+          <span class="provider-dot" style="background:#5b8dd9;" role="presentation"></span>
           Microsoft OneDrive
         </div>
         <div class="provider-chip">
-          <span class="provider-dot" style="background:#8b6fd4;"></span>
+          <span class="provider-dot" style="background:#8b6fd4;" role="presentation"></span>
           Dropbox
         </div>
       </div>
@@ -773,13 +793,13 @@
   <hr class="divider">
 
   <!-- ── WHAT IT IS / ISN'T ── -->
-  <section class="notes-section">
+  <section class="notes-section" aria-labelledby="notes-heading">
     <div style="padding-top:72px;">
-      <div class="section-label" style="margin-bottom:16px;">Good to know</div>
+      <h2 id="notes-heading" class="section-label" style="margin-bottom:16px;">Good to know</h2>
       <div class="note-card">
         <p>Vault is a read-only file browser — it lets you find and open files, not move, rename, or delete them.</p>
         <p>It's not a cloud storage service and doesn't copy your files anywhere. Everything stays where it already is.</p>
-        <p>Northlight Vault does not collect or store your personal data — everything stays on your device. <a href="/vault-privacy.html" style="color:var(--glacial);border-bottom:1px solid rgba(79,195,200,0.25);">Read our Privacy Policy →</a></p>
+        <p>Northlight Vault does not collect or store your personal data — everything stays on your device. <a href="/vault-privacy.html" style="color:var(--glacial);border-bottom:1px solid rgba(79,195,200,0.25);">Read the Northlight Vault Privacy Policy →</a></p>
       </div>
     </div>
   </section>
@@ -787,20 +807,25 @@
   <div style="padding-bottom:72px;"></div>
 
   <footer>
-    <div class="footer-left">Questions? <a href="mailto:support@bynorthlight.ca" style="color:var(--structural);border-bottom:1px solid var(--border-2);">support@bynorthlight.ca</a> &nbsp;·&nbsp; © 2026 Northlight</div>
-    <div class="footer-right">
-      <a href="/vault-privacy.html" class="footer-link">Privacy Policy</a>
-      <a href="/index.html" class="footer-link">Northlight</a>
-    </div>
+    <p class="footer-left">Questions? <a href="mailto:support@bynorthlight.ca" style="color:var(--muted);border-bottom:1px solid var(--border-2);">support@bynorthlight.ca</a> &nbsp;·&nbsp; © 2026 Northlight</p>
+    <nav aria-label="Footer navigation">
+      <div class="footer-right">
+        <a href="/vault-privacy.html" class="footer-link">Vault Privacy Policy</a>
+        <a href="/index.html" class="footer-link">Northlight home</a>
+      </div>
+    </nav>
   </footer>
 
   <!-- ── LIGHTBOX ── -->
-  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
-    <button class="lightbox-close" onclick="closeLightbox()" title="Close">✕</button>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot enlarged view" onclick="closeLightbox(event)">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close enlarged screenshot">✕</button>
     <img id="lightbox-img" src="" alt="">
   </div>
 
   <script>
+    // Focus trap elements for lightbox
+    const focusableSelectors = 'button, [href], [tabindex]:not([tabindex="-1"])';
+
     function openLightbox(img) {
       const lb = document.getElementById('lightbox');
       const lbImg = document.getElementById('lightbox-img');
@@ -808,6 +833,8 @@
       lbImg.alt = img.alt;
       lb.classList.add('open');
       document.body.style.overflow = 'hidden';
+      // Move focus to close button
+      lb.querySelector('.lightbox-close').focus();
     }
 
     function closeLightbox(e) {
@@ -817,9 +844,25 @@
     }
 
     document.addEventListener('keydown', e => {
+      const lb = document.getElementById('lightbox');
+      if (!lb.classList.contains('open')) return;
+
       if (e.key === 'Escape') {
-        document.getElementById('lightbox').classList.remove('open');
+        lb.classList.remove('open');
         document.body.style.overflow = '';
+        return;
+      }
+
+      // Trap focus within lightbox
+      if (e.key === 'Tab') {
+        const focusable = lb.querySelectorAll(focusableSelectors);
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault(); last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault(); first.focus();
+        }
       }
     });
   </script>

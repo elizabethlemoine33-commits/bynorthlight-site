@@ -36,6 +36,24 @@
     flex-direction: column;
   }
 
+  /* ── SKIP NAV ── */
+  .skip-nav {
+    position: absolute;
+    top: -100px; left: 0;
+    background: var(--dusk);
+    color: #fff;
+    padding: 10px 20px;
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    border-radius: 0 0 6px 0;
+    z-index: 9999;
+    transition: top 0.2s;
+  }
+  .skip-nav:focus { top: 0; }
+
   /* ── TOP BAR ── */
   .top-bar {
     height: 2px;
@@ -131,7 +149,7 @@
     font-weight: 500;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--structural);
+    color: var(--muted);
     margin-bottom: 8px;
     position: relative; z-index: 1;
   }
@@ -166,7 +184,7 @@
     font-weight: 500;
     letter-spacing: 0.26em;
     text-transform: uppercase;
-    color: var(--structural);
+    color: var(--muted);
     margin-bottom: 28px;
   }
 
@@ -320,7 +338,7 @@
     font-weight: 500;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--structural);
+    color: var(--muted);
     margin-top: 2px;
   }
 
@@ -373,7 +391,7 @@
     gap: 5px;
     font-family: 'Outfit', sans-serif;
     font-size: 12px;
-    color: var(--structural);
+    color: var(--muted);
     margin-top: 10px;
   }
 
@@ -406,7 +424,7 @@
     font-size: 11px;
     font-weight: 500;
     letter-spacing: 0.14em;
-    color: var(--structural);
+    color: var(--muted);
   }
 
   .footer-right {
@@ -418,13 +436,13 @@
   .footer-link {
     font-family: 'Outfit', sans-serif;
     font-size: 12px;
-    color: var(--structural);
+    color: var(--muted);
     text-decoration: none;
     letter-spacing: 0.03em;
     transition: color 0.2s;
   }
 
-  .footer-link:hover { color: var(--muted); }
+  .footer-link:hover { color: var(--haze); }
 
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
@@ -443,35 +461,37 @@
 </head>
 <body>
 
-  <div class="top-bar"></div>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
 
-  <main>
-    <div class="wordmark">Northlight</div>
-    <div class="descriptor">Strategy &nbsp;·&nbsp; Advisory &nbsp;·&nbsp; AI &nbsp;·&nbsp; Apps</div>
-    <div class="aurora-line"></div>
-    <div class="tagline"><span>Clear thinking.</span><br>Real results.</div>
-    <div class="body-copy">
+  <div class="top-bar" role="presentation"></div>
+
+  <main id="main-content">
+    <h1 class="wordmark">Northlight</h1>
+    <p class="descriptor">Strategy &nbsp;·&nbsp; Advisory &nbsp;·&nbsp; AI &nbsp;·&nbsp; Apps</p>
+    <div class="aurora-line" role="presentation"></div>
+    <h2 class="tagline"><span>Clear thinking.</span><br>Real results.</h2>
+    <p class="body-copy">
       Strategy, operations, AI adoption, and app development for organisations ready to cut through the noise.
-    </div>
-    <div class="contact-label">Get in touch</div>
+    </p>
+    <p class="contact-label">Get in touch</p>
     <a href="mailto:elizabeth@bynorthlight.ca" class="email-link">elizabeth@bynorthlight.ca</a>
 
     <!-- ── WHAT WE'RE BUILDING ── -->
     <div class="building-section">
-      <div class="building-label">What we're building</div>
+      <h3 class="building-label">What we're building</h3>
       <div class="building-row">
 
         <!-- Laptop mockup -->
         <div style="position:relative;">
-          <div class="laptop-glow"></div>
+          <div class="laptop-glow" role="presentation"></div>
           <div class="laptop-wrap">
             <div class="laptop-lid">
               <div class="laptop-screen">
-                <img src="northlight-vault-screenshot-3.png" alt="Northlight Vault — cloud file browser">
+                <img src="northlight-vault-screenshot-3.png" alt="Northlight Vault app showing a file browser with Documents folder open, listing Northlight project files across connected cloud accounts">
               </div>
             </div>
-            <div class="laptop-base"></div>
-            <div class="laptop-stand"></div>
+            <div class="laptop-base" role="presentation"></div>
+            <div class="laptop-stand" role="presentation"></div>
           </div>
         </div>
 
@@ -480,20 +500,20 @@
           <div class="vault-card-inner">
             <div class="vault-header">
               <div class="vault-logo">
-                <img src="northlight-vault-icon-512x512.png" alt="Northlight Vault">
+                <img src="northlight-vault-icon-512x512.png" alt="Northlight Vault app icon">
               </div>
               <div>
-                <div class="vault-name">Northlight Vault</div>
-                <div class="vault-product-label">Cloud File Browser &nbsp;·&nbsp; Windows</div>
+                <p class="vault-name">Northlight Vault</p>
+                <p class="vault-product-label">Cloud File Browser &nbsp;·&nbsp; Windows</p>
               </div>
             </div>
-            <div class="vault-tagline"><span>All your cloud storage.</span><br>One place.</div>
-            <div class="vault-blurb">Browse files across Google Drive, OneDrive, and Dropbox in a single desktop app — without switching tabs.</div>
-            <a href="/vault.html" class="vault-cta">Learn more &amp; download →</a>
-            <div class="vault-early">
-              <span class="vault-early-dot"></span>
+            <p class="vault-tagline"><span>All your cloud storage.</span><br>One place.</p>
+            <p class="vault-blurb">Browse files across Google Drive, OneDrive, and Dropbox in a single desktop app — without switching tabs.</p>
+            <a href="/vault.html" class="vault-cta">Learn more about Northlight Vault →</a>
+            <p class="vault-early">
+              <span class="vault-early-dot" role="presentation"></span>
               Free during early access
-            </div>
+            </p>
           </div>
         </div>
 
@@ -502,11 +522,13 @@
   </main>
 
   <footer>
-    <div class="footer-name">Elizabeth Lemoine</div>
-    <div class="footer-right">
-      <a href="/vault.html" class="footer-link">Northlight Vault</a>
-      <a href="/vault-privacy.html" class="footer-link">Vault Privacy Policy</a>
-    </div>
+    <p class="footer-name">Elizabeth Lemoine</p>
+    <nav aria-label="Footer navigation">
+      <div class="footer-right">
+        <a href="/vault.html" class="footer-link">Northlight Vault</a>
+        <a href="/vault-privacy.html" class="footer-link">Vault Privacy Policy</a>
+      </div>
+    </nav>
   </footer>
 
 </body>
