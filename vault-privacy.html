@@ -58,7 +58,7 @@
   }
 
   header {
-    padding: 36px 72px 32px;
+    padding: 28px 72px;
     border-bottom: 1px solid var(--border);
     display: flex;
     align-items: center;
@@ -72,11 +72,12 @@
     font-weight: 600;
     font-size: 28px;
     letter-spacing: 0.07em;
-    background: linear-gradient(105deg, #4fc3c8 0%, #5b8dd9 33%, #8b6fd4 66%, #c46faa 100%);
+    background: linear-gradient(90deg, #4fc3c8 0%, #5b8dd9 33%, #8b6fd4 66%, #c46faa 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-decoration: none;
+    border-bottom: none;
     display: inline-block;
   }
 
@@ -250,7 +251,7 @@
     font-weight: 500;
     letter-spacing: 0.20em;
     text-transform: uppercase;
-    color: var(--structural);
+    color: var(--muted);
     margin-bottom: 12px;
   }
 
@@ -383,19 +384,22 @@
     color: var(--muted);
   }
 
-  .footer-back {
-    font-family: 'Jost', sans-serif;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
+  .footer-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-link {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
     color: var(--muted);
     text-decoration: none;
     border: none;
     transition: color 0.2s;
   }
 
-  .footer-back:hover { color: var(--haze); border: none; }
+  .footer-link:hover { color: var(--haze); border: none; }
 
   @media (max-width: 640px) {
     header { padding: 28px 28px 24px; }
@@ -670,8 +674,15 @@
   </main>
 
   <footer>
-    <div class="footer-left">© 2026 Northlight. All rights reserved.</div>
-    <a href="/index.html" class="footer-back">← Back to Northlight home</a>
+    <div class="footer-left">© 2026 Northlight</div>
+    <nav aria-label="Footer navigation">
+      <div class="footer-right">
+        <a href="/index.html" class="footer-link">Northlight home</a>
+        <a href="/vault.html" class="footer-link">Northlight Vault</a>
+        <a href="/northlight-privacy.html" class="footer-link">Privacy Policy</a>
+        <a href="https://aurora-brief.kit.com/110f173cf7" class="footer-link">Aurora Brief</a>
+      </div>
+    </nav>
   </footer>
 
   <script>
