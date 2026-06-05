@@ -17,89 +17,74 @@
     }
     *{box-sizing:border-box;margin:0;padding:0;}
     body{background:var(--midnight);color:var(--cloud);font-family:'Outfit',sans-serif;min-height:100vh;}
-
-    /* Skip nav */
     .skip-nav{position:absolute;top:-100px;left:0;background:var(--dusk);color:#fff;padding:10px 20px;font-family:'Jost',sans-serif;font-size:13px;font-weight:600;letter-spacing:.06em;text-decoration:none;border-radius:0 0 6px 0;z-index:9999;transition:top .2s;}
     .skip-nav:focus{top:0;}
-
-    /* Site header */
     .site-header{display:flex;align-items:center;padding:18px 48px;border-bottom:1px solid var(--border);}
     .wordmark{font-family:'Jost',sans-serif;font-weight:600;font-size:20px;letter-spacing:.08em;background:linear-gradient(105deg,#4fc3c8 0%,#5b8dd9 33%,#8b6fd4 66%,#c46faa 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;}
-
-    /* Top bar */
     .top-bar{height:3px;background:linear-gradient(90deg,#4fc3c8 0%,#5b8dd9 30%,#8b6fd4 65%,#c46faa 100%);}
-
-    /* Four-column shell */
-    .blog-shell{display:grid;grid-template-columns:1fr min(680px,100%) 300px 1fr;min-height:calc(100vh - 60px);}
+    .blog-shell{display:grid;grid-template-columns:1fr min(780px,100%) 260px 1fr;min-height:calc(100vh - 60px);}
     .blog-left-wing{grid-column:1;background:var(--midnight);position:relative;overflow:hidden;}
-    .blog-reading{grid-column:2;border-left:1px solid var(--border);border-right:1px solid var(--border);padding:52px 56px 100px;}
+    .blog-main{grid-column:2;border-left:1px solid var(--border);border-right:1px solid var(--border);padding:52px 56px 100px;}
     .blog-sidebar{grid-column:3;border-right:1px solid var(--border);padding:52px 0 100px 32px;position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;}
     .blog-right-wing{grid-column:4;background:var(--midnight);position:relative;overflow:hidden;}
-
-    /* Left wing elements */
     .left-glow{position:absolute;right:0;top:0;width:160px;height:100%;background:linear-gradient(90deg,transparent 0%,rgba(79,195,200,.03) 50%,rgba(91,141,217,.07) 100%);pointer-events:none;}
     .aurora-rail-wrap{position:absolute;right:28px;top:52px;bottom:40px;width:3px;}
     .aurora-rail-line{width:3px;height:100%;background:linear-gradient(180deg,#4fc3c8 0%,#5b8dd9 22%,#8b6fd4 55%,#c46faa 82%,transparent 100%);border-radius:2px;opacity:.7;}
     .aurora-rail-dot{width:9px;height:9px;border-radius:50%;background:linear-gradient(135deg,#4fc3c8,#8b6fd4);position:absolute;top:-3px;left:-3px;box-shadow:0 0 8px rgba(79,195,200,.4);}
     .left-label{position:absolute;right:48px;top:60px;font-family:'Jost',sans-serif;font-size:9px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:#2A2A48;writing-mode:vertical-rl;transform:rotate(180deg);user-select:none;}
-
-    /* Right wing elements */
     .right-glow{position:absolute;left:0;top:0;width:160px;height:100%;background:linear-gradient(270deg,transparent 0%,rgba(139,111,212,.04) 60%,rgba(196,111,170,.05) 100%);pointer-events:none;}
     .right-dots-wrap{position:absolute;top:72px;left:36px;}
     .dot{width:3px;height:3px;border-radius:50%;background:#8B6FD4;position:absolute;opacity:.15;}
-
-    /* Reading column */
-    .page-eyebrow{font-family:'Jost',sans-serif;font-weight:500;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--dusk);margin-bottom:10px;}
-    .page-title{font-family:'Jost',sans-serif;font-weight:600;font-size:30px;color:var(--text);margin-bottom:8px;}
-    .page-desc{font-family:'Outfit',sans-serif;font-size:15px;color:var(--muted);margin-bottom:28px;}
-    .aurora-divider{height:1px;background:linear-gradient(90deg,#4fc3c8 0%,#5b8dd9 30%,#8b6fd4 65%,#c46faa 100%);opacity:.3;margin-bottom:32px;}
-
-    /* Post cards */
-    .post-cards{display:flex;flex-direction:column;gap:12px;}
-    .post-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;transition:border-color .2s;}
+    .page-label{font-family:'Jost',sans-serif;font-weight:500;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:16px;}
+    .page-title{font-family:'Jost',sans-serif;font-weight:600;font-size:34px;line-height:1.1;letter-spacing:.01em;color:var(--text);margin-bottom:8px;}
+    .page-subtitle{font-family:'Outfit',sans-serif;font-size:15px;color:var(--haze);line-height:1.6;margin-bottom:32px;max-width:520px;}
+    .aurora-divider{height:1px;background:linear-gradient(90deg,#4fc3c8 0%,#5b8dd9 30%,#8b6fd4 65%,#c46faa 100%);opacity:.3;margin-bottom:36px;}
+    .filter-bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px;}
+    .topic-pill{font-family:'Jost',sans-serif;font-weight:500;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:5px 12px;cursor:pointer;transition:all .15s;}
+    .topic-pill:hover,.topic-pill.active{color:var(--dusk);border-color:var(--dusk);}
+    .topic-pill[data-filter="all"]{color:var(--cloud);border-color:var(--border-2);}
+    .topic-pill[data-filter="all"].active{color:var(--dusk);border-color:var(--dusk);}
+    .posts-grid{display:flex;flex-direction:column;gap:16px;}
+    .post-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:border-color .15s;}
     .post-card:hover{border-color:var(--border-2);}
-    .post-card-link{display:block;padding:20px 20px 16px;text-decoration:none;color:inherit;}
+    .post-card-link{display:block;padding:24px 28px;text-decoration:none;color:inherit;}
     .post-card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
     .source-label{font-family:'Jost',sans-serif;font-weight:500;font-size:10px;letter-spacing:.28em;text-transform:uppercase;}
     .source-aurora{color:var(--dusk);}
     .source-essay{color:var(--boreal);}
-    .post-card-date{font-family:'Jost',sans-serif;font-weight:500;font-size:11px;color:var(--structural);}
-    .post-card-title{font-family:'Jost',sans-serif;font-weight:600;font-size:16px;line-height:1.2;color:var(--text);margin-bottom:8px;}
-    .post-card-excerpt{font-family:'Outfit',sans-serif;font-size:13px;line-height:1.65;color:var(--muted);margin-bottom:0;}
-    .post-card-footer{border-top:1px solid var(--border);padding-top:12px;margin-top:14px;display:flex;justify-content:space-between;align-items:center;}
-    .post-card-readtime{font-family:'Outfit',sans-serif;font-size:11px;color:var(--structural);}
-    .post-card-cta{font-family:'Jost',sans-serif;font-weight:500;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--dusk);}
-
-    /* Sidebar */
-    .sidebar-label{font-family:'Jost',sans-serif;font-weight:600;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;}
-    .sidebar-about{font-family:'Outfit',sans-serif;font-size:13px;line-height:1.65;color:var(--haze);margin-bottom:32px;}
-    .aurora-card{background:rgba(79,195,200,.04);border:1px solid var(--border-2);border-radius:8px;padding:16px;margin-bottom:32px;}
+    .post-card-date{font-family:'Outfit',sans-serif;font-size:13px;color:var(--muted);}
+    .post-card-title{font-family:'Jost',sans-serif;font-weight:600;font-size:18px;line-height:1.25;color:var(--text);margin-bottom:8px;}
+    .post-card-excerpt{font-family:'Outfit',sans-serif;font-size:14px;line-height:1.65;color:var(--haze);margin-bottom:16px;}
+    .post-card-footer{display:flex;justify-content:space-between;align-items:center;}
+    .post-card-readtime{font-family:'Outfit',sans-serif;font-size:12px;color:var(--muted);}
+    .post-card-cta{font-family:'Jost',sans-serif;font-weight:500;font-size:11px;letter-spacing:.1em;color:var(--dusk);}
+    .sidebar-label{font-family:'Jost',sans-serif;font-weight:600;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
+    .sidebar-section{margin-bottom:32px;}
+    .about-text{font-family:'Outfit',sans-serif;font-size:13px;line-height:1.65;color:var(--haze);}
+    .aurora-card{background:linear-gradient(150deg,rgba(79,195,200,.05) 0%,rgba(139,111,212,.08) 55%,rgba(196,111,170,.04) 100%);border:1px solid var(--border-2);border-radius:8px;padding:16px;}
     .aurora-card p{font-family:'Outfit',sans-serif;font-size:13px;line-height:1.65;color:var(--haze);margin-bottom:10px;}
     .aurora-card a{font-family:'Jost',sans-serif;font-weight:500;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--dusk);text-decoration:none;}
     .aurora-card a:hover{color:var(--glacial);}
-    .topics-wrap{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px;}
-    .topic-pill{font-family:'Jost',sans-serif;font-weight:500;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:4px 10px;cursor:pointer;transition:color .15s,border-color .15s;}
-    .topic-pill:hover,.filter-active{color:var(--dusk);border-color:var(--dusk);}
-    .post-count{font-family:'Outfit',sans-serif;font-size:13px;color:var(--structural);}
-
-    /* Footer */
+    .topics-wrap{display:flex;flex-wrap:wrap;gap:6px;}
+    .topic-tag{font-family:'Jost',sans-serif;font-weight:500;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:4px 10px;}
+    .meta-text{font-family:'Outfit',sans-serif;font-size:12px;color:var(--muted);margin-top:16px;}
     .site-footer{grid-column:1/-1;border-top:1px solid var(--border);padding:24px 56px;display:flex;justify-content:space-between;align-items:center;}
     .footer-copy{font-family:'Outfit',sans-serif;font-size:13px;color:var(--structural);}
     .footer-nav{display:flex;gap:24px;}
     .footer-link{font-family:'Jost',sans-serif;font-weight:500;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;}
     .footer-link:hover{color:var(--cloud);}
     .footer-link.active{color:var(--dusk);}
-
-    /* Responsive */
     @media(max-width:1100px){
-      .blog-shell{grid-template-columns:0 1fr 260px 0;}
+      .blog-shell{grid-template-columns:0 1fr 220px 0;}
       .blog-left-wing,.blog-right-wing{display:none;}
-      .blog-reading{padding:40px 40px 64px;}
+      .blog-main{padding:40px 40px 64px;}
     }
     @media(max-width:800px){
+      .site-header{padding:14px 24px;}
       .blog-shell{grid-template-columns:1fr;}
       .blog-sidebar{grid-column:1;border:none;border-top:1px solid var(--border);padding:32px 24px;position:static;max-height:none;}
-      .blog-reading{grid-column:1;padding:32px 24px 48px;border:none;}
+      .blog-main{grid-column:1;padding:32px 24px 48px;border:none;}
+      .page-title{font-size:26px;}
       .site-footer{grid-column:1;padding:20px 24px;flex-direction:column;gap:12px;text-align:center;}
     }
   </style>
@@ -115,23 +100,50 @@
 
     <!-- Left wing -->
     <div class="blog-left-wing" role="presentation">
-      <div class="left-glow" role="presentation"></div>
-      <div class="aurora-rail-wrap" role="presentation">
-        <div class="aurora-rail-dot" role="presentation"></div>
-        <div class="aurora-rail-line" role="presentation"></div>
+      <div class="left-glow"></div>
+      <div class="aurora-rail-wrap">
+        <div class="aurora-rail-dot"></div>
+        <div class="aurora-rail-line"></div>
       </div>
       <div class="left-label" aria-hidden="true">bynorthlight.ca</div>
     </div>
 
-    <!-- Reading column -->
-    <main class="blog-reading" id="main-content">
-      <p class="page-eyebrow">Writing</p>
+    <!-- Main content -->
+    <main class="blog-main" id="main-content">
+      <span class="page-label">Writing</span>
       <h1 class="page-title">Essays &amp; thinking</h1>
-      <p class="page-desc">Ideas from advisory work, building Vault, and watching how AI adoption actually happens.</p>
+      <p class="page-subtitle">Ideas from advisory work, building Vault, and watching how AI adoption actually happens.</p>
       <div class="aurora-divider" role="presentation"></div>
 
-      <div class="post-cards" id="post-cards">
-        <article class="post-card" data-topics="ai,canada,strategy">
+      <div class="filter-bar" role="group" aria-label="Filter by topic">
+        <button class="topic-pill active" data-filter="all">All</button>
+        <button class="topic-pill" data-filter="ai">Ai</button>
+        <button class="topic-pill" data-filter="building">Building</button>
+        <button class="topic-pill" data-filter="canada">Canada</button>
+        <button class="topic-pill" data-filter="decision-making">Decision-making</button>
+        <button class="topic-pill" data-filter="privacy">Privacy</button>
+        <button class="topic-pill" data-filter="strategy">Strategy</button>
+        <button class="topic-pill" data-filter="sunk cost">Sunk cost</button>
+        <button class="topic-pill" data-filter="thinking & learning">Thinking & learning</button>
+        <button class="topic-pill" data-filter="vault">Vault</button>
+      </div>
+
+      <div class="posts-grid" id="posts-grid">
+      <article class="post-card" data-topics="vault,privacy">
+        <a href="/blog/how-we-built-northlight-vault-privacy-first.html" class="post-card-link" aria-label="Read: How We Built Northlight Vault: Privacy-First Thinking in a World of Unnecessary Data">
+          <div class="post-card-top">
+            <span class="source-label source-aurora">Aurora Brief · Essay</span>
+            <time class="post-card-date" datetime="2026-06-15">June 15, 2026</time>
+          </div>
+          <h2 class="post-card-title">How We Built Northlight Vault: Privacy-First Thinking in a World of Unnecessary Data</h2>
+          <p class="post-card-excerpt">I have no idea who downloaded Northlight Vault this week. None. And I think that's exactly right.</p>
+          <div class="post-card-footer">
+            <span class="post-card-readtime">4 min read</span>
+            <span class="post-card-cta" aria-hidden="true">Read →</span>
+          </div>
+        </a>
+      </article>
+      <article class="post-card" data-topics="ai,canada,strategy">
         <a href="/blog/canada-ai-strategy-small-business.html" class="post-card-link" aria-label="Read: Canada’s AI Strategy: What Small Businesses Actually Need to Know">
           <div class="post-card-top">
             <span class="source-label source-aurora">Aurora Brief · Essay</span>
@@ -164,34 +176,38 @@
 
     <!-- Sidebar -->
     <aside class="blog-sidebar" aria-label="Blog sidebar">
-      <p class="sidebar-label">About this blog</p>
-      <p class="sidebar-about">Essays from Elizabeth Lemoine on strategy, AI adoption, and building Northlight. Honest thinking, no fluff.</p>
-
-      <p class="sidebar-label">Aurora Brief</p>
-      <div class="aurora-card">
-        <p>Most essays here started as the core idea in the monthly Aurora Brief. Subscribe to get them before they're posted.</p>
-        <a href="https://aurora-brief.kit.com/110f173cf7">Subscribe →</a>
+      <div class="sidebar-section">
+        <p class="sidebar-label">About this blog</p>
+        <p class="about-text">Essays from Elizabeth Lemoine on strategy, AI adoption, and building Northlight. Honest thinking, no fluff.</p>
       </div>
-
-      <p class="sidebar-label">Topics</p>
-      <div class="topics-wrap">
-        <button class="topic-pill filter-active" data-filter="all">All</button>
-        <button class="topic-pill" data-filter="ai">Ai</button>
-        <button class="topic-pill" data-filter="building">Building</button>
-        <button class="topic-pill" data-filter="canada">Canada</button>
-        <button class="topic-pill" data-filter="decision-making">Decision-making</button>
-        <button class="topic-pill" data-filter="strategy">Strategy</button>
-        <button class="topic-pill" data-filter="sunk cost">Sunk cost</button>
-        <button class="topic-pill" data-filter="thinking & learning">Thinking & learning</button>
+      <div class="sidebar-section">
+        <p class="sidebar-label">Aurora Brief</p>
+        <div class="aurora-card">
+          <p>Most essays here started as the core idea in the monthly Aurora Brief. Subscribe to get them before they're posted.</p>
+          <a href="https://aurora-brief.kit.com/110f173cf7">Subscribe →</a>
+        </div>
       </div>
-
-      <p class="post-count"><span id="post-count">2</span> posts · Jun 2026</p>
+      <div class="sidebar-section">
+        <p class="sidebar-label">Topics</p>
+        <div class="topics-wrap">
+          <span class="topic-tag">Ai</span>
+          <span class="topic-tag">Building</span>
+          <span class="topic-tag">Canada</span>
+          <span class="topic-tag">Decision-making</span>
+          <span class="topic-tag">Privacy</span>
+          <span class="topic-tag">Strategy</span>
+          <span class="topic-tag">Sunk cost</span>
+          <span class="topic-tag">Thinking & learning</span>
+          <span class="topic-tag">Vault</span>
+        </div>
+      </div>
+      <p class="meta-text">3 posts · Jun 2026</p>
     </aside>
 
     <!-- Right wing -->
     <div class="blog-right-wing" role="presentation">
-      <div class="right-glow" role="presentation"></div>
-      <div class="right-dots-wrap" role="presentation" aria-hidden="true">
+      <div class="right-glow"></div>
+      <div class="right-dots-wrap" aria-hidden="true">
         <div class="dot" style="top:0;left:0"></div>
         <div class="dot" style="top:20px;left:24px"></div>
         <div class="dot" style="top:48px;left:8px"></div>
@@ -218,23 +234,16 @@
   </div>
 
   <script>
-    const filterBtns = document.querySelectorAll('[data-filter]');
-    const cards      = document.querySelectorAll('.post-card');
-    const postCount  = document.getElementById('post-count');
-
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const topic = btn.dataset.filter;
-        filterBtns.forEach(b => b.classList.remove('filter-active'));
-        btn.classList.add('filter-active');
-        let visible = 0;
+    const pills  = document.querySelectorAll('.topic-pill');
+    const cards  = document.querySelectorAll('.post-card');
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        pills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        const filter = pill.dataset.filter;
         cards.forEach(card => {
-          const topics = card.dataset.topics ? card.dataset.topics.split(',') : [];
-          const show   = topic === 'all' || topics.includes(topic);
-          card.style.display = show ? '' : 'none';
-          if (show) visible++;
+          card.style.display = (filter === 'all' || card.dataset.topics.includes(filter)) ? '' : 'none';
         });
-        if (postCount) postCount.textContent = visible;
       });
     });
   </script>
