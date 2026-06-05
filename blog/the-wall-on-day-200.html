@@ -45,13 +45,15 @@
 
     .skip-nav{position:absolute;top:-100px;left:0;background:var(--dusk);color:#fff;padding:10px 20px;font-family:'Jost',sans-serif;font-size:13px;font-weight:600;letter-spacing:.06em;text-decoration:none;border-radius:0 0 6px 0;z-index:9999;transition:top .2s;}
     .skip-nav:focus{top:0;}
-    .top-bar{height:2px;background:linear-gradient(90deg,#4fc3c8 0%,#5b8dd9 30%,#8b6fd4 65%,#c46faa 100%);}
+    .site-header{display:flex;align-items:center;padding:18px 48px;border-bottom:1px solid var(--border);}
+    .wordmark{font-family:'Jost',sans-serif;font-weight:600;font-size:20px;letter-spacing:.08em;background:linear-gradient(105deg,#4fc3c8 0%,#5b8dd9 33%,#8b6fd4 66%,#c46faa 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;}
+    .top-bar{height:3px;background:linear-gradient(90deg,#4fc3c8 0%,#5b8dd9 30%,#8b6fd4 65%,#c46faa 100%);}
 
     /* Four-column shell */
-    .blog-shell{display:grid;grid-template-columns:1fr min(680px,100%) 300px 1fr;min-height:calc(100vh - 2px);}
+    .blog-shell{display:grid;grid-template-columns:1fr min(680px,100%) 300px 1fr;min-height:calc(100vh - 60px);}
     .blog-left-wing{grid-column:1;background:linear-gradient(to right,var(--midnight) 30%,rgba(79,195,200,.06) 75%,rgba(91,141,217,.09) 100%);position:relative;overflow:hidden;}
-    .blog-reading{grid-column:2;border-left:1px solid var(--border);border-right:1px solid var(--border);padding:48px 56px 80px;}
-    .blog-sidebar{grid-column:3;border-right:1px solid var(--border);padding:48px 28px;position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;}
+    .blog-reading{grid-column:2;border-left:1px solid var(--border);border-right:1px solid var(--border);padding:52px 56px 100px;}
+    .blog-sidebar{grid-column:3;border-right:1px solid var(--border);padding:52px 0 100px 32px;position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;}
     .blog-right-wing{grid-column:4;background:linear-gradient(to left,var(--midnight) 30%,rgba(139,111,212,.08) 75%,rgba(196,111,170,.11) 100%);position:relative;overflow:hidden;}
 
     .aurora-rail{position:absolute;right:28px;top:0;bottom:0;width:5px;background:linear-gradient(180deg,rgba(79,195,200,.8) 0%,rgba(91,141,217,.6) 40%,rgba(139,111,212,.3) 70%,transparent 100%);}
@@ -66,7 +68,7 @@
     .source-essay{color:var(--boreal);}
     .post-title{font-family:'Jost',sans-serif;font-weight:600;font-size:34px;line-height:1.1;letter-spacing:.01em;color:var(--text);margin-bottom:12px;}
     .post-date-line{font-family:'Outfit',sans-serif;font-size:13px;color:var(--muted);margin-bottom:28px;}
-    .aurora-divider{height:2px;background:linear-gradient(90deg,#4fc3c8 0%,#5b8dd9 30%,#8b6fd4 65%,#c46faa 100%);opacity:.65;margin-bottom:36px;}
+    .aurora-divider{height:1px;background:linear-gradient(90deg,#4fc3c8 0%,#5b8dd9 30%,#8b6fd4 65%,#c46faa 100%);opacity:.3;margin-bottom:36px;}
 
     /* Body copy */
     .post-body p{font-family:'Outfit',sans-serif;font-size:16px;line-height:1.85;color:var(--cloud);margin-bottom:1.4em;}
@@ -123,15 +125,21 @@
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <header class="site-header">
+    <a href="/" class="wordmark">Northlight</a>
+  </header>
   <div class="top-bar" role="presentation"></div>
 
   <div class="blog-shell">
 
     <!-- Left wing -->
     <div class="blog-left-wing" role="presentation">
-      <div class="aurora-rail" role="presentation">
+      <div class="left-glow" role="presentation"></div>
+      <div class="aurora-rail-wrap" role="presentation">
         <div class="aurora-rail-dot" role="presentation"></div>
+        <div class="aurora-rail-line" role="presentation"></div>
       </div>
+      <div class="left-label" aria-hidden="true">bynorthlight.ca</div>
     </div>
 
     <!-- Reading column -->
@@ -205,6 +213,18 @@
     <!-- Right wing -->
     <div class="blog-right-wing" role="presentation">
       <div class="right-glow" role="presentation"></div>
+      <div class="right-dots-wrap" role="presentation" aria-hidden="true">
+        <div class="dot" style="top:0;left:0"></div>
+        <div class="dot" style="top:20px;left:24px"></div>
+        <div class="dot" style="top:48px;left:8px"></div>
+        <div class="dot" style="top:68px;left:38px"></div>
+        <div class="dot" style="top:96px;left:16px"></div>
+        <div class="dot" style="top:120px;left:46px"></div>
+        <div class="dot" style="top:150px;left:4px"></div>
+        <div class="dot" style="top:176px;left:30px"></div>
+        <div class="dot" style="top:206px;left:52px"></div>
+        <div class="dot" style="top:234px;left:18px"></div>
+      </div>
     </div>
 
     <!-- Footer -->
