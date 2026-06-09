@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Northlight — Strategy · Advisory · AI · Apps</title>
+<meta name="description" content="Strategy, operations, AI adoption, and app development for organisations ready to cut through the noise. Clear thinking. Real results.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --midnight:   #0E0E14;
+    --surface:    #12121E;
+    --surface-2:  #10101C;
+    --border:     #1E2035;
+    --border-2:   #2A2A48;
+    --text:       #FFFFFF;
+    --cloud:      #C8CCE0;
+    --haze:       #B0B8D8;
+    --muted:      #8A92A8;
+    --structural: #5A6080;
+    --glacial:    #4FC3C8;
+    --boreal:     #5B8DD9;
+    --dusk:       #8B6FD4;
+    --aurora:     #C46FAA;
+  }
+
+  body {
+    background: var(--midnight);
+    color: var(--cloud);
+    font-family: 'Outfit', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── SKIP NAV ── */
+  .skip-nav {
+    position: absolute;
+    top: -100px; left: 0;
+    background: var(--dusk);
+    color: #fff;
+    padding: 10px 20px;
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    border-radius: 0 0 6px 0;
+    z-index: 9999;
+    transition: top 0.2s;
+  }
+  .skip-nav:focus { top: 0; }
+
+  /* ── TOP BAR ── */
+  .top-bar {
+    height: 2px;
+    background: linear-gradient(90deg, #4fc3c8 0%, #5b8dd9 30%, #8b6fd4 65%, #c46faa 100%);
+    flex-shrink: 0;
+  }
+
+  /* ── MAIN ── */
+  main {
+    padding: 80px 72px 72px;
+    max-width: 960px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Ambient glow */
+  main::after {
+    content: '';
+    position: absolute;
+    top: -120px; right: -120px;
+    width: 500px; height: 500px;
+    background: radial-gradient(ellipse, rgba(91,141,217,0.055) 0%, transparent 65%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ── WORDMARK ── */
+  .wordmark {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 68px;
+    letter-spacing: 0.07em;
+    line-height: 1;
+    display: inline-block;
+    background: linear-gradient(90deg, #4fc3c8 0%, #5b8dd9 33%, #8b6fd4 66%, #c46faa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+    position: relative; z-index: 1;
+  }
+
+  .descriptor {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 36px;
+    position: relative; z-index: 1;
+  }
+
+  .aurora-line {
+    width: 36px; height: 2px;
+    background: linear-gradient(90deg, #4fc3c8, #8b6fd4);
+    border-radius: 2px;
+    margin-bottom: 32px;
+    position: relative; z-index: 1;
+  }
+
+  .tagline {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    letter-spacing: 0.03em;
+    line-height: 1.15;
+    color: var(--text);
+    margin-bottom: 20px;
+    position: relative; z-index: 1;
+  }
+
+  .tagline span {
+    background: linear-gradient(105deg, #4fc3c8 0%, #5b8dd9 33%, #8b6fd4 66%, #c46faa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .body-copy {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--cloud);
+    max-width: 520px;
+    margin-bottom: 36px;
+    position: relative; z-index: 1;
+  }
+
+  .contact-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+    position: relative; z-index: 1;
+  }
+
+  .email-link {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    color: var(--haze);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border-2);
+    padding-bottom: 3px;
+    transition: color 0.2s, border-color 0.2s;
+    display: inline-block;
+    position: relative; z-index: 1;
+  }
+
+  .email-link:hover { color: var(--text); border-color: var(--muted); }
+
+  /* ── WHAT WE'RE BUILDING ── */
+  .building-section {
+    margin-top: 56px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+    position: relative; z-index: 1;
+  }
+
+  .building-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 28px;
+  }
+
+  .building-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+
+  /* ── LAPTOP MOCKUP ── */
+  .laptop-wrap {
+    position: relative;
+    filter: drop-shadow(0 32px 60px rgba(91,141,217,0.18)) drop-shadow(0 6px 16px rgba(0,0,0,0.6));
+  }
+
+  .laptop-lid {
+    background: #1a1a2e;
+    border-radius: 10px 10px 0 0;
+    border: 2px solid #2a2a48;
+    border-bottom: none;
+    padding: 9px 9px 0;
+    position: relative;
+  }
+
+  .laptop-lid::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, #4fc3c8 0%, #5b8dd9 30%, #8b6fd4 65%, #c46faa 100%);
+    border-radius: 8px 8px 0 0;
+  }
+
+  .laptop-lid::after {
+    content: '';
+    position: absolute;
+    top: 5px; left: 50%; transform: translateX(-50%);
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: #2a2a48;
+  }
+
+  .laptop-screen {
+    background: #0e0e14;
+    border-radius: 3px;
+    overflow: hidden;
+    aspect-ratio: 16/10;
+    position: relative;
+  }
+
+  .laptop-screen img {
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
+  }
+
+  .laptop-screen::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(79,195,200,0.03) 0%, transparent 50%, rgba(139,111,212,0.03) 100%);
+    pointer-events: none;
+  }
+
+  .laptop-base {
+    background: linear-gradient(180deg, #1e1e32 0%, #16162a 100%);
+    border: 2px solid #2a2a48;
+    border-top: 1px solid #3a3a58;
+    border-radius: 0 0 7px 7px;
+    height: 16px;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .laptop-base::after {
+    content: '';
+    width: 28%; height: 8px;
+    background: #2a2a48; border-radius: 3px;
+  }
+
+  .laptop-stand {
+    width: 68%; height: 5px;
+    background: linear-gradient(180deg, #12121e, transparent);
+    border-radius: 0 0 5px 5px;
+    margin: 0 auto;
+  }
+
+  .laptop-glow {
+    position: absolute;
+    bottom: 8px; left: 50%;
+    transform: translateX(-50%);
+    width: 80%; height: 36px;
+    background: radial-gradient(ellipse, rgba(91,141,217,0.22) 0%, transparent 70%);
+    filter: blur(12px);
+    pointer-events: none;
+  }
+
+  /* ── VAULT CARD ── */
+  .vault-card {
+    background: var(--surface-2);
+    border: 1px solid var(--border-2);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    transition: border-color 0.25s;
+  }
+
+  .vault-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, #4fc3c8 0%, #5b8dd9 30%, #8b6fd4 65%, #c46faa 100%);
+  }
+
+  .vault-card:hover { border-color: #3a3a58; }
+
+  .vault-card-inner {
+    padding: 24px 24px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .vault-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+
+  .vault-logo {
+    width: 48px; height: 48px;
+    border-radius: 11px;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+  }
+
+  .vault-logo img {
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
+  }
+
+  .vault-name {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    color: var(--text);
+  }
+
+  .vault-product-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  .vault-tagline {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.03em;
+    line-height: 1.2;
+    color: var(--text);
+    margin-bottom: 12px;
+  }
+
+  .vault-tagline span {
+    background: linear-gradient(105deg, #4fc3c8 0%, #5b8dd9 33%, #8b6fd4 66%, #c46faa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .vault-blurb {
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--haze);
+    margin-bottom: 22px;
+  }
+
+  .vault-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: var(--glacial);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(79,195,200,0.3);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .vault-cta:hover { color: #fff; border-color: rgba(255,255,255,0.3); }
+
+  .vault-early {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 10px;
+  }
+
+  .vault-early-dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--dusk);
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 20px 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-left {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .footer-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-link {
+    font-family: 'Outfit', sans-serif;
+    font-size: 12px;
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+
+  .footer-link:hover { color: var(--haze); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    main { padding: 60px 32px 52px; }
+    footer { padding: 20px 32px; }
+
+    .wordmark { font-size: 48px; }
+    .tagline { font-size: 26px; }
+
+    .building-row {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+  }
+</style>
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-uccdYD5d_-tjjiMlRo9eR.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+  <div class="top-bar" role="presentation"></div>
+
+  <main id="main-content">
+    <h1 class="wordmark">Northlight</h1>
+    <p class="descriptor">Strategy &nbsp;·&nbsp; Advisory &nbsp;·&nbsp; AI &nbsp;·&nbsp; Apps</p>
+    <div class="aurora-line" role="presentation"></div>
+    <h2 class="tagline"><span>Clear thinking.</span><br>Real results.</h2>
+    <p class="body-copy">
+      Strategy, operations, AI adoption, and app development for organisations ready to cut through the noise.
+    </p>
+    <p class="contact-label">Get in touch</p>
+    <a href="mailto:support@bynorthlight.ca" class="email-link">support@bynorthlight.ca</a>
+
+    <!-- ── WHAT WE'RE BUILDING ── -->
+    <div class="building-section">
+      <h3 class="building-label">What we're building</h3>
+      <div class="building-row">
+
+        <!-- Laptop mockup -->
+        <div style="position:relative;">
+          <div class="laptop-glow" role="presentation"></div>
+          <div class="laptop-wrap">
+            <div class="laptop-lid">
+              <div class="laptop-screen">
+                <img src="northlight-vault-screenshot-3.png" alt="Northlight Vault app showing a file browser with Documents folder open, listing Northlight project files across connected cloud accounts">
+              </div>
+            </div>
+            <div class="laptop-base" role="presentation"></div>
+            <div class="laptop-stand" role="presentation"></div>
+          </div>
+        </div>
+
+        <!-- Vault card -->
+        <div class="vault-card">
+          <div class="vault-card-inner">
+            <div class="vault-header">
+              <div class="vault-logo">
+                <img src="northlight-vault-icon-512x512.png" alt="Northlight Vault app icon">
+              </div>
+              <div>
+                <p class="vault-name">Northlight Vault</p>
+                <p class="vault-product-label">Cloud File Browser &nbsp;·&nbsp; Windows</p>
+              </div>
+            </div>
+            <p class="vault-tagline"><span>All your cloud storage.</span><br>One place.</p>
+            <p class="vault-blurb">Browse files across Google Drive, OneDrive, and Dropbox in a single desktop app — without switching tabs.</p>
+            <a href="/vault.html" class="vault-cta">Learn more about Northlight Vault →</a>
+            <p class="vault-early">
+              <span class="vault-early-dot" role="presentation"></span>
+              Free during early access
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ── AURORA BRIEF SIGNUP ── -->
+  <section style="background: var(--surface-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 56px 72px;" aria-label="Aurora Brief newsletter signup">
+    <script async data-uid="110f173cf7" src="https://aurora-brief.kit.com/110f173cf7/index.js"></script>
+  </section>
+
+  <footer>
+    <p class="footer-left">© 2026 Northlight</p>
+    <nav aria-label="Footer navigation">
+      <div class="footer-right">
+        <a href="/vault.html" class="footer-link">Northlight Vault</a>
+        <a href="/blog/" class="footer-link">Blog</a>
+        <a href="/northlight-privacy.html" class="footer-link">Privacy Policy</a>
+        <a href="https://aurora-brief.kit.com/110f173cf7" class="footer-link">Aurora Brief</a>
+      </div>
+    </nav>
+  </footer>
+
+</body>
+</html>

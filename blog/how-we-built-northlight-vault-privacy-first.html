@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How We Built Northlight Vault: Privacy-First Thinking in a World of Unnecessary Data — Northlight</title>
+  <meta name="description" content="I have no idea who downloaded Northlight Vault this week. None. And I think that's exactly right. On privacy-first design and the choices behind Vault.">
+  <meta name="author" content="Elizabeth Lemoine">
+  <link rel="canonical" href="https://bynorthlight.ca/blog/how-we-built-northlight-vault-privacy-first.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How We Built Northlight Vault: Privacy-First Thinking in a World of Unnecessary Data">
+  <meta property="og:description" content="I have no idea who downloaded Northlight Vault this week. None. And I think that's exactly right. On privacy-first design and the choices behind Vault.">
+  <meta property="og:url" content="https://bynorthlight.ca/blog/how-we-built-northlight-vault-privacy-first.html">
+  <meta property="og:site_name" content="Northlight">
+  <meta property="article:author" content="Elizabeth Lemoine">
+  <meta property="article:published_time" content="2026-06-15T00:00:00.000Z">
+
+  <!-- Article schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How We Built Northlight Vault: Privacy-First Thinking in a World of Unnecessary Data",
+    "description": "I have no idea who downloaded Northlight Vault this week. None. And I think that's exactly right. On privacy-first design and the choices behind Vault.",
+    "datePublished": "2026-06-15",
+    "author": { "@type": "Person", "name": "Elizabeth Lemoine", "url": "https://bynorthlight.ca" },
+    "publisher": { "@type": "Organization", "name": "Northlight", "url": "https://bynorthlight.ca" },
+    "url": "https://bynorthlight.ca/blog/how-we-built-northlight-vault-privacy-first.html"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --midnight:#0E0E14;--surface:#12121E;--surface-2:#10101C;
+      --border:#1E2035;--border-2:#2A2A48;
+      --text:#FFFFFF;--cloud:#C8CCE0;--haze:#B0B8D8;--muted:#8A92A8;--structural:#5A6080;
+      --glacial:#4FC3C8;--boreal:#5B8DD9;--dusk:#8B6FD4;--aurora:#C46FAA;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{background:var(--midnight);color:var(--cloud);font-family:'Outfit',sans-serif;min-height:100vh;}
+
+    .skip-nav{position:absolute;top:-100px;left:0;background:var(--dusk);color:#fff;padding:10px 20px;font-family:'Jost',sans-serif;font-size:13px;font-weight:600;letter-spacing:.06em;text-decoration:none;border-radius:0 0 6px 0;z-index:9999;transition:top .2s;}
+    .skip-nav:focus{top:0;}
+
+    .site-header{display:flex;align-items:center;padding:18px 48px;border-bottom:1px solid var(--border);}
+    .wordmark{font-family:'Jost',sans-serif;font-weight:600;font-size:20px;letter-spacing:.08em;background:linear-gradient(105deg,#4fc3c8 0%,#5b8dd9 33%,#8b6fd4 66%,#c46faa 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;}
+    .top-bar{height:3px;background:linear-gradient(90deg,#4fc3c8 0%,#5b8dd9 30%,#8b6fd4 65%,#c46faa 100%);}
+
+    .blog-shell{display:grid;grid-template-columns:1fr min(680px,100%) 300px 1fr;min-height:calc(100vh - 60px);}
+    .blog-left-wing{grid-column:1;background:var(--midnight);position:relative;overflow:hidden;}
+    .blog-reading{grid-column:2;border-left:1px solid var(--border);border-right:1px solid var(--border);padding:52px 56px 100px;}
+    .blog-sidebar{grid-column:3;border-right:1px solid var(--border);padding:52px 0 100px 32px;position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;}
+    .blog-right-wing{grid-column:4;background:var(--midnight);position:relative;overflow:hidden;}
+
+    .left-glow{position:absolute;right:0;top:0;width:160px;height:100%;background:linear-gradient(90deg,transparent 0%,rgba(79,195,200,.03) 50%,rgba(91,141,217,.07) 100%);pointer-events:none;}
+    .aurora-rail-wrap{position:absolute;right:28px;top:52px;bottom:40px;width:3px;}
+    .aurora-rail-line{width:3px;height:100%;background:linear-gradient(180deg,#4fc3c8 0%,#5b8dd9 22%,#8b6fd4 55%,#c46faa 82%,transparent 100%);border-radius:2px;opacity:.7;}
+    .aurora-rail-dot{width:9px;height:9px;border-radius:50%;background:linear-gradient(135deg,#4fc3c8,#8b6fd4);position:absolute;top:-3px;left:-3px;box-shadow:0 0 8px rgba(79,195,200,.4);}
+    .left-label{position:absolute;right:48px;top:60px;font-family:'Jost',sans-serif;font-size:9px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:#2A2A48;writing-mode:vertical-rl;transform:rotate(180deg);user-select:none;}
+
+    .right-glow{position:absolute;left:0;top:0;width:160px;height:100%;background:linear-gradient(270deg,transparent 0%,rgba(139,111,212,.04) 60%,rgba(196,111,170,.05) 100%);pointer-events:none;}
+    .right-dots-wrap{position:absolute;top:72px;left:36px;}
+    .dot{width:3px;height:3px;border-radius:50%;background:#8B6FD4;position:absolute;opacity:.15;}
+
+    .post-back{font-family:'Jost',sans-serif;font-weight:500;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);text-decoration:none;display:block;margin-bottom:28px;}
+    .post-back:hover{color:var(--cloud);}
+    .source-label{font-family:'Jost',sans-serif;font-weight:500;font-size:10px;letter-spacing:.28em;text-transform:uppercase;display:block;margin-bottom:16px;}
+    .source-aurora{color:var(--dusk);}
+    .post-title{font-family:'Jost',sans-serif;font-weight:600;font-size:34px;line-height:1.1;letter-spacing:.01em;color:var(--text);margin-bottom:12px;}
+    .post-date-line{font-family:'Outfit',sans-serif;font-size:13px;color:var(--muted);margin-bottom:28px;}
+    .aurora-divider{height:1px;background:linear-gradient(90deg,#4fc3c8 0%,#5b8dd9 30%,#8b6fd4 65%,#c46faa 100%);opacity:.3;margin-bottom:36px;}
+
+    .post-body p{font-family:'Outfit',sans-serif;font-size:16px;line-height:1.85;color:var(--cloud);margin-bottom:1.4em;}
+    .post-body h3{font-family:'Jost',sans-serif;font-weight:600;font-size:20px;letter-spacing:.03em;color:var(--glacial);margin:2em 0 .6em;}
+    .post-body blockquote{border-left:3px solid var(--dusk);padding-left:22px;margin:1.4em 0;font-style:italic;color:var(--haze);}
+    .post-body strong{color:var(--text);font-weight:600;}
+    .post-body em{font-style:italic;color:var(--haze);}
+    .post-body a{color:var(--boreal);text-decoration:none;border-bottom:1px solid rgba(91,141,217,.3);}
+    .post-body a:hover{color:var(--text);border-color:rgba(255,255,255,.3);}
+
+    .sidebar-label{font-family:'Jost',sans-serif;font-weight:600;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
+    .sidebar-section{margin-bottom:32px;}
+
+    .pub-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px;text-align:center;}
+    .pub-day{font-family:'Jost',sans-serif;font-weight:600;font-size:28px;color:var(--text);line-height:1;}
+    .pub-year{font-family:'Outfit',sans-serif;font-size:13px;color:var(--muted);margin-top:2px;margin-bottom:10px;}
+    .pub-rule{border:none;border-top:1px solid var(--border);margin:10px 0;}
+    .pub-readtime{font-family:'Outfit',sans-serif;font-size:13px;color:var(--muted);}
+    .pub-readtime strong{color:var(--cloud);}
+
+    .aurora-card{background:linear-gradient(150deg,rgba(79,195,200,.05) 0%,rgba(139,111,212,.08) 55%,rgba(196,111,170,.04) 100%);border:1px solid var(--border-2);border-radius:8px;padding:16px;}
+    .aurora-card p{font-family:'Outfit',sans-serif;font-size:13px;line-height:1.65;color:var(--haze);margin-bottom:10px;}
+    .aurora-card a{font-family:'Jost',sans-serif;font-weight:500;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--dusk);text-decoration:none;border:none;}
+    .aurora-card a:hover{color:var(--glacial);}
+
+    .topics-wrap{display:flex;flex-wrap:wrap;gap:6px;}
+    .topic-tag{font-family:'Jost',sans-serif;font-weight:500;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:4px 10px;}
+
+    .site-footer{grid-column:1/-1;border-top:1px solid var(--border);padding:24px 56px;display:flex;justify-content:space-between;align-items:center;}
+    .footer-copy{font-family:'Outfit',sans-serif;font-size:13px;color:var(--structural);}
+    .footer-nav{display:flex;gap:24px;}
+    .footer-link{font-family:'Jost',sans-serif;font-weight:500;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;}
+    .footer-link:hover{color:var(--cloud);}
+
+    @media(max-width:1100px){
+      .blog-shell{grid-template-columns:0 1fr 260px 0;}
+      .blog-left-wing,.blog-right-wing{display:none;}
+      .blog-reading{padding:40px 40px 64px;}
+    }
+    @media(max-width:800px){
+      .site-header{padding:14px 24px;}
+      .blog-shell{grid-template-columns:1fr;}
+      .blog-sidebar{grid-column:1;border:none;border-top:1px solid var(--border);padding:32px 24px;position:static;max-height:none;}
+      .blog-reading{grid-column:1;padding:32px 24px 48px;border:none;}
+      .post-title{font-size:26px;}
+      .site-footer{grid-column:1;padding:20px 24px;flex-direction:column;gap:12px;text-align:center;}
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <header class="site-header">
+    <a href="/" class="wordmark" aria-label="Back to Northlight home">Northlight</a>
+  </header>
+  <div class="top-bar" role="presentation"></div>
+
+  <div class="blog-shell">
+
+    <div class="blog-left-wing" role="presentation">
+      <div class="left-glow" role="presentation"></div>
+      <div class="aurora-rail-wrap" role="presentation">
+        <div class="aurora-rail-dot" role="presentation"></div>
+        <div class="aurora-rail-line" role="presentation"></div>
+      </div>
+      <div class="left-label" aria-hidden="true">bynorthlight.ca</div>
+    </div>
+
+    <main class="blog-reading" id="main-content">
+      <a href="/blog/" class="post-back">← All posts</a>
+      <span class="source-label source-aurora">Aurora Brief · Essay</span>
+      <h1 class="post-title">How We Built Northlight Vault: Privacy-First Thinking in a World of Unnecessary Data</h1>
+      <p class="post-date-line"><time datetime="2026-06-15">June 15, 2026</time></p>
+      <div class="aurora-divider" role="presentation"></div>
+
+      <div class="post-body">
+        <p>I have no idea who downloaded Northlight Vault this week. None. And I think that's exactly right.</p>
+        <p>I built Vault for myself first. I had too many cloud accounts — Dropbox, Google Drive, OneDrive — and I was spending more time logging in and out than actually finding anything. So I built a tool that lets me browse all of them from one place, on my own computer, without touching the web.</p>
+        <p>Then I realised other people had the same problem. And that changed everything — not because the technical problem got harder, but because the responsibility did.</p>
+        <p>When you're building something just for yourself, you make decisions by instinct: what feels safe, what feels clean, what feels right. I wanted Vault to be locked down. That wasn't a policy decision or a compliance checkbox; it was just mine, and I didn't want anyone else in it. But then I decided to share it with other people, and that meant thinking about them — their data, their needs, and our responsibilities. We had to be able to answer a harder question: what are we actually collecting from them, and why?</p>
+        <p>I've experienced instances where privacy was an afterthought; where people working on a project genuinely believed that collecting vast amounts of personal information was fine because the cause was good. I understand that sentiment — it comes from a good place. But good intentions don't change what data is. When you're holding someone's personal information, you have a responsibility to it. Full stop. The reason you collected it doesn't make the obligation smaller.</p>
+        <p>That's where I started with Vault. Not "what do we need to be compliant" but "what do we actually need, and what can we leave alone?"</p>
+
+        <h3>What We Don't Collect</h3>
+        <p>Here's where we landed, and why it matters.</p>
+        <p>When you install Vault, it lives on your computer. It's self-contained. You don't register it; you don't create an account; you don't give us your name. I can't tell you who signed in today because the app doesn't report that back to us. I don't know which cloud accounts you've connected. I don't know what files you've looked at. That's yours — it stays on your machine, and we have no access to it.</p>
+        <p>We don't need to know who you are to build a better file browser. <strong>Knowing your name doesn't make the product better. It just means we have something we didn't earn.</strong></p>
+        <p>I'll be honest about what that costs, though. I can't reach out to the people using Vault to ask how it's working for them. If you downloaded it last week and ran into something frustrating, I have no way of knowing — unless you <a href="https://forms.clickup.com/14151173/f/dfvg5-2317/FF757UNUCJJTY2UIBF">tell us</a>. Some days that makes things harder — every user's experience matters this early, and not being able to ask directly is a real trade-off. But the alternative is collecting your information to serve my curiosity, and <strong>it's not a trade I'm willing to make.</strong> If you want to tell me how it's going, the door is open. I just won't knock on yours first.</p>
+        <p>For Aurora Brief — which you're reading right now — we collect your first name and your email address. Your first name so we can say hello to you like a person; your email address so we can send this. That's it. If we ever decide we need more than that, we're going to stop and ask ourselves why — because <strong>the burden of proof should always be on collection, not on privacy.</strong></p>
+
+        <h3>The Counter-Argument (And Why It's Weaker Than It Sounds)</h3>
+        <p>The obvious pushback: how do you grow without tracking? How do you know what's working?</p>
+        <p>We do track some things; I'm not going to pretend otherwise. We use Plausible Analytics on the website — aggregate, anonymised data. I can see how many people visited, which pages they looked at, roughly where in the world they came from, and what operating system they're using. That last one matters more than it might sound: we built Vault for Windows first. If people are landing on the site from a Mac, that tells us there's interest we haven't served yet — and that's worth knowing. That's the kind of data that earns its place; you can look at it and explain exactly what you're doing with it.</p>
+        <p>What I can't do — and won't do — is tell you that a specific person with a specific name looked at a specific page for a specific amount of time and then clicked this link. I can't build a profile. I don't want to.</p>
+        <p>There are two real problems with over-collection. The first is obvious: you know more about a person than you have any right to know. The second is less talked about: too much data stops being useful. When you have everything, you can't find anything; you end up drowning in information you can't parse into anything meaningful, and you've still violated someone's privacy to get there.</p>
+        <p>The less we know, the better — not as a slogan, but as a practical design principle.</p>
+
+        <h3>Why This Matters for What We're Building</h3>
+        <p>Northlight is a small organisation. We're building tools and doing advisory work; we're not going to win on scale, and we're not going to out-resource the big players.</p>
+        <p>What we can do is be trustworthy — actually, concretely, demonstrably trustworthy; not because we say so, but because of the choices we make before anyone's looking.</p>
+        <p><strong>Privacy-first isn't a feature. It's core to how we operate.</strong> It means that when someone asks us "what do you know about me?", the answer is: your first name, your email address, and what you've chosen to tell us. We can say exactly why we have each thing. We can explain what we do with it. There's nothing to hide because we haven't taken anything we don't need.</p>
+        <p>That's the kind of organisation I want to build — one that has less to answer for because it asked less in the first place.</p>
+        <p><em>Northlight Vault is in early access and free to download at <a href="/vault.html">bynorthlight.ca</a>. If you have thoughts on this — or on privacy design more broadly — <a href="mailto:hello@bynorthlight.ca">just reply</a>. I'd like to hear them.</em></p>
+      </div>
+    </main>
+
+    <aside class="blog-sidebar" aria-label="Post sidebar">
+      <div class="sidebar-section">
+        <p class="sidebar-label">Published</p>
+        <div class="pub-card">
+          <div class="pub-day">15</div>
+          <div class="pub-year">June 2026</div>
+          <hr class="pub-rule">
+          <p class="pub-readtime"><strong>4</strong> min read</p>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <p class="sidebar-label">From the newsletter</p>
+        <div class="aurora-card">
+          <p>This essay appeared in the Aurora Brief — a monthly briefing from Elizabeth Lemoine on what she's learning, building, and watching.</p>
+          <a href="https://aurora-brief.kit.com/110f173cf7">Subscribe →</a>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <p class="sidebar-label">Topics</p>
+        <div class="topics-wrap">
+          <span class="topic-tag">Vault</span>
+          <span class="topic-tag">Privacy</span>
+        </div>
+      </div>
+    </aside>
+
+    <div class="blog-right-wing" role="presentation">
+      <div class="right-glow" role="presentation"></div>
+      <div class="right-dots-wrap" role="presentation" aria-hidden="true">
+        <div class="dot" style="top:0;left:0"></div>
+        <div class="dot" style="top:20px;left:24px"></div>
+        <div class="dot" style="top:48px;left:8px"></div>
+        <div class="dot" style="top:68px;left:38px"></div>
+        <div class="dot" style="top:96px;left:16px"></div>
+        <div class="dot" style="top:120px;left:46px"></div>
+        <div class="dot" style="top:150px;left:4px"></div>
+        <div class="dot" style="top:176px;left:30px"></div>
+        <div class="dot" style="top:206px;left:52px"></div>
+        <div class="dot" style="top:234px;left:18px"></div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <p class="footer-copy">© 2026 Northlight</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/" class="footer-link">Home</a>
+        <a href="/vault.html" class="footer-link">Northlight Vault</a>
+        <a href="/northlight-privacy.html" class="footer-link">Privacy Policy</a>
+      </nav>
+    </footer>
+
+  </div>
+
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script async src="https://plausible.io/js/pa-uccdYD5d_-tjjiMlRo9eR.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
+</body>
+</html>
