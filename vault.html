@@ -1,895 +1,790 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Northlight Vault — Cloud File Browser for Windows</title>
-<meta name="description" content="All your cloud storage. One place. No switching tabs. Northlight Vault connects Google Drive, OneDrive, and Dropbox in a single Windows desktop app.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  :root {
-    --midnight:   #0E0E14;
-    --surface:    #12121E;
-    --surface-2:  #10101C;
-    --border:     #1E2035;
-    --border-2:   #2A2A48;
-    --text:       #FFFFFF;
-    --cloud:      #C8CCE0;
-    --haze:       #B0B8D8;
-    --muted:      #8A92A8;
-    --structural: #5A6080;
-    --glacial:    #4FC3C8;
-    --boreal:     #5B8DD9;
-    --dusk:       #8B6FD4;
-    --aurora:     #C46FAA;
-  }
-
-  body {
-    background: var(--midnight);
-    color: var(--cloud);
-    font-family: 'Outfit', sans-serif;
-    min-height: 100vh;
-  }
-
-  /* ── SKIP NAV ── */
-  .skip-nav {
-    position: absolute;
-    top: -100px; left: 0;
-    background: var(--dusk);
-    color: #fff;
-    padding: 10px 20px;
-    font-family: 'Jost', sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-decoration: none;
-    border-radius: 0 0 6px 0;
-    z-index: 9999;
-    transition: top 0.2s;
-  }
-  .skip-nav:focus { top: 0; }
-
-  /* ── TOP BAR ── */
-  .top-bar {
-    height: 2px;
-    background: linear-gradient(90deg, #4fc3c8 0%, #5b8dd9 30%, #8b6fd4 65%, #c46faa 100%);
-  }
-
-  /* ── HEADER ── */
-  header {
-    padding: 28px 72px;
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-
-  .wordmark {
-    font-family: 'Jost', sans-serif;
-    font-weight: 600;
-    font-size: 28px;
-    letter-spacing: 0.07em;
-    background: linear-gradient(90deg, #4fc3c8 0%, #5b8dd9 33%, #8b6fd4 66%, #c46faa 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-decoration: none;
-    display: inline-block;
-  }
-
-  .header-right {
-    font-family: 'Jost', sans-serif;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.20em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-
-  /* ── HERO ── */
-  .hero {
-    padding: 72px 72px 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 64px;
-    align-items: center;
-    max-width: 1200px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero::after {
-    content: '';
-    position: absolute;
-    top: -100px; right: -200px;
-    width: 600px; height: 600px;
-    background: radial-gradient(ellipse, rgba(139,111,212,0.07) 0%, transparent 65%);
-    pointer-events: none;
-  }
-
-  .hero-left { position: relative; z-index: 2; }
-
-  .hero-eyebrow {
-    font-family: 'Jost', sans-serif;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.26em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .hero-eyebrow::before {
-    content: '';
-    display: inline-block;
-    width: 20px; height: 2px;
-    background: linear-gradient(90deg, #4fc3c8, #8b6fd4);
-    border-radius: 2px;
-  }
-
-  .hero-title {
-    font-family: 'Jost', sans-serif;
-    font-weight: 600;
-    font-size: 52px;
-    letter-spacing: 0.03em;
-    line-height: 1.05;
-    color: var(--text);
-    margin-bottom: 20px;
-  }
-
-  .hero-title span {
-    background: linear-gradient(105deg, #4fc3c8 0%, #5b8dd9 33%, #8b6fd4 66%, #c46faa 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .hero-subtitle {
-    font-family: 'Outfit', sans-serif;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 1.75;
-    color: var(--haze);
-    margin-bottom: 36px;
-  }
-
-  .early-access {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: rgba(139,111,212,0.12);
-    border: 1px solid rgba(139,111,212,0.25);
-    border-radius: 20px;
-    padding: 4px 12px;
-    font-family: 'Jost', sans-serif;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--dusk);
-    margin-bottom: 24px;
-  }
-
-  .early-access-dot {
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    background: var(--dusk);
-    animation: pulse 2s ease-in-out infinite;
-  }
-
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.4; }
-  }
-
-  .download-wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .btn-download {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 14px 32px;
-    background: linear-gradient(105deg, #4fc3c8 0%, #5b8dd9 40%, #8b6fd4 100%);
-    border-radius: 7px;
-    font-family: 'Jost', sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: 0.08em;
-    color: #ffffff;
-    text-decoration: none;
-    transition: opacity 0.2s, transform 0.2s;
-    border: none;
-    cursor: pointer;
-  }
-
-  .btn-download:hover { opacity: 0.92; transform: translateY(-1px); }
-
-  .btn-download svg {
-    width: 16px; height: 16px;
-    stroke: #ffffff; fill: none;
-    stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
-    flex-shrink: 0;
-  }
-
-  .download-meta {
-    font-family: 'Outfit', sans-serif;
-    font-size: 13px;
-    color: var(--muted);
-    line-height: 1.6;
-  }
-
-  .download-meta a {
-    color: var(--muted);
-    text-decoration: none;
-    border-bottom: 1px solid var(--border-2);
-    transition: color 0.2s;
-  }
-
-  .download-meta a:hover { color: var(--haze); }
-
-  /* ── LAPTOP MOCKUP ── */
-  .hero-right {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 24px 0 48px;
-  }
-
-  .laptop-wrap {
-    width: 100%;
-    max-width: 520px;
-    position: relative;
-    filter: drop-shadow(0 40px 80px rgba(91,141,217,0.18)) drop-shadow(0 8px 24px rgba(0,0,0,0.6));
-  }
-
-  /* Laptop lid (screen) */
-  .laptop-lid {
-    background: #1a1a2e;
-    border-radius: 12px 12px 0 0;
-    border: 2px solid #2a2a48;
-    border-bottom: none;
-    padding: 10px 10px 0;
-    position: relative;
-  }
-
-  /* Thin aurora top edge on lid */
-  .laptop-lid::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, #4fc3c8 0%, #5b8dd9 30%, #8b6fd4 65%, #c46faa 100%);
-    border-radius: 10px 10px 0 0;
-  }
-
-  /* Camera dot */
-  .laptop-lid::after {
-    content: '';
-    position: absolute;
-    top: 5px; left: 50%;
-    transform: translateX(-50%);
-    width: 5px; height: 5px;
-    border-radius: 50%;
-    background: #2a2a48;
-  }
-
-  /* Screen area */
-  .laptop-screen {
-    background: #0e0e14;
-    border-radius: 4px;
-    overflow: hidden;
-    aspect-ratio: 16/10;
-    position: relative;
-  }
-
-  .laptop-screen img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  /* Screen glow */
-  .laptop-screen::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(79,195,200,0.04) 0%, transparent 50%, rgba(139,111,212,0.04) 100%);
-    pointer-events: none;
-  }
-
-  /* Laptop base/hinge */
-  .laptop-base {
-    background: linear-gradient(180deg, #1e1e32 0%, #16162a 100%);
-    border: 2px solid #2a2a48;
-    border-top: 1px solid #3a3a58;
-    border-radius: 0 0 8px 8px;
-    height: 18px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  /* Trackpad */
-  .laptop-base::after {
-    content: '';
-    width: 28%;
-    height: 9px;
-    background: #2a2a48;
-    border-radius: 3px;
-    border: 1px solid #3a3a52;
-  }
-
-  /* Bottom stand shadow */
-  .laptop-stand {
-    width: 70%;
-    height: 6px;
-    background: linear-gradient(180deg, #12121e, transparent);
-    border-radius: 0 0 6px 6px;
-    margin: 0 auto;
-  }
-
-  /* Ambient glow under laptop */
-  .laptop-glow {
-    position: absolute;
-    bottom: 20px; left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    height: 40px;
-    background: radial-gradient(ellipse, rgba(91,141,217,0.2) 0%, transparent 70%);
-    filter: blur(12px);
-    pointer-events: none;
-  }
-
-  /* ── SCREENSHOTS ── */
-  .screenshots-section {
-    padding: 72px 72px 72px;
-  }
-
-  .section-label {
-    font-family: 'Jost', sans-serif;
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.26em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 40px;
-  }
-
-  .screenshots-label {
-    font-family: 'Jost', sans-serif;
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 20px;
-  }
-
-  .screenshots-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    max-width: 1000px;
-  }
-
-  .screenshot-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    border: 1px solid var(--border);
-    display: block;
-    cursor: zoom-in;
-    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
-  }
-
-  .screenshot-img:hover {
-    transform: scale(1.01);
-    border-color: var(--border-2);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-  }
-
-  /* ── LIGHTBOX ── */
-  .lightbox {
-    display: none;
-    position: fixed;
-    inset: 0;
-    z-index: 1000;
-    background: rgba(8,8,15,0.92);
-    backdrop-filter: blur(8px);
-    align-items: center;
-    justify-content: center;
-    padding: 32px;
-    cursor: zoom-out;
-    animation: lbFadeIn 0.2s ease;
-  }
-
-  .lightbox.open { display: flex; }
-
-  @keyframes lbFadeIn {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-  }
-
-  .lightbox img {
-    max-width: 90vw;
-    max-height: 88vh;
-    border-radius: 10px;
-    border: 1px solid var(--border-2);
-    box-shadow: 0 32px 80px rgba(0,0,0,0.7);
-    animation: lbSlideIn 0.25s ease;
-    cursor: default;
-  }
-
-  @keyframes lbSlideIn {
-    from { opacity: 0; transform: scale(0.96); }
-    to   { opacity: 1; transform: scale(1); }
-  }
-
-  .lightbox-close {
-    position: fixed;
-    top: 20px; right: 24px;
-    width: 36px; height: 36px;
-    border-radius: 50%;
-    background: var(--surface-2);
-    border: 1px solid var(--border-2);
-    color: var(--muted);
-    font-size: 18px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: color 0.2s, background 0.2s;
-    line-height: 1;
-  }
-
-  .lightbox-close:hover { color: var(--text); background: var(--border); }
-
-  /* ── DIVIDER ── */
-  hr.divider {
-    border: none;
-    border-top: 1px solid var(--border);
-    margin: 0 72px;
-  }
-
-  /* ── HOW IT WORKS ── */
-  .how-section {
-    padding: 72px 72px;
-    max-width: 1000px;
-  }
-
-  .how-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 24px;
-  }
-
-  .how-card {
-    background: var(--surface-2);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 28px 28px 24px;
-    position: relative;
-  }
-
-  .how-number {
-    font-family: 'Jost', sans-serif;
-    font-weight: 700;
-    font-size: 11px;
-    letter-spacing: 0.18em;
-    color: var(--border-2);
-    margin-bottom: 16px;
-  }
-
-  .how-title {
-    font-family: 'Jost', sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    letter-spacing: 0.04em;
-    color: var(--text);
-    margin-bottom: 10px;
-  }
-
-  .how-body {
-    font-family: 'Outfit', sans-serif;
-    font-size: 14px;
-    line-height: 1.75;
-    color: var(--cloud);
-  }
-
-  .how-accent {
-    position: absolute;
-    top: 0; left: 28px;
-    width: 24px; height: 2px;
-    border-radius: 0 0 2px 2px;
-  }
-
-  /* ── SYSTEM REQUIREMENTS ── */
-  .requirements-section {
-    padding: 0 72px 72px;
-    max-width: 760px;
-  }
-
-  .req-row {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-  }
-
-  .req-chip {
-    font-family: 'Outfit', sans-serif;
-    font-size: 13px;
-    color: var(--haze);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 7px 14px;
-  }
-
-  /* ── PROVIDERS ── */
-  .providers-section {
-    padding: 0 72px 72px;
-    max-width: 1000px;
-  }
-
-  .providers-row {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-  }
-
-  .provider-chip {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--surface-2);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 10px 18px;
-    font-family: 'Jost', sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    color: var(--haze);
-  }
-
-  .provider-dot {
-    width: 8px; height: 8px;
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-
-  /* ── WHAT IT IS / ISN'T ── */
-  .notes-section {
-    padding: 0 72px 72px;
-    max-width: 760px;
-  }
-
-  .note-card {
-    background: var(--surface-2);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 24px 28px;
-  }
-
-  .note-card p {
-    font-family: 'Outfit', sans-serif;
-    font-size: 15px;
-    line-height: 1.8;
-    color: var(--cloud);
-    margin-bottom: 12px;
-  }
-
-  .note-card p:last-child { margin-bottom: 0; }
-
-  /* ── FOOTER ── */
-  footer {
-    border-top: 1px solid var(--border);
-    padding: 24px 72px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  .footer-left {
-    font-family: 'Outfit', sans-serif;
-    font-size: 13px;
-    color: var(--muted);
-  }
-
-  .footer-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .footer-link {
-    font-family: 'Outfit', sans-serif;
-    font-size: 13px;
-    color: var(--muted);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  .footer-link:hover { color: var(--haze); }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 900px) {
-    .hero {
-      grid-template-columns: 1fr;
-      padding: 52px 32px 0;
-      gap: 40px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Northlight Vault — All Your Cloud Storage. One Place.</title>
+  <meta name="description" content="Northlight Vault is a free Windows desktop app that lets you browse Google Drive, OneDrive, and Dropbox files in one place — without switching tabs or apps.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Schema: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Northlight Vault",
+    "operatingSystem": "Windows",
+    "applicationCategory": "UtilitiesApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "CAD"
+    },
+    "description": "A free Windows desktop app that lets you browse Google Drive, OneDrive, and Dropbox files in one place — without switching tabs or apps.",
+    "url": "https://bynorthlight.ca/vault.html",
+    "downloadUrl": "https://github.com/elizabethlemoine33-commits/Northlight-Vault/releases/latest/download/Northlight.Vault.Setup.1.0.0.exe",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Northlight Advisory Services",
+      "url": "https://bynorthlight.ca"
     }
-    .hero-right { padding: 0 0 32px; }
   }
+  </script>
 
-  @media (max-width: 768px) {
-    header, .screenshots-section, .how-section,
-    .providers-section, .notes-section, .requirements-section,
-    footer { padding-left: 28px; padding-right: 28px; }
-
-    hr.divider { margin: 0 28px; }
-
-    .hero-title { font-size: 38px; }
-    .how-grid { grid-template-columns: 1fr; }
-    .screenshots-grid { grid-template-columns: 1fr; }
+  <!-- Schema: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is Northlight Vault really free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Vault is free during early access. We'll be transparent about pricing if that changes — and early access users will hear first."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What operating systems does Northlight Vault support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Windows only, currently. macOS support is on the roadmap but we're not committing to a timeline. If macOS matters to you, let us know — it helps us prioritise."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Vault store my files or credentials?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Vault connects to your cloud accounts using their official authentication (OAuth). Your login credentials are never stored by Vault — authentication happens directly through Google, Microsoft, or Dropbox. Files are not downloaded or cached locally."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can Vault edit or delete my files?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Vault is read-only by design. It can browse and open files, nothing else. We made this an explicit design decision — not a missing feature."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who made Northlight Vault?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Vault is built by Northlight Advisory Services — a Canadian strategy, advisory, and AI firm. It started as a tool we built for ourselves and decided was worth sharing."
+        }
+      }
+    ]
   }
-        .google-note { font-size: 11px; color: var(--cloud); opacity: 0.65; margin-top: 12px; max-width: 340px; line-height: 1.5; }
+  </script>
 
-  /* ── AURORA BRIEF NEWSLETTER ── */
-  .newsletter-section {
-    background: var(--surface-2);
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    padding: 56px 72px;
-  }
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script async src="https://plausible.io/js/pa-uccdYD5d_-tjjiMlRo9eR.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
 
-  @media (max-width: 768px) {
-    .newsletter-section { padding: 48px 28px; }
-  }
-</style>
-<!-- Privacy-friendly analytics by Plausible -->
-<script async src="https://plausible.io/js/pa-uccdYD5d_-tjjiMlRo9eR.js"></script>
-<script>
-  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-  plausible.init()
-</script>
+  <style>
+    /* ── TOKENS ── */
+    :root {
+      --midnight:   #0E0E14;
+      --deep-night: #08080F;
+      --surface:    #12121E;
+      --surface-2:  #10101C;
+      --border:     #1E2035;
+      --border-2:   #2A2A48;
+      --text:       #FFFFFF;
+      --cloud:      #C8CCE0;
+      --haze:       #BCC2DC;
+      --muted:      #99A1B6;
+      --structural: #6C7295;
+      --glacial:    #4FC3C8;
+      --boreal:     #5B8DD9;
+      --dusk:       #8B6FD4;
+      --aurora:     #C46FAA;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--midnight);
+      color: var(--cloud);
+      font-family: 'Outfit', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── SKIP NAV ── */
+    .skip-nav {
+      position: absolute; top: -100px; left: 0;
+      background: var(--dusk); color: #fff;
+      padding: 10px 20px;
+      font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.06em;
+      text-decoration: none; border-radius: 0 0 6px 0; z-index: 9999; transition: top 0.2s;
+    }
+    .skip-nav:focus { top: 0; }
+
+    /* ── TOP BAR ── */
+    .top-bar {
+      height: 2px;
+      background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);
+    }
+
+    /* ── NAV ── */
+    nav.site-nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 64px;
+      border-bottom: 1px solid var(--border);
+      max-width: 1280px; margin: 0 auto;
+    }
+    .nav-wordmark {
+      font-family: 'Jost', sans-serif; font-size: 18px; font-weight: 600; letter-spacing: 0.06em;
+      background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 33%, #8B6FD4 66%, #C46FAA 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a {
+      font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s;
+    }
+    .nav-links a:hover,
+    .nav-links a[aria-current="page"] { color: var(--text); }
+    .nav-links a:focus-visible {
+      outline: 2px solid var(--dusk); outline-offset: 4px; border-radius: 2px;
+    }
+
+    /* ── PAGE WRAPPER ── */
+    .page-wrap { max-width: 1280px; margin: 0 auto; padding: 0 64px; }
+
+    /* ── AURORA DIVIDER ── */
+    .aurora-divider {
+      height: 1px;
+      background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);
+      opacity: 0.25; max-width: 1280px; margin: 0 auto;
+    }
+
+    /* ── VAULT HERO ── */
+    .vault-hero {
+      padding: 72px 0 64px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .eyebrow {
+      font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500;
+      letter-spacing: 0.26em; text-transform: uppercase; color: var(--muted); margin-bottom: 20px;
+    }
+    .vault-title {
+      font-family: 'Jost', sans-serif; font-size: 52px; font-weight: 600;
+      letter-spacing: 0.03em; line-height: 1.05;
+      background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 33%, #8B6FD4 66%, #C46FAA 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      margin-bottom: 10px;
+    }
+    .vault-subtitle {
+      font-family: 'Jost', sans-serif; font-size: 28px; font-weight: 600;
+      color: var(--text); line-height: 1.2; margin-bottom: 24px;
+    }
+    .vault-body {
+      font-size: 16px; color: var(--haze); line-height: 1.75; margin-bottom: 32px; max-width: 480px;
+    }
+    .cta-group { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+    .cta-primary {
+      display: inline-block;
+      font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 33%, #8B6FD4 66%, #C46FAA 100%);
+      color: #fff; text-decoration: none;
+      padding: 13px 28px; border-radius: 4px; transition: opacity 0.2s;
+    }
+    .cta-primary:hover { opacity: 0.88; }
+    .cta-primary:focus-visible { outline: 2px solid var(--dusk); outline-offset: 4px; }
+    .cta-secondary {
+      font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none;
+      transition: color 0.2s;
+    }
+    .cta-secondary:hover { color: var(--text); }
+    .free-badge {
+      font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--glacial);
+      margin-top: 14px;
+    }
+    .google-note {
+      margin-top: 14px;
+      font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.04em;
+      color: var(--muted); max-width: 480px; line-height: 1.6;
+    }
+
+    /* ── VAULT ICON DISPLAY ── */
+    .vault-hero-right {
+      display: flex; justify-content: center; align-items: center;
+    }
+    .vault-icon-display {
+      width: 200px; height: 200px;
+      background: var(--surface);
+      border: 1px solid var(--border-2);
+      border-radius: 32px;
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+    }
+    .vault-icon-display::before {
+      content: '';
+      position: absolute; inset: -1px;
+      border-radius: 33px;
+      background: linear-gradient(135deg, rgba(79,195,200,0.3) 0%, rgba(91,141,217,0.2) 50%, rgba(139,111,212,0.3) 100%);
+      z-index: -1;
+    }
+    .vault-icon-display img { width: 140px; height: 140px; border-radius: 20px; }
+
+    /* ── SECTION PADDING ── */
+    .section-padded { padding: 72px 64px; max-width: 1280px; margin: 0 auto; }
+    .section-label {
+      font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500;
+      letter-spacing: 0.26em; text-transform: uppercase; color: var(--muted); margin-bottom: 32px;
+    }
+
+    /* ── FEATURES GRID ── */
+    .features-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+    }
+    .feature-card {
+      background: var(--surface); border: 1px solid var(--border); padding: 32px 28px;
+      position: relative; transition: border-color 0.2s;
+    }
+    .feature-card:hover { border-color: var(--border-2); }
+    .feature-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);
+      opacity: 0; transition: opacity 0.2s;
+    }
+    .feature-card:hover::before { opacity: 1; }
+    .feature-icon { font-size: 22px; margin-bottom: 14px; display: block; }
+    .feature-title {
+      font-family: 'Jost', sans-serif; font-size: 15px; font-weight: 600;
+      color: var(--text); margin-bottom: 8px; letter-spacing: 0.02em;
+    }
+    .feature-body { font-size: 14px; color: var(--haze); line-height: 1.7; }
+
+    /* ── SCREENSHOTS ── */
+    .screenshots-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+    }
+    .screenshot-img {
+      width: 100%; display: block;
+      border: 1px solid var(--border); border-radius: 4px;
+      cursor: pointer; transition: border-color 0.2s, transform 0.2s;
+      background: var(--surface);
+    }
+    .screenshot-img:hover { border-color: var(--border-2); transform: scale(1.01); }
+    .screenshot-img:focus-visible { outline: 2px solid var(--dusk); outline-offset: 4px; }
+
+    /* ── LIGHTBOX ── */
+    .lightbox {
+      display: none; position: fixed; inset: 0;
+      background: rgba(8, 8, 15, 0.92);
+      z-index: 1000; align-items: center; justify-content: center; padding: 32px;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox-inner { position: relative; max-width: 1100px; width: 100%; }
+    .lightbox-img {
+      width: 100%; display: block;
+      border: 1px solid var(--border-2); border-radius: 4px;
+    }
+    .lightbox-close {
+      position: absolute; top: -44px; right: 0;
+      background: none; border: none; color: var(--muted);
+      font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      cursor: pointer; display: flex; align-items: center; gap: 8px; transition: color 0.2s;
+    }
+    .lightbox-close:hover { color: var(--text); }
+    .lightbox-close:focus-visible { outline: 2px solid var(--dusk); outline-offset: 4px; border-radius: 2px; }
+    .lightbox-caption {
+      margin-top: 14px; font-family: 'Jost', sans-serif;
+      font-size: 11px; letter-spacing: 0.1em; color: var(--muted); text-align: center;
+    }
+
+    /* ── SUPPORTED SERVICES ── */
+    .services-row { display: flex; gap: 2px; }
+    .service-pill {
+      background: var(--surface); border: 1px solid var(--border);
+      padding: 20px 28px; flex: 1;
+      display: flex; align-items: center; gap: 14px;
+    }
+    .service-pill-icon { font-size: 20px; }
+    .service-pill-name {
+      font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 600;
+      color: var(--text); letter-spacing: 0.02em;
+    }
+    .service-pill-desc { font-size: 12px; color: var(--muted); }
+
+    /* ── TRANSPARENCY ── */
+    .transparency-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px;
+    }
+    .transparency-card {
+      background: var(--surface); border: 1px solid var(--border); padding: 32px 28px;
+    }
+    .transparency-title {
+      font-family: 'Jost', sans-serif; font-size: 15px; font-weight: 600;
+      color: var(--text); margin-bottom: 8px; letter-spacing: 0.02em;
+    }
+    .check { color: var(--glacial); margin-right: 6px; }
+    .cross { color: #E06B6B; margin-right: 6px; }
+
+    /* ── FAQ ── */
+    .faq-list { display: flex; flex-direction: column; gap: 2px; }
+    .faq-item { border: 1px solid var(--border); background: var(--surface); overflow: hidden; }
+    .faq-question {
+      width: 100%; background: none; border: none;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 22px 28px; cursor: pointer; text-align: left; gap: 16px;
+    }
+    .faq-question:focus-visible { outline: 2px solid var(--dusk); outline-offset: -2px; }
+    .faq-q-text {
+      font-family: 'Jost', sans-serif; font-size: 15px; font-weight: 600;
+      letter-spacing: 0.02em; color: var(--text);
+    }
+    .faq-chevron {
+      flex-shrink: 0; width: 18px; height: 18px; color: var(--muted); transition: transform 0.25s;
+    }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .faq-item.open .faq-answer { max-height: 400px; }
+    .faq-answer-inner {
+      padding: 20px 28px 24px;
+      font-size: 14px; color: var(--haze); line-height: 1.75;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── NEWSLETTER ── */
+    .newsletter-section {
+      padding: 72px 64px; max-width: 1280px; margin: 0 auto;
+    }
+
+    /* ── FOOTER ── */
+    .footer-border { border-top: 1px solid var(--border); }
+    footer { padding: 32px 64px; max-width: 1280px; margin: 0 auto; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; }
+    .footer-left { display: flex; flex-direction: column; gap: 8px; }
+    .footer-copy {
+      font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.1em; color: var(--muted);
+    }
+    .footer-powered {
+      font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 0.12em;
+      color: var(--muted); opacity: 0.7;
+    }
+    .footer-powered a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .footer-powered a:hover { color: var(--text); }
+    .footer-right { display: flex; flex-direction: column; align-items: flex-end; gap: 16px; }
+    .footer-links { display: flex; gap: 24px; list-style: none; flex-wrap: wrap; justify-content: flex-end; }
+    .footer-links a {
+      font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.1em;
+      color: var(--muted); text-decoration: none; transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--text); }
+    .footer-social { display: flex; gap: 16px; list-style: none; align-items: center; }
+    .footer-social a {
+      font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.1em;
+      color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: 6px; transition: color 0.2s;
+    }
+    .footer-social a:hover { color: var(--text); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .vault-hero { grid-template-columns: 1fr; gap: 40px; }
+      .vault-hero-right { justify-content: flex-start; }
+      .features-grid { grid-template-columns: 1fr; }
+      .transparency-grid { grid-template-columns: 1fr; }
+      .services-row { flex-direction: column; }
+    }
+    @media (max-width: 640px) {
+      nav.site-nav, .section-padded, .newsletter-section, footer {
+        padding-left: 24px; padding-right: 24px;
+      }
+      .page-wrap { padding: 0 24px; }
+      .vault-title { font-size: 36px; }
+      .vault-subtitle { font-size: 22px; }
+      .footer-inner { flex-direction: column; }
+      .footer-right { align-items: flex-start; }
+      .footer-links { justify-content: flex-start; }
+      .screenshots-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
   <a href="#main-content" class="skip-nav">Skip to main content</a>
-
   <div class="top-bar" role="presentation"></div>
 
-  <header>
-    <a href="/index.html" class="wordmark">Northlight</a>
-    <p class="header-right">Vault &nbsp;·&nbsp; Cloud File Browser</p>
-  </header>
+  <nav class="site-nav" aria-label="Site navigation">
+    <a href="/" class="nav-wordmark" aria-label="Northlight home">Northlight</a>
+    <ul class="nav-links">
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/vault.html" aria-current="page">Vault</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="mailto:support@bynorthlight.ca">Contact</a></li>
+    </ul>
+  </nav>
 
-  <!-- ── HERO ── -->
-  <section class="hero" id="main-content">
-    <div class="hero-left">
-      <p class="hero-eyebrow">Northlight Vault &nbsp;·&nbsp; v1.0.0</p>
-      <h1 class="hero-title">All your cloud storage.<br><span>One place.</span></h1>
-      <p class="hero-subtitle">
-        Northlight Vault is a Windows desktop app that brings your cloud storage together in one place. Browse, search, and open files across Google Drive, OneDrive, and Dropbox — without switching between apps or browser tabs.
-      </p>
+  <main id="main-content">
 
-      <div class="early-access">
-        <span class="early-access-dot" role="presentation"></span>
-        Free during early access
-      </div>
-
-      <div class="download-wrap">
-        <!-- UPDATE href TO GITHUB RELEASE URL WHEN PUBLISHED -->
-        <a href="https://github.com/elizabethlemoine33-commits/Northlight-Vault/releases/latest/download/Northlight.Vault.Setup.1.0.0.exe" class="btn-download">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Download Vault v1.0.0 for Windows
-        </a>
-        <p class="download-meta">
-          Windows 10 or later &nbsp;·&nbsp; No account required &nbsp;·&nbsp;
-          By downloading, you agree to our <a href="/vault-privacy.html">Northlight Vault Privacy Policy</a>
+    <!-- ═══ HERO ═══ -->
+    <div class="page-wrap">
+      <div class="vault-hero">
+        <div class="vault-hero-left">
+          <p class="eyebrow">Northlight · Free Windows App</p>
+          <h1 class="vault-title">Northlight Vault</h1>
+          <h2 class="vault-subtitle">All your cloud storage.<br>One place.</h2>
+          <p class="vault-body">
+            Browse files across Google Drive, OneDrive, and Dropbox in a single desktop app — without switching tabs, signing in and out, or losing track of where anything lives. Free during early access.
           </p>
+          <div class="cta-group">
+            <a href="https://github.com/elizabethlemoine33-commits/Northlight-Vault/releases/latest/download/Northlight.Vault.Setup.1.0.0.exe"
+               class="cta-primary">Download for Windows</a>
+            <a href="#how-it-works" class="cta-secondary">See how it works →</a>
+          </div>
+          <p class="free-badge">Free during early access · Windows only</p>
           <p class="google-note">Connecting Google Drive? Google may show a &#8220;This app hasn&#8217;t been verified&#8221; warning. Click <strong>Advanced</strong>, then <strong>Go to Northlight Vault</strong> to continue.</p>
-      </div>
-    </div>
-
-    <!-- ── LAPTOP MOCKUP ── -->
-    <div class="hero-right">
-      <div class="laptop-glow" role="presentation"></div>
-      <div class="laptop-wrap">
-        <div class="laptop-lid">
-          <div class="laptop-screen">
-            <img src="northlight-vault-screenshot-3.png" alt="Northlight Vault app showing a Documents folder with Northlight project files listed across connected cloud accounts">
+        </div>
+        <div class="vault-hero-right">
+          <div class="vault-icon-display">
+            <img src="/northlight-vault-icon-512x512.png"
+                 alt="Northlight Vault application icon"
+                 onerror="this.style.display='none'; this.parentNode.innerHTML += '<span style=\'font-size:80px\' aria-hidden=\'true\'>🗄️</span>'">
           </div>
         </div>
-        <div class="laptop-base" role="presentation"></div>
-        <div class="laptop-stand" role="presentation"></div>
       </div>
     </div>
-  </section>
 
-  <!-- ── SCREENSHOTS ── -->
-  <section class="screenshots-section" aria-label="App screenshots">
-    <p class="screenshots-label">Screenshots &nbsp;·&nbsp; <span style="color:var(--muted);font-size:10px;">Click to enlarge</span></p>
-    <div class="screenshots-grid">
-      <img src="northlight-vault-screenshot-3.png" alt="Vault file browser showing Documents folder with a list of Northlight files including PDFs, spreadsheets, and presentations" class="screenshot-img" onclick="openLightbox(this)" tabindex="0" onkeydown="if(event.key==='Enter')openLightbox(this)" role="button">
-      <img src="northlight-vault-screenshot-2.png" alt="Vault file browser showing the Northlight Projects subfolder with files from multiple cloud accounts" class="screenshot-img" onclick="openLightbox(this)" tabindex="0" onkeydown="if(event.key==='Enter')openLightbox(this)" role="button">
-      <img src="northlight-vault-screenshot-4.png" alt="Vault sidebar showing Google Drive, OneDrive, and Dropbox accounts all connected under a single elizabeth@bynorthlight.ca account" class="screenshot-img" onclick="openLightbox(this)" tabindex="0" onkeydown="if(event.key==='Enter')openLightbox(this)" role="button">
-      <img src="northlight-vault-screenshot-1.png" alt="Vault Help menu open showing options including View Changelog, Check for Updates, About Northlight Vault, and version number v1.0.0" class="screenshot-img" onclick="openLightbox(this)" tabindex="0" onkeydown="if(event.key==='Enter')openLightbox(this)" role="button">
-    </div>
-  </section>
+    <div class="aurora-divider" role="presentation"></div>
 
-  <hr class="divider">
-
-  <!-- ── HOW IT WORKS ── -->
-  <section class="how-section" aria-labelledby="how-heading">
-    <h2 id="how-heading" class="section-label">How it works</h2>
-    <div class="how-grid">
-
-      <div class="how-card">
-        <div class="how-accent" style="background: linear-gradient(90deg, #4fc3c8, #5b8dd9);" role="presentation"></div>
-        <p class="how-number" aria-hidden="true">01</p>
-        <h3 class="how-title">Connect your accounts</h3>
-        <p class="how-body">Link your Google Drive, Microsoft OneDrive, and Dropbox accounts in seconds. No new account required — Vault connects to storage you already have.</p>
-      </div>
-
-      <div class="how-card">
-        <div class="how-accent" style="background: linear-gradient(90deg, #5b8dd9, #8b6fd4);" role="presentation"></div>
-        <p class="how-number" aria-hidden="true">02</p>
-        <h3 class="how-title">Browse everything at once</h3>
-        <p class="how-body">See all your files across every connected provider in a single interface. No more remembering which platform something is on.</p>
-      </div>
-
-      <div class="how-card">
-        <div class="how-accent" style="background: linear-gradient(90deg, #8b6fd4, #c46faa);" role="presentation"></div>
-        <p class="how-number" aria-hidden="true">03</p>
-        <h3 class="how-title">Open files instantly</h3>
-        <p class="how-body">Click any file and it opens in its native app. Fast, simple, and always in the right place.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ── AURORA BRIEF SIGNUP #2 ── -->
-  <section class="newsletter-section" aria-label="Aurora Brief newsletter signup">
-    <script async data-uid="110f173cf7" src="https://aurora-brief.kit.com/110f173cf7/index.js"></script>
-  </section>
-
-  <hr class="divider">
-
-  <!-- ── SYSTEM REQUIREMENTS ── -->
-  <section class="requirements-section" aria-labelledby="req-heading">
-    <div style="padding-top:72px; padding-bottom:72px;">
-      <h2 id="req-heading" class="section-label" style="margin-bottom:0;">System requirements</h2>
-      <div class="req-row">
-        <div class="req-chip">Windows 10 or later</div>
-        <div class="req-chip">Internet connection required</div>
-        <div class="req-chip">No account required</div>
-        <div class="req-chip">No subscription</div>
-      </div>
-    </div>
-  </section>
-
-  <hr class="divider">
-
-  <!-- ── SUPPORTED PROVIDERS ── -->
-  <section class="providers-section" aria-labelledby="providers-heading">
-    <div style="padding-top:72px;">
-      <h2 id="providers-heading" class="section-label" style="margin-bottom:0;">Supported cloud providers</h2>
-      <div class="providers-row">
-        <div class="provider-chip">
-          <span class="provider-dot" style="background:#4fc3c8;" role="presentation"></span>
-          Google Drive
+    <!-- ═══ FEATURES ═══ -->
+    <section class="section-padded" id="how-it-works" aria-labelledby="features-label">
+      <h2 class="section-label" id="features-label">What it does</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <span class="feature-icon" aria-hidden="true">🗂️</span>
+          <h3 class="feature-title">One view, three services</h3>
+          <p class="feature-body">Google Drive, OneDrive, and Dropbox — all visible in a single interface. Browse folders, find files, and open them without switching apps or accounts.</p>
         </div>
-        <div class="provider-chip">
-          <span class="provider-dot" style="background:#5b8dd9;" role="presentation"></span>
-          Microsoft OneDrive
+        <div class="feature-card">
+          <span class="feature-icon" aria-hidden="true">🔒</span>
+          <h3 class="feature-title">Read-only by design</h3>
+          <p class="feature-body">Vault is a browser, not an editor. It finds and opens your files — it doesn't move, rename, or delete anything. Your files stay exactly where they are.</p>
         </div>
-        <div class="provider-chip">
-          <span class="provider-dot" style="background:#8b6fd4;" role="presentation"></span>
-          Dropbox
+        <div class="feature-card">
+          <span class="feature-icon" aria-hidden="true">🖥️</span>
+          <h3 class="feature-title">Desktop, not browser</h3>
+          <p class="feature-body">A proper Windows desktop application. Open it from your taskbar. No browser tab to lose, no sign-in prompt every session. It's just there when you need it.</p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <hr class="divider">
+    <div class="aurora-divider" role="presentation"></div>
 
-  <!-- ── WHAT IT IS / ISN'T ── -->
-  <section class="notes-section" aria-labelledby="notes-heading">
-    <div style="padding-top:72px;">
-      <h2 id="notes-heading" class="section-label" style="margin-bottom:16px;">Good to know</h2>
-      <div class="note-card">
-        <p>Vault is a read-only file browser — it lets you find and open files, not move, rename, or delete them.</p>
-        <p>It's not a cloud storage service and doesn't copy your files anywhere. Everything stays where it already is.</p>
-        <p>Northlight Vault does not collect or store your personal data — everything stays on your device. <a href="/vault-privacy.html" style="color:var(--glacial);border-bottom:1px solid rgba(79,195,200,0.25);">Read the Northlight Vault Privacy Policy →</a></p>
+    <!-- ═══ SCREENSHOTS ═══ -->
+    <section class="section-padded" aria-labelledby="screenshots-label">
+      <h2 class="section-label" id="screenshots-label">See it in action</h2>
+      <div class="screenshots-grid">
+        <img
+          src="/northlight-vault-screenshot-1.png"
+          alt="Northlight Vault showing the connected accounts sidebar with Google Drive, OneDrive, and Dropbox all linked as Elizabeth Lemoine (elizabeth@bynorthlight.ca), with the Documents folder selected and showing empty"
+          class="screenshot-img"
+          onclick="openLightbox(this)"
+          tabindex="0"
+          role="button"
+          onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(this)}"
+        >
+        <img
+          src="/northlight-vault-screenshot-2.png"
+          alt="Northlight Vault showing the Documents folder with files listed including PDFs, Word documents, PowerPoint presentations, and spreadsheets from connected cloud accounts"
+          class="screenshot-img"
+          onclick="openLightbox(this)"
+          tabindex="0"
+          role="button"
+          onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(this)}"
+        >
+        <img
+          src="/northlight-vault-screenshot-3.png"
+          alt="Northlight Vault showing the Northlight Projects subfolder inside Documents, containing subfolders and project files from connected cloud accounts"
+          class="screenshot-img"
+          onclick="openLightbox(this)"
+          tabindex="0"
+          role="button"
+          onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(this)}"
+        >
+        <img
+          src="/northlight-vault-screenshot-4.png"
+          alt="Northlight Vault Help menu open showing options including View Changelog, Check for Updates, About Northlight Vault, and version number v1.0.0, with a welcome banner visible"
+          class="screenshot-img"
+          onclick="openLightbox(this)"
+          tabindex="0"
+          role="button"
+          onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(this)}"
+        >
+      </div>
+      <p style="margin-top:16px; font-family:'Jost',sans-serif; font-size:11px; letter-spacing:0.1em; color:var(--muted);">Click any screenshot to enlarge</p>
+    </section>
+
+    <!-- ── LIGHTBOX ── -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot viewer">
+      <div class="lightbox-inner">
+        <button class="lightbox-close" onclick="closeLightbox()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          Close
+        </button>
+        <img id="lightbox-img" class="lightbox-img" src="" alt="">
+        <p id="lightbox-caption" class="lightbox-caption"></p>
       </div>
     </div>
-  </section>
 
-  <div style="padding-bottom:72px;"></div>
+    <div class="aurora-divider" role="presentation"></div>
 
-  <footer>
-    <p class="footer-left">Questions? <a href="mailto:support@bynorthlight.ca" style="color:var(--muted);border-bottom:1px solid var(--border-2);">support@bynorthlight.ca</a> &nbsp;·&nbsp; © 2026 Northlight</p>
-    <nav aria-label="Footer navigation">
-      <div class="footer-right">
-        <a href="/index.html" class="footer-link">Northlight home</a>
-        <a href="/blog/" class="footer-link">Blog</a>
-        <a href="/northlight-privacy.html" class="footer-link">Privacy Policy</a>
-        <a href="https://aurora-brief.kit.com/110f173cf7" class="footer-link">Aurora Brief</a>
+    <!-- ═══ SUPPORTED SERVICES ═══ -->
+    <section class="section-padded" aria-labelledby="services-label">
+      <h2 class="section-label" id="services-label">Supported cloud services</h2>
+      <div class="services-row">
+        <div class="service-pill">
+          <span class="service-pill-icon" aria-hidden="true">🟢</span>
+          <div>
+            <p class="service-pill-name">Google Drive</p>
+            <p class="service-pill-desc">My Drive, Shared drives, Shared with me</p>
+          </div>
+        </div>
+        <div class="service-pill">
+          <span class="service-pill-icon" aria-hidden="true">🔵</span>
+          <div>
+            <p class="service-pill-name">OneDrive</p>
+            <p class="service-pill-desc">Personal and Microsoft 365</p>
+          </div>
+        </div>
+        <div class="service-pill">
+          <span class="service-pill-icon" aria-hidden="true">🟦</span>
+          <div>
+            <p class="service-pill-name">Dropbox</p>
+            <p class="service-pill-desc">Personal and Business accounts</p>
+          </div>
+        </div>
       </div>
-    </nav>
-  </footer>
+    </section>
 
-  <!-- ── LIGHTBOX ── -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot enlarged view" onclick="closeLightbox(event)">
-    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close enlarged screenshot">✕</button>
-    <img id="lightbox-img" src="" alt="">
+    <div class="aurora-divider" role="presentation"></div>
+
+    <!-- ═══ FULL TRANSPARENCY ═══ -->
+    <section class="section-padded" aria-labelledby="transparency-label">
+      <h2 class="section-label" id="transparency-label">Full transparency</h2>
+      <div class="transparency-grid">
+        <div class="transparency-card">
+          <h3 class="transparency-title">What Vault does</h3>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:10px; margin-top:12px;">
+            <li style="font-size:14px; color:var(--haze);"><span class="check" aria-hidden="true">✓</span>Browse files and folders across all connected accounts</li>
+            <li style="font-size:14px; color:var(--haze);"><span class="check" aria-hidden="true">✓</span>Open files in their native app or in your browser</li>
+            <li style="font-size:14px; color:var(--haze);"><span class="check" aria-hidden="true">✓</span>Search across services by filename</li>
+            <li style="font-size:14px; color:var(--haze);"><span class="check" aria-hidden="true">✓</span>Stay signed in between sessions</li>
+          </ul>
+        </div>
+        <div class="transparency-card">
+          <h3 class="transparency-title">What Vault doesn't do</h3>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:10px; margin-top:12px;">
+            <li style="font-size:14px; color:var(--haze);"><span class="cross" aria-hidden="true">✗</span>Move, rename, or delete your files</li>
+            <li style="font-size:14px; color:var(--haze);"><span class="cross" aria-hidden="true">✗</span>Store or sync files locally</li>
+            <li style="font-size:14px; color:var(--haze);"><span class="cross" aria-hidden="true">✗</span>Upload or edit documents</li>
+            <li style="font-size:14px; color:var(--haze);"><span class="cross" aria-hidden="true">✗</span>Share files or manage permissions</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="aurora-divider" role="presentation"></div>
+
+    <!-- ═══ FAQ ═══ -->
+    <section class="section-padded" aria-labelledby="faq-label">
+      <h2 class="section-label" id="faq-label">Frequently asked questions about Northlight Vault</h2>
+
+      <div class="faq-list" role="list">
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+            <span class="faq-q-text">Is Northlight Vault really free?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Yes. Vault is free during early access. We'll be transparent about pricing if that changes — and early access users will hear first.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+            <span class="faq-q-text">What operating systems does Northlight Vault support?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Windows only, currently. macOS support is on the roadmap but we're not committing to a timeline. If macOS matters to you, let us know — it helps us prioritise.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+            <span class="faq-q-text">Does Vault store my files or credentials?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              No. Vault connects to your cloud accounts using their official authentication (OAuth). Your login credentials are never stored by Vault — authentication happens directly through Google, Microsoft, or Dropbox. Files are not downloaded or cached locally.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+            <span class="faq-q-text">Can Vault edit or delete my files?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              No. Vault is read-only by design. It can browse and open files, nothing else. We made this an explicit design decision — not a missing feature.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+            <span class="faq-q-text">Who made Northlight Vault?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Vault is built by Northlight Advisory Services — a Canadian strategy, advisory, and AI firm. It started as a tool we built for ourselves and decided was worth sharing. You can learn more at <a href="/" style="color:var(--glacial);">bynorthlight.ca</a>.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══ AURORA BRIEF NEWSLETTER ═══ -->
+    <div class="aurora-divider" role="presentation"></div>
+    <section class="newsletter-section" aria-label="Aurora Brief newsletter signup">
+      <script async data-uid="110f173cf7" src="https://aurora-brief.kit.com/110f173cf7/index.js"></script>
+    </section>
+
+    <!-- ═══ BOTTOM DOWNLOAD CTA ═══ -->
+    <div class="aurora-divider" role="presentation"></div>
+    <section class="section-padded" aria-label="Download Northlight Vault">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;">
+        <div>
+          <h2 style="font-family:'Jost',sans-serif; font-size:28px; font-weight:600; color:var(--text); margin-bottom:10px;">Ready to try it?</h2>
+          <p style="font-size:15px; color:var(--haze); max-width:440px;">Free during early access. No account required beyond your existing cloud services.</p>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:10px; align-items:flex-end;">
+          <a href="https://github.com/elizabethlemoine33-commits/Northlight-Vault/releases/latest/download/Northlight.Vault.Setup.1.0.0.exe"
+             class="cta-primary">Download Northlight Vault</a>
+          <p style="font-family:'Jost',sans-serif; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted);">Windows · Free during early access</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="footer-border">
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-left">
+          <p class="footer-copy">© 2026 Northlight Advisory Services</p>
+          <p class="footer-powered">Powered by <a href="/">Northlight OS</a></p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <div class="footer-right">
+            <ul class="footer-links">
+              <li><a href="/">Northlight</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="/vault-privacy.html">Privacy Policy</a></li>
+              <li><a href="https://aurora-brief.kit.com/110f173cf7" target="_blank" rel="noopener">Aurora Brief</a></li>
+            </ul>
+            <ul class="footer-social">
+              <li>
+                <a href="https://www.linkedin.com/company/bynorthlight" aria-label="Northlight on LinkedIn" target="_blank" rel="noopener">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="https://www.threads.com/@northlightcomms" aria-label="Northlight on Threads" target="_blank" rel="noopener">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.312-.883-2.371-.887h-.018c-.87 0-1.952.26-2.716 1.294l-1.694-1.252c1.083-1.464 2.715-2.193 4.41-2.193h.023c3.016.016 4.877 1.913 5.115 5.19.238.071.471.15.698.234 1.947.713 3.008 2.163 3.225 4.225.179 1.702-.198 4.403-2.628 6.797-1.82 1.79-4.133 2.684-6.835 2.706l-.034.001z"/></svg>
+                  Threads
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </footer>
   </div>
 
   <script>
-    // Focus trap elements for lightbox
-    const focusableSelectors = 'button, [href], [tabindex]:not([tabindex="-1"])';
+    /* ── FAQ ── */
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(el => {
+        el.classList.remove('open');
+        el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    }
 
+    /* ── LIGHTBOX ── */
     function openLightbox(img) {
       const lb = document.getElementById('lightbox');
-      const lbImg = document.getElementById('lightbox-img');
-      lbImg.src = img.src;
-      lbImg.alt = img.alt;
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox-img').alt = img.alt;
+      document.getElementById('lightbox-caption').textContent = img.alt;
       lb.classList.add('open');
       document.body.style.overflow = 'hidden';
-      // Move focus to close button
       lb.querySelector('.lightbox-close').focus();
     }
 
-    function closeLightbox(e) {
-      if (e && e.target !== document.getElementById('lightbox') && !e.target.classList.contains('lightbox-close')) return;
-      document.getElementById('lightbox').classList.remove('open');
+    function closeLightbox() {
+      const lb = document.getElementById('lightbox');
+      lb.classList.remove('open');
       document.body.style.overflow = '';
     }
 
-    document.addEventListener('keydown', e => {
+    document.addEventListener('keydown', function(e) {
       const lb = document.getElementById('lightbox');
       if (!lb.classList.contains('open')) return;
-
-      if (e.key === 'Escape') {
-        lb.classList.remove('open');
-        document.body.style.overflow = '';
-        return;
-      }
-
-      // Trap focus within lightbox
+      if (e.key === 'Escape') { closeLightbox(); return; }
       if (e.key === 'Tab') {
-        const focusable = lb.querySelectorAll(focusableSelectors);
-        const first = focusable[0];
-        const last = focusable[focusable.length - 1];
+        const focusable = lb.querySelectorAll('button, [href], [tabindex]:not([tabindex="-1"])');
+        const first = focusable[0], last = focusable[focusable.length - 1];
         if (e.shiftKey && document.activeElement === first) {
           e.preventDefault(); last.focus();
         } else if (!e.shiftKey && document.activeElement === last) {
           e.preventDefault(); first.focus();
         }
       }
+    });
+
+    document.getElementById('lightbox').addEventListener('click', function(e) {
+      if (e.target === this) closeLightbox();
     });
   </script>
 
