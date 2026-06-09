@@ -339,6 +339,71 @@
   }
   .footer-social a:hover { color: var(--text); }
 
+  /* ── SERVICES SECTION ── */
+  .services-section {
+    padding: 72px 64px;
+    max-width: 1280px; margin: 0 auto;
+  }
+  .section-label {
+    font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500;
+    letter-spacing: 0.26em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 32px;
+  }
+  .services-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px;
+  }
+  .service-card {
+    background: var(--surface); padding: 36px 32px;
+    border: 1px solid var(--border);
+    position: relative; transition: border-color 0.2s;
+  }
+  .service-card:hover { border-color: var(--border-2); }
+  .service-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);
+    opacity: 0; transition: opacity 0.2s;
+  }
+  .service-card:hover::before { opacity: 1; }
+  .service-title {
+    font-family: 'Jost', sans-serif; font-size: 16px; font-weight: 600;
+    letter-spacing: 0.04em; color: var(--text); margin-bottom: 10px;
+  }
+  .service-body { font-size: 14px; color: var(--haze); line-height: 1.7; }
+
+  /* ── FAQ SECTION ── */
+  .faq-section {
+    padding: 0 64px 80px;
+    max-width: 1280px; margin: 0 auto;
+  }
+  .faq-list { display: flex; flex-direction: column; gap: 2px; }
+  .faq-item {
+    border: 1px solid var(--border); background: var(--surface); overflow: hidden;
+  }
+  .faq-question {
+    width: 100%; background: none; border: none;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 22px 28px; cursor: pointer; text-align: left; gap: 16px;
+  }
+  .faq-question:focus-visible {
+    outline: 2px solid var(--dusk); outline-offset: -2px;
+  }
+  .faq-q-text {
+    font-family: 'Jost', sans-serif; font-size: 15px; font-weight: 600;
+    letter-spacing: 0.02em; color: var(--text);
+  }
+  .faq-chevron {
+    flex-shrink: 0; width: 18px; height: 18px;
+    color: var(--muted); transition: transform 0.25s;
+  }
+  .faq-item.open .faq-chevron { transform: rotate(180deg); }
+  .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+  .faq-item.open .faq-answer { max-height: 400px; }
+  .faq-answer-inner {
+    padding: 20px 28px 24px;
+    font-size: 14px; color: var(--haze); line-height: 1.75;
+    border-top: 1px solid var(--border);
+  }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 1024px) {
     nav.site-nav { padding: 20px 32px; }
@@ -350,11 +415,14 @@
     nav.site-nav { padding: 16px 24px; }
     .page-wrap { padding: 0 24px; }
     .building-section { padding-left: 24px; padding-right: 24px; }
+    .services-section { padding-left: 24px; padding-right: 24px; }
+    .faq-section { padding-left: 24px; padding-right: 24px; }
     footer { padding: 24px; }
     .hero { padding: 56px 0 48px; }
     .wordmark { font-size: 48px; }
     .tagline { font-size: 26px; }
     .building-row { grid-template-columns: 1fr; gap: 28px; }
+    .services-grid { grid-template-columns: 1fr; }
     .footer-inner { flex-direction: column; gap: 24px; }
     .footer-right { align-items: flex-start; }
     .footer-links { justify-content: flex-start; }
@@ -366,6 +434,90 @@
     .nav-links a { letter-spacing: 0.08em; }
   }
 </style>
+<!-- Schema markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://bynorthlight.ca#northlight",
+      "name": "Northlight Advisory Services",
+      "alternateName": "Northlight",
+      "url": "https://bynorthlight.ca",
+      "founder": {
+        "@type": "Person",
+        "name": "Elizabeth Lemoine"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Nova Scotia",
+        "addressCountry": "CA"
+      },
+      "description": "Canadian strategy, advisory, AI adoption, and app development practice founded by Elizabeth Lemoine.",
+      "sameAs": [
+        "https://www.linkedin.com/company/bynorthlight",
+        "https://www.threads.com/@northlightcomms"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://bynorthlight.ca#website",
+      "url": "https://bynorthlight.ca",
+      "name": "Northlight",
+      "publisher": { "@id": "https://bynorthlight.ca#northlight" }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Who does Northlight work with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mostly Canadian founders, operators, and small organisations — typically under 50 people — who have a real operational challenge and need clear thinking, not a lengthy consulting engagement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does AI advisory from Northlight actually look like?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We start by understanding what your business actually does, then identify which workflows AI can improve without creating new problems. We do not recommend tools because they're popular — we recommend them because they fit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work with businesses outside Canada?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Occasionally. The focus is Canadian because Canadian organisations face a distinct set of regulatory, funding, and market conditions — particularly around AI — that general advice doesn't address well."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do engagements start?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Email is the best place to start. Tell us what you're working on — a paragraph is enough. No intake form, no automated sequence, no discovery call disguised as a sales call."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Northlight Vault?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Northlight Vault is a free Windows desktop app that lets you browse files across Google Drive, OneDrive, and Dropbox in a single interface. It's a read-only file browser — free during early access."
+      }
+    }
+  ]
+}
+</script>
 <!-- Privacy-friendly analytics by Plausible -->
 <script async src="https://plausible.io/js/pa-uccdYD5d_-tjjiMlRo9eR.js"></script>
 <script>
@@ -386,7 +538,7 @@
       <li><a href="/about.html">About</a></li>
       <li><a href="/vault.html">Vault</a></li>
       <li><a href="/blog/">Blog</a></li>
-      <li><a href="mailto:elizabeth@bynorthlight.ca">Contact</a></li>
+      <li><a href="mailto:support@bynorthlight.ca">Contact</a></li>
     </ul>
   </nav>
 
@@ -406,6 +558,101 @@
         <a href="mailto:support@bynorthlight.ca" class="email-link">support@bynorthlight.ca</a>
       </section>
     </div>
+
+    <div class="aurora-divider" role="presentation"></div>
+
+    <!-- ── WHAT WE DO ── -->
+    <section class="services-section" id="services" aria-labelledby="services-label">
+      <h2 class="section-label" id="services-label">What we do</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3 class="service-title">Strategy</h3>
+          <p class="service-body">Clarity before execution. We help organisations diagnose what's actually blocking progress — and build a path forward that holds up when the plan meets reality.</p>
+        </div>
+        <div class="service-card">
+          <h3 class="service-title">Advisory &amp; Fractional</h3>
+          <p class="service-body">Ongoing thinking partnership for founders and operators who need a sharp outside perspective — including fractional engagements where Elizabeth steps in as an embedded part of your team for a defined period. Not a retainer that fills a calendar. A relationship that moves the work.</p>
+        </div>
+        <div class="service-card">
+          <h3 class="service-title">AI Adoption</h3>
+          <p class="service-body">Practical AI implementation for Canadian businesses — not what's trending, but what applies to your operations. We identify the tasks AI is actually good for and build from there.</p>
+        </div>
+        <div class="service-card">
+          <h3 class="service-title">Apps</h3>
+          <p class="service-body">Small, purposeful tools built to solve real workflow problems. Northlight Vault is our own. We build for others too, when the problem is specific enough to deserve a real solution.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="aurora-divider" role="presentation"></div>
+
+    <!-- ── FAQ ── -->
+    <section class="faq-section" id="faq" aria-labelledby="faq-label" style="padding-top: 72px;">
+      <h2 class="section-label" id="faq-label">Frequently asked questions</h2>
+      <div class="faq-list" role="list">
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+            <span class="faq-q-text">Who does Northlight work with?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Mostly Canadian founders, operators, and small organisations — typically under 50 people — who have a real operational challenge and need clear thinking, not a lengthy consulting engagement. If you have a specific problem and want a direct conversation, we're likely a fit.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+            <span class="faq-q-text">What does AI advisory from Northlight actually look like?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              We start by understanding what your business actually does, then identify which workflows AI can improve without creating new problems. We do not recommend tools because they're popular — we recommend them because they fit. Most engagements start with a single, honest conversation about what's worth automating and what isn't.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+            <span class="faq-q-text">Do you work with businesses outside Canada?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Occasionally. The focus is Canadian because Canadian organisations face a distinct set of regulatory, funding, and market conditions — particularly around AI — that general advice doesn't address well. That said, if the problem is specific enough, geography is negotiable.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+            <span class="faq-q-text">How do engagements start?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Email is the best place to start. Tell us what you're working on — a paragraph is enough. We'll follow up with a short call to see whether there's a fit. No intake form, no automated sequence, no discovery call disguised as a sales call.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+            <span class="faq-q-text">What is Northlight Vault?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Northlight Vault is a free Windows desktop app that lets you browse files across Google Drive, OneDrive, and Dropbox in a single interface — without switching tabs or apps. It's a read-only file browser: it finds and opens files, it doesn't move or delete them. Free during early access.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
 
     <div class="aurora-divider" role="presentation"></div>
 
@@ -494,6 +741,22 @@
       </div>
     </footer>
   </div>
+
+
+  <script>
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(el => {
+        el.classList.remove('open');
+        el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    }
+  </script>
 
 </body>
 </html>
