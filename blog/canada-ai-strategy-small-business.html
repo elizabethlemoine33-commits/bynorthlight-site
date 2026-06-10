@@ -88,6 +88,8 @@
     .post-body .callout{background:rgba(139,111,212,.08);border-left:3px solid var(--dusk);border-radius:0 6px 6px 0;padding:14px 20px;margin:1.6em 0;font-family:'Jost',sans-serif;font-size:17px;font-weight:500;color:var(--haze);line-height:1.4;}
     .post-body ul,.post-body ol{color:var(--cloud);font-size:16px;line-height:1.8;padding-left:1.4em;margin-bottom:1.4em;}
     .post-body strong{color:var(--text);font-weight:600;}
+    .post-body a{color:var(--boreal);text-decoration:none;border-bottom:1px solid rgba(91,141,217,.3);}
+    .post-body a:hover{color:var(--text);border-color:rgba(255,255,255,.3);}
 
     /* Sidebar */
     .sidebar-label{font-family:'Jost',sans-serif;font-weight:600;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
@@ -100,6 +102,7 @@
     .pub-rule{border:none;border-top:1px solid var(--border);margin:10px 0;}
     .pub-readtime{font-family:'Outfit',sans-serif;font-size:13px;color:var(--muted);}
     .pub-readtime strong{color:var(--cloud);}
+    .pub-date{font-family:'Outfit',sans-serif;font-size:15px;color:var(--cloud);margin-bottom:10px;}
 
     /* Aurora card */
     .aurora-card{background:linear-gradient(150deg,rgba(79,195,200,.05) 0%,rgba(139,111,212,.08) 55%,rgba(196,111,170,.04) 100%);border:1px solid var(--border-2);border-radius:8px;padding:16px;}
@@ -118,6 +121,11 @@
     .footer-link{font-family:'Jost',sans-serif;font-weight:500;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;}
     .footer-link:hover{color:var(--cloud);}
     .footer-link.active{color:var(--dusk);}
+    .footer-left{display:flex;flex-direction:column;gap:3px;}
+    .footer-powered{font-family:'Outfit',sans-serif;font-size:11px;color:var(--structural);}
+    .footer-powered a{color:var(--structural);text-decoration:none;}
+    .footer-powered a:hover{color:var(--muted);}
+    .footer-social-link{display:flex;align-items:center;gap:5px;}
 
     /* Responsive */
     @media(max-width:1100px){
@@ -163,22 +171,22 @@
       <div class="aurora-divider" role="presentation"></div>
 
       <div class="post-body">
-        <p>Canada announced a $2.3-billion AI strategy last week. Most of it doesn't matter to your business yet. One piece does — and it's been quietly available since April.</p>
-    <p>The announcement on June 4 was called AI for All. Prime Minister Carney, six pillars, a ten-year vision: 60% of Canadian businesses using AI by 2034, 250,000 new AI-related jobs, the works. If you saw the headline and kept scrolling, I don't blame you. National strategies are not, as a rule, things you can act on Monday morning.</p>
+        <p>Canada announced <a href="https://www.theglobeandmail.com/business/article-ottawas-ai-strategy-includes-more-than-23-billion-for-training/" target="_blank" rel="noopener">a $2.3-billion AI strategy</a> last week. Most of it doesn't matter to your business yet. One piece does — and it's been quietly available since April.</p>
+    <p>The announcement on June 4 was called <a href="https://www.pm.gc.ca/en/news/news-releases/2026/06/04/prime-minister-carney-launches-ai-all-canadas-new-national-artificial" target="_blank" rel="noopener">AI for All</a>. Prime Minister Carney, six pillars, a ten-year vision: 60% of Canadian businesses using AI by 2034, 250,000 new AI-related jobs, the works. If you saw the headline and kept scrolling, I don't blame you. National strategies are not, as a rule, things you can act on Monday morning.</p>
     <p>But buried inside this one is something that already exists, already takes applications, and is actually built for the kind of business that reads this Brief. That's the part worth your attention. The rest you can let policy people argue about for the next decade.</p>
     <p>Let me show you what I mean.</p>
     <h3>The number everyone is leading with</h3>
-    <p>Roughly 12% of Canadian businesses are using AI in any meaningful way. Canada ranks 44th of 47 countries on AI literacy. The strategy treats this as a gap to close — get from 12% to 60% in ten years, and the productivity numbers start to look like the $200-billion economic growth figure the government is quoting.</p>
-    <p>I'm going to say it: the productivity numbers are contested, the ten-year projections assume a lot of things go right, and the strategy doesn't really name the actual reason most small businesses haven't adopted AI yet. Which is this: most non-adopters aren't avoiding AI because it scares them or because they can't afford it. They genuinely can't see how it applies to what they make or do.</p>
-    <p>If that's right — and from what I've read of the research, it tracks — the "adoption gap" isn't a fear problem or a cost problem. It's a "doesn't apply to me" problem. Which means most of the strategy's framing (literacy programs, training initiatives, building national champions) is solving the wrong problem for the business owner I have in mind. You don't need more literacy. You need someone who has actually done the work in your kind of business to tell you which two tasks AI is good for and which six it is not.</p>
+    <p>Roughly <a href="https://www150.statcan.gc.ca/n1/pub/11-621-m/11-621-m2025008-eng.htm" target="_blank" rel="noopener">12% of Canadian businesses are using AI in any meaningful way</a>. Canada ranks 44th of 47 countries on AI literacy. The strategy treats this as a gap to close — get from 12% to 60% in ten years, and the productivity numbers start to look like the $200-billion economic growth figure the government is quoting.</p>
+    <p>I'm going to say it: the productivity numbers are contested, the ten-year projections assume a lot of things go right, and <a href="https://www.michaelgeist.ca/2026/06/ai-for-all-details-to-follow-government-releases-a-big-spending-ai-strategy-that-is-still-short-on-the-specifics-that-matter/" target="_blank" rel="noopener">the strategy doesn't really name the actual reason most small businesses haven't adopted AI yet</a>. Which is this: most non-adopters aren't avoiding AI because it scares them or because they can't afford it. They genuinely can't see how it applies to what they make or do.</p>
+    <p>If that's right — and from what I've read of <a href="https://www.cfib-fcei.ca/en/research-economic-analysis/ai-adoption" target="_blank" rel="noopener">the research</a>, it tracks — the "adoption gap" isn't a fear problem or a cost problem. It's a "doesn't apply to me" problem. Which means most of the strategy's framing (literacy programs, training initiatives, building national champions) is solving the wrong problem for the business owner I have in mind. You don't need more literacy. You need someone who has actually done the work in your kind of business to tell you which two tasks AI is good for and which six it is not.</p>
     <h3>The trust gap is your customers, not you</h3>
     <p>Here's the part the breathless coverage skipped. Canadians are at or near the bottom of every global survey on AI trust — most nervous, lowest confidence that companies using AI will protect customer data, lowest perceived literacy.</p>
     <p>That's not an internal adoption question. That's a customer-facing one. If you tell your clients you're using AI to draft proposals, summarise meetings, or process their files, a meaningful share of them will trust you less, not more — at least at first. The strategy names trust as a pillar; it does not give you, the owner, a script for the conversation you'll have with the customer who asks whether their information is going into ChatGPT.</p>
     <p>That's a real gap, and it's yours to figure out before the strategy gets around to it. Worth naming, even if neither of us has a perfect answer yet.</p>
     <h3>The one piece that's actually live</h3>
-    <p>Now the useful part. BDC's Lead with Innovation and Focus on Technology program — LIFT — launched in late April and was folded into the AI for All announcement. It is, as far as I can tell, the only piece of this strategy that a small business can act on right now.</p>
+    <p>Now the useful part. <a href="https://www.bdc.ca/en/solutions/lift" target="_blank" rel="noopener">BDC's Lead with Innovation and Focus on Technology program — LIFT</a> — <a href="https://www.bdc.ca/en/about/mediaroom/news-releases/bdc-launches-lift-getting-canadian-smes-off-the-ai-sidelines" target="_blank" rel="noopener">launched in late April</a> and was folded into the <a href="https://www.cbc.ca/news/politics/carney-ai-strategy-9.7223236" target="_blank" rel="noopener">AI for All announcement</a>. It is, as far as I can tell, the only piece of this strategy that a small business can act on right now.</p>
     <p>The terms, briefly:</p>
-    <ul><li>Loans from $25,000 to $5 million for AI adoption (software, integration, training)</li><li>Eligible if your business has $1 million or more in annual sales</li><li>Pairs you with an AI advisor as part of the package</li><li>Canadian supplier requirement on the tools you buy with the loan money</li></ul>
+    <ul><li>Loans from $25,000 to $5 million for AI adoption (software, integration, training)</li><li>Eligible if your business has $1 million or more in annual sales</li><li>Pairs you with an AI advisor as part of the package</li><li><a href="https://www.mltaikins.com/insights/canadas-new-ai-strategy-and-opc-annual-report-what-organizations-need-to-know/" target="_blank" rel="noopener">Canadian supplier requirement</a> on the tools you buy with the loan money</li></ul>
     <p>That last point is the catch. If the AI tool that solves your problem is American — and a lot of them are — LIFT may not fund it. Worth knowing before you start the application.</p>
     <p>But if you've got a real use case, a Canadian vendor that fits, and the cash flow to service a loan, this is the thing. Not the strategy. The loan terms.</p>
     <h3>What I'd actually do this month</h3>
@@ -195,10 +203,9 @@
     <aside class="blog-sidebar" aria-label="Post sidebar">
 
       <div class="sidebar-section">
-        <p class="sidebar-label">Published</p>
+        <p class="sidebar-label">Last Updated</p>
         <div class="pub-card">
-          <div class="pub-day">12</div>
-          <div class="pub-year">June 2026</div>
+          <p class="pub-date">June 12, 2026</p>
           <hr class="pub-rule">
           <p class="pub-readtime"><strong>5</strong> min read</p>
         </div>
@@ -242,11 +249,17 @@
 
     <!-- Footer -->
     <footer class="site-footer">
-      <p class="footer-copy">© 2026 Northlight</p>
+      <div class="footer-left">
+        <p class="footer-copy">© 2026 Northlight Advisory Services</p>
+        <p class="footer-powered">Powered by <a href="/">Northlight OS</a></p>
+      </div>
       <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="/" class="footer-link">Home</a>
+        <a href="/" class="footer-link">Northlight</a>
+        <a href="/about.html" class="footer-link">About</a>
         <a href="/vault.html" class="footer-link">Northlight Vault</a>
         <a href="/northlight-privacy.html" class="footer-link">Privacy Policy</a>
+        <a href="https://www.linkedin.com/company/bynorthlight" class="footer-link footer-social-link" aria-label="Northlight on LinkedIn" target="_blank" rel="noopener"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
+        <a href="https://www.threads.com/@northlightcomms" class="footer-link footer-social-link" aria-label="Northlight on Threads" target="_blank" rel="noopener"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.312-.883-2.371-.887h-.018c-.87 0-1.952.26-2.716 1.294l-1.694-1.252c1.083-1.464 2.715-2.193 4.41-2.193h.023c3.016.016 4.877 1.913 5.115 5.19.238.071.471.15.698.234 1.947.713 3.008 2.163 3.225 4.225.179 1.702-.198 4.403-2.628 6.797-1.82 1.79-4.133 2.684-6.835 2.706l-.034.001z"/></svg> Threads</a>
       </nav>
     </footer>
 
