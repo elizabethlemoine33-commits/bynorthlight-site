@@ -112,6 +112,8 @@
   .footer-social a:hover { color: var(--text); }
 
   /* ── CONFIRMATION PAGE ── */
+  main { display: block; width: 100%; }
+
   .confirm-shell {
     max-width: 680px;
     margin: 0 auto;
@@ -166,6 +168,10 @@
     margin-bottom: 40px;
   }
   .confirm-expect li { margin-bottom: 8px; }
+  .confirm-expect li:nth-child(1)::marker { color: var(--glacial); }
+  .confirm-expect li:nth-child(2)::marker { color: var(--boreal); }
+  .confirm-expect li:nth-child(3)::marker { color: var(--dusk); }
+  .confirm-expect li:nth-child(4)::marker { color: var(--aurora); }
 
   .confirm-cta-frame {
     font-family: 'Outfit', sans-serif;
@@ -176,15 +182,19 @@
 
   .confirm-cta {
     display: inline-block;
+    background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 33%, #8B6FD4 66%, #C46FAA 100%);
+    color: #fff;
     font-family: 'Jost', sans-serif;
     font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    color: var(--dusk);
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
     text-decoration: none;
-    transition: color 0.2s;
+    padding: 14px 28px;
+    border-radius: 4px;
+    transition: opacity 0.2s;
   }
-  .confirm-cta:hover { color: var(--glacial); }
+  .confirm-cta:hover { opacity: 0.85; color: #fff; }
 
   .confirm-privacy {
     font-family: 'Outfit', sans-serif;
