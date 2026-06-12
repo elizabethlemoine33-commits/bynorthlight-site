@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Northlight OS — AI-Native Business Operating System</title>
+<meta name="description" content="Northlight OS is a custom AI-native dashboard that automates daily business operations — overnight task execution, financial tracking, content pipeline, and more.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --midnight:   #0E0E14;
+    --surface:    #12121E;
+    --surface-2:  #10101C;
+    --border:     #1E2035;
+    --border-2:   #2A2A48;
+    --text:       #FFFFFF;
+    --cloud:      #C8CCE0;
+    --haze:       #BCC2DC;
+    --muted:      #99A1B6;
+    --structural: #6C7295;
+    --glacial:    #4FC3C8;
+    --boreal:     #5B8DD9;
+    --dusk:       #8B6FD4;
+    --aurora:     #C46FAA;
+  }
+
+  body {
+    background: var(--midnight);
+    color: var(--cloud);
+    font-family: 'Outfit', sans-serif;
+    min-height: 100vh;
+  }
+
+  /* ── SKIP NAV ── */
+  .skip-nav {
+    position: absolute; top: -100px; left: 0;
+    background: var(--dusk); color: #fff;
+    padding: 10px 20px;
+    font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600;
+    letter-spacing: 0.06em; text-decoration: none;
+    border-radius: 0 0 6px 0; z-index: 9999; transition: top 0.2s;
+  }
+  .skip-nav:focus { top: 0; }
+
+  /* ── TOP BAR ── */
+  .top-bar {
+    height: 2px;
+    background: linear-gradient(90deg, #4fc3c8 0%, #5b8dd9 30%, #8b6fd4 65%, #c46faa 100%);
+  }
+
+  /* ── HEADER ── */
+  header {
+    padding: 28px 72px;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 16px;
+  }
+
+  .wordmark {
+    font-family: 'Jost', sans-serif; font-weight: 600; font-size: 28px;
+    letter-spacing: 0.07em;
+    background: linear-gradient(90deg, #4fc3c8 0%, #5b8dd9 33%, #8b6fd4 66%, #c46faa 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    text-decoration: none; display: inline-block;
+  }
+
+  .header-right {
+    font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500;
+    letter-spacing: 0.20em; text-transform: uppercase; color: var(--muted);
+  }
+
+  /* ── SECTION WRAPPER ── */
+  .section { padding: 72px 72px; }
+  .section-narrow { max-width: 760px; }
+  .section-mid { max-width: 1000px; }
+
+  hr.divider { border: none; border-top: 1px solid var(--border); margin: 0 72px; }
+
+  .section-label {
+    font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500;
+    letter-spacing: 0.26em; text-transform: uppercase; color: var(--muted);
+    margin-bottom: 40px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 80px 72px 72px;
+    max-width: 900px;
+    position: relative; overflow: hidden;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute; top: -80px; right: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(ellipse, rgba(139,111,212,0.07) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500;
+    letter-spacing: 0.26em; text-transform: uppercase; color: var(--muted);
+    margin-bottom: 20px;
+    display: flex; align-items: center; gap: 10px;
+  }
+
+  .hero-eyebrow::before {
+    content: ''; display: inline-block; width: 20px; height: 2px;
+    background: linear-gradient(90deg, #4fc3c8, #8b6fd4); border-radius: 2px;
+  }
+
+  .hero-title {
+    font-family: 'Jost', sans-serif; font-weight: 600; font-size: 52px;
+    letter-spacing: 0.03em; line-height: 1.05; color: var(--text);
+    margin-bottom: 20px;
+  }
+
+  .hero-title span {
+    background: linear-gradient(105deg, #4fc3c8 0%, #5b8dd9 33%, #8b6fd4 66%, #c46faa 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+
+  .hero-subtitle {
+    font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 17px;
+    line-height: 1.75; color: var(--haze); margin-bottom: 36px; max-width: 680px;
+  }
+
+  .status-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(79,195,200,0.10); border: 1px solid rgba(79,195,200,0.22);
+    border-radius: 20px; padding: 5px 14px;
+    font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--glacial);
+    margin-bottom: 0;
+  }
+
+  .status-dot {
+    width: 6px; height: 6px; border-radius: 50%; background: var(--glacial);
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+
+  /* ── STATS ROW ── */
+  .stats-row {
+    display: flex; gap: 0; flex-wrap: wrap;
+    border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
+    margin-bottom: 0;
+  }
+
+  .stat-block {
+    flex: 1; min-width: 140px; padding: 20px 24px;
+    border-right: 1px solid var(--border);
+  }
+
+  .stat-block:last-child { border-right: none; }
+
+  .stat-value {
+    font-family: 'Jost', sans-serif; font-weight: 600; font-size: 28px;
+    letter-spacing: 0.02em; color: var(--text); display: block;
+    background: linear-gradient(105deg, #4fc3c8 0%, #8b6fd4 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+
+  .stat-label {
+    font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--muted);
+    margin-top: 2px; display: block;
+  }
+
+  /* ── PROBLEM SECTION ── */
+  .problem-card {
+    background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px;
+    padding: 32px 36px;
+  }
+
+  .problem-card p {
+    font-family: 'Outfit', sans-serif; font-size: 16px; line-height: 1.8;
+    color: var(--cloud); margin-bottom: 16px;
+  }
+
+  .problem-card p:last-child { margin-bottom: 0; }
+
+  .problem-card strong { color: var(--text); font-weight: 500; }
+
+  /* ── WORKFLOW SECTION ── */
+  .workflow-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+  }
+
+  .workflow-card {
+    background: var(--surface-2); border: 1px solid var(--border); border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .workflow-card-header {
+    padding: 20px 24px 16px; border-bottom: 1px solid var(--border);
+  }
+
+  .workflow-number {
+    font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500;
+    letter-spacing: 0.20em; text-transform: uppercase; color: var(--structural);
+    margin-bottom: 8px;
+  }
+
+  .workflow-title {
+    font-family: 'Jost', sans-serif; font-weight: 600; font-size: 16px;
+    letter-spacing: 0.03em; color: var(--text); margin-bottom: 6px;
+  }
+
+  .workflow-desc {
+    font-family: 'Outfit', sans-serif; font-size: 13px; line-height: 1.65;
+    color: var(--haze);
+  }
+
+  .workflow-mockup {
+    padding: 16px 20px;
+  }
+
+  /* ── MOCK UI COMPONENTS ── */
+  .mock-card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+    padding: 12px 14px; margin-bottom: 8px;
+  }
+
+  .mock-card:last-child { margin-bottom: 0; }
+
+  .mock-row { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+
+  .mock-badge {
+    font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase; padding: 2px 7px;
+    border-radius: 4px; flex-shrink: 0;
+  }
+
+  .badge-ai { background: rgba(91,141,217,0.15); color: #7AAAE8; border: 1px solid rgba(91,141,217,0.25); }
+  .badge-done { background: rgba(79,195,200,0.12); color: var(--glacial); border: 1px solid rgba(79,195,200,0.22); }
+  .badge-go { background: rgba(79,195,200,0.12); color: var(--glacial); border: 1px solid rgba(79,195,200,0.22); }
+  .badge-park { background: rgba(196,111,170,0.12); color: #d48ab0; border: 1px solid rgba(196,111,170,0.22); }
+  .badge-expense { background: rgba(139,111,212,0.12); color: #a896de; border: 1px solid rgba(139,111,212,0.22); }
+  .badge-content { background: rgba(196,111,170,0.12); color: #d48ab0; border: 1px solid rgba(196,111,170,0.22); }
+  .badge-stage { background: rgba(91,141,217,0.10); color: #7AAAE8; border: 1px solid rgba(91,141,217,0.18); font-size: 8px; }
+
+  .mock-title {
+    font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 500; color: var(--text);
+    line-height: 1.4; flex: 1;
+  }
+
+  .mock-meta {
+    font-family: 'Outfit', sans-serif; font-size: 11px; color: var(--muted);
+  }
+
+  .mock-actions { display: flex; gap: 6px; margin-top: 8px; }
+
+  .mock-btn {
+    font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 600;
+    letter-spacing: 0.10em; text-transform: uppercase;
+    padding: 4px 10px; border-radius: 4px; border: 1px solid;
+  }
+
+  .mock-btn-approve {
+    background: rgba(79,195,200,0.12); border-color: rgba(79,195,200,0.25); color: var(--glacial);
+  }
+
+  .mock-btn-back {
+    background: transparent; border-color: var(--border-2); color: var(--muted);
+  }
+
+  .mock-btn-log {
+    background: linear-gradient(90deg, rgba(79,195,200,0.2), rgba(91,141,217,0.2));
+    border-color: rgba(79,195,200,0.3); color: var(--glacial);
+  }
+
+  .mock-divider { border-top: 1px solid var(--border); margin: 8px 0; }
+
+  .mock-input-row {
+    display: flex; align-items: center; gap: 8px; margin-top: 8px;
+  }
+
+  .mock-select {
+    flex: 1; background: var(--surface-2); border: 1px solid var(--border); border-radius: 5px;
+    padding: 5px 8px;
+    font-family: 'Outfit', sans-serif; font-size: 11px; color: var(--haze);
+  }
+
+  .mock-amount {
+    font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 600; color: var(--text);
+  }
+
+  /* Kanban mini */
+  .mock-kanban { display: flex; gap: 6px; overflow: hidden; }
+
+  .mock-col {
+    flex: 1; min-width: 0;
+  }
+
+  .mock-col-label {
+    font-family: 'Jost', sans-serif; font-size: 8px; font-weight: 500;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted);
+    margin-bottom: 5px;
+  }
+
+  .mock-task {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 5px;
+    padding: 6px 8px;
+    font-family: 'Outfit', sans-serif; font-size: 10px; color: var(--haze);
+    line-height: 1.35;
+  }
+
+  .mock-task-active {
+    background: rgba(91,141,217,0.08); border-color: rgba(91,141,217,0.22);
+    color: var(--cloud);
+  }
+
+  /* Idea card */
+  .mock-idea-meta {
+    display: flex; align-items: center; gap: 6px; margin-bottom: 6px;
+  }
+
+  .mock-slack-icon {
+    width: 14px; height: 14px; border-radius: 3px;
+    background: linear-gradient(135deg, #4fc3c8, #8b6fd4);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 8px; color: white; font-weight: bold; flex-shrink: 0;
+  }
+
+  .mock-verdict {
+    margin-top: 8px; padding: 8px 10px;
+    background: rgba(79,195,200,0.06); border: 1px solid rgba(79,195,200,0.18);
+    border-radius: 6px;
+  }
+
+  .mock-verdict-label {
+    font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 600;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--glacial);
+    margin-bottom: 2px;
+  }
+
+  .mock-verdict-text {
+    font-family: 'Outfit', sans-serif; font-size: 11px; color: var(--haze);
+    line-height: 1.4;
+  }
+
+  /* ── ARCHITECTURE DIAGRAM ── */
+  .arch-section {
+    padding: 72px 72px;
+  }
+
+  /* ── SKILLS SECTION ── */
+  .skills-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+  }
+
+  .skill-chip {
+    background: var(--surface-2); border: 1px solid var(--border); border-radius: 8px;
+    padding: 12px 16px;
+    display: flex; align-items: flex-start; gap: 10px;
+  }
+
+  .skill-dot {
+    width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; margin-top: 4px;
+  }
+
+  .skill-name {
+    font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 600;
+    letter-spacing: 0.04em; color: var(--text); margin-bottom: 2px;
+  }
+
+  .skill-desc {
+    font-family: 'Outfit', sans-serif; font-size: 12px; color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* ── STACK CHIPS ── */
+  .stack-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+
+  .stack-chip {
+    font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--haze);
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 6px; padding: 8px 16px;
+  }
+
+  /* ── PMI SECTION ── */
+  .pmi-card {
+    background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px;
+    padding: 32px 36px;
+  }
+
+  .pmi-row {
+    display: flex; gap: 16px; padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .pmi-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .pmi-row:first-child { padding-top: 0; }
+
+  .pmi-label {
+    font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
+    min-width: 120px; flex-shrink: 0; padding-top: 1px;
+  }
+
+  .pmi-value {
+    font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--cloud);
+    line-height: 1.65;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--border); padding: 24px 72px;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 12px;
+  }
+
+  .footer-left { font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--muted); }
+  .footer-right { display: flex; align-items: center; gap: 20px; }
+
+  .footer-link {
+    font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--muted);
+    text-decoration: none; transition: color 0.2s;
+  }
+
+  .footer-link:hover { color: var(--haze); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .hero { padding: 52px 32px 52px; }
+    .workflow-grid { grid-template-columns: 1fr; }
+    .skills-grid { grid-template-columns: 1fr 1fr; }
+    .stats-row { flex-direction: column; }
+    .stat-block { border-right: none; border-bottom: 1px solid var(--border); }
+    .stat-block:last-child { border-bottom: none; }
+  }
+
+  @media (max-width: 768px) {
+    header, .hero, .section, .arch-section, footer { padding-left: 28px; padding-right: 28px; }
+    hr.divider { margin: 0 28px; }
+    .hero-title { font-size: 38px; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .pmi-row { flex-direction: column; gap: 4px; }
+    .pmi-label { min-width: 0; }
+  }
+</style>
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-uccdYD5d_-tjjiMlRo9eR.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)};
+  plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init();
+</script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <div class="top-bar" role="presentation"></div>
+
+  <header>
+    <a href="/index.html" class="wordmark">Northlight</a>
+    <p class="header-right">Northlight OS &nbsp;·&nbsp; AI Business Operating System</p>
+  </header>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="main-content" aria-labelledby="hero-title">
+    <p class="hero-eyebrow">Case Study &nbsp;·&nbsp; Built &amp; operated by Elizabeth Lemoine</p>
+    <h1 class="hero-title" id="hero-title">One dashboard.<br><span>Your entire operation.</span></h1>
+    <p class="hero-subtitle">
+      Northlight OS is a custom AI-native business operating system built to run a solo advisory and app development practice. It connects ClickUp, Gmail, Google Workspace, Slack, and Claude into a single dashboard — automating the repetitive parts so work happens while you sleep.
+    </p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+      <span class="status-pill">
+        <span class="status-dot" role="presentation"></span>
+        Live in production
+      </span>
+      <span style="font-family:'Outfit',sans-serif;font-size:13px;color:var(--muted);">Running daily since early 2025</span>
+    </div>
+  </section>
+
+  <!-- ── STATS ── -->
+  <div class="section" style="padding-top:0;padding-bottom:56px;">
+    <div class="stats-row">
+      <div class="stat-block">
+        <span class="stat-value">6</span>
+        <span class="stat-label">Integrated platforms</span>
+      </div>
+      <div class="stat-block">
+        <span class="stat-value">18+</span>
+        <span class="stat-label">Claude AI skills</span>
+      </div>
+      <div class="stat-block">
+        <span class="stat-value">9</span>
+        <span class="stat-label">Workflow modules</span>
+      </div>
+      <div class="stat-block">
+        <span class="stat-value">6am</span>
+        <span class="stat-label">Daily automation runs</span>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ── THE PROBLEM ── -->
+  <section class="section section-narrow" aria-labelledby="problem-heading">
+    <h2 class="section-label" id="problem-heading">The problem</h2>
+    <div class="problem-card">
+      <p>Running a solo advisory and app development practice means constant context-switching. Tasks live in ClickUp. Client emails arrive in Gmail. Finances are scattered across bank statements and email receipts. Content ideas sit in Slack. No off-the-shelf tool connects all of that in a way that actually matches how a one-person practice works.</p>
+      <p>The options were: pay for five separate tools and check them all manually, or build the right tool. <strong>Northlight OS is the right tool.</strong></p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ── HOW IT WORKS ── -->
+  <section class="section section-mid" aria-labelledby="workflows-heading">
+    <h2 class="section-label" id="workflows-heading">Key workflows</h2>
+    <div class="workflow-grid">
+
+      <!-- 01 Overnight Execution -->
+      <div class="workflow-card">
+        <div class="workflow-card-header">
+          <p class="workflow-number">01</p>
+          <h3 class="workflow-title">Overnight Execution Loop</h3>
+          <p class="workflow-desc">Assign a task to Claude in ClickUp. By morning, it's done — research compiled, copy drafted, brief written. Review in the dashboard: Approve, Send Back with notes, or Take Over.</p>
+        </div>
+        <div class="workflow-mockup" aria-label="Mock dashboard showing overnight task results">
+          <div class="mock-card">
+            <div class="mock-row">
+              <span class="mock-badge badge-ai">Claude</span>
+              <span class="mock-badge badge-done">Complete</span>
+              <span class="mock-meta" style="margin-left:auto;">6:04 am</span>
+            </div>
+            <div class="mock-title" style="margin-bottom:4px;">Draft Q3 positioning memo for Horizon Advisory engagement</div>
+            <div class="mock-meta">Draft · 820 words · saved to Drive</div>
+            <div class="mock-actions">
+              <span class="mock-btn mock-btn-approve">✓ Approve</span>
+              <span class="mock-btn mock-btn-back">↺ Send Back</span>
+              <span class="mock-btn mock-btn-back">→ Take Over</span>
+            </div>
+          </div>
+          <div class="mock-card">
+            <div class="mock-row">
+              <span class="mock-badge badge-ai">Claude</span>
+              <span class="mock-badge badge-done">Complete</span>
+              <span class="mock-meta" style="margin-left:auto;">6:11 am</span>
+            </div>
+            <div class="mock-title" style="margin-bottom:4px;">Research competitive landscape: AI tools for Canadian SMBs</div>
+            <div class="mock-meta">Research brief · 5 sources · saved to Drive</div>
+            <div class="mock-actions">
+              <span class="mock-btn mock-btn-approve">✓ Approve</span>
+              <span class="mock-btn mock-btn-back">↺ Send Back</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02 Finance Automation -->
+      <div class="workflow-card">
+        <div class="workflow-card-header">
+          <p class="workflow-number">02</p>
+          <h3 class="workflow-title">Finance Automation</h3>
+          <p class="workflow-desc">Gmail labels trigger AI parsing. Vendor names and amounts are extracted from email receipts automatically. One click logs an approved expense or revenue entry to Google Sheets.</p>
+        </div>
+        <div class="workflow-mockup" aria-label="Mock dashboard showing pending expense approval">
+          <div class="mock-card">
+            <div class="mock-row">
+              <span class="mock-badge badge-expense">Expense</span>
+              <span class="mock-meta" style="margin-left:auto;">Gmail → extracted</span>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin:6px 0;">
+              <div class="mock-title">Adobe Creative Cloud</div>
+              <div class="mock-amount">$54.99</div>
+            </div>
+            <div class="mock-input-row">
+              <div class="mock-select">Software &amp; Subscriptions</div>
+              <span class="mock-btn mock-btn-log">✓ Log</span>
+            </div>
+          </div>
+          <div class="mock-card">
+            <div class="mock-row">
+              <span class="mock-badge badge-expense">Expense</span>
+              <span class="mock-meta" style="margin-left:auto;">Gmail → extracted</span>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:space-between;margin:6px 0;">
+              <div class="mock-title">Railway — hosting</div>
+              <div class="mock-amount">$23.00</div>
+            </div>
+            <div class="mock-input-row">
+              <div class="mock-select">Infrastructure</div>
+              <span class="mock-btn mock-btn-log">✓ Log</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 Content Pipeline -->
+      <div class="workflow-card">
+        <div class="workflow-card-header">
+          <p class="workflow-number">03</p>
+          <h3 class="workflow-title">Content Pipeline</h3>
+          <p class="workflow-desc">A chat-based intake interview with Claude captures the raw idea, audience, platform, and goal. Claude builds the brief, creates the ClickUp task, and tracks it through a 12-stage pipeline from draft to posted.</p>
+        </div>
+        <div class="workflow-mockup" aria-label="Mock content pipeline kanban board">
+          <div class="mock-kanban">
+            <div class="mock-col">
+              <div class="mock-col-label">Drafting</div>
+              <div class="mock-task mock-task-active">
+                <div style="margin-bottom:3px;font-size:11px;color:var(--text);">Why most AI strategies fail before they start</div>
+                <div style="display:flex;gap:4px;flex-wrap:wrap;">
+                  <span class="mock-badge badge-stage">LinkedIn</span>
+                  <span class="mock-badge badge-stage">Draft</span>
+                </div>
+              </div>
+            </div>
+            <div class="mock-col">
+              <div class="mock-col-label">Review</div>
+              <div class="mock-task">
+                <div style="margin-bottom:3px;font-size:11px;">Aurora Brief — June edition</div>
+                <div><span class="mock-badge badge-stage">Newsletter</span></div>
+              </div>
+            </div>
+            <div class="mock-col">
+              <div class="mock-col-label">Scheduled</div>
+              <div class="mock-task">
+                <div style="margin-bottom:3px;font-size:11px;">The case for slow AI adoption</div>
+                <div><span class="mock-badge badge-stage">Threads</span></div>
+              </div>
+            </div>
+            <div class="mock-col">
+              <div class="mock-col-label">Posted</div>
+              <div class="mock-task">
+                <div style="margin-bottom:3px;font-size:11px;">5 things I stopped doing with AI</div>
+                <div><span class="mock-badge badge-stage">LinkedIn</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 04 Idea to Action -->
+      <div class="workflow-card">
+        <div class="workflow-card-header">
+          <p class="workflow-number">04</p>
+          <h3 class="workflow-title">Idea to Action</h3>
+          <p class="workflow-desc">Ideas posted to a Slack channel flow into the dashboard automatically. Claude writes a brief and runs a critic pass, returning a clear verdict: GO, Needs More Thought, or Park Longer.</p>
+        </div>
+        <div class="workflow-mockup" aria-label="Mock idea card with Claude verdict">
+          <div class="mock-card">
+            <div class="mock-idea-meta">
+              <div class="mock-slack-icon" aria-hidden="true">S</div>
+              <span class="mock-meta">#parking-lot &nbsp;·&nbsp; 2 days ago</span>
+              <span class="mock-badge badge-content" style="margin-left:auto;">Content</span>
+            </div>
+            <div class="mock-title" style="margin-bottom:4px;">Short guide: how to evaluate whether an AI tool is actually worth it for a small team</div>
+            <div class="mock-verdict">
+              <div class="mock-verdict-label">✓ GO</div>
+              <div class="mock-verdict-text">Strong premise with clear audience fit. Converts well to a LinkedIn carousel or short blog post. Recommend proceeding as content.</div>
+            </div>
+            <div class="mock-actions" style="margin-top:8px;">
+              <span class="mock-btn mock-btn-approve">→ Create Task</span>
+              <span class="mock-btn mock-btn-back">✕ Dismiss</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /workflow-grid -->
+  </section>
+
+  <hr class="divider">
+
+  <!-- ── ARCHITECTURE DIAGRAM ── -->
+  <section class="arch-section" aria-labelledby="arch-heading">
+    <h2 class="section-label" id="arch-heading">System architecture</h2>
+
+    <svg viewBox="0 0 900 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Northlight OS system architecture diagram showing six input integrations on the left connecting to the Northlight OS core in the centre, which produces four outputs on the right, all powered by the Claude API at the bottom" style="width:100%;max-width:900px;display:block;">
+      <defs>
+        <linearGradient id="g-bar" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%"   stop-color="#4FC3C8"/>
+          <stop offset="30%"  stop-color="#5B8DD9"/>
+          <stop offset="65%"  stop-color="#8B6FD4"/>
+          <stop offset="100%" stop-color="#C46FAA"/>
+        </linearGradient>
+        <linearGradient id="g-core" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%"   stop-color="#4FC3C8" stop-opacity="0.12"/>
+          <stop offset="100%" stop-color="#8B6FD4" stop-opacity="0.12"/>
+        </linearGradient>
+        <linearGradient id="g-claude" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%"   stop-color="#4FC3C8" stop-opacity="0.08"/>
+          <stop offset="100%" stop-color="#C46FAA" stop-opacity="0.08"/>
+        </linearGradient>
+        <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#2A2A48"/>
+        </marker>
+        <marker id="arrow-out" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+          <path d="M0,0 L6,3 L0,6 Z" fill="#2A2A48"/>
+        </marker>
+      </defs>
+
+      <!-- ── INPUTS (left) ── -->
+      <!-- ClickUp -->
+      <rect x="20" y="30"  width="148" height="36" rx="7" fill="#10101C" stroke="#1E2035" stroke-width="1"/>
+      <rect x="20" y="30"  width="3"   height="36" rx="2" fill="#4FC3C8"/>
+      <text x="33" y="53" font-family="Jost,sans-serif" font-size="12" font-weight="600" letter-spacing="0.04em" fill="#BCC2DC">ClickUp</text>
+      <text x="33" y="65" font-family="Outfit,sans-serif" font-size="10" fill="#6C7295">Tasks &amp; projects</text>
+
+      <!-- Gmail -->
+      <rect x="20" y="82"  width="148" height="36" rx="7" fill="#10101C" stroke="#1E2035" stroke-width="1"/>
+      <rect x="20" y="82"  width="3"   height="36" rx="2" fill="#5B8DD9"/>
+      <text x="33" y="105" font-family="Jost,sans-serif" font-size="12" font-weight="600" letter-spacing="0.04em" fill="#BCC2DC">Gmail</text>
+      <text x="33" y="117" font-family="Outfit,sans-serif" font-size="10" fill="#6C7295">Expense &amp; revenue emails</text>
+
+      <!-- Google Calendar -->
+      <rect x="20" y="134" width="148" height="36" rx="7" fill="#10101C" stroke="#1E2035" stroke-width="1"/>
+      <rect x="20" y="134" width="3"   height="36" rx="2" fill="#8B6FD4"/>
+      <text x="33" y="157" font-family="Jost,sans-serif" font-size="12" font-weight="600" letter-spacing="0.04em" fill="#BCC2DC">Google Calendar</text>
+      <text x="33" y="169" font-family="Outfit,sans-serif" font-size="10" fill="#6C7295">Events &amp; task blocks</text>
+
+      <!-- Google Drive -->
+      <rect x="20" y="186" width="148" height="36" rx="7" fill="#10101C" stroke="#1E2035" stroke-width="1"/>
+      <rect x="20" y="186" width="3"   height="36" rx="2" fill="#C46FAA"/>
+      <text x="33" y="209" font-family="Jost,sans-serif" font-size="12" font-weight="600" letter-spacing="0.04em" fill="#BCC2DC">Google Drive</text>
+      <text x="33" y="221" font-family="Outfit,sans-serif" font-size="10" fill="#6C7295">Goals, wins &amp; AI outputs</text>
+
+      <!-- Google Sheets -->
+      <rect x="20" y="238" width="148" height="36" rx="7" fill="#10101C" stroke="#1E2035" stroke-width="1"/>
+      <rect x="20" y="238" width="3"   height="36" rx="2" fill="#4FC3C8"/>
+      <text x="33" y="261" font-family="Jost,sans-serif" font-size="12" font-weight="600" letter-spacing="0.04em" fill="#BCC2DC">Google Sheets</text>
+      <text x="33" y="273" font-family="Outfit,sans-serif" font-size="10" fill="#6C7295">Finance ledger</text>
+
+      <!-- Slack -->
+      <rect x="20" y="290" width="148" height="36" rx="7" fill="#10101C" stroke="#1E2035" stroke-width="1"/>
+      <rect x="20" y="290" width="3"   height="36" rx="2" fill="#8B6FD4"/>
+      <text x="33" y="313" font-family="Jost,sans-serif" font-size="12" font-weight="600" letter-spacing="0.04em" fill="#BCC2DC">Slack</text>
+      <text x="33" y="325" font-family="Outfit,sans-serif" font-size="10" fill="#6C7295">Ideas &amp; briefings</text>
+
+      <!-- NewsAPI -->
+      <rect x="20" y="342" width="148" height="36" rx="7" fill="#10101C" stroke="#1E2035" stroke-width="1"/>
+      <rect x="20" y="342" width="3"   height="36" rx="2" fill="#5B8DD9"/>
+      <text x="33" y="365" font-family="Jost,sans-serif" font-size="12" font-weight="600" letter-spacing="0.04em" fill="#BCC2DC">NewsAPI</text>
+      <text x="33" y="377" font-family="Outfit,sans-serif" font-size="10" fill="#6C7295">Daily reading feed</text>
+
+      <!-- ── ARROWS IN ── -->
+      <line x1="168" y1="48"  x2="292" y2="140" stroke="#2A2A48" stroke-width="1" marker-end="url(#arrow)"/>
+      <line x1="168" y1="100" x2="292" y2="155" stroke="#2A2A48" stroke-width="1" marker-end="url(#arrow)"/>
+      <line x1="168" y1="152" x2="292" y2="168" stroke="#2A2A48" stroke-width="1" marker-end="url(#arrow)"/>
+      <line x1="168" y1="204" x2="292" y2="185" stroke="#2A2A48" stroke-width="1" marker-end="url(#arrow)"/>
+      <line x1="168" y1="256" x2="292" y2="198" stroke="#2A2A48" stroke-width="1" marker-end="url(#arrow)"/>
+      <line x1="168" y1="308" x2="292" y2="212" stroke="#2A2A48" stroke-width="1" marker-end="url(#arrow)"/>
+      <line x1="168" y1="360" x2="292" y2="222" stroke="#2A2A48" stroke-width="1" marker-end="url(#arrow)"/>
+
+      <!-- ── OS CORE ── -->
+      <rect x="292" y="80" width="316" height="220" rx="12" fill="url(#g-core)" stroke="url(#g-bar)" stroke-width="1.5"/>
+      <!-- Aurora top accent -->
+      <rect x="292" y="80" width="316" height="3" rx="1.5" fill="url(#g-bar)"/>
+
+      <text x="450" y="107" font-family="Jost,sans-serif" font-size="11" font-weight="500" letter-spacing="0.22em" text-anchor="middle" fill="#6C7295">NORTHLIGHT OS</text>
+
+      <!-- Module pills inside core -->
+      <!-- Row 1 -->
+      <rect x="308" y="120" width="80" height="24" rx="5" fill="#12121E" stroke="#1E2035" stroke-width="1"/>
+      <text x="348" y="137" font-family="Jost,sans-serif" font-size="10" font-weight="500" letter-spacing="0.08em" text-anchor="middle" fill="#99A1B6">Home</text>
+
+      <rect x="398" y="120" width="80" height="24" rx="5" fill="#12121E" stroke="#1E2035" stroke-width="1"/>
+      <text x="438" y="137" font-family="Jost,sans-serif" font-size="10" font-weight="500" letter-spacing="0.08em" text-anchor="middle" fill="#99A1B6">Work</text>
+
+      <rect x="488" y="120" width="104" height="24" rx="5" fill="#12121E" stroke="#1E2035" stroke-width="1"/>
+      <text x="540" y="137" font-family="Jost,sans-serif" font-size="10" font-weight="500" letter-spacing="0.08em" text-anchor="middle" fill="#99A1B6">Clients</text>
+
+      <!-- Row 2 -->
+      <rect x="308" y="155" width="80" height="24" rx="5" fill="#12121E" stroke="#1E2035" stroke-width="1"/>
+      <text x="348" y="172" font-family="Jost,sans-serif" font-size="10" font-weight="500" letter-spacing="0.08em" text-anchor="middle" fill="#99A1B6">Finance</text>
+
+      <rect x="398" y="155" width="80" height="24" rx="5" fill="#12121E" stroke="#1E2035" stroke-width="1"/>
+      <text x="438" y="172" font-family="Jost,sans-serif" font-size="10" font-weight="500" letter-spacing="0.08em" text-anchor="middle" fill="#99A1B6">Learning</text>
+
+      <rect x="488" y="155" width="104" height="24" rx="5" fill="#12121E" stroke="#1E2035" stroke-width="1"/>
+      <text x="540" y="172" font-family="Jost,sans-serif" font-size="10" font-weight="500" letter-spacing="0.08em" text-anchor="middle" fill="#99A1B6">Marketing</text>
+
+      <!-- Row 3 -->
+      <rect x="308" y="190" width="80" height="24" rx="5" fill="#12121E" stroke="#1E2035" stroke-width="1"/>
+      <text x="348" y="207" font-family="Jost,sans-serif" font-size="10" font-weight="500" letter-spacing="0.08em" text-anchor="middle" fill="#99A1B6">Jobs</text>
+
+      <rect x="398" y="190" width="80" height="24" rx="5" fill="#12121E" stroke="#1E2035" stroke-width="1"/>
+      <text x="438" y="207" font-family="Jost,sans-serif" font-size="10" font-weight="500" letter-spacing="0.08em" text-anchor="middle" fill="#99A1B6">Ideas</text>
+
+      <rect x="488" y="190" width="104" height="24" rx="5" fill="#12121E" stroke="#1E2035" stroke-width="1"/>
+      <text x="540" y="207" font-family="Jost,sans-serif" font-size="10" font-weight="500" letter-spacing="0.08em" text-anchor="middle" fill="#99A1B6">Settings</text>
+
+      <!-- Divider line in core -->
+      <line x1="308" y1="228" x2="584" y2="228" stroke="#1E2035" stroke-width="1"/>
+
+      <!-- Claude layer label -->
+      <text x="450" y="256" font-family="Jost,sans-serif" font-size="10" font-weight="500" letter-spacing="0.16em" text-anchor="middle" fill="#5B8DD9">18+ CLAUDE SKILLS</text>
+      <text x="450" y="272" font-family="Outfit,sans-serif" font-size="10" text-anchor="middle" fill="#6C7295">draft · research · polish · critic · extract · analyse</text>
+
+      <!-- ── ARROWS OUT ── -->
+      <line x1="608" y1="130" x2="726" y2="68"  stroke="#2A2A48" stroke-width="1" marker-end="url(#arrow-out)"/>
+      <line x1="608" y1="160" x2="726" y2="148" stroke="#2A2A48" stroke-width="1" marker-end="url(#arrow-out)"/>
+      <line x1="608" y1="190" x2="726" y2="228" stroke="#2A2A48" stroke-width="1" marker-end="url(#arrow-out)"/>
+      <line x1="608" y1="220" x2="726" y2="308" stroke="#2A2A48" stroke-width="1" marker-end="url(#arrow-out)"/>
+
+      <!-- ── OUTPUTS (right) ── -->
+      <!-- Approved tasks -->
+      <rect x="726" y="50"  width="156" height="36" rx="7" fill="#10101C" stroke="#1E2035" stroke-width="1"/>
+      <rect x="878" y="50"  width="3"   height="36" rx="2" fill="#4FC3C8"/>
+      <text x="738" y="73" font-family="Jost,sans-serif" font-size="12" font-weight="600" letter-spacing="0.04em" fill="#BCC2DC">Approved tasks</text>
+      <text x="738" y="85" font-family="Outfit,sans-serif" font-size="10" fill="#6C7295">ClickUp updated</text>
+
+      <!-- Logged finances -->
+      <rect x="726" y="130" width="156" height="36" rx="7" fill="#10101C" stroke="#1E2035" stroke-width="1"/>
+      <rect x="878" y="130" width="3"   height="36" rx="2" fill="#5B8DD9"/>
+      <text x="738" y="153" font-family="Jost,sans-serif" font-size="12" font-weight="600" letter-spacing="0.04em" fill="#BCC2DC">Logged finances</text>
+      <text x="738" y="165" font-family="Outfit,sans-serif" font-size="10" fill="#6C7295">Google Sheets appended</text>
+
+      <!-- Content tasks -->
+      <rect x="726" y="210" width="156" height="36" rx="7" fill="#10101C" stroke="#1E2035" stroke-width="1"/>
+      <rect x="878" y="210" width="3"   height="36" rx="2" fill="#8B6FD4"/>
+      <text x="738" y="233" font-family="Jost,sans-serif" font-size="12" font-weight="600" letter-spacing="0.04em" fill="#BCC2DC">Content tasks</text>
+      <text x="738" y="245" font-family="Outfit,sans-serif" font-size="10" fill="#6C7295">ClickUp + Drive</text>
+
+      <!-- Daily briefing -->
+      <rect x="726" y="290" width="156" height="36" rx="7" fill="#10101C" stroke="#1E2035" stroke-width="1"/>
+      <rect x="878" y="290" width="3"   height="36" rx="2" fill="#C46FAA"/>
+      <text x="738" y="313" font-family="Jost,sans-serif" font-size="12" font-weight="600" letter-spacing="0.04em" fill="#BCC2DC">Morning briefing</text>
+      <text x="738" y="325" font-family="Outfit,sans-serif" font-size="10" fill="#6C7295">Posted to Slack</text>
+
+      <!-- ── CLAUDE API BAR at bottom ── -->
+      <rect x="20" y="405" width="862" height="30" rx="7" fill="url(#g-claude)" stroke="#2A2A48" stroke-width="1"/>
+      <text x="451" y="426" font-family="Jost,sans-serif" font-size="10" font-weight="500" letter-spacing="0.20em" text-anchor="middle" fill="#5B8DD9">ANTHROPIC CLAUDE API — powers all AI skills</text>
+    </svg>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ── SKILLS ── -->
+  <section class="section section-mid" aria-labelledby="skills-heading">
+    <h2 class="section-label" id="skills-heading">AI skills framework</h2>
+    <p style="font-family:'Outfit',sans-serif;font-size:15px;line-height:1.75;color:var(--haze);margin-bottom:28px;max-width:640px;">
+      Northlight OS runs 18+ reusable Claude skills — modular agents that can be chained together or run independently. Tasks in ClickUp are assigned to a skill, and the system handles the rest.
+    </p>
+    <div class="skills-grid">
+      <div class="skill-chip">
+        <span class="skill-dot" style="background:#4FC3C8;"></span>
+        <div>
+          <div class="skill-name">Content Strategist</div>
+          <div class="skill-desc">Defines messaging, audience, and content structure before any writing begins</div>
+        </div>
+      </div>
+      <div class="skill-chip">
+        <span class="skill-dot" style="background:#5B8DD9;"></span>
+        <div>
+          <div class="skill-name">Draft</div>
+          <div class="skill-desc">Writes first-pass content from a brief — articles, posts, reports, emails</div>
+        </div>
+      </div>
+      <div class="skill-chip">
+        <span class="skill-dot" style="background:#8B6FD4;"></span>
+        <div>
+          <div class="skill-name">Critic</div>
+          <div class="skill-desc">Reviews a draft against brand voice, strategy, and audience fit — returns scored feedback</div>
+        </div>
+      </div>
+      <div class="skill-chip">
+        <span class="skill-dot" style="background:#C46FAA;"></span>
+        <div>
+          <div class="skill-name">Polish</div>
+          <div class="skill-desc">Copy-edits and refines writing for clarity, tone, and flow</div>
+        </div>
+      </div>
+      <div class="skill-chip">
+        <span class="skill-dot" style="background:#4FC3C8;"></span>
+        <div>
+          <div class="skill-name">Research</div>
+          <div class="skill-desc">Compiles structured research briefs from web sources and Drive files</div>
+        </div>
+      </div>
+      <div class="skill-chip">
+        <span class="skill-dot" style="background:#5B8DD9;"></span>
+        <div>
+          <div class="skill-name">Expense Extract</div>
+          <div class="skill-desc">Parses expense emails to extract vendor, amount, and date reliably</div>
+        </div>
+      </div>
+      <div class="skill-chip">
+        <span class="skill-dot" style="background:#8B6FD4;"></span>
+        <div>
+          <div class="skill-name">Revenue Extract</div>
+          <div class="skill-desc">Parses payment confirmation emails to extract client and amount</div>
+        </div>
+      </div>
+      <div class="skill-chip">
+        <span class="skill-dot" style="background:#C46FAA;"></span>
+        <div>
+          <div class="skill-name">Weekly Review</div>
+          <div class="skill-desc">Generates a structured week-in-review summary from ClickUp data</div>
+        </div>
+      </div>
+      <div class="skill-chip">
+        <span class="skill-dot" style="background:#4FC3C8;"></span>
+        <div>
+          <div class="skill-name">Draft → Critic → Polish</div>
+          <div class="skill-desc">Full content pipeline in one skill chain — strategist, draft, critique, and final polish</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ── BUILT WITH ── -->
+  <section class="section section-mid" aria-labelledby="stack-heading">
+    <h2 class="section-label" id="stack-heading">Built with</h2>
+    <div class="stack-row">
+      <span class="stack-chip">React</span>
+      <span class="stack-chip">Node.js</span>
+      <span class="stack-chip">Railway</span>
+      <span class="stack-chip">Anthropic Claude API</span>
+      <span class="stack-chip">ClickUp API</span>
+      <span class="stack-chip">Google Workspace APIs</span>
+      <span class="stack-chip">Gmail API</span>
+      <span class="stack-chip">Slack API</span>
+      <span class="stack-chip">NewsAPI</span>
+      <span class="stack-chip">Tailwind CSS</span>
+      <span class="stack-chip">GitHub Pages</span>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ── PMI ENTRY ── -->
+  <section class="section section-narrow" aria-labelledby="pmi-heading">
+    <h2 class="section-label" id="pmi-heading">Project record</h2>
+    <div class="pmi-card">
+      <div class="pmi-row">
+        <span class="pmi-label">Project</span>
+        <span class="pmi-value">Northlight OS — Custom AI Business Operating System</span>
+      </div>
+      <div class="pmi-row">
+        <span class="pmi-label">Role</span>
+        <span class="pmi-value">Designer, Developer, and Product Owner (solo)</span>
+      </div>
+      <div class="pmi-row">
+        <span class="pmi-label">Industry</span>
+        <span class="pmi-value">Technology · Professional Services</span>
+      </div>
+      <div class="pmi-row">
+        <span class="pmi-label">Methodology</span>
+        <span class="pmi-value">Agile — continuous iteration with weekly review cycles</span>
+      </div>
+      <div class="pmi-row">
+        <span class="pmi-label">Scope</span>
+        <span class="pmi-value">Full-stack web application integrating 6 external platforms (ClickUp, Google Workspace, Slack, NewsAPI, Anthropic Claude API, Railway). 9 workflow modules, 18+ AI skill agents, automated 6am daily dispatcher.</span>
+      </div>
+      <div class="pmi-row">
+        <span class="pmi-label">Outcome</span>
+        <span class="pmi-value">Production system running daily — replaces 4–6 separate tools. Overnight AI task execution eliminates manual first-draft and research work. Automated expense and revenue parsing reduces financial admin from hours to minutes per week.</span>
+      </div>
+    </div>
+  </section>
+
+  <div style="padding-bottom:72px;"></div>
+
+  <footer>
+    <p class="footer-left">Questions? <a href="mailto:elizabeth@bynorthlight.ca" style="color:var(--muted);border-bottom:1px solid var(--border-2);">elizabeth@bynorthlight.ca</a> &nbsp;·&nbsp; © 2026 Northlight</p>
+    <nav aria-label="Footer navigation">
+      <div class="footer-right">
+        <a href="/index.html" class="footer-link">Northlight home</a>
+        <a href="/vault.html" class="footer-link">Northlight Vault</a>
+        <a href="/blog/" class="footer-link">Blog</a>
+        <a href="https://aurora-brief.kit.com/110f173cf7" class="footer-link">Aurora Brief</a>
+      </div>
+    </nav>
+  </footer>
+
+</body>
+</html>
