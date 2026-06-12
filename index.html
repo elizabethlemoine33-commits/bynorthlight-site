@@ -715,8 +715,24 @@
   </main>
 
   <!-- ── AURORA BRIEF SIGNUP ── -->
-  <section style="background: var(--surface-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 56px 72px;" aria-label="Aurora Brief newsletter signup">
-    <script async data-uid="110f173cf7" src="https://aurora-brief.kit.com/110f173cf7/index.js"></script>
+  <section style="background: var(--surface-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 40px 64px; position: relative; overflow: hidden;" aria-label="Aurora Brief newsletter signup">
+    <div style="position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);"></div>
+    <div style="max-width: 960px; margin: 0 auto; display: flex; align-items: center; gap: 56px;">
+      <div style="flex: 1.4;">
+        <div style="font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 10px; background: linear-gradient(90deg, #4FC3C8, #8B6FD4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: inline-block;">Aurora Brief</div>
+        <div style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 20px; color: var(--text); margin-bottom: 6px; letter-spacing: 0.01em;">Stay in the Loop with Northlight</div>
+        <div style="font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--muted); line-height: 1.6;">Clear thinking. Real results. Strategy insights, operations learnings, and early access to Vault — delivered monthly.</div>
+      </div>
+      <form action="https://app.kit.com/forms/110f173cf7/subscriptions" method="post" style="display: flex; flex-direction: column; gap: 10px; flex: 1; min-width: 260px;">
+        <input type="hidden" name="redirect_to" value="https://bynorthlight.ca/subscription-confirmed.html" />
+        <div style="display: flex; gap: 8px;">
+          <input type="text" name="fields[first_name]" placeholder="First name" style="max-width: 110px; flex: 1; background: var(--midnight); border: 1px solid var(--border-2); border-radius: 8px; padding: 11px 14px; font-size: 14px; color: var(--cloud); font-family: 'Outfit', sans-serif; outline: none;" />
+          <input type="email" name="email_address" placeholder="Email address" required style="flex: 1; background: var(--midnight); border: 1px solid var(--border-2); border-radius: 8px; padding: 11px 14px; font-size: 14px; color: var(--cloud); font-family: 'Outfit', sans-serif; outline: none;" />
+        </div>
+        <button type="submit" style="background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 50%, #8B6FD4 100%); border: none; border-radius: 8px; padding: 11px 24px; font-size: 13px; font-weight: 600; color: #fff; cursor: pointer; font-family: 'Jost', sans-serif; letter-spacing: 0.06em; text-transform: uppercase;">Subscribe →</button>
+        <div style="font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--structural); line-height: 1.5;">By subscribing you agree to our <a href="/northlight-privacy.html" style="color: var(--muted); text-decoration: underline;">privacy policy</a>. Unsubscribe at any time. We never share your information.</div>
+      </form>
+    </div>
   </section>
 
   <div class="footer-border">
