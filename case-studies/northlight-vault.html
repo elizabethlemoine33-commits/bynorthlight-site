@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Northlight Vault — How It Was Built</title>
+<meta name="description" content="A case study on building Northlight Vault — a free Windows desktop app that unifies Google Drive, OneDrive, and Dropbox in a single read-only browser.">
+<link rel="canonical" href="https://bynorthlight.ca/case-studies/northlight-vault.html">
+<meta property="og:title" content="Northlight Vault — How It Was Built">
+<meta property="og:description" content="Building a free, privacy-first Windows cloud file browser. No server. No data stored. Just a cleaner way to browse three clouds at once.">
+<meta property="og:image" content="https://bynorthlight.ca/northlight-og-image.png">
+<meta property="og:url" content="https://bynorthlight.ca/case-studies/northlight-vault.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Northlight">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --midnight:   #0E0E14;
+    --deep-night: #08080F;
+    --surface:    #12121E;
+    --surface-2:  #10101C;
+    --border:     #1E2035;
+    --border-2:   #2A2A48;
+    --text:       #FFFFFF;
+    --cloud:      #C8CCE0;
+    --haze:       #BCC2DC;
+    --muted:      #99A1B6;
+    --structural: #6C7295;
+    --glacial:    #4FC3C8;
+    --boreal:     #5B8DD9;
+    --dusk:       #8B6FD4;
+    --aurora:     #C46FAA;
+  }
+
+  body {
+    background: var(--midnight);
+    color: var(--cloud);
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .skip-nav {
+    position: absolute; top: -100px; left: 0;
+    background: var(--dusk); color: #fff;
+    padding: 10px 20px;
+    font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600;
+    letter-spacing: 0.06em; text-decoration: none;
+    border-radius: 0 0 6px 0; z-index: 9999; transition: top 0.2s;
+  }
+  .skip-nav:focus { top: 0; }
+
+  .top-bar {
+    height: 2px;
+    background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);
+  }
+
+  nav.site-nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 64px;
+    border-bottom: 1px solid var(--border);
+    max-width: 1280px; margin: 0 auto;
+  }
+  .nav-wordmark {
+    font-family: 'Jost', sans-serif; font-size: 18px; font-weight: 600;
+    letter-spacing: 0.06em;
+    background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 33%, #8B6FD4 66%, #C46FAA 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a {
+    font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--muted); text-decoration: none; transition: color 0.2s;
+  }
+  .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--text); }
+
+  .page-wrap { max-width: 1280px; margin: 0 auto; padding: 0 64px; }
+
+  .aurora-divider {
+    height: 1px;
+    background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);
+    opacity: 0.25; max-width: 1280px; margin: 0 auto;
+  }
+
+  .section-label {
+    font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500;
+    letter-spacing: 0.26em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 32px;
+  }
+
+  .footer-border { border-top: 1px solid var(--border); }
+  footer { padding: 32px 64px; max-width: 1280px; margin: 0 auto; }
+  .footer-inner { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; }
+  .footer-left { display: flex; flex-direction: column; gap: 8px; }
+  .footer-copy { font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.1em; color: var(--muted); }
+  .footer-powered { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 0.12em; color: var(--muted); opacity: 0.8; }
+  .footer-powered a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .footer-powered a:hover { color: var(--text); }
+  .footer-right { display: flex; flex-direction: column; align-items: flex-end; gap: 16px; }
+  .footer-links { display: flex; gap: 24px; list-style: none; flex-wrap: wrap; justify-content: flex-end; }
+  .footer-links a {
+    font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.1em;
+    color: var(--muted); text-decoration: none; transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--text); }
+  .footer-social { display: flex; gap: 16px; list-style: none; align-items: center; }
+  .footer-social a {
+    font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.1em;
+    color: var(--muted); text-decoration: none;
+    display: flex; align-items: center; gap: 6px; transition: color 0.2s;
+  }
+  .footer-social a:hover { color: var(--text); }
+
+  .os-hero {
+    padding: 88px 0 72px;
+    max-width: 860px;
+    position: relative; overflow: hidden;
+  }
+  .os-hero::after {
+    content: '';
+    position: absolute; top: -80px; right: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(ellipse, rgba(91,141,217,0.07) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500;
+    letter-spacing: 0.26em; text-transform: uppercase; color: var(--muted);
+    margin-bottom: 20px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .hero-eyebrow::before {
+    content: ''; display: inline-block; width: 20px; height: 2px;
+    background: linear-gradient(90deg, #4fc3c8, #8b6fd4); border-radius: 2px;
+  }
+
+  .hero-title {
+    font-family: 'Jost', sans-serif; font-weight: 600; font-size: 52px;
+    letter-spacing: 0.03em; line-height: 1.05; color: var(--text);
+    margin-bottom: 20px;
+  }
+  .hero-title span {
+    background: linear-gradient(105deg, #4fc3c8 0%, #5b8dd9 33%, #8b6fd4 66%, #c46faa 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+
+  .hero-subtitle {
+    font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 17px;
+    line-height: 1.75; color: var(--haze); margin-bottom: 36px; max-width: 680px;
+  }
+
+  .status-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(91,141,217,0.10); border: 1px solid rgba(91,141,217,0.22);
+    border-radius: 20px; padding: 5px 14px;
+    font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--boreal);
+  }
+
+  .stats-row {
+    display: flex; gap: 0; flex-wrap: wrap;
+    border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
+  }
+  .stat-block { flex: 1; min-width: 140px; padding: 20px 24px; border-right: 1px solid var(--border); }
+  .stat-block:last-child { border-right: none; }
+  .stat-value {
+    font-family: 'Jost', sans-serif; font-weight: 600; font-size: 28px;
+    letter-spacing: 0.02em; display: block;
+    background: linear-gradient(105deg, #4fc3c8 0%, #8b6fd4 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .stat-label { font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--muted); margin-top: 2px; display: block; }
+
+  .problem-card {
+    background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px;
+    padding: 32px 36px; max-width: 760px;
+  }
+  .problem-card p { font-family: 'Outfit', sans-serif; font-size: 16px; line-height: 1.8; color: var(--cloud); margin-bottom: 16px; }
+  .problem-card p:last-child { margin-bottom: 0; }
+  .problem-card strong { color: var(--text); font-weight: 500; }
+
+  .workflow-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .workflow-card { background: var(--surface-2); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .workflow-card-header { padding: 20px 24px 16px; border-bottom: 1px solid var(--border); }
+  .workflow-number { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.20em; text-transform: uppercase; color: var(--structural); margin-bottom: 8px; }
+  .workflow-title { font-family: 'Jost', sans-serif; font-weight: 600; font-size: 16px; letter-spacing: 0.03em; color: var(--text); margin-bottom: 6px; }
+  .workflow-desc { font-family: 'Outfit', sans-serif; font-size: 13px; line-height: 1.65; color: var(--haze); }
+  .workflow-mockup { padding: 20px 24px; }
+
+  .decision-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .decision-item { display: flex; align-items: flex-start; gap: 12px; }
+  .decision-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
+  .decision-label { font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; color: var(--text); margin-bottom: 3px; }
+  .decision-desc { font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--haze); line-height: 1.55; }
+
+  .check-row { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
+  .check-row:last-child { margin-bottom: 0; }
+  .check-icon { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 600; flex-shrink: 0; margin-top: 1px; width: 18px; text-align: center; }
+  .check-yes { color: var(--glacial); }
+  .check-no  { color: var(--aurora); }
+  .check-text { font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--haze); line-height: 1.55; }
+
+  .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .skill-chip { background: var(--surface-2); border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; display: flex; align-items: flex-start; gap: 10px; }
+  .skill-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; margin-top: 4px; }
+  .skill-name { font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; color: var(--text); margin-bottom: 2px; }
+  .skill-desc { font-family: 'Outfit', sans-serif; font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+  .stack-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+  .stack-chip { font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--haze); background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 8px 16px; }
+
+  .pmi-card { background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px; padding: 32px 36px; max-width: 760px; }
+  .pmi-row { display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--border); }
+  .pmi-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .pmi-row:first-child { padding-top: 0; }
+  .pmi-label { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); min-width: 120px; flex-shrink: 0; padding-top: 1px; }
+  .pmi-value { font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--cloud); line-height: 1.65; }
+
+  .content-section { padding: 72px 0; }
+  .content-section-mid { max-width: 1000px; }
+  .content-section-narrow { max-width: 760px; }
+
+  .cta-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--glacial); text-decoration: none;
+    border: 1px solid rgba(79,195,200,0.3); border-radius: 6px;
+    padding: 10px 20px; transition: border-color 0.2s, color 0.2s;
+  }
+  .cta-link:hover { border-color: rgba(79,195,200,0.7); color: var(--text); }
+
+  @media (max-width: 1024px) {
+    nav.site-nav { padding: 20px 32px; }
+    .page-wrap { padding: 0 32px; }
+    footer { padding: 32px 32px; }
+  }
+  @media (max-width: 900px) {
+    .workflow-grid { grid-template-columns: 1fr; }
+    .skills-grid { grid-template-columns: 1fr 1fr; }
+    .stats-row { flex-wrap: wrap; }
+    .stat-block { min-width: 45%; }
+  }
+  @media (max-width: 768px) {
+    nav.site-nav { padding: 16px 24px; }
+    .page-wrap { padding: 0 24px; }
+    footer { padding: 24px; }
+    .hero-title { font-size: 38px; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .footer-inner { flex-direction: column; gap: 24px; }
+    .footer-right { align-items: flex-start; }
+    .footer-links { justify-content: flex-start; }
+    .nav-links { gap: 16px; }
+    .nav-links a { font-size: 11px; }
+    .pmi-row { flex-direction: column; gap: 4px; }
+    .pmi-label { min-width: 0; }
+    .os-hero { padding: 56px 0 48px; }
+  }
+  @media (max-width: 480px) {
+    .nav-links { gap: 12px; }
+    .nav-links a { letter-spacing: 0.08em; }
+  }
+</style>
+<script async src="https://plausible.io/js/pa-uccdYD5d_-tjjiMlRo9eR.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init();
+</script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <div class="top-bar" role="presentation"></div>
+
+  <nav class="site-nav" aria-label="Site navigation">
+    <a href="/" class="nav-wordmark" aria-label="Northlight home">Northlight</a>
+    <ul class="nav-links">
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/vault.html">Vault</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/case-studies/" aria-current="page">Work</a></li>
+      <li><a href="mailto:support@bynorthlight.ca">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ── HERO ── -->
+    <div class="page-wrap">
+      <section class="os-hero" aria-labelledby="hero-title">
+        <p class="hero-eyebrow">Case Study &nbsp;·&nbsp; Built by Elizabeth Lemoine</p>
+        <h1 class="hero-title" id="hero-title">All your cloud storage.<br><span>One place.</span></h1>
+        <p class="hero-subtitle">
+          Northlight Vault is a free Windows desktop app that lets you browse Google Drive, OneDrive, and Dropbox together — without switching tabs, re-authenticating, or giving any app write access to your files. Built because the problem was real and no existing tool solved it cleanly.
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+          <span class="status-pill">Free download · Windows</span>
+          <a href="/vault.html" class="cta-link">Download Vault →</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- ── STATS ── -->
+    <div class="page-wrap" style="padding-bottom:56px;">
+      <div class="stats-row">
+        <div class="stat-block">
+          <span class="stat-value">3</span>
+          <span class="stat-label">Cloud services unified</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-value">0</span>
+          <span class="stat-label">Files stored server-side</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-value">Free</span>
+          <span class="stat-label">No subscription required</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-value">Read-only</span>
+          <span class="stat-label">By design</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="aurora-divider" role="presentation"></div>
+
+    <!-- ── THE PROBLEM ── -->
+    <div class="page-wrap">
+      <section class="content-section" aria-labelledby="problem-heading">
+        <h2 class="section-label" id="problem-heading">The problem</h2>
+        <div class="problem-card">
+          <p>Most professionals who use cloud storage don't use just one service. They have Google Drive for one client, OneDrive for another, Dropbox from a previous role. Finding anything means opening three browser tabs, signing into each one, navigating separately, and hoping you remembered which service it's actually on.</p>
+          <p>Existing "unified storage" tools either required write access (a hard no for most professional contexts), synced files locally (unnecessary and slow), or charged a monthly fee for what should be a simple browsing problem. <strong>Vault is the simple version of that idea: read-only, local, free, and honest about what it does.</strong></p>
+        </div>
+      </section>
+    </div>
+
+    <div class="aurora-divider" role="presentation"></div>
+
+    <!-- ── KEY DESIGN DECISIONS ── -->
+    <div class="page-wrap">
+      <section class="content-section content-section-mid" aria-labelledby="decisions-heading">
+        <h2 class="section-label" id="decisions-heading">Key design decisions</h2>
+        <div class="workflow-grid">
+
+          <div class="workflow-card">
+            <div class="workflow-card-header">
+              <p class="workflow-number">01</p>
+              <h3 class="workflow-title">Read-only by design</h3>
+              <p class="workflow-desc">Vault requests read-only OAuth scopes from every connected service — not because it couldn't request more, but because it doesn't need to. The constraint is intentional.</p>
+            </div>
+            <div class="workflow-mockup">
+              <ul class="decision-list">
+                <li class="decision-item">
+                  <span class="decision-dot" style="background:#4FC3C8;"></span>
+                  <div><div class="decision-label">Simpler trust model</div><div class="decision-desc">Users and IT admins can approve Vault instantly — there's nothing it can do to their files</div></div>
+                </li>
+                <li class="decision-item">
+                  <span class="decision-dot" style="background:#8B6FD4;"></span>
+                  <div><div class="decision-label">Smaller attack surface</div><div class="decision-desc">No write tokens means a compromised session can't modify or delete anything</div></div>
+                </li>
+                <li class="decision-item">
+                  <span class="decision-dot" style="background:#5B8DD9;"></span>
+                  <div><div class="decision-label">Clearer product scope</div><div class="decision-desc">Read-only keeps the product focused — it does one thing and does it well</div></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="workflow-card">
+            <div class="workflow-card-header">
+              <p class="workflow-number">02</p>
+              <h3 class="workflow-title">Desktop, not browser</h3>
+              <p class="workflow-desc">Vault is an Electron app running locally on Windows — not a web service. Credentials stay on the user's machine and the app works independently of any backend infrastructure.</p>
+            </div>
+            <div class="workflow-mockup">
+              <ul class="decision-list">
+                <li class="decision-item">
+                  <span class="decision-dot" style="background:#4FC3C8;"></span>
+                  <div><div class="decision-label">No server, no account</div><div class="decision-desc">Nothing passes through a Northlight server — OAuth tokens live locally, API calls go direct to each cloud provider</div></div>
+                </li>
+                <li class="decision-item">
+                  <span class="decision-dot" style="background:#8B6FD4;"></span>
+                  <div><div class="decision-label">Offline-capable metadata</div><div class="decision-desc">Browsed folder structures can be cached locally so the app feels fast even on slower connections</div></div>
+                </li>
+                <li class="decision-item">
+                  <span class="decision-dot" style="background:#C46FAA;"></span>
+                  <div><div class="decision-label">Native file opening</div><div class="decision-desc">Files open in whatever app handles them on your machine — no in-app preview required</div></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="workflow-card">
+            <div class="workflow-card-header">
+              <p class="workflow-number">03</p>
+              <h3 class="workflow-title">Free, permanently</h3>
+              <p class="workflow-desc">Vault has no subscription, no freemium tier, and no plan to add one. The decision to ship it free was strategic, not accidental.</p>
+            </div>
+            <div class="workflow-mockup">
+              <ul class="decision-list">
+                <li class="decision-item">
+                  <span class="decision-dot" style="background:#4FC3C8;"></span>
+                  <div><div class="decision-label">Removes the friction barrier</div><div class="decision-desc">A free tool gets tried. A paid tool gets evaluated. For a first product from a new name, being tried matters more than capturing revenue</div></div>
+                </li>
+                <li class="decision-item">
+                  <span class="decision-dot" style="background:#5B8DD9;"></span>
+                  <div><div class="decision-label">Builds the Northlight audience</div><div class="decision-desc">Vault users become Aurora Brief subscribers and Northlight brand contacts — the distribution value exceeds any subscription revenue at this stage</div></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="workflow-card">
+            <div class="workflow-card-header">
+              <p class="workflow-number">04</p>
+              <h3 class="workflow-title">Privacy-first architecture</h3>
+              <p class="workflow-desc">The app was designed to be auditable. Every permission request and data flow is explained in plain language on the download page — not buried in a privacy policy.</p>
+            </div>
+            <div class="workflow-mockup">
+              <div class="check-row"><span class="check-icon check-yes">✓</span><span class="check-text">Browse files across Google Drive, OneDrive, and Dropbox</span></div>
+              <div class="check-row"><span class="check-icon check-yes">✓</span><span class="check-text">Open files in your local default applications</span></div>
+              <div class="check-row"><span class="check-icon check-yes">✓</span><span class="check-text">Search across connected accounts</span></div>
+              <div class="check-row"><span class="check-icon check-yes">✓</span><span class="check-text">Stay signed in between sessions</span></div>
+              <div style="height:1px;background:var(--border);margin:12px 0;"></div>
+              <div class="check-row"><span class="check-icon check-no">✕</span><span class="check-text">Move, rename, delete, or modify any files</span></div>
+              <div class="check-row"><span class="check-icon check-no">✕</span><span class="check-text">Sync files locally or cache file content</span></div>
+              <div class="check-row"><span class="check-icon check-no">✕</span><span class="check-text">Send any data to Northlight servers</span></div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <div class="aurora-divider" role="presentation"></div>
+
+    <!-- ── HOW IT WORKS ── -->
+    <div class="page-wrap">
+      <section class="content-section content-section-mid" aria-labelledby="how-heading">
+        <h2 class="section-label" id="how-heading">How it works</h2>
+        <p style="font-family:'Outfit',sans-serif;font-size:15px;line-height:1.75;color:var(--haze);margin-bottom:28px;max-width:640px;">
+          Vault connects to each cloud provider directly using their official APIs and OAuth 2.0. When a user connects an account, they authenticate in their browser through the provider's own login flow — Vault never sees or stores passwords.
+        </p>
+        <div class="skills-grid">
+          <div class="skill-chip">
+            <span class="skill-dot" style="background:#4FC3C8;"></span>
+            <div><div class="skill-name">OAuth 2.0 per service</div><div class="skill-desc">Each cloud provider authenticates independently — tokens are stored locally and never sent to Northlight</div></div>
+          </div>
+          <div class="skill-chip">
+            <span class="skill-dot" style="background:#5B8DD9;"></span>
+            <div><div class="skill-name">Direct API calls</div><div class="skill-desc">File metadata is fetched directly from Google Drive, OneDrive, and Dropbox APIs — no proxy or intermediary server</div></div>
+          </div>
+          <div class="skill-chip">
+            <span class="skill-dot" style="background:#8B6FD4;"></span>
+            <div><div class="skill-name">Read-only scopes only</div><div class="skill-desc">Google Drive: drive.readonly · OneDrive: Files.Read · Dropbox: files.metadata.read</div></div>
+          </div>
+          <div class="skill-chip">
+            <span class="skill-dot" style="background:#C46FAA;"></span>
+            <div><div class="skill-name">Local credential store</div><div class="skill-desc">Tokens are encrypted and stored in the OS credential vault — not in a plaintext config file</div></div>
+          </div>
+          <div class="skill-chip">
+            <span class="skill-dot" style="background:#4FC3C8;"></span>
+            <div><div class="skill-name">AI-assisted development</div><div class="skill-desc">Generative AI was used throughout development — for boilerplate, edge-case handling, and API integration patterns</div></div>
+          </div>
+          <div class="skill-chip">
+            <span class="skill-dot" style="background:#5B8DD9;"></span>
+            <div><div class="skill-name">ClickUp for project tracking</div><div class="skill-desc">Development tasks, bug reports, and release milestones tracked in ClickUp throughout the build</div></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="aurora-divider" role="presentation"></div>
+
+    <!-- ── BUILT WITH ── -->
+    <div class="page-wrap">
+      <section class="content-section content-section-mid" aria-labelledby="stack-heading">
+        <h2 class="section-label" id="stack-heading">Built with</h2>
+        <div class="stack-row">
+          <span class="stack-chip">Electron</span>
+          <span class="stack-chip">Node.js</span>
+          <span class="stack-chip">Google Drive API</span>
+          <span class="stack-chip">Microsoft OneDrive API</span>
+          <span class="stack-chip">Dropbox API</span>
+          <span class="stack-chip">OAuth 2.0</span>
+          <span class="stack-chip">ClickUp</span>
+          <span class="stack-chip">GitHub</span>
+          <span class="stack-chip">Generative AI</span>
+        </div>
+      </section>
+    </div>
+
+    <div class="aurora-divider" role="presentation"></div>
+
+    <!-- ── PMI RECORD ── -->
+    <div class="page-wrap">
+      <section class="content-section" aria-labelledby="pmi-heading">
+        <h2 class="section-label" id="pmi-heading">Project record</h2>
+        <div class="pmi-card">
+          <div class="pmi-row"><span class="pmi-label">Project</span><span class="pmi-value">Northlight Vault — Cloud File Browser for Windows</span></div>
+          <div class="pmi-row"><span class="pmi-label">Role</span><span class="pmi-value">Designer, Developer, and Product Owner (solo)</span></div>
+          <div class="pmi-row"><span class="pmi-label">Industry</span><span class="pmi-value">Technology · Productivity Software</span></div>
+          <div class="pmi-row"><span class="pmi-label">Methodology</span><span class="pmi-value">Agile — iterative development with continuous user feedback cycles</span></div>
+          <div class="pmi-row"><span class="pmi-label">Scope</span><span class="pmi-value">Windows desktop application (Electron + Node.js) integrating three cloud storage APIs via OAuth 2.0. Read-only by design. No server-side infrastructure. Free distribution via direct download.</span></div>
+          <div class="pmi-row"><span class="pmi-label">Outcome</span><span class="pmi-value">Live product available as a free Windows download. Solves a real daily friction point for multi-cloud users without requiring write access, server trust, or a subscription. Privacy practices documented transparently on the product page.</span></div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <section style="background: var(--surface-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 56px 72px;" aria-label="Aurora Brief newsletter signup">
+    <script async data-uid="110f173cf7" src="https://aurora-brief.kit.com/110f173cf7/index.js"></script>
+  </section>
+
+  <div class="footer-border">
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-left">
+          <p class="footer-copy">© 2026 Northlight Advisory Services</p>
+          <p class="footer-powered">Powered by <a href="/case-studies/northlight-os.html">Northlight OS</a></p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <div class="footer-right">
+            <ul class="footer-links">
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/vault.html">Northlight Vault</a></li>
+              <li><a href="/case-studies/" aria-current="page">Case Studies</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="/northlight-privacy.html">Privacy Policy</a></li>
+              <li><a href="https://aurora-brief.kit.com/110f173cf7" target="_blank" rel="noopener">Aurora Brief</a></li>
+            </ul>
+            <ul class="footer-social">
+              <li>
+                <a href="https://www.linkedin.com/company/bynorthlight" aria-label="Northlight on LinkedIn" target="_blank" rel="noopener">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="https://www.threads.com/@northlightcomms" aria-label="Northlight on Threads" target="_blank" rel="noopener">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.312-.883-2.371-.887h-.018c-.87 0-1.952.26-2.716 1.294l-1.694-1.252c1.083-1.464 2.715-2.193 4.41-2.193h.023c3.016.016 4.877 1.913 5.115 5.19.238.071.471.15.698.234 1.947.713 3.008 2.163 3.225 4.225.179 1.702-.198 4.403-2.628 6.797-1.82 1.79-4.133 2.684-6.835 2.706l-.034.001z"/></svg>
+                  Threads
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>
