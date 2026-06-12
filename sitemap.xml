@@ -25,6 +25,23 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Case studies -->
+  <url>
+    <loc>https://bynorthlight.ca/case-studies/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bynorthlight.ca/case-studies/northlight-os.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bynorthlight.ca/case-studies/northlight-vault.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Blog posts -->
   <url>
     <loc>https://bynorthlight.ca/blog/canada-ai-strategy-small-business.html</loc>
