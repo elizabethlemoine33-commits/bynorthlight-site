@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__ClickUp__clickup_remove_tag_from_task"
+    ]
+  }
+}
