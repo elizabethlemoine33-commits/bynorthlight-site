@@ -17,7 +17,7 @@ Every task MUST have all five. No exceptions.
 
 1. **Start Date** — when work begins
 2. **Due Date** — when the task is fully complete
-3. **Assignee** — Elizabeth (26199820) or Claude (101209983); always Elizabeth unless told otherwise
+3. **Assignee** — Elizabeth (26199820) or Claude (101209983); always Claude unless told otherwise
 4. **Priority** — urgent / high / normal / low
 5. **Detailed Description** — enough for Elizabeth to execute without asking anyone what it means
 
