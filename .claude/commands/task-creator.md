@@ -1,48 +1,223 @@
 ---
 name: task-creator
-description: Create and organise ClickUp tasks across Northlight, BlueBear Home Comfort, and You Belong Here. Handles all task types including content calendar posts, workspace structure, and template application. Creates and organises — does not delete.
+description: Create fully-wired ClickUp tasks across Northlight, BlueBear, and You Belong Here. Dispatcher-ready tasks get the correct subtask chain, skill tags, and waiting_on dependencies per the Phase 2 template spec. All tasks get the Five Commandments. Creates and organises — does not delete.
 ---
 
 # task-creator
 
-Create and organise ClickUp tasks across Northlight, BlueBear Home Comfort, and You Belong Here.
+Create ClickUp tasks across Northlight, BlueBear Home Comfort, and You Belong Here.
+Dispatcher-ready tasks are created with full subtask chains, `skill:*` tags, and `waiting_on` dependency wiring.
 Creates and organises — does not delete.
 
 ---
 
 ## The Five Commandments
 
-Every task MUST have all five. No exceptions, no shortcuts.
+Every task MUST have all five. No exceptions.
 
 1. **Start Date** — when work begins
-2. **Due Date** — when the task is fully complete (not when it goes live — when it is done)
+2. **Due Date** — when the task is fully complete
 3. **Assignee** — Elizabeth (26199820) or Claude (101209983); always Elizabeth unless told otherwise
 4. **Priority** — urgent / high / normal / low
 5. **Detailed Description** — enough for Elizabeth to execute without asking anyone what it means
 
-If any of these are missing from the request, ask before creating.
+If any are missing from the request, ask before creating.
 
 ---
 
-## Workspace Reference
+## Step 1 — Identify task type
 
-| Item | ID |
-|------|----|
-| Workspace | 14151173 |
-| Northlight Space | 90175613993 |
-| Marketing Folder | 90178928032 |
-| LinkedIn Content Calendar List | 901713940624 |
-| Threads Content Calendar List | 901713947133 |
-| Northlight Vault Folder | 90178713336 |
-| Northlight Company Setup Folder | 90178713345 |
-| Elizabeth's User ID | 26199820 |
-| Claude's User ID | 101209983 |
+Ask if not clear from context:
+
+> "What type of task is this?"
+> - LinkedIn post
+> - Threads post
+> - Aurora Brief (newsletter)
+> - Blog post (standalone)
+> - Company Setup document
+> - BlueBear or You Belong Here task
+> - Other / generic
+
+**LinkedIn, Threads, Aurora Brief, Blog, and Company Setup document tasks are dispatcher-aware** — use the templates below to create full subtask chains with `skill:*` tags and `waiting_on` wiring.
+
+**BlueBear, You Belong Here, and generic tasks** are human-managed — create a single task with Five Commandments and route to the correct list.
+
+---
+
+## Step 2 — Collect required info
+
+### Dispatcher tasks (Templates A–E)
+
+Collect:
+- **Topic / subject line** — what this piece of content is about
+- **Key message or brief** — what Elizabeth wants to say (can be a rough note)
+- **Start date** — when work begins
+- **Due date** — when the fully completed task is done (post date is not the due date — see template notes)
+- **Priority**
+- **Graphic needed?** (LinkedIn and Aurora Brief only — yes/no)
+
+### Non-dispatcher tasks
+
+Collect all Five Commandments fields. Ask for any that are missing.
+
+---
+
+## Step 3 — Confirm before creating
+
+Show a confirmation block and wait for explicit approval:
+
+```
+Ready to create:
+
+  Type:        [task type / template]
+  Title:       [title]
+  List:        [Space › Folder › List name]
+  Start:       [start date]
+  Due:         [due date]
+  Priority:    [priority]
+  Assignee:    [Elizabeth / Claude]
+  Subtasks:    [count] — [names listed]
+  Dependencies: chained in sequence
+  Graphic:     [yes / no / n/a]
+
+Create this task?
+```
+
+If Elizabeth corrects anything, update and re-confirm.
+
+---
+
+## Step 4 — Create the task
+
+### Dispatcher tasks — creation sequence
+
+Always create in this order:
+1. Create the **parent task** first — capture its ID
+2. Create each **subtask** in sequence — capture each ID immediately
+3. After all tasks exist, wire **`waiting_on` dependencies** in sequence using `clickup_add_task_dependency`
+
+**Dependency chain:** each task waits_on the one immediately before it.
+Parent → Subtask 1 → Subtask 2 → ... (linear chain)
+
+**Status rules:**
+- Parent task: `ready`
+- First subtask: `ready`
+- All other subtasks: `backlog`
+
+**Assignee rules:**
+- Tasks with a `skill:*` tag → Claude (101209983)
+- Tasks without a skill tag (approval, publish, analytics) → Elizabeth (26199820)
+
+---
+
+## Templates
+
+---
+
+### Template A — LinkedIn Post
+
+**List:** LinkedIn Content Calendar (`901713940624`)
+
+| # | Name | Skill tag | Assignee | Status |
+|---|------|-----------|----------|--------|
+| Parent | [topic title] | `skill:content-intake` | Claude | ready |
+| 1 | Strategy brief | `skill:content-strategist` | Claude | ready |
+| 2 | Draft copy | `skill:draft` | Claude | backlog |
+| 3 | Critic review | `skill:content-critic` | Claude | backlog |
+| 4 | Polish | `skill:polish` | Claude | backlog |
+| 5 | Design *(if graphic needed)* | `skill:design-social` | Claude | backlog |
+| 6 | Elizabeth approval | *(none)* | Elizabeth | backlog |
+| 7 | Publish | *(none)* | Elizabeth | backlog |
+| 8 | Analytics check-in | *(none)* | Elizabeth | backlog |
+
+**Notes:**
+- Omit Design subtask if no graphic needed
+- Publish is manual until LinkedIn Marketing API is resolved
+- Parent due date = date post is fully done (analytics collected, not post date)
+- Priority rubric: Vault/launch posts = urgent or high; thought leadership = normal
+
+---
+
+### Template B — Threads Post
+
+**List:** Threads Content Calendar (`901713947133`)
+
+| # | Name | Skill tag | Assignee | Status |
+|---|------|-----------|----------|--------|
+| Parent | [topic title] | `skill:content-intake` | Claude | ready |
+| 1 | Strategy brief | `skill:content-strategist` | Claude | ready |
+| 2 | Draft copy | `skill:draft` | Claude | backlog |
+| 3 | Critic review | `skill:content-critic` | Claude | backlog |
+| 4 | Polish | `skill:polish` | Claude | backlog |
+| 5 | Publish | *(none)* | Elizabeth | backlog |
+| 6 | Analytics | *(none)* | Elizabeth | backlog |
+
+**Notes:**
+- Publish and analytics become dispatcher skills (`skill:publish`, `skill:content-analyst`) once Meta API integration is active. Update the template at that time.
+
+---
+
+### Template C — Aurora Brief (Newsletter)
+
+**List:** Aurora Brief Content Calendar (`901714143773`)
+
+| # | Name | Skill tag | Assignee | Status |
+|---|------|-----------|----------|--------|
+| Parent | [issue title] | `skill:content-intake` | Claude | ready |
+| 1 | Strategy brief | `skill:content-strategist` | Claude | ready |
+| 2 | Draft copy | `skill:draft` | Claude | backlog |
+| 3 | Critic review | `skill:content-critic` | Claude | backlog |
+| 4 | Polish | `skill:polish` | Claude | backlog |
+| 5 | Design *(if graphic needed)* | `skill:design-social` | Claude | backlog |
+| 6 | Blog post | `skill:blog-polish` | Claude | backlog |
+| 7 | Elizabeth approval | *(none)* | Elizabeth | backlog |
+| 8 | Publish | `skill:publish` | Claude | backlog |
+| 9 | Analytics | *(none)* | Elizabeth | backlog |
+
+**Notes:**
+- Blog post (step 6) is created every issue — not optional
+- Design (step 5) only when graphic needed — ask if not stated
+- Publish = Claude creates a Kit draft; Elizabeth manually sends it
+- Pipeline text in intake task descriptions should read: `content-intake ✅ → content-strategist → draft → critic → polish → [design-social] → blog-polish → Elizabeth approval → skill:publish (Kit draft) → analytics`
+
+---
+
+### Template D — Blog Post (standalone)
+
+**List:** Blog Content Calendar (`901714340283`)
+
+| # | Name | Skill tag | Assignee | Status |
+|---|------|-----------|----------|--------|
+| Parent | [post title] | `skill:content-intake` | Claude | ready |
+| 1 | Strategy brief | `skill:content-strategist` | Claude | ready |
+| 2 | Draft copy | `skill:draft` | Claude | backlog |
+| 3 | Critic review | `skill:content-critic` | Claude | backlog |
+| 4 | Polish | `skill:polish` | Claude | backlog |
+| 5 | Blog polish | `skill:blog-polish` | Claude | backlog |
+| 6 | Elizabeth approval | *(none)* | Elizabeth | backlog |
+| 7 | Publish | `skill:publish` | Claude | backlog |
+| 8 | Analytics | `skill:content-analyst` | Claude | backlog |
+
+---
+
+### Template E — Company Setup Document
+
+**List:** Route to the correct Company Setup list (see routing table below)
+
+| # | Name | Skill tag | Assignee | Notes |
+|---|------|-----------|----------|-------|
+| Parent | [document title] | *(none)* | Elizabeth | Parent holds the context |
+| 1 | Research *(if needed)* | `skill:research` | Claude | Omit if no research required — ask |
+| 2 | Draft | `skill:draft` | Claude | |
+| 3 | Elizabeth review | *(none)* | Elizabeth | Manual gate — she approves or sends back |
+| 4 | Polish | `skill:polish` | Claude | |
+| 5 | File output *(if needed)* | `skill:file-output` | Claude | Omit if no Drive export needed |
+
+**Send-back mechanic:** When Elizabeth sends back a draft — she is prompted for comments (via OS/Slack), her comments are posted to the draft ClickUp task, the task status auto-resets to `ready`, and a Slack alert goes to Claude. The dispatcher picks up the draft on the next run. No new subtask is created.
 
 ---
 
 ## Routing Table
-
-Pick the best list from the table below. If two lists are plausible, pick the most specific one.
 
 ### Northlight — Vault (folder 90178713336)
 
@@ -51,7 +226,7 @@ Pick the best list from the table below. If two lists are plausible, pick the mo
 | Backlog | 901713647819 | features, improvements, bugs, dev work, technical debt, product ideas |
 | User Feedback | 901713782135 | user reports, testimonials, feedback, reviews |
 | Release | 901713831117 | shipping, deploy, release notes, launch prep |
-| Northlight Vault Release — Early Access | 901713905175 | early access launch specifically |
+| Early Access | 901713905175 | early access launch specifically |
 
 ### Northlight — Company Setup (folder 90178713345)
 
@@ -67,24 +242,24 @@ Pick the best list from the table below. If two lists are plausible, pick the mo
 
 ### Northlight — Marketing (folder 90178928032)
 
-| List | ID | Route when task involves… |
-|------|----|--------------------------|
-| LinkedIn Content Calendar | 901713940624 | LinkedIn posts |
-| Threads Content Calendar | 901713947133 | Threads posts |
+| List | ID |
+|------|----|
+| LinkedIn Content Calendar | 901713940624 |
+| Threads Content Calendar | 901713947133 |
+| Aurora Brief Content Calendar | 901714143773 |
+| Blog Content Calendar | 901714340283 |
 
-### Northlight — TableReady (folder 90178759586)
+### Northlight — TableReady
 
-| List | ID | Route when task involves… |
-|------|----|--------------------------|
-| Meal Planning App | 901713706238 | meal planning, recipes, TableReady app |
+| List | ID |
+|------|----|
+| Meal Planning App | 901713706238 |
 
 ### Northlight — Advisory Board Bot System
 
-| List | ID | Route when task involves… |
-|------|----|--------------------------|
-| Advisory Board Bot System | 901713706243 | advisory board, bot advisors, board simulation |
-
----
+| List | ID |
+|------|----|
+| Advisory Board Bot System | 901713706243 |
 
 ### BlueBear Home Comfort — MVP Sprint (folder 90178962707)
 
@@ -96,8 +271,6 @@ Pick the best list from the table below. If two lists are plausible, pick the mo
 | Website & Marketing | 901713987112 | BlueBear website, marketing, ads |
 | First Jobs & Validation | 901713987115 | first customers, test jobs, validation |
 | Dependencies & Blockers | 901713987120 | anything blocked or dependent on something else |
-
----
 
 ### You Belong Here
 
@@ -113,68 +286,41 @@ Pick the best list from the table below. If two lists are plausible, pick the mo
 
 ## Valid Statuses
 
-**Content Calendar lists (LinkedIn, Threads):**
-To Do → In Progress → Posted → Done → Blocked
+**Content Calendar lists (LinkedIn, Threads, Aurora Brief, Blog):**
+`ready` → `in progress` → `posted` → `done` → `blocked` (also: `backlog`)
 
 **All other lists:**
-To Do → In Progress → Done → Blocked
+`to do` → `in progress` → `done` → `blocked`
 
 ---
 
-## Content Calendar Task Pattern
+## Workspace Reference
 
-When creating a post task in any content calendar list, always apply this structure automatically unless Elizabeth says otherwise.
-
-**Parent Task**
-- Name: `Post [#] — [Date] — [Pillar] — [Topic summary]`
-- Start date: 3 days before post date
-- Due date: 7 days after post date (task is done when analytics are collected)
-- Assignee: Elizabeth
-- Priority: Vault/launch posts = urgent or high; thought leadership = normal
-- Description: post copy, graphic requirements, alt text (if applicable), link instructions, hashtag guidance, engagement prompt
-
-**Subtask 1 — Review & finalise copy**
-- Due: 3 days before post date
-- Description: Finalise copy for accuracy, voice, Canadian English, character limit. Confirm graphic and alt text are ready for graphic posts.
-
-**Subtask 2 — Schedule/publish (personal account)**
-- Due: 2 days before post date
-- Description: Platform-specific instructions (e.g. Threads link attachment field, LinkedIn image alt text field, hashtag rules)
-
-**Subtask 3 — @northlightcomms repost (Threads) OR Company page amplification (LinkedIn)**
-- Due: post date
-- Description: Threads: repost from @northlightcomms immediately after personal post goes live. Vault posts: reply with "Download here → bynorthlight.ca/vault — free, Windows, no account required." Cross-post to Instagram Stories via native one-tap share. LinkedIn: amplify company-page posts with a personal note (see calendar for suggested copy).
-
-**Subtask 4 — 7-day analytics check-in**
-- Due: 7 days after post date (same as parent due date)
-- Description: Review post analytics: reply count, likes, profile visits, link clicks (Vault posts). Note any unanswered comments. Record key metrics. Mark parent task Done when complete.
-
-Post already live or scheduled: mark Subtasks 1 and 2 as Done immediately on creation.
+| Item | ID |
+|------|----|
+| Workspace | 14151173 |
+| Northlight Space | 90175613993 |
+| Marketing Folder | 90178928032 |
+| Elizabeth's User ID | 26199820 |
+| Claude's User ID | 101209983 |
 
 ---
 
-## Accessibility Standard
+## Reporting Format
 
-Every content calendar post task that includes a graphic MUST include alt text in the description, labelled clearly:
+After creating any task or structure:
 
-> Alt text (add in [platform]'s alt text field before publishing): [description]
+```
+✅ Created: [Task title]
+📍 Location: [Space → Folder → List]
+🔗 Link: [URL]
+📅 Dates: Start [date] → Due [date]
+👤 Assigned: [Elizabeth / Claude]
+⚡ Priority: [priority]
+📋 Subtasks: [count] created, [count] dependencies wired
+```
 
-If alt text is not provided in the request, draft it based on the graphic description. Alt text should describe: the visual design elements, the headline text shown in the graphic, any URL shown, and the overall purpose of the image.
-
----
-
-## New List or Folder Creation
-
-**Step 1 — Confirm before creating.** Ask:
-- What is this for? (one sentence)
-- Does it belong inside an existing folder, or is it a standalone list in the space?
-- What statuses does it need? (default: To Do / In Progress / Done / Blocked)
-
-**Step 2 — Apply naming conventions:**
-- Folder inside Northlight space: "Northlight [Topic]"
-- List inside a folder: "[Topic] [Type]" — skip "Northlight" prefix if already inside a Northlight folder
-
-**Step 3 — Create and confirm.** Report back: what was created, where, the list/folder ID, and what tasks should be created inside it next.
+If something couldn't be done, say why and what Elizabeth needs to provide or decide.
 
 ---
 
@@ -183,68 +329,12 @@ If alt text is not provided in the request, draft it based on the graphic descri
 | Situation | Priority |
 |-----------|----------|
 | Vault launch or active release tasks | Urgent |
-| Graphic Vault posts, product milestones, client deadlines | High |
-| Standard thought leadership posts, regular admin | Normal |
+| Vault/launch posts, product milestones, client deadlines | High |
+| Standard thought leadership, regular admin | Normal |
 | Nice-to-have, no deadline | Low |
-
----
-
-## Template System
-
-Templates have not yet been built in ClickUp. When they exist, apply them by reading the template task and replicating its structure (subtasks, description format, fields) to the new task.
-
-| Template | Purpose | Key Fields |
-|----------|---------|------------|
-| Content Calendar Post | Any social media post task | Start = 3 days before, Due = 7 days after, 4 subtasks |
-| Strategy Advisory Task | Client deliverable or engagement task | Milestone dates, deliverable description |
-| Vault Development Task | Vault feature or bug task | Release target, acceptance criteria |
-| Company Setup Task | One-time admin/setup task | Deadline, linked document |
-
-When no template exists yet: build manually using the patterns in this skill, and note to Elizabeth that a formal template could be created if she uses this task type repeatedly.
-
----
-
-## Confirm Before Creating
-
-Show a confirmation block and wait for explicit approval before touching ClickUp:
-
-```
-Ready to create:
-
-  Title:       [title]
-  List:        [Space › Folder › List name]
-  Start:       [start date]
-  Due:         [due date]
-  Priority:    [priority]
-  Assignee:    [Elizabeth / Claude]
-  Description: [description or "(none)"]
-  Subtasks:    [count, or "none"]
-
-Create this task?
-```
-
-If Elizabeth corrects anything, update and re-confirm.
-
----
-
-## Reporting Format
-
-After creating any task or structure, report back in this format:
-
-```
-✅ Created: [Task/List/Folder Name]
-📍 Location: [Space → Folder → List]
-🔗 Link: [URL]
-📅 Dates: Start [date] → Due [date]
-👤 Assigned: [Elizabeth / Claude]
-⚡ Priority: [priority]
-📋 Subtasks: [count] created
-```
-
-If something couldn't be done, say why clearly and what Elizabeth needs to provide or decide.
 
 ---
 
 ## Canadian English
 
-All task names and descriptions use Canadian English: colour, behaviour, organisation, recognise, analyse, programme, licence (noun).
+All task names and descriptions: colour, behaviour, organisation, recognise, analyse, programme, licence (noun).
