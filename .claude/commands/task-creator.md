@@ -1,4 +1,9 @@
-# skill: task-creator
+---
+name: task-creator
+description: Create a ClickUp task in the correct Northlight, BlueBear, or You Belong Here list. Do NOT use for marketing/content tasks — those go through the subtask chain templates.
+---
+
+# task-creator
 
 Create a ClickUp task in the correct Northlight, BlueBear, or You Belong Here list.
 Do NOT use this skill for marketing/content tasks — those go through the subtask chain templates.
