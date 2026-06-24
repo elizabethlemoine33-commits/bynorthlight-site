@@ -39,6 +39,9 @@ Download: available at https://bynorthlight.ca/vault.html
 
 ## Content
 
+### Who We Help
+A page laying out three kinds of founders and leaders Northlight works with — the founder without a trusted team, the leader with a team stuck on consensus, and the self-sufficient founder who needs a sounding board. Includes two free interactive diagnostics: the Convergence Check and Why Is This Still Circling? Published at https://bynorthlight.ca/who-we-help.html
+
 ### Blog / Essays
 Essays from Elizabeth Lemoine on strategy, AI adoption, operations, and building Northlight. Published at https://bynorthlight.ca/blog/
 
