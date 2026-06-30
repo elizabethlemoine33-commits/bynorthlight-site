@@ -57,6 +57,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://bynorthlight.ca/blog/shadow-ai-is-the-new-shadow-it.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://bynorthlight.ca/blog/the-wall-on-day-200.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
