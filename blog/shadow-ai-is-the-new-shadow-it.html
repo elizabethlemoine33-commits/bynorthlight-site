@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shadow AI Is the New Shadow IT — What Leaders Need to Know — Northlight</title>
+  <meta name="description" content="98% of organisations have employees using unapproved AI tools. The risk isn't the technology — it's not knowing what's happening. Here's how to audit it.">
+  <meta name="author" content="Elizabeth Lemoine">
+  <link rel="canonical" href="https://bynorthlight.ca/blog/shadow-ai-is-the-new-shadow-it.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Shadow AI Is the New Shadow IT — What Leaders Need to Know">
+  <meta property="og:description" content="98% of organisations have employees using unapproved AI tools. The risk isn't the technology — it's not knowing what's happening. Here's how to audit it.">
+  <meta property="og:url" content="https://bynorthlight.ca/blog/shadow-ai-is-the-new-shadow-it.html">
+  <meta property="og:site_name" content="Northlight">
+  <meta property="article:author" content="Elizabeth Lemoine">
+  <meta property="article:published_time" content="2026-01-01T00:00:00.000Z">
+
+  <!-- Article schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Shadow AI Is the New Shadow IT — What Leaders Need to Know",
+    "description": "98% of organisations have employees using unapproved AI tools. The risk isn't the technology — it's not knowing what's happening. Here's how to audit it.",
+    "datePublished": "2026-01-01",
+    "author": { "@type": "Person", "name": "Elizabeth Lemoine", "url": "https://bynorthlight.ca" },
+    "publisher": { "@type": "Organization", "name": "Northlight", "url": "https://bynorthlight.ca" },
+    "url": "https://bynorthlight.ca/blog/shadow-ai-is-the-new-shadow-it.html"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --midnight:#0E0E14;--surface:#12121E;--surface-2:#10101C;
+      --border:#1E2035;--border-2:#2A2A48;
+      --text:#FFFFFF;--cloud:#C8CCE0;--haze:#B0B8D8;--muted:#8A92A8;--structural:#5A6080;
+      --glacial:#4FC3C8;--boreal:#5B8DD9;--dusk:#8B6FD4;--aurora:#C46FAA;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{background:var(--midnight);color:var(--cloud);font-family:'Outfit',sans-serif;min-height:100vh;}
+
+    .skip-nav{position:absolute;top:-100px;left:0;background:var(--dusk);color:#fff;padding:10px 20px;font-family:'Jost',sans-serif;font-size:13px;font-weight:600;letter-spacing:.06em;text-decoration:none;border-radius:0 0 6px 0;z-index:9999;transition:top .2s;}
+    .skip-nav:focus{top:0;}
+
+    /* Site header */
+    .site-header{display:flex;align-items:center;padding:18px 48px;border-bottom:1px solid var(--border);}
+    .wordmark{font-family:'Jost',sans-serif;font-weight:600;font-size:20px;letter-spacing:.08em;background:linear-gradient(105deg,#4fc3c8 0%,#5b8dd9 33%,#8b6fd4 66%,#c46faa 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;}
+    .top-bar{height:3px;background:linear-gradient(90deg,#4fc3c8 0%,#5b8dd9 30%,#8b6fd4 65%,#c46faa 100%);}
+
+    /* Four-column shell */
+    .blog-shell{display:grid;grid-template-columns:1fr min(680px,100%) 300px 1fr;min-height:calc(100vh - 60px);}
+    .blog-left-wing{grid-column:1;background:var(--midnight);position:relative;overflow:hidden;}
+    .blog-reading{grid-column:2;border-left:1px solid var(--border);border-right:1px solid var(--border);padding:52px 56px 100px;}
+    .blog-sidebar{grid-column:3;border-right:1px solid var(--border);padding:52px 0 100px 32px;position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;}
+    .blog-right-wing{grid-column:4;background:var(--midnight);position:relative;overflow:hidden;}
+
+    /* Left wing elements */
+    .left-glow{position:absolute;right:0;top:0;width:160px;height:100%;background:linear-gradient(90deg,transparent 0%,rgba(79,195,200,.03) 50%,rgba(91,141,217,.07) 100%);pointer-events:none;}
+    .aurora-rail-wrap{position:absolute;right:28px;top:52px;bottom:40px;width:3px;}
+    .aurora-rail-line{width:3px;height:100%;background:linear-gradient(180deg,#4fc3c8 0%,#5b8dd9 22%,#8b6fd4 55%,#c46faa 82%,transparent 100%);border-radius:2px;opacity:.7;}
+    .aurora-rail-dot{width:9px;height:9px;border-radius:50%;background:linear-gradient(135deg,#4fc3c8,#8b6fd4);position:absolute;top:-3px;left:-3px;box-shadow:0 0 8px rgba(79,195,200,.4);}
+    .left-label{position:absolute;right:48px;top:60px;font-family:'Jost',sans-serif;font-size:9px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:#2A2A48;writing-mode:vertical-rl;transform:rotate(180deg);user-select:none;}
+
+    /* Right wing elements */
+    .right-glow{position:absolute;left:0;top:0;width:160px;height:100%;background:linear-gradient(270deg,transparent 0%,rgba(139,111,212,.04) 60%,rgba(196,111,170,.05) 100%);pointer-events:none;}
+    .right-dots-wrap{position:absolute;top:72px;left:36px;}
+    .dot{width:3px;height:3px;border-radius:50%;background:#8B6FD4;position:absolute;opacity:.15;}
+
+    /* Reading column */
+    .post-back{font-family:'Jost',sans-serif;font-weight:500;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);text-decoration:none;display:block;margin-bottom:28px;}
+    .post-back:hover{color:var(--cloud);}
+    .source-label{font-family:'Jost',sans-serif;font-weight:500;font-size:10px;letter-spacing:.28em;text-transform:uppercase;display:block;margin-bottom:16px;}
+    .source-aurora{color:var(--dusk);}
+    .source-essay{color:var(--boreal);}
+    .post-title{font-family:'Jost',sans-serif;font-weight:600;font-size:34px;line-height:1.1;letter-spacing:.01em;color:var(--text);margin-bottom:12px;}
+    .post-date-line{font-family:'Outfit',sans-serif;font-size:13px;color:var(--muted);margin-bottom:28px;}
+    .aurora-divider{height:1px;background:linear-gradient(90deg,#4fc3c8 0%,#5b8dd9 30%,#8b6fd4 65%,#c46faa 100%);opacity:.3;margin-bottom:36px;}
+
+    /* Body copy */
+    .post-body p{font-family:'Outfit',sans-serif;font-size:16px;line-height:1.85;color:var(--cloud);margin-bottom:1.4em;}
+    .post-body h2{font-family:'Jost',sans-serif;font-weight:600;font-size:20px;letter-spacing:.03em;color:var(--glacial);margin:2em 0 .6em;}
+    .post-body h3{font-family:'Jost',sans-serif;font-weight:600;font-size:15px;letter-spacing:.04em;color:var(--aurora);margin:1.6em 0 .4em;}
+    .post-body blockquote{border-left:3px solid var(--dusk);padding-left:22px;margin:1.4em 0;font-style:italic;color:var(--haze);}
+    .post-body .callout{background:rgba(139,111,212,.08);border-left:3px solid var(--dusk);border-radius:0 6px 6px 0;padding:14px 20px;margin:1.6em 0;font-family:'Jost',sans-serif;font-size:17px;font-weight:500;color:var(--haze);line-height:1.4;}
+    .post-body ul,.post-body ol{color:var(--cloud);font-size:16px;line-height:1.8;padding-left:1.4em;margin-bottom:1.4em;}
+    .post-body strong{color:var(--text);font-weight:600;}
+
+    /* Sidebar */
+    .sidebar-label{font-family:'Jost',sans-serif;font-weight:600;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
+    .sidebar-section{margin-bottom:32px;}
+
+    /* Published card */
+    .pub-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px;text-align:center;}
+    .pub-day{font-family:'Jost',sans-serif;font-weight:600;font-size:28px;color:var(--text);line-height:1;}
+    .pub-year{font-family:'Outfit',sans-serif;font-size:13px;color:var(--muted);margin-top:2px;margin-bottom:10px;}
+    .pub-rule{border:none;border-top:1px solid var(--border);margin:10px 0;}
+    .pub-readtime{font-family:'Outfit',sans-serif;font-size:13px;color:var(--muted);}
+    .pub-readtime strong{color:var(--cloud);}
+
+    /* Aurora card */
+    .aurora-card{background:linear-gradient(150deg,rgba(79,195,200,.05) 0%,rgba(139,111,212,.08) 55%,rgba(196,111,170,.04) 100%);border:1px solid var(--border-2);border-radius:8px;padding:16px;}
+    .aurora-card p{font-family:'Outfit',sans-serif;font-size:13px;line-height:1.65;color:var(--haze);margin-bottom:10px;}
+    .aurora-card a{font-family:'Jost',sans-serif;font-weight:500;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--dusk);text-decoration:none;}
+    .aurora-card a:hover{color:var(--glacial);}
+
+    /* Topic tags */
+    .topics-wrap{display:flex;flex-wrap:wrap;gap:6px;}
+    .topic-tag{font-family:'Jost',sans-serif;font-weight:500;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:4px 10px;}
+
+    /* Footer */
+    .site-footer{grid-column:1/-1;border-top:1px solid var(--border);padding:24px 56px;display:flex;justify-content:space-between;align-items:center;}
+    .footer-copy{font-family:'Outfit',sans-serif;font-size:13px;color:var(--structural);}
+    .footer-nav{display:flex;gap:24px;}
+    .footer-link{font-family:'Jost',sans-serif;font-weight:500;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;}
+    .footer-link:hover{color:var(--cloud);}
+    .footer-link.active{color:var(--dusk);}
+
+    /* Responsive */
+    @media(max-width:1100px){
+      .blog-shell{grid-template-columns:0 1fr 260px 0;}
+      .blog-left-wing,.blog-right-wing{display:none;}
+      .blog-reading{padding:40px 40px 64px;}
+    }
+    @media(max-width:800px){
+      .site-header{padding:14px 24px;}
+      .blog-shell{grid-template-columns:1fr;}
+      .blog-sidebar{grid-column:1;border:none;border-top:1px solid var(--border);padding:32px 24px;position:static;max-height:none;}
+      .blog-reading{grid-column:1;padding:32px 24px 48px;border:none;}
+      .post-title{font-size:26px;}
+      .site-footer{grid-column:1;padding:20px 24px;flex-direction:column;gap:12px;text-align:center;}
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <header class="site-header">
+    <a href="/" class="wordmark">Northlight</a>
+  </header>
+  <div class="top-bar" role="presentation"></div>
+
+  <div class="blog-shell">
+
+    <!-- Left wing -->
+    <div class="blog-left-wing" role="presentation">
+      <div class="left-glow" role="presentation"></div>
+      <div class="aurora-rail-wrap" role="presentation">
+        <div class="aurora-rail-dot" role="presentation"></div>
+        <div class="aurora-rail-line" role="presentation"></div>
+      </div>
+      <div class="left-label" aria-hidden="true">bynorthlight.ca</div>
+    </div>
+
+    <!-- Reading column -->
+    <main class="blog-reading" id="main-content">
+      <a href="/blog/" class="post-back">← All posts</a>
+      <span class="source-label source-aurora">Aurora Brief · Essay</span>
+      <h1 class="post-title">Shadow AI Is the New Shadow IT — What Leaders Need to Know</h1>
+      <p class="post-date-line"><time datetime="2026-01-01">January 1, 2026</time></p>
+      <div class="aurora-divider" role="presentation"></div>
+
+      <div class="post-body">
+        <h2>Shadow AI Is the New Shadow IT</h2>
+    <p>Ninety-eight per cent of organisations have employees using AI tools nobody approved. Your organisation is almost certainly one of them. The question isn't whether to stop it — you can't — it's whether you know what's happening, who owns it, and what data is going where. Most leaders I talk to don't. That's not a discipline problem. That's a clarity problem.</p>
+    <h3>What Shadow AI Actually Looks Like</h3>
+    <p>Let me be specific about what I mean when I say [shadow AI](https://www.ibm.com/think/topics/shadow-ai).</p>
+    <p>Your marketing manager pastes customer email lists into ChatGPT to draft segmentation copy. Your finance analyst runs Q3 forecasting data through a personal Claude account to catch anomalies faster. Your dev team uses GitHub Copilot on company code — except three of them are on the free tier with their personal Gmail addresses, not your enterprise subscription. None of them asked permission. None of them think they're doing anything wrong. And they're not wrong to think that — because nobody ever told them which tools were okay, what data they could put in, or who to ask.</p>
+    <p>This isn't hypothetical. [Seventy-eight per cent of AI users bring their own tools to work](https://cybernews.com/ai-news/bring-your-own-ai-rise-shadow-ai-workplace/). They're not waiting for your IT team to provision something. They're solving problems now, with the free-tier LLM that's one browser tab away.</p>
+    <p>And here's the part that makes this hard: they're probably getting better results than they would if they waited for you to catch up.</p>
+    <h3>Why the Usual Responses Fail</h3>
+    <p>The first instinct is to ban it. Block ChatGPT at the firewall. Send an email that says "unapproved AI tools are prohibited effective immediately." I've watched organisations do this. It doesn't work. It just drives the behaviour underground — now people use their phones, their home wifi, their personal laptops. You've traded visible risk for invisible risk, and you've told your best people that solving problems faster makes them rule-breakers.</p>
+    <p>The second instinct is to write a policy. Forty pages, definitions on page three, a framework for acceptable use, a review process that requires three signatures and two weeks. Nobody reads it. The people who would've asked permission keep asking. The people who weren't asking still aren't. You've spent a quarter on a document that changes nothing.</p>
+    <p>The third instinct is to wait and see — maybe this is a fad, maybe it'll regulate itself, maybe we'll have clarity in six months. That one's already too late. The agentic AI wave is coming; organisations that haven't sorted out what data can leave their perimeter and who owns that decision are going to be making it under pressure, in the middle of an incident, with regulators watching.</p>
+    <p>None of these work because they all start from the wrong place. They assume you know what's happening and need to control it. You don't know what's happening. That's the actual problem.</p>
+    <h3>The Honest Cost</h3>
+    <p>I'm not going to pretend there's no risk here. There is.</p>
+    <p>[The IBM 2025 Cost of a Data Breach Report](https://www.vectra.ai/topics/shadow-ai) found that breaches involving shadow AI cost an average of $4.63 million — $670,000 more than breaches that didn't involve unsanctioned tools. It took organisations an average of 247 days to detect those breaches. That's not a small number, and it's not a hypothetical scenario. It's what happens when someone puts regulated data into a tool that logs it, stores it, or trains on it — and nobody knew the tool existed until the breach notification landed.</p>
+    <p>But here's what I want you to notice about that number: it's not a technology failure. It's a clarity failure.</p>
+    <blockquote><p>The breach didn't happen because AI is inherently insecure. It happened because nobody knew which tools people were using, what data was going into them, or who owned the decision about whether that was acceptable.</p></blockquote>
+    <p>The organisation didn't have an inventory. They didn't have a named owner. They didn't have an answer to the question "what data can leave our perimeter, and under what conditions?"</p>
+    <p>That's fixable. Not with a ban. Not with a policy. With an audit.</p>
+    <h3>What an Audit Actually Is</h3>
+    <p>An audit isn't a framework. It's not a maturity model. It's not a consultant-led engagement that takes three months and produces a deck.</p>
+    <p>It's four questions:</p>
+    <p>1. <strong>What AI tools are people in this organisation actually using?</strong> Not "what tools are approved" — what tools are people using right now, today, whether you know about it or not.</p>
+    <p>2. <strong>What data are they putting into those tools?</strong> Customer lists, financial forecasts, strategy decks, code, employee records, contract terms — name it specifically.</p>
+    <p>3. <strong>Who owns the decision about whether that's acceptable?</strong> Not "the policy says..." — who is the actual human being who can say yes or no, and what information do they need to make that call?</p>
+    <p>4. <strong>What's the next decision we need to make?</strong> Do we need to provision an enterprise version of a tool people are already using? Do we need to pull certain data types out of scope? Do we need to name an AI governance owner who doesn't exist yet? One decision. Not a roadmap. Not a five-year plan. The next decision.</p>
+    <blockquote><p>You can run this audit in an afternoon. You don't need to hire anyone. You need one person who's willing to ask the questions, a spreadsheet, and the organisational authority to say "we're going to name what's happening, and then we're going to decide what to do about it."</p></blockquote>
+    <p>That person is probably you.</p>
+    <h3>Where to Start</h3>
+    <p>I built a governance audit checklist — the actual questions to ask, the format to capture answers in, and the follow-up decision tree that tells you what to do with what you find. It's designed for someone who's running this audit for the first time, in an organisation that doesn't have an AI policy yet and isn't sure it needs one.</p>
+    <p>⚠️ [Kit signup link for checklist download needed]</p>
+    <p>If this is useful — if you run the audit and it surfaces something you didn't know, or if you forward it to someone on your leadership team and it helps you have the conversation you've been avoiding — that's the signal I'm looking for. I write about this kind of work once a month in Aurora Brief. It's where I think out loud about AI adoption, governance decisions, and what actually works when you're trying to move an organisation forward without breaking it.</p>
+    <p>⚠️ [Kit signup link for Aurora Brief needed]</p>
+    <p>Shadow AI isn't going away. The tools are too useful, the behaviour is too embedded, and the next wave — agentic AI that takes actions on your behalf, not just generates text — is going to make this ten times harder if you don't have the basics sorted now.</p>
+    <p>You don't need a 40-page policy. You don't need a ban. You need to know what's happening. Start there.</p>
+    <p>---</p>
+      </div>
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="blog-sidebar" aria-label="Post sidebar">
+
+      <div class="sidebar-section">
+        <p class="sidebar-label">Published</p>
+        <div class="pub-card">
+          <div class="pub-day">1</div>
+          <div class="pub-year">January 2026</div>
+          <hr class="pub-rule">
+          <p class="pub-readtime"><strong>6</strong> min read</p>
+        </div>
+      </div>
+      
+      <div class="sidebar-section">
+        <p class="sidebar-label">From the newsletter</p>
+        <div class="aurora-card">
+          <p>This essay appeared in the Aurora Brief — a monthly briefing from Elizabeth Lemoine on what she's learning, building, and watching.</p>
+          <a href="https://aurora-brief.kit.com/110f173cf7">Subscribe →</a>
+        </div>
+      </div>
+      
+      <div class="sidebar-section">
+        <p class="sidebar-label">Topics</p>
+        <div class="topics-wrap">
+          <span class="topic-tag">ai governance</span>
+        <span class="topic-tag">shadow ai</span>
+        <span class="topic-tag">risk management</span>
+        <span class="topic-tag">organizational strategy</span>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- Right wing -->
+    <div class="blog-right-wing" role="presentation">
+      <div class="right-glow" role="presentation"></div>
+      <div class="right-dots-wrap" role="presentation" aria-hidden="true">
+        <div class="dot" style="top:0;left:0"></div>
+        <div class="dot" style="top:20px;left:24px"></div>
+        <div class="dot" style="top:48px;left:8px"></div>
+        <div class="dot" style="top:68px;left:38px"></div>
+        <div class="dot" style="top:96px;left:16px"></div>
+        <div class="dot" style="top:120px;left:46px"></div>
+        <div class="dot" style="top:150px;left:4px"></div>
+        <div class="dot" style="top:176px;left:30px"></div>
+        <div class="dot" style="top:206px;left:52px"></div>
+        <div class="dot" style="top:234px;left:18px"></div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p class="footer-copy">© 2026 Northlight</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/" class="footer-link">Home</a>
+        <a href="/vault.html" class="footer-link">Northlight Vault</a>
+        <a href="/northlight-privacy.html" class="footer-link">Privacy Policy</a>
+      </nav>
+    </footer>
+
+  </div>
+
+  <!-- Plausible Analytics -->
+  <script defer data-domain="bynorthlight.ca" src="https://plausible.io/js/script.js"></script>
+</body>
+</html>
