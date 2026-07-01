@@ -99,9 +99,10 @@
   .footer-inner { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; }
   .footer-left { display: flex; flex-direction: column; gap: 8px; }
   .footer-copy { font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.1em; color: var(--muted); }
-  .footer-powered { font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 0.12em; color: var(--muted); opacity: 0.8; }
+  .footer-powered { font-family: 'Jost', sans-serif; font-size: 13px; letter-spacing: 0.12em; color: var(--muted); opacity: 0.8; display: flex; align-items: center; gap: 10px; }
   .footer-powered a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
   .footer-powered a:hover { color: var(--text); }
+  .footer-os-icon { width: 36px; height: 36px; flex-shrink: 0; border-radius: 8px; }
   .footer-right { display: flex; flex-direction: column; align-items: flex-end; gap: 16px; }
   .footer-links { display: flex; gap: 24px; list-style: none; flex-wrap: wrap; justify-content: flex-end; }
   .footer-links a {
@@ -128,6 +129,10 @@
     width: 600px; height: 600px;
     background: radial-gradient(ellipse, rgba(139,111,212,0.07) 0%, transparent 65%);
     pointer-events: none;
+  }
+
+  .hero-os-icon {
+    width: 48px; height: 48px; border-radius: 10px; margin-bottom: 20px; display: block;
   }
 
   .hero-eyebrow {
@@ -308,6 +313,7 @@
     <!-- ── HERO ── -->
     <div class="page-wrap">
       <section class="os-hero" aria-labelledby="hero-title">
+        <img src="/northlight-os-icon.svg" alt="Northlight OS icon" class="hero-os-icon" width="48" height="48">
         <p class="hero-eyebrow">Case Study &nbsp;·&nbsp; Built &amp; operated by Elizabeth Lemoine</p>
         <h1 class="hero-title" id="hero-title">One dashboard.<br><span>Your entire operation.</span></h1>
         <p class="hero-subtitle">
@@ -664,7 +670,7 @@
       <div class="footer-inner">
         <div class="footer-left">
           <p class="footer-copy">© 2026 Northlight Advisory Services</p>
-          <p class="footer-powered">Powered by <a href="/case-studies/northlight-os.html">Northlight OS</a></p>
+          <p class="footer-powered"><img src="/northlight-os-icon.svg" alt="" class="footer-os-icon" width="36" height="36">Powered by <a href="/case-studies/northlight-os.html">Northlight OS</a></p>
         </div>
         <nav aria-label="Footer navigation">
           <div class="footer-right">

@@ -107,8 +107,9 @@
     .footer-link{font-family:'Jost',sans-serif;font-weight:500;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;}
     .footer-link:hover{color:var(--cloud);}
     .footer-left{display:flex;flex-direction:column;gap:3px;}
-    .footer-powered{font-family:'Outfit',sans-serif;font-size:11px;color:var(--structural);}
+    .footer-powered{font-family:'Outfit',sans-serif;font-size:13px;color:var(--structural);display:flex;align-items:center;gap:10px;}
     .footer-powered a{color:var(--structural);text-decoration:none;}
+    .footer-os-icon{width:36px;height:36px;flex-shrink:0;border-radius:8px;}
     .footer-powered a:hover{color:var(--muted);}
     .footer-social-link{display:flex;align-items:center;gap:5px;}
 
@@ -227,7 +228,7 @@
     <footer class="site-footer">
       <div class="footer-left">
         <p class="footer-copy">© 2026 Northlight Advisory Services</p>
-        <p class="footer-powered">Powered by <a href="/">Northlight OS</a></p>
+        <p class="footer-powered"><img src="/northlight-os-icon.svg" alt="" class="footer-os-icon" width="36" height="36"><span>Powered by <a href="/">Northlight OS</a></span></p>
       </div>
       <nav class="footer-nav" aria-label="Footer navigation">
         <a href="/" class="footer-link">Northlight</a>
