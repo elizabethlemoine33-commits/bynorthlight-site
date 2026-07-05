@@ -184,8 +184,8 @@
   }
 
   .building-row {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 40px; align-items: center; max-width: 700px;
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px; align-items: start; max-width: 1100px;
   }
 
   /* ── LAPTOP MOCKUP ── */
@@ -552,6 +552,7 @@
       <li><a href="#services">Services</a></li>
       <li><a href="/about.html">About</a></li>
       <li><a href="/vault.html">Vault</a></li>
+      <li><a href="#vault">Meetings</a></li>
       <li><a href="/blog/">Blog</a></li>
       <li><a href="/case-studies/">Work</a></li>
       <li><a href="mailto:support@bynorthlight.ca">Contact</a></li>
@@ -657,6 +658,18 @@
 
         <div class="faq-item" role="listitem">
           <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+            <span class="faq-q-text">What is Northlight Meetings?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Northlight Meetings is a Windows desktop app that records client calls, transcribes them using Groq Whisper, and runs AI analysis to extract action items, key decisions, and follow-up dates. It then pushes structured notes to Google Drive, tasks to ClickUp, and events to Google Calendar — automatically. Coming soon.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item" role="listitem">
+          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
             <span class="faq-q-text">What is Northlight Vault?</span>
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
@@ -713,6 +726,28 @@
           </div>
         </div>
 
+        <!-- Meetings card -->
+        <div class="vault-card">
+          <div class="vault-card-inner">
+            <div class="vault-header">
+              <div class="vault-logo">
+                <img src="northlight-meetings-icon-512x512.png" alt="Northlight Meetings app icon">
+              </div>
+              <div>
+                <p class="vault-name">Northlight Meetings</p>
+                <p class="vault-product-label">Call Recorder &amp; Analyzer &nbsp;·&nbsp; Windows</p>
+              </div>
+            </div>
+            <p class="vault-tagline"><span>Every call.</span><br>Captured and filed.</p>
+            <p class="vault-blurb">Records client calls, transcribes with Groq Whisper, and pushes structured notes, action items, and calendar events directly to Google Drive and ClickUp.</p>
+            <a href="/meetings-privacy.html" class="vault-cta" style="color:var(--muted);border-color:rgba(153,161,182,0.2);">Privacy policy →</a>
+            <p class="vault-early">
+              <span class="vault-early-dot" role="presentation" style="background:var(--dusk)"></span>
+              Coming soon
+            </p>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -751,6 +786,7 @@
             <ul class="footer-links">
               <li><a href="/about.html">About</a></li>
               <li><a href="/vault.html">Northlight Vault</a></li>
+              <li><a href="/meetings-privacy.html">Northlight Meetings</a></li>
               <li><a href="/case-studies/">Case Studies</a></li>
               <li><a href="/blog/">Blog</a></li>
               <li><a href="/northlight-privacy.html">Privacy Policy</a></li>
