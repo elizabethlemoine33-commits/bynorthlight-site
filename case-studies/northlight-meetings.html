@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Northlight Meetings — Case Study</title>
+<meta name="description" content="How Northlight built a Windows desktop app that records client calls, transcribes with Groq, and automatically files meeting notes to Drive, tasks to ClickUp, and events to Calendar.">
+<link rel="canonical" href="https://bynorthlight.ca/case-studies/northlight-meetings.html">
+<meta property="og:title" content="Northlight Meetings — Case Study">
+<meta property="og:description" content="Every client call — captured, transcribed, analyzed, and filed automatically.">
+<meta property="og:image" content="https://bynorthlight.ca/northlight-og-image.png">
+<meta property="og:url" content="https://bynorthlight.ca/case-studies/northlight-meetings.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Northlight">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --midnight:   #0E0E14;
+    --surface:    #12121E;
+    --surface-2:  #10101C;
+    --border:     #1E2035;
+    --border-2:   #2A2A48;
+    --text:       #FFFFFF;
+    --cloud:      #C8CCE0;
+    --haze:       #BCC2DC;
+    --muted:      #99A1B6;
+    --structural: #6C7295;
+    --glacial:    #4FC3C8;
+    --boreal:     #5B8DD9;
+    --dusk:       #8B6FD4;
+    --aurora:     #C46FAA;
+  }
+
+  body {
+    background: var(--midnight);
+    color: var(--cloud);
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .skip-nav {
+    position: absolute; top: -100px; left: 0;
+    background: var(--dusk); color: #fff;
+    padding: 10px 20px;
+    font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600;
+    letter-spacing: 0.06em; text-decoration: none;
+    border-radius: 0 0 6px 0; z-index: 9999; transition: top 0.2s;
+  }
+  .skip-nav:focus { top: 0; }
+
+  .top-bar {
+    height: 2px;
+    background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);
+  }
+
+  nav.site-nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 64px;
+    border-bottom: 1px solid var(--border);
+    max-width: 1280px; margin: 0 auto;
+  }
+  .nav-wordmark {
+    font-family: 'Jost', sans-serif; font-size: 18px; font-weight: 600;
+    letter-spacing: 0.06em;
+    background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 33%, #8B6FD4 66%, #C46FAA 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a {
+    font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--muted); text-decoration: none; transition: color 0.2s;
+  }
+  .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--text); }
+
+  .page-wrap { max-width: 1280px; margin: 0 auto; padding: 0 64px; }
+
+  .aurora-divider {
+    height: 1px;
+    background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);
+    opacity: 0.25; max-width: 1280px; margin: 0 auto;
+  }
+
+  .section-label {
+    font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500;
+    letter-spacing: 0.26em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 32px;
+  }
+
+  .footer-border { border-top: 1px solid var(--border); }
+  footer { padding: 32px 64px; max-width: 1280px; margin: 0 auto; }
+  .footer-inner { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; }
+  .footer-left { display: flex; flex-direction: column; gap: 8px; }
+  .footer-copy { font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.1em; color: var(--muted); }
+  .footer-powered { font-family: 'Jost', sans-serif; font-size: 13px; letter-spacing: 0.12em; color: var(--muted); opacity: 0.8; display: flex; align-items: center; gap: 10px; }
+  .footer-powered a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .footer-powered a:hover { color: var(--text); }
+  .footer-os-icon { width: 36px; height: 36px; flex-shrink: 0; border-radius: 8px; }
+  .footer-right { display: flex; flex-direction: column; align-items: flex-end; gap: 16px; }
+  .footer-links { display: flex; gap: 24px; list-style: none; flex-wrap: wrap; justify-content: flex-end; }
+  .footer-links a {
+    font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.1em;
+    color: var(--muted); text-decoration: none; transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--text); }
+  .footer-social { display: flex; gap: 16px; list-style: none; align-items: center; }
+  .footer-social a {
+    font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.1em;
+    color: var(--muted); text-decoration: none;
+    display: flex; align-items: center; gap: 6px; transition: color 0.2s;
+  }
+  .footer-social a:hover { color: var(--text); }
+
+  .meetings-hero {
+    padding: 88px 0 72px;
+    max-width: 860px;
+    position: relative; overflow: hidden;
+  }
+  .meetings-hero::after {
+    content: '';
+    position: absolute; top: -80px; right: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(ellipse, rgba(139,111,212,0.07) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .hero-meetings-icon {
+    width: 100px; height: 100px; border-radius: 16px; margin-bottom: 24px; display: block;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500;
+    letter-spacing: 0.26em; text-transform: uppercase; color: var(--muted);
+    margin-bottom: 20px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .hero-eyebrow::before {
+    content: ''; display: inline-block; width: 20px; height: 2px;
+    background: linear-gradient(90deg, #4fc3c8, #8b6fd4); border-radius: 2px;
+  }
+
+  .hero-title {
+    font-family: 'Jost', sans-serif; font-weight: 600; font-size: 52px;
+    letter-spacing: 0.03em; line-height: 1.05; color: var(--text);
+    margin-bottom: 20px;
+  }
+  .hero-title span {
+    background: linear-gradient(105deg, #4fc3c8 0%, #5b8dd9 33%, #8b6fd4 66%, #c46faa 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+
+  .hero-subtitle {
+    font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 17px;
+    line-height: 1.75; color: var(--haze); margin-bottom: 36px; max-width: 680px;
+  }
+
+  .status-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(139,111,212,0.10); border: 1px solid rgba(139,111,212,0.22);
+    border-radius: 20px; padding: 5px 14px;
+    font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--dusk);
+  }
+  .status-dot {
+    width: 6px; height: 6px; border-radius: 50%; background: var(--dusk);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+
+  .stats-row {
+    display: flex; gap: 0; flex-wrap: wrap;
+    border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
+  }
+  .stat-block { flex: 1; min-width: 140px; padding: 20px 24px; border-right: 1px solid var(--border); }
+  .stat-block:last-child { border-right: none; }
+  .stat-value {
+    font-family: 'Jost', sans-serif; font-weight: 600; font-size: 28px;
+    letter-spacing: 0.02em; display: block;
+    background: linear-gradient(105deg, #4fc3c8 0%, #8b6fd4 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .stat-label { font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--muted); margin-top: 2px; display: block; }
+
+  .problem-card {
+    background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px;
+    padding: 32px 36px; max-width: 760px;
+  }
+  .problem-card p { font-family: 'Outfit', sans-serif; font-size: 16px; line-height: 1.8; color: var(--cloud); margin-bottom: 16px; }
+  .problem-card p:last-child { margin-bottom: 0; }
+  .problem-card strong { color: var(--text); font-weight: 500; }
+
+  .workflow-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .workflow-card { background: var(--surface-2); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .workflow-card-header { padding: 20px 24px 16px; border-bottom: 1px solid var(--border); }
+  .workflow-number { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.20em; text-transform: uppercase; color: var(--structural); margin-bottom: 8px; }
+  .workflow-title { font-family: 'Jost', sans-serif; font-weight: 600; font-size: 16px; letter-spacing: 0.03em; color: var(--text); margin-bottom: 6px; }
+  .workflow-desc { font-family: 'Outfit', sans-serif; font-size: 13px; line-height: 1.65; color: var(--haze); }
+  .workflow-mockup { padding: 16px 20px; }
+
+  .mock-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; margin-bottom: 8px; }
+  .mock-card:last-child { margin-bottom: 0; }
+  .mock-row { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+  .mock-badge { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; padding: 2px 7px; border-radius: 4px; flex-shrink: 0; }
+  .badge-rec    { background: rgba(196,111,170,0.12); color: #d48ab0; border: 1px solid rgba(196,111,170,0.22); }
+  .badge-live   { background: rgba(196,111,170,0.18); color: #e0a0c4; border: 1px solid rgba(196,111,170,0.30); }
+  .badge-done   { background: rgba(79,195,200,0.12);  color: var(--glacial); border: 1px solid rgba(79,195,200,0.22); }
+  .badge-ai     { background: rgba(91,141,217,0.15);  color: #7AAAE8; border: 1px solid rgba(91,141,217,0.25); }
+  .badge-drive  { background: rgba(79,195,200,0.10);  color: var(--glacial); border: 1px solid rgba(79,195,200,0.18); }
+  .badge-clickup{ background: rgba(139,111,212,0.12); color: #a896de; border: 1px solid rgba(139,111,212,0.22); }
+  .badge-cal    { background: rgba(91,141,217,0.12);  color: #7AAAE8; border: 1px solid rgba(91,141,217,0.22); }
+  .mock-title { font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 500; color: var(--text); line-height: 1.4; flex: 1; }
+  .mock-meta  { font-family: 'Outfit', sans-serif; font-size: 11px; color: var(--muted); }
+  .mock-actions { display: flex; gap: 6px; margin-top: 8px; }
+  .mock-btn { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 0.10em; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; border: 1px solid; }
+  .mock-btn-primary { background: linear-gradient(90deg, rgba(79,195,200,0.2), rgba(91,141,217,0.2)); border-color: rgba(79,195,200,0.3); color: var(--glacial); }
+  .mock-btn-muted   { background: transparent; border-color: var(--border-2); color: var(--muted); }
+  .mock-waveform { display: flex; align-items: flex-end; gap: 3px; height: 28px; margin: 8px 0 4px; }
+  .mock-bar { background: var(--dusk); border-radius: 2px; opacity: 0.6; width: 4px; }
+  .mock-bar-active { opacity: 1; background: linear-gradient(180deg, #8B6FD4, #C46FAA); }
+  .mock-timer { font-family: 'Jost', sans-serif; font-size: 18px; font-weight: 600; letter-spacing: 0.08em; color: var(--text); margin-bottom: 4px; }
+  .mock-source-row { display: flex; gap: 8px; margin-top: 6px; }
+  .mock-source { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; padding: 2px 8px; border-radius: 4px; }
+  .mock-source-mic    { background: rgba(79,195,200,0.10); color: var(--glacial); border: 1px solid rgba(79,195,200,0.20); }
+  .mock-source-system { background: rgba(139,111,212,0.10); color: var(--dusk); border: 1px solid rgba(139,111,212,0.20); }
+  .mock-transcript-line { font-family: 'Outfit', sans-serif; font-size: 12px; line-height: 1.55; color: var(--haze); margin-bottom: 5px; }
+  .mock-transcript-line span { color: var(--muted); font-size: 10px; margin-right: 5px; }
+  .mock-section-label { font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--structural); margin-bottom: 5px; }
+  .mock-action-item { display: flex; align-items: flex-start; gap: 6px; margin-bottom: 4px; }
+  .mock-action-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--dusk); flex-shrink: 0; margin-top: 5px; }
+  .mock-action-text { font-family: 'Outfit', sans-serif; font-size: 12px; color: var(--haze); line-height: 1.45; }
+  .mock-push-row { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); }
+  .mock-push-row:last-child { border-bottom: none; }
+  .mock-push-icon { width: 24px; height: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 11px; flex-shrink: 0; }
+  .mock-push-detail { flex: 1; }
+  .mock-push-name { font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; color: var(--text); margin-bottom: 1px; }
+  .mock-push-sub { font-family: 'Outfit', sans-serif; font-size: 11px; color: var(--muted); }
+  .mock-check { font-family: 'Jost', sans-serif; font-size: 11px; color: var(--glacial); font-weight: 600; }
+
+  .stack-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+  .stack-chip { font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--haze); background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 8px 16px; }
+
+  .pmi-card { background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px; padding: 32px 36px; max-width: 760px; }
+  .pmi-row { display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--border); }
+  .pmi-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .pmi-row:first-child { padding-top: 0; }
+  .pmi-label { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); min-width: 120px; flex-shrink: 0; padding-top: 1px; }
+  .pmi-value { font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--cloud); line-height: 1.65; }
+
+  .content-section { padding: 72px 0; }
+  .content-section-mid { max-width: 1000px; }
+  .content-section-narrow { max-width: 760px; }
+
+  @media (max-width: 1024px) {
+    nav.site-nav { padding: 20px 32px; }
+    .page-wrap { padding: 0 32px; }
+    footer { padding: 32px 32px; }
+  }
+  @media (max-width: 900px) {
+    .workflow-grid { grid-template-columns: 1fr; }
+    .stats-row { flex-wrap: wrap; }
+    .stat-block { min-width: 45%; }
+  }
+  @media (max-width: 768px) {
+    nav.site-nav { padding: 16px 24px; }
+    .page-wrap { padding: 0 24px; }
+    footer { padding: 24px; }
+    .hero-title { font-size: 38px; }
+    .footer-inner { flex-direction: column; gap: 24px; }
+    .footer-right { align-items: flex-start; }
+    .footer-links { justify-content: flex-start; }
+    .nav-links { gap: 16px; }
+    .nav-links a { font-size: 11px; }
+    .pmi-row { flex-direction: column; gap: 4px; }
+    .pmi-label { min-width: 0; }
+    .meetings-hero { padding: 56px 0 48px; }
+  }
+  @media (max-width: 480px) {
+    .nav-links { gap: 12px; }
+    .nav-links a { letter-spacing: 0.08em; }
+  }
+</style>
+<script async src="https://plausible.io/js/pa-uccdYD5d_-tjjiMlRo9eR.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init();
+</script>
+    <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <div class="top-bar" role="presentation"></div>
+
+  <nav class="site-nav" aria-label="Site navigation">
+    <a href="/" class="nav-wordmark" aria-label="Northlight home">Northlight</a>
+    <ul class="nav-links">
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/vault.html">Vault</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/case-studies/" aria-current="page">Work</a></li>
+      <li><a href="mailto:support@bynorthlight.ca">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ── HERO ── -->
+    <div class="page-wrap">
+      <section class="meetings-hero" aria-labelledby="hero-title">
+        <img src="/northlight-meetings-icon-512x512.png" alt="Northlight Meetings icon" class="hero-meetings-icon" width="100" height="100">
+        <p class="hero-eyebrow">Case Study &nbsp;·&nbsp; Built &amp; operated by Elizabeth Lemoine</p>
+        <h1 class="hero-title" id="hero-title">Every call.<br><span>Captured and filed.</span></h1>
+        <p class="hero-subtitle">
+          Northlight Meetings is a Windows desktop app that records client calls, transcribes them with Groq Whisper, and uses Llama to extract meeting notes, action items, and key dates — then pushes everything automatically to Google Drive, ClickUp, and Google Calendar.
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+          <span class="status-pill">
+            <span class="status-dot" role="presentation"></span>
+            Built · GCP verification pending
+          </span>
+          <span style="font-family:'Outfit',sans-serif;font-size:13px;color:var(--muted);">Phases 1–4 complete as of July 2026</span>
+        </div>
+      </section>
+    </div>
+
+    <!-- ── STATS ── -->
+    <div class="page-wrap" style="padding-bottom:56px;">
+      <div class="stats-row">
+        <div class="stat-block">
+          <span class="stat-value">2</span>
+          <span class="stat-label">Recording modes</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-value">4</span>
+          <span class="stat-label">Integrated platforms</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-value">3</span>
+          <span class="stat-label">Automatic outputs</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-value">~$0.03</span>
+          <span class="stat-label">Per call (AI cost)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="aurora-divider" role="presentation"></div>
+
+    <!-- ── THE PROBLEM ── -->
+    <div class="page-wrap">
+      <section class="content-section" aria-labelledby="problem-heading">
+        <h2 class="section-label" id="problem-heading">The problem</h2>
+        <div class="problem-card">
+          <p>Client calls are where the work actually happens — but the output is invisible. Notes are scribbled and lost. Action items get forgotten. Dates discussed in calls never make it to the calendar. The time between a call ending and a clean set of notes appearing in Drive could be an hour — or never.</p>
+          <p>Off-the-shelf transcription tools produce walls of text, not structured outputs. And none of them push to ClickUp, Drive, and Calendar in one step. <strong>Northlight Meetings does all of it automatically, the moment the call ends.</strong></p>
+        </div>
+      </section>
+    </div>
+
+    <div class="aurora-divider" role="presentation"></div>
+
+    <!-- ── KEY WORKFLOWS ── -->
+    <div class="page-wrap">
+      <section class="content-section content-section-mid" aria-labelledby="workflows-heading">
+        <h2 class="section-label" id="workflows-heading">Key workflows</h2>
+        <div class="workflow-grid">
+
+          <div class="workflow-card">
+            <div class="workflow-card-header">
+              <p class="workflow-number">01</p>
+              <h3 class="workflow-title">Record the Call</h3>
+              <p class="workflow-desc">Captures both sides of a call simultaneously — your microphone and the system audio (via VB-Audio Cable) — with a single button. Supports two modes: Client Meeting and Proposal, each using a different output template.</p>
+            </div>
+            <div class="workflow-mockup" aria-label="Mock recording screen">
+              <div class="mock-card">
+                <div class="mock-row">
+                  <span class="mock-badge badge-live">● Recording</span>
+                  <span class="mock-meta" style="margin-left:auto;">Client Meeting</span>
+                </div>
+                <div class="mock-timer">12:43</div>
+                <div class="mock-waveform" aria-hidden="true">
+                  <div class="mock-bar mock-bar-active" style="height:10px;"></div>
+                  <div class="mock-bar mock-bar-active" style="height:18px;"></div>
+                  <div class="mock-bar mock-bar-active" style="height:24px;"></div>
+                  <div class="mock-bar mock-bar-active" style="height:16px;"></div>
+                  <div class="mock-bar mock-bar-active" style="height:20px;"></div>
+                  <div class="mock-bar mock-bar-active" style="height:14px;"></div>
+                  <div class="mock-bar" style="height:22px;"></div>
+                  <div class="mock-bar" style="height:12px;"></div>
+                  <div class="mock-bar" style="height:18px;"></div>
+                  <div class="mock-bar" style="height:8px;"></div>
+                  <div class="mock-bar" style="height:16px;"></div>
+                  <div class="mock-bar" style="height:20px;"></div>
+                </div>
+                <div class="mock-source-row">
+                  <span class="mock-source mock-source-mic">● Mic</span>
+                  <span class="mock-source mock-source-system">● System audio</span>
+                </div>
+              </div>
+              <div class="mock-card">
+                <div class="mock-row"><span class="mock-meta">Stop → transcribe automatically</span></div>
+                <div class="mock-actions">
+                  <span class="mock-btn mock-btn-muted">■ Stop &amp; Transcribe</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="workflow-card">
+            <div class="workflow-card-header">
+              <p class="workflow-number">02</p>
+              <h3 class="workflow-title">Transcribe &amp; Analyse</h3>
+              <p class="workflow-desc">After stopping, Groq Whisper transcribes the full recording in seconds. Groq Llama then runs analysis — extracting structured meeting notes, action items, and key dates from the raw transcript.</p>
+            </div>
+            <div class="workflow-mockup" aria-label="Mock transcript and analysis output">
+              <div class="mock-card">
+                <div class="mock-row">
+                  <span class="mock-badge badge-ai">Whisper</span>
+                  <span class="mock-badge badge-done">Transcribed</span>
+                </div>
+                <div class="mock-transcript-line"><span>0:12</span>Let's start with the Q3 scope — I want to make sure we're aligned before we go further.</div>
+                <div class="mock-transcript-line"><span>0:28</span>Agreed. The deliverable by end of month is the integration brief.</div>
+              </div>
+              <div class="mock-card">
+                <div class="mock-row">
+                  <span class="mock-badge badge-ai">Llama</span>
+                  <span class="mock-badge badge-done">Analysed</span>
+                </div>
+                <div class="mock-section-label">Action items</div>
+                <div class="mock-action-item"><div class="mock-action-dot"></div><div class="mock-action-text">Deliver integration brief by July 31</div></div>
+                <div class="mock-action-item"><div class="mock-action-dot"></div><div class="mock-action-text">Send revised scope doc by end of week</div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="workflow-card">
+            <div class="workflow-card-header">
+              <p class="workflow-number">03</p>
+              <h3 class="workflow-title">Push to Google Drive</h3>
+              <p class="workflow-desc">Review the analysis, then push with one click. Meetings creates a formatted Google Doc from the appropriate template — replacing placeholders with real content from the session — and saves it to the designated Drive folder.</p>
+            </div>
+            <div class="workflow-mockup" aria-label="Mock Drive push confirmation">
+              <div class="mock-card">
+                <div class="mock-row">
+                  <span class="mock-badge badge-drive">Drive</span>
+                  <span class="mock-meta" style="margin-left:auto;">Meeting Notes template</span>
+                </div>
+                <div class="mock-title" style="margin-bottom:6px;">Horizon Advisory — Q3 Scope Call · July 5</div>
+                <div class="mock-meta" style="margin-bottom:8px;">Created from template · saved to /Meetings/2026/</div>
+                <div class="mock-actions">
+                  <span class="mock-btn mock-btn-primary">↗ Open in Drive</span>
+                </div>
+              </div>
+              <div class="mock-card">
+                <div class="mock-meta">Template placeholders replaced with session content — headings, notes, action items, and date all filled in automatically.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="workflow-card">
+            <div class="workflow-card-header">
+              <p class="workflow-number">04</p>
+              <h3 class="workflow-title">Push to ClickUp &amp; Calendar</h3>
+              <p class="workflow-desc">Action items become tasks in the client ClickUp list. Extracted dates become Google Calendar events. All three outputs are pushed in a single approved action — Drive, ClickUp, and Calendar together.</p>
+            </div>
+            <div class="workflow-mockup" aria-label="Mock push results showing all three destinations">
+              <div class="mock-push-row">
+                <div class="mock-push-icon" style="background:rgba(79,195,200,0.12);">📄</div>
+                <div class="mock-push-detail">
+                  <div class="mock-push-name">Google Drive</div>
+                  <div class="mock-push-sub">Meeting notes doc created</div>
+                </div>
+                <div class="mock-check">✓</div>
+              </div>
+              <div class="mock-push-row">
+                <div class="mock-push-icon" style="background:rgba(139,111,212,0.12);">✓</div>
+                <div class="mock-push-detail">
+                  <div class="mock-push-name">ClickUp</div>
+                  <div class="mock-push-sub">2 tasks added to client list</div>
+                </div>
+                <div class="mock-check">✓</div>
+              </div>
+              <div class="mock-push-row">
+                <div class="mock-push-icon" style="background:rgba(91,141,217,0.12);">📅</div>
+                <div class="mock-push-detail">
+                  <div class="mock-push-name">Google Calendar</div>
+                  <div class="mock-push-sub">1 event added · July 31</div>
+                </div>
+                <div class="mock-check">✓</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <div class="aurora-divider" role="presentation"></div>
+
+    <!-- ── ARCHITECTURE DIAGRAM ── -->
+    <div class="page-wrap">
+      <section class="content-section" aria-labelledby="arch-heading">
+        <h2 class="section-label" id="arch-heading">System architecture</h2>
+        <svg viewBox="0 0 900 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Northlight Meetings system architecture diagram" style="width:100%;max-width:900px;display:block;">
+          <defs>
+            <linearGradient id="gm-bar" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#4FC3C8"/><stop offset="30%" stop-color="#5B8DD9"/><stop offset="65%" stop-color="#8B6FD4"/><stop offset="100%" stop-color="#C46FAA"/>
+            </linearGradient>
+            <linearGradient id="gm-core" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#8B6FD4" stop-opacity="0.10"/><stop offset="100%" stop-color="#C46FAA" stop-opacity="0.10"/>
+            </linearGradient>
+            <marker id="marrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#2A2A48"/></marker>
+          </defs>
+
+          <!-- Inputs -->
+          <rect x="20" y="60" width="148" height="36" rx="7" fill="#10101C" stroke="#1E2035" stroke-width="1"/>
+          <rect x="20" y="60" width="3" height="36" rx="2" fill="#C46FAA"/>
+          <text x="33" y="83" font-family="Jost,sans-serif" font-size="12" font-weight="600" letter-spacing="0.04em" fill="#BCC2DC">Microphone</text>
+          <text x="33" y="95" font-family="Outfit,sans-serif" font-size="10" fill="#6C7295">Your voice</text>
+
+          <rect x="20" y="112" width="148" height="36" rx="7" fill="#10101C" stroke="#1E2035" stroke-width="1"/>
+          <rect x="20" y="112" width="3" height="36" rx="2" fill="#8B6FD4"/>
+          <text x="33" y="135" font-family="Jost,sans-serif" font-size="12" font-weight="600" letter-spacing="0.04em" fill="#BCC2DC">System Audio</text>
+          <text x="33" y="147" font-family="Outfit,sans-serif" font-size="10" fill="#6C7295">Via VB-Audio Cable</text>
+
+          <rect x="20" y="164" width="148" height="36" rx="7" fill="#10101C" stroke="#1E2035" stroke-width="1"/>
+          <rect x="20" y="164" width="3" height="36" rx="2" fill="#4FC3C8"/>
+          <text x="33" y="187" font-family="Jost,sans-serif" font-size="12" font-weight="600" letter-spacing="0.04em" fill="#BCC2DC">Groq Whisper</text>
+          <text x="33" y="199" font-family="Outfit,sans-serif" font-size="10" fill="#6C7295">Transcription</text>
+
+          <rect x="20" y="216" width="148" height="36" rx="7" fill="#10101C" stroke="#1E2035" stroke-width="1"/>
+          <rect x="20" y="216" width="3" height="36" rx="2" fill="#5B8DD9"/>
+          <text x="33" y="239" font-family="Jost,sans-serif" font-size="12" font-weight="600" letter-spacing="0.04em" fill="#BCC2DC">Groq Llama</text>
+          <text x="33" y="251" font-family="Outfit,sans-serif" font-size="10" fill="#6C7295">Analysis + extraction</text>
+
+          <!-- Arrows to core -->
+          <line x1="168" y1="78" x2="285" y2="130" stroke="#2A2A48" stroke-width="1" marker-end="url(#marrow)"/>
+          <line x1="168" y1="130" x2="285" y2="150" stroke="#2A2A48" stroke-width="1" marker-end="url(#marrow)"/>
+          <line x1="168" y1="182" x2="285" y2="170" stroke="#2A2A48" stroke-width="1" marker-end="url(#marrow)"/>
+          <line x1="168" y1="234" x2="285" y2="186" stroke="#2A2A48" stroke-width="1" marker-end="url(#marrow)"/>
+
+          <!-- Core app -->
+          <rect x="285" y="80" width="330" height="180" rx="12" fill="url(#gm-core)" stroke="url(#gm-bar)" stroke-width="1.5"/>
+          <rect x="285" y="80" width="330" height="3" rx="1.5" fill="url(#gm-bar)"/>
+          <text x="450" y="108" font-family="Jost,sans-serif" font-size="11" font-weight="500" letter-spacing="0.22em" text-anchor="middle" fill="#6C7295">NORTHLIGHT MEETINGS</text>
+          <rect x="301" y="120" width="88" height="24" rx="5" fill="#12121E" stroke="#1E2035" stroke-width="1"/>
+          <text x="345" y="137" font-family="Jost,sans-serif" font-size="10" font-weight="500" letter-spacing="0.08em" text-anchor="middle" fill="#99A1B6">Record</text>
+          <rect x="399" y="120" width="88" height="24" rx="5" fill="#12121E" stroke="#1E2035" stroke-width="1"/>
+          <text x="443" y="137" font-family="Jost,sans-serif" font-size="10" font-weight="500" letter-spacing="0.08em" text-anchor="middle" fill="#99A1B6">Transcript</text>
+          <rect x="497" y="120" width="102" height="24" rx="5" fill="#12121E" stroke="#1E2035" stroke-width="1"/>
+          <text x="548" y="137" font-family="Jost,sans-serif" font-size="10" font-weight="500" letter-spacing="0.08em" text-anchor="middle" fill="#99A1B6">Review</text>
+          <rect x="301" y="154" width="88" height="24" rx="5" fill="#12121E" stroke="#1E2035" stroke-width="1"/>
+          <text x="345" y="171" font-family="Jost,sans-serif" font-size="10" font-weight="500" letter-spacing="0.08em" text-anchor="middle" fill="#99A1B6">Analysis</text>
+          <rect x="399" y="154" width="88" height="24" rx="5" fill="#12121E" stroke="#1E2035" stroke-width="1"/>
+          <text x="443" y="171" font-family="Jost,sans-serif" font-size="10" font-weight="500" letter-spacing="0.08em" text-anchor="middle" fill="#99A1B6">Sessions</text>
+          <rect x="497" y="154" width="102" height="24" rx="5" fill="#12121E" stroke="#1E2035" stroke-width="1"/>
+          <text x="548" y="171" font-family="Jost,sans-serif" font-size="10" font-weight="500" letter-spacing="0.08em" text-anchor="middle" fill="#99A1B6">Settings</text>
+          <line x1="301" y1="192" x2="597" y2="192" stroke="#1E2035" stroke-width="1"/>
+          <text x="450" y="218" font-family="Jost,sans-serif" font-size="10" font-weight="500" letter-spacing="0.16em" text-anchor="middle" fill="#8B6FD4">DPAPI · safeStorage encryption</text>
+          <text x="450" y="234" font-family="Outfit,sans-serif" font-size="10" text-anchor="middle" fill="#6C7295">Groq key · ClickUp key · Google tokens</text>
+
+          <!-- Arrows to outputs -->
+          <line x1="615" y1="130" x2="726" y2="80" stroke="#2A2A48" stroke-width="1" marker-end="url(#marrow)"/>
+          <line x1="615" y1="160" x2="726" y2="160" stroke="#2A2A48" stroke-width="1" marker-end="url(#marrow)"/>
+          <line x1="615" y1="190" x2="726" y2="240" stroke="#2A2A48" stroke-width="1" marker-end="url(#marrow)"/>
+
+          <!-- Outputs -->
+          <rect x="726" y="60" width="156" height="36" rx="7" fill="#10101C" stroke="#1E2035" stroke-width="1"/>
+          <rect x="878" y="60" width="3" height="36" rx="2" fill="#4FC3C8"/>
+          <text x="738" y="83" font-family="Jost,sans-serif" font-size="12" font-weight="600" letter-spacing="0.04em" fill="#BCC2DC">Google Drive</text>
+          <text x="738" y="95" font-family="Outfit,sans-serif" font-size="10" fill="#6C7295">Formatted doc from template</text>
+
+          <rect x="726" y="142" width="156" height="36" rx="7" fill="#10101C" stroke="#1E2035" stroke-width="1"/>
+          <rect x="878" y="142" width="3" height="36" rx="2" fill="#8B6FD4"/>
+          <text x="738" y="165" font-family="Jost,sans-serif" font-size="12" font-weight="600" letter-spacing="0.04em" fill="#BCC2DC">ClickUp</text>
+          <text x="738" y="177" font-family="Outfit,sans-serif" font-size="10" fill="#6C7295">Tasks from action items</text>
+
+          <rect x="726" y="224" width="156" height="36" rx="7" fill="#10101C" stroke="#1E2035" stroke-width="1"/>
+          <rect x="878" y="224" width="3" height="36" rx="2" fill="#5B8DD9"/>
+          <text x="738" y="247" font-family="Jost,sans-serif" font-size="12" font-weight="600" letter-spacing="0.04em" fill="#BCC2DC">Google Calendar</text>
+          <text x="738" y="259" font-family="Outfit,sans-serif" font-size="10" fill="#6C7295">Events from extracted dates</text>
+
+          <!-- Google OAuth bar -->
+          <rect x="20" y="315" width="862" height="30" rx="7" fill="rgba(91,141,217,0.06)" stroke="#2A2A48" stroke-width="1"/>
+          <text x="451" y="336" font-family="Jost,sans-serif" font-size="10" font-weight="500" letter-spacing="0.20em" text-anchor="middle" fill="#5B8DD9">GOOGLE OAUTH 2.0 — desktop loopback · DPAPI token storage</text>
+        </svg>
+      </section>
+    </div>
+
+    <div class="aurora-divider" role="presentation"></div>
+
+    <!-- ── BUILT WITH ── -->
+    <div class="page-wrap">
+      <section class="content-section content-section-mid" aria-labelledby="stack-heading">
+        <h2 class="section-label" id="stack-heading">Built with</h2>
+        <div class="stack-row">
+          <span class="stack-chip">Electron 43</span>
+          <span class="stack-chip">Node.js 24</span>
+          <span class="stack-chip">electron-forge</span>
+          <span class="stack-chip">Groq Whisper</span>
+          <span class="stack-chip">Groq Llama 3.3 70B</span>
+          <span class="stack-chip">Google Drive API v3</span>
+          <span class="stack-chip">Google Docs API v1</span>
+          <span class="stack-chip">Google Calendar API v3</span>
+          <span class="stack-chip">Google OAuth 2.0</span>
+          <span class="stack-chip">ClickUp API v2</span>
+          <span class="stack-chip">VB-Audio Cable</span>
+          <span class="stack-chip">DPAPI (safeStorage)</span>
+          <span class="stack-chip">webpack</span>
+          <span class="stack-chip">Sentry</span>
+        </div>
+      </section>
+    </div>
+
+    <div class="aurora-divider" role="presentation"></div>
+
+    <!-- ── PMI RECORD ── -->
+    <div class="page-wrap">
+      <section class="content-section" aria-labelledby="pmi-heading">
+        <h2 class="section-label" id="pmi-heading">Project record</h2>
+        <div class="pmi-card">
+          <div class="pmi-row"><span class="pmi-label">Project</span><span class="pmi-value">Northlight Meetings — AI Call Recording &amp; Automatic Filing</span></div>
+          <div class="pmi-row"><span class="pmi-label">Role</span><span class="pmi-value">Designer, Developer, and Product Owner (solo)</span></div>
+          <div class="pmi-row"><span class="pmi-label">Platform</span><span class="pmi-value">Windows desktop (Electron) — packaged as Squirrel Windows installer</span></div>
+          <div class="pmi-row"><span class="pmi-label">Methodology</span><span class="pmi-value">Agile — 4 phases across 4 days (July 2–5, 2026)</span></div>
+          <div class="pmi-row"><span class="pmi-label">Scope</span><span class="pmi-value">Windows desktop app that records dual-channel audio (mic + system), transcribes via Groq Whisper, and runs LLM analysis to extract structured outputs. Pushes to Google Drive (template-filled doc), ClickUp (client task list), and Google Calendar (extracted date events). OAuth 2.0 desktop loopback with DPAPI token encryption. First-launch onboarding banner. Privacy policy published.</span></div>
+          <div class="pmi-row"><span class="pmi-label">Outcome</span><span class="pmi-value">Full-featured call recorder with 4-platform integration — built and packaged in under a week. Replaces manual note-taking and post-call admin. Dual-channel audio capture works simultaneously, solving the core technical challenge. AI analysis cost per call under $0.04. GCP OAuth verification submitted July 2026.</span></div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <section style="background: var(--surface-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 40px 64px; position: relative; overflow: hidden;" aria-label="Aurora Brief newsletter signup">
+    <div style="position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);"></div>
+    <div style="max-width: 960px; margin: 0 auto; display: flex; align-items: center; gap: 56px;">
+      <div style="flex: 1.4;">
+        <div style="font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 10px; background: linear-gradient(90deg, #4FC3C8, #8B6FD4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: inline-block;">Aurora Brief</div>
+        <div style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 20px; color: var(--text); margin-bottom: 6px; letter-spacing: 0.01em;">Stay in the Loop with Northlight</div>
+        <div style="font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--muted); line-height: 1.6;">Clear thinking. Real results. Strategy insights, operations learnings, and early access to Vault — delivered monthly.</div>
+      </div>
+      <form action="https://app.kit.com/forms/9467797/subscriptions" method="post" style="display: flex; flex-direction: column; gap: 10px; flex: 1; min-width: 260px;">
+        <input type="hidden" name="redirect_to" value="https://bynorthlight.ca/subscription-confirmed.html" />
+        <div style="display: flex; gap: 8px;">
+          <input type="text" name="fields[first_name]" placeholder="First name" style="max-width: 110px; flex: 1; background: var(--midnight); border: 1px solid var(--border-2); border-radius: 8px; padding: 11px 14px; font-size: 14px; color: var(--cloud); font-family: 'Outfit', sans-serif; outline: none;" />
+          <input type="email" name="email_address" placeholder="Email address" required style="flex: 1; background: var(--midnight); border: 1px solid var(--border-2); border-radius: 8px; padding: 11px 14px; font-size: 14px; color: var(--cloud); font-family: 'Outfit', sans-serif; outline: none;" />
+        </div>
+        <button type="submit" style="background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 50%, #8B6FD4 100%); border: none; border-radius: 8px; padding: 11px 24px; font-size: 13px; font-weight: 600; color: #fff; cursor: pointer; font-family: 'Jost', sans-serif; letter-spacing: 0.06em; text-transform: uppercase;">Subscribe →</button>
+        <div style="font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--structural); line-height: 1.5;">By subscribing you agree to our <a href="/northlight-privacy.html" style="color: var(--muted); text-decoration: underline;">privacy policy</a>. Unsubscribe at any time. We never share your information.</div>
+      </form>
+    </div>
+  </section>
+
+  <div class="footer-border">
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-left">
+          <p class="footer-copy">© 2026 Northlight Advisory Services</p>
+          <p class="footer-powered"><img src="/northlight-os-icon.svg" alt="" class="footer-os-icon" width="36" height="36"><span>Powered by <a href="/case-studies/northlight-os.html">Northlight OS</a></span></p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <div class="footer-right">
+            <ul class="footer-links">
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/vault.html">Northlight Vault</a></li>
+              <li><a href="/case-studies/">Case Studies</a></li>
+              <li><a href="/blog/">Blog</a></li>
+              <li><a href="/northlight-privacy.html">Privacy Policy</a></li>
+              <li><a href="/meetings-privacy.html">Meetings Privacy</a></li>
+              <li><a href="https://aurora-brief.kit.com/110f173cf7" target="_blank" rel="noopener">Aurora Brief</a></li>
+            </ul>
+            <ul class="footer-social">
+              <li>
+                <a href="https://www.linkedin.com/company/bynorthlight" aria-label="Northlight on LinkedIn" target="_blank" rel="noopener">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="https://www.threads.com/@northlightcomms" aria-label="Northlight on Threads" target="_blank" rel="noopener">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.312-.883-2.371-.887h-.018c-.87 0-1.952.26-2.716 1.294l-1.694-1.252c1.083-1.464 2.715-2.193 4.41-2.193h.023c3.016.016 4.877 1.913 5.115 5.19.238.071.471.15.698.234 1.947.713 3.008 2.163 3.225 4.225.179 1.702-.198 4.403-2.628 6.797-1.82 1.79-4.133 2.684-6.835 2.706l-.034.001z"/></svg>
+                  Threads
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>
