@@ -317,9 +317,10 @@
       <section class="meetings-hero" aria-labelledby="hero-title">
         <img src="/northlight-meetings-icon-512x512.png" alt="Northlight Meetings icon" class="hero-meetings-icon" width="100" height="100">
         <p class="hero-eyebrow">Case Study &nbsp;·&nbsp; Built &amp; operated by Elizabeth Lemoine</p>
-        <h1 class="hero-title" id="hero-title">Every call.<br><span>Captured and filed.</span></h1>
+        <h1 class="hero-title" id="hero-title">Northlight Meetings</h1>
         <p class="hero-subtitle">
-          Northlight Meetings is a Windows desktop app that records client calls, transcribes them with Groq Whisper, and uses Llama to extract meeting notes, action items, and key dates — then pushes everything automatically to Google Drive, ClickUp, and Google Calendar.
+          Discovery call to client-ready proposal — automatically.<br>
+          Record a scoping conversation. Groq extracts scope, deliverables, timelines, and budget from the transcript. A formatted proposal lands in your Google Drive before you've closed the call window. Then handles your regular client check-ins the same way — transcription, task filing, calendar sync, all automatic.
         </p>
         <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
           <span class="status-pill">
@@ -335,20 +336,20 @@
     <div class="page-wrap" style="padding-bottom:56px;">
       <div class="stats-row">
         <div class="stat-block">
-          <span class="stat-value">2</span>
-          <span class="stat-label">Recording modes</span>
+          <span class="stat-value">~$0.03</span>
+          <span class="stat-label">Per call (AI cost)</span>
+        </div>
+        <div class="stat-block">
+          <span class="stat-value">10 min</span>
+          <span class="stat-label">Discovery → proposal</span>
         </div>
         <div class="stat-block">
           <span class="stat-value">4</span>
           <span class="stat-label">Integrated platforms</span>
         </div>
         <div class="stat-block">
-          <span class="stat-value">3</span>
-          <span class="stat-label">Automatic outputs</span>
-        </div>
-        <div class="stat-block">
-          <span class="stat-value">~$0.03</span>
-          <span class="stat-label">Per call (AI cost)</span>
+          <span class="stat-value">4 days</span>
+          <span class="stat-label">Full build time</span>
         </div>
       </div>
     </div>
@@ -360,8 +361,8 @@
       <section class="content-section" aria-labelledby="problem-heading">
         <h2 class="section-label" id="problem-heading">The problem</h2>
         <div class="problem-card">
-          <p>Client calls are where the work actually happens — but the output is invisible. Notes are scribbled and lost. Action items get forgotten. Dates discussed in calls never make it to the calendar. The time between a call ending and a clean set of notes appearing in Drive could be an hour — or never.</p>
-          <p>Off-the-shelf transcription tools produce walls of text, not structured outputs. And none of them push to ClickUp, Drive, and Calendar in one step. <strong>Northlight Meetings does all of it automatically, the moment the call ends.</strong></p>
+          <p>A 45-minute discovery call turns into 90 minutes of proposal writing. You're reconstructing scope from notes, filling in timelines from memory, formatting deliverables from scratch — all before the client has lost interest in the conversation you just had.</p>
+          <p>Meetings collapses that into 10 minutes of review. <strong>The app records the call, extracts what the client said, and populates the proposal template automatically.</strong> For standing client calls, the same pipeline files notes, tasks, and calendar events without you touching a keyboard.</p>
         </div>
       </section>
     </div>
@@ -374,137 +375,12 @@
         <h2 class="section-label" id="workflows-heading">Key workflows</h2>
         <div class="workflow-grid">
 
-          <div class="workflow-card">
-            <div class="workflow-card-header">
-              <p class="workflow-number">01</p>
-              <h3 class="workflow-title">Record the Call</h3>
-              <p class="workflow-desc">Captures both sides of a call simultaneously — your microphone and the system audio (via VB-Audio Cable) — with a single button. Supports two modes: Client Meeting and Proposal, each using a different output template.</p>
-            </div>
-            <div class="workflow-mockup" aria-label="Mock recording screen">
-              <div class="mock-card">
-                <div class="mock-row">
-                  <span class="mock-badge badge-live">● Recording</span>
-                  <span class="mock-meta" style="margin-left:auto;">Client Meeting</span>
-                </div>
-                <div class="mock-timer">12:43</div>
-                <div class="mock-waveform" aria-hidden="true">
-                  <div class="mock-bar mock-bar-active" style="height:10px;"></div>
-                  <div class="mock-bar mock-bar-active" style="height:18px;"></div>
-                  <div class="mock-bar mock-bar-active" style="height:24px;"></div>
-                  <div class="mock-bar mock-bar-active" style="height:16px;"></div>
-                  <div class="mock-bar mock-bar-active" style="height:20px;"></div>
-                  <div class="mock-bar mock-bar-active" style="height:14px;"></div>
-                  <div class="mock-bar" style="height:22px;"></div>
-                  <div class="mock-bar" style="height:12px;"></div>
-                  <div class="mock-bar" style="height:18px;"></div>
-                  <div class="mock-bar" style="height:8px;"></div>
-                  <div class="mock-bar" style="height:16px;"></div>
-                  <div class="mock-bar" style="height:20px;"></div>
-                </div>
-                <div class="mock-source-row">
-                  <span class="mock-source mock-source-mic">● Mic</span>
-                  <span class="mock-source mock-source-system">● System audio</span>
-                </div>
-              </div>
-              <div class="mock-card">
-                <div class="mock-row"><span class="mock-meta">Stop → transcribe automatically</span></div>
-                <div class="mock-actions">
-                  <span class="mock-btn mock-btn-muted">■ Stop &amp; Transcribe</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="workflow-card">
-            <div class="workflow-card-header">
-              <p class="workflow-number">02</p>
-              <h3 class="workflow-title">Transcribe &amp; Analyse</h3>
-              <p class="workflow-desc">After stopping, Groq Whisper transcribes the full recording in seconds. Groq Llama then runs analysis — extracting structured meeting notes, action items, and key dates from the raw transcript.</p>
-            </div>
-            <div class="workflow-mockup" aria-label="Mock transcript and analysis output">
-              <div class="mock-card">
-                <div class="mock-row">
-                  <span class="mock-badge badge-ai">Whisper</span>
-                  <span class="mock-badge badge-done">Transcribed</span>
-                </div>
-                <div class="mock-transcript-line"><span>0:12</span>Let's start with the Q3 scope — I want to make sure we're aligned before we go further.</div>
-                <div class="mock-transcript-line"><span>0:28</span>Agreed. The deliverable by end of month is the integration brief.</div>
-              </div>
-              <div class="mock-card">
-                <div class="mock-row">
-                  <span class="mock-badge badge-ai">Llama</span>
-                  <span class="mock-badge badge-done">Analysed</span>
-                </div>
-                <div class="mock-section-label">Action items</div>
-                <div class="mock-action-item"><div class="mock-action-dot"></div><div class="mock-action-text">Deliver integration brief by July 31</div></div>
-                <div class="mock-action-item"><div class="mock-action-dot"></div><div class="mock-action-text">Send revised scope doc by end of week</div></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="workflow-card">
-            <div class="workflow-card-header">
-              <p class="workflow-number">03</p>
-              <h3 class="workflow-title">Push to Google Drive</h3>
-              <p class="workflow-desc">Review the analysis, then push with one click. Meetings creates a formatted Google Doc from the appropriate template — replacing placeholders with real content from the session — and saves it to the designated Drive folder.</p>
-            </div>
-            <div class="workflow-mockup" aria-label="Mock Drive push confirmation">
-              <div class="mock-card">
-                <div class="mock-row">
-                  <span class="mock-badge badge-drive">Drive</span>
-                  <span class="mock-meta" style="margin-left:auto;">Meeting Notes template</span>
-                </div>
-                <div class="mock-title" style="margin-bottom:6px;">Horizon Advisory — Q3 Scope Call · July 5</div>
-                <div class="mock-meta" style="margin-bottom:8px;">Created from template · saved to /Meetings/2026/</div>
-                <div class="mock-actions">
-                  <span class="mock-btn mock-btn-primary">↗ Open in Drive</span>
-                </div>
-              </div>
-              <div class="mock-card">
-                <div class="mock-meta">Template placeholders replaced with session content — headings, notes, action items, and date all filled in automatically.</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="workflow-card">
-            <div class="workflow-card-header">
-              <p class="workflow-number">04</p>
-              <h3 class="workflow-title">Push to ClickUp &amp; Calendar</h3>
-              <p class="workflow-desc">Action items become tasks in the client ClickUp list. Extracted dates become Google Calendar events. All three outputs are pushed in a single approved action — Drive, ClickUp, and Calendar together.</p>
-            </div>
-            <div class="workflow-mockup" aria-label="Mock push results showing all three destinations">
-              <div class="mock-push-row">
-                <div class="mock-push-icon" style="background:rgba(79,195,200,0.12);">📄</div>
-                <div class="mock-push-detail">
-                  <div class="mock-push-name">Google Drive</div>
-                  <div class="mock-push-sub">Meeting notes doc created</div>
-                </div>
-                <div class="mock-check">✓</div>
-              </div>
-              <div class="mock-push-row">
-                <div class="mock-push-icon" style="background:rgba(139,111,212,0.12);">✓</div>
-                <div class="mock-push-detail">
-                  <div class="mock-push-name">ClickUp</div>
-                  <div class="mock-push-sub">2 tasks added to client list</div>
-                </div>
-                <div class="mock-check">✓</div>
-              </div>
-              <div class="mock-push-row">
-                <div class="mock-push-icon" style="background:rgba(91,141,217,0.12);">📅</div>
-                <div class="mock-push-detail">
-                  <div class="mock-push-name">Google Calendar</div>
-                  <div class="mock-push-sub">1 event added · July 31</div>
-                </div>
-                <div class="mock-check">✓</div>
-              </div>
-            </div>
-          </div>
-
+          <!-- 01 — Proposal Mode (the lead differentiator, full width) -->
           <div class="workflow-card" style="grid-column: 1 / -1;">
             <div class="workflow-card-header">
-              <p class="workflow-number">05 &nbsp;·&nbsp; The differentiator</p>
+              <p class="workflow-number">01 &nbsp;·&nbsp; The differentiator</p>
               <h3 class="workflow-title">Discovery Call → Client Proposal</h3>
-              <p class="workflow-desc">Record a discovery or scoping call in Proposal mode. The AI extracts scope, deliverables, timelines, and key points from the conversation — then populates the proposal template directly. A formatted, client-ready Google Doc lands in Drive before you've closed the call window. No other transcription tool does this.</p>
+              <p class="workflow-desc">Record a discovery or scoping call in Proposal mode. Groq Whisper transcribes both sides of the conversation. Groq Llama extracts scope, deliverables, timelines, budget signals, and key constraints — then populates the proposal template directly in Google Drive. A formatted, client-ready proposal lands in Drive before you've closed the call window. No other transcription tool does this.</p>
             </div>
             <div class="workflow-mockup" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;" aria-label="Mock proposal generation flow">
               <div>
@@ -543,6 +419,92 @@
                     <span class="mock-btn mock-btn-primary">↗ Open proposal in Drive</span>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 02 — Client Meeting Mode -->
+          <div class="workflow-card">
+            <div class="workflow-card-header">
+              <p class="workflow-number">02</p>
+              <h3 class="workflow-title">Record &amp; Transcribe</h3>
+              <p class="workflow-desc">For standing client calls, select Client Meeting mode. Captures both sides simultaneously — your microphone and the remote participant's audio via VB-Audio Cable. Groq Whisper transcribes the full conversation in seconds after you stop.</p>
+            </div>
+            <div class="workflow-mockup" aria-label="Mock recording screen">
+              <div class="mock-card">
+                <div class="mock-row">
+                  <span class="mock-badge badge-live">● Recording</span>
+                  <span class="mock-meta" style="margin-left:auto;">Client Meeting</span>
+                </div>
+                <div class="mock-timer">12:43</div>
+                <div class="mock-waveform" aria-hidden="true">
+                  <div class="mock-bar mock-bar-active" style="height:10px;"></div>
+                  <div class="mock-bar mock-bar-active" style="height:18px;"></div>
+                  <div class="mock-bar mock-bar-active" style="height:24px;"></div>
+                  <div class="mock-bar mock-bar-active" style="height:16px;"></div>
+                  <div class="mock-bar mock-bar-active" style="height:20px;"></div>
+                  <div class="mock-bar mock-bar-active" style="height:14px;"></div>
+                  <div class="mock-bar" style="height:22px;"></div>
+                  <div class="mock-bar" style="height:12px;"></div>
+                  <div class="mock-bar" style="height:18px;"></div>
+                  <div class="mock-bar" style="height:8px;"></div>
+                </div>
+                <div class="mock-source-row">
+                  <span class="mock-source mock-source-mic">● Mic</span>
+                  <span class="mock-source mock-source-system">● System audio</span>
+                </div>
+              </div>
+              <div class="mock-card">
+                <div class="mock-row">
+                  <span class="mock-badge badge-ai">Whisper</span>
+                  <span class="mock-badge badge-done">Transcribed</span>
+                </div>
+                <div class="mock-transcript-line"><span>0:12</span>Let's start with the Q3 scope — I want to make sure we're aligned.</div>
+                <div class="mock-transcript-line"><span>0:28</span>Agreed. The deliverable by end of month is the integration brief.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 03 — Analyse & File -->
+          <div class="workflow-card">
+            <div class="workflow-card-header">
+              <p class="workflow-number">03</p>
+              <h3 class="workflow-title">Analyse, Review &amp; File</h3>
+              <p class="workflow-desc">Groq Llama extracts structured meeting notes, action items, and key dates. Review the output, approve or edit items, then push with one click — Drive doc from template, ClickUp tasks from action items, Calendar events from extracted dates. All three in one action.</p>
+            </div>
+            <div class="workflow-mockup" aria-label="Mock analysis and push results">
+              <div class="mock-card">
+                <div class="mock-row">
+                  <span class="mock-badge badge-ai">Llama</span>
+                  <span class="mock-badge badge-done">Analysed</span>
+                </div>
+                <div class="mock-section-label">Action items</div>
+                <div class="mock-action-item"><div class="mock-action-dot"></div><div class="mock-action-text">Deliver integration brief by July 31</div></div>
+                <div class="mock-action-item"><div class="mock-action-dot"></div><div class="mock-action-text">Send revised scope doc by end of week</div></div>
+              </div>
+              <div class="mock-push-row">
+                <div class="mock-push-icon" style="background:rgba(79,195,200,0.12);">📄</div>
+                <div class="mock-push-detail">
+                  <div class="mock-push-name">Google Drive</div>
+                  <div class="mock-push-sub">Meeting notes doc created</div>
+                </div>
+                <div class="mock-check">✓</div>
+              </div>
+              <div class="mock-push-row">
+                <div class="mock-push-icon" style="background:rgba(139,111,212,0.12);">✓</div>
+                <div class="mock-push-detail">
+                  <div class="mock-push-name">ClickUp</div>
+                  <div class="mock-push-sub">2 tasks added to client list</div>
+                </div>
+                <div class="mock-check">✓</div>
+              </div>
+              <div class="mock-push-row">
+                <div class="mock-push-icon" style="background:rgba(91,141,217,0.12);">📅</div>
+                <div class="mock-push-detail">
+                  <div class="mock-push-name">Google Calendar</div>
+                  <div class="mock-push-sub">1 event added · July 31</div>
+                </div>
+                <div class="mock-check">✓</div>
               </div>
             </div>
           </div>
