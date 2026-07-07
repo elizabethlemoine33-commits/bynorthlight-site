@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Who We Help — Northlight</title>
-<meta name="description" content="Three kinds of founders and leaders Northlight works with. Find the one that sounds like you, then run a free 5-minute diagnostic on what's actually stuck.">
+<title>Who We Help — Northlight Advisory Services</title>
+<meta name="description" content="Northlight Advisory Services works with founders and operations leaders at small and mid-sized Canadian organisations. Find which situation sounds like yours, then run a free 5-minute diagnostic.">
 <link rel="canonical" href="https://bynorthlight.ca/who-we-help.html">
-<meta property="og:title" content="Who We Help — Northlight">
-<meta property="og:description" content="Three kinds of founders and leaders Northlight works with. Find the one that sounds like you, then run a free 5-minute diagnostic on what's actually stuck.">
+<meta property="og:title" content="Who We Help — Northlight Advisory Services">
+<meta property="og:description" content="Northlight Advisory Services works with founders and operations leaders at small and mid-sized Canadian organisations. Find which situation sounds like yours, then run a free 5-minute diagnostic.">
 <meta property="og:image" content="https://bynorthlight.ca/northlight-og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:url" content="https://bynorthlight.ca/who-we-help.html">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Northlight">
+<meta property="og:site_name" content="Northlight Advisory Services">
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -23,12 +23,12 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Who We Help — Northlight",
-  "description": "Three kinds of founders and leaders Northlight works with. Find the one that sounds like you, then run a free 5-minute diagnostic on what's actually stuck.",
+  "name": "Who We Help — Northlight Advisory Services",
+  "description": "Northlight Advisory Services works with founders and operations leaders at small and mid-sized Canadian organisations. Find which situation sounds like yours, then run a free 5-minute diagnostic.",
   "url": "https://bynorthlight.ca/who-we-help.html",
   "isPartOf": {
     "@type": "WebSite",
-    "name": "Northlight",
+    "name": "Northlight Advisory Services",
     "url": "https://bynorthlight.ca"
   },
   "dateModified": "2026-06-24T00:00:00Z"
@@ -134,6 +134,33 @@
   .hero-sub {
     font-family: 'Outfit', sans-serif; font-size: 16px; color: var(--haze);
     max-width: 620px;
+  }
+
+  /* ── AT A GLANCE ── */
+  .glance-panel {
+    background: var(--surface-2); border-left: 4px solid var(--glacial);
+    border-radius: 0 8px 8px 0; padding: 18px 22px; margin: 32px 0 40px;
+    max-width: 680px;
+  }
+  .glance-label {
+    font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 700;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    background: linear-gradient(90deg, #4FC3C8, #5B8DD9);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    margin-bottom: 10px;
+  }
+  .glance-panel ul { list-style: none; padding: 0; }
+  .glance-panel li {
+    font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--cloud);
+    padding: 4px 0 4px 14px; position: relative; line-height: 1.5;
+  }
+  .glance-panel li::before {
+    content: '·'; position: absolute; left: 0; color: var(--glacial);
+  }
+  .content-capsule {
+    font-family: 'Outfit', sans-serif; font-size: 15px; color: var(--haze);
+    max-width: 660px; margin: 20px 0 0; line-height: 1.65;
+    border-top: 1px solid var(--border); padding-top: 20px;
   }
 
   /* ── PERSONA SELECTOR ── */
@@ -397,6 +424,19 @@
       <p class="hero-sub">Pick the one that sounds the most like your week. Each one opens into how Northlight actually helps — two come with a free, 5-minute diagnostic you can run right now.</p>
     </section>
 
+    <!-- ── AT A GLANCE ── -->
+    <div class="glance-panel">
+      <p class="glance-label">At a Glance</p>
+      <ul>
+        <li>Northlight Advisory Services works with founders and operations leaders at small and mid-sized Canadian organisations, typically under 50 people.</li>
+        <li>Based in Halifax, Nova Scotia — Elizabeth Lemoine brings hands-on experience inside organisations, not just advisory distance from them.</li>
+        <li>Three engagement patterns: fractional leadership, focused decision sprints, and strategy engagements — each matched to a specific situation.</li>
+        <li>To start a conversation: <a href="https://calendar.app.google/b1najmMeWbBeLYkF6" rel="noopener" style="color:var(--glacial);">book a free clarity call</a> or email <a href="mailto:elizabeth@bynorthlight.ca" style="color:var(--glacial);">elizabeth@bynorthlight.ca</a></li>
+      </ul>
+    </div>
+
+    <p class="content-capsule">Northlight Advisory Services helps founders and operations leaders at small and mid-sized Canadian organisations cut through the noise — clearing the decisions, systems, and blockers that slow down what's actually ready to move.</p>
+
     <!-- ── PERSONA SELECTOR ── -->
     <div class="persona-selector" id="persona-selector" role="tablist" aria-label="Choose who you are">
       <button class="persona-card" id="card-alone-at-the-top" role="tab" aria-selected="false" aria-controls="alone-at-the-top" onclick="selectPersona('alone-at-the-top')">
@@ -421,9 +461,9 @@
         <div class="persona-inner">
           <p class="persona-kicker">For the founder without a trusted team</p>
           <div class="persona-body">
-            <h3>How Northlight helps</h3>
+            <h3>How Northlight Advisory Services helps</h3>
             <p>I've sat in the rooms where this happens — where founders manage the appearance of control because the alternative felt riskier than the mess itself.</p>
-            <p>I'm Elizabeth Lemoine. I've spent years inside organisations untangling exactly this: too many things moving, no one trusted yet to move them. I've built the systems myself, not just advised on them — which means I know the difference between a plan that looks good in a deck and one that actually survives contact with a Tuesday.</p>
+            <p>I'm <a href="/about.html" style="color:var(--glacial);">Elizabeth Lemoine</a>. I've spent years inside organisations untangling exactly this: too many things moving, no one trusted yet to move them. I've built the systems myself, not just advised on them — which means I know the difference between a plan that looks good in a deck and one that actually survives contact with a Tuesday.</p>
 
             <h3>What this looks like</h3>
             <ol>
@@ -467,9 +507,9 @@
         <div class="persona-inner">
           <p class="persona-kicker">For the leader with a team around them</p>
           <div class="persona-body">
-            <h3>How Northlight helps</h3>
+            <h3>How Northlight Advisory Services helps</h3>
             <p>You don't need someone to make the call for you. You need someone willing to say it out loud — the thing the room already half-knows — so you don't have to carry "dictator" for doing what nobody else would.</p>
-            <p>I'm Elizabeth Lemoine. I've sat in the rooms where a team has all the information and none of the will to act on it — and I've watched what happens when someone finally just says: this is the call. I'm not here to run a workshop you'll forget. I'm here to make the decision happen, then build the structure so the next one doesn't take three weeks either.</p>
+            <p>I'm <a href="/about.html" style="color:var(--glacial);">Elizabeth Lemoine</a>. I've sat in the rooms where a team has all the information and none of the will to act on it — and I've watched what happens when someone finally just says: this is the call. I'm not here to run a workshop you'll forget. I'm here to make the decision happen, then build the structure so the next one doesn't take three weeks either.</p>
 
             <h3>What this looks like</h3>
             <ol>
@@ -513,9 +553,9 @@
         <div class="persona-inner">
           <p class="persona-kicker">For the self-sufficient founder who needs a sounding board</p>
           <div class="persona-body">
-            <h3>How Northlight helps</h3>
+            <h3>How Northlight Advisory Services helps</h3>
             <p>I get it — you don't want someone to take the wheel. You want someone sharp enough to tell you when the price is too low, or when "I need more information" is really just you putting off a decision you've already made.</p>
-            <p>I'm Elizabeth Lemoine. I've built things myself, made the underpriced-quote mistake myself, and learned the same way you're learning — the hard way, alone, until someone finally said the thing out loud. I'm not interested in running your business. I'm interested in being the person who pushes back before the decision ships, not after.</p>
+            <p>I'm <a href="/about.html" style="color:var(--glacial);">Elizabeth Lemoine</a>. I've built things myself, made the underpriced-quote mistake myself, and learned the same way you're learning — the hard way, alone, until someone finally said the thing out loud. I'm not interested in running your business. I'm interested in being the person who pushes back before the decision ships, not after.</p>
 
             <h3>What this looks like</h3>
             <ol>
