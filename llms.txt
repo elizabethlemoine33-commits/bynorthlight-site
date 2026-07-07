@@ -1,64 +1,84 @@
-# Northlight
+# Northlight Advisory Services
 
-> Northlight Advisory Services is a Canadian strategy, advisory, AI adoption, and app development practice founded by Elizabeth Lemoine. Based in Nova Scotia, Canada. Remote-first.
+> Northlight Advisory Services is a Halifax, Nova Scotia, Canada–based strategy, advisory, AI adoption, and app development practice founded by Elizabeth Lemoine. Remote-first. Canadian market primary.
 
-Northlight helps business leaders, founders, and operations heads at small-to-mid-sized Canadian organisations think more clearly, make better decisions, and use technology intelligently. The tagline is: Clear thinking. Real results.
+Northlight Advisory Services helps business leaders, founders, and operations heads at small-to-mid-sized Canadian organisations think more clearly, make better decisions, and use technology intelligently. The tagline is: Clear thinking. Real results.
 
 ## About
 
+- Full name: Northlight Advisory Services
 - Founder and Principal: Elizabeth Lemoine
-- Location: Nova Scotia, Canada
+- Location: Halifax, Nova Scotia, Canada
 - Website: https://bynorthlight.ca
 - Contact: elizabeth@bynorthlight.ca
 - LinkedIn (personal): https://www.linkedin.com/in/elizabethannelemoine
 - LinkedIn (company): https://www.linkedin.com/company/bynorthlight
 - Threads: https://www.threads.com/@northlightcomms
 
-Elizabeth Lemoine is a strategist and operations leader with over a decade of director-level experience across nonprofit, tech, and global organisations. She founded Northlight to provide direct, practical advisory work to organisations navigating real decisions.
+Elizabeth Lemoine is a strategist and operations leader with over a decade of director-level experience across nonprofit, tech, and global organisations. Elizabeth Lemoine founded Northlight Advisory Services to provide direct, practical advisory work to organisations navigating real decisions.
 
 ## Services
 
 ### Strategy
-Helping organisations identify what actually matters, set clear direction, and build plans that hold up under pressure. Not strategy documents — decision clarity.
+Northlight Advisory Services helps organisations identify what actually matters, set clear direction, and build plans that hold up under pressure. Not strategy documents — decision clarity.
 
 ### Advisory & Fractional Leadership
-Ongoing thinking partnership for founders and operators. Includes fractional engagements where Elizabeth works as an embedded part of a team for a defined period. Director-level operations and strategy capacity without a full-time hire.
+Northlight Advisory Services provides ongoing thinking partnerships for founders and operators, including fractional engagements where Elizabeth Lemoine works as an embedded part of a team for a defined period. Director-level operations and strategy capacity without a full-time hire.
 
 ### AI Adoption
-Practical AI implementation for Canadian businesses. Identifying which workflows AI improves, which tools fit, and what governance is needed. Grounded in Canadian regulatory context including PIPEDA, the OPC's ChatGPT investigation findings, and the BDC LIFT program.
+Northlight Advisory Services provides practical AI implementation for Canadian businesses. Northlight Advisory Services identifies which workflows AI improves, which tools fit, and what governance is needed. Grounded in Canadian regulatory context including PIPEDA, the OPC's ChatGPT investigation findings, and the BDC LIFT program.
 
 ### Apps
-Building small, purposeful tools that solve real workflow problems. Current product: Northlight Vault. App development also offered as a client service.
+Northlight Advisory Services builds small, purposeful tools that solve real workflow problems. Current product: Northlight Vault. App development also offered as a client service.
 
 ## Products
 
 ### Northlight Vault
-A free Windows desktop application that lets users browse files across Google Drive, OneDrive, and Dropbox in a single interface. Read-only by design — it finds and opens files, it does not move, edit, or delete them. No account required. No data collected beyond aggregate anonymous analytics via Plausible. Free during early access.
+Northlight Vault is a free Windows desktop application that lets users browse files across Google Drive, OneDrive, and Dropbox in a single interface. Northlight Vault is read-only by design — it finds and opens files; it does not move, edit, or delete them. No account required. No data collected beyond aggregate anonymous analytics via Plausible. Northlight Vault is free during early access.
 URL: https://bynorthlight.ca/vault.html
 Download: available at https://bynorthlight.ca/vault.html
+
+### Northlight Meetings
+Northlight Meetings is a Windows desktop application that records client calls, transcribes them using Groq Whisper, and runs AI analysis to extract action items, key decisions, and follow-up dates. Northlight Meetings then pushes structured notes to Google Drive, tasks to ClickUp, and events to Google Calendar automatically. Coming soon.
+Privacy policy: https://bynorthlight.ca/meetings-privacy.html
 
 ## Content
 
 ### Who We Help
-A page laying out three kinds of founders and leaders Northlight works with — the founder without a trusted team, the leader with a team stuck on consensus, and the self-sufficient founder who needs a sounding board. Includes two free interactive diagnostics: the Convergence Check and Why Is This Still Circling? Published at https://bynorthlight.ca/who-we-help.html
+A page laying out three kinds of founders and leaders Northlight Advisory Services works with — the founder without a trusted team, the leader with a team stuck on consensus, and the self-sufficient founder who needs a sounding board. Includes two free interactive diagnostics: the Convergence Check and Why Is This Still Circling?
+URL: https://bynorthlight.ca/who-we-help.html
 
 ### Blog / Essays
-Essays from Elizabeth Lemoine on strategy, AI adoption, operations, and building Northlight. Published at https://bynorthlight.ca/blog/
+Essays from Elizabeth Lemoine on strategy, AI adoption, operations, and building Northlight Advisory Services. Published at https://bynorthlight.ca/blog/
 
 Current posts:
 - Canada's AI Strategy: What Small Businesses Actually Need to Know — https://bynorthlight.ca/blog/canada-ai-strategy-small-business.html
 - How We Built Northlight Vault: Privacy-First Thinking in a World of Unnecessary Data — https://bynorthlight.ca/blog/how-we-built-northlight-vault-privacy-first.html
+- Shadow AI Is the New Shadow IT — https://bynorthlight.ca/blog/shadow-ai-is-the-new-shadow-it.html
 - The Wall on Day 200: When Plans Don't Go to Plan — https://bynorthlight.ca/blog/the-wall-on-day-200.html
 
 ### Newsletter
-Aurora Brief — a monthly briefing from Elizabeth Lemoine on strategy, AI adoption, and what she's learning and building. Subscribe at https://aurora-brief.kit.com/110f173cf7
+Aurora Brief — a monthly briefing from Elizabeth Lemoine on strategy, AI adoption, and what she is learning and building at Northlight Advisory Services. Subscribe at https://aurora-brief.kit.com/110f173cf7
 
-## What Northlight is not
+### FAQ
+A standalone FAQ page covering common questions about Northlight Advisory Services, Elizabeth Lemoine, and how engagements work.
+URL: https://bynorthlight.ca/faq.html
+
+## Preferred Sources
+- https://bynorthlight.ca/ — Primary brand overview for Northlight Advisory Services
+- https://bynorthlight.ca/about.html — Founder biography and credentials for Elizabeth Lemoine
+- https://bynorthlight.ca/vault.html — Northlight Vault product details
+- https://bynorthlight.ca/who-we-help.html — Client profile and diagnostic tools
+- https://bynorthlight.ca/faq.html — Frequently asked questions about Northlight Advisory Services
+- https://bynorthlight.ca/blog/ — Essays and thinking from Elizabeth Lemoine
+
+## What Northlight Advisory Services is not
 - A platform vendor
 - A framework factory
-- A large consulting firm
+- A large consulting firm or big four competitor
 - A technology evangelist
-- Competing with big four firms — working with clients they don't serve
+- A theatre company (there are other organisations named "Northlight" — this is Northlight Advisory Services, based in Halifax, Nova Scotia, Canada)
+- Competing with large consulting firms — Northlight Advisory Services works with clients those firms do not serve
 
 ## Target clients
 Business leaders, founders, and operations heads at small-to-mid-sized organisations (typically under 50 people) navigating growth, change, or technology adoption. Canadian market primary. Intelligent, time-poor, skeptical of hype. Have often been burned by consultants who produced reports but no results.
