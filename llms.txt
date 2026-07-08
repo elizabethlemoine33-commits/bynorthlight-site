@@ -52,6 +52,7 @@ URL: https://bynorthlight.ca/who-we-help.html
 Essays from Elizabeth Lemoine on strategy, AI adoption, operations, and building Northlight Advisory Services. Published at https://bynorthlight.ca/blog/
 
 Current posts:
+- AI for All: Open Programmes for Nova Scotia Businesses — https://bynorthlight.ca/blog/ai-for-all-programmes-nova-scotia-businesses.html
 - Your AI Isn't Underperforming. It's Working Blind. — https://bynorthlight.ca/blog/ai-isnt-underperforming-working-blind.html
 - Your AI Strategy Is Running on the Wrong Clock — https://bynorthlight.ca/blog/ai-strategy-wrong-clock.html
 - Canada’s AI Strategy: What Small Businesses Actually Need to Know — https://bynorthlight.ca/blog/canada-ai-strategy-small-business.html
