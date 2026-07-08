@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Choose an AI Advisor Who Won't Waste Your Time — Northlight</title>
+  <meta name="description" content="Most AI consultants don't actually use AI. Here's how to find one who does — and spot the red flags that mean you should walk away.">
+  <meta name="author" content="Elizabeth Lemoine">
+  <link rel="canonical" href="https://bynorthlight.ca/blog/how-to-choose-ai-advisor-consultant.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to Choose an AI Advisor Who Won't Waste Your Time">
+  <meta property="og:description" content="Most AI consultants don't actually use AI. Here's how to find one who does — and spot the red flags that mean you should walk away.">
+  <meta property="og:url" content="https://bynorthlight.ca/blog/how-to-choose-ai-advisor-consultant.html">
+  <meta property="og:site_name" content="Northlight">
+  <meta property="article:author" content="Elizabeth Lemoine">
+  <meta property="article:published_time" content="2026-06-12T00:00:00.000Z">
+
+  <!-- Article schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Choose an AI Advisor Who Won't Waste Your Time",
+    "description": "Most AI consultants don't actually use AI. Here's how to find one who does — and spot the red flags that mean you should walk away.",
+    "datePublished": "2026-06-12",
+    "author": { "@type": "Person", "name": "Elizabeth Lemoine", "url": "https://bynorthlight.ca" },
+    "publisher": { "@type": "Organization", "name": "Northlight", "url": "https://bynorthlight.ca" },
+    "url": "https://bynorthlight.ca/blog/how-to-choose-ai-advisor-consultant.html"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --midnight:#0E0E14;--surface:#12121E;--surface-2:#10101C;
+      --border:#1E2035;--border-2:#2A2A48;
+      --text:#FFFFFF;--cloud:#C8CCE0;--haze:#B0B8D8;--muted:#8A92A8;--structural:#5A6080;
+      --glacial:#4FC3C8;--boreal:#5B8DD9;--dusk:#8B6FD4;--aurora:#C46FAA;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{background:var(--midnight);color:var(--cloud);font-family:'Outfit',sans-serif;min-height:100vh;}
+
+    .skip-nav{position:absolute;top:-100px;left:0;background:var(--dusk);color:#fff;padding:10px 20px;font-family:'Jost',sans-serif;font-size:13px;font-weight:600;letter-spacing:.06em;text-decoration:none;border-radius:0 0 6px 0;z-index:9999;transition:top .2s;}
+    .skip-nav:focus{top:0;}
+
+    /* Site header */
+    .site-header{display:flex;align-items:center;padding:18px 48px;border-bottom:1px solid var(--border);}
+    .wordmark{font-family:'Jost',sans-serif;font-weight:600;font-size:20px;letter-spacing:.08em;background:linear-gradient(105deg,#4fc3c8 0%,#5b8dd9 33%,#8b6fd4 66%,#c46faa 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;}
+    .top-bar{height:3px;background:linear-gradient(90deg,#4fc3c8 0%,#5b8dd9 30%,#8b6fd4 65%,#c46faa 100%);}
+
+    /* Four-column shell */
+    .blog-shell{display:grid;grid-template-columns:1fr min(680px,100%) 300px 1fr;min-height:calc(100vh - 60px);}
+    .blog-left-wing{grid-column:1;background:var(--midnight);position:relative;overflow:hidden;}
+    .blog-reading{grid-column:2;border-left:1px solid var(--border);border-right:1px solid var(--border);padding:52px 56px 100px;}
+    .blog-sidebar{grid-column:3;border-right:1px solid var(--border);padding:52px 0 100px 32px;position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;}
+    .blog-right-wing{grid-column:4;background:var(--midnight);position:relative;overflow:hidden;}
+
+    /* Left wing elements */
+    .left-glow{position:absolute;right:0;top:0;width:160px;height:100%;background:linear-gradient(90deg,transparent 0%,rgba(79,195,200,.03) 50%,rgba(91,141,217,.07) 100%);pointer-events:none;}
+    .aurora-rail-wrap{position:absolute;right:28px;top:52px;bottom:40px;width:3px;}
+    .aurora-rail-line{width:3px;height:100%;background:linear-gradient(180deg,#4fc3c8 0%,#5b8dd9 22%,#8b6fd4 55%,#c46faa 82%,transparent 100%);border-radius:2px;opacity:.7;}
+    .aurora-rail-dot{width:9px;height:9px;border-radius:50%;background:linear-gradient(135deg,#4fc3c8,#8b6fd4);position:absolute;top:-3px;left:-3px;box-shadow:0 0 8px rgba(79,195,200,.4);}
+    .left-label{position:absolute;right:48px;top:60px;font-family:'Jost',sans-serif;font-size:9px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:#2A2A48;writing-mode:vertical-rl;transform:rotate(180deg);user-select:none;}
+
+    /* Right wing elements */
+    .right-glow{position:absolute;left:0;top:0;width:160px;height:100%;background:linear-gradient(270deg,transparent 0%,rgba(139,111,212,.04) 60%,rgba(196,111,170,.05) 100%);pointer-events:none;}
+    .right-dots-wrap{position:absolute;top:72px;left:36px;}
+    .dot{width:3px;height:3px;border-radius:50%;background:#8B6FD4;position:absolute;opacity:.15;}
+
+    /* Reading column */
+    .post-back{font-family:'Jost',sans-serif;font-weight:500;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);text-decoration:none;display:block;margin-bottom:28px;}
+    .post-back:hover{color:var(--cloud);}
+    .source-label{font-family:'Jost',sans-serif;font-weight:500;font-size:10px;letter-spacing:.28em;text-transform:uppercase;display:block;margin-bottom:16px;}
+    .source-aurora{color:var(--dusk);}
+    .source-essay{color:var(--boreal);}
+    .post-title{font-family:'Jost',sans-serif;font-weight:600;font-size:34px;line-height:1.1;letter-spacing:.01em;color:var(--text);margin-bottom:12px;}
+    .post-date-line{font-family:'Outfit',sans-serif;font-size:13px;color:var(--muted);margin-bottom:28px;}
+    .aurora-divider{height:1px;background:linear-gradient(90deg,#4fc3c8 0%,#5b8dd9 30%,#8b6fd4 65%,#c46faa 100%);opacity:.3;margin-bottom:36px;}
+
+    /* Body copy */
+    .post-body p{font-family:'Outfit',sans-serif;font-size:16px;line-height:1.85;color:var(--cloud);margin-bottom:1.4em;}
+    .post-body h2{font-family:'Jost',sans-serif;font-weight:600;font-size:20px;letter-spacing:.03em;color:var(--glacial);margin:2em 0 .6em;}
+    .post-body h3{font-family:'Jost',sans-serif;font-weight:600;font-size:15px;letter-spacing:.04em;color:var(--aurora);margin:1.6em 0 .4em;}
+    .post-body blockquote{border-left:3px solid var(--dusk);padding-left:22px;margin:1.4em 0;font-style:italic;color:var(--haze);}
+    .post-body .callout{background:rgba(139,111,212,.08);border-left:3px solid var(--dusk);border-radius:0 6px 6px 0;padding:14px 20px;margin:1.6em 0;font-family:'Jost',sans-serif;font-size:17px;font-weight:500;color:var(--haze);line-height:1.4;}
+    .post-body ul,.post-body ol{color:var(--cloud);font-size:16px;line-height:1.8;padding-left:1.4em;margin-bottom:1.4em;}
+    .post-body strong{color:var(--text);font-weight:600;}
+
+    /* Sidebar */
+    .sidebar-label{font-family:'Jost',sans-serif;font-weight:600;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
+    .sidebar-section{margin-bottom:32px;}
+
+    /* Published card */
+    .pub-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px;text-align:center;}
+    .pub-day{font-family:'Jost',sans-serif;font-weight:600;font-size:28px;color:var(--text);line-height:1;}
+    .pub-year{font-family:'Outfit',sans-serif;font-size:13px;color:var(--muted);margin-top:2px;margin-bottom:10px;}
+    .pub-rule{border:none;border-top:1px solid var(--border);margin:10px 0;}
+    .pub-readtime{font-family:'Outfit',sans-serif;font-size:13px;color:var(--muted);}
+    .pub-readtime strong{color:var(--cloud);}
+
+    /* Aurora card */
+    .aurora-card{background:linear-gradient(150deg,rgba(79,195,200,.05) 0%,rgba(139,111,212,.08) 55%,rgba(196,111,170,.04) 100%);border:1px solid var(--border-2);border-radius:8px;padding:16px;}
+    .aurora-card p{font-family:'Outfit',sans-serif;font-size:13px;line-height:1.65;color:var(--haze);margin-bottom:10px;}
+    .aurora-card a{font-family:'Jost',sans-serif;font-weight:500;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--dusk);text-decoration:none;}
+    .aurora-card a:hover{color:var(--glacial);}
+
+    /* Topic tags */
+    .topics-wrap{display:flex;flex-wrap:wrap;gap:6px;}
+    .topic-tag{font-family:'Jost',sans-serif;font-weight:500;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:4px 10px;}
+
+    /* Footer */
+    .site-footer{grid-column:1/-1;border-top:1px solid var(--border);padding:24px 56px;display:flex;justify-content:space-between;align-items:center;}
+    .footer-copy{font-family:'Outfit',sans-serif;font-size:13px;color:var(--structural);}
+    .footer-nav{display:flex;gap:24px;}
+    .footer-link{font-family:'Jost',sans-serif;font-weight:500;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;}
+    .footer-link:hover{color:var(--cloud);}
+    .footer-link.active{color:var(--dusk);}
+
+    /* Responsive */
+    @media(max-width:1100px){
+      .blog-shell{grid-template-columns:0 1fr 260px 0;}
+      .blog-left-wing,.blog-right-wing{display:none;}
+      .blog-reading{padding:40px 40px 64px;}
+    }
+    @media(max-width:800px){
+      .site-header{padding:14px 24px;}
+      .blog-shell{grid-template-columns:1fr;}
+      .blog-sidebar{grid-column:1;border:none;border-top:1px solid var(--border);padding:32px 24px;position:static;max-height:none;}
+      .blog-reading{grid-column:1;padding:32px 24px 48px;border:none;}
+      .post-title{font-size:26px;}
+      .site-footer{grid-column:1;padding:20px 24px;flex-direction:column;gap:12px;text-align:center;}
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <header class="site-header">
+    <a href="/" class="wordmark">Northlight</a>
+  </header>
+  <div class="top-bar" role="presentation"></div>
+
+  <div class="blog-shell">
+
+    <!-- Left wing -->
+    <div class="blog-left-wing" role="presentation">
+      <div class="left-glow" role="presentation"></div>
+      <div class="aurora-rail-wrap" role="presentation">
+        <div class="aurora-rail-dot" role="presentation"></div>
+        <div class="aurora-rail-line" role="presentation"></div>
+      </div>
+      <div class="left-label" aria-hidden="true">bynorthlight.ca</div>
+    </div>
+
+    <!-- Reading column -->
+    <main class="blog-reading" id="main-content">
+      <a href="/blog/" class="post-back">← All posts</a>
+      <span class="source-label source-aurora">Aurora Brief · Essay</span>
+      <h1 class="post-title">How to Choose an AI Advisor Who Won't Waste Your Time</h1>
+      <p class="post-date-line"><time datetime="2026-06-12">June 12, 2026</time></p>
+      <div class="aurora-divider" role="presentation"></div>
+
+      <div class="post-body">
+        <h2>How to Choose an AI Advisor Who Won't Waste Your Time</h2>
+    <p>Most AI consultants I've met don't use AI. Not really. They use the word a lot. They have a deck. They have a tool to sell you. But ask them to open their laptop and show you what they used this week — actually show you — and the room gets quiet.</p>
+    <p>I'm not saying this to be provocative. I'm saying it because if you're a small business owner in Canada trying to figure out what to do about AI, you're probably being pitched by people who talk about transformation but can't name a single tool they relied on yesterday. And that matters — because the gap between what AI can actually do in your business and what you're being sold is wide enough to drive a truck through.</p>
+    <p>Here's the thing: most small businesses aren't behind on AI because they haven't bought the right tool. They're behind because the people selling them AI don't use it themselves, don't look at their operation, and don't tell them the truth about what results actually depend on.</p>
+    <p>This is a buyer's guide. Not for AI tools — for the people selling you AI advice.</p>
+    <h2>The Numbers Don't Mean What You Think They Mean</h2>
+    <p>[Statistics Canada says 12.2% of Canadian businesses use AI to produce goods or deliver services](https://www150.statcan.gc.ca/n1/pub/11-621-m/11-621-m2025008-eng.htm) — up from 6.1% the year before. That sounds like slow adoption. Meanwhile, [50% of office employees report using AI for work](https://www.businesswire.com/news/home/20250924750126/en/AI-Adoption-Sees-Rapid-YoY-Growth-in-Canadian-Workplaces), and other surveys say 66% of small and medium businesses use AI for at least one business function.</p>
+    <p>So which is it? Are we at 12% or 50% or 66%?</p>
+    <p>The answer is: all of them, because "use AI" means wildly different things. The 12.2% number is businesses that have integrated AI into core operations — into what they make or sell. The 50% number is employees using ChatGPT on their personal accounts to draft emails or summarise meeting notes because they don't know how else to get through the day. The 66% number is somewhere in between — businesses that have adopted AI for something, even if it's just automating invoices or scheduling social posts.</p>
+    <p>If you're a small business owner, you're being sold against the 66% number and measured against the 12% one. And the gap between those two is where most of the confusion — and most of the bad advice — lives.</p>
+    <h2>Look Inside Before Anyone Walks Through the Door</h2>
+    <p>Before you talk to a single AI consultant, ask yourself three questions about your own operation:</p>
+    <p><strong>What really works well, but only because one person makes it work?</strong> There's often someone — let's call her Judy — who enters numbers into four different spreadsheets every week to make your reporting accurate. Or someone who manually reconciles orders between your e-commerce platform and your inventory system. Or someone who copy-pastes customer inquiries from three different inboxes into a single tracking sheet. That's not a people problem. That's a process problem that AI might actually solve — but only if someone looks closely enough to see it.</p>
+    <p><strong>What happens when that person goes on vacation?</strong> If the answer is "everything breaks" or "we just wait until they get back," you've found a dependency. And dependencies are where small, practical AI wins often hide.</p>
+    <p><strong>What takes a lot of time but is highly repetitive?</strong> I'm talking about the work where you click here, then click there, then click there again, doing the same sequence over and over. Data entry. File uploads. Status updates. Copying information from one system into another. If you can describe it as "I do this exact thing 40 times a day," there's probably a way to automate some of it — but you have to name it first.</p>
+    <p>Most AI advisors won't ask these questions. They'll ask what your goals are, or what your pain points are, or what your digital transformation roadmap looks like. Those are fine questions, but they're abstract. The real opportunities are concrete, specific, and usually sitting right in front of you in the form of Judy and her four spreadsheets.</p>
+    <blockquote><p>If someone walks into your business and doesn't ask to see how the work actually gets done — doesn't ask to watch Judy work, doesn't ask what breaks when she's not there — they're not looking at your operation. They're looking at their commission.</p></blockquote>
+    <h2>What to Look For in Someone Selling You AI</h2>
+    <p>Here's what I'd want to see if I were in your position:</p>
+    <p><strong>Do they use AI themselves?</strong> Not "are they familiar with it" — do they actually use it? Can they name a specific tool they used this week and show you what it did? If they can't, or if the answer is vague ("we leverage AI-powered solutions"), walk away. You don't want advice from someone who talks about AI in the abstract.</p>
+    <p><strong>Will they show you?</strong> This one's simple. Ask them to open their laptop and show you the tool they just mentioned. If they won't, or if they pivot to a demo of the tool they're selling you instead, that's a red flag. Real use looks different from a sales demo.</p>
+    <p><strong>Do they look at your processes first, or lead with a solution?</strong> If the first thing they want to talk about is the platform they recommend, they're not consulting — they're reselling. A good advisor starts by understanding what you actually do, how you do it, and where the friction is. The tool comes after that, not before.</p>
+    <p><strong>Do they refuse to guarantee ROI?</strong> I know that sounds backwards. But here's the truth: results vary. They vary based on whether your team is willing to use the tool. They vary based on whether leadership buys in and rewards people for trying new things. They vary based on how well the tool fits the actual work, not the theoretical work. Anyone who guarantees you'll save X hours or generate Y revenue without knowing those variables is either lying or inexperienced.</p>
+    <p><strong>Do they talk about what AI can't do?</strong> If someone only talks about the upside — the efficiency gains, the time savings, the transformation — they're not being honest. AI is bad at a lot of things. It hallucinates. It requires clean data to work well, and most small businesses don't have clean data. It needs guardrails, especially if you're working with customer information or anything sensitive. If the person selling you AI doesn't name the risks, the limitations, and the work required to use it safely, they're not thinking about your business — they're thinking about closing a deal.</p>
+    <h2>What to Walk Away From</h2>
+    <p>Just as important: here are the things that should make you end the conversation.</p>
+    <p><strong>"Here's this tool — your problem is solved."</strong> No. Tools don't solve problems. People using tools solve problems, and only if the tool fits the work and the people are trained and supported in using it. A ready-made solution that gets dropped into your operation without adaptation is a waste of money.</p>
+    <p><strong>Guaranteed ROI.</strong> I said this above, but it's worth repeating. If someone promises specific results without understanding your team, your data, your processes, and your willingness to change how you work, they're selling you a fantasy.</p>
+    <p><strong>They won't name a tool they personally use.</strong> If they can talk in general terms about "AI-powered platforms" but can't point to a single thing they relied on this week, they don't use it. And if they don't use it, they can't teach you how to use it.</p>
+    <p><strong>They don't ask about buy-in or change management.</strong> Adopting AI isn't a technical problem. It's a people problem. If no one on your team wants to use the new tool, or if they don't trust it, or if leadership doesn't reward experimentation, the tool will sit unused. A good advisor knows this and asks about it upfront.</p>
+    <h2>The Honest Part: Results Will Vary, and Here's Why</h2>
+    <p>Let me be direct about something most AI consultants won't tell you: even if you find the right advisor, pick the right tool, and implement it well, your results will depend on things outside the technology.</p>
+    <p>[Canada ranks 42nd out of 47 countries on AI trust](https://www.hrreporter.com/focus-areas/automation-ai/canada-ranks-near-the-bottom-globally-for-ai-trust-closing-that-gap-is-hrs-job/394531). Sixty-seven per cent of Canadians say AI makes them nervous. Only twenty-four per cent have received any AI training. That's not a small thing. If your team doesn't trust the tool, they won't use it — or they'll use it badly, which is worse.</p>
+    <p>And here's the other thing: your team is probably already using AI. They're just doing it quietly, on their personal ChatGPT accounts, because there's no organisational policy and they don't want to ask permission. That's not a problem to solve by banning it. That's a problem to solve by helping them do it well — giving them tools they can trust, teaching them what AI is good at and what it isn't, and building guardrails so they don't accidentally put sensitive information somewhere it shouldn't go.</p>
+    <blockquote><p>The question isn't whether your business will adopt AI. The question is whether you're going to help your team do it thoughtfully, or pretend it isn't happening until something breaks.</p></blockquote>
+    <h2>What Real Use Looks Like</h2>
+    <p>I'll tell you what I use, because I think it's useful to have texture around what "real use" actually means.</p>
+    <p>I use Wispr Flow. It's a dictation tool that transcribes what I say, cleans it up, and drops it into whatever application I'm working in. That's it. It's a small thing. But it means I can talk through a draft instead of typing it, which is faster for me and easier on my hands. I get more done. I correct myself as I go. At the end of the day, it's not transformational — it's just helpful.</p>
+    <p>Is that AI? Kind of, yeah. It's processing speech, transcribing it, cleaning it up a bit, and feeding it into the right place. It's not magic. It's automation that makes one part of my work a little bit easier.</p>
+    <p>That's what most useful AI looks like in a small business: small, specific, and focused on a real repetitive task. Not transformation. Not disruption. Just a tool that does one thing well and saves someone time or effort in a way that compounds over weeks and months.</p>
+    <h2>Where to Start</h2>
+    <p>If you're looking for someone to help you adopt AI thoughtfully — someone who'll do the kind of work I've described here — that's the kind of work I do. I'm not going to sell you a platform. I'm not going to guarantee ROI. But I will look at your operation, ask about Judy and her spreadsheets, and help you figure out where a small, practical win might be hiding.</p>
+    <p>If that sounds like what you need: elizabeth@bynorthlight.ca</p>
+    <p>---</p>
+      </div>
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="blog-sidebar" aria-label="Post sidebar">
+
+      <div class="sidebar-section">
+        <p class="sidebar-label">Published</p>
+        <div class="pub-card">
+          <div class="pub-day">12</div>
+          <div class="pub-year">June 2026</div>
+          <hr class="pub-rule">
+          <p class="pub-readtime"><strong>8</strong> min read</p>
+        </div>
+      </div>
+      
+      <div class="sidebar-section">
+        <p class="sidebar-label">From the newsletter</p>
+        <div class="aurora-card">
+          <p>This essay appeared in the Aurora Brief — a monthly briefing from Elizabeth Lemoine on what she's learning, building, and watching.</p>
+          <a href="https://aurora-brief.kit.com/110f173cf7">Subscribe →</a>
+        </div>
+      </div>
+      
+      <div class="sidebar-section">
+        <p class="sidebar-label">Topics</p>
+        <div class="topics-wrap">
+          <span class="topic-tag">ai adoption</span>
+        <span class="topic-tag">business strategy</span>
+        <span class="topic-tag">consulting</span>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- Right wing -->
+    <div class="blog-right-wing" role="presentation">
+      <div class="right-glow" role="presentation"></div>
+      <div class="right-dots-wrap" role="presentation" aria-hidden="true">
+        <div class="dot" style="top:0;left:0"></div>
+        <div class="dot" style="top:20px;left:24px"></div>
+        <div class="dot" style="top:48px;left:8px"></div>
+        <div class="dot" style="top:68px;left:38px"></div>
+        <div class="dot" style="top:96px;left:16px"></div>
+        <div class="dot" style="top:120px;left:46px"></div>
+        <div class="dot" style="top:150px;left:4px"></div>
+        <div class="dot" style="top:176px;left:30px"></div>
+        <div class="dot" style="top:206px;left:52px"></div>
+        <div class="dot" style="top:234px;left:18px"></div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p class="footer-copy">© 2026 Northlight</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/" class="footer-link">Home</a>
+        <a href="/vault.html" class="footer-link">Northlight Vault</a>
+        <a href="/northlight-privacy.html" class="footer-link">Privacy Policy</a>
+      </nav>
+    </footer>
+
+  </div>
+
+  <!-- Plausible Analytics -->
+  <script defer data-domain="bynorthlight.ca" src="https://plausible.io/js/script.js"></script>
+</body>
+</html>
