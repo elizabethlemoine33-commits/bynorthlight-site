@@ -21,18 +21,16 @@ jobs:
         with:
           ref: main
 
-      - name: Generate sitemap
-        run: python3 generate-sitemap.py
-
-      - name: Commit if changed
+      - name: Generate and commit sitemap
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
+          python3 generate-sitemap.py
           git add sitemap.xml
           if git diff --cached --quiet; then
             echo "sitemap.xml unchanged — nothing to commit"
           else
-            git pull --rebase origin main
             git commit -m "chore: auto-update sitemap.xml"
             git push
           fi
