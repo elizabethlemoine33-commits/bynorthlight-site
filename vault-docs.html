@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Northlight Vault — Help &amp; Documentation</title>
+  <meta name="description" content="Quick-start guide for Northlight Vault. Learn how to add accounts, search files, open documents, and manage your connected cloud storage.">
+  <link rel="canonical" href="https://bynorthlight.ca/vault-docs.html">
+  <meta property="og:title" content="Northlight Vault — Help &amp; Documentation">
+  <meta property="og:description" content="Quick-start guide for Northlight Vault. Learn how to add accounts, search files, open documents, and manage your connected cloud storage.">
+  <meta property="og:image" content="https://bynorthlight.ca/northlight-vault-icon-512x512.png">
+  <meta property="og:url" content="https://bynorthlight.ca/vault-docs.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Northlight">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Northlight Vault — Help &amp; Documentation">
+  <meta name="twitter:description" content="Quick-start guide for Northlight Vault. Learn how to add accounts, search files, and open documents.">
+  <meta name="twitter:image" content="https://bynorthlight.ca/northlight-vault-icon-512x512.png">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bynorthlight.ca/" },
+      { "@type": "ListItem", "position": 2, "name": "Northlight Vault", "item": "https://bynorthlight.ca/vault.html" },
+      { "@type": "ListItem", "position": 3, "name": "Help & Documentation", "item": "https://bynorthlight.ca/vault-docs.html" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --midnight:   #0E0E14;
+      --surface:    #12121E;
+      --surface-2:  #10101C;
+      --border:     #1E2035;
+      --border-2:   #2A2A48;
+      --text:       #FFFFFF;
+      --cloud:      #C8CCE0;
+      --haze:       #BCC2DC;
+      --muted:      #99A1B6;
+      --structural: #6C7295;
+      --glacial:    #4FC3C8;
+      --boreal:     #5B8DD9;
+      --dusk:       #8B6FD4;
+      --aurora:     #C46FAA;
+    }
+
+    body {
+      background: var(--midnight);
+      color: var(--cloud);
+      font-family: 'Outfit', sans-serif;
+      min-height: 100vh;
+    }
+
+    .skip-nav {
+      position: absolute;
+      top: -100px; left: 0;
+      background: var(--dusk);
+      color: #fff;
+      padding: 10px 20px;
+      font-family: 'Jost', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      border-radius: 0 0 6px 0;
+      z-index: 9999;
+      transition: top 0.2s;
+    }
+    .skip-nav:focus { top: 0; }
+
+    .top-bar {
+      height: 2px;
+      background: linear-gradient(90deg, #4fc3c8 0%, #5b8dd9 30%, #8b6fd4 65%, #c46faa 100%);
+    }
+
+    header {
+      padding: 24px 72px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .wordmark {
+      font-family: 'Jost', sans-serif;
+      font-weight: 600;
+      font-size: 24px;
+      letter-spacing: 0.07em;
+      background: linear-gradient(90deg, #4fc3c8 0%, #5b8dd9 33%, #8b6fd4 66%, #c46faa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+    }
+
+    .header-product {
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 72px 100px;
+    }
+
+    .back-link {
+      display: inline-block;
+      font-family: 'Jost', sans-serif;
+      font-weight: 500;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      margin-bottom: 32px;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--cloud); }
+
+    h1 {
+      font-family: 'Jost', sans-serif;
+      font-weight: 600;
+      font-size: 34px;
+      letter-spacing: 0.02em;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .page-meta {
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .aurora-line {
+      width: 36px;
+      height: 2px;
+      background: linear-gradient(90deg, #4fc3c8, #8b6fd4);
+      border-radius: 2px;
+      margin: 24px 0 48px;
+    }
+
+    /* Table of contents */
+    .toc {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px 28px;
+      margin-bottom: 56px;
+    }
+
+    .toc-label {
+      font-family: 'Jost', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .toc ol {
+      margin: 0;
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .toc li {
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      color: var(--haze);
+      margin-bottom: 0;
+    }
+
+    .toc a {
+      color: var(--haze);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(188,194,220,0.2);
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .toc a:hover { color: var(--glacial); border-color: rgba(79,195,200,0.4); }
+
+    /* Sections */
+    .doc-section {
+      margin-bottom: 56px;
+      scroll-margin-top: 24px;
+    }
+
+    h2 {
+      font-family: 'Jost', sans-serif;
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: 0.04em;
+      color: var(--text);
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      background: linear-gradient(135deg, #4fc3c8, #8b6fd4);
+      font-family: 'Jost', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    p {
+      font-family: 'Outfit', sans-serif;
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--cloud);
+      margin-bottom: 16px;
+    }
+
+    /* Numbered steps */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 4px;
+    }
+
+    .step {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px solid var(--border-2);
+      font-family: 'Jost', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .step-text {
+      font-family: 'Outfit', sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--cloud);
+    }
+
+    .step-text strong { color: var(--text); font-weight: 600; }
+
+    /* Tip / note callout */
+    .tip {
+      background: var(--surface);
+      border: 1px solid var(--border-2);
+      border-left: 3px solid var(--glacial);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin-top: 20px;
+    }
+
+    .tip p {
+      font-size: 14px;
+      color: var(--haze);
+      margin-bottom: 0;
+    }
+
+    .tip-label {
+      font-family: 'Jost', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--glacial);
+      margin-bottom: 6px;
+    }
+
+    /* Warning callout */
+    .warning {
+      background: var(--surface);
+      border: 1px solid var(--border-2);
+      border-left: 3px solid var(--aurora);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin-top: 20px;
+    }
+
+    .warning p {
+      font-size: 14px;
+      color: var(--haze);
+      margin-bottom: 0;
+    }
+
+    .warning-label {
+      font-family: 'Jost', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--aurora);
+      margin-bottom: 6px;
+    }
+
+    /* Contact section */
+    .contact-card {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px 28px;
+      margin-top: 56px;
+    }
+
+    .contact-card h2 {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
+
+    .contact-card p {
+      font-size: 14px;
+      color: var(--haze);
+      margin-bottom: 8px;
+    }
+
+    .contact-card p:last-child { margin-bottom: 0; }
+
+    a {
+      color: var(--glacial);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(79,195,200,0.25);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    a:hover { color: var(--glacial); border-color: var(--glacial); }
+    a:focus { outline: 2px solid var(--dusk); outline-offset: 2px; border-radius: 2px; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-copy {
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .footer-copy a { color: var(--muted); border-bottom: 1px solid var(--border-2); }
+    .footer-copy a:hover { color: var(--haze); }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-link {
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+      border: none;
+      transition: color 0.2s;
+    }
+    .footer-link:hover { color: var(--haze); }
+
+    @media (max-width: 640px) {
+      header { padding: 20px 24px; }
+      main { padding: 40px 24px 64px; }
+      footer { padding: 20px 24px; flex-direction: column; align-items: flex-start; }
+      h1 { font-size: 26px; }
+      .footer-links { flex-wrap: wrap; gap: 14px; }
+    }
+  </style>
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script async src="https://plausible.io/js/pa-uccdYD5d_-tjjiMlRo9eR.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <div class="top-bar" role="presentation"></div>
+
+  <header>
+    <a href="/" class="wordmark">Northlight</a>
+    <p class="header-product">Vault — Help &amp; Documentation</p>
+  </header>
+
+  <main id="main-content">
+
+    <a href="/vault.html" class="back-link">← Back to Northlight Vault</a>
+
+    <h1>Northlight Vault — Help</h1>
+    <p class="page-meta">Quick-start guide · Windows 10/11 · Version 1.x</p>
+    <div class="aurora-line" role="presentation"></div>
+
+    <nav class="toc" aria-label="Documentation contents">
+      <p class="toc-label">On this page</p>
+      <ol>
+        <li><a href="#add-account">How to add a cloud account</a></li>
+        <li><a href="#delete-account">How to remove an account</a></li>
+        <li><a href="#search">How to search your files</a></li>
+        <li><a href="#open-file">How to open a file</a></li>
+          <li><a href="#feedback">How to leave feedback</a></li>
+      </ol>
+    </nav>
+
+    <!-- 1. ADD ACCOUNT -->
+    <section class="doc-section" id="add-account" aria-labelledby="add-account-heading">
+      <h2 id="add-account-heading"><span class="section-num" aria-hidden="true">1</span> How to add a cloud account</h2>
+      <p>Northlight Vault connects to Google Drive, OneDrive, and Dropbox. You can add as many accounts as you need — including multiple accounts of the same type.</p>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">1</span>
+          <p class="step-text">Open Northlight Vault.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <p class="step-text">In the left sidebar, click <strong>Add Account</strong>.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <p class="step-text">Select the service you want to connect: <strong>Google Drive</strong>, <strong>OneDrive</strong>, or <strong>Dropbox</strong>.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">4</span>
+          <p class="step-text">A browser window will open asking you to sign in and grant Vault permission to browse your files. Sign in with the account you want to add.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">5</span>
+          <p class="step-text">Once authorized, the account will appear in your sidebar and your files will be ready to browse.</p>
+        </div>
+      </div>
+      <div class="tip">
+        <p class="tip-label">Tip</p>
+        <p>You can add multiple Google Drive accounts — for example, a personal Drive and a work Drive — and browse them side by side in the same app.</p>
+      </div>
+    </section>
+
+    <!-- 2. DELETE ACCOUNT -->
+    <section class="doc-section" id="delete-account" aria-labelledby="delete-account-heading">
+      <h2 id="delete-account-heading"><span class="section-num" aria-hidden="true">2</span> How to remove an account</h2>
+      <p>Removing an account disconnects it from Vault. Your files are not deleted — they remain in your cloud storage. Vault simply stops displaying them.</p>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">1</span>
+          <p class="step-text">In the left sidebar, find the account you want to remove.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <p class="step-text">Right-click the account name and select <strong>Remove Account</strong>.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <p class="step-text">Confirm when prompted. The account is removed from Vault immediately.</p>
+        </div>
+      </div>
+      <div class="warning">
+        <p class="warning-label">Note</p>
+        <p>Removing an account from Vault does not delete your files or cancel your cloud storage subscription. It only disconnects that account from the Vault interface.</p>
+      </div>
+    </section>
+
+    <!-- 3. SEARCH -->
+    <section class="doc-section" id="search" aria-labelledby="search-heading">
+      <h2 id="search-heading"><span class="section-num" aria-hidden="true">3</span> How to search your files</h2>
+      <p>The search bar lets you find files across all your connected accounts at once — no need to search each service separately.</p>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">1</span>
+          <p class="step-text">Click the <strong>search bar</strong> at the top of the Vault window.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <p class="step-text">Type the name of the file or folder you're looking for.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <p class="step-text">Results will appear from all your connected accounts — Google Drive, OneDrive, and Dropbox together.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">4</span>
+          <p class="step-text">Click on any result to navigate to that file's location, or open it directly (see <a href="#open-file">How to open a file</a>).</p>
+        </div>
+      </div>
+      <div class="tip">
+        <p class="tip-label">Tip</p>
+        <p>Search works across all connected accounts simultaneously. If you have three accounts connected, one search covers all three.</p>
+      </div>
+    </section>
+
+    <!-- 4. OPEN FILE -->
+    <section class="doc-section" id="open-file" aria-labelledby="open-file-heading">
+      <h2 id="open-file-heading"><span class="section-num" aria-hidden="true">4</span> How to open a file</h2>
+      <p>Vault displays your files but opens them in their native app or your browser — whichever is the right tool for that file type.</p>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">1</span>
+          <p class="step-text">Find the file you want to open — either by browsing folders or using the search bar.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <p class="step-text">Click the <strong>Open</strong> button on the right side of the file row.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <p class="step-text">The file will open in your browser or the appropriate app on your computer.</p>
+        </div>
+      </div>
+      <div class="warning">
+        <p class="warning-label">Important</p>
+        <p>Click the <strong>Open</strong> button — not the file name. Clicking the file name selects or previews the file within Vault. The Open button is what launches it in your browser or app.</p>
+      </div>
+    </section>
+
+    <!-- 5. FEEDBACK -->
+    <section class="doc-section" id="feedback" aria-labelledby="feedback-heading">
+      <h2 id="feedback-heading"><span class="section-num" aria-hidden="true">5</span> How to leave feedback</h2>
+      <p>Found a bug? Have a feature idea? We want to hear it. Feedback goes directly to the team and is reviewed for every release.</p>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">1</span>
+          <p class="step-text">In the Vault menu bar, click <strong>Help</strong>.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <p class="step-text">Select <strong>About</strong>.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <p class="step-text">Click <strong>Feedback</strong> to open the feedback form.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">4</span>
+          <p class="step-text">Fill in your feedback — bug report, feature request, or general comment — and submit. You'll hear back at the email you provide.</p>
+        </div>
+      </div>
+      <div class="tip">
+        <p class="tip-label">Prefer a direct link?</p>
+        <p>You can also <a href="https://forms.clickup.com/14151173/f/dfvg5-2317/FF757UNUCJJTY2UIBF" target="_blank" rel="noopener">submit feedback directly here</a>.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <div class="contact-card">
+      <h2><span class="section-num" aria-hidden="true">?</span> Still need help?</h2>
+      <p>If something isn't working or you have a question that isn't answered here, get in touch — we're a small team and we actually read our support email.</p>
+      <p><a href="mailto:support@bynorthlight.ca">support@bynorthlight.ca</a></p>
+    </div>
+
+  </main>
+
+  <footer>
+    <p class="footer-copy">© 2026 Northlight &nbsp;·&nbsp; <a href="/vault-privacy.html">Vault Privacy Policy</a></p>
+    <nav aria-label="Footer navigation">
+      <div class="footer-links">
+        <a href="/vault.html" class="footer-link">Northlight Vault</a>
+        <a href="/index.html" class="footer-link">Northlight home</a>
+        <a href="/blog/" class="footer-link">Blog</a>
+      </div>
+    </nav>
+  </footer>
+
+</body>
+</html>
