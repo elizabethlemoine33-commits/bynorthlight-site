@@ -67,6 +67,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://bynorthlight.ca/blog/fractional-coo-vs-hiring-full-time-canada.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://bynorthlight.ca/blog/how-we-built-northlight-vault-privacy-first.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
