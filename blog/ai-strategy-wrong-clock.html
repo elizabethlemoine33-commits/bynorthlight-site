@@ -3,31 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your AI Strategy Is Running on the Wrong Clock — Northlight</title>
+  <title>Your AI Strategy Is Running on the Wrong Clock — Northlight Advisory Services</title>
   <meta name="description" content="Most leaders have an AI strategy. The problem isn't the plan—it's the planning cadence. Why annual strategy breaks when capability moves quarterly.">
   <meta name="author" content="Elizabeth Lemoine">
   <link rel="canonical" href="https://bynorthlight.ca/blog/ai-strategy-wrong-clock.html">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
   <!-- Open Graph -->
   <meta property="og:type" content="article">
   <meta property="og:title" content="Your AI Strategy Is Running on the Wrong Clock">
   <meta property="og:description" content="Most leaders have an AI strategy. The problem isn't the plan—it's the planning cadence. Why annual strategy breaks when capability moves quarterly.">
   <meta property="og:url" content="https://bynorthlight.ca/blog/ai-strategy-wrong-clock.html">
-  <meta property="og:site_name" content="Northlight">
+  <meta property="og:site_name" content="Northlight Advisory Services">
+  <meta property="og:image" content="https://bynorthlight.ca/northlight-og-image.png">
   <meta property="article:author" content="Elizabeth Lemoine">
-  <meta property="article:published_time" content="2026-01-01T00:00:00.000Z">
+  <meta property="article:published_time" content="2026-07-08T00:00:00.000Z">
 
-  <!-- Article schema JSON-LD -->
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Your AI Strategy Is Running on the Wrong Clock">
+  <meta name="twitter:description" content="Most leaders have an AI strategy. The problem isn't the plan—it's the planning cadence. Why annual strategy breaks when capability moves quarterly.">
+  <meta name="twitter:image" content="https://bynorthlight.ca/northlight-og-image.png">
+
+  <!-- Article schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Your AI Strategy Is Running on the Wrong Clock",
     "description": "Most leaders have an AI strategy. The problem isn't the plan—it's the planning cadence. Why annual strategy breaks when capability moves quarterly.",
-    "datePublished": "2026-01-01",
+    "datePublished": "2026-07-08",
     "author": { "@type": "Person", "name": "Elizabeth Lemoine", "url": "https://bynorthlight.ca" },
-    "publisher": { "@type": "Organization", "name": "Northlight", "url": "https://bynorthlight.ca" },
-    "url": "https://bynorthlight.ca/blog/ai-strategy-wrong-clock.html"
+    "publisher": { "@type": "Organization", "name": "Northlight Advisory Services", "url": "https://bynorthlight.ca" },
+    "url": "https://bynorthlight.ca/blog/ai-strategy-wrong-clock.html",
+    "image": "https://bynorthlight.ca/northlight-og-image.png"
+  }
+  </script>
+
+  <!-- BreadcrumbList schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bynorthlight.ca/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://bynorthlight.ca/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Your AI Strategy Is Running on the Wrong Clock", "item": "https://bynorthlight.ca/blog/ai-strategy-wrong-clock.html" }
+    ]
   }
   </script>
 
@@ -87,7 +110,10 @@
     .post-body blockquote{border-left:3px solid var(--dusk);padding-left:22px;margin:1.4em 0;font-style:italic;color:var(--haze);}
     .post-body .callout{background:rgba(139,111,212,.08);border-left:3px solid var(--dusk);border-radius:0 6px 6px 0;padding:14px 20px;margin:1.6em 0;font-family:'Jost',sans-serif;font-size:17px;font-weight:500;color:var(--haze);line-height:1.4;}
     .post-body ul,.post-body ol{color:var(--cloud);font-size:16px;line-height:1.8;padding-left:1.4em;margin-bottom:1.4em;}
+    .post-body li{margin-bottom:.4em;}
     .post-body strong{color:var(--text);font-weight:600;}
+    .post-body a{color:var(--glacial);text-decoration:none;}
+    .post-body a:hover{text-decoration:underline;}
 
     /* Sidebar */
     .sidebar-label{font-family:'Jost',sans-serif;font-weight:600;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
@@ -95,8 +121,7 @@
 
     /* Published card */
     .pub-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px;text-align:center;}
-    .pub-day{font-family:'Jost',sans-serif;font-weight:600;font-size:28px;color:var(--text);line-height:1;}
-    .pub-year{font-family:'Outfit',sans-serif;font-size:13px;color:var(--muted);margin-top:2px;margin-bottom:10px;}
+    .pub-date{font-family:'Jost',sans-serif;font-weight:600;font-size:18px;color:var(--text);line-height:1.2;}
     .pub-rule{border:none;border-top:1px solid var(--border);margin:10px 0;}
     .pub-readtime{font-family:'Outfit',sans-serif;font-size:13px;color:var(--muted);}
     .pub-readtime strong{color:var(--cloud);}
@@ -113,11 +138,16 @@
 
     /* Footer */
     .site-footer{grid-column:1/-1;border-top:1px solid var(--border);padding:24px 56px;display:flex;justify-content:space-between;align-items:center;}
+    .footer-left{display:flex;flex-direction:column;gap:6px;}
     .footer-copy{font-family:'Outfit',sans-serif;font-size:13px;color:var(--structural);}
-    .footer-nav{display:flex;gap:24px;}
+    .footer-powered{font-family:'Outfit',sans-serif;font-size:12px;color:var(--structural);display:flex;align-items:center;gap:6px;}
+    .footer-powered a{color:var(--structural);text-decoration:none;}
+    .footer-powered a:hover{color:var(--muted);}
+    .footer-os-icon{opacity:.4;vertical-align:middle;}
+    .footer-nav{display:flex;gap:24px;flex-wrap:wrap;align-items:center;}
     .footer-link{font-family:'Jost',sans-serif;font-weight:500;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;}
     .footer-link:hover{color:var(--cloud);}
-    .footer-link.active{color:var(--dusk);}
+    .footer-social-link{display:inline-flex;align-items:center;gap:5px;}
 
     /* Responsive */
     @media(max-width:1100px){
@@ -157,49 +187,54 @@
     <!-- Reading column -->
     <main class="blog-reading" id="main-content">
       <a href="/blog/" class="post-back">← All posts</a>
-      <span class="source-label source-aurora">Aurora Brief · Essay</span>
+      <span class="source-label source-aurora">Blog · AI Strategy</span>
       <h1 class="post-title">Your AI Strategy Is Running on the Wrong Clock</h1>
-      <p class="post-date-line"><time datetime="2026-01-01">January 1, 2026</time></p>
+      <p class="post-date-line"><time datetime="2026-07-08">July 8, 2026</time></p>
       <div class="aurora-divider" role="presentation"></div>
 
       <div class="post-body">
-        <h2>Your AI Strategy Isn't Wrong. It's Just Running on the Wrong Clock.</h2>
-    <p>Most leadership teams I talk to have done the work. They've named an owner. They've written a usage policy. They've picked a tool, run a pilot, briefed the board. By any reasonable standard, they're being responsible. And they are still falling behind — not because the strategy is bad, but because the strategy is annual and the capability is quarterly.</p>
-    <p>Dario Amodei calls this the Treebeard problem.</p>
-    <h3>The Treebeard Problem</h3>
-    <p>In a [recent essay on AI policy](https://darioamodei.com/post/policy-on-the-ai-exponential), Amodei — CEO of Anthropic — borrows from Tolkien to describe what happens when a slow-moving system meets an exponentially accelerating one. Treebeard, the ancient Ent, operates on the timescale of forests: decades to decide, centuries to act. That works fine until the orcs show up with axes and fire, moving on the timescale of conquest. Treebeard isn't stupid. He's just slow. And slow stops working when the thing you're responding to is moving exponentially faster than you are.</p>
-    <p>Amodei's point is about policy. He's describing the gap between AI capability — which is doubling on a curve measured in months — and legislation, which moves on a multi-year cycle. But the structural problem he's naming doesn't stop at policy. It applies just as directly to how most organisations plan for AI.</p>
-    <p>Your board meets quarterly. Your budget cycle is annual. Your procurement timeline assumes you'll spec a solution, run an RFP, negotiate a contract, and deploy over 12 to 18 months. All of that made sense when the capability you were buying changed slowly. It doesn't make sense anymore.</p>
-    <h3>What Changed in Four Years</h3>
-    <p>Here's Amodei's cleanest proof point: four years ago, AI could barely write a coherent line of code. Today, AI writes most of the code at major AI companies.</p>
-    <p>Four years.</p>
-    <p>That's not a linear progression. That's not "10% better each year." That's a capability shift so fundamental that the baseline assumption — what AI can and can't do — is unrecognisable from where it was one strategic planning cycle ago.</p>
-    <p>And the executive-side data shows the lag is real. [Grant Thornton's 2026 AI Impact Survey](https://www.grantthornton.com/services/advisory-services/artificial-intelligence/2026-ai-impact-survey) found that 78% of executives lack confidence they could pass an AI governance audit within 90 days. [McKinsey's 2026 trust research](https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/tech-forward/state-of-ai-trust-in-2026-shifting-to-the-agentic-era) shows that only about 30% of organisations reach maturity level 3 or higher on governance and agentic AI controls — meaning most are still building foundational structures while the capability they're trying to govern is already two generations ahead. [Adobe's 2026 Digital Trends report](https://business.adobe.com/resources/digital-trends-report.html) names the top driver of executive-practitioner misalignment as "executive misunderstanding of AI," at 61%.</p>
-    <p>Three independent sources. Same direction. Leaders are responsible, engaged, and behind — not because they're asleep at the wheel, but because the wheel is spinning faster than the planning cycle allows them to respond.</p>
-    <h3>Why Annual Planning Breaks Here</h3>
-    <p>Annual planning works when the thing you're planning for changes predictably. Budget for next year's headcount. Forecast next year's revenue. Plan next year's product roadmap. The underlying assumptions — what people cost, what customers want, what's technically possible — shift, but they shift on a curve you can model with last year's data.</p>
-    <p>AI capability doesn't work that way. It's not improving on a percentage-gain curve. It's improving on a scaling-law curve, which means the capability available in Q4 is materially different from the capability available in Q1 — and your Q1 strategy, no matter how thoughtful, is answering questions about a world that no longer exists by the time you're executing in Q4.</p>
-    <p>Here's what that looks like in practice. You write an AI strategy in January. You name the use cases. You allocate budget. You identify the tools. You set guardrails. You present to the board in March. They approve. You go to procurement in April. You deploy in September. By the time the tool is live, the capability baseline has moved twice. The vendor you didn't choose in January now has a feature you actually need. The risk you wrote a policy around in February is now a different risk entirely because the underlying model has changed. The governance structure you built assumes a level of capability that's already obsolete.</p>
-    <blockquote><p>You didn't plan badly. You planned on the wrong clock.</p></blockquote>
-    <h3>What Changes If You Take This Seriously</h3>
-    <p>I'm not going to hand you a framework. You don't need another framework. What you need is a cadence shift.</p>
-    <p>If the capability is moving on a quarterly curve, your planning needs to move on a quarterly curve too. That doesn't mean rewriting your entire AI strategy every 90 days. It means building a standing review into your operating rhythm — a forcing function that asks, every quarter, "What's true now that wasn't true 90 days ago?"</p>
-    <p>That question has teeth. It surfaces the capability shifts you'd otherwise miss. It forces you to revisit assumptions. It keeps the strategy connected to the actual world instead of the world you modelled six months ago.</p>
-    <p>Practically, that looks like this: name one person — not a committee, one person — who owns the answer to that question and has the authority to change the plan between board meetings. Give them a standing slot in your quarterly leadership meeting. Make it fifteen minutes. Ask them three things:</p>
-    <p>1. What capability exists now that didn't exist last quarter?
-2. What risk exists now that didn't exist last quarter?
-3. What part of our current plan needs to change because of 1 or 2?</p>
-    <p>That's it. No deck. No elaborate governance redesign. Just a regular forcing function that keeps your planning cadence aligned with the capability cadence.</p>
-    <p>The AI labs are already doing this, by the way. Anthropic's Responsible Scaling Policy is exactly this move — a structured process for revisiting capability and risk assumptions on a defined cycle and updating the deployment plan accordingly. They're not planning annually because they can't afford to. You can't either.</p>
-    <h3>The Strategy Isn't the Artifact. The Cadence Is.</h3>
-    <p>Your AI strategy document — the one you presented to the board, the one sitting in the shared drive — isn't wrong. It's just not the strategy anymore.</p>
-    <blockquote><p>The strategy is the cadence. The strategy is the standing question you ask every quarter. The strategy is the person you've named who's allowed to update the plan when the world changes faster than your governance cycle.</p></blockquote>
-    <p>Treebeard wasn't stupid. He was slow. And slow worked until it didn't.</p>
-    <p>The question you need to answer isn't "Do I have an AI strategy?" You do. The question is: "Is my strategy running on the right clock?"</p>
-    <p>If it's not, fix the clock. The rest will follow.</p>
-    <p>---</p>
-    <p><strong>Want to keep thinking about this?</strong> [Aurora Brief](https://bynorthlight.ca/aurora-brief) is where I work through questions like this — what's changing, what it means, and what to do about it.</p>
-    <p>---</p>
+        <p>Most leadership teams I talk to have done the work. They've named an owner. They've written a usage policy. They've picked a tool, run a pilot, briefed the board. By any reasonable standard, they're being responsible. And they are still falling behind — not because the strategy is bad, but because the strategy is annual and the capability is quarterly.</p>
+        <p>Dario Amodei calls this the Treebeard problem.</p>
+
+        <h2>The Treebeard Problem</h2>
+        <p>In a <a href="https://darioamodei.com/post/policy-on-the-ai-exponential">recent essay on AI policy</a>, Amodei — CEO of Anthropic — borrows from Tolkien to describe what happens when a slow-moving system meets an exponentially accelerating one. Treebeard, the ancient Ent, operates on the timescale of forests: decades to decide, centuries to act. That works fine until the orcs show up with axes and fire, moving on the timescale of conquest. Treebeard isn't stupid. He's just slow. And slow stops working when the thing you're responding to is moving exponentially faster than you are.</p>
+        <p>Amodei's point is about policy. He's describing the gap between AI capability — which is doubling on a curve measured in months — and legislation, which moves on a multi-year cycle. But the structural problem he's naming doesn't stop at policy. It applies just as directly to how most organisations plan for AI.</p>
+        <p>Your board meets quarterly. Your budget cycle is annual. Your procurement timeline assumes you'll spec a solution, run an RFP, negotiate a contract, and deploy over 12 to 18 months. All of that made sense when the capability you were buying changed slowly. It doesn't make sense anymore.</p>
+
+        <h2>What Changed in Four Years</h2>
+        <p>Here's Amodei's cleanest proof point: four years ago, AI could barely write a coherent line of code. Today, AI writes most of the code at major AI companies.</p>
+        <p>Four years.</p>
+        <p>That's not a linear progression. That's not "10% better each year." That's a capability shift so fundamental that the baseline assumption — what AI can and can't do — is unrecognisable from where it was one strategic planning cycle ago.</p>
+        <p>And the executive-side data shows the lag is real. <a href="https://www.grantthornton.com/services/advisory-services/artificial-intelligence/2026-ai-impact-survey">Grant Thornton's 2026 AI Impact Survey</a> found that 78% of executives lack confidence they could pass an AI governance audit within 90 days. <a href="https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/tech-forward/state-of-ai-trust-in-2026-shifting-to-the-agentic-era">McKinsey's 2026 trust research</a> shows that only about 30% of organisations reach maturity level 3 or higher on governance and agentic AI controls — meaning most are still building foundational structures while the capability they're trying to govern is already two generations ahead. <a href="https://business.adobe.com/resources/digital-trends-report.html">Adobe's 2026 Digital Trends report</a> names the top driver of executive-practitioner misalignment as "executive misunderstanding of AI," at 61%.</p>
+        <p>Three independent sources. Same direction. Leaders are responsible, engaged, and behind — not because they're asleep at the wheel, but because the wheel is spinning faster than the planning cycle allows them to respond.</p>
+
+        <h2>Why Annual Planning Breaks Here</h2>
+        <p>Annual planning works when the thing you're planning for changes predictably. Budget for next year's headcount. Forecast next year's revenue. Plan next year's product roadmap. The underlying assumptions — what people cost, what customers want, what's technically possible — shift, but they shift on a curve you can model with last year's data.</p>
+        <p>AI capability doesn't work that way. It's not improving on a percentage-gain curve. It's improving on a scaling-law curve, which means the capability available in Q4 is materially different from the capability available in Q1 — and your Q1 strategy, no matter how thoughtful, is answering questions about a world that no longer exists by the time you're executing in Q4.</p>
+        <blockquote><p>You didn't plan badly. You planned on the wrong clock.</p></blockquote>
+        <p>Here's what that looks like in practice. You write an AI strategy in January. You name the use cases. You allocate budget. You identify the tools. You set guardrails. You present to the board in March. They approve. You go to procurement in April. You deploy in September. By the time the tool is live, the capability baseline has moved twice. The vendor you didn't choose in January now has a feature you actually need. The risk you wrote a policy around in February is now a different risk entirely because the underlying model has changed. The governance structure you built assumes a level of capability that's already obsolete.</p>
+
+        <h2>What Changes If You Take This Seriously</h2>
+        <p>I'm not going to hand you a framework. You don't need another framework. What you need is a cadence shift.</p>
+        <p>If the capability is moving on a quarterly curve, your planning needs to move on a quarterly curve too. That doesn't mean rewriting your entire AI strategy every 90 days. It means building a standing review into your operating rhythm — a forcing function that asks, every quarter, "What's true now that wasn't true 90 days ago?"</p>
+        <p>That question has teeth. It surfaces the capability shifts you'd otherwise miss. It forces you to revisit assumptions. It keeps the strategy connected to the actual world instead of the world you modelled six months ago.</p>
+        <p>Practically, that looks like this: name one person — not a committee, one person — who owns the answer to that question and has the authority to change the plan between board meetings. Give them a standing slot in your quarterly leadership meeting. Make it fifteen minutes. Ask them three things:</p>
+        <ol>
+          <li>What capability exists now that didn't exist last quarter?</li>
+          <li>What risk exists now that didn't exist last quarter?</li>
+          <li>What part of our current plan needs to change because of 1 or 2?</li>
+        </ol>
+        <p>That's it. No deck. No elaborate governance redesign. Just a regular forcing function that keeps your planning cadence aligned with the capability cadence.</p>
+        <p>The AI labs are already doing this, by the way. Anthropic's Responsible Scaling Policy is exactly this move — a structured process for revisiting capability and risk assumptions on a defined cycle and updating the deployment plan accordingly. They're not planning annually because they can't afford to. You can't either.</p>
+
+        <h2>The Strategy Isn't the Artifact. The Cadence Is.</h2>
+        <p>Your AI strategy document — the one you presented to the board, the one sitting in the shared drive — isn't wrong. It's just not the strategy anymore.</p>
+        <blockquote><p>The strategy is the cadence. The strategy is the standing question you ask every quarter. The strategy is the person you've named who's allowed to update the plan when the world changes faster than your governance cycle.</p></blockquote>
+        <p>Treebeard wasn't stupid. He was slow. And slow worked until it didn't.</p>
+        <p>The question you need to answer isn't "Do I have an AI strategy?" You do. The question is: "Is my strategy running on the right clock?"</p>
+        <p>If it's not, fix the clock. The rest will follow.</p>
+
+        <p><strong>Want to keep thinking about this?</strong> <a href="https://bynorthlight.ca/aurora-brief">Aurora Brief</a> is where I work through questions like this — what's changing, what it means, and what to do about it.</p>
       </div>
     </main>
 
@@ -207,30 +242,29 @@
     <aside class="blog-sidebar" aria-label="Post sidebar">
 
       <div class="sidebar-section">
-        <p class="sidebar-label">Published</p>
+        <p class="sidebar-label">Last Updated</p>
         <div class="pub-card">
-          <div class="pub-day">1</div>
-          <div class="pub-year">January 2026</div>
+          <p class="pub-date">July 8, 2026</p>
           <hr class="pub-rule">
           <p class="pub-readtime"><strong>6</strong> min read</p>
         </div>
       </div>
-      
+
       <div class="sidebar-section">
         <p class="sidebar-label">From the newsletter</p>
         <div class="aurora-card">
-          <p>This essay appeared in the Aurora Brief — a monthly briefing from Elizabeth Lemoine on what she's learning, building, and watching.</p>
+          <p>Aurora Brief — a monthly briefing from Elizabeth Lemoine on strategy, AI adoption, and what she's learning and building at Northlight Advisory Services.</p>
           <a href="https://aurora-brief.kit.com/110f173cf7">Subscribe →</a>
         </div>
       </div>
-      
+
       <div class="sidebar-section">
         <p class="sidebar-label">Topics</p>
         <div class="topics-wrap">
-          <span class="topic-tag">ai strategy</span>
-        <span class="topic-tag">leadership</span>
-        <span class="topic-tag">organizational change</span>
-        <span class="topic-tag">strategic planning</span>
+          <span class="topic-tag">AI Strategy</span>
+          <span class="topic-tag">Leadership</span>
+          <span class="topic-tag">Strategic Planning</span>
+          <span class="topic-tag">Governance</span>
         </div>
       </div>
 
@@ -255,11 +289,17 @@
 
     <!-- Footer -->
     <footer class="site-footer">
-      <p class="footer-copy">© 2026 Northlight</p>
+      <div class="footer-left">
+        <p class="footer-copy">© 2026 Northlight Advisory Services</p>
+        <p class="footer-powered"><img src="/northlight-os-icon.svg" alt="" role="presentation" class="footer-os-icon" width="36" height="36"><span>Powered by <a href="/">Northlight OS</a></span></p>
+      </div>
       <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="/" class="footer-link">Home</a>
+        <a href="/" class="footer-link">Northlight</a>
+        <a href="/about.html" class="footer-link">About</a>
         <a href="/vault.html" class="footer-link">Northlight Vault</a>
         <a href="/northlight-privacy.html" class="footer-link">Privacy Policy</a>
+        <a href="https://www.linkedin.com/company/bynorthlight" class="footer-link footer-social-link" aria-label="Northlight on LinkedIn" target="_blank" rel="noopener"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
+        <a href="https://www.threads.com/@northlightcomms" class="footer-link footer-social-link" aria-label="Northlight on Threads" target="_blank" rel="noopener"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.312-.883-2.371-.887h-.018c-.87 0-1.952.26-2.716 1.294l-1.694-1.252c1.083-1.464 2.715-2.193 4.41-2.193h.023c3.016.016 4.877 1.913 5.115 5.19.238.071.471.15.698.234 1.947.713 3.008 2.163 3.225 4.225.179 1.702-.198 4.403-2.628 6.797-1.82 1.79-4.133 2.684-6.835 2.706l-.034.001z"/></svg> Threads</a>
       </nav>
     </footer>
 
