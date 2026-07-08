@@ -62,6 +62,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://bynorthlight.ca/blog/ai-for-all-programmes-nova-scotia-businesses.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bynorthlight.ca/blog/ai-isnt-underperforming-working-blind.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://bynorthlight.ca/blog/ai-strategy-wrong-clock.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -78,6 +88,11 @@
   </url>
   <url>
     <loc>https://bynorthlight.ca/blog/growth-is-no-longer-the-hard-part.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bynorthlight.ca/blog/how-to-choose-ai-advisor-consultant.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
