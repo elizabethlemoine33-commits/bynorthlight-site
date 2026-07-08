@@ -619,6 +619,134 @@
 
     <div class="aurora-divider" role="presentation"></div>
 
+    <!-- ═══ COMPARISON TABLE ═══ -->
+    <section class="section-padded" aria-labelledby="comparison-label" style="padding-bottom: 80px;">
+      <h2 class="section-label" id="comparison-label">How it stacks up</h2>
+      <p style="font-family:'Outfit',sans-serif; font-size:15px; color:var(--haze); margin-bottom:40px; max-width:560px;">Vault doesn't replace your cloud storage — it makes all of it usable at once.</p>
+
+      <div style="overflow-x:auto; -webkit-overflow-scrolling:touch;">
+        <table style="width:100%; border-collapse:collapse; font-family:'Outfit',sans-serif; font-size:14px; min-width:640px;">
+          <colgroup>
+            <col style="width:28%">
+            <col style="width:18%">
+            <col style="width:18%">
+            <col style="width:18%">
+            <col style="width:18%">
+          </colgroup>
+          <thead>
+            <tr>
+              <th style="padding:0; border:none;"></th>
+              <!-- Vault column header — aurora gradient card -->
+              <th style="padding:0 6px 0 0; border:none; vertical-align:bottom;">
+                <div style="background:linear-gradient(150deg,rgba(79,195,200,.12) 0%,rgba(91,141,217,.14) 45%,rgba(139,111,212,.1) 100%); border:1px solid rgba(79,195,200,.35); border-bottom:none; border-radius:12px 12px 0 0; padding:18px 16px 16px; position:relative; overflow:hidden;">
+                  <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#4fc3c8,#5b8dd9,#8b6fd4,#c46faa);"></div>
+                  <div style="font-family:'Jost',sans-serif; font-size:9px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; background:linear-gradient(90deg,#4fc3c8,#8b6fd4); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:4px;">Free</div>
+                  <div style="font-family:'Jost',sans-serif; font-weight:600; font-size:15px; color:var(--text); letter-spacing:.02em;">Northlight<br>Vault</div>
+                </div>
+              </th>
+              <th style="padding:0 6px; border:none; vertical-align:bottom;">
+                <div style="background:var(--surface); border:1px solid var(--border); border-bottom:none; border-radius:12px 12px 0 0; padding:18px 16px 16px;">
+                  <div style="font-family:'Jost',sans-serif; font-size:9px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:var(--structural); margin-bottom:4px;">Storage</div>
+                  <div style="font-family:'Jost',sans-serif; font-weight:600; font-size:15px; color:var(--haze);">Google<br>Drive</div>
+                </div>
+              </th>
+              <th style="padding:0 6px; border:none; vertical-align:bottom;">
+                <div style="background:var(--surface); border:1px solid var(--border); border-bottom:none; border-radius:12px 12px 0 0; padding:18px 16px 16px;">
+                  <div style="font-family:'Jost',sans-serif; font-size:9px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:var(--structural); margin-bottom:4px;">Storage</div>
+                  <div style="font-family:'Jost',sans-serif; font-weight:600; font-size:15px; color:var(--haze);">OneDrive</div>
+                </div>
+              </th>
+              <th style="padding:0 0 0 6px; border:none; vertical-align:bottom;">
+                <div style="background:var(--surface); border:1px solid var(--border); border-bottom:none; border-radius:12px 12px 0 0; padding:18px 16px 16px;">
+                  <div style="font-family:'Jost',sans-serif; font-size:9px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:var(--structural); margin-bottom:4px;">Storage</div>
+                  <div style="font-family:'Jost',sans-serif; font-weight:600; font-size:15px; color:var(--haze);">Dropbox</div>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <!-- Row helper: highlighted rows get a faint aurora tint in the Vault cell -->
+
+            <!-- Row 1 — KEY ROW -->
+            <tr style="background:rgba(79,195,200,.03);">
+              <td style="padding:14px 16px 14px 0; color:var(--cloud); font-weight:500; border-top:1px solid var(--border); border-bottom:1px solid rgba(79,195,200,.12);">Search across multiple accounts at once</td>
+              <td style="padding:14px 16px; border:1px solid rgba(79,195,200,.35); border-top:1px solid rgba(79,195,200,.35); background:rgba(79,195,200,.06); text-align:center;">
+                <span style="font-size:18px; background:linear-gradient(90deg,#4fc3c8,#5b8dd9); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-weight:700;">✓</span>
+              </td>
+              <td style="padding:14px 16px; border-top:1px solid var(--border); border-bottom:1px solid var(--border); border-left:1px solid var(--border); text-align:center; color:var(--structural);">One at a time</td>
+              <td style="padding:14px 16px; border-top:1px solid var(--border); border-bottom:1px solid var(--border); border-left:1px solid var(--border); text-align:center; color:var(--structural);">One at a time</td>
+              <td style="padding:14px 16px; border-top:1px solid var(--border); border-bottom:1px solid var(--border); border-left:1px solid var(--border); border-right:1px solid var(--border); text-align:center; color:var(--structural);">One at a time</td>
+            </tr>
+
+            <!-- Row 2 — KEY ROW -->
+            <tr style="background:rgba(91,141,217,.03);">
+              <td style="padding:14px 16px 14px 0; color:var(--cloud); font-weight:500; border-bottom:1px solid rgba(91,141,217,.1);">Mix Drive + OneDrive + Dropbox in one search</td>
+              <td style="padding:14px 16px; border-left:1px solid rgba(79,195,200,.35); border-right:1px solid rgba(79,195,200,.35); background:rgba(79,195,200,.06); text-align:center;">
+                <span style="font-size:18px; background:linear-gradient(90deg,#4fc3c8,#5b8dd9); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-weight:700;">✓</span>
+              </td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); text-align:center;"><span style="color:var(--structural); font-size:16px;">✗</span></td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); text-align:center;"><span style="color:var(--structural); font-size:16px;">✗</span></td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); border-right:1px solid var(--border); text-align:center;"><span style="color:var(--structural); font-size:16px;">✗</span></td>
+            </tr>
+
+            <!-- Row 3 -->
+            <tr>
+              <td style="padding:14px 16px 14px 0; color:var(--cloud); border-bottom:1px solid var(--border);">Tab switching required</td>
+              <td style="padding:14px 16px; border-left:1px solid rgba(79,195,200,.35); border-right:1px solid rgba(79,195,200,.35); background:rgba(79,195,200,.04); text-align:center; font-family:'Jost',sans-serif; font-size:12px; font-weight:600; letter-spacing:.06em; color:var(--glacial);">None</td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); text-align:center; color:var(--muted); font-size:13px;">Per account</td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); text-align:center; color:var(--muted); font-size:13px;">Per account</td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); border-right:1px solid var(--border); text-align:center; color:var(--muted); font-size:13px;">Per account</td>
+            </tr>
+
+            <!-- Row 4 -->
+            <tr>
+              <td style="padding:14px 16px 14px 0; color:var(--cloud); border-bottom:1px solid var(--border);">Cost</td>
+              <td style="padding:14px 16px; border-left:1px solid rgba(79,195,200,.35); border-right:1px solid rgba(79,195,200,.35); background:rgba(79,195,200,.04); text-align:center; font-family:'Jost',sans-serif; font-size:12px; font-weight:600; letter-spacing:.06em; color:var(--glacial);">Free</td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); text-align:center; color:var(--muted); font-size:13px;">Free tier / paid</td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); text-align:center; color:var(--muted); font-size:13px;">Free tier / paid</td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); border-right:1px solid var(--border); text-align:center; color:var(--muted); font-size:13px;">Free tier / paid</td>
+            </tr>
+
+            <!-- Row 5 -->
+            <tr>
+              <td style="padding:14px 16px 14px 0; color:var(--cloud); border-bottom:1px solid var(--border);">Privacy</td>
+              <td style="padding:14px 16px; border-left:1px solid rgba(79,195,200,.35); border-right:1px solid rgba(79,195,200,.35); background:rgba(79,195,200,.04); text-align:center; font-family:'Jost',sans-serif; font-size:12px; font-weight:600; letter-spacing:.04em; color:var(--glacial);">Runs locally<br><span style="font-weight:400; font-family:'Outfit',sans-serif; font-size:12px; color:var(--muted); letter-spacing:0;">No data collected</span></td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); text-align:center; color:var(--muted); font-size:12px;">Google tracking</td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); text-align:center; color:var(--muted); font-size:12px;">Microsoft tracking</td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); border-right:1px solid var(--border); text-align:center; color:var(--muted); font-size:12px;">Dropbox tracking</td>
+            </tr>
+
+            <!-- Row 6 — bottom row closes the Vault column card -->
+            <tr>
+              <td style="padding:14px 16px 14px 0; color:var(--cloud); border-bottom:1px solid var(--border);">Replaces your cloud storage</td>
+              <td style="padding:14px 16px; border-left:1px solid rgba(79,195,200,.35); border-right:1px solid rgba(79,195,200,.35); border-bottom:1px solid rgba(79,195,200,.35); border-radius:0 0 0 0; background:rgba(79,195,200,.04); text-align:center; color:var(--muted); font-size:13px;">No — works alongside</td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); text-align:center;"><span style="font-size:16px; color:var(--glacial);">✓</span></td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); text-align:center;"><span style="font-size:16px; color:var(--glacial);">✓</span></td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); border-right:1px solid var(--border); text-align:center;"><span style="font-size:16px; color:var(--glacial);">✓</span></td>
+            </tr>
+
+          </tbody>
+          <!-- Footer row: Vault column gets the aurora-gradient bottom cap -->
+          <tfoot>
+            <tr>
+              <td style="border:none; padding:0;"></td>
+              <td style="padding:0 6px 0 0; border:none;">
+                <div style="background:linear-gradient(150deg,rgba(79,195,200,.12),rgba(139,111,212,.1)); border:1px solid rgba(79,195,200,.35); border-top:none; border-radius:0 0 12px 12px; padding:14px 16px; text-align:center;">
+                  <a href="#download" style="font-family:'Jost',sans-serif; font-size:11px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; background:linear-gradient(90deg,#4fc3c8,#8b6fd4); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; text-decoration:none;">Download free →</a>
+                </div>
+              </td>
+              <td colspan="3" style="border:none; padding:0;"></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <p style="font-family:'Outfit',sans-serif; font-size:13px; color:var(--structural); margin-top:20px;">Windows 10/11 · No installation required · No account needed</p>
+    </section>
+
+    <div class="aurora-divider" role="presentation"></div>
+
     <!-- ═══ FULL TRANSPARENCY ═══ -->
     <section class="section-padded" aria-labelledby="transparency-label">
       <h2 class="section-label" id="transparency-label">Full transparency</h2>
