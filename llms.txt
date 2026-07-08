@@ -22,8 +22,8 @@ Elizabeth Lemoine is a strategist and operations leader with over a decade of di
 ### Strategy
 Northlight Advisory Services helps organisations identify what actually matters, set clear direction, and build plans that hold up under pressure. Not strategy documents — decision clarity.
 
-### Advisory & Fractional Leadership
-Northlight Advisory Services provides ongoing thinking partnerships for founders and operators, including fractional engagements where Elizabeth Lemoine works as an embedded part of a team for a defined period. Director-level operations and strategy capacity without a full-time hire.
+### Fractional COO & Advisory
+Northlight Advisory Services provides ongoing thinking partnerships for founders and operators, including fractional COO engagements where Elizabeth Lemoine works as an embedded part of a team for a defined period. Director-level operations and strategy capacity without a full-time hire.
 
 ### AI Adoption
 Northlight Advisory Services provides practical AI implementation for Canadian businesses. Northlight Advisory Services identifies which workflows AI improves, which tools fit, and what governance is needed. Grounded in Canadian regulatory context including PIPEDA, the OPC's ChatGPT investigation findings, and the BDC LIFT program.
@@ -70,6 +70,7 @@ URL: https://bynorthlight.ca/faq.html
 - https://bynorthlight.ca/vault.html — Northlight Vault product details
 - https://bynorthlight.ca/who-we-help.html — Client profile and diagnostic tools
 - https://bynorthlight.ca/faq.html — Frequently asked questions about Northlight Advisory Services
+- https://bynorthlight.ca/vault-docs.html — Northlight Vault documentation and usage guide
 - https://bynorthlight.ca/blog/ — Essays and thinking from Elizabeth Lemoine
 
 ## What Northlight Advisory Services is not
