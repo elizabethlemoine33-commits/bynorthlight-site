@@ -62,6 +62,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://bynorthlight.ca/blog/about-northlight-advisory-services.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bynorthlight.ca/blog/aeo-optimization-lessons-2026.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://bynorthlight.ca/blog/ai-for-all-programmes-nova-scotia-businesses.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -73,6 +83,11 @@
   </url>
   <url>
     <loc>https://bynorthlight.ca/blog/ai-strategy-wrong-clock.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bynorthlight.ca/blog/best-fractional-advisory-services-canada.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -98,6 +113,11 @@
   </url>
   <url>
     <loc>https://bynorthlight.ca/blog/how-we-built-northlight-vault-privacy-first.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bynorthlight.ca/blog/ongoing-business-advisory-canada.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
