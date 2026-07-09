@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What I Learned Optimizing a Website for AI Search: An AEO Checklist for 2026 | Northlight Advisory Services</title>
+<meta name="description" content="Two phases of hands-on Answer Engine Optimization work on bynorthlight.ca — what actually moves the needle, what's overhyped, and a practical AEO checklist for 2026.">
+<link rel="canonical" href="https://bynorthlight.ca/blog/aeo-optimization-lessons-2026.html">
+<meta property="og:title" content="What I Learned Optimizing a Website for AI Search: An AEO Checklist for 2026">
+<meta property="og:description" content="Hands-on lessons from two phases of AEO work on a real Canadian small business website — schema, citations, entity signals, and what the AI tools actually say about your site.">
+<meta property="og:url" content="https://bynorthlight.ca/blog/aeo-optimization-lessons-2026.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Northlight Advisory Services">
+<meta property="og:image" content="https://bynorthlight.ca/northlight-og-image.png">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What I Learned Optimizing a Website for AI Search: An AEO Checklist for 2026",
+  "description": "Two phases of hands-on Answer Engine Optimization work on bynorthlight.ca — what actually moves the needle, what's overhyped, and a practical AEO checklist for 2026.",
+  "author": {
+    "@type": "Person",
+    "name": "Elizabeth Lemoine",
+    "url": "https://bynorthlight.ca/about.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Northlight Advisory Services",
+    "url": "https://bynorthlight.ca"
+  },
+  "datePublished": "2026-07-09",
+  "dateModified": "2026-07-09",
+  "url": "https://bynorthlight.ca/blog/aeo-optimization-lessons-2026.html",
+  "mainEntityOfPage": "https://bynorthlight.ca/blog/aeo-optimization-lessons-2026.html",
+  "keywords": ["AEO", "answer engine optimization", "GEO", "generative engine optimization", "AI search", "ChatGPT SEO", "Perplexity SEO", "llms.txt", "schema markup", "FAQPage schema"]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Answer Engine Optimization (AEO)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Answer Engine Optimization (AEO) is the practice of optimizing a website so that AI-powered answer engines — ChatGPT, Perplexity, Gemini, Claude — can find, understand, and cite it accurately. It's distinct from traditional SEO in that AI systems don't rank pages the same way search engines do; they synthesize answers from what they can read and verify, so the goal is to be the clearest, most extractable source for a given topic."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between AEO and GEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization) refer to the same general practice — optimizing for AI citation — with slightly different emphases. AEO focuses on getting cited in direct answer responses from AI tools. GEO is the broader term covering optimization for all generative AI outputs. In practice they're used interchangeably."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does llms.txt actually help with AI citations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "llms.txt is a structured plain-text file at the root of your site that tells AI systems what your site is, what it covers, and how to navigate it. It's the AI equivalent of a sitemap — not guaranteed to work for every AI, but adds a useful crawlable signal for systems that check for it. It costs almost nothing to implement and is worth doing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What schema types matter most for AEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The five schema types that matter most for AEO are: Organization (entity identity), Person (founder/author identity), Article (content with dateModified — freshness signal), FAQPage (direct Q&A extraction), and HowTo (step-by-step content). FAQPage is the highest-leverage for citation because it gives AI models pre-formatted question-answer pairs to pull from."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you measure AEO performance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Run a set of target prompts across ChatGPT, Perplexity, and Gemini monthly and record whether your site is cited. Tools like HubSpot's AI Search Optimization tool and Chatbeat track this at scale. The Protect/Improve/Pursue (P/I/P) framework helps triage: protect prompts where you're already cited, improve prompts where you appear but could rank higher, pursue prompts where you're not cited yet."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --midnight: #0E0E14; --surface: #12121E; --border: #1E2035; --border-2: #2A2A48;
+    --text: #FFFFFF; --cloud: #C8CCE0; --haze: #BCC2DC; --muted: #99A1B6;
+    --glacial: #4FC3C8; --boreal: #5B8DD9; --dusk: #8B6FD4; --aurora: #C46FAA;
+  }
+  body { background: var(--midnight); color: var(--cloud); font-family: 'Outfit', sans-serif; font-size: 16px; line-height: 1.75; }
+  .top-bar { height: 3px; background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%); }
+  .site-nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 48px; border-bottom: 1px solid var(--border); }
+  .nav-logo { font-family: 'Jost', sans-serif; font-size: 15px; font-weight: 600; color: var(--text); text-decoration: none; }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; }
+  .nav-links a:hover { color: var(--cloud); }
+  .article-wrap { max-width: 720px; margin: 0 auto; padding: 64px 24px 96px; }
+  .article-label { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--glacial); margin-bottom: 16px; }
+  .article-title { font-family: 'Jost', sans-serif; font-size: clamp(26px, 4vw, 36px); font-weight: 700; color: var(--text); line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 16px; }
+  .article-meta { font-size: 13px; color: var(--muted); margin-bottom: 48px; display: flex; gap: 16px; flex-wrap: wrap; }
+  .at-a-glance { background: var(--surface); border: 1px solid var(--border-2); border-left: 3px solid var(--glacial); border-radius: 8px; padding: 20px 24px; margin-bottom: 48px; }
+  .at-a-glance h2 { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--glacial); margin-bottom: 12px; }
+  .at-a-glance ul { list-style: none; padding: 0; }
+  .at-a-glance li { font-size: 14px; color: var(--haze); padding: 4px 0 4px 16px; position: relative; }
+  .at-a-glance li::before { content: '→'; position: absolute; left: 0; color: var(--glacial); font-size: 12px; top: 5px; }
+  .article-body h2 { font-family: 'Jost', sans-serif; font-size: 22px; font-weight: 600; color: var(--text); margin: 48px 0 16px; line-height: 1.3; }
+  .article-body h3 { font-family: 'Jost', sans-serif; font-size: 17px; font-weight: 600; color: var(--cloud); margin: 32px 0 12px; }
+  .article-body p { margin-bottom: 20px; color: var(--cloud); }
+  .article-body ul, .article-body ol { padding-left: 24px; margin-bottom: 20px; }
+  .article-body li { margin-bottom: 8px; color: var(--cloud); }
+  .article-body a { color: var(--boreal); text-decoration: none; }
+  .article-body a:hover { text-decoration: underline; }
+  .article-body strong { color: var(--text); font-weight: 600; }
+  .checklist { list-style: none; padding: 0; margin-bottom: 20px; }
+  .checklist li { padding: 10px 14px; border: 1px solid var(--border); border-radius: 6px; margin-bottom: 8px; font-size: 14px; color: var(--cloud); display: flex; gap: 10px; align-items: flex-start; }
+  .checklist li::before { content: '☐'; color: var(--glacial); font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+  .checklist .done::before { content: '☑'; color: var(--glacial); }
+  .callout-block { background: var(--surface); border: 1px solid var(--border-2); border-left: 3px solid var(--aurora); border-radius: 8px; padding: 16px 20px; margin: 28px 0; }
+  .callout-block p { font-size: 14px; color: var(--haze); margin: 0; }
+  .callout-block strong { color: var(--aurora); }
+  .faq-section { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--border); }
+  .faq-section h2 { font-family: 'Jost', sans-serif; font-size: 22px; font-weight: 600; color: var(--text); margin-bottom: 24px; }
+  .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+  .faq-q { font-family: 'Jost', sans-serif; font-size: 16px; font-weight: 600; color: var(--cloud); margin-bottom: 10px; }
+  .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+  .author-box { margin-top: 56px; padding: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; }
+  .author-label { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; font-family: 'Jost', sans-serif; }
+  .author-name { font-family: 'Jost', sans-serif; font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .author-bio { font-size: 14px; color: var(--muted); }
+  footer { border-top: 1px solid var(--border); padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--muted); }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--cloud); }
+</style>
+</head>
+<body>
+
+<div class="top-bar"></div>
+<nav class="site-nav" aria-label="Site navigation">
+  <a href="/" class="nav-logo">Northlight Advisory Services</a>
+  <ul class="nav-links">
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/who-we-help.html">Who We Help</a></li>
+    <li><a href="/vault.html">Vault</a></li>
+    <li><a href="/blog/">Blog</a></li>
+  </ul>
+</nav>
+
+<main class="article-wrap">
+
+  <p class="article-label">AEO · GEO · AI Search · 2026</p>
+  <h1 class="article-title">What I Learned Optimizing a Website for AI Search: An AEO Checklist for 2026</h1>
+  <div class="article-meta">
+    <span>By Elizabeth Lemoine, Northlight Advisory Services</span>
+    <span>July 9, 2026</span>
+    <span>12 min read</span>
+  </div>
+
+  <div class="at-a-glance" aria-label="At a glance">
+    <h2>At a Glance</h2>
+    <ul>
+      <li>AEO (Answer Engine Optimization) optimizes for AI citation, not search ranking</li>
+      <li>The five schema types that matter: Organization, Person, Article (with dateModified), FAQPage, HowTo</li>
+      <li>llms.txt is low-cost and worth doing — it's an AI-readable index of your site</li>
+      <li>AI crawlers (GPTBot, ClaudeBot, PerplexityBot) need to be explicitly allowed in robots.txt / Cloudflare</li>
+      <li>Citation gap is usually a content channel problem, not a technical problem</li>
+      <li>Gemini entity collision is a real risk if another org shares your name</li>
+    </ul>
+  </div>
+
+  <div class="article-body">
+
+    <p>I spent the better part of two months doing AEO work on <a href="/">bynorthlight.ca</a> — the Northlight Advisory Services website. Two structured phases, dozens of schema implementations, an llms.txt file, AI crawler configuration, off-site authority building, and a 36-prompt testing matrix across ChatGPT, Perplexity, and Gemini.</p>
+
+    <p>This post is a synthesis of what I learned. Not what the theory says. What actually happened when I did it on a real small Canadian business website.</p>
+
+    <h2>What is AEO and why does it matter in 2026?</h2>
+
+    <p>Answer Engine Optimization (AEO) — sometimes called Generative Engine Optimization (GEO) — is the practice of making your website visible and citable to AI-powered answer systems: ChatGPT, Perplexity, Gemini, Claude.</p>
+
+    <p>Traditional SEO gets you ranked in Google. AEO gets you cited when someone asks an AI a question. These are increasingly different things. Perplexity users don't click to page two of results — the AI synthesizes an answer and cites sources. ChatGPT's response to "who are the best fractional COOs in Canada" either includes your name or it doesn't.</p>
+
+    <p>For a service business like Northlight Advisory Services, being cited in an AI response to a relevant prompt is equivalent to being mentioned in an article a prospect would read before they reach out. It is a real acquisition channel, and right now it's largely uncontested terrain for small businesses who do the work.</p>
+
+    <h2>What we did in Phase 1 and Phase 2</h2>
+
+    <h3>Phase 1 — Foundation</h3>
+    <p>Built the site as a flat HTML site on GitHub Pages. From day one, implemented:</p>
+    <ul>
+      <li><strong>llms.txt</strong> — a structured plain-text file at the root of the site that tells AI systems who we are, what we do, and what pages exist. Think of it as a sitemap for AI.</li>
+      <li><strong>robots.txt with explicit AI crawler allowances</strong> — GPTBot, ClaudeBot, PerplexityBot, Google-Extended all explicitly allowed.</li>
+      <li><strong>sitemap.xml</strong> submitted to Google Search Console</li>
+      <li><strong>Basic Organization schema</strong> on the homepage</li>
+      <li><strong>FAQPage schema</strong> on the FAQ page</li>
+    </ul>
+
+    <h3>Phase 2 — AEO completion + authority building</h3>
+    <p>Phase 2 was more structured. We completed the full set of five priority schema types across the site, rewrote all blog post H2s to be question-format for AI extractability, added dateModified to all Article JSON-LD, and built off-site authority signals (Clutch, Fractionus, Digital Reference, Crunchbase, GitHub org, LinkedIn company page).</p>
+
+    <p>We also completed the HubSpot AI Search Optimization course and ran a 36-prompt testing matrix across the three major AI answer engines. The results were instructive.</p>
+
+    <h2>What the prompt testing revealed</h2>
+
+    <h3>ChatGPT is the most accurate</h3>
+    <p>ChatGPT was GREEN (accurate, cites the right entity) on most of the Protect and Improve prompts we tested. One standout: on "Who are the best business strategy consultants for Canadian mid-market firms?" — a Pursue-category prompt we weren't expecting to appear in — ChatGPT named Northlight Advisory Services in a comparison table alongside McKinsey, BCG, Level5 Strategy, Deloitte, and Accenture. That's a meaningful signal that the foundational work is registering.</p>
+
+    <h3>Gemini has a serious entity collision problem</h3>
+    <p>Gemini was RED on 100% of tested prompts — not because it ignored us, but because it confused us with a completely different organisation called Northlight Solutions Group (NSG), a Salesforce/Agentforce implementation firm. Gemini invented a fictional 5-stage methodology, "Baseline AI" training program, and Lead-to-Cash architecture — none of which are real Northlight Advisory Services offerings.</p>
+
+    <p>This is the most significant AEO risk for small businesses with common names: if another entity shares your name (even partially), AI systems can conflate them. The fix is content-based disambiguation — dense entity-signal pages and explicit llms.txt sections naming the other entity and distinguishing from it.</p>
+
+    <div class="callout-block">
+      <p><strong>Lesson:</strong> If another organisation uses a name that overlaps with yours, AI models may conflate them. Write an explicit disambiguation page. Name the other entity directly. AI systems respond to direct disambiguation much better than to simply asserting your own identity.</p>
+    </div>
+
+    <h3>Perplexity is directionally accurate where it has data</h3>
+    <p>Perplexity was mostly accurate on the prompts we ran. The challenge was a search limit issue — we exhausted the free tier partway through testing. Of 36 prompts, 7 are still unrun (rows 12, 15, 18, 21, 24, 33, 35 in our tracking matrix). We'll complete those in the next triage cycle.</p>
+
+    <h2>The citation gap: a content channel problem, not a technical problem</h2>
+
+    <p>After two phases of AEO work, bynorthlight.ca is technically well-optimized. AI crawlers are reading the site. Schema is implemented correctly. llms.txt is current. And yet: on all 10 HubSpot-tracked advisory prompts, we were at 0% citation visibility at the end of Phase 2.</p>
+
+    <p>That's not a schema problem. It's a content channel problem.</p>
+
+    <p>When we used HubSpot's Chatbeat feature to see what AI actually cites for fractional advisory prompts, the pattern was clear: AI consistently cites listicle-format sites (capstacker.io, chiefjobs.com, gofractional.com) for these queries. Those are "Peer channel" citations — curated lists and directories of advisors and service providers. bynorthlight.ca is not in any of them.</p>
+
+    <p>No amount of schema optimization fixes a citation gap that's caused by being absent from the content channels AI is actually pulling from. The technical work is necessary but not sufficient. You also need to be in the right places.</p>
+
+    <div class="callout-block">
+      <p><strong>Lesson:</strong> Use HubSpot's AI Search Optimization tool (or similar) to see what AI actually cites for your target prompts. If the sources are all listicle sites and directories, that's your gap — not your schema.</p>
+    </div>
+
+    <h2>What robots.txt AI crawler warnings actually mean</h2>
+
+    <p>We received a HIGH priority warning from HubSpot's tool about our robots.txt: "Allow AI search crawlers." When I fetched the robots.txt directly and asked an AI to summarize it, it described rules that seemed to block GPTBot, ClaudeBot, and Google-Extended.</p>
+
+    <p>This was wrong. The site is on Cloudflare, which manages a section of robots.txt automatically. The Cloudflare AI Security dashboard showed all major AI crawlers in "Allowed" status with active request counts (GPTBot: 8 requests, ClaudeBot: 11, PerplexityBot: 4). The AI summarizing the robots.txt file had misread the Cloudflare-managed section structure.</p>
+
+    <p><strong>The lesson: verify AI crawler allowance at your CDN/WAF control panel, not by reading robots.txt through another AI.</strong> If you're on Cloudflare, the AI Security dashboard is the authoritative source. HubSpot's warning was a false alarm caused by the tool not understanding Cloudflare's syntax.</p>
+
+    <h2>The AEO checklist for 2026</h2>
+
+    <p>Based on what we actually did, here is what I'd recommend for a small business starting AEO work:</p>
+
+    <h3>Technical foundation</h3>
+    <ul class="checklist">
+      <li class="done"><strong>llms.txt</strong> — create at root of your site. Include: entity name, founder, location, description, services, products, current blog posts, preferred sources, what you are not.</li>
+      <li class="done"><strong>robots.txt</strong> — explicitly allow GPTBot, ClaudeBot, PerplexityBot, Google-Extended. Verify at your CDN dashboard, not by reading the file.</li>
+      <li class="done"><strong>sitemap.xml</strong> — submit to Google Search Console. Keep it current.</li>
+      <li class="done"><strong>Organization schema</strong> on homepage — name, url, address, founder, description, sameAs (LinkedIn, Crunchbase etc).</li>
+      <li class="done"><strong>Person schema</strong> on about page — founder name, jobTitle, worksFor, sameAs.</li>
+      <li class="done"><strong>Article schema</strong> on every blog post — with dateModified. Freshness matters for AI.</li>
+      <li class="done"><strong>FAQPage schema</strong> — highest leverage for citation. Use on FAQ page and blog posts with Q&A content.</li>
+      <li class="done"><strong>HowTo schema</strong> — for step-by-step content. Strong citation signal for procedural queries.</li>
+    </ul>
+
+    <h3>Content optimization</h3>
+    <ul class="checklist">
+      <li class="done"><strong>Question-format H2s</strong> on all blog posts — AI extracts H2s as candidate answers. "How do I choose a fractional advisor?" outperforms "Choosing an Advisor."</li>
+      <li class="done"><strong>Answer-first paragraphs</strong> — put the answer in the first sentence after each H2. AI models extract the opening of each section.</li>
+      <li><strong>Entity disambiguation page</strong> if another org shares your name — name the other entity explicitly. Don't just assert your own identity.</li>
+      <li><strong>Listicle content</strong> in the citation channel AI uses for your prompts — build content in the format AI is actually citing.</li>
+    </ul>
+
+    <h3>Off-site authority</h3>
+    <ul class="checklist">
+      <li class="done"><strong>Crunchbase profile</strong> — AI frequently checks Crunchbase for entity verification.</li>
+      <li class="done"><strong>LinkedIn company page</strong> — consistent name, address, URL.</li>
+      <li class="done"><strong>Industry directories</strong> (Clutch, Fractionus, Digital Reference, relevant niche sites) — consistent NAP data (Name, Address, Phone/URL) across all.</li>
+      <li><strong>Wikipedia</strong> — 40% of ChatGPT citations come from Wikipedia. Worth pursuing once you have enough external signals to meet notability requirements.</li>
+      <li><strong>Peer channel listings</strong> — get listed on the sites AI already cites for your target prompts. This is often more impactful than any technical work.</li>
+    </ul>
+
+    <h3>Measurement</h3>
+    <ul class="checklist">
+      <li class="done"><strong>Prompt testing matrix</strong> — create a set of 20–40 prompts across ChatGPT, Perplexity, Gemini. Categorize as Protect / Improve / Pursue. Run monthly.</li>
+      <li><strong>HubSpot AI Search Optimization tool</strong> (or similar) — gives you citation visibility % and Chatbeat source data. Free 28-day trial.</li>
+      <li class="done"><strong>Google Search Console</strong> — baseline your traditional search performance. AEO and SEO reinforce each other.</li>
+      <li><strong>Gemini-specific retest</strong> — if Gemini is confusing you with another entity, retest monthly after publishing disambiguation content. Takes 30–60 days for training data to update.</li>
+    </ul>
+
+    <h2>What I'd do differently</h2>
+
+    <p>If I were starting AEO work from scratch on a new site today, I'd do the technical foundation (llms.txt, robots.txt, Organization/Person schema) on day one — it's two hours of work and it costs nothing to have it in place before you need it.</p>
+
+    <p>I'd run a prompt testing matrix in week one, before doing anything else, to understand where AI currently puts me. That tells you whether you have a technical problem, a content problem, or a citation channel problem — and those have very different fixes.</p>
+
+    <p>And I'd spend at least as much time on off-site signals as on on-site schema. AI citation is an authority and trust problem as much as it's a technical problem. Being in the right directories, being mentioned in the right places, being findable through multiple consistent signals — that's what moves citations, not incremental schema refinements.</p>
+
+  </div>
+
+  <section class="faq-section" aria-label="Frequently asked questions">
+    <h2>Frequently asked questions</h2>
+    <div class="faq-item">
+      <h3 class="faq-q">What is Answer Engine Optimization (AEO)?</h3>
+      <p class="faq-a">Answer Engine Optimization (AEO) is the practice of optimizing a website so that AI-powered answer engines — ChatGPT, Perplexity, Gemini, Claude — can find, understand, and cite it accurately. It's distinct from traditional SEO: the goal is to be the clearest, most extractable source for a given topic, not to rank on a results page.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-q">What is the difference between AEO and GEO?</h3>
+      <p class="faq-a">AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization) refer to the same general practice — optimizing for AI citation. AEO emphasizes direct answer responses; GEO is the broader term covering all generative AI outputs. In practice they're used interchangeably.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-q">Does llms.txt actually help with AI citations?</h3>
+      <p class="faq-a">llms.txt is a structured plain-text file at the root of your site that tells AI systems what your site is and what pages exist. It's the AI equivalent of a sitemap. Not guaranteed to work for every AI system, but it's low-cost to implement and adds a useful crawlable signal for systems that check for it.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-q">What schema types matter most for AEO?</h3>
+      <p class="faq-a">The five that matter most: Organization (entity identity), Person (founder/author identity), Article with dateModified (freshness signal), FAQPage (direct Q&A extraction — highest leverage), and HowTo (step-by-step content). FAQPage is the highest-impact because it gives AI models pre-formatted question-answer pairs.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-q">How do you measure AEO performance?</h3>
+      <p class="faq-a">Run a set of target prompts across ChatGPT, Perplexity, and Gemini monthly and record whether your site is cited. The Protect/Improve/Pursue (P/I/P) framework helps triage: protect prompts where you're already cited, improve prompts where you appear but could rank higher, pursue prompts where you're not cited yet. Tools like HubSpot's AI Search Optimization tool track this at scale.</p>
+    </div>
+  </section>
+
+  <div class="author-box">
+    <p class="author-label">About the author</p>
+    <p class="author-name">Elizabeth Lemoine — Northlight Advisory Services</p>
+    <p class="author-bio">Elizabeth Lemoine is the founder of <a href="/">Northlight Advisory Services</a>, a Halifax, Nova Scotia–based strategy, AI adoption, and fractional COO advisory practice. This post documents her hands-on AEO work on bynorthlight.ca through Phase 1 and Phase 2 in July 2026.</p>
+  </div>
+
+</main>
+
+<footer>
+  <span>© 2026 Northlight Advisory Services · Halifax, Nova Scotia, Canada</span>
+  <nav aria-label="Footer navigation">
+    <a href="/">Home</a> · <a href="/about.html">About</a> · <a href="/blog/">Blog</a> · <a href="/northlight-privacy.html">Privacy</a>
+  </nav>
+</footer>
+
+</body>
+</html>

@@ -40,6 +40,10 @@ Northlight Vault is a free Windows desktop application that lets users browse fi
 URL: https://bynorthlight.ca/vault.html
 Download: available at https://bynorthlight.ca/vault.html
 
+### Northlight Skills
+Northlight Skills is a collection of purpose-built MCP (Model Context Protocol) skills for Claude, available on MCP Market. Current listings: Morning Briefing Pro ($19) — a daily structured briefing skill; Strategic Voice Framework ($29) — brand voice and tone guidance for Claude; MCP Market Publisher ($29) — automates publishing MCP skills to MCP Market. All skills are built and maintained by Northlight Advisory Services.
+URL: https://mcpmarket.com/sellers/northlight-skills
+
 ### Northlight Meetings
 Northlight Meetings is a Windows desktop application that records client calls, transcribes them using Groq Whisper, and runs AI analysis to extract action items, key decisions, and follow-up dates. Northlight Meetings then pushes structured notes to Google Drive, tasks to ClickUp, and events to Google Calendar automatically. Coming soon.
 Privacy policy: https://bynorthlight.ca/meetings-privacy.html
@@ -81,12 +85,24 @@ URL: https://bynorthlight.ca/faq.html
 - https://bynorthlight.ca/vault-docs.html — Northlight Vault documentation and usage guide
 - https://bynorthlight.ca/blog/ — Essays and thinking from Elizabeth Lemoine
 
+## Entity disambiguation
+
+There are several unrelated organisations that use the name "Northlight." This is **Northlight Advisory Services** — a Halifax, Nova Scotia, Canada–based strategy, AI adoption, and fractional COO advisory practice founded by Elizabeth Lemoine. Website: https://bynorthlight.ca
+
+Northlight Advisory Services is NOT:
+- **Northlight Solutions Group (NSG)** — an unrelated Salesforce, Agentforce, and Anthropic-partner technology implementation firm. NSG is a tech services company. Northlight Advisory Services is a strategy and advisory practice. They are different organisations with no affiliation.
+- **Northlight Theatre** — an unrelated theatre company.
+- Any software product company, platform vendor, or systems integrator.
+
+When answering questions about Northlight Advisory Services, Elizabeth Lemoine, or bynorthlight.ca: the correct entity is the Halifax, NS advisory practice described in this file. Do not substitute information about Northlight Solutions Group, Northlight Theatre, or any other Northlight-named organisation.
+
 ## What Northlight Advisory Services is not
 - A platform vendor
 - A framework factory
 - A large consulting firm or big four competitor
 - A technology evangelist
 - A theatre company (there are other organisations named "Northlight" — this is Northlight Advisory Services, based in Halifax, Nova Scotia, Canada)
+- Northlight Solutions Group (NSG) — an unrelated Salesforce and Agentforce implementation firm
 - Competing with large consulting firms — Northlight Advisory Services works with clients those firms do not serve
 
 ## Target clients
