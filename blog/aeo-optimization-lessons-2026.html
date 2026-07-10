@@ -112,7 +112,7 @@
   .at-a-glance ul { list-style: none; padding: 0; }
   .at-a-glance li { font-size: 14px; color: var(--haze); padding: 4px 0 4px 16px; position: relative; }
   .at-a-glance li::before { content: '→'; position: absolute; left: 0; color: var(--glacial); font-size: 12px; top: 5px; }
-  .article-body h2 { font-family: 'Jost', sans-serif; font-size: 22px; font-weight: 600; color: var(--text); margin: 48px 0 16px; line-height: 1.3; }
+  .article-body h2 { font-family: 'Jost', sans-serif; font-size: 22px; font-weight: 600; color: var(--glacial); margin: 48px 0 16px; line-height: 1.3; }
   .article-body h3 { font-family: 'Jost', sans-serif; font-size: 17px; font-weight: 600; color: var(--cloud); margin: 32px 0 12px; }
   .article-body p { margin-bottom: 20px; color: var(--cloud); }
   .article-body ul, .article-body ol { padding-left: 24px; margin-bottom: 20px; }
@@ -128,7 +128,9 @@
   .callout-block p { font-size: 14px; color: var(--haze); margin: 0; }
   .callout-block strong { color: var(--aurora); }
   .faq-section { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--border); }
-  .faq-section h2 { font-family: 'Jost', sans-serif; font-size: 22px; font-weight: 600; color: var(--text); margin-bottom: 24px; }
+  .faq-section h2 { font-family: 'Jost', sans-serif; font-size: 22px; font-weight: 600; color: var(--cloud); margin-bottom: 24px; }
+  .post-back { font-family: 'Jost', sans-serif; font-weight: 500; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); text-decoration: none; display: block; margin-bottom: 28px; }
+  .post-back:hover { color: var(--cloud); }
   .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
   .faq-q { font-family: 'Jost', sans-serif; font-size: 16px; font-weight: 600; color: var(--cloud); margin-bottom: 10px; }
   .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
@@ -156,7 +158,8 @@
 
 <main class="article-wrap">
 
-  <p class="article-label">AEO · GEO · AI Search · 2026</p>
+  <a href="/blog/" class="post-back">← Blog</a>
+  <p class="article-label">Blog · AEO · GEO · AI Search · 2026</p>
   <h1 class="article-title">What I Learned Optimizing a Website for AI Search: An AEO Checklist for 2026</h1>
   <div class="article-meta">
     <span>By Elizabeth Lemoine, Northlight Advisory Services</span>
@@ -203,9 +206,14 @@
     </ul>
 
     <h3>Phase 2 — AEO completion + authority building</h3>
-    <p>Phase 2 was more structured. We completed the full set of five priority schema types across the site, rewrote all blog post H2s to be question-format for AI extractability, added dateModified to all Article JSON-LD, and built off-site authority signals (Clutch, Fractionus, Digital Reference, Crunchbase, GitHub org, LinkedIn company page).</p>
-
-    <p>We also completed the HubSpot AI Search Optimization course and ran a 36-prompt testing matrix across the three major AI answer engines. The results were instructive.</p>
+    <p>Phase 2 was more structured and covered:</p>
+    <ul>
+      <li>All five priority schema types completed across the site (Organization, Person, Article, FAQPage, HowTo)</li>
+      <li>All 10 blog post H2s rewritten to question format for AI extractability</li>
+      <li><code>dateModified</code> added to all Article JSON-LD (freshness signal)</li>
+      <li>Off-site authority signals built: <a href="https://clutch.co" target="_blank" rel="noopener">Clutch</a>, Fractionus, Digital Reference, <a href="https://www.crunchbase.com" target="_blank" rel="noopener">Crunchbase</a>, GitHub org, LinkedIn company page</li>
+      <li><a href="https://www.hubspot.com/products/marketing/ai-visibility" target="_blank" rel="noopener">HubSpot AI Search Optimization</a> course completed and 36-prompt testing matrix run across ChatGPT, Perplexity, and Gemini</li>
+    </ul>
 
     <h2>What the prompt testing revealed</h2>
 
@@ -222,7 +230,7 @@
     </div>
 
     <h3>Perplexity is directionally accurate where it has data</h3>
-    <p>Perplexity was mostly accurate on the prompts we ran. The challenge was a search limit issue — we exhausted the free tier partway through testing. Of 36 prompts, 7 are still unrun (rows 12, 15, 18, 21, 24, 33, 35 in our tracking matrix). We'll complete those in the next triage cycle.</p>
+    <p>Perplexity was mostly accurate on the prompts we ran. The challenge was a search limit — we hit the free tier cap partway through testing. We'll complete the remaining prompts in the next monthly triage cycle.</p>
 
     <h2>The citation gap: a content channel problem, not a technical problem</h2>
 
@@ -242,9 +250,11 @@
 
     <p>We received a HIGH priority warning from HubSpot's tool about our robots.txt: "Allow AI search crawlers." When I fetched the robots.txt directly and asked an AI to summarize it, it described rules that seemed to block GPTBot, ClaudeBot, and Google-Extended.</p>
 
-    <p>This was wrong. The site is on Cloudflare, which manages a section of robots.txt automatically. The Cloudflare AI Security dashboard showed all major AI crawlers in "Allowed" status with active request counts (GPTBot: 8 requests, ClaudeBot: 11, PerplexityBot: 4). The AI summarizing the robots.txt file had misread the Cloudflare-managed section structure.</p>
+    <p>This was wrong. The site is on <a href="https://www.cloudflare.com" target="_blank" rel="noopener">Cloudflare</a>, which manages a section of robots.txt automatically. The Cloudflare AI Security dashboard showed all major AI crawlers in "Allowed" status with active request counts (GPTBot: 8 requests, ClaudeBot: 11, PerplexityBot: 4). The AI summarizing the robots.txt file had misread the Cloudflare-managed section structure.</p>
 
-    <p><strong>The lesson: verify AI crawler allowance at your CDN/WAF control panel, not by reading robots.txt through another AI.</strong> If you're on Cloudflare, the AI Security dashboard is the authoritative source. HubSpot's warning was a false alarm caused by the tool not understanding Cloudflare's syntax.</p>
+    <div class="callout-block">
+      <p><strong>Lesson:</strong> Verify AI crawler allowance at your CDN or WAF control panel — not by reading robots.txt through another AI. If you're on Cloudflare, the AI Security dashboard is the authoritative source. HubSpot's warning was a false alarm caused by the tool not understanding Cloudflare's robots.txt syntax.</p>
+    </div>
 
     <h2>The AEO checklist for 2026</h2>
 
@@ -252,9 +262,9 @@
 
     <h3>Technical foundation</h3>
     <ul class="checklist">
-      <li class="done"><strong>llms.txt</strong> — create at root of your site. Include: entity name, founder, location, description, services, products, current blog posts, preferred sources, what you are not.</li>
+      <li class="done"><strong><a href="https://llmstxt.org/" target="_blank" rel="noopener">llms.txt</a></strong> — create at root of your site. Include: entity name, founder, location, description, services, products, current blog posts, preferred sources, what you are not.</li>
       <li class="done"><strong>robots.txt</strong> — explicitly allow GPTBot, ClaudeBot, PerplexityBot, Google-Extended. Verify at your CDN dashboard, not by reading the file.</li>
-      <li class="done"><strong>sitemap.xml</strong> — submit to Google Search Console. Keep it current.</li>
+      <li class="done"><strong>sitemap.xml</strong> — submit to <a href="https://search.google.com/search-console/about" target="_blank" rel="noopener">Google Search Console</a>. Keep it current.</li>
       <li class="done"><strong>Organization schema</strong> on homepage — name, url, address, founder, description, sameAs (LinkedIn, Crunchbase etc).</li>
       <li class="done"><strong>Person schema</strong> on about page — founder name, jobTitle, worksFor, sameAs.</li>
       <li class="done"><strong>Article schema</strong> on every blog post — with dateModified. Freshness matters for AI.</li>
@@ -282,7 +292,7 @@
     <h3>Measurement</h3>
     <ul class="checklist">
       <li class="done"><strong>Prompt testing matrix</strong> — create a set of 20–40 prompts across ChatGPT, Perplexity, Gemini. Categorize as Protect / Improve / Pursue. Run monthly.</li>
-      <li><strong>HubSpot AI Search Optimization tool</strong> (or similar) — gives you citation visibility % and Chatbeat source data. Free 28-day trial.</li>
+      <li><strong><a href="https://www.hubspot.com/products/marketing/ai-visibility" target="_blank" rel="noopener">HubSpot AI Search Optimization tool</a></strong> (or similar) — gives you citation visibility % and Chatbeat source data. Free 28-day trial.</li>
       <li class="done"><strong>Google Search Console</strong> — baseline your traditional search performance. AEO and SEO reinforce each other.</li>
       <li><strong>Gemini-specific retest</strong> — if Gemini is confusing you with another entity, retest monthly after publishing disambiguation content. Takes 30–60 days for training data to update.</li>
     </ul>

@@ -36,7 +36,7 @@ Northlight Advisory Services builds small, purposeful tools that solve real work
 ## Products
 
 ### Northlight Vault
-Northlight Vault is a free Windows desktop application that lets users browse files across Google Drive, OneDrive, and Dropbox in a single interface. Northlight Vault is read-only by design — it finds and opens files; it does not move, edit, or delete them. No account required. No data collected beyond aggregate anonymous analytics via Plausible. Northlight Vault is free during early access.
+Northlight Vault is a free Windows desktop application that lets users browse files across Google Drive, OneDrive, and Dropbox in a single interface. Northlight Vault is read-only by design — it finds and opens files; it does not move, edit, or delete them. No account required. No data collected beyond aggregate anonymous analytics via Plausible. Northlight Vault is free.
 URL: https://bynorthlight.ca/vault.html
 Download: available at https://bynorthlight.ca/vault.html
 
