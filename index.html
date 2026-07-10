@@ -63,6 +63,8 @@
   .skip-nav:focus { top: 0; }
 
     a:visited { color: var(--glacial); }
+  .service-body a { color: var(--glacial); text-decoration: none; }
+  .service-body a:hover { text-decoration: underline; }
 
   /* ── TOP BAR ── */
   .top-bar {
@@ -186,7 +188,7 @@
 
   .building-row {
     display: grid; grid-template-columns: 1fr 1fr 1fr;
-    gap: 32px; align-items: start; max-width: 1100px;
+    gap: 32px; align-items: stretch; max-width: 1100px;
   }
 
   /* ── LAPTOP MOCKUP ── */
@@ -621,7 +623,7 @@
         </div>
         <div class="service-card">
           <h3 class="service-title">Apps</h3>
-          <p class="service-body">Small, purposeful tools built to solve real workflow problems. <a href="/vault.html">Northlight Vault</a> is a free Windows file browser across Google Drive, OneDrive, and Dropbox. <a href="/meetings-privacy.html">Northlight Meetings</a> records and analyses client calls automatically. <a href="https://mcpmarket.com/sellers/northlight-skills" target="_blank" rel="noopener">Northlight Skills</a> are purpose-built MCP integrations for Claude. Northlight Advisory Services builds for clients too, when the problem is specific enough to deserve a real solution.</p>
+          <p class="service-body">Small, purposeful tools built to solve real workflow problems. <a href="/vault.html">Northlight Vault</a> is a free Windows file browser across Google Drive, OneDrive, and Dropbox. <a href="/meetings.html">Northlight Meetings</a> records and analyses client calls automatically. <a href="https://mcpmarket.com/sellers/northlight-skills" target="_blank" rel="noopener">Northlight Skills</a> are purpose-built MCP integrations for Claude. Northlight Advisory Services builds for clients too, when the problem is specific enough to deserve a real solution.</p>
         </div>
       </div>
     </section>
@@ -682,7 +684,19 @@
         <div class="vault-card">
           <div class="vault-card-inner">
             <div class="vault-header">
-              <div class="vault-logo" style="background:rgba(139,111,212,0.15);border-color:rgba(139,111,212,0.3);display:flex;align-items:center;justify-content:center;font-size:24px;width:48px;height:48px;border-radius:12px;border:1px solid rgba(139,111,212,0.3);">🛠</div>
+              <div class="vault-logo">
+                <svg viewBox="0 0 48 48" width="48" height="48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="skills-icon-g" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#4FC3C8"/>
+                      <stop offset="40%" stop-color="#8B6FD4"/>
+                      <stop offset="100%" stop-color="#C46FAA"/>
+                    </linearGradient>
+                  </defs>
+                  <rect width="48" height="48" fill="url(#skills-icon-g)"/>
+                  <path d="M28 9 L15 28 L23.5 28 L20 39 L33 20 L24.5 20 Z" fill="white" opacity="0.95"/>
+                </svg>
+              </div>
               <div>
                 <p class="vault-name">Northlight Skills</p>
                 <p class="vault-product-label">MCP Marketplace &nbsp;·&nbsp; AI Integrations</p>
