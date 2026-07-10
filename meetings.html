@@ -343,6 +343,26 @@
     }
     .integration-desc { font-size: 12px; color: var(--muted); }
 
+    /* ── LIGHTBOX ── */
+    .lightbox {
+      display: none; position: fixed; inset: 0;
+      background: rgba(8, 8, 15, 0.92);
+      z-index: 1000; align-items: center; justify-content: center; padding: 32px;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox-inner { position: relative; max-width: 1000px; width: 100%; }
+    .lightbox-img { width: 100%; display: block; border: 1px solid var(--border-2); border-radius: 4px; }
+    .lightbox-close {
+      position: absolute; top: -44px; right: 0;
+      background: none; border: none; color: var(--muted);
+      font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      cursor: pointer; display: flex; align-items: center; gap: 8px; transition: color 0.2s;
+    }
+    .lightbox-close:hover { color: var(--text); }
+    .lightbox-close:focus-visible { outline: 2px solid var(--dusk); outline-offset: 4px; border-radius: 2px; }
+    .lightbox-caption { margin-top: 14px; font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.1em; color: var(--muted); text-align: center; }
+
     /* ── FAQ ── */
     .faq-list { display: flex; flex-direction: column; gap: 2px; }
     .faq-item { border: 1px solid var(--border); background: var(--surface); overflow: hidden; }
@@ -489,19 +509,19 @@
       <p style="font-family: 'Outfit', sans-serif; font-size: 15px; color: var(--haze); line-height: 1.7; margin-bottom: 28px;">Northlight Meetings handles the three things that reliably fall through the cracks after a client call: the notes, the follow-ups, and the tasks.</p>
       <div class="features-grid">
         <div class="feature-card">
+          <span class="feature-icon" aria-hidden="true">🎯</span>
+          <h3 class="feature-title">Three modes, one tool</h3>
+          <p class="feature-body"><strong style="color:var(--text);">Discover</strong> — client needs and pain points → SOW draft. <strong style="color:var(--text);">Progress</strong> — tasks done or blocked → ClickUp updates. <strong style="color:var(--text);">Notes</strong> — internal or vendor calls → clean summary. Pick the mode before you start recording; the AI shapes its output accordingly.</p>
+        </div>
+        <div class="feature-card">
           <span class="feature-icon" aria-hidden="true">🎙️</span>
           <h3 class="feature-title">Record and transcribe</h3>
           <p class="feature-body">Records your call audio through VB-Audio Cable and transcribes it with Groq Whisper — fast, accurate, and processed locally. Works with Zoom, Teams, Google Meet, or any platform that plays audio through your speakers.</p>
         </div>
         <div class="feature-card">
-          <span class="feature-icon" aria-hidden="true">🧠</span>
-          <h3 class="feature-title">AI analysis</h3>
-          <p class="feature-body">Groq Llama reads the transcript and extracts what matters: action items, key decisions, and follow-up dates. You review the output, approve what's accurate, and edit anything that needs adjusting before anything is sent.</p>
-        </div>
-        <div class="feature-card">
           <span class="feature-icon" aria-hidden="true">📤</span>
           <h3 class="feature-title">Push to your tools</h3>
-          <p class="feature-body">Approved meeting notes go to Google Drive. Action items become tasks in ClickUp. Follow-up dates become events in Google Calendar. One button. No copy-pasting.</p>
+          <p class="feature-body">Approved meeting notes go to Google Drive using your own templates. Action items become tasks in ClickUp. Follow-up dates become events in Google Calendar. One button. No copy-pasting.</p>
         </div>
       </div>
     </section>
@@ -542,6 +562,58 @@
         </div>
       </div>
     </section>
+
+    <div class="aurora-divider" role="presentation"></div>
+
+    <!-- ═══ SCREENSHOTS ═══ -->
+    <section class="section-padded" aria-labelledby="screenshots-label">
+      <h2 class="section-label" id="screenshots-label">See it in action</h2>
+      <div style="display:grid; grid-template-columns: repeat(3,1fr); gap:12px;">
+        <img
+          src="/northlight-meetings-screenshot-1.png"
+          alt="Northlight Meetings New Session screen showing three mode options: Discover (client needs and pain points to SOW draft), Progress (tasks done or blocked to ClickUp updates), and Notes (internal and vendor calls to clean summary), with Client Name and Project Name fields"
+          style="width:100%; display:block; border:1px solid var(--border); border-radius:4px; cursor:pointer; transition:border-color 0.2s, transform 0.2s; background:var(--surface);"
+          onclick="openLightbox(this)"
+          tabindex="0" role="button"
+          onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(this)}"
+          onmouseover="this.style.borderColor='var(--border-2)';this.style.transform='scale(1.01)'"
+          onmouseout="this.style.borderColor='var(--border)';this.style.transform='scale(1)'"
+        >
+        <img
+          src="/northlight-meetings-screenshot-2.png"
+          alt="Northlight Meetings recording screen showing RECORDING indicator, live timer at 00:00:02, MIC and SYSTEM AUDIO level bars, and a Cover In This Call prompt list including questions about core problems, stakeholders, success criteria, budget, and blockers"
+          style="width:100%; display:block; border:1px solid var(--border); border-radius:4px; cursor:pointer; transition:border-color 0.2s, transform 0.2s; background:var(--surface);"
+          onclick="openLightbox(this)"
+          tabindex="0" role="button"
+          onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(this)}"
+          onmouseover="this.style.borderColor='var(--border-2)';this.style.transform='scale(1.01)'"
+          onmouseout="this.style.borderColor='var(--border)';this.style.transform='scale(1)'"
+        >
+        <img
+          src="/northlight-meetings-screenshot-3.png"
+          alt="Northlight Meetings Post-Call Note screen with the heading Add context before analysis runs, explaining that a spoken note gets injected as high-priority context the AI uses to shape the output, with a Start Note button and an Analyse Now button"
+          style="width:100%; display:block; border:1px solid var(--border); border-radius:4px; cursor:pointer; transition:border-color 0.2s, transform 0.2s; background:var(--surface);"
+          onclick="openLightbox(this)"
+          tabindex="0" role="button"
+          onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(this)}"
+          onmouseover="this.style.borderColor='var(--border-2)';this.style.transform='scale(1.01)'"
+          onmouseout="this.style.borderColor='var(--border)';this.style.transform='scale(1)'"
+        >
+      </div>
+      <p style="margin-top:16px; font-family:'Jost',sans-serif; font-size:11px; letter-spacing:0.1em; color:var(--muted);">Click any screenshot to enlarge</p>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot viewer">
+      <div class="lightbox-inner">
+        <button class="lightbox-close" onclick="closeLightbox()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          Close
+        </button>
+        <img id="lightbox-img" class="lightbox-img" src="" alt="">
+        <p id="lightbox-caption" class="lightbox-caption"></p>
+      </div>
+    </div>
 
     <div class="aurora-divider" role="presentation"></div>
 
@@ -895,6 +967,35 @@
   </div>
 
   <script>
+    function openLightbox(img) {
+      const lb = document.getElementById('lightbox');
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox-img').alt = img.alt;
+      document.getElementById('lightbox-caption').textContent = img.alt;
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      lb.querySelector('.lightbox-close').focus();
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', function(e) {
+      const lb = document.getElementById('lightbox');
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape') { closeLightbox(); return; }
+      if (e.key === 'Tab') {
+        const focusable = lb.querySelectorAll('button, [href], [tabindex]:not([tabindex="-1"])');
+        const first = focusable[0], last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+      const lb = document.getElementById('lightbox');
+      if (lb) lb.addEventListener('click', function(e) { if (e.target === this) closeLightbox(); });
+    });
+
     function toggleFaq(btn) {
       const item = btn.closest('.faq-item');
       const isOpen = item.classList.contains('open');
