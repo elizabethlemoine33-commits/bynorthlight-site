@@ -457,7 +457,12 @@
           </div>
         </div>
         <div class="meetings-hero-right">
-          <div class="meetings-icon-display" aria-hidden="true">🎙️</div>
+          <div class="meetings-icon-display">
+            <img src="/northlight-meetings-icon-512x512.png"
+                 alt="Northlight Meetings application icon"
+                 style="width:140px;height:140px;border-radius:20px;"
+                 onerror="this.style.display='none'; this.parentNode.innerHTML += '<span style=\'font-size:80px\' aria-hidden=\'true\'>🎙️</span>'">
+          </div>
         </div>
       </div>
     </div>
@@ -536,6 +541,152 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <div class="aurora-divider" role="presentation"></div>
+
+    <!-- ═══ COMPARISON TABLE ═══ -->
+    <section class="section-padded" aria-labelledby="comparison-label" style="padding-bottom: 80px;">
+      <h2 class="section-label" id="comparison-label">How it stacks up</h2>
+      <p style="font-family:'Outfit',sans-serif; font-size:15px; color:var(--haze); margin-bottom:40px; max-width:600px;">Most tools stop at the transcript. Northlight Meetings goes from recording to filed notes, tasks, calendar events — and proposals — in a single session.</p>
+
+      <div style="overflow-x:auto; -webkit-overflow-scrolling:touch;">
+        <table style="width:100%; border-collapse:collapse; font-family:'Outfit',sans-serif; font-size:14px; min-width:700px;">
+          <colgroup>
+            <col style="width:30%">
+            <col style="width:18%">
+            <col style="width:18%">
+            <col style="width:17%">
+            <col style="width:17%">
+          </colgroup>
+          <thead>
+            <tr>
+              <th style="padding:0; border:none;"></th>
+              <!-- Meetings column header -->
+              <th style="padding:0 6px 0 0; border:none; vertical-align:bottom;">
+                <div style="background:linear-gradient(150deg,rgba(91,141,217,.12) 0%,rgba(139,111,212,.14) 45%,rgba(196,111,170,.1) 100%); border:1px solid rgba(139,111,212,.35); border-bottom:none; border-radius:12px 12px 0 0; padding:18px 16px 16px; position:relative; overflow:hidden;">
+                  <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#4fc3c8,#5b8dd9,#8b6fd4,#c46faa);"></div>
+                  <div style="font-family:'Jost',sans-serif; font-size:9px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; background:linear-gradient(90deg,#5b8dd9,#8b6fd4); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:4px;">Coming soon</div>
+                  <div style="font-family:'Jost',sans-serif; font-weight:600; font-size:15px; color:var(--text); letter-spacing:.02em;">Northlight<br>Meetings</div>
+                </div>
+              </th>
+              <th style="padding:0 6px; border:none; vertical-align:bottom;">
+                <div style="background:var(--surface); border:1px solid var(--border); border-bottom:none; border-radius:12px 12px 0 0; padding:18px 16px 16px;">
+                  <div style="font-family:'Jost',sans-serif; font-size:9px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:var(--structural); margin-bottom:4px;">Transcription</div>
+                  <div style="font-family:'Jost',sans-serif; font-weight:600; font-size:15px; color:var(--haze);">Otter / Fathom /<br>Fireflies</div>
+                </div>
+              </th>
+              <th style="padding:0 6px; border:none; vertical-align:bottom;">
+                <div style="background:var(--surface); border:1px solid var(--border); border-bottom:none; border-radius:12px 12px 0 0; padding:18px 16px 16px;">
+                  <div style="font-family:'Jost',sans-serif; font-size:9px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:var(--structural); margin-bottom:4px;">Built-in</div>
+                  <div style="font-family:'Jost',sans-serif; font-weight:600; font-size:15px; color:var(--haze);">Zoom / Teams<br>recording</div>
+                </div>
+              </th>
+              <th style="padding:0 0 0 6px; border:none; vertical-align:bottom;">
+                <div style="background:var(--surface); border:1px solid var(--border); border-bottom:none; border-radius:12px 12px 0 0; padding:18px 16px 16px;">
+                  <div style="font-family:'Jost',sans-serif; font-size:9px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:var(--structural); margin-bottom:4px;">Traditional</div>
+                  <div style="font-family:'Jost',sans-serif; font-weight:600; font-size:15px; color:var(--haze);">Manual<br>notes</div>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td style="padding:14px 16px 14px 0; color:var(--cloud); font-weight:500; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">Record and transcribe the call</td>
+              <td style="padding:14px 16px; border:1px solid rgba(139,111,212,.35); background:rgba(139,111,212,.06); text-align:center;">
+                <span style="font-size:18px; background:linear-gradient(90deg,#5b8dd9,#8b6fd4); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-weight:700;">✓</span>
+              </td>
+              <td style="padding:14px 16px; border-top:1px solid var(--border); border-bottom:1px solid var(--border); border-left:1px solid var(--border); text-align:center;"><span style="font-size:18px; color:var(--glacial); font-weight:600;">✓</span></td>
+              <td style="padding:14px 16px; border-top:1px solid var(--border); border-bottom:1px solid var(--border); border-left:1px solid var(--border); text-align:center; color:var(--structural); font-size:13px;">Video only</td>
+              <td style="padding:14px 16px; border-top:1px solid var(--border); border-bottom:1px solid var(--border); border-left:1px solid var(--border); border-right:1px solid var(--border); text-align:center;"><span style="color:var(--structural); font-size:16px;">✗</span></td>
+            </tr>
+
+            <tr>
+              <td style="padding:14px 16px 14px 0; color:var(--cloud); font-weight:500; border-bottom:1px solid var(--border);">Extract action items, decisions, follow-up dates</td>
+              <td style="padding:14px 16px; border-left:1px solid rgba(139,111,212,.35); border-right:1px solid rgba(139,111,212,.35); background:rgba(139,111,212,.06); text-align:center;">
+                <span style="font-size:18px; background:linear-gradient(90deg,#5b8dd9,#8b6fd4); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-weight:700;">✓</span>
+              </td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); text-align:center; color:var(--structural); font-size:13px;">Summary only</td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); text-align:center;"><span style="color:var(--structural); font-size:16px;">✗</span></td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); border-right:1px solid var(--border); text-align:center; color:var(--structural); font-size:13px;">Manual</td>
+            </tr>
+
+            <!-- KEY ROW — proposal/SOW -->
+            <tr style="background:rgba(139,111,212,.04);">
+              <td style="padding:14px 16px 14px 0; border-bottom:1px solid rgba(139,111,212,.15);">
+                <span style="color:var(--cloud); font-weight:500;">Generate a proposal or SOW from the meeting</span>
+                <div style="font-size:12px; color:var(--muted); margin-top:3px;">Pushes directly into your Google Docs template</div>
+              </td>
+              <td style="padding:14px 16px; border-left:1px solid rgba(139,111,212,.35); border-right:1px solid rgba(139,111,212,.35); border-bottom:1px solid rgba(139,111,212,.2); background:rgba(139,111,212,.08); text-align:center;">
+                <span style="font-size:18px; background:linear-gradient(90deg,#5b8dd9,#8b6fd4); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-weight:700;">✓</span>
+              </td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); text-align:center;"><span style="color:var(--structural); font-size:16px;">✗</span></td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); text-align:center;"><span style="color:var(--structural); font-size:16px;">✗</span></td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); border-right:1px solid var(--border); text-align:center;"><span style="color:var(--structural); font-size:16px;">✗</span></td>
+            </tr>
+
+            <tr>
+              <td style="padding:14px 16px 14px 0; color:var(--cloud); border-bottom:1px solid var(--border);">Push tasks directly to ClickUp</td>
+              <td style="padding:14px 16px; border-left:1px solid rgba(139,111,212,.35); border-right:1px solid rgba(139,111,212,.35); background:rgba(139,111,212,.06); text-align:center;">
+                <span style="font-size:18px; background:linear-gradient(90deg,#5b8dd9,#8b6fd4); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-weight:700;">✓</span>
+              </td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); text-align:center;"><span style="color:var(--structural); font-size:16px;">✗</span></td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); text-align:center;"><span style="color:var(--structural); font-size:16px;">✗</span></td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); border-right:1px solid var(--border); text-align:center;"><span style="color:var(--structural); font-size:16px;">✗</span></td>
+            </tr>
+
+            <tr>
+              <td style="padding:14px 16px 14px 0; color:var(--cloud); border-bottom:1px solid var(--border);">Add follow-up dates to Google Calendar</td>
+              <td style="padding:14px 16px; border-left:1px solid rgba(139,111,212,.35); border-right:1px solid rgba(139,111,212,.35); background:rgba(139,111,212,.06); text-align:center;">
+                <span style="font-size:18px; background:linear-gradient(90deg,#5b8dd9,#8b6fd4); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-weight:700;">✓</span>
+              </td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); text-align:center;"><span style="color:var(--structural); font-size:16px;">✗</span></td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); text-align:center;"><span style="color:var(--structural); font-size:16px;">✗</span></td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); border-right:1px solid var(--border); text-align:center;"><span style="color:var(--structural); font-size:16px;">✗</span></td>
+            </tr>
+
+            <tr>
+              <td style="padding:14px 16px 14px 0; color:var(--cloud); border-bottom:1px solid var(--border);">Works with any call platform</td>
+              <td style="padding:14px 16px; border-left:1px solid rgba(139,111,212,.35); border-right:1px solid rgba(139,111,212,.35); background:rgba(139,111,212,.06); text-align:center;">
+                <span style="font-size:18px; background:linear-gradient(90deg,#5b8dd9,#8b6fd4); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; font-weight:700;">✓</span>
+              </td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); text-align:center;"><span style="font-size:16px; color:var(--glacial);">✓</span></td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); text-align:center; color:var(--structural); font-size:13px;">Own platform only</td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); border-right:1px solid var(--border); text-align:center;"><span style="font-size:16px; color:var(--glacial);">✓</span></td>
+            </tr>
+
+            <tr>
+              <td style="padding:14px 16px 14px 0; color:var(--cloud); border-bottom:1px solid var(--border);">Recording stays on your machine</td>
+              <td style="padding:14px 16px; border-left:1px solid rgba(139,111,212,.35); border-right:1px solid rgba(139,111,212,.35); background:rgba(139,111,212,.06); text-align:center; font-family:'Jost',sans-serif; font-size:12px; font-weight:600; letter-spacing:.04em; color:var(--dusk);">Local only</td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); text-align:center; color:var(--structural); font-size:13px;">Cloud stored</td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); text-align:center; color:var(--structural); font-size:13px;">Cloud stored</td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); border-right:1px solid var(--border); text-align:center; color:var(--structural); font-size:13px;">N/A</td>
+            </tr>
+
+            <tr>
+              <td style="padding:14px 16px 14px 0; color:var(--cloud); border-bottom:1px solid var(--border);">You review everything before it's sent</td>
+              <td style="padding:14px 16px; border-left:1px solid rgba(139,111,212,.35); border-right:1px solid rgba(139,111,212,.35); border-bottom:1px solid rgba(139,111,212,.35); background:rgba(139,111,212,.06); text-align:center; font-family:'Jost',sans-serif; font-size:12px; font-weight:600; letter-spacing:.04em; color:var(--dusk);">Always</td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); text-align:center; color:var(--structural); font-size:13px;">Auto-sends</td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); text-align:center; color:var(--structural); font-size:13px;">N/A</td>
+              <td style="padding:14px 16px; border-bottom:1px solid var(--border); border-left:1px solid var(--border); border-right:1px solid var(--border); text-align:center;"><span style="font-size:16px; color:var(--glacial);">✓</span></td>
+            </tr>
+
+          </tbody>
+          <tfoot>
+            <tr>
+              <td style="border:none; padding:0;"></td>
+              <td style="padding:0 6px 0 0; border:none;">
+                <div style="background:linear-gradient(150deg,rgba(91,141,217,.12),rgba(139,111,212,.1)); border:1px solid rgba(139,111,212,.35); border-top:none; border-radius:0 0 12px 12px; padding:14px 16px; text-align:center;">
+                  <a href="https://aurora-brief.kit.com/110f173cf7" target="_blank" rel="noopener" style="font-family:'Jost',sans-serif; font-size:11px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; background:linear-gradient(90deg,#5b8dd9,#8b6fd4); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; text-decoration:none;">Get notified →</a>
+                </div>
+              </td>
+              <td colspan="3" style="border:none; padding:0;"></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <p style="font-family:'Outfit',sans-serif; font-size:13px; color:var(--structural); margin-top:20px;">Windows 10/11 · Requires VB-Audio Cable (free) · Google Drive, ClickUp, and Google Calendar accounts</p>
     </section>
 
     <div class="aurora-divider" role="presentation"></div>
