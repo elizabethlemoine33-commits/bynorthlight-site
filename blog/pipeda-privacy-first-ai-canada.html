@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Implementing AI Without Breaking Canadian Privacy Law: A PIPEDA Guide for Business Owners | Northlight Advisory Services</title>
+<meta name="description" content="What Canadian businesses need to know about PIPEDA, Quebec's Law 25, and data residency before deploying AI — with a practical compliance checklist.">
+<link rel="canonical" href="https://bynorthlight.ca/blog/pipeda-privacy-first-ai-canada.html">
+<meta property="og:title" content="Implementing AI Without Breaking Canadian Privacy Law: A PIPEDA Guide for Business Owners">
+<meta property="og:description" content="What Canadian businesses need to know about PIPEDA, Quebec's Law 25, and data residency before deploying AI — with a practical compliance checklist.">
+<meta property="og:url" content="https://bynorthlight.ca/blog/pipeda-privacy-first-ai-canada.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Northlight Advisory Services">
+<meta property="og:image" content="https://bynorthlight.ca/northlight-og-image.png">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Implementing AI Without Breaking Canadian Privacy Law: A PIPEDA Guide for Business Owners",
+  "description": "What Canadian businesses need to know about PIPEDA, Quebec's Law 25, and data residency before deploying AI — with a practical compliance checklist.",
+  "author": {
+    "@type": "Person",
+    "name": "Elizabeth Lemoine",
+    "url": "https://bynorthlight.ca/about.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Northlight Advisory Services",
+    "url": "https://bynorthlight.ca"
+  },
+  "datePublished": "2026-07-11",
+  "dateModified": "2026-07-11",
+  "url": "https://bynorthlight.ca/blog/pipeda-privacy-first-ai-canada.html",
+  "mainEntityOfPage": "https://bynorthlight.ca/blog/pipeda-privacy-first-ai-canada.html",
+  "keywords": ["PIPEDA AI compliance", "Canadian privacy law AI", "AI implementation Canada", "Quebec Law 25 AI", "PIPEDA business guide", "AI data privacy Canada", "privacy-first AI", "Canadian AI regulation"]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does PIPEDA apply to AI systems in Canada?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. PIPEDA applies to any AI system that collects, uses, or discloses personal information in the course of commercial activity. If your AI system processes names, contact details, behavioural data, purchase history, employee records, or any other information about an identifiable individual, PIPEDA applies. The law does not distinguish between AI-powered and traditional data processing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between PIPEDA and Quebec's Law 25?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PIPEDA is the federal Canadian privacy law governing private-sector organizations across Canada. Quebec's Law 25 (Act respecting the protection of personal information in the private sector) applies specifically to organizations doing business in Quebec and is significantly stricter. Law 25 requires Privacy Impact Assessments before deploying new AI systems that handle personal information, explicit opt-in consent for profiling, the right to data portability, and mandatory breach notification to Quebec's Commission d'accès à l'information within 72 hours. Businesses operating in Quebec must comply with both."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does data go when I use AI tools like ChatGPT, Microsoft Copilot, or Google Gemini in my Canadian business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the tool and your subscription tier. By default, most AI tools route data through US servers. Under PIPEDA, transferring personal data outside Canada is permitted but requires that the data receive comparable protection in the receiving country. You must inform customers that their data may be sent to a foreign jurisdiction. Enterprise tiers of tools like Microsoft Azure OpenAI Service, Google Cloud, and AWS offer Canadian data residency options — specifically Canada Central (Toronto) or Canada East (Quebec City) regions. Consumer tiers generally do not."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a Privacy Impact Assessment (PIA) and do I need one for AI in Canada?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Privacy Impact Assessment (PIA) is a structured evaluation of how a new system or process handles personal information — what data it collects, why, how it's stored, who can access it, and what risks it creates. Quebec's Law 25 mandates PIAs before deploying technology that processes personal information, including AI systems. Federal PIPEDA does not explicitly require a PIA but the Office of the Privacy Commissioner recommends them as a best practice. If you operate in Quebec or have Quebec customers, a PIA is not optional."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What AI tools can Canadian businesses use safely for processing personal data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tools with Canadian data residency options include Microsoft Azure OpenAI Service (Canada Central region), Google Cloud Vertex AI (Montreal region), and AWS Bedrock (Canada West). These enterprise services allow you to keep personal data within Canada's borders. Consumer AI tools (ChatGPT, Claude.ai, Gemini consumer) should not be used to process identifiable personal information about customers or employees without specific data processing agreements and explicit consent."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --midnight: #0E0E14; --surface: #12121E; --surface-2: #10101C; --border: #1E2035; --border-2: #2A2A48;
+    --text: #FFFFFF; --cloud: #C8CCE0; --haze: #BCC2DC; --muted: #99A1B6; --structural: #5A6080;
+    --glacial: #4FC3C8; --boreal: #5B8DD9; --dusk: #8B6FD4; --aurora: #C46FAA;
+  }
+  body { background: var(--midnight); color: var(--cloud); font-family: 'Outfit', sans-serif; font-size: 16px; line-height: 1.75; }
+  .skip-nav { position: absolute; top: -100px; left: 0; background: var(--dusk); color: #fff; padding: 10px 20px; font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-decoration: none; border-radius: 0 0 6px 0; z-index: 9999; transition: top 0.2s; }
+  .skip-nav:focus { top: 0; }
+  .top-bar { height: 3px; background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%); }
+  .site-nav { display: flex; justify-content: space-between; align-items: center; padding: 18px 48px; border-bottom: 1px solid var(--border); }
+  .nav-logo { font-family: 'Jost', sans-serif; font-size: 15px; font-weight: 600; color: var(--text); text-decoration: none; }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 14px; }
+  .nav-links a:hover { color: var(--cloud); }
+  .article-wrap { max-width: 720px; margin: 0 auto; padding: 64px 24px 96px; }
+  .article-label { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--glacial); margin-bottom: 16px; }
+  .article-title { font-family: 'Jost', sans-serif; font-size: clamp(26px, 4vw, 36px); font-weight: 700; color: var(--text); line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 16px; }
+  .article-meta { font-size: 13px; color: var(--muted); margin-bottom: 48px; display: flex; gap: 16px; flex-wrap: wrap; }
+  .at-a-glance { background: var(--surface); border: 1px solid var(--border-2); border-left: 3px solid var(--glacial); border-radius: 8px; padding: 20px 24px; margin-bottom: 48px; }
+  .at-a-glance h2 { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--glacial); margin-bottom: 12px; }
+  .at-a-glance ul { list-style: none; padding: 0; }
+  .at-a-glance li { font-size: 14px; color: var(--haze); padding: 4px 0 4px 16px; position: relative; }
+  .at-a-glance li::before { content: '→'; position: absolute; left: 0; color: var(--glacial); font-size: 12px; top: 5px; }
+  .article-body h2 { font-family: 'Jost', sans-serif; font-size: 22px; font-weight: 600; color: var(--glacial); margin: 48px 0 16px; line-height: 1.3; }
+  .article-body h3 { font-family: 'Jost', sans-serif; font-size: 17px; font-weight: 600; color: var(--cloud); margin: 32px 0 12px; }
+  .article-body p { margin-bottom: 20px; color: var(--cloud); }
+  .article-body ul, .article-body ol { padding-left: 24px; margin-bottom: 20px; }
+  .article-body li { margin-bottom: 8px; color: var(--cloud); }
+  .article-body a { color: var(--boreal); text-decoration: none; }
+  .article-body a:hover { text-decoration: underline; }
+  .article-body strong { color: var(--text); font-weight: 600; }
+  .checklist { list-style: none; padding: 0; margin-bottom: 20px; }
+  .checklist li { padding: 10px 14px; border: 1px solid var(--border); border-radius: 6px; margin-bottom: 8px; font-size: 14px; color: var(--cloud); display: flex; gap: 10px; align-items: flex-start; }
+  .checklist li::before { content: '☐'; color: var(--glacial); font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+  .callout-block { background: var(--surface); border: 1px solid var(--border-2); border-left: 3px solid var(--aurora); border-radius: 8px; padding: 16px 20px; margin: 28px 0; }
+  .callout-block p { font-size: 14px; color: var(--haze); margin: 0; line-height: 1.65; }
+  .callout-block strong { color: var(--aurora); }
+  .callout-block.glacial { border-left-color: var(--glacial); }
+  .callout-block.glacial strong { color: var(--glacial); }
+  .callout-block.boreal { border-left-color: var(--boreal); }
+  .callout-block.boreal strong { color: var(--boreal); }
+  .law-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 13px; }
+  .law-table th { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); text-align: left; padding: 0 12px 10px 0; border-bottom: 1px solid var(--border-2); }
+  .law-table td { padding: 10px 12px 10px 0; border-bottom: 1px solid var(--border); color: var(--cloud); vertical-align: top; font-size: 13px; line-height: 1.6; }
+  .law-table tr:last-child td { border-bottom: none; }
+  .law-table td:first-child { font-family: 'Jost', sans-serif; font-weight: 600; color: var(--haze); white-space: nowrap; }
+  .faq-section { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--border); }
+  .faq-section h2 { font-family: 'Jost', sans-serif; font-size: 22px; font-weight: 600; color: var(--cloud); margin-bottom: 24px; }
+  .post-back { font-family: 'Jost', sans-serif; font-weight: 500; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); text-decoration: none; display: block; margin-bottom: 28px; }
+  .post-back:hover { color: var(--cloud); }
+  .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+  .faq-q { font-family: 'Jost', sans-serif; font-size: 16px; font-weight: 600; color: var(--cloud); margin-bottom: 10px; }
+  .faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+  .author-box { margin-top: 56px; padding: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; }
+  .author-label { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; font-family: 'Jost', sans-serif; }
+  .author-name { font-family: 'Jost', sans-serif; font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .author-bio { font-size: 14px; color: var(--muted); }
+  footer { border-top: 1px solid var(--border); padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--muted); }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--cloud); }
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+<div class="top-bar" role="presentation"></div>
+<nav class="site-nav" aria-label="Site navigation">
+  <a href="/" class="nav-logo">Northlight Advisory Services</a>
+  <ul class="nav-links">
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/who-we-help.html">Who We Help</a></li>
+    <li><a href="/vault.html">Vault</a></li>
+    <li><a href="/meetings.html">Meetings</a></li>
+    <li><a href="/blog/">Blog</a></li>
+  </ul>
+</nav>
+
+<main id="main-content" class="article-wrap">
+
+  <a href="/blog/" class="post-back">← Blog</a>
+  <p class="article-label">Guide · Privacy · Canadian AI Regulation · PIPEDA</p>
+  <h1 class="article-title">Implementing AI Without Breaking Canadian Privacy Law: A PIPEDA Guide for Business Owners</h1>
+  <div class="article-meta">
+    <span>By Elizabeth Lemoine, Northlight Advisory Services</span>
+    <span>July 11, 2026</span>
+    <span>10 min read</span>
+  </div>
+
+  <div class="at-a-glance" aria-label="At a glance">
+    <h2>At a Glance</h2>
+    <ul>
+      <li>PIPEDA applies to any AI system that processes personal information in the course of commercial activity</li>
+      <li>Quebec's Law 25 is stricter than PIPEDA — Privacy Impact Assessments are mandatory before deploying AI in Quebec</li>
+      <li>Most AI tools route data through US servers by default — this creates cross-border transfer obligations under PIPEDA</li>
+      <li>Consumer AI tools (ChatGPT, Gemini, Claude.ai) should not process identifiable customer or employee data without specific agreements</li>
+      <li>Enterprise tiers of major platforms offer Canadian data residency — this is the cleanest path to compliance</li>
+      <li>This post includes a PIPEDA AI compliance checklist you can use before your next AI rollout</li>
+    </ul>
+  </div>
+
+  <div class="article-body">
+
+    <p>Implementing AI in your Canadian business triggers PIPEDA obligations the moment the system processes any personal information — customer names, email addresses, employee records, purchase history, behavioural data. Before you deploy: identify the purpose, confirm you have meaningful consent for it, establish a data processing agreement with your AI vendor, and verify where the data is stored. If you operate in Quebec, add a Privacy Impact Assessment to that list. The checklist at the end of this post walks through each step.</p>
+
+    <p>This is not legal advice — for your specific situation you need a privacy lawyer. What follows is a practitioner's plain-language explanation of the landscape, written for Canadian business operators who need to understand the terrain before they start building on it.</p>
+
+    <h2>What is PIPEDA and does it apply to your AI use?</h2>
+
+    <p>The <a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/" target="_blank" rel="noopener">Personal Information Protection and Electronic Documents Act (PIPEDA)</a> is Canada's federal private-sector privacy law. It governs how organizations collect, use, and disclose personal information in the course of commercial activity.</p>
+
+    <p><strong>Personal information under PIPEDA</strong> is any information about an identifiable individual. That includes names, email addresses, phone numbers, purchase history, behavioural data, location data, employee performance records, financial information, health information, and IP addresses. It is a deliberately broad definition.</p>
+
+    <p>If your AI system touches any of that — and most AI systems do — PIPEDA applies. The law does not distinguish between AI-powered and traditional data processing. The question is not whether you're using AI. The question is what data you're putting through it and whether your handling of that data meets PIPEDA's requirements.</p>
+
+    <div class="callout-block boreal">
+      <p><strong>The PIPEDA test:</strong> Ask yourself — does the AI system see, process, or store information about any identifiable person? If yes, PIPEDA applies. Work backward from that answer.</p>
+    </div>
+
+    <h2>What does PIPEDA actually require when you use AI?</h2>
+
+    <p>PIPEDA is built around ten principles. The ones most directly implicated by AI implementation are:</p>
+
+    <h3>Accountability</h3>
+    <p>Your organization is responsible for personal information under your control — including data you've handed to a third-party AI vendor. If you use a US-based AI platform to process Canadian customer data, you remain accountable for how that platform handles the data. You cannot contract your way out of PIPEDA accountability by pointing to a vendor's terms of service.</p>
+
+    <h3>Identifying purposes</h3>
+    <p>You must identify the purpose for which you're collecting and using personal information at or before the time of collection. "We use AI to analyze customer interactions" is a purpose. If you later want to use that same data to train a custom AI model, that's a new purpose — and you likely need fresh consent.</p>
+
+    <h3>Consent</h3>
+    <p>You need meaningful consent to collect, use, or disclose personal information. For most AI use cases involving customer data, that means your privacy policy must describe the AI processing, and the description must be clear enough that a reasonable person would understand what they're consenting to. Burying "we use third-party AI tools to process your data" in paragraph 14 of a 3,000-word privacy policy is not meaningful consent.</p>
+
+    <h3>Limiting collection and use</h3>
+    <p>You should collect only what you need, and use it only for the purpose you identified. Running customer support emails through an AI summarizer to improve response times is a reasonable, proportionate use. Running those same emails through an AI model to build customer profiles for advertising targeting is a different purpose — and probably requires explicit opt-in consent.</p>
+
+    <h3>Safeguards</h3>
+    <p>You must protect personal information with appropriate security measures. This includes understanding how your AI vendor secures the data you send them. A vendor with no data processing agreement, no SOC 2 report, and servers in a jurisdiction with weak privacy protections is a safeguards problem under PIPEDA.</p>
+
+    <h3>Individual access</h3>
+    <p>Individuals have the right to access their personal information and correct inaccuracies. If your AI system generates outputs or decisions based on personal information — a credit score, a risk rating, a customer segment — individuals may request access to that information and challenge its accuracy.</p>
+
+    <h2>What is Quebec's Law 25 and how is it different from PIPEDA?</h2>
+
+    <p>Quebec's <a href="https://www.cai.gouv.qc.ca/en/law-25" target="_blank" rel="noopener">Act respecting the protection of personal information in the private sector</a> (commonly called Law 25 or Bill 64) applies to organizations doing business in Quebec — including businesses based outside Quebec that have Quebec customers or employees. It is stricter than PIPEDA in several important ways.</p>
+
+    <table class="law-table" aria-label="PIPEDA vs Quebec Law 25 comparison">
+      <thead>
+        <tr>
+          <th style="width:30%">Requirement</th>
+          <th style="width:35%">PIPEDA</th>
+          <th>Quebec Law 25</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Privacy Impact Assessment</td>
+          <td>Recommended best practice</td>
+          <td>Mandatory before deploying technology that processes personal information</td>
+        </tr>
+        <tr>
+          <td>Automated decision-making</td>
+          <td>Right to challenge decisions made solely by automated means</td>
+          <td>Explicit right to be informed when an automated decision affects you; right to have a human review it</td>
+        </tr>
+        <tr>
+          <td>Data portability</td>
+          <td>Not explicitly required</td>
+          <td>Individuals have the right to receive their data in a structured, commonly used format</td>
+        </tr>
+        <tr>
+          <td>Breach notification</td>
+          <td>Notify the OPC "as soon as feasible"</td>
+          <td>Notify Quebec's Commission d'accès à l'information (CAI) within 72 hours</td>
+        </tr>
+        <tr>
+          <td>Profiling and targeting</td>
+          <td>Consent required; opt-out acceptable in some cases</td>
+          <td>Explicit opt-in consent required for profiling for commercial purposes</td>
+        </tr>
+        <tr>
+          <td>Privacy officer</td>
+          <td>Designate someone responsible</td>
+          <td>Publish the name and contact information of your privacy officer publicly</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>If you operate in Quebec — including if you have Quebec-based customers, employees, or collect data from Quebec residents — Law 25 applies to your AI implementation. A Privacy Impact Assessment before you deploy is not optional.</p>
+
+    <h2>Where does your data actually go when you use AI tools?</h2>
+
+    <p>This is the question most Canadian businesses haven't asked, and the answer often surprises them. By default, most consumer and small-business AI tools route data through US-based servers. That creates a cross-border data transfer under PIPEDA.</p>
+
+    <p>PIPEDA does not prohibit cross-border data transfers, but it requires:</p>
+    <ul>
+      <li>That you inform individuals their data may be transferred to a foreign jurisdiction</li>
+      <li>That the data receive comparable protection in that jurisdiction</li>
+      <li>That you remain accountable for the data even after transfer</li>
+    </ul>
+
+    <p>The practical consequence: your privacy policy must disclose that customer data is processed by AI tools in the US (or wherever), and your vendor contracts must include appropriate data processing terms. Most consumer AI tool terms of service do not include the data processing agreements that PIPEDA accountability requires.</p>
+
+    <h3>Tools with Canadian data residency options</h3>
+    <p>If you need to keep personal data within Canada, these enterprise-tier options offer Canadian data residency:</p>
+    <ul>
+      <li><strong>Microsoft Azure OpenAI Service</strong> — deployable in Canada Central (Toronto) region. Requires an Azure enterprise account.</li>
+      <li><strong>Google Cloud Vertex AI</strong> — deployable in the Montréal (northamerica-northeast1) region.</li>
+      <li><strong>AWS Bedrock</strong> — deployable in Canada West (Calgary) region. Amazon Q and other AWS AI services also support Canadian regions.</li>
+      <li><strong>Anthropic Claude via AWS / Azure</strong> — available through the above enterprise platforms with their regional controls.</li>
+    </ul>
+
+    <div class="callout-block">
+      <p><strong>The consumer vs. enterprise distinction:</strong> Consumer tiers of ChatGPT, Claude.ai, Gemini, and Copilot are designed for individuals. They generally do not include data processing agreements, do not offer data residency controls, and may use your inputs to improve their models (depending on your settings). Enterprise tiers — with proper data processing agreements and Canadian residency options — are a different product with different compliance profiles.</p>
+    </div>
+
+    <h2>What about automated decision-making under Canadian law?</h2>
+
+    <p>If your AI system makes or significantly influences decisions about individuals — routing a customer service ticket to "low priority," flagging a job application for rejection, setting a credit limit — Canadian privacy law has specific requirements.</p>
+
+    <p>Under PIPEDA, individuals have the right to challenge decisions made solely by automated means. That right exists even if the decision was made by an AI model you licensed, not one you built. You are responsible for the decisions your AI makes.</p>
+
+    <p>Under Quebec's Law 25, this goes further: individuals must be informed when an automated decision is made about them, and must have access to a human review process. This applies to any AI system that makes decisions about employees, customers, or job applicants based on personal information.</p>
+
+    <p>Practically, this means:</p>
+    <ul>
+      <li>Fully automated high-stakes decisions (hiring rejections, loan denials, account terminations) need a human review pathway</li>
+      <li>Individuals must be told a decision was made automatically if they ask</li>
+      <li>You need to be able to explain, in general terms, how the AI reached its conclusion</li>
+    </ul>
+
+    <h2>What is the PIPEDA AI compliance checklist before you deploy?</h2>
+
+    <p>Run through this before putting any AI system into production that touches personal information.</p>
+
+    <h3>Data inventory and purpose</h3>
+    <ul class="checklist">
+      <li>Identify every category of personal information the AI system will access, process, or generate</li>
+      <li>Document the specific purpose for which each data category is being used</li>
+      <li>Confirm that purpose was disclosed to individuals at or before the time of collection</li>
+      <li>Confirm you have meaningful consent for that purpose (not just buried terms)</li>
+    </ul>
+
+    <h3>Vendor and data residency</h3>
+    <ul class="checklist">
+      <li>Identify which AI platform(s) will process the data and where their servers are located</li>
+      <li>Confirm you have a Data Processing Agreement (DPA) with each AI vendor covering personal data</li>
+      <li>If data will leave Canada, confirm your privacy policy discloses cross-border transfer</li>
+      <li>If data residency is required, confirm you're on an enterprise tier with Canadian region support</li>
+    </ul>
+
+    <h3>Safeguards</h3>
+    <ul class="checklist">
+      <li>Confirm the AI vendor has appropriate security certifications (SOC 2 Type II, ISO 27001, or equivalent)</li>
+      <li>Confirm access to the AI system is appropriately restricted (not every employee should have access to tools processing sensitive data)</li>
+      <li>Confirm you have a data breach response plan that includes AI vendor incidents</li>
+    </ul>
+
+    <h3>Automated decisions</h3>
+    <ul class="checklist">
+      <li>Identify whether the AI system makes or significantly influences decisions about individuals</li>
+      <li>If yes, confirm there is a human review pathway for affected individuals who request it</li>
+      <li>Confirm you can explain, in general terms, how the AI makes those decisions</li>
+      <li>If you're in Quebec or have Quebec customers: confirm a Privacy Impact Assessment has been completed</li>
+    </ul>
+
+    <h3>Individual rights</h3>
+    <ul class="checklist">
+      <li>Confirm individuals can request access to their personal information including any AI-generated data about them</li>
+      <li>Confirm you have a process for correcting inaccurate AI-generated information about individuals</li>
+      <li>If Law 25 applies: confirm you can fulfill data portability requests</li>
+    </ul>
+
+    <h3>Privacy policy and disclosures</h3>
+    <ul class="checklist">
+      <li>Update your privacy policy to describe AI processing specifically — what tools you use and for what purposes</li>
+      <li>If data is transferred outside Canada, disclose the jurisdiction(s) and the type of protection in place</li>
+      <li>If Law 25 applies: publish the name and contact information of your privacy officer</li>
+    </ul>
+
+    <h2>What does privacy-first AI actually look like in a Canadian business?</h2>
+
+    <p>Privacy-first AI doesn't mean avoiding AI — it means being deliberate about which data goes where and why. The businesses getting this right tend to share a few habits:</p>
+
+    <p><strong>They separate what AI gets to see.</strong> Customer PII (names, emails, addresses) is stripped or anonymized before it reaches AI processing where that's possible. The AI sees the pattern without seeing the person.</p>
+
+    <p><strong>They use enterprise tiers for anything sensitive.</strong> Consumer ChatGPT for drafting marketing copy is one risk profile. Consumer ChatGPT processing your customer CRM data is a different one. The separation is deliberate and documented.</p>
+
+    <p><strong>They've updated their privacy policy before they deployed.</strong> Not after someone asked. The policy describes the AI tools, their general purpose, and the data they access — in language a reasonable person can understand.</p>
+
+    <p><strong>They know where their data is.</strong> If you ask them "where is our customer data stored when we use [AI tool]?" they can answer — or they know who to call to find out within the hour. This sounds basic. It's less common than it should be.</p>
+
+    <div class="callout-block glacial">
+      <p><strong>The competitive advantage angle:</strong> PIPEDA and Law 25 compliance is a genuine differentiator in markets where clients share sensitive information with their advisors, consultants, and service providers. The ability to say — accurately and specifically — "we handle your data this way, it stays in Canada, here's our DPA" is a trust signal that most small businesses can't match yet. It's worth building.</p>
+    </div>
+
+    <h2>What is Canada's proposed AI Act (AIDA) and should you pay attention to it?</h2>
+
+    <p>Canada's proposed <a href="https://ised-isde.canada.ca/site/innovation-better-canada/en/artificial-intelligence-and-data-act" target="_blank" rel="noopener">Artificial Intelligence and Data Act (AIDA)</a> was introduced as Part 3 of Bill C-27 and would establish a federal framework for high-impact AI systems. As of July 2026, AIDA has not been passed into law — Bill C-27 has progressed through Parliament but is not yet in force.</p>
+
+    <p>When AIDA does pass, it will add obligations for "high-impact AI systems" including: impact assessments, transparency obligations, and human oversight requirements for AI systems that make consequential decisions. The definition of "high-impact" will matter enormously for what falls under the Act.</p>
+
+    <p>For now: PIPEDA and Law 25 are the operative laws. AIDA is worth tracking, but don't let it delay PIPEDA compliance — the obligations under existing law are real today.</p>
+
+  </div>
+
+  <section class="faq-section" aria-label="Frequently asked questions">
+    <h2>Frequently asked questions</h2>
+    <div class="faq-item">
+      <h3 class="faq-q">Does PIPEDA apply to AI systems in Canada?</h3>
+      <p class="faq-a">Yes. PIPEDA applies to any AI system that collects, uses, or discloses personal information in the course of commercial activity. If your AI system processes names, contact details, behavioural data, purchase history, employee records, or any other information about an identifiable individual, PIPEDA applies. The law does not distinguish between AI-powered and traditional data processing.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-q">What is the difference between PIPEDA and Quebec's Law 25?</h3>
+      <p class="faq-a">PIPEDA is the federal Canadian privacy law governing private-sector organizations across Canada. Quebec's Law 25 applies specifically to organizations doing business in Quebec and is significantly stricter — it requires Privacy Impact Assessments before deploying AI systems, explicit opt-in consent for profiling, data portability rights, and mandatory breach notification within 72 hours. Businesses with Quebec operations or customers must comply with both.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-q">Where does data go when I use AI tools like ChatGPT or Microsoft Copilot in my Canadian business?</h3>
+      <p class="faq-a">By default, most AI tools route data through US servers. Under PIPEDA, you must inform individuals that their data may be sent to a foreign jurisdiction and ensure it receives comparable protection. Enterprise tiers of Microsoft Azure OpenAI Service, Google Cloud Vertex AI, and AWS Bedrock offer Canadian data residency options. Consumer tiers generally do not.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-q">What is a Privacy Impact Assessment (PIA) and do I need one for AI in Canada?</h3>
+      <p class="faq-a">A Privacy Impact Assessment (PIA) is a structured evaluation of how a new system handles personal information — what data it collects, why, how it's stored, and what risks it creates. Quebec's Law 25 mandates PIAs before deploying technology that processes personal information. Federal PIPEDA recommends them as best practice. If you operate in Quebec or have Quebec customers, a PIA is not optional.</p>
+    </div>
+    <div class="faq-item">
+      <h3 class="faq-q">What AI tools can Canadian businesses use safely for processing personal data?</h3>
+      <p class="faq-a">Tools with Canadian data residency options include Microsoft Azure OpenAI Service (Canada Central region), Google Cloud Vertex AI (Montréal region), and AWS Bedrock (Canada West). Consumer AI tools — ChatGPT, Claude.ai, Gemini — should not be used to process identifiable personal information about customers or employees without specific data processing agreements and explicit consent.</p>
+    </div>
+  </section>
+
+  <div class="author-box">
+    <p class="author-label">About the author</p>
+    <p class="author-name">Elizabeth Lemoine — Northlight Advisory Services</p>
+    <p class="author-bio">Elizabeth Lemoine is the founder of <a href="/">Northlight Advisory Services</a>, a Halifax, Nova Scotia–based strategy, AI adoption, and fractional COO advisory practice. She helps Canadian operators implement AI in a way that's operationally sound and privacy-compliant from the start.</p>
+  </div>
+
+</main>
+
+<footer>
+  <span>© 2026 Northlight Advisory Services · Halifax, Nova Scotia, Canada</span>
+  <nav aria-label="Footer navigation">
+    <a href="/">Home</a> · <a href="/about.html">About</a> · <a href="/blog/">Blog</a> · <a href="/northlight-privacy.html">Privacy</a>
+  </nav>
+</footer>
+
+</body>
+</html>

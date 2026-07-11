@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Northlight Skills Market — How We Built It</title>
+<meta name="description" content="A case study on the Northlight Skills Market — three MCP skills built for internal use, iterated until they were genuinely useful, and listed on MCP Market because keeping them private felt like a waste.">
+<link rel="canonical" href="https://bynorthlight.ca/case-studies/northlight-skills-market.html">
+<meta property="og:title" content="Northlight Skills Market — How We Built It">
+<meta property="og:description" content="Morning Briefing Pro, Strategic Voice Framework, and MCP Market Publisher — three tools built for a one-woman advisory practice, now listed on MCP Market.">
+<meta property="og:image" content="https://bynorthlight.ca/northlight-og-image.png">
+<meta property="og:url" content="https://bynorthlight.ca/case-studies/northlight-skills-market.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Northlight Advisory Services">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Northlight Skills Market — How We Built It">
+<meta name="twitter:description" content="Three MCP skills built for internal use, iterated until genuinely useful, and listed because keeping them private felt like a waste.">
+<meta name="twitter:image" content="https://bynorthlight.ca/northlight-og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --midnight:   #0E0E14;
+    --deep-night: #08080F;
+    --surface:    #12121E;
+    --surface-2:  #10101C;
+    --border:     #1E2035;
+    --border-2:   #2A2A48;
+    --text:       #FFFFFF;
+    --cloud:      #C8CCE0;
+    --haze:       #BCC2DC;
+    --muted:      #99A1B6;
+    --structural: #6C7295;
+    --glacial:    #4FC3C8;
+    --boreal:     #5B8DD9;
+    --dusk:       #8B6FD4;
+    --aurora:     #C46FAA;
+  }
+
+  body {
+    background: var(--midnight);
+    color: var(--cloud);
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .skip-nav {
+    position: absolute; top: -100px; left: 0;
+    background: var(--dusk); color: #fff;
+    padding: 10px 20px;
+    font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600;
+    letter-spacing: 0.06em; text-decoration: none;
+    border-radius: 0 0 6px 0; z-index: 9999; transition: top 0.2s;
+  }
+  .skip-nav:focus { top: 0; }
+
+  a:visited { color: var(--glacial); }
+
+  .top-bar {
+    height: 2px;
+    background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);
+  }
+
+  nav.site-nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 64px;
+    border-bottom: 1px solid var(--border);
+    max-width: 1280px; margin: 0 auto;
+  }
+  .nav-wordmark {
+    font-family: 'Jost', sans-serif; font-size: 18px; font-weight: 600;
+    letter-spacing: 0.06em;
+    background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 33%, #8B6FD4 66%, #C46FAA 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a {
+    font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--muted); text-decoration: none; transition: color 0.2s;
+  }
+  .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--text); }
+
+  .page-wrap { max-width: 1280px; margin: 0 auto; padding: 0 64px; }
+
+  .aurora-divider {
+    height: 1px;
+    background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);
+    opacity: 0.25; max-width: 1280px; margin: 0 auto;
+  }
+
+  .section-label {
+    font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500;
+    letter-spacing: 0.26em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 32px;
+  }
+
+  .footer-border { border-top: 1px solid var(--border); }
+  footer { padding: 32px 64px; max-width: 1280px; margin: 0 auto; }
+  .footer-inner { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; }
+  .footer-left { display: flex; flex-direction: column; gap: 8px; }
+  .footer-copy { font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.1em; color: var(--muted); }
+  .footer-right { display: flex; flex-direction: column; align-items: flex-end; gap: 16px; }
+  .footer-links { display: flex; gap: 24px; list-style: none; flex-wrap: wrap; justify-content: flex-end; }
+  .footer-links a {
+    font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.1em;
+    color: var(--muted); text-decoration: none; transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--text); }
+
+  .os-hero {
+    padding: 88px 0 72px;
+    max-width: 860px;
+    position: relative; overflow: hidden;
+  }
+  .os-hero::after {
+    content: '';
+    position: absolute; top: -80px; right: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(ellipse, rgba(196,111,170,0.07) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500;
+    letter-spacing: 0.26em; text-transform: uppercase; color: var(--muted);
+    margin-bottom: 20px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .hero-eyebrow::before {
+    content: ''; display: inline-block; width: 20px; height: 2px;
+    background: linear-gradient(90deg, #c46faa, #8b6fd4); border-radius: 2px;
+  }
+
+  .hero-title {
+    font-family: 'Jost', sans-serif; font-weight: 600; font-size: 52px;
+    letter-spacing: 0.03em; line-height: 1.05; color: var(--text);
+    margin-bottom: 20px;
+  }
+  .hero-title span {
+    background: linear-gradient(105deg, #4fc3c8 0%, #5b8dd9 33%, #8b6fd4 66%, #c46faa 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+
+  .hero-subtitle {
+    font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 17px;
+    line-height: 1.75; color: var(--haze); margin-bottom: 36px;
+  }
+
+  .status-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: rgba(196,111,170,0.10); border: 1px solid rgba(196,111,170,0.22);
+    border-radius: 20px; padding: 5px 14px;
+    font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--aurora);
+  }
+
+  .stats-row {
+    display: flex; gap: 0; flex-wrap: wrap;
+    border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
+  }
+  .stat-block { flex: 1; min-width: 140px; padding: 20px 24px; border-right: 1px solid var(--border); }
+  .stat-block:last-child { border-right: none; }
+  .stat-value {
+    font-family: 'Jost', sans-serif; font-weight: 600; font-size: 28px;
+    letter-spacing: 0.02em; display: block;
+    background: linear-gradient(105deg, #c46faa 0%, #8b6fd4 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  .stat-label { font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--muted); margin-top: 2px; display: block; }
+
+  .problem-card {
+    background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px;
+    padding: 32px 36px; max-width: 760px;
+  }
+  .problem-card p { font-family: 'Outfit', sans-serif; font-size: 16px; line-height: 1.8; color: var(--cloud); margin-bottom: 16px; }
+  .problem-card p:last-child { margin-bottom: 0; }
+  .problem-card strong { color: var(--text); font-weight: 500; }
+
+  .workflow-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .workflow-card { background: var(--surface-2); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .workflow-card-header { padding: 20px 24px 16px; border-bottom: 1px solid var(--border); }
+  .workflow-number { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.20em; text-transform: uppercase; color: var(--structural); margin-bottom: 8px; }
+  .workflow-title { font-family: 'Jost', sans-serif; font-weight: 600; font-size: 16px; letter-spacing: 0.03em; color: var(--text); margin-bottom: 6px; }
+  .workflow-desc { font-family: 'Outfit', sans-serif; font-size: 13px; line-height: 1.65; color: var(--haze); }
+  .workflow-mockup { padding: 20px 24px; }
+
+  .decision-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .decision-item { display: flex; align-items: flex-start; gap: 12px; }
+  .decision-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
+  .decision-label { font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; color: var(--text); margin-bottom: 3px; }
+  .decision-desc { font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--haze); line-height: 1.55; }
+
+  .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .skill-chip { background: var(--surface-2); border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; display: flex; align-items: flex-start; gap: 10px; }
+  .skill-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; margin-top: 4px; }
+  .skill-name { font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; color: var(--text); margin-bottom: 2px; }
+  .skill-desc { font-family: 'Outfit', sans-serif; font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+  .stack-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+  .stack-chip { font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--haze); background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 8px 16px; }
+
+  .pmi-card { background: var(--surface-2); border: 1px solid var(--border); border-radius: 10px; padding: 32px 36px; max-width: 760px; }
+  .pmi-row { display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--border); }
+  .pmi-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .pmi-row:first-child { padding-top: 0; }
+  .pmi-label { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); min-width: 120px; flex-shrink: 0; padding-top: 1px; }
+  .pmi-value { font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--cloud); line-height: 1.65; }
+  .pmi-value a { color: var(--boreal); text-decoration: none; }
+  .pmi-value a:hover { text-decoration: underline; }
+
+  .content-section { padding: 72px 0; }
+  .content-section-mid { max-width: 1000px; }
+  .content-section-narrow { max-width: 760px; }
+
+  .cta-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--aurora); text-decoration: none;
+    border: 1px solid rgba(196,111,170,0.3); border-radius: 6px;
+    padding: 10px 20px; transition: border-color 0.2s, color 0.2s;
+  }
+  .cta-link:hover { border-color: rgba(196,111,170,0.7); color: var(--text); }
+
+  @media (max-width: 1024px) {
+    nav.site-nav { padding: 20px 32px; }
+    .page-wrap { padding: 0 32px; }
+    footer { padding: 32px 32px; }
+  }
+  @media (max-width: 900px) {
+    .workflow-grid { grid-template-columns: 1fr; }
+    .skills-grid { grid-template-columns: 1fr 1fr; }
+    .stats-row { flex-wrap: wrap; }
+    .stat-block { min-width: 45%; }
+  }
+  @media (max-width: 768px) {
+    nav.site-nav { padding: 16px 24px; }
+    .page-wrap { padding: 0 24px; }
+    footer { padding: 24px; }
+    .hero-title { font-size: 38px; }
+    .skills-grid { grid-template-columns: 1fr; }
+    .footer-inner { flex-direction: column; gap: 24px; }
+    .footer-right { align-items: flex-start; }
+    .footer-links { justify-content: flex-start; }
+    .nav-links { gap: 16px; }
+    .nav-links a { font-size: 11px; }
+    .pmi-row { flex-direction: column; gap: 4px; }
+    .pmi-label { min-width: 0; }
+    .os-hero { padding: 56px 0 48px; }
+  }
+  @media (max-width: 480px) {
+    .nav-links { gap: 12px; }
+    .nav-links a { letter-spacing: 0.08em; }
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bynorthlight.ca/" },
+    { "@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://bynorthlight.ca/case-studies/" },
+    { "@type": "ListItem", "position": 3, "name": "Northlight Skills Market", "item": "https://bynorthlight.ca/case-studies/northlight-skills-market.html" }
+  ]
+}
+</script>
+<script async src="https://plausible.io/js/pa-uccdYD5d_-tjjiMlRo9eR.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init();
+</script>
+<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <div class="top-bar" role="presentation"></div>
+
+  <nav class="site-nav" aria-label="Site navigation">
+    <a href="/" class="nav-wordmark" aria-label="Northlight home">Northlight</a>
+    <ul class="nav-links">
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/vault.html">Vault</a></li>
+      <li><a href="/meetings.html">Meetings</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/case-studies/" aria-current="page">Work</a></li>
+      <li><a href="mailto:support@bynorthlight.ca">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ── HERO ── -->
+    <div class="page-wrap">
+      <section class="os-hero" aria-labelledby="hero-title">
+        <p class="hero-eyebrow">Case Study &nbsp;·&nbsp; Built by Elizabeth Lemoine</p>
+        <h1 class="hero-title" id="hero-title">Built for one.<br><span>Listed for all.</span></h1>
+        <p class="hero-subtitle">
+          The Northlight Skills Market is three MCP skills — Morning Briefing Pro, Strategic Voice Framework, and MCP Market Publisher — built to make running a one-woman advisory practice manageable. They worked well enough that keeping them private felt like a waste. Now they're listed on MCP Market.
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+          <span class="status-pill">Live on MCP Market</span>
+          <a href="https://mcpmarket.com/sellers/northlight-skills" target="_blank" rel="noopener" class="cta-link">Browse the skills →</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- ── STATS ── -->
+    <div class="page-wrap" style="padding-bottom:56px;">
+      <div class="stats-row" role="list" aria-label="Skills Market at a glance">
+        <div class="stat-block" role="listitem">
+          <span class="stat-value">3</span>
+          <span class="stat-label">Skills listed</span>
+        </div>
+        <div class="stat-block" role="listitem">
+          <span class="stat-value">$77</span>
+          <span class="stat-label">Total value at list price</span>
+        </div>
+        <div class="stat-block" role="listitem">
+          <span class="stat-value">Solo</span>
+          <span class="stat-label">One builder, one user, one publisher</span>
+        </div>
+        <div class="stat-block" role="listitem">
+          <span class="stat-value">2026</span>
+          <span class="stat-label">Year launched</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="aurora-divider" role="presentation"></div>
+
+    <!-- ── THE PROBLEM ── -->
+    <div class="page-wrap">
+      <section class="content-section content-section-narrow" aria-labelledby="problem-heading">
+        <h2 class="section-label" id="problem-heading">The problem</h2>
+        <div class="problem-card">
+          <p>Running a solo advisory practice means wearing a lot of hats. Strategy, operations, business development, content, compliance — the work doesn't stop, and neither does the context-switching. AI tools help, but they help differently depending on how they're configured, what they know about you and your work, and whether they've been iterated on enough to actually be reliable.</p>
+          <p>Off-the-shelf AI tools are built for the median user. They don't know that you have specific brand constraints, or that your day needs a specific kind of orientation before it starts, or that you just went through the friction of publishing your first MCP skill and want a process for the next one. <strong>The tools that actually help are the ones you build yourself — and then take the time to get right.</strong></p>
+        </div>
+      </section>
+    </div>
+
+    <div class="aurora-divider" role="presentation"></div>
+
+    <!-- ── THE SKILLS ── -->
+    <div class="page-wrap">
+      <section class="content-section content-section-mid" aria-labelledby="skills-heading">
+        <h2 class="section-label" id="skills-heading">The three skills</h2>
+        <div class="workflow-grid">
+
+          <div class="workflow-card">
+            <div class="workflow-card-header">
+              <p class="workflow-number">01 · $19</p>
+              <h3 class="workflow-title">Morning Briefing Pro</h3>
+              <p class="workflow-desc">Prepares you for the day before work starts — what's happening, what needs to happen, what's urgent. Centres the day when no one else is doing it for you.</p>
+            </div>
+            <div class="workflow-mockup">
+              <ul class="decision-list">
+                <li class="decision-item">
+                  <span class="decision-dot" style="background:#C46FAA;"></span>
+                  <div><div class="decision-label">Built for the solo operator</div><div class="decision-desc">No team meeting to sync you up. No EA filtering the queue. This is the orientation layer that runs before the first task.</div></div>
+                </li>
+                <li class="decision-item">
+                  <span class="decision-dot" style="background:#8B6FD4;"></span>
+                  <div><div class="decision-label">The problem it solves</div><div class="decision-desc">Scrambling to orient at 10am. Not knowing what's actually urgent. Starting the day reactive instead of centred.</div></div>
+                </li>
+                <li class="decision-item">
+                  <span class="decision-dot" style="background:#5B8DD9;"></span>
+                  <div><div class="decision-label">Why it works</div><div class="decision-desc">Iterated through real daily use until it was reliable — not just functional. The difference matters.</div></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="workflow-card">
+            <div class="workflow-card-header">
+              <p class="workflow-number">02 · $29</p>
+              <h3 class="workflow-title">Strategic Voice Framework</h3>
+              <p class="workflow-desc">Captures your brand voice and applies it consistently when Claude drafts content. Also holds you to it — if you drift off-brand, it flags and corrects.</p>
+            </div>
+            <div class="workflow-mockup">
+              <ul class="decision-list">
+                <li class="decision-item">
+                  <span class="decision-dot" style="background:#C46FAA;"></span>
+                  <div><div class="decision-label">The core problem</div><div class="decision-desc">AI drafts in a competent, professional voice. Just not yours. And the internet is already full of content that sounds like everyone using the same AI defaults.</div></div>
+                </li>
+                <li class="decision-item">
+                  <span class="decision-dot" style="background:#8B6FD4;"></span>
+                  <div><div class="decision-label">The guardrail that matters most</div><div class="decision-desc">On a rushed day, you might write something off-brand without catching it. The framework catches it so you don't have to.</div></div>
+                </li>
+                <li class="decision-item">
+                  <span class="decision-dot" style="background:#5B8DD9;"></span>
+                  <div><div class="decision-label">What it captures</div><div class="decision-desc">Tone, vocabulary, style, what to avoid — then applies it from the first draft, not after editing.</div></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="workflow-card">
+            <div class="workflow-card-header">
+              <p class="workflow-number">03 · $29</p>
+              <h3 class="workflow-title">MCP Market Publisher</h3>
+              <p class="workflow-desc">Standardizes the process of preparing and listing a skill on MCP Market — what's required, in what format, in what order. Born from the friction of doing it the first time.</p>
+            </div>
+            <div class="workflow-mockup">
+              <ul class="decision-list">
+                <li class="decision-item">
+                  <span class="decision-dot" style="background:#C46FAA;"></span>
+                  <div><div class="decision-label">Origin story</div><div class="decision-desc">The first time you publish a skill, you figure it out. The second time, you shouldn't have to. This skill is the documented version of that learning.</div></div>
+                </li>
+                <li class="decision-item">
+                  <span class="decision-dot" style="background:#8B6FD4;"></span>
+                  <div><div class="decision-label">What it does</div><div class="decision-desc">Gives you a repeatable process for everything MCP Market requires — format, content, sequence — so publishing becomes fast and consistent.</div></div>
+                </li>
+                <li class="decision-item">
+                  <span class="decision-dot" style="background:#5B8DD9;"></span>
+                  <div><div class="decision-label">Why it's listed</div><div class="decision-desc">If the friction of first-time publishing is blocking you from sharing something useful, this removes that blocker.</div></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="workflow-card">
+            <div class="workflow-card-header">
+              <p class="workflow-number">04</p>
+              <h3 class="workflow-title">The iterative process</h3>
+              <p class="workflow-desc">None of these skills shipped in their final form the first time. What made them good — not just functional — was iteration.</p>
+            </div>
+            <div class="workflow-mockup">
+              <ul class="decision-list">
+                <li class="decision-item">
+                  <span class="decision-dot" style="background:#C46FAA;"></span>
+                  <div><div class="decision-label">Start with good skills and good prompts</div><div class="decision-desc">The foundation matters. Weak prompting produces weak tools — there's no iteration path that fixes a bad start.</div></div>
+                </li>
+                <li class="decision-item">
+                  <span class="decision-dot" style="background:#8B6FD4;"></span>
+                  <div><div class="decision-label">Use them in real work before shipping</div><div class="decision-desc">The difference between functional and genuinely useful only shows up in actual use. Tools need to earn the right to be called done.</div></div>
+                </li>
+                <li class="decision-item">
+                  <span class="decision-dot" style="background:#5B8DD9;"></span>
+                  <div><div class="decision-label">Come back and adjust</div><div class="decision-desc">A willingness to return and change something you thought was done. Most people stop at functional. That's where the gap is.</div></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <div class="aurora-divider" role="presentation"></div>
+
+    <!-- ── WHY MCP MARKET ── -->
+    <div class="page-wrap">
+      <section class="content-section content-section-narrow" aria-labelledby="platform-heading">
+        <h2 class="section-label" id="platform-heading">Why MCP Market</h2>
+        <div class="problem-card">
+          <p>MCP Market was discovered organically — not from a vendor pitch, but from downloading something ourselves. When they opened for sellers, the decision to list was easy: they handle Stripe, the listing infrastructure, and discovery. There was no need to build a payment system or a seller portal from scratch.</p>
+          <p>More importantly, they have a real reputation in the MCP community. For tools this specific, being where people are already looking matters more than owning the transaction layer. <strong>A clean, established marketplace beats a homegrown one that nobody visits.</strong></p>
+        </div>
+
+        <div class="stack-row" role="list" aria-label="Tech and platform stack">
+          <span class="stack-chip" role="listitem">MCP Market</span>
+          <span class="stack-chip" role="listitem">Model Context Protocol</span>
+          <span class="stack-chip" role="listitem">Claude</span>
+          <span class="stack-chip" role="listitem">Stripe (via MCP Market)</span>
+          <span class="stack-chip" role="listitem">Iterative prompt engineering</span>
+        </div>
+      </section>
+    </div>
+
+    <div class="aurora-divider" role="presentation"></div>
+
+    <!-- ── PROJECT METADATA ── -->
+    <div class="page-wrap">
+      <section class="content-section content-section-narrow" aria-labelledby="meta-heading">
+        <h2 class="section-label" id="meta-heading">Project details</h2>
+        <div class="pmi-card">
+          <div class="pmi-row">
+            <span class="pmi-label">Type</span>
+            <span class="pmi-value">MCP Skills · Internal tools made public</span>
+          </div>
+          <div class="pmi-row">
+            <span class="pmi-label">Status</span>
+            <span class="pmi-value">Live — 3 skills listed on MCP Market</span>
+          </div>
+          <div class="pmi-row">
+            <span class="pmi-label">Platform</span>
+            <span class="pmi-value"><a href="https://mcpmarket.com/sellers/northlight-skills" target="_blank" rel="noopener">mcpmarket.com/sellers/northlight-skills</a></span>
+          </div>
+          <div class="pmi-row">
+            <span class="pmi-label">Skills</span>
+            <span class="pmi-value">Morning Briefing Pro ($19) · Strategic Voice Framework ($29) · MCP Market Publisher ($29)</span>
+          </div>
+          <div class="pmi-row">
+            <span class="pmi-label">Built by</span>
+            <span class="pmi-value">Elizabeth Lemoine, Northlight Advisory Services — solo build, solo user, solo publisher</span>
+          </div>
+          <div class="pmi-row">
+            <span class="pmi-label">Origin</span>
+            <span class="pmi-value">Internal tools built for a one-person advisory practice; listed because they worked well enough that keeping them private felt like a waste</span>
+          </div>
+          <div class="pmi-row">
+            <span class="pmi-label">Blog post</span>
+            <span class="pmi-value"><a href="/blog/northlight-mcp-skills-market.html">I Built Three AI Tools for My Own Work. Now They're on MCP Market.</a></span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="aurora-divider" role="presentation"></div>
+
+    <!-- ── CTA ── -->
+    <div class="page-wrap">
+      <section class="content-section content-section-narrow" aria-labelledby="cta-heading" style="padding-bottom: 96px;">
+        <h2 class="section-label" id="cta-heading">Browse the skills</h2>
+        <p style="font-family:'Outfit',sans-serif;font-size:16px;color:var(--haze);line-height:1.75;margin-bottom:28px;max-width:560px;">
+          All three skills are listed on MCP Market. If you're running a consulting practice, operating solo, or producing a lot of written content with AI, at least one of them will help.
+        </p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;">
+          <a href="https://mcpmarket.com/sellers/northlight-skills" target="_blank" rel="noopener" class="cta-link">View skills on MCP Market →</a>
+          <a href="/blog/northlight-mcp-skills-market.html" class="cta-link" style="color:var(--muted);border-color:rgba(153,161,182,0.25);">Read the full story →</a>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <div class="footer-border"></div>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-copy">© 2026 Northlight Advisory Services · Halifax, Nova Scotia, Canada</span>
+      </div>
+      <div class="footer-right">
+        <nav aria-label="Footer navigation">
+          <ul class="footer-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/case-studies/">Work</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/northlight-privacy.html">Privacy</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
