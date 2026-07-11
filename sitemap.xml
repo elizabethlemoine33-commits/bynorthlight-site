@@ -55,6 +55,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://bynorthlight.ca/case-studies/northlight-skills-market.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://bynorthlight.ca/case-studies/northlight-vault.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -83,6 +88,11 @@
   </url>
   <url>
     <loc>https://bynorthlight.ca/blog/ai-isnt-underperforming-working-blind.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bynorthlight.ca/blog/ai-roi-canadian-smb.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -117,12 +127,27 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://bynorthlight.ca/blog/how-to-choose-ai-implementation-partner.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://bynorthlight.ca/blog/how-we-built-northlight-vault-privacy-first.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://bynorthlight.ca/blog/northlight-mcp-skills-market.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://bynorthlight.ca/blog/ongoing-business-advisory-canada.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bynorthlight.ca/blog/pipeda-privacy-first-ai-canada.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
