@@ -197,6 +197,10 @@
 
     <p>This is not legal advice — for your specific situation you need a privacy lawyer. What follows is a practitioner's plain-language explanation of the landscape, written for Canadian business operators who need to understand the terrain before they start building on it.</p>
 
+    <div class="callout-block boreal">
+      <p><strong>The question before the compliance question:</strong> Before you think about PIPEDA or Law 25, ask something more fundamental: <em>Why are you collecting this information?</em> Not whether you can justify it — why do you actually collect it, what do you do with it, and do you genuinely need it? This isn't a legal question. It's a design question. PIPEDA tells you how you must handle data you've decided to collect. This question is about whether you should be collecting it at all. Most privacy problems — and most compliance headaches — are downstream of not asking this first. If you can't answer "why" clearly for every data category your AI system touches, stop there before you build anything else.</p>
+    </div>
+
     <h2>What is PIPEDA and does it apply to your AI use?</h2>
 
     <p>The <a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/" target="_blank" rel="noopener">Personal Information Protection and Electronic Documents Act (PIPEDA)</a> is Canada's federal private-sector privacy law. It governs how organizations collect, use, and disclose personal information in the course of commercial activity.</p>
@@ -326,6 +330,7 @@
 
     <h3>Data inventory and purpose</h3>
     <ul class="checklist">
+      <li>For every data category: ask why you collect it, what you actually do with it, and whether you genuinely need it — before anything else</li>
       <li>Identify every category of personal information the AI system will access, process, or generate</li>
       <li>Document the specific purpose for which each data category is being used</li>
       <li>Confirm that purpose was disclosed to individuals at or before the time of collection</li>
@@ -372,6 +377,8 @@
     <h2>What does privacy-first AI actually look like in a Canadian business?</h2>
 
     <p>Privacy-first AI doesn't mean avoiding AI — it means being deliberate about which data goes where and why. The businesses getting this right tend to share a few habits:</p>
+
+    <p><strong>They started with "why."</strong> Before building anything, they answered — specifically and honestly — why they needed each piece of data, what they'd do with it, and what they'd do without it. Some data categories didn't survive that question. That's the point.</p>
 
     <p><strong>They separate what AI gets to see.</strong> Customer PII (names, emails, addresses) is stripped or anonymized before it reaches AI processing where that's possible. The AI sees the pattern without seeing the person.</p>
 
