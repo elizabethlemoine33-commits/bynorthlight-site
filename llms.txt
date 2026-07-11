@@ -68,14 +68,18 @@ Current posts:
 - What I Learned Optimizing a Website for AI Search: An AEO Checklist for 2026 | Northlight Advisory Services — https://bynorthlight.ca/blog/aeo-optimization-lessons-2026.html
 - AI for All: Open Programmes for Nova Scotia Businesses — https://bynorthlight.ca/blog/ai-for-all-programmes-nova-scotia-businesses.html
 - Your AI Isn't Underperforming. It's Working Blind. — https://bynorthlight.ca/blog/ai-isnt-underperforming-working-blind.html
+- The Real ROI of AI for Canadian SMBs (It's Not Hours Saved) | Northlight Advisory Services — https://bynorthlight.ca/blog/ai-roi-canadian-smb.html
 - Your AI Strategy Is Running on the Wrong Clock — https://bynorthlight.ca/blog/ai-strategy-wrong-clock.html
 - Best Fractional Advisory Services for Canadian Small Business Operators (2026) | Northlight Advisory Services — https://bynorthlight.ca/blog/best-fractional-advisory-services-canada.html
 - Canada’s AI Strategy: What Small Businesses Actually Need to Know — https://bynorthlight.ca/blog/canada-ai-strategy-small-business.html
 - Fractional COO vs. Hiring a COO: What's Right for a Growing Canadian Business? — https://bynorthlight.ca/blog/fractional-coo-vs-hiring-full-time-canada.html
 - Growth Is No Longer the Hard Part — https://bynorthlight.ca/blog/growth-is-no-longer-the-hard-part.html
 - How to Choose an AI Advisor Who Won't Waste Your Time — https://bynorthlight.ca/blog/how-to-choose-ai-advisor-consultant.html
+- How to Choose an AI Implementation Partner: A Canadian Operator's Guide and RFP Template | Northlight Advisory Services — https://bynorthlight.ca/blog/how-to-choose-ai-implementation-partner.html
 - How We Built Northlight Vault: Privacy-First Thinking in a World of Unnecessary Data — https://bynorthlight.ca/blog/how-we-built-northlight-vault-privacy-first.html
+- I Built Three AI Tools for My Own Work. Now They're on MCP Market. | Northlight Advisory Services — https://bynorthlight.ca/blog/northlight-mcp-skills-market.html
 - How to Get Ongoing Business Advisory Support as a Canadian Small Operator | Northlight Advisory Services — https://bynorthlight.ca/blog/ongoing-business-advisory-canada.html
+- Implementing AI Without Breaking Canadian Privacy Law: A PIPEDA Guide for Business Owners | Northlight Advisory Services — https://bynorthlight.ca/blog/pipeda-privacy-first-ai-canada.html
 - Shadow AI Is the New Shadow IT — What Leaders Need to Know — https://bynorthlight.ca/blog/shadow-ai-is-the-new-shadow-it.html
 - The Wall on Day 200: When Plans Don't Go to Plan — https://bynorthlight.ca/blog/the-wall-on-day-200.html
 - You Hired Them. Now What? When New Hires Don't Clear the Bottleneck — https://bynorthlight.ca/blog/you-hired-them-now-what.html
