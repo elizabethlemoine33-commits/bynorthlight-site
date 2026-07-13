@@ -128,6 +128,8 @@
   .callout-block { background: var(--surface); border: 1px solid var(--border-2); border-left: 3px solid var(--aurora); border-radius: 8px; padding: 16px 20px; margin: 28px 0; }
   .callout-block p { font-size: 14px; color: var(--haze); margin: 0; line-height: 1.65; }
   .callout-block strong { color: var(--aurora); }
+  .answer-block { background: var(--surface); border: 1px solid var(--border-2); border-left: 3px solid var(--glacial); border-radius: 8px; padding: 16px 20px; margin: 0 0 28px; }
+  .answer-block p { font-size: 15px; color: var(--haze); margin: 0; line-height: 1.7; }
   .callout-block.glacial { border-left-color: var(--glacial); }
   .callout-block.glacial strong { color: var(--glacial); }
   .callout-block.boreal { border-left-color: var(--boreal); }
@@ -193,6 +195,10 @@
 
   <div class="at-a-glance" aria-label="At a glance">
     <h2>At a Glance</h2>
+
+    <div class="answer-block">
+      <p>Quebec’s Law 25 is significantly stricter than PIPEDA. It requires Privacy Impact Assessments before deploying AI systems that process personal information, explicit opt-in consent for profiling, data portability rights, breach notification to Quebec’s CAI within 72 hours (vs PIPEDA’s ‘as soon as feasible’), and public disclosure of your privacy officer’s contact information. If you have Quebec customers or employees, both laws apply.</p>
+    </div>
     <ul>
       <li>PIPEDA applies to any AI system that processes personal information in the course of commercial activity</li>
       <li>Quebec's Law 25 is stricter than PIPEDA — Privacy Impact Assessments are mandatory before deploying AI in Quebec</li>
@@ -215,6 +221,10 @@
 
     <h2>What is PIPEDA and does it apply to your AI use?</h2>
 
+    <div class="answer-block">
+      <p>PIPEDA — Canada’s federal private-sector privacy law — applies to any AI system that processes personal information about identifiable individuals: names, emails, purchase history, employee records, location data, IP addresses. It doesn’t distinguish between AI-powered and traditional data processing. The test is simple: does your AI system see, process, or store information about any identifiable person? If yes, PIPEDA applies.</p>
+    </div>
+
     <p>The <a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/" target="_blank" rel="noopener">Personal Information Protection and Electronic Documents Act (PIPEDA)</a> is Canada's federal private-sector privacy law. It governs how organizations collect, use, and disclose personal information in the course of commercial activity.</p>
 
     <p><strong>Personal information under PIPEDA</strong> is any information about an identifiable individual. That includes names, email addresses, phone numbers, purchase history, behavioural data, location data, employee performance records, financial information, health information, and IP addresses. It is a deliberately broad definition.</p>
@@ -226,6 +236,10 @@
     </div>
 
     <h2>What does PIPEDA actually require when you use AI?</h2>
+
+    <div class="answer-block">
+      <p>PIPEDA requires: accountability for personal data even after handing it to an AI vendor (you can’t contract out of PIPEDA by pointing at a vendor’s terms); disclosed purposes at or before collection; meaningful consent (not buried in paragraph 14 of a 3,000-word policy); collection limited to what you need for the stated purpose; appropriate security safeguards including vendor certifications; and individual access rights including AI-generated data about them.</p>
+    </div>
 
     <p>PIPEDA is built around ten principles. The ones most directly implicated by AI implementation are:</p>
 
@@ -297,6 +311,10 @@
 
     <h2>Where does your data actually go when you use AI tools?</h2>
 
+    <div class="answer-block">
+      <p>By default, most AI tools route data through US servers. Under PIPEDA, you must inform individuals their data may go to a foreign jurisdiction, ensure comparable protection, and remain accountable after transfer. Most consumer AI tool terms of service don’t include the data processing agreements PIPEDA requires. Enterprise tiers of Azure Canada Central, Google Cloud Vertex AI (Montréal), and AWS Bedrock (Canada West) offer Canadian data residency.</p>
+    </div>
+
     <p>This is the question most Canadian businesses haven't asked, and the answer often surprises them. By default, most consumer and small-business AI tools route data through US-based servers. That creates a cross-border data transfer under PIPEDA.</p>
 
     <p>PIPEDA does not prohibit cross-border data transfers, but it requires:</p>
@@ -323,6 +341,10 @@
 
     <h2>What about automated decision-making under Canadian law?</h2>
 
+    <div class="answer-block">
+      <p>Under PIPEDA, individuals can challenge decisions made solely by automated means — even decisions made by a licensed AI model, not one you built. Under Quebec’s Law 25, individuals must be informed when an automated decision is made about them and must have access to a human review process. Practically: high-stakes automated decisions (hiring, loan denials, account terminations) need a human review pathway, and you must be able to explain how the AI reached its conclusion.</p>
+    </div>
+
     <p>If your AI system makes or significantly influences decisions about individuals — routing a customer service ticket to "low priority," flagging a job application for rejection, setting a credit limit — Canadian privacy law has specific requirements.</p>
 
     <p>Under PIPEDA, individuals have the right to challenge decisions made solely by automated means. That right exists even if the decision was made by an AI model you licensed, not one you built. You are responsible for the decisions your AI makes.</p>
@@ -337,6 +359,10 @@
     </ul>
 
     <h2>What is the PIPEDA AI compliance checklist before you deploy?</h2>
+
+    <div class="answer-block">
+      <p>Before deploying any AI that touches personal information: map what data the system uses and why, confirm consent exists for that stated purpose, confirm a Data Processing Agreement with every AI vendor, verify vendor security certifications, confirm data residency meets your obligations, establish a human review pathway for automated decisions, and update your privacy policy to describe AI processing specifically. Quebec operators: add a completed Privacy Impact Assessment.</p>
+    </div>
 
     <p>Run through this before putting any AI system into production that touches personal information.</p>
 
@@ -388,6 +414,10 @@
 
     <h2>What does privacy-first AI actually look like in a Canadian business?</h2>
 
+    <div class="answer-block">
+      <p>Privacy-first AI means being deliberate about what data goes where and why before anyone asks. PII is stripped before AI processing where possible. Enterprise tiers are used for anything involving personal data. The privacy policy describes AI tools and their purpose in plain language — updated before deployment, not after. And anyone in the organisation can answer ‘where is our customer data stored?’ within the hour. That specificity is also a competitive differentiator: most small businesses can’t make that claim credibly yet.</p>
+    </div>
+
     <p>Privacy-first AI doesn't mean avoiding AI — it means being deliberate about which data goes where and why. The businesses getting this right tend to share a few habits:</p>
 
     <p><strong>They started with "why."</strong> Before building anything, they answered — specifically and honestly — why they needed each piece of data, what they'd do with it, and what they'd do without it. Some data categories didn't survive that question. That's the point.</p>
@@ -405,6 +435,10 @@
     </div>
 
     <h2>What is Canada's proposed AI Act (AIDA) and should you pay attention to it?</h2>
+
+    <div class="answer-block">
+      <p>Canada's Artificial Intelligence and Data Act (AIDA), introduced as part of Bill C-27, has not yet passed into law as of July 2026. When enacted, it will add requirements for high-impact AI systems: impact assessments, transparency obligations, and human oversight requirements. For now, PIPEDA and Quebec's Law 25 are the operative laws with real obligations today. Comply with those -- don't wait for AIDA to force the issue.</p>
+    </div>
 
     <p>Canada's proposed <a href="https://ised-isde.canada.ca/site/innovation-better-canada/en/artificial-intelligence-and-data-act" target="_blank" rel="noopener">Artificial Intelligence and Data Act (AIDA)</a> was introduced as Part 3 of Bill C-27 and would establish a federal framework for high-impact AI systems. As of July 2026, AIDA has not been passed into law — Bill C-27 has progressed through Parliament but is not yet in force.</p>
 

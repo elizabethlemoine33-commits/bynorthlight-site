@@ -127,6 +127,8 @@
   .callout-block { background: var(--surface); border: 1px solid var(--border-2); border-left: 3px solid var(--aurora); border-radius: 8px; padding: 16px 20px; margin: 28px 0; }
   .callout-block p { font-size: 14px; color: var(--haze); margin: 0; }
   .callout-block strong { color: var(--aurora); }
+  .answer-block { background: var(--surface); border: 1px solid var(--border-2); border-left: 3px solid var(--glacial); border-radius: 8px; padding: 16px 20px; margin: 0 0 28px; }
+  .answer-block p { font-size: 15px; color: var(--haze); margin: 0; line-height: 1.7; }
   .faq-section { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--border); }
   .faq-section h2 { font-family: 'Jost', sans-serif; font-size: 22px; font-weight: 600; color: var(--cloud); margin-bottom: 24px; }
   .post-back { font-family: 'Jost', sans-serif; font-weight: 500; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); text-decoration: none; display: block; margin-bottom: 28px; }
@@ -200,6 +202,10 @@
 
     <h2>What is AEO and why does it matter in 2026?</h2>
 
+    <div class="answer-block">
+      <p>Answer Engine Optimization (AEO) is the practice of making your website citable to AI-powered answer systems — ChatGPT, Perplexity, Gemini, Claude. Unlike traditional SEO, which targets search rankings, AEO targets the answers AI generates. For service businesses, being cited in an AI response is a direct acquisition channel that most small businesses haven't touched yet.</p>
+    </div>
+
     <p>Answer Engine Optimization (AEO) — sometimes called Generative Engine Optimization (GEO) — is the practice of making your website visible and citable to AI-powered answer systems: ChatGPT, Perplexity, Gemini, Claude.</p>
 
     <p>Traditional SEO gets you ranked in Google. AEO gets you cited when someone asks an AI a question. These are increasingly different things. Perplexity users don't click to page two of results — the AI synthesizes an answer and cites sources. ChatGPT's response to "who are the best fractional COOs in Canada" either includes your name or it doesn't.</p>
@@ -207,6 +213,10 @@
     <p>For a service business like Northlight Advisory Services, being cited in an AI response to a relevant prompt is equivalent to being mentioned in an article a prospect would read before they reach out. It is a real acquisition channel, and right now it's largely uncontested terrain for small businesses who do the work.</p>
 
     <h2>What we did in Phase 1 and Phase 2</h2>
+
+    <div class="answer-block">
+      <p>Phase 1 built the technical foundation: llms.txt, robots.txt AI crawler allowances, sitemap.xml, and Organization and FAQPage schema. Phase 2 completed all five priority schema types, rewrote every blog post H2 to question format, added freshness signals, and built off-site authority across Clutch, Crunchbase, LinkedIn, and directory listings. Then tested across 36 prompts in ChatGPT, Perplexity, and Gemini.</p>
+    </div>
 
     <h3>Phase 1 — Foundation</h3>
     <p>Built the site as a flat HTML site on GitHub Pages. From day one, implemented:</p>
@@ -230,6 +240,10 @@
 
     <h2>What the prompt testing revealed</h2>
 
+    <div class="answer-block">
+      <p>ChatGPT was the most accurate — naming Northlight Advisory Services in a comparison table alongside major consulting firms on a high-value prompt. Gemini was wrong on every tested prompt, confusing Northlight Advisory Services with a different company called Northlight Solutions Group and inventing services that don't exist. Perplexity was directionally accurate where it had data.</p>
+    </div>
+
     <h3>ChatGPT is the most accurate</h3>
     <p>ChatGPT was GREEN (accurate, cites the right entity) on most of the Protect and Improve prompts we tested. One standout: on "Who are the best business strategy consultants for Canadian mid-market firms?" — a Pursue-category prompt we weren't expecting to appear in — ChatGPT named Northlight Advisory Services in a comparison table alongside McKinsey, BCG, Level5 Strategy, Deloitte, and Accenture. That's a meaningful signal that the foundational work is registering.</p>
 
@@ -247,6 +261,10 @@
 
     <h2>The citation gap: a content channel problem, not a technical problem</h2>
 
+    <div class="answer-block">
+      <p>A technically optimized site can still have zero citation visibility if it's absent from the content channels AI actually pulls from. For fractional advisory queries, AI consistently cites listicle and directory sites — not individual firm websites. No schema improvement fixes that. The gap is a distribution problem: you need to be listed on the sites AI is already citing for your target prompts.</p>
+    </div>
+
     <p>After two phases of AEO work, bynorthlight.ca is technically well-optimized. AI crawlers are reading the site. Schema is implemented correctly. llms.txt is current. And yet: on all 10 HubSpot-tracked advisory prompts, we were at 0% citation visibility at the end of Phase 2.</p>
 
     <p>That's not a schema problem. It's a content channel problem.</p>
@@ -261,6 +279,10 @@
 
     <h2>What robots.txt AI crawler warnings actually mean</h2>
 
+    <div class="answer-block">
+      <p>A robots.txt warning from an AI audit tool doesn't mean AI crawlers are actually blocked. If your site runs on Cloudflare, verify crawler status in the Cloudflare AI Security dashboard — that's the authoritative source. Ours showed GPTBot, ClaudeBot, and PerplexityBot all active with real request counts. The audit tool had misread Cloudflare's managed robots.txt syntax.</p>
+    </div>
+
     <p>We received a HIGH priority warning from HubSpot's tool about our robots.txt: "Allow AI search crawlers." When I fetched the robots.txt directly and asked an AI to summarize it, it described rules that seemed to block GPTBot, ClaudeBot, and Google-Extended.</p>
 
     <p>This was wrong. The site is on <a href="https://www.cloudflare.com" target="_blank" rel="noopener">Cloudflare</a>, which manages a section of robots.txt automatically. The Cloudflare AI Security dashboard showed all major AI crawlers in "Allowed" status with active request counts (GPTBot: 8 requests, ClaudeBot: 11, PerplexityBot: 4). The AI summarizing the robots.txt file had misread the Cloudflare-managed section structure.</p>
@@ -270,6 +292,10 @@
     </div>
 
     <h2>The AEO checklist for 2026</h2>
+
+    <div class="answer-block">
+      <p>The five highest-leverage AEO actions for a small business: create an llms.txt file at your site root, explicitly allow AI crawlers in robots.txt, add Organization schema with sameAs links to your homepage, rewrite blog H2s as direct questions, and run a 20–40 prompt test matrix across ChatGPT, Perplexity, and Gemini before doing anything else. The prompt test tells you what kind of problem you actually have.</p>
+    </div>
 
     <p>Based on what we actually did, here is what I'd recommend for a small business starting AEO work:</p>
 
@@ -311,6 +337,10 @@
     </ul>
 
     <h2>What I'd do differently</h2>
+
+    <div class="answer-block">
+      <p>Start with the technical foundation on day one — llms.txt, robots.txt, and Organization schema take two hours and cost nothing to have in place early. Run the prompt testing matrix in week one, before any other work — it tells you whether you have a technical problem, a content problem, or a citation channel problem, and those have entirely different fixes. Then spend at least as much time on off-site signals as on schema.</p>
+    </div>
 
     <p>If I were starting AEO work from scratch on a new site today, I'd do the technical foundation (llms.txt, robots.txt, Organization/Person schema) on day one — it's two hours of work and it costs nothing to have it in place before you need it.</p>
 

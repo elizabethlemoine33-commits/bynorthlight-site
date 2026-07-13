@@ -97,6 +97,8 @@
     .post-body strong{color:var(--text);font-weight:600;}
     .post-body em{font-style:italic;color:var(--haze);}
     .post-body a{color:var(--glacial);text-decoration:none;border-bottom:1px solid rgba(79,195,200,.25);}
+    .post-body .answer-block{background:var(--surface);border:1px solid var(--border-2);border-left:3px solid var(--glacial);border-radius:0 6px 6px 0;padding:14px 20px;margin:0 0 1.6em;}
+    .post-body .answer-block p{font-family:'Outfit',sans-serif;font-size:15px;color:var(--haze);line-height:1.7;margin:0;}
     .post-body a:visited{color:var(--glacial);}
     .post-body a:hover{color:var(--text);border-color:rgba(255,255,255,.3);}
 
@@ -182,6 +184,10 @@
         <p>That's where I started with Vault. Not "what do we need to be compliant" but "what do we actually need, and what can we leave alone?"</p>
 
         <h2>What User Data Does Northlight Vault Not Collect?</h2>
+
+    <div class="answer-block">
+      <p>Northlight Vault collects no personal information from users. You don’t register, create an account, or give a name — the app doesn’t report back which cloud accounts you’ve connected or what files you’ve viewed. The only analytics Northlight collects is aggregate, anonymised web data through Plausible: visitor counts, page views, approximate location, and operating system. No profiles. No individual tracking. If someone asks ‘what do you know about me?’, the answer is: nothing, unless they’ve chosen to share it.</p>
+    </div>
         <p>Here's where we landed, and why it matters.</p>
         <p>When you install Vault, it lives on your computer. It's self-contained. You don't register it; you don't create an account; you don't give us your name. I can't tell you who signed in today because the app doesn't report that back to us. I don't know which cloud accounts you've connected. I don't know what files you've looked at. That's yours — it stays on your machine, and we have no access to it.</p>
         <p>We don't need to know who you are to build a better file browser. <strong>Knowing your name doesn't make the product better. It just means we have something we didn't earn.</strong></p>
@@ -189,6 +195,10 @@
         <p>For Aurora Brief — which you're reading right now — we collect your first name and your email address. Your first name so we can say hello to you like a person; your email address so we can send this. That's it. If we ever decide we need more than that, we're going to stop and ask ourselves why — because <strong>the burden of proof should always be on collection, not on privacy.</strong></p>
 
         <h2>Can You Grow a Product Without Tracking Users?</h2>
+
+    <div class="answer-block">
+      <p>Yes — with a narrower but more defensible data set. Aggregate, anonymised analytics through Plausible tells Northlight what matters without building individual profiles: whether Mac users are landing on a Windows-only product page, which pages get traffic, roughly where users are located. Too much data stops being useful anyway — when you have everything, you can’t find anything, and you’ve still violated someone’s privacy to get there. The practical principle: collect only what you can explain, specifically, what you’ll do with.</p>
+    </div>
         <p>The obvious pushback: how do you grow without tracking? How do you know what's working?</p>
         <p>We do track some things; I'm not going to pretend otherwise. We use <a href="https://plausible.io/privacy-focused-web-analytics" target="_blank" rel="noopener">Plausible Analytics</a> on the website — aggregate, anonymised data. I can see how many people visited, which pages they looked at, roughly where in the world they came from, and what operating system they're using. That last one matters more than it might sound: we built Vault for Windows first. If people are landing on the site from a Mac, that tells us there's interest we haven't served yet — and that's worth knowing. That's the kind of data that earns its place; you can look at it and explain exactly what you're doing with it.</p>
         <p>What I can't do — and won't do — is tell you that a specific person with a specific name looked at a specific page for a specific amount of time and then clicked this link. I can't build a profile. I don't want to.</p>
@@ -196,6 +206,10 @@
         <p>The less we know, the better — not as a slogan, but as a practical design principle.</p>
 
         <h2>Why Does Privacy-First Design Matter for Northlight's Products?</h2>
+
+    <div class="answer-block">
+      <p>Privacy-first isn't a feature or a compliance checkbox -- it's the design principle that determines what Northlight collects before anyone asks. The result: if someone asks 'what do you know about me?', the answer is first name, email address, and what they've chosen to share. Nothing else, because nothing else was taken. That's the kind of organisation Northlight Advisory Services is building: one that has less to answer for because it asked less in the first place.</p>
+    </div>
         <p>Northlight is a small organisation. We're building tools and doing advisory work; we're not going to win on scale, and we're not going to out-resource the big players.</p>
         <p>What we can do is be trustworthy — actually, concretely, demonstrably trustworthy; not because we say so, but because of the choices we make before anyone's looking.</p>
         <p><strong>Privacy-first isn't a feature. It's core to how we operate.</strong> It means that when someone asks us "what do you know about me?", the answer is: your first name, your email address, and what you've chosen to tell us. We can say exactly why we have each thing. We can explain what we do with it. There's nothing to hide because we haven't taken anything we don't need.</p>

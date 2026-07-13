@@ -110,6 +110,8 @@
     .post-body h3{font-family:'Jost',sans-serif;font-weight:600;font-size:15px;letter-spacing:.04em;color:var(--aurora);margin:1.6em 0 .4em;}
     .post-body blockquote{border-left:3px solid var(--dusk);padding-left:22px;margin:1.4em 0;font-style:italic;color:var(--haze);}
     .post-body .callout{background:rgba(139,111,212,.08);border-left:3px solid var(--dusk);border-radius:0 6px 6px 0;padding:14px 20px;margin:1.6em 0;font-family:'Jost',sans-serif;font-size:17px;font-weight:500;color:var(--haze);line-height:1.4;}
+    .post-body .answer-block{background:var(--surface);border:1px solid var(--border-2);border-left:3px solid var(--glacial);border-radius:0 6px 6px 0;padding:14px 20px;margin:0 0 1.6em;}
+    .post-body .answer-block p{font-family:'Outfit',sans-serif;font-size:15px;color:var(--haze);line-height:1.7;margin:0;}
     .post-body ul,.post-body ol{color:var(--cloud);font-size:16px;line-height:1.8;padding-left:1.4em;margin-bottom:1.4em;}
     .post-body li{margin-bottom:.4em;}
     .post-body strong{color:var(--text);font-weight:600;}
@@ -198,11 +200,19 @@
         <p>Dario Amodei calls this the Treebeard problem.</p>
 
         <h2>Why Does Annual AI Strategy Planning Break Down?</h2>
+
+    <div class="answer-block">
+      <p>Annual planning works when capability changes predictably. AI capability doesn’t — it’s improving on a scaling-law curve, not a linear one. A strategy written in January is answering questions about a world that may no longer exist by September. By the time you’ve gone through procurement, contract, and deployment, the capability you specified in Q1 may be two generations behind. You didn’t plan badly. You planned on the wrong clock.</p>
+    </div>
         <p>In a <a href="https://darioamodei.com/post/policy-on-the-ai-exponential">recent essay on AI policy</a>, Amodei — CEO of Anthropic — borrows from Tolkien to describe what happens when a slow-moving system meets an exponentially accelerating one. Treebeard, the ancient Ent, operates on the timescale of forests: decades to decide, centuries to act. That works fine until the orcs show up with axes and fire, moving on the timescale of conquest. Treebeard isn't stupid. He's just slow. And slow stops working when the thing you're responding to is moving exponentially faster than you are.</p>
         <p>Amodei's point is about policy. He's describing the gap between AI capability — which is doubling on a curve measured in months — and legislation, which moves on a multi-year cycle. But the structural problem he's naming doesn't stop at policy. It applies just as directly to how most organisations plan for AI.</p>
         <p>Your board meets quarterly. Your budget cycle is annual. Your procurement timeline assumes you'll spec a solution, run an RFP, negotiate a contract, and deploy over 12 to 18 months. All of that made sense when the capability you were buying changed slowly. It doesn't make sense anymore.</p>
 
         <h2>What Changed in AI Capability Over the Last Four Years?</h2>
+
+    <div class="answer-block">
+      <p>Four years ago, AI could barely write coherent code. Today, AI writes most of the code at major AI companies. That’s a capability shift so fundamental that the baseline assumption about what AI can and can’t do is unrecognisable from one planning cycle ago. Executive surveys confirm the lag: 78% of leaders lack confidence they could pass an AI governance audit within 90 days — not because they’re disengaged, but because the capability is already ahead of the planning structures they built.</p>
+    </div>
         <p>Here's Amodei's cleanest proof point: four years ago, AI could barely write a coherent line of code. Today, AI writes most of the code at major AI companies.</p>
         <p>Four years.</p>
         <p>That's not a linear progression. That's not "10% better each year." That's a capability shift so fundamental that the baseline assumption — what AI can and can't do — is unrecognisable from where it was one strategic planning cycle ago.</p>
@@ -210,12 +220,20 @@
         <p>Three independent sources. Same direction. Leaders are responsible, engaged, and behind — not because they're asleep at the wheel, but because the wheel is spinning faster than the planning cycle allows them to respond.</p>
 
         <h2>Why Does Annual Planning Fail for AI Strategy?</h2>
+
+    <div class="answer-block">
+      <p>Annual planning assumes you can model next year from last year’s data. AI capability doesn’t work that way. A strategy written in Q1 that deploys in Q4 is governing a capability that moved twice while it was in procurement. The governance structure you built in February is already answering questions about a capability level that’s obsolete by September. You planned carefully. The assumptions you planned against expired before you finished executing.</p>
+    </div>
         <p>Annual planning works when the thing you're planning for changes predictably. Budget for next year's headcount. Forecast next year's revenue. Plan next year's product roadmap. The underlying assumptions — what people cost, what customers want, what's technically possible — shift, but they shift on a curve you can model with last year's data.</p>
         <p>AI capability doesn't work that way. It's not improving on a percentage-gain curve. It's improving on a scaling-law curve, which means the capability available in Q4 is materially different from the capability available in Q1 — and your Q1 strategy, no matter how thoughtful, is answering questions about a world that no longer exists by the time you're executing in Q4.</p>
         <blockquote><p>You didn't plan badly. You planned on the wrong clock.</p></blockquote>
         <p>Here's what that looks like in practice. You write an AI strategy in January. You name the use cases. You allocate budget. You identify the tools. You set guardrails. You present to the board in March. They approve. You go to procurement in April. You deploy in September. By the time the tool is live, the capability baseline has moved twice. The vendor you didn't choose in January now has a feature you actually need. The risk you wrote a policy around in February is now a different risk entirely because the underlying model has changed. The governance structure you built assumes a level of capability that's already obsolete.</p>
 
         <h2>What Changes When You Shift to a Quarterly AI Strategy Cadence?</h2>
+
+    <div class="answer-block">
+      <p>Assign one person — not a committee — to answer ‘what’s true now that wasn’t true 90 days ago?’ Give them a standing 15 minutes in your quarterly leadership meeting. Three questions: What capability exists now that didn’t exist last quarter? What risk exists now that didn’t? What part of our current plan needs to change because of those? No deck. No governance redesign. Just a forcing function that keeps your planning cadence matched to the capability cadence.</p>
+    </div>
         <p>I'm not going to hand you a framework. You don't need another framework. What you need is a cadence shift.</p>
         <p>If the capability is moving on a quarterly curve, your planning needs to move on a quarterly curve too. That doesn't mean rewriting your entire AI strategy every 90 days. It means building a standing review into your operating rhythm — a forcing function that asks, every quarter, "What's true now that wasn't true 90 days ago?"</p>
         <p>That question has teeth. It surfaces the capability shifts you'd otherwise miss. It forces you to revisit assumptions. It keeps the strategy connected to the actual world instead of the world you modelled six months ago.</p>
@@ -229,6 +247,10 @@
         <p>The AI labs are already doing this, by the way. Anthropic's Responsible Scaling Policy is exactly this move — a structured process for revisiting capability and risk assumptions on a defined cycle and updating the deployment plan accordingly. They're not planning annually because they can't afford to. You can't either.</p>
 
         <h2>What Should Be the Real Output of Your AI Strategy Process?</h2>
+
+    <div class="answer-block">
+      <p>Not a document. The strategy is a cadence: the standing quarterly review, the named person who owns ‘what changed?’, and the organisational authority to update the plan between board meetings. Your AI strategy document isn’t wrong — it’s just not the strategy anymore. The strategy is the clock you run it on. If your planning is annual and the capability is quarterly, you’re always governing a world that already moved.</p>
+    </div>
         <p>Your AI strategy document — the one you presented to the board, the one sitting in the shared drive — isn't wrong. It's just not the strategy anymore.</p>
         <blockquote><p>The strategy is the cadence. The strategy is the standing question you ask every quarter. The strategy is the person you've named who's allowed to update the plan when the world changes faster than your governance cycle.</p></blockquote>
         <p>Treebeard wasn't stupid. He was slow. And slow worked until it didn't.</p>
