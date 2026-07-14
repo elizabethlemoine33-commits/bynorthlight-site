@@ -48,54 +48,52 @@
   </script>
 
   <!-- Schema: FAQPage -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Is Northlight Vault really free?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Northlight Vault is free. No plans to change that."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What operating systems does Northlight Vault support?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Northlight Vault currently supports Windows only. macOS support is on the roadmap but Northlight Advisory Services is not committing to a timeline."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Does Northlight Vault store files or credentials?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. Northlight Vault connects to cloud accounts using official OAuth authentication. Login credentials are never stored by Northlight Vault — authentication happens directly through Google, Microsoft, or Dropbox. Files are not downloaded or cached locally."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can Northlight Vault edit or delete files?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. Northlight Vault is read-only by design. Northlight Vault can browse and open files, nothing else. This is an explicit design decision by Northlight Advisory Services — not a missing feature."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Who made Northlight Vault?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Northlight Vault is built by Northlight Advisory Services, a Halifax, Nova Scotia–based Canadian strategy, advisory, and AI adoption practice founded by Elizabeth Lemoine. Northlight Vault started as a tool built for internal use and was made publicly available as free software."
-        }
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Northlight Vault really free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Northlight Vault is free with no subscription, no trial period, and no premium tier. Northlight Advisory Services built it for its own use and made it publicly available. There are no plans to change that. The download is available at bynorthlight.ca/vault.html."
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "Question",
+      "name": "What operating systems does Northlight Vault support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Northlight Vault currently supports Windows 10 and later. macOS support is on the roadmap but Northlight Advisory Services is not committing to a timeline. The application is built as a native Windows desktop app and is installed directly on your machine — no browser, no cloud component, no account required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Northlight Vault store files or credentials?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Northlight Vault connects to cloud accounts using official OAuth authentication. Login credentials are never stored by Northlight Vault — authentication happens directly through Google, Microsoft, or Dropbox. Files are not downloaded or cached locally."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Northlight Vault edit or delete files?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Northlight Vault is read-only by design — it can browse, search, and open files, but cannot move, edit, rename, or delete them. This is a deliberate design decision by Northlight Advisory Services, not a missing feature. Read-only access means the application cannot accidentally modify or remove any of your files."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who made Northlight Vault?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Northlight Vault is built by Northlight Advisory Services, a Halifax, Nova Scotia–based Canadian strategy, advisory, and AI adoption practice founded by Elizabeth Lemoine. Northlight Vault started as a tool built for internal use and was made publicly available as free software."
+      }
+    }
+  ]
+}</script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
