@@ -1,5 +1,7 @@
-import re
+import re, datetime
 from pathlib import Path
+
+TODAY = datetime.date.today().isoformat()
 
 BASE_URL = "https://bynorthlight.ca"
 
@@ -97,6 +99,7 @@ def generate_sitemap(urls):
         entry = (
             f"  <url>\n"
             f"    <loc>{url}</loc>\n"
+            f"    <lastmod>{TODAY}</lastmod>\n"
             f"    <changefreq>{changefreq}</changefreq>\n"
             f"    <priority>{priority}</priority>\n"
             f"  </url>"
