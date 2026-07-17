@@ -77,6 +77,20 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- In the News -->
+  <url>
+    <loc>https://bynorthlight.ca/news/</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bynorthlight.ca/news/digital-reference-best-coo-2026.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Blog -->
   <url>
     <loc>https://bynorthlight.ca/blog/</loc>
