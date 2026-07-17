@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Elizabeth Lemoine — Northlight Advisory Services</title>
+  <meta name=”description” content=”Elizabeth Lemoine — Founder &amp; Principal, Northlight Advisory Services. Scan to add contact.”>
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://bynorthlight.ca/card.html">
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script defer data-domain="bynorthlight.ca" src="https://plausible.io/js/script.js"></script>
+  <style>
+    :root {
+      --midnight:   #0E0E14;
+      --deep-night: #08080F;
+      --surface:    #12121E;
+      --surface-2:  #10101C;
+      --border:     #1E2035;
+      --border-2:   #2A2A48;
+      --text:       #FFFFFF;
+      --cloud:      #C8CCE0;
+      --haze:       #BCC2DC;
+      --muted:      #99A1B6;
+      --glacial:    #4FC3C8;
+      --boreal:     #5B8DD9;
+      --dusk:       #8B6FD4;
+      --aurora:     #C46FAA;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      min-height: 100dvh;
+      background: var(--midnight);
+      color: var(--cloud);
+      font-family: 'Outfit', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: env(safe-area-inset-top, 0) env(safe-area-inset-right, 0) env(safe-area-inset-bottom, 0) env(safe-area-inset-left, 0);
+    }
+
+    .card {
+      width: 100%;
+      max-width: 412px;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      background: var(--surface);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Aurora gradient top bar */
+    .top-bar {
+      height: 3px;
+      background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);
+      flex-shrink: 0;
+    }
+
+    /* Ambient glow */
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 280px;
+      height: 280px;
+      background: radial-gradient(ellipse, rgba(91,141,217,0.07) 0%, transparent 65%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .card-inner {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 40px 36px 44px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Wordmark */
+    .wordmark {
+      font-family: 'Jost', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 33%, #8B6FD4 66%, #C46FAA 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 48px;
+    }
+
+    /* Identity block */
+    .identity {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .name {
+      font-family: 'Jost', sans-serif;
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-family: 'Jost', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 33%, #8B6FD4 66%, #C46FAA 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 6px;
+    }
+
+    .org {
+      font-family: 'Outfit', sans-serif;
+      font-size: 15px;
+      color: var(--haze);
+      margin-bottom: 32px;
+    }
+
+    .divider {
+      width: 36px;
+      height: 2px;
+      background: linear-gradient(90deg, #4FC3C8, #8B6FD4);
+      border-radius: 2px;
+      margin-bottom: 28px;
+    }
+
+    .contact-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 44px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .contact-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--deep-night);
+      border: 1px solid var(--border-2);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-icon svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--glacial);
+    }
+
+    .contact-text {
+      font-family: 'Outfit', sans-serif;
+      font-size: 15px;
+      color: var(--haze);
+      text-decoration: none;
+    }
+
+    a.contact-text:hover { color: var(--text); }
+
+    /* QR block */
+    .qr-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .qr-wrap {
+      padding: 14px;
+      background: var(--surface-2);
+      border: 1px solid var(--border-2);
+      border-radius: 12px;
+      display: inline-flex;
+    }
+
+    .qr-wrap img {
+      width: 180px;
+      height: 180px;
+      display: block;
+      border-radius: 4px;
+    }
+
+    .qr-label {
+      font-family: 'Jost', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* Bottom bar */
+    .bottom-bar {
+      height: 2px;
+      background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);
+      flex-shrink: 0;
+    }
+
+    @media (min-height: 800px) {
+      .card-inner { padding: 48px 40px 52px; }
+      .name { font-size: 38px; }
+      .qr-wrap img { width: 200px; height: 200px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card" role="main">
+    <div class="top-bar" role="presentation"></div>
+    <div class="card-inner">
+
+      <p class="wordmark" aria-label="Northlight Advisory Services">Northlight</p>
+
+      <div class="identity">
+        <h1 class="name">Elizabeth<br>Lemoine</h1>
+        <p class="title">Founder &amp; Principal</p>
+        <p class="org">Northlight Advisory Services</p>
+
+        <div class="divider" role="presentation"></div>
+
+        <ul class="contact-list" aria-label="Contact information">
+          <li class="contact-item">
+            <div class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </div>
+            <a href="mailto:elizabeth@bynorthlight.ca" class="contact-text">elizabeth@bynorthlight.ca</a>
+          </li>
+          <li class="contact-item">
+            <div class="contact-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            </div>
+            <a href="https://bynorthlight.ca" class="contact-text" target="_blank" rel="noopener">bynorthlight.ca</a>
+          </li>
+        </ul>
+
+        <div class="qr-block">
+          <div class="qr-wrap">
+            <img
+              src="data:image/png;base64,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"
+              alt="QR code â€” scan to add Elizabeth Lemoine to your contacts"
+              width="180"
+              height="180"
+            >
+          </div>
+          <p class="qr-label">Scan to add contact</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="bottom-bar" role="presentation"></div>
+  </div>
+</body>
+</html>
