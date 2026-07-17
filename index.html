@@ -354,6 +354,26 @@
   }
   .footer-social a:hover { color: var(--text); }
 
+  /* ── RECOGNITION STRIP ── */
+  .recognition-strip {
+    padding: 16px 64px;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .recognition-strip-inner {
+    max-width: 1280px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: center;
+    gap: 10px;
+    font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 500;
+    letter-spacing: 0.1em; color: var(--muted);
+  }
+  .recognition-strip-source { color: var(--glacial); }
+  .recognition-strip-link {
+    color: var(--glacial); text-decoration: none; font-weight: 600;
+  }
+  .recognition-strip-link:hover { color: var(--text); }
+
   /* ── SERVICES SECTION ── */
   .services-section {
     padding: 72px 64px;
@@ -626,6 +646,16 @@
         </div>
       </div>
     </section>
+
+    <!-- ── RECOGNITION ── -->
+    <div class="recognition-strip" role="complementary" aria-label="Recognition">
+      <div class="recognition-strip-inner">
+        <span class="recognition-strip-source">Digital Reference 2026</span>
+        <span aria-hidden="true">·</span>
+        <span>Named one of Canada's Best Fractional COO Services &amp; Founder to Watch</span>
+        <a href="/news/digital-reference-best-coo-2026.html" class="recognition-strip-link">Read the feature →</a>
+      </div>
+    </div>
 
     <div class="aurora-divider" role="presentation"></div>
 

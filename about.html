@@ -454,6 +454,34 @@
     }
     .footer-social a:hover { color: var(--text); }
 
+    /* ── RECOGNITION CARD ── */
+    .recognition-card {
+      display: flex; gap: 24px; align-items: flex-start;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--glacial);
+      border-radius: 10px;
+      padding: 24px 28px;
+      max-width: 640px;
+    }
+    .recognition-badge { flex-shrink: 0; border-radius: 6px; width: 72px; height: auto; }
+    .recognition-card-body { display: flex; flex-direction: column; gap: 6px; }
+    .recognition-card-source {
+      font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500;
+      letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted);
+    }
+    .recognition-card-source span { color: var(--glacial); }
+    .recognition-card-headline {
+      font-family: 'Jost', sans-serif; font-size: 15px; font-weight: 600; color: var(--cloud);
+    }
+    .recognition-card-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
+    .recognition-card-link {
+      font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--glacial); text-decoration: none; margin-top: 4px;
+    }
+    .recognition-card-link:hover { color: var(--text); }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
       .about-hero { grid-template-columns: 280px 1fr; gap: 48px; }
@@ -590,6 +618,20 @@
           <p class="credential-number">PMI</p>
           <p class="credential-label">Member · Google PM Certified</p>
           <p class="credential-desc">Certified in project management, OKR leadership, AI for program managers, regulatory compliance, and cloud computing law.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ RECOGNITION ═══ -->
+    <section class="section-padded" aria-labelledby="recognition-label" style="padding-top: 0;">
+      <h2 class="section-label" id="recognition-label">Recognition</h2>
+      <div class="recognition-card">
+        <img src="/assets/dr-badge-best-coo-2026.png" alt="Digital Reference — Best Fractional COO Services in Canada 2026" class="recognition-badge" width="72" loading="lazy">
+        <div class="recognition-card-body">
+          <p class="recognition-card-source"><span>Digital Reference</span> &nbsp;·&nbsp; 2026</p>
+          <p class="recognition-card-headline">Best Fractional COO Services in Canada</p>
+          <p class="recognition-card-desc">Northlight Advisory Services named on Digital Reference's national list of top fractional COO practices, alongside recognition of Elizabeth Lemoine as a Founder to Watch in 2026.</p>
+          <a href="/news/digital-reference-best-coo-2026.html" class="recognition-card-link">Read the feature →</a>
         </div>
       </div>
     </section>
