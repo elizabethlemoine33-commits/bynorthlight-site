@@ -8,6 +8,12 @@
   <meta name="robots" content="noindex">
   <link rel="canonical" href="https://bynorthlight.ca/card.html">
   <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="manifest" href="/card.webmanifest">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Elizabeth">
+  <meta name="theme-color" content="#0E0E14">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <script defer data-domain="bynorthlight.ca" src="https://plausible.io/js/script.js"></script>
@@ -279,5 +285,10 @@
     </div>
     <div class="bottom-bar" role="presentation"></div>
   </div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/card-sw.js');
+    }
+  </script>
 </body>
 </html>

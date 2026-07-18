@@ -1,0 +1,23 @@
+{
+  "name": "Elizabeth Lemoine",
+  "short_name": "Elizabeth",
+  "description": "Northlight Advisory Services — Founder & Principal",
+  "start_url": "/card.html",
+  "scope": "/card.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0E0E14",
+  "theme_color": "#0E0E14",
+  "icons": [
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
