@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Agents Need a Chain of Command — Northlight</title>
+  <meta name="description" content="AI agents without defined authority create compliance gaps, permission sprawl, and audit failures. Download Northlight's free Go/No-Go checklist before your next deployment.">
+  <meta name="author" content="Elizabeth Lemoine">
+  <link rel="canonical" href="https://bynorthlight.ca/blog/your-agents-need-a-chain-of-command.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Your Agents Need a Chain of Command — Northlight">
+  <meta property="og:description" content="AI agents without defined authority create compliance gaps, permission sprawl, and audit failures. Download Northlight's free Go/No-Go checklist before your next deployment.">
+  <meta property="og:url" content="https://bynorthlight.ca/blog/your-agents-need-a-chain-of-command.html">
+  <meta property="og:site_name" content="Northlight Advisory Services">
+  <meta property="og:image" content="https://bynorthlight.ca/northlight-og-image.png">
+  <meta property="article:published_time" content="2026-07-18T00:00:00Z">
+  <meta property="article:author" content="Elizabeth Lemoine">
+  <meta property="article:section" content="AI">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Your Agents Need a Chain of Command — Northlight">
+  <meta name="twitter:description" content="AI agents without defined authority create compliance gaps, permission sprawl, and audit failures. Download Northlight's free Go/No-Go checklist.">
+  <meta name="twitter:image" content="https://bynorthlight.ca/northlight-og-image.png">
+
+  <!-- Article JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Your Agents Need a Chain of Command",
+    "description": "AI agents without defined authority create compliance gaps, permission sprawl, and audit failures. Download Northlight's free Go/No-Go deployment checklist.",
+    "datePublished": "2026-07-18",
+    "dateModified": "2026-07-18T00:00:00Z",
+    "author": { "@type": "Person", "name": "Elizabeth Lemoine", "url": "https://bynorthlight.ca/about.html" },
+    "publisher": { "@type": "Organization", "name": "Northlight Advisory Services", "url": "https://bynorthlight.ca" },
+    "url": "https://bynorthlight.ca/blog/your-agents-need-a-chain-of-command.html"
+  }
+  </script>
+
+  <!-- BreadcrumbList JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bynorthlight.ca/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://bynorthlight.ca/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Your Agents Need a Chain of Command", "item": "https://bynorthlight.ca/blog/your-agents-need-a-chain-of-command.html" }
+    ]
+  }
+  </script>
+
+  <!-- FAQPage JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between an autonomous agent and a supervised one?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A supervised agent (Level 1 or 2) executes tasks but pauses for human review at defined checkpoints. An autonomous agent (Level 3 or 4) operates independently within boundaries or across full workflows with minimal human interaction. The governance requirements increase significantly with each level — what works for Level 2 is insufficient for Level 3 or above." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does every AI agent deployment need a formal pre-deployment review?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes — the scope of that review scales with the autonomy level and the stakes involved. A Level 1 agent with read-only access needs a lighter review than a Level 3 agent with write permissions to production systems. The Go/No-Go checklist is designed to be lightweight enough for all deployments while surfacing the gaps that matter most." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I get compliance sign-off on an AI agent deployment?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Start by documenting the agent's identity, permissions, and defined boundaries before the conversation. Compliance teams struggle to evaluate what isn't written down. Bring the audit trail architecture to the meeting: what gets logged, how, where it's stored, and how long it's retained. The Go/No-Go checklist covers the questions compliance will ask." }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if an agent acts outside its defined boundaries?",
+        "acceptedAnswer": { "@type": "Answer", "text": "That depends entirely on whether you've designed a controlled failure path. A well-governed agent logs the blocked action and surfaces it for review — it doesn't silently stop or silently proceed. If you don't have that path designed before deployment, you won't know what the agent attempted until something breaks." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the AI Agent Deployment Go/No-Go checklist free?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. The checklist is free to download with no sign-up required. It covers identity and permissions, boundaries and containment, auditability, and operational readiness — the four areas that most pre-deployment reviews miss or underweight." }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --midnight:#0E0E14;--surface:#12121E;--surface-2:#10101C;
+      --border:#1E2035;--border-2:#2A2A48;
+      --text:#FFFFFF;--cloud:#C8CCE0;--haze:#B0B8D8;--muted:#8A92A8;--structural:#5A6080;
+      --glacial:#4FC3C8;--boreal:#5B8DD9;--dusk:#8B6FD4;--aurora:#C46FAA;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{background:var(--midnight);color:var(--cloud);font-family:'Outfit',sans-serif;min-height:100vh;}
+
+    .skip-nav{position:absolute;top:-100px;left:0;background:var(--dusk);color:#fff;padding:10px 20px;font-family:'Jost',sans-serif;font-size:13px;font-weight:600;letter-spacing:.06em;text-decoration:none;border-radius:0 0 6px 0;z-index:9999;transition:top .2s;}
+    .skip-nav:focus{top:0;}
+
+    .site-header{display:flex;align-items:center;padding:18px 48px;border-bottom:1px solid var(--border);}
+    .wordmark{font-family:'Jost',sans-serif;font-weight:600;font-size:20px;letter-spacing:.08em;background:linear-gradient(105deg,#4fc3c8 0%,#5b8dd9 33%,#8b6fd4 66%,#c46faa 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;}
+    .top-bar{height:3px;background:linear-gradient(90deg,#4fc3c8 0%,#5b8dd9 30%,#8b6fd4 65%,#c46faa 100%);}
+
+    .blog-shell{display:grid;grid-template-columns:1fr min(680px,100%) 300px 1fr;min-height:calc(100vh - 60px);}
+    .blog-left-wing{grid-column:1;background:var(--midnight);position:relative;overflow:hidden;}
+    .blog-reading{grid-column:2;border-left:1px solid var(--border);border-right:1px solid var(--border);padding:52px 56px 100px;}
+    .blog-sidebar{grid-column:3;border-right:1px solid var(--border);padding:52px 0 100px 32px;position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;}
+    .blog-right-wing{grid-column:4;background:var(--midnight);position:relative;overflow:hidden;}
+
+    .left-glow{position:absolute;right:0;top:0;width:160px;height:100%;background:linear-gradient(90deg,transparent 0%,rgba(79,195,200,.03) 50%,rgba(91,141,217,.07) 100%);pointer-events:none;}
+    .aurora-rail-wrap{position:absolute;right:28px;top:52px;bottom:40px;width:3px;}
+    .aurora-rail-line{width:3px;height:100%;background:linear-gradient(180deg,#4fc3c8 0%,#5b8dd9 22%,#8b6fd4 55%,#c46faa 82%,transparent 100%);border-radius:2px;opacity:.7;}
+    .aurora-rail-dot{width:9px;height:9px;border-radius:50%;background:linear-gradient(135deg,#4fc3c8,#8b6fd4);position:absolute;top:-3px;left:-3px;box-shadow:0 0 8px rgba(79,195,200,.4);}
+    .left-label{position:absolute;right:48px;top:60px;font-family:'Jost',sans-serif;font-size:9px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:#2A2A48;writing-mode:vertical-rl;transform:rotate(180deg);user-select:none;}
+
+    .right-glow{position:absolute;left:0;top:0;width:160px;height:100%;background:linear-gradient(270deg,transparent 0%,rgba(139,111,212,.04) 60%,rgba(196,111,170,.05) 100%);pointer-events:none;}
+    .right-dots-wrap{position:absolute;top:72px;left:36px;}
+    .dot{width:3px;height:3px;border-radius:50%;background:#8B6FD4;position:absolute;opacity:.15;}
+
+    .post-back{font-family:'Jost',sans-serif;font-weight:500;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);text-decoration:none;display:block;margin-bottom:28px;}
+    .post-back:hover{color:var(--cloud);}
+    .source-label{font-family:'Jost',sans-serif;font-weight:500;font-size:10px;letter-spacing:.28em;text-transform:uppercase;display:block;margin-bottom:16px;}
+    .source-essay{color:var(--boreal);}
+    .post-title{font-family:'Jost',sans-serif;font-weight:600;font-size:34px;line-height:1.1;letter-spacing:.01em;color:var(--text);margin-bottom:12px;}
+    .post-date-line{font-family:'Outfit',sans-serif;font-size:13px;color:var(--muted);margin-bottom:28px;}
+    .aurora-divider{height:1px;background:linear-gradient(90deg,#4fc3c8 0%,#5b8dd9 30%,#8b6fd4 65%,#c46faa 100%);opacity:.3;margin-bottom:36px;}
+
+    .post-body p{font-family:'Outfit',sans-serif;font-size:16px;line-height:1.85;color:var(--cloud);margin-bottom:1.4em;}
+    .post-body h2{font-family:'Jost',sans-serif;font-weight:600;font-size:20px;letter-spacing:.03em;color:var(--glacial);margin:2em 0 .6em;}
+    .post-body blockquote{border-left:3px solid var(--dusk);padding-left:22px;margin:1.4em 0;font-style:italic;color:var(--haze);}
+    .post-body .callout{background:rgba(139,111,212,.08);border-left:3px solid var(--dusk);border-radius:0 6px 6px 0;padding:14px 20px;margin:1.6em 0;font-family:'Outfit',sans-serif;font-size:16px;color:var(--haze);line-height:1.6;}
+    .post-body .callout strong{color:var(--aurora);}
+    .post-body .answer-block{background:var(--surface);border:1px solid var(--border-2);border-left:3px solid var(--glacial);border-radius:0 6px 6px 0;padding:14px 20px;margin:0 0 1.6em;}
+    .post-body .answer-block p{font-family:'Outfit',sans-serif;font-size:15px;color:var(--haze);line-height:1.7;margin:0;}
+    .post-body strong{color:var(--text);font-weight:600;}
+    .post-body a{color:var(--glacial);text-decoration:none;border-bottom:1px solid rgba(79,195,200,.25);}
+    .post-body a:visited{color:var(--glacial);}
+    .post-body a:hover{color:var(--text);border-color:rgba(255,255,255,.3);}
+
+    /* At-a-glance */
+    .at-a-glance{background:var(--surface);border:1px solid var(--border-2);border-left:3px solid var(--glacial);border-radius:0 8px 8px 0;padding:20px 24px;margin-bottom:36px;}
+    .at-a-glance-label{font-family:'Jost',sans-serif;font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--glacial);margin-bottom:12px;}
+    .at-a-glance ul{list-style:none;padding:0;margin:0;}
+    .at-a-glance li{font-family:'Outfit',sans-serif;font-size:14px;color:var(--haze);padding:4px 0 4px 18px;position:relative;line-height:1.55;}
+    .at-a-glance li::before{content:'→';position:absolute;left:0;color:var(--glacial);font-size:12px;top:5px;}
+
+    /* CTA block */
+    .cta-block{background:var(--surface);border:1px solid var(--border-2);border-radius:8px;padding:28px 32px;margin:48px 0;}
+    .cta-block h3{font-family:'Jost',sans-serif;font-size:18px;font-weight:600;color:var(--text);margin:0 0 10px;}
+    .cta-block p{font-family:'Outfit',sans-serif;font-size:14px;color:var(--muted);margin:0 0 20px;line-height:1.7;}
+    .cta-btn{display:inline-block;background:linear-gradient(105deg,#4FC3C8 0%,#5B8DD9 50%,#8B6FD4 100%);color:#fff;font-family:'Jost',sans-serif;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:12px 24px;border-radius:6px;text-decoration:none;border:none;}
+    .cta-btn:hover{opacity:.9;}
+
+    /* FAQ section */
+    .faq-section{margin-top:56px;padding-top:40px;border-top:1px solid var(--border);}
+    .faq-section-label{font-family:'Jost',sans-serif;font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:20px;}
+    .faq-item{border-bottom:1px solid var(--border);padding:20px 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .faq-q{font-family:'Jost',sans-serif;font-size:15px;font-weight:600;color:var(--cloud);margin-bottom:10px;line-height:1.35;}
+    .faq-a{font-family:'Outfit',sans-serif;font-size:14px;color:var(--muted);line-height:1.7;}
+
+    /* Sidebar */
+    .sidebar-label{font-family:'Jost',sans-serif;font-weight:600;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
+    .sidebar-section{margin-bottom:32px;}
+    .pub-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px;text-align:center;}
+    .pub-day{font-family:'Jost',sans-serif;font-weight:600;font-size:28px;color:var(--text);line-height:1;}
+    .pub-year{font-family:'Outfit',sans-serif;font-size:13px;color:var(--muted);margin-top:2px;margin-bottom:10px;}
+    .pub-rule{border:none;border-top:1px solid var(--border);margin:10px 0;}
+    .pub-readtime{font-family:'Outfit',sans-serif;font-size:13px;color:var(--muted);}
+    .pub-readtime strong{color:var(--cloud);}
+    .aurora-card{background:linear-gradient(150deg,rgba(79,195,200,.05) 0%,rgba(139,111,212,.08) 55%,rgba(196,111,170,.04) 100%);border:1px solid var(--border-2);border-radius:8px;padding:16px;}
+    .aurora-card p{font-family:'Outfit',sans-serif;font-size:13px;line-height:1.65;color:var(--haze);margin-bottom:10px;}
+    .aurora-card a{font-family:'Jost',sans-serif;font-weight:500;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--dusk);text-decoration:none;}
+    .aurora-card a:hover{color:var(--glacial);}
+    .topics-wrap{display:flex;flex-wrap:wrap;gap:6px;}
+    .topic-tag{font-family:'Jost',sans-serif;font-weight:500;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:4px 10px;}
+
+    /* Footer */
+    .site-footer{grid-column:1/-1;border-top:1px solid var(--border);padding:24px 56px;display:flex;justify-content:space-between;align-items:center;}
+    .footer-copy{font-family:'Outfit',sans-serif;font-size:13px;color:var(--structural);}
+    .footer-nav{display:flex;gap:24px;}
+    .footer-link{font-family:'Jost',sans-serif;font-weight:500;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;}
+    .footer-link:hover{color:var(--cloud);}
+    .footer-link.active{color:var(--dusk);}
+
+    @media(max-width:1100px){
+      .blog-shell{grid-template-columns:0 1fr 260px 0;}
+      .blog-left-wing,.blog-right-wing{display:none;}
+      .blog-reading{padding:40px 40px 64px;}
+    }
+    @media(max-width:800px){
+      .site-header{padding:14px 24px;}
+      .blog-shell{grid-template-columns:1fr;}
+      .blog-sidebar{grid-column:1;border:none;border-top:1px solid var(--border);padding:32px 24px;position:static;max-height:none;}
+      .blog-reading{grid-column:1;padding:32px 24px 48px;border:none;}
+      .post-title{font-size:26px;}
+      .site-footer{grid-column:1;padding:20px 24px;flex-direction:column;gap:12px;text-align:center;}
+    }
+  </style>
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <script defer data-domain="bynorthlight.ca" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <header class="site-header">
+    <a href="/" class="wordmark">Northlight</a>
+  </header>
+  <div class="top-bar" role="presentation"></div>
+
+  <div class="blog-shell">
+
+    <!-- Left wing -->
+    <div class="blog-left-wing" role="presentation">
+      <div class="left-glow" role="presentation"></div>
+      <div class="aurora-rail-wrap" role="presentation">
+        <div class="aurora-rail-dot" role="presentation"></div>
+        <div class="aurora-rail-line" role="presentation"></div>
+      </div>
+      <div class="left-label" aria-hidden="true">bynorthlight.ca</div>
+    </div>
+
+    <!-- Reading column -->
+    <main class="blog-reading" id="main-content">
+      <a href="/blog/" class="post-back">← All posts</a>
+      <span class="source-label source-essay">Northlight · Essay</span>
+      <h1 class="post-title">Your Agents Need a Chain of Command</h1>
+      <p class="post-date-line"><time datetime="2026-07-18">July 18, 2026</time></p>
+      <div class="aurora-divider" role="presentation"></div>
+
+      <div class="post-body">
+
+        <!-- At-a-glance -->
+        <div class="at-a-glance">
+          <p class="at-a-glance-label">At a glance</p>
+          <ul>
+            <li>AI agents operating without defined authority create compliance gaps, permission sprawl, and audit failures — not just security risks.</li>
+            <li>The level of autonomy you grant an agent (1–4) directly determines the governance structures you need around it.</li>
+            <li>The three most common deployment failures are permission sprawl, silent failure, and attribution gaps.</li>
+            <li>A pre-deployment review should cover identity, boundaries, auditability, and readiness — in that order.</li>
+            <li>Download the free Go/No-Go checklist to run a structured review before your next agent deployment.</li>
+          </ul>
+        </div>
+
+        <p>The organisations that govern AI agents well aren't the ones that move fastest. They're the ones that answered the chain of command questions before the first deployment — and kept answering them as the scope grew.</p>
+
+        <p>This isn't a developer problem. Developers can configure an agent in an afternoon. What most organisations are missing is the governance layer: who authorised this, what is it allowed to do, and who is accountable when it does something unexpected. Those questions don't answer themselves, and they don't get easier after the fact.</p>
+
+        <h2>What is an autonomy level, and why does it determine your risk exposure?</h2>
+
+        <div class="answer-block">
+          <p>An autonomy level describes how much independent judgement an AI agent is authorised to exercise — and what it must do when it reaches the limit of that authorisation. The level determines not just what the agent can do, but also what governance structures you need in place before deployment.</p>
+        </div>
+
+        <p><a href="https://resources.coder.com/weave-whitepaper/operationalizing-ai-coding-agents-regulated-industries">Coder's whitepaper on operationalising AI agents in regulated industries</a> describes four levels of agent autonomy. At Level 1, the agent makes suggestions — a human reviews and executes every action. At Level 2, the agent performs defined tasks but pauses at key checkpoints for human review. At Level 3, the agent operates independently within explicit boundaries and escalates anything outside them. At Level 4, the agent completes full workflows with minimal human interaction.</p>
+
+        <p>Most enterprise deployments are designed for Level 2 but drift toward Level 3 behaviour over time — without updating the governance structures to match. The agent starts handling more cases, running more autonomously, touching more systems. Nobody makes a deliberate decision to move up a level. It just happens. That gap between intended and actual autonomy is where the risk accumulates.</p>
+
+        <h2>What breaks when agents don't have a defined chain of command?</h2>
+
+        <div class="answer-block">
+          <p>Without a defined chain of command, agents fill the gaps themselves. They inherit permissions from whoever configured them, reach into systems beyond their intended scope, and generate audit trails that compliance teams cannot follow. The failures are rarely dramatic — they're a slow accumulation of actions no one explicitly authorised.</p>
+        </div>
+
+        <p>The three most common failure patterns are permission sprawl, silent failure, and attribution gaps.</p>
+
+        <p>Permission sprawl occurs when an agent is granted access to everything it might need rather than only what it needs. Every unnecessary permission is an attack surface. <a href="https://airc.nist.gov/">NIST's AI Risk Management Framework</a> is explicit on this point: least-privilege access applies to automated systems just as it does to human users, and the burden of justification runs in both directions.</p>
+
+        <p>Silent failure is subtler. If an agent encounters a blocked action and simply stops — without logging or surfacing what happened — you have no operational visibility and no audit record. You don't know what was attempted. In a regulated environment, that gap is a compliance problem before it's a security problem.</p>
+
+        <p>Attribution gaps close the loop. If every agent action isn't logged with full attribution — what ran, what it accessed, what it changed, under whose authorisation — your compliance function cannot audit it with the same rigour applied to human actions. For Canadian organisations, this is not an abstract concern: <a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/">PIPEDA</a> requires accountability for all personal information accessed or processed on an organisation's behalf — an obligation that extends to automated systems acting as agents of that organisation. And if it cannot be audited, it cannot be defended. <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689">The EU AI Act</a> codifies this expectation for high-risk systems: operators must maintain logs sufficient for post-deployment auditability — an obligation that begins at deployment, not after an incident.</p>
+
+        <div class="callout">
+          An agent that operates under a developer's credentials isn't a separate entity — <strong>it's that developer, in the eyes of your audit log.</strong> If something goes wrong, the record points to a person, not a process. That's the wrong answer in a post-incident review, and the wrong answer for any regulator who comes asking.
+        </div>
+
+        <h2>How do you design governance before the first deployment?</h2>
+
+        <div class="answer-block">
+          <p>Governance before deployment means answering four questions in sequence: Who is the agent? What is it permitted to do? What must it stop and ask? And who reviews what it did? If you can't answer all four clearly before you go live, the deployment isn't ready.</p>
+        </div>
+
+        <p>Identity comes first. The agent should have its own credentials, its own permissions, and its own audit log — separate from any human developer or shared service account. This isn't security hygiene for its own sake. It's the foundation of accountability.</p>
+
+        <p>Boundaries come second. Network access should be restricted to what the task actually requires. The agent should not write to protected branches or production systems without an explicit approval step for high-stakes actions. Equally important: the agent should be told its boundaries explicitly, not just blocked by them silently. An agent that understands its limits behaves more predictably than one that discovers them by running into them.</p>
+
+        <p>Auditability comes third. Every action logged. The security team briefed and signed off. The compliance team able to audit agent actions with the same rigour as human actions. For Canadian public sector organisations, <a href="https://www.tbs-sct.canada.ca/pol/doc-eng.aspx?id=32592">the Treasury Board Directive on Automated Decision-Making</a> sets explicit requirements for algorithmic transparency, impact assessments, and human oversight mechanisms — requirements that extend directly to AI agents operating within those systems. For private-sector organisations, Canada's voluntary <a href="https://ised-isde.canada.ca/site/ised/en/voluntary-code-conduct-responsible-development-and-management-advanced-generative-ai-systems">Code of Conduct on the Responsible Development and Management of Advanced Generative AI Systems</a> sets the equivalent expectations: transparency, human oversight, and the ability to explain and audit what an AI system does. An incident response plan must be in place before anything goes live — because agents will occasionally behave unexpectedly, and the question is whether you're prepared when they do.</p>
+
+        <p>Readiness comes fourth. Give the agent structured context before it starts, rather than letting it begin cold. Run a pilot on a low-risk use case before expanding scope. Define your success metrics before deployment, not after. These aren't perfectionist constraints — they're the sequence that separates a controlled rollout from a reactive one.</p>
+
+        <h2>What should a pre-deployment review actually include?</h2>
+
+        <div class="answer-block">
+          <p>A pre-deployment review should cover identity and permissions, boundaries and containment, auditability, and operational readiness — in that order. Not as a checkbox exercise, but as a structured conversation between the team deploying the agent, the security function, and the compliance function.</p>
+        </div>
+
+        <p>Each area has a set of binary questions. Either the agent has its own identity, or it doesn't. Either high-stakes actions require explicit approval, or they don't. Either an incident response plan exists, or it doesn't. That binary framing is intentional — a pre-deployment review isn't a risk assessment; it's a readiness check.</p>
+
+        <p>The <a href="https://oecd.ai/en/ai-principles">OECD Principles on Artificial Intelligence</a> make a similar point about accountability: organisations deploying AI systems must be able to explain and justify those systems' decisions, and that obligation begins before deployment, not after. <a href="https://www.iso.org/standard/81230.html">ISO/IEC 42001</a> — the international standard for AI management systems — formalises this as a structured requirement: a documented management system covering risk assessment, impact evaluation, and continual improvement, applied from the point of deployment. A pre-deployment review is the entry point to that system.</p>
+
+        <div class="callout">
+          <strong>"Autonomy without guardrails is risk. Guardrails without clarity are friction. Get both right, and agents can scale with you."</strong>
+        </div>
+
+        <!-- CTA block -->
+        <div class="cta-block">
+          <h3>AI Agent Deployment Go / No-Go</h3>
+          <p>A free pre-deployment checklist covering identity and permissions, boundaries and containment, auditability, and operational readiness. Built for the people making the deployment decision — not just the developers configuring the environment. No sign-up required.</p>
+          <a class="cta-btn" href="/assets/downloads/AI_Agent_Deployment_Go_No_Go.pdf">Download the checklist →</a>
+        </div>
+
+        <!-- FAQ section -->
+        <div class="faq-section">
+          <p class="faq-section-label">Common questions</p>
+
+          <div class="faq-item">
+            <p class="faq-q">What is the difference between an autonomous agent and a supervised one?</p>
+            <p class="faq-a">A supervised agent (Level 1 or 2) executes tasks but pauses for human review at defined checkpoints. An autonomous agent (Level 3 or 4) operates independently within boundaries or across full workflows with minimal human interaction. The governance requirements increase significantly with each level — what works for Level 2 is insufficient for Level 3 or above.</p>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">Does every agent deployment need a formal pre-deployment review?</p>
+            <p class="faq-a">Yes — the scope of that review scales with the autonomy level and the stakes involved. A Level 1 agent with read-only access needs a lighter review than a Level 3 agent with write permissions to production systems. The Go/No-Go checklist is designed to be lightweight enough for all deployments while surfacing the gaps that matter most at each level.</p>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">How do I get compliance sign-off on an AI agent deployment?</p>
+            <p class="faq-a">Start by documenting the agent's identity, permissions, and defined boundaries before the conversation. Compliance teams struggle to evaluate what isn't written down. Bring the audit trail architecture to the meeting: what gets logged, how, where it's stored, and how long it's retained. The Go/No-Go checklist covers the specific questions compliance teams typically ask.</p>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">What happens if an agent acts outside its defined boundaries?</p>
+            <p class="faq-a">That depends entirely on whether you've designed a controlled failure path. A well-governed agent logs the blocked action and surfaces it for review — it doesn't silently stop or silently proceed. If you don't have that path designed before deployment, you won't know what the agent attempted until something breaks. The checklist addresses this directly in the Boundaries &amp; Containment section.</p>
+          </div>
+
+          <div class="faq-item">
+            <p class="faq-q">Is the AI Agent Deployment Go / No-Go checklist free?</p>
+            <p class="faq-a">Yes. The checklist is free to download with no sign-up required. It covers identity and permissions, boundaries and containment, auditability, and operational readiness — the four areas that most pre-deployment reviews miss or underweight. <a href="/assets/downloads/AI_Agent_Deployment_Go_No_Go.pdf">Download it here.</a></p>
+          </div>
+        </div>
+
+      </div><!-- /post-body -->
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="blog-sidebar" aria-label="Post sidebar">
+
+      <div class="sidebar-section">
+        <p class="sidebar-label">Published</p>
+        <div class="pub-card">
+          <div class="pub-day">18</div>
+          <div class="pub-year">July 2026</div>
+          <hr class="pub-rule">
+          <p class="pub-readtime"><strong>9</strong> min read</p>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <p class="sidebar-label">Download</p>
+        <div class="aurora-card">
+          <p>AI Agent Deployment Go / No-Go — a free pre-deployment checklist. No sign-up required.</p>
+          <a href="/assets/downloads/AI_Agent_Deployment_Go_No_Go.pdf">Download the checklist →</a>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <p class="sidebar-label">Topics</p>
+        <div class="topics-wrap">
+          <span class="topic-tag">AI Governance</span>
+          <span class="topic-tag">AI Agents</span>
+          <span class="topic-tag">Compliance</span>
+          <span class="topic-tag">Canada</span>
+          <span class="topic-tag">Risk</span>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- Right wing -->
+    <div class="blog-right-wing" role="presentation">
+      <div class="right-glow" role="presentation"></div>
+      <div class="right-dots-wrap" role="presentation">
+        <div class="dot" style="top:0;left:0;"></div>
+        <div class="dot" style="top:0;left:16px;opacity:.08;"></div>
+        <div class="dot" style="top:16px;left:0;opacity:.1;"></div>
+        <div class="dot" style="top:16px;left:16px;opacity:.05;"></div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <span class="footer-copy">© 2026 Northlight Advisory Services</span>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/" class="footer-link">Home</a>
+        <a href="/about.html" class="footer-link">About</a>
+        <a href="/blog/" class="footer-link active">Blog</a>
+        <a href="/vault.html" class="footer-link">Vault</a>
+        <a href="/northlight-privacy.html" class="footer-link">Privacy</a>
+      </nav>
+    </footer>
+
+  </div><!-- /blog-shell -->
+</body>
+</html>
