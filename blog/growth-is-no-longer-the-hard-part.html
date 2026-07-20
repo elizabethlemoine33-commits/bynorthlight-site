@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -152,6 +152,13 @@
       .post-title{font-size:26px;}
       .site-footer{grid-column:1;padding:20px 24px;flex-direction:column;gap:12px;text-align:center;}
     }
+  
+    .related-reading{margin-top:48px;padding-top:32px;border-top:1px solid var(--border);}
+    .related-label{font-family:'Jost',sans-serif;font-weight:600;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;}
+    .related-links{display:flex;flex-direction:column;gap:8px;}
+    .related-link{font-family:'Outfit',sans-serif;font-size:15px;color:var(--haze);text-decoration:none;padding:12px 16px;background:var(--surface);border:1px solid var(--border);border-radius:6px;display:block;transition:border-color .15s,color .15s;}
+    .related-link:hover{border-color:var(--dusk);color:var(--cloud);}
+    .related-link-arrow{color:var(--dusk);}
   </style>
 </head>
 <body>
@@ -224,7 +231,17 @@
 
         <p><strong>This is the kind of thing I think out loud about every month in <a href="https://aurora-brief.kit.com/110f173cf7">Aurora Brief</a></strong> — not answers, but the questions worth asking and what I'm learning as I try to figure them out. If that sounds like your kind of conversation, <a href="https://aurora-brief.kit.com/110f173cf7">come read</a>.</p>
       </div>
-    </main>
+    
+      <!-- Related reading -->
+      <div class="related-reading">
+        <p class="related-label">Related reading</p>
+        <div class="related-links">
+          <a href="/blog/you-hired-them-now-what.html" class="related-link">You Hired Them. Now What? When New Hires Don't Clear the Bottleneck <span class="related-link-arrow">&rarr;</span></a>
+          <a href="/blog/ai-roi-canadian-smb.html" class="related-link">The Real ROI of AI for Canadian SMBs (It's Not Hours Saved) <span class="related-link-arrow">&rarr;</span></a>
+          <a href="/blog/the-wall-on-day-200.html" class="related-link">The Wall on Day 200: When Plans Don't Go to Plan <span class="related-link-arrow">&rarr;</span></a>
+        </div>
+      </div>
+</main>
 
     <aside class="blog-sidebar" aria-label="Post sidebar">
 
