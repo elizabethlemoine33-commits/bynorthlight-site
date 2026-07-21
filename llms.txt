@@ -66,6 +66,7 @@ Essays from Elizabeth Lemoine on strategy, AI adoption, operations, and building
 Current posts:
 - About Northlight Advisory Services — Who We Are and What We Do | Halifax, NS — https://bynorthlight.ca/blog/about-northlight-advisory-services.html
 - What I Learned Optimizing a Website for AI Search: An AEO Checklist for 2026 | Northlight Advisory Services — https://bynorthlight.ca/blog/aeo-optimization-lessons-2026.html
+- How to Prepare Your Business for AI Adoption: A Canadian Checklist (2026) | Northlight — https://bynorthlight.ca/blog/ai-adoption-checklist-canada.html
 - AI for All: Open Programmes for Nova Scotia Businesses — https://bynorthlight.ca/blog/ai-for-all-programmes-nova-scotia-businesses.html
 - Your AI Isn't Underperforming. It's Working Blind. — https://bynorthlight.ca/blog/ai-isnt-underperforming-working-blind.html
 - The Real ROI of AI for Canadian SMBs (It's Not Hours Saved) | Northlight Advisory Services — https://bynorthlight.ca/blog/ai-roi-canadian-smb.html
@@ -83,6 +84,7 @@ Current posts:
 - Most Resumes Describe the Job. Almost None Describe the Work — https://bynorthlight.ca/blog/resumes-describe-job-not-work-digital-reference.html
 - Shadow AI Is the New Shadow IT — What Leaders Need to Know — https://bynorthlight.ca/blog/shadow-ai-is-the-new-shadow-it.html
 - The Wall on Day 200: When Plans Don't Go to Plan — https://bynorthlight.ca/blog/the-wall-on-day-200.html
+- What Is a Fractional Executive? A Guide for Canadian Businesses | Northlight — https://bynorthlight.ca/blog/what-is-a-fractional-executive-canada.html
 - You Hired Them. Now What? When New Hires Don't Clear the Bottleneck — https://bynorthlight.ca/blog/you-hired-them-now-what.html
 - Your Agents Need a Chain of Command — https://bynorthlight.ca/blog/your-agents-need-a-chain-of-command.html
 
