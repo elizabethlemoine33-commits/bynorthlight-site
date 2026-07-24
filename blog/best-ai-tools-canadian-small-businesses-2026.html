@@ -82,7 +82,7 @@
         "name": "What is the most PIPEDA-compliant AI tool for Canadian small businesses?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Augure is the strongest general AI option for Canadian businesses — built in Canada, cloud-sovereign, and designed with Canadian data residency in mind. For email and file storage, NorthMail and NorthCloud are Canadian-hosted and priced at $0.99/month CAD. For meeting notes, Fellow hosts on AWS Canada Central. For voice dictation where client data is a concern, Superwhisper processes audio fully locally — nothing is transmitted."
+          "text": "Augure is the strongest general AI option for Canadian businesses — built in Canada, cloud-sovereign, and designed with Canadian data residency in mind. For email and file storage, NorthMail and NorthCloud are Canadian-hosted and priced at $0.99/month CAD. For meeting notes, Fellow hosts on AWS Canada Central. For voice dictation where client data is a concern, on-device processing is the answer: OpenWhispr (Windows, free, MIT-licensed) or VoiceInk (Mac Apple Silicon, one-time purchase) process audio entirely on your device — nothing is transmitted. Superwhisper can also run in local mode, but requires avoiding its cloud features."
         }
       },
       {
@@ -90,7 +90,7 @@
         "name": "Is Wispr Flow safe to use with client data?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Wispr Flow is a US-based service. Your audio is processed on their servers, which means cross-border data transfer applies. For your own internal notes, it is generally fine. For anything involving identifiable client information — meeting recaps, sensitive conversations, healthcare or legal contexts — it is not appropriate without explicit disclosure and consent. Superwhisper is a fully local alternative: audio processing happens entirely on your device, nothing is transmitted."
+          "text": "No — not without explicit disclosure. Wispr Flow is a US-based service that processes audio on their servers, and in 2025 the company disclosed a data incident affecting user audio. For anything involving a client's words, identifiable information, or anything covered by PIPEDA, it is not appropriate. Use a fully local alternative instead: Superwhisper or OpenWhispr both process audio entirely on your device — nothing is transmitted."
         }
       },
       {
@@ -277,7 +277,7 @@
             <li>Canadian-hosted AI tools now exist across most categories — you just have to know where to look</li>
             <li>Augure is the Canadian-first option for general AI; ChatGPT, Claude, and Gemini can be used with PIPEDA in mind if you keep identifiable client data out</li>
             <li>Fellow (Ottawa, AWS Canada Central) and Upmeet are Canadian-hosted meeting tools; Jamie and HappyScribe qualify if you need EU data sovereignty</li>
-            <li>Wispr Flow is US-based — fine for internal notes, not appropriate for client data; Superwhisper offers fully local audio processing as an alternative</li>
+            <li>For voice dictation: OpenWhispr (Windows, free, open source) or VoiceInk (Mac Apple Silicon, ~$40 once) process audio entirely on-device; Superwhisper works in local mode but has cloud features to avoid; Wispr Flow is US-based with a documented 2025 data disclosure incident — not for client data</li>
             <li>NorthMail and NorthCloud are a $0.99/month CAD Canadian productivity stack — email, file sync, calendar, and office tools with data residency in Canada</li>
           </ul>
         </div>
@@ -323,17 +323,21 @@
         <div class="callout-block"><p><strong>Our recommendation for client calls:</strong> Fellow is the strongest option for any client-facing meeting context where Canadian data residency matters.</p></div>
 
         <h2>Voice Dictation</h2>
-        <div class="answer-block"><p>Wispr Flow is excellent for internal notes and drafting — but it is a US service and should not be used for client data. Superwhisper processes audio entirely on your device; nothing is transmitted, making it the right choice when client confidentiality matters.</p></div>
+        <div class="answer-block"><p>On-device processing beats Canadian cloud hosting — nothing crosses any border at all. On Windows, OpenWhispr is the recommended option: MIT-licensed, verifiable, free, and light enough for older hardware. On Mac with Apple Silicon, VoiceInk is the cleanest choice at under $40 once. Superwhisper can match this in local mode, but requires discipline to avoid its cloud features. Wispr Flow is US-based with a documented 2025 data disclosure incident — not appropriate for client data.</p></div>
 
-        <h3><a href="https://wisprflow.com" target="_blank" rel="noopener">Wispr Flow</a> — US-based, not for client data</h3>
-        <p>Wispr Flow is genuinely useful for voice-to-text — fast, accurate, works anywhere you can type. It is a US company, which means your audio goes to their servers. For your own notes, meeting prep, drafting your own content: it is fine. For anything involving a client's words, a client's name, or information a client shared with you: it is not the right tool without explicit disclosure. There is no Canadian version. The pricing is in USD — that is the right way to think about it, not in converted CAD. Review <a href="https://wisprflow.com/privacy" target="_blank" rel="noopener">their privacy policy</a> before using it in a professional context.</p>
+        <h3>OpenWhispr — Open source, fully local, free</h3>
+        <p>OpenWhispr runs Whisper locally on your machine — nothing is transmitted anywhere. It is MIT-licensed and fully open source, which means you can actually verify that claim rather than taking a vendor's word for it. Free for local use; Windows 10+ native with tiny and base model options specifically suited to older or lower-powered hardware. Local mode is the default. There is an optional paid cloud sync tier — avoid that piece, as it routes data through US servers. If you are starting from scratch with dictation on Windows, this is the most defensible choice.</p>
 
-        <h3><a href="https://superwhisper.com" target="_blank" rel="noopener">Superwhisper</a> — Fully local processing</h3>
-        <p>Superwhisper is the answer to the Wispr Flow client data problem. It runs on your Mac or Windows machine and processes all audio locally — nothing is transmitted to a server. Your client's words do not leave your device. That is a meaningfully different privacy posture.</p>
+        <h3><a href="https://superwhisper.com" target="_blank" rel="noopener">Superwhisper</a> — Local mode is strong; cloud modes are not</h3>
+        <p>Superwhisper's local mode (Apple Silicon, small Whisper models) processes audio entirely on-device — you can verify this yourself by testing in airplane mode. That part is solid. The caveats: it also has cloud modes (Ultra transcription, Super Mode AI cleanup) that route audio and text through OpenAI, Anthropic, Google, or others — those modes are not clearly separated in the privacy policy (last updated June 2024), and it is closed-source, so you are trusting rather than verifying. Two other defaults worth knowing: it saves audio recordings to local disk with no opt-out, and stores cloud API keys in plaintext. The Windows version is newer and less mature than the Mac version. If you use Superwhisper, stay in local mode and don't touch the cloud features. Pricing: free tier; Pro at $8.49–9.99 USD/month or ~$85 USD/year; lifetime at $249.99 USD. See <a href="https://superwhisper.com/privacy" target="_blank" rel="noopener">superwhisper.com/privacy</a> for current terms.</p>
 
-        <p>Pricing: free tier available; Pro at $8.49 USD/month or $84.99 USD/year (a 40% discount is available for students); lifetime access at $249.99 USD. The Pro plan lets you bring your own AI API keys, which gives you control over which model processes your transcription and where that processing happens. See <a href="https://superwhisper.com/privacy" target="_blank" rel="noopener">superwhisper.com/privacy</a> for their full privacy documentation.</p>
+        <h3>VoiceInk — Mac (Apple Silicon) only</h3>
+        <p>VoiceInk is fully on-device Whisper transcription for Apple Silicon Macs — no audio ever leaves your machine, and any optional cloud enhancement is text-only (never audio). One-time purchase under $40 CAD equivalent; no subscription. If you are on a Mac with Apple Silicon, this is the cleanest option: opt-out-by-design rather than opt-out-by-discipline. Not available for Windows.</p>
 
-        <p>SaySo is another option in this space (Mac and Windows) but uses cloud processing for some features — check their current documentation before relying on it for sensitive audio.</p>
+        <h3><a href="https://wisprflow.com" target="_blank" rel="noopener">Wispr Flow</a> — 🇺🇸 US-based, flag before use with client data</h3>
+        <p>Wispr Flow is fast and accurate, and many people use it for personal drafting and internal notes. It is a US service — your audio is processed on their servers — and in 2025 the company disclosed a data incident affecting user audio. For your own internal notes where no client information is involved: the risk is yours to assess. For anything involving a client's words, a client's name, or information covered by PIPEDA or your engagement terms: it is not appropriate without explicit disclosure and consent. There is no Canadian version. See <a href="https://wisprflow.com/privacy" target="_blank" rel="noopener">their privacy policy</a> for current terms.</p>
+
+        <p><strong>A note on SaySo:</strong> SaySo markets itself as a dictation tool for Mac and Windows, but its own privacy policy discloses that data may be transferred to servers governed by PRC law. That is a significant flag for any professional use involving client information — rule it out for that context.</p>
 
         <h2>Coding Assistants</h2>
         <div class="answer-block"><p>Augure Code is the Canadian-sovereign option. GitHub Copilot is the dominant US tool — fine for code that doesn't contain proprietary client logic or sensitive data in the codebase.</p></div>
@@ -407,7 +411,7 @@
 
         <div class="faq-item">
           <div class="faq-q">Is Wispr Flow safe to use with client data?</div>
-          <div class="faq-a"><a href="https://wisprflow.com" target="_blank" rel="noopener">Wispr Flow</a> is a US-based service. Your audio is processed on their servers, which means cross-border data transfer applies. For your own internal notes, it is generally fine. For anything involving identifiable client information — meeting recaps, sensitive conversations, healthcare or legal contexts — it is not appropriate without explicit disclosure and consent. <a href="https://superwhisper.com" target="_blank" rel="noopener">Superwhisper</a> is a fully local alternative: audio processing happens entirely on your device, nothing is transmitted.</div>
+          <div class="faq-a">No — not without explicit disclosure. <a href="https://wisprflow.com" target="_blank" rel="noopener">Wispr Flow</a> is a US-based service that processes audio on their servers, and in 2025 the company disclosed a data incident affecting user audio. For internal notes where no client information is involved, the risk is yours to assess. For anything involving a client's words, identifiable information, or anything covered by PIPEDA or your engagement terms, it is not appropriate. Use a fully local alternative instead: <a href="https://superwhisper.com" target="_blank" rel="noopener">Superwhisper</a> or OpenWhispr both process audio entirely on your device — nothing is transmitted.</div>
         </div>
 
         <div class="faq-item">
