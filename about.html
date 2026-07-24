@@ -62,7 +62,7 @@
           "Organisational Design",
           "Program Delivery"
         ],
-        "dateModified": "2026-06-10T00:00:00Z"
+        "dateModified": "2026-07-24T00:00:00Z"
       },
       {
         "@type": "Organization",
@@ -502,6 +502,89 @@
       .footer-right { align-items: flex-start; }
       .footer-links { justify-content: flex-start; }
     }
+
+    /* ── PHOTO CTA SUBTEXT ── */
+    .photo-cta-subtext {
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      color: var(--structural);
+      text-align: center;
+      line-height: 1.6;
+      margin-top: 8px;
+    }
+
+    /* ── CREDENTIALS ROW ── */
+    .cred-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px 18px;
+      padding: 20px 0;
+      border-top: 1px solid var(--border);
+    }
+    .cred-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-family: 'Jost', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      color: var(--structural);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color 0.2s;
+    }
+    .cred-item:hover { color: var(--cloud); }
+    a.cred-item:visited { color: var(--structural); }
+    .cred-item svg { opacity: 0.55; flex-shrink: 0; transition: opacity 0.2s; }
+    .cred-item:hover svg { opacity: 1; }
+    .cred-item--static { cursor: default; }
+
+    /* ── EVERYEXPERT CARD ── */
+    .everyexpert-card {
+      background: var(--surface);
+      border: 1px solid var(--border-2);
+      border-left: 3px solid var(--glacial);
+      border-radius: 8px;
+      padding: 32px 40px;
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .everyexpert-card h3 {
+      font-family: 'Jost', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+    .everyexpert-card p {
+      font-family: 'Outfit', sans-serif;
+      font-size: 15px;
+      color: var(--haze);
+      line-height: 1.7;
+      max-width: 440px;
+      margin: 0 auto 22px;
+    }
+    .btn-clarity {
+      display: inline-block;
+      font-family: 'Jost', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 12px 24px;
+      border: 1px solid var(--glacial);
+      border-radius: 4px;
+      color: var(--glacial);
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-clarity:hover {
+      background: var(--glacial);
+      color: var(--deep-night);
+    }
   </style>
     <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -543,16 +626,37 @@
           <p class="photo-name">Elizabeth Lemoine</p>
           <p class="photo-title">Founder &amp; Principal</p>
           <p class="photo-location">Nova Scotia, Canada · Remote</p>
-          <a href="mailto:support@bynorthlight.ca" class="photo-cta">Get in touch</a>
-          <div class="photo-links">
-            <a href="https://www.linkedin.com/in/elizabethannelemoine" target="_blank" rel="noopener" aria-label="Elizabeth Lemoine on LinkedIn">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <a href="https://calendar.app.google/Uy11QKGmBEBd162h6" class="photo-cta" target="_blank" rel="noopener">Grab a virtual coffee</a>
+          <p class="photo-cta-subtext">A virtual coffee, no agenda required. Tell me what you're working on — no pitch, no pressure, just seeing if we're a fit or talking shop for 30 minutes.</p>
+          <div class="cred-row">
+            <a href="https://www.linkedin.com/in/elizabethannelemoine" target="_blank" rel="noopener" class="cred-item" aria-label="Elizabeth Lemoine on LinkedIn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
               LinkedIn
             </a>
-            <a href="https://www.threads.com/@northlightcomms" target="_blank" rel="noopener" aria-label="Northlight on Threads">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.312-.883-2.371-.887h-.018c-.87 0-1.952.26-2.716 1.294l-1.694-1.252c1.083-1.464 2.715-2.193 4.41-2.193h.023c3.016.016 4.877 1.913 5.115 5.19.238.071.471.15.698.234 1.947.713 3.008 2.163 3.225 4.225.179 1.702-.198 4.403-2.628 6.797-1.82 1.79-4.133 2.684-6.835 2.706l-.034.001z"/></svg>
+            <a href="https://www.threads.com/@northlightcomms" target="_blank" rel="noopener" class="cred-item" aria-label="Northlight on Threads">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.312-.883-2.371-.887h-.018c-.87 0-1.952.26-2.716 1.294l-1.694-1.252c1.083-1.464 2.715-2.193 4.41-2.193h.023c3.016.016 4.877 1.913 5.115 5.19.238.071.471.15.698.234 1.947.713 3.008 2.163 3.225 4.225.179 1.702-.198 4.403-2.628 6.797-1.82 1.79-4.133 2.684-6.835 2.706l-.034.001z"/></svg>
               Threads
             </a>
+            <a href="https://www.digitalreference.co/resume/elizabeth-lemoine-6zzlbgcq" target="_blank" rel="noopener" class="cred-item" aria-label="Elizabeth Lemoine on Digital Reference">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg>
+              Digital Reference
+            </a>
+            <a href="https://www.gofractional.com/r/elizabeth-anne-randell-lemoine" target="_blank" rel="noopener" class="cred-item" aria-label="Elizabeth Lemoine on GoFractional">
+              <svg width="14" height="14" viewBox="0 0 147 195" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M0 0h97.912v48.75H48.956V97.5H0V0Zm48.956 97.5h97.911v48.75H97.912V195H48.956V97.5Z"/></svg>
+              GoFractional
+            </a>
+            <a href="https://clutch.co/profile/northlight-advisory-services" target="_blank" rel="noopener" class="cred-item" aria-label="Northlight Advisory Services on Clutch">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1.5 14l-3.5-3.5 1.41-1.41L10.5 12.17l5.59-5.59L17.5 8l-7 7z"/></svg>
+              Clutch
+            </a>
+            <a href="https://www.crunchbase.com/organization/northlight-advisory-services" target="_blank" rel="noopener" class="cred-item" aria-label="Northlight Advisory Services on Crunchbase">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 0H2.4A2.41 2.41 0 0 0 0 2.4v19.2A2.41 2.41 0 0 0 2.4 24h19.2a2.41 2.41 0 0 0 2.4-2.4V2.4A2.41 2.41 0 0 0 21.6 0zM7.045 14.465A2.11 2.11 0 0 0 9.84 13.42h1.66a3.69 3.69 0 1 1 0-1.75H9.84a2.11 2.11 0 1 0-2.795 2.795zm11.345.845a3.55 3.55 0 0 1-1.06.63 3.68 3.68 0 0 1-3.39-.38v.38h-1.51V5.37h1.5v4.11a3.74 3.74 0 0 1 1.8-.63H16a3.67 3.67 0 0 1 2.39 6.46zm-.223-2.766a2.104 2.104 0 1 1-4.207 0 2.104 2.104 0 0 1 4.207 0z"/></svg>
+              Crunchbase
+            </a>
+            <span class="cred-item cred-item--static" title="Verified ClickUp Power User — top 10% of platform usage" aria-label="ClickUp Power User">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 18.439l3.69-2.828c1.961 2.56 4.044 3.739 6.363 3.739 2.307 0 4.33-1.166 6.203-3.704L22 18.405C19.298 22.065 15.941 24 12.053 24 8.178 24 4.788 22.078 2 18.439zM12.04 6.15l-6.568 5.66-3.036-3.52L12.055 0l9.543 8.296-3.05 3.509z"/></svg>
+              ClickUp Power User
+            </span>
           </div>
         </div>
 
@@ -592,6 +696,17 @@
 
       </div>
     </div>
+
+    <!-- ═══ EVERYEXPERT CTA ═══ -->
+    <section class="section-padded" aria-labelledby="everyexpert-label">
+      <div class="everyexpert-card">
+        <h3 id="everyexpert-label">Got a problem? Let's solve it.</h3>
+        <p>45 minutes, one operational decision made. No framework to read later — just a clear next step.</p>
+        <a href="https://www.everyexpert.com/elizabethlemoine" class="btn-clarity" target="_blank" rel="noopener">
+          Book an Operational Clarity Call — $99
+        </a>
+      </div>
+    </section>
 
     <div class="aurora-divider" role="presentation"></div>
 
@@ -727,35 +842,6 @@
           </div>
         </div>
 
-      </div>
-    </section>
-
-    <div class="aurora-divider" role="presentation"></div>
-
-    <!-- ═══ FIND NORTHLIGHT ON ═══ -->
-    <section class="section-padded" aria-labelledby="profiles-label">
-      <h2 class="section-label" id="profiles-label">Find Northlight Advisory Services on</h2>
-      <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-        <a href="https://www.digitalreference.co/resume/elizabeth-lemoine-6zzlbgcq" target="_blank" rel="noopener"
-           style="font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 9px 18px; transition: color 0.2s, border-color 0.2s;"
-           onmouseover="this.style.color='var(--text)';this.style.borderColor='var(--border-2)'" onmouseout="this.style.color='var(--muted)';this.style.borderColor='var(--border)'">
-          Digital Reference
-        </a>
-        <a href="https://clutch.co/profile/northlight-advisory-services" target="_blank" rel="noopener"
-           style="font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 9px 18px; transition: color 0.2s, border-color 0.2s;"
-           onmouseover="this.style.color='var(--text)';this.style.borderColor='var(--border-2)'" onmouseout="this.style.color='var(--muted)';this.style.borderColor='var(--border)'">
-          Clutch
-        </a>
-        <a href="https://www.crunchbase.com/organization/northlight-advisory-services" target="_blank" rel="noopener"
-           style="font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 9px 18px; transition: color 0.2s, border-color 0.2s;"
-           onmouseover="this.style.color='var(--text)';this.style.borderColor='var(--border-2)'" onmouseout="this.style.color='var(--muted)';this.style.borderColor='var(--border)'">
-          Crunchbase
-        </a>
-        <a href="https://www.gofractional.com/r/elizabeth-anne-randell-lemoine" target="_blank" rel="noopener"
-           style="font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 9px 18px; transition: color 0.2s, border-color 0.2s;"
-           onmouseover="this.style.color='var(--text)';this.style.borderColor='var(--border-2)'" onmouseout="this.style.color='var(--muted)';this.style.borderColor='var(--border)'">
-          GoFractional
-        </a>
       </div>
     </section>
 
