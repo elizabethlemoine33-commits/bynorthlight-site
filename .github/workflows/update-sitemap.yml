@@ -32,5 +32,5 @@ jobs:
             echo "sitemap.xml unchanged — nothing to commit"
           else
             git commit -m "chore: auto-update sitemap.xml"
-            git push
+            git push || (git pull --rebase origin main && git push)
           fi

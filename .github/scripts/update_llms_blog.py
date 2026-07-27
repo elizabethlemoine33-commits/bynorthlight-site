@@ -13,7 +13,7 @@ LLMS_FILE = Path("llms.txt")
 BASE_URL = "https://bynorthlight.ca"
 
 TITLE_SUFFIXES = re.compile(
-    r"\s*[—–-]+\s*(Northlight Advisory Services|Northlight)\s*$"
+    r"\s*[|—–-]+\s*(Northlight Advisory Services|Northlight)\s*$"
 )
 
 

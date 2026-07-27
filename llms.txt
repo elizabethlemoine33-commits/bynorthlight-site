@@ -65,31 +65,31 @@ Essays from Elizabeth Lemoine on strategy, AI adoption, operations, and building
 
 Current posts:
 - About Northlight Advisory Services — Who We Are and What We Do | Halifax, NS — https://bynorthlight.ca/blog/about-northlight-advisory-services.html
-- What I Learned Optimizing a Website for AI Search: An AEO Checklist for 2026 | Northlight Advisory Services — https://bynorthlight.ca/blog/aeo-optimization-lessons-2026.html
-- How to Prepare Your Business for AI Adoption: A Canadian Checklist | Northlight — https://bynorthlight.ca/blog/ai-adoption-checklist-canadian-businesses-2026.html
-- AI Readiness Checklist | Northlight — https://bynorthlight.ca/blog/ai-adoption-checklist-printable.html
+- What I Learned Optimizing a Website for AI Search: An AEO Checklist for 2026 — https://bynorthlight.ca/blog/aeo-optimization-lessons-2026.html
+- How to Prepare Your Business for AI Adoption: A Canadian Checklist — https://bynorthlight.ca/blog/ai-adoption-checklist-canadian-businesses-2026.html
+- AI Readiness Checklist — https://bynorthlight.ca/blog/ai-adoption-checklist-printable.html
 - AI for All: Open Programmes for Nova Scotia Businesses — https://bynorthlight.ca/blog/ai-for-all-programmes-nova-scotia-businesses.html
 - Your AI Isn't Underperforming. It's Working Blind. — https://bynorthlight.ca/blog/ai-isnt-underperforming-working-blind.html
 - AI Acceptable Use Policy Template for Canadian Small Business — https://bynorthlight.ca/blog/ai-policy-template-canadian-small-business.html
-- AI Acceptable Use Policy Template | Northlight — https://bynorthlight.ca/blog/ai-policy-template-printable.html
-- The Real ROI of AI for Canadian SMBs (It's Not Hours Saved) | Northlight Advisory Services — https://bynorthlight.ca/blog/ai-roi-canadian-smb.html
+- AI Acceptable Use Policy Template — https://bynorthlight.ca/blog/ai-policy-template-printable.html
+- The Real ROI of AI for Canadian SMBs (It's Not Hours Saved) — https://bynorthlight.ca/blog/ai-roi-canadian-smb.html
 - Your AI Strategy Is Running on the Wrong Clock — https://bynorthlight.ca/blog/ai-strategy-wrong-clock.html
-- Best AI Tools for Canadian Small Businesses (2026) | Northlight — https://bynorthlight.ca/blog/best-ai-tools-canadian-small-businesses-2026.html
-- Best Fractional Advisory Services for Canadian Small Business Operators (2026) | Northlight Advisory Services — https://bynorthlight.ca/blog/best-fractional-advisory-services-canada.html
+- Best AI Tools for Canadian Small Businesses (2026) — https://bynorthlight.ca/blog/best-ai-tools-canadian-small-businesses-2026.html
+- Best Fractional Advisory Services for Canadian Small Business Operators (2026) — https://bynorthlight.ca/blog/best-fractional-advisory-services-canada.html
 - Canada’s AI Strategy: What It Means for Canadian Small Business (2026) — https://bynorthlight.ca/blog/canada-ai-strategy-small-business.html
-- Fractional COO Services in Atlantic Canada | Northlight — https://bynorthlight.ca/blog/fractional-coo-atlantic-canada.html
+- Fractional COO Services in Atlantic Canada — https://bynorthlight.ca/blog/fractional-coo-atlantic-canada.html
 - Fractional COO vs. Hiring a COO: What's Right for a Growing Canadian Business? — https://bynorthlight.ca/blog/fractional-coo-vs-hiring-full-time-canada.html
 - Growth Is No Longer the Hard Part — https://bynorthlight.ca/blog/growth-is-no-longer-the-hard-part.html
 - How to Choose an AI Advisor for Your Canadian Business — https://bynorthlight.ca/blog/how-to-choose-ai-advisor-consultant.html
-- How to Choose an AI Implementation Partner: A Canadian Operator's Guide and RFP Template | Northlight Advisory Services — https://bynorthlight.ca/blog/how-to-choose-ai-implementation-partner.html
+- How to Choose an AI Implementation Partner: A Canadian Operator's Guide and RFP Template — https://bynorthlight.ca/blog/how-to-choose-ai-implementation-partner.html
 - How We Built Northlight Vault: Privacy-First Thinking in a World of Unnecessary Data — https://bynorthlight.ca/blog/how-we-built-northlight-vault-privacy-first.html
-- I Built Three AI Tools for My Own Work. Now They're on MCP Market. | Northlight Advisory Services — https://bynorthlight.ca/blog/northlight-mcp-skills-market.html
-- How to Get Ongoing Business Advisory Support as a Canadian Small Operator | Northlight Advisory Services — https://bynorthlight.ca/blog/ongoing-business-advisory-canada.html
-- Implementing AI Without Breaking Canadian Privacy Law: A PIPEDA Guide for Business Owners | Northlight Advisory Services — https://bynorthlight.ca/blog/pipeda-privacy-first-ai-canada.html
+- I Built Three AI Tools for My Own Work. Now They're on MCP Market. — https://bynorthlight.ca/blog/northlight-mcp-skills-market.html
+- How to Get Ongoing Business Advisory Support as a Canadian Small Operator — https://bynorthlight.ca/blog/ongoing-business-advisory-canada.html
+- Implementing AI Without Breaking Canadian Privacy Law: A PIPEDA Guide for Business Owners — https://bynorthlight.ca/blog/pipeda-privacy-first-ai-canada.html
 - Most Resumes Describe the Job. Almost None Describe the Work — https://bynorthlight.ca/blog/resumes-describe-job-not-work-digital-reference.html
 - Shadow AI Is the New Shadow IT — What Leaders Need to Know — https://bynorthlight.ca/blog/shadow-ai-is-the-new-shadow-it.html
 - The Wall on Day 200: When Plans Don't Go to Plan — https://bynorthlight.ca/blog/the-wall-on-day-200.html
-- What Is a Fractional Executive? A Guide for Canadian Businesses | Northlight — https://bynorthlight.ca/blog/what-is-a-fractional-executive-canada.html
+- What Is a Fractional Executive? A Guide for Canadian Businesses — https://bynorthlight.ca/blog/what-is-a-fractional-executive-canada.html
 - You Hired Them. Now What? When New Hires Don't Clear the Bottleneck — https://bynorthlight.ca/blog/you-hired-them-now-what.html
 - Your Agents Need a Chain of Command — https://bynorthlight.ca/blog/your-agents-need-a-chain-of-command.html
 
