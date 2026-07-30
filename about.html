@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -62,7 +62,7 @@
           "Organisational Design",
           "Program Delivery"
         ],
-        "dateModified": "2026-07-24T00:00:00Z"
+        "dateModified": "2026-07-29T00:00:00Z"
       },
       {
         "@type": "Organization",
@@ -296,6 +296,11 @@
     }
     .photo-cta:hover { opacity: 0.88; }
     .photo-cta:focus-visible { outline: 2px solid var(--dusk); outline-offset: 4px; }
+    .photo-cta-subtext {
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px; color: var(--structural);
+      text-align: center; line-height: 1.6; margin-top: 8px;
+    }
     .photo-links { display: flex; justify-content: center; gap: 20px; }
     .photo-links a {
       font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500;
@@ -305,6 +310,24 @@
       transition: color 0.2s;
     }
     .photo-links a:hover { color: var(--text); }
+
+    /* ── CREDENTIALS ROW ── */
+    .cred-row {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 14px 18px; padding: 20px 0;
+      border-top: 1px solid var(--border);
+    }
+    .cred-item {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500;
+      letter-spacing: 0.14em; color: var(--structural);
+      text-decoration: none; white-space: nowrap; transition: color 0.2s;
+    }
+    .cred-item:hover { color: var(--cloud); }
+    a.cred-item:visited { color: var(--structural); }
+    .cred-item svg { opacity: 0.55; flex-shrink: 0; transition: opacity 0.2s; }
+    .cred-item:hover svg { opacity: 1; }
+    .cred-item--static { cursor: default; }
 
     /* ── BIO COLUMN ── */
     .bio-col { padding-top: 8px; }
@@ -335,11 +358,59 @@
       padding-left: 24px; margin: 8px 0;
       max-width: 560px;
     }
+    .bio-niche-heading {
+      font-family: 'Jost', sans-serif; font-size: 15px; font-weight: 600;
+      letter-spacing: 0.03em; color: var(--glacial);
+      line-height: 1.4; margin-bottom: 4px; margin-top: 4px;
+    }
+
+    /* ── AT A GLANCE BOX ── */
+    .glance-box {
+      background: var(--surface-2); border: 1px solid var(--border);
+      border-left: 4px solid var(--glacial); border-radius: 6px;
+      padding: 18px 24px; margin-bottom: 32px;
+    }
+    .glance-eyebrow {
+      font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      background: linear-gradient(90deg, #4FC3C8, #8B6FD4);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      display: inline-block; margin-bottom: 10px;
+    }
+    .glance-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+    .glance-list li {
+      font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--cloud);
+      line-height: 1.55; display: flex; gap: 8px;
+    }
+    .glance-list li::before { content: '·'; color: var(--glacial); flex-shrink: 0; margin-top: 1px; }
+
+    /* ── BUILD ROW ── */
+    .build-row {
+      background: var(--surface); border: 1px solid var(--border);
+      border-top: 2px solid transparent; background-clip: padding-box;
+      border-radius: 6px; overflow: hidden; position: relative;
+      margin: 4px 0; max-width: 620px;
+    }
+    .build-row::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);
+    }
+    .build-row-inner { padding: 18px 22px; display: flex; flex-direction: column; gap: 10px; }
+    .build-eyebrow {
+      font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500;
+      letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted);
+    }
+    .build-tools { display: flex; flex-direction: column; gap: 6px; }
+    .build-tool { display: flex; align-items: baseline; gap: 10px; font-size: 14px; color: var(--cloud); line-height: 1.5; }
+    .build-tool-name {
+      font-weight: 600; color: var(--text); white-space: nowrap;
+      background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 33%, #8B6FD4 66%, #C46FAA 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      min-width: 160px;
+    }
+    .build-desc { color: var(--haze); }
 
     /* ── CREDENTIALS STRIP ── */
-    .credentials-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px;
-    }
     .credential-card {
       background: var(--surface); border: 1px solid var(--border);
       padding: 28px 24px;
@@ -378,6 +449,95 @@
       color: var(--text); margin-bottom: 10px; letter-spacing: 0.02em;
     }
     .how-body { font-size: 14px; color: var(--haze); line-height: 1.7; }
+
+    /* ── EVERYEXPERT CTA BAND ── */
+    .everyexpert-card {
+      background: var(--surface);
+      border: 1px solid var(--border-2);
+      border-left: 3px solid var(--glacial);
+      padding: 22px 32px;
+      display: flex; align-items: center;
+      justify-content: space-between;
+      gap: 40px; flex-wrap: nowrap;
+    }
+    .everyexpert-text { flex: 1; min-width: 0; }
+    .everyexpert-card h3 {
+      font-family: 'Jost', sans-serif;
+      font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 4px;
+    }
+    .everyexpert-card p {
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px; color: var(--haze); line-height: 1.6;
+      max-width: 480px; margin: 0;
+    }
+    .btn-clarity {
+      display: inline-block; flex-shrink: 0;
+      font-family: 'Jost', sans-serif;
+      font-size: 12px; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; padding: 11px 22px;
+      border: 1px solid var(--glacial); border-radius: 4px;
+      color: var(--glacial); text-decoration: none; white-space: nowrap;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-clarity:hover { background: var(--glacial); color: var(--deep-night); }
+    .btn-clarity:focus-visible { outline: 2px solid var(--dusk); outline-offset: 4px; }
+
+    /* ── RECOGNITION CARD ── */
+    .recognition-card {
+      display: flex; gap: 24px; align-items: flex-start;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--glacial);
+      border-radius: 10px;
+      padding: 24px 28px;
+      max-width: 640px;
+    }
+    .recognition-badge { flex-shrink: 0; border-radius: 6px; width: 72px; height: auto; }
+    .recognition-card-body { display: flex; flex-direction: column; gap: 6px; }
+    .recognition-card-source {
+      font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500;
+      letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted);
+    }
+    .recognition-card-source span { color: var(--glacial); }
+    .recognition-card-headline {
+      font-family: 'Jost', sans-serif; font-size: 15px; font-weight: 600; color: var(--cloud);
+    }
+    .recognition-card-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
+    .recognition-card-link {
+      font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--glacial); text-decoration: none; margin-top: 4px;
+    }
+    .recognition-card-link:hover { color: var(--text); }
+
+    /* ── TESTIMONIALS ── */
+    .testimonial-list { display: flex; flex-direction: column; gap: 2px; }
+    .testimonial-card {
+      background: var(--surface); border: 1px solid var(--border);
+      padding: 28px 32px; position: relative;
+    }
+    .testimonial-card::before {
+      content: '\201C';
+      position: absolute; top: 16px; left: 24px;
+      font-size: 48px; line-height: 1; font-weight: 700;
+      color: var(--border-2); font-family: Georgia, serif;
+    }
+    .testimonial-quote {
+      font-size: 15px; color: var(--cloud); line-height: 1.75;
+      padding-left: 28px; margin-bottom: 16px;
+    }
+    .testimonial-attribution {
+      display: flex; align-items: center; gap: 10px; padding-left: 28px;
+    }
+    .testimonial-name {
+      font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600;
+      color: var(--text); text-decoration: none; letter-spacing: 0.02em;
+    }
+    .testimonial-name:hover { color: var(--glacial); }
+    .testimonial-role {
+      font-family: 'Outfit', sans-serif; font-size: 12px; color: var(--muted);
+    }
+    .testimonial-dot { color: var(--border-2); font-size: 10px; }
 
     /* ── FAQ ── */
     .faq-list { display: flex; flex-direction: column; gap: 2px; }
@@ -454,140 +614,27 @@
     }
     .footer-social a:hover { color: var(--text); }
 
-    /* ── RECOGNITION CARD ── */
-    .recognition-card {
-      display: flex; gap: 24px; align-items: flex-start;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-left: 3px solid var(--glacial);
-      border-radius: 10px;
-      padding: 24px 28px;
-      max-width: 640px;
-    }
-    .recognition-badge { flex-shrink: 0; border-radius: 6px; width: 72px; height: auto; }
-    .recognition-card-body { display: flex; flex-direction: column; gap: 6px; }
-    .recognition-card-source {
-      font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500;
-      letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted);
-    }
-    .recognition-card-source span { color: var(--glacial); }
-    .recognition-card-headline {
-      font-family: 'Jost', sans-serif; font-size: 15px; font-weight: 600; color: var(--cloud);
-    }
-    .recognition-card-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
-    .recognition-card-link {
-      font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 600;
-      letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--glacial); text-decoration: none; margin-top: 4px;
-    }
-    .recognition-card-link:hover { color: var(--text); }
-
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
       .about-hero { grid-template-columns: 280px 1fr; gap: 48px; }
-      .credentials-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 768px) {
       .about-hero { grid-template-columns: 1fr; }
       .photo-wrap { max-width: 260px; margin: 0 auto; }
       .how-grid { grid-template-columns: 1fr; }
-      .credentials-grid { grid-template-columns: repeat(2, 1fr); }
+      .everyexpert-card { flex-wrap: wrap; }
     }
     @media (max-width: 640px) {
       nav.site-nav, .section-padded, footer, .cta-band { padding-left: 24px; padding-right: 24px; }
       .page-wrap { padding: 0 24px; }
       .bio-headline { font-size: 32px; }
-      .credentials-grid { grid-template-columns: 1fr; }
       .footer-inner { flex-direction: column; }
       .footer-right { align-items: flex-start; }
       .footer-links { justify-content: flex-start; }
     }
-
-    /* ── PHOTO CTA SUBTEXT ── */
-    .photo-cta-subtext {
-      font-family: 'Outfit', sans-serif;
-      font-size: 13px;
-      color: var(--structural);
-      text-align: center;
-      line-height: 1.6;
-      margin-top: 8px;
-    }
-
-    /* ── CREDENTIALS ROW ── */
-    .cred-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 14px 18px;
-      padding: 20px 0;
-      border-top: 1px solid var(--border);
-    }
-    .cred-item {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      font-family: 'Jost', sans-serif;
-      font-size: 10px;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      color: var(--structural);
-      text-decoration: none;
-      white-space: nowrap;
-      transition: color 0.2s;
-    }
-    .cred-item:hover { color: var(--cloud); }
-    a.cred-item:visited { color: var(--structural); }
-    .cred-item svg { opacity: 0.55; flex-shrink: 0; transition: opacity 0.2s; }
-    .cred-item:hover svg { opacity: 1; }
-    .cred-item--static { cursor: default; }
-
-    /* ── EVERYEXPERT CARD ── */
-    .everyexpert-card {
-      background: var(--surface);
-      border: 1px solid var(--border-2);
-      border-left: 3px solid var(--glacial);
-      border-radius: 8px;
-      padding: 32px 40px;
-      text-align: center;
-      max-width: 720px;
-      margin: 0 auto;
-    }
-    .everyexpert-card h3 {
-      font-family: 'Jost', sans-serif;
-      font-size: 20px;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 10px;
-    }
-    .everyexpert-card p {
-      font-family: 'Outfit', sans-serif;
-      font-size: 15px;
-      color: var(--haze);
-      line-height: 1.7;
-      max-width: 440px;
-      margin: 0 auto 22px;
-    }
-    .btn-clarity {
-      display: inline-block;
-      font-family: 'Jost', sans-serif;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 12px 24px;
-      border: 1px solid var(--glacial);
-      border-radius: 4px;
-      color: var(--glacial);
-      text-decoration: none;
-      transition: background 0.2s, color 0.2s;
-    }
-    .btn-clarity:hover {
-      background: var(--glacial);
-      color: var(--deep-night);
-    }
   </style>
-    <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body>
 
@@ -626,7 +673,7 @@
           <p class="photo-name">Elizabeth Lemoine</p>
           <p class="photo-title">Founder &amp; Principal</p>
           <p class="photo-location">Nova Scotia, Canada · Remote</p>
-          <a href="https://calendar.app.google/Uy11QKGmBEBd162h6" class="photo-cta" target="_blank" rel="noopener">Grab a virtual coffee</a>
+          <a href="https://bynorthlight.ca/coffee.html" class="photo-cta" target="_blank" rel="noopener">Grab a virtual coffee</a>
           <p class="photo-cta-subtext">A virtual coffee, no agenda required. Tell me what you're working on — no pitch, no pressure, just seeing if we're a fit or talking shop for 30 minutes.</p>
           <div class="cred-row">
             <a href="https://www.linkedin.com/in/elizabethannelemoine" target="_blank" rel="noopener" class="cred-item" aria-label="Elizabeth Lemoine on LinkedIn">
@@ -666,29 +713,50 @@
           <h1 class="bio-headline">
             <span>Northlight Advisory Services is a Halifax, Nova Scotia–based strategy and advisory practice.</span>
           </h1>
+
           <!-- At a Glance -->
-          <div style="background: var(--surface-2); border: 1px solid var(--border); border-left: 4px solid var(--glacial); border-radius: 6px; padding: 18px 24px; margin-bottom: 32px;">
-            <p style="font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; background: linear-gradient(90deg, #4FC3C8, #8B6FD4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 10px; display: inline-block;">At a Glance</p>
-            <ul style="list-style: none; display: flex; flex-direction: column; gap: 6px;">
-              <li style="font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--cloud); line-height: 1.5;"><span style="color: var(--glacial); margin-right: 8px;" aria-hidden="true">·</span>Elizabeth Lemoine is the founder and principal of Northlight Advisory Services, based in Halifax, Nova Scotia, Canada.</li>
-              <li style="font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--cloud); line-height: 1.5;"><span style="color: var(--glacial); margin-right: 8px;" aria-hidden="true">·</span>10+ years of director-level experience across nonprofit, tech, and global organisations.</li>
-              <li style="font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--cloud); line-height: 1.5;"><span style="color: var(--glacial); margin-right: 8px;" aria-hidden="true">·</span>Certified: PMI member, Google Project Management, AI for program managers.</li>
-              <li style="font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--cloud); line-height: 1.5;"><span style="color: var(--glacial); margin-right: 8px;" aria-hidden="true">·</span>Northlight Advisory Services serves Canadian founders and operations leaders, typically at organisations under 50 people.</li>
+          <div class="glance-box">
+            <p class="glance-eyebrow">At a Glance</p>
+            <ul class="glance-list">
+              <li>Elizabeth Lemoine is the founder and principal of Northlight Advisory Services, based in Halifax, Nova Scotia, Canada.</li>
+              <li>10+ years of director-level operations across nonprofit, tech, and global organisations — six countries, 300+ initiatives.</li>
+              <li>Certified: PMI · Google Project Management · IBM Generative AI Specializations (PM, Programs, Marketing) · Anthropic Claude · Cloud Computing Law (U of Penn) · ClickUp Expert.</li>
+              <li>Northlight Advisory Services serves Canadian founders and operations leaders, typically at organisations under 50 people.</li>
             </ul>
           </div>
 
           <div class="bio-body">
-            <p>I'm Elizabeth Lemoine — strategist, operations leader, and founder of Northlight Advisory Services, based in Halifax, Nova Scotia. I have over a decade of director-level experience building systems, delivering complex programs, and helping organisations make better decisions. Elizabeth Lemoine founded Northlight Advisory Services to do that work directly, with the clients who need it most.</p>
+            <p>I'm Elizabeth Lemoine, founder of Northlight Advisory Services, based in Halifax, Nova Scotia. I work across strategy, software adoption, operations, and applied AI tools — not because I chase every new thing, but because those four things are almost always connected to the same problem.</p>
 
             <blockquote class="bio-pull">
               "Most organisations aren't drowning in problems. They're drowning in information and starving for direction."
             </blockquote>
 
-            <p>Northlight exists to fix that. I work across strategy, operations, AI adoption, and app development — not because I chase every new thing, but because clarity is the rarest resource in any organisation, and it's what I'm here to find. The tools are there. The data is there. What's missing is someone who can look at the whole picture — without an agenda — and say: here's what's actually going on, here's what matters, and here's what you do next.</p>
+            <p>Northlight exists to fix that. I look at the whole picture — without an agenda — and work out what's actually going on, what matters, and what you do next. That might be a strategy decision, an operational redesign, an AI adoption plan, or a tool we build together. Most engagements end up touching more than one.</p>
 
-            <p>Before founding Northlight, I spent over a decade in director-level operations roles across nonprofit, tech, and global organisations — the kind of work where you're responsible for things actually running, not just advising on how they should.</p>
+            <h3 class="bio-niche-heading">Fractional COO services for Canadian founder-led businesses.</h3>
 
-            <p>I built Northlight Vault — a privacy-first cloud file browser — because I needed it and it didn't exist yet. That's usually when the best tools get made.</p>
+            <p>I've spent over a decade in director-level operations — building governance frameworks, implementing enterprise systems, and running programs across six countries. That's the experience I bring. But I also build: Northlight Vault, Northlight Meetings, and Northlight OS are three production tools I've shipped and use daily. The AI thinking I bring to client work isn't theoretical. It's running.</p>
+
+            <div class="build-row">
+              <div class="build-row-inner">
+                <span class="build-eyebrow">What I've built</span>
+                <div class="build-tools">
+                  <div class="build-tool">
+                    <span class="build-tool-name">Northlight Vault</span>
+                    <span class="build-desc">Privacy-first cloud file browser — Google Drive, OneDrive, and Dropbox in one read-only app.</span>
+                  </div>
+                  <div class="build-tool">
+                    <span class="build-tool-name">Northlight Meetings</span>
+                    <span class="build-desc">Call-recording and AI analysis — captures audio, transcribes, extracts action items, routes output.</span>
+                  </div>
+                  <div class="build-tool">
+                    <span class="build-tool-name">Northlight OS</span>
+                    <span class="build-desc">AI-native operating system for the practice — ClickUp, Gmail, Slack, and Claude in one system.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <p>If you have a problem that needs clear thinking and real follow-through, that's what I'm here for. No jargon. No fog. Just the work.</p>
           </div>
@@ -697,66 +765,50 @@
       </div>
     </div>
 
-    <!-- ═══ EVERYEXPERT CTA ═══ -->
-    <section class="section-padded" aria-labelledby="everyexpert-label">
-      <div class="everyexpert-card">
-        <h3 id="everyexpert-label">Got a problem? Let's solve it.</h3>
-        <p>45 minutes, one operational decision made. No framework to read later — just a clear next step.</p>
-        <a href="https://www.everyexpert.com/elizabethlemoine" class="btn-clarity" target="_blank" rel="noopener">
-          Book an Operational Clarity Call — $99
-        </a>
-      </div>
-    </section>
-
     <div class="aurora-divider" role="presentation"></div>
 
     <!-- ═══ CREDENTIALS ═══ -->
     <section class="section-padded" aria-labelledby="credentials-label">
       <h2 class="section-label" id="credentials-label">Experience &amp; background</h2>
-      <div class="credentials-grid">
+      <!-- Row 1: 3 stat cards -->
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:2px;">
         <div class="credential-card">
           <p class="credential-number">10+</p>
           <p class="credential-label">Years in director-level operations</p>
-          <p class="credential-desc">Leading cross-functional delivery, enterprise systems, and organisational design across multiple sectors.</p>
+          <p class="credential-desc">Leading cross-functional delivery, enterprise systems, and organisational design across nonprofit, tech, and global organisations.</p>
         </div>
         <div class="credential-card">
           <p class="credential-number">6</p>
-          <p class="credential-label">Countries under one operating model</p>
-          <p class="credential-desc">Designed and implemented a federated governance model aligning global and regional entities at Divine Renovation.</p>
+          <p class="credential-label">Regional offices under one operating model</p>
+          <p class="credential-desc">Designed and implemented a federated governance model — charitable registration, payroll, compliance, and HR across six countries.</p>
         </div>
         <div class="credential-card">
-          <p class="credential-number">300+</p>
-          <p class="credential-label">Initiatives managed since 2021</p>
-          <p class="credential-desc">Overseeing budgets, vendors, and cross-functional teams across a global portfolio of 50–100 active initiatives annually.</p>
-        </div>
-        <div class="credential-card">
-          <p class="credential-number">PMI</p>
-          <p class="credential-label">Member · Google PM Certified</p>
-          <p class="credential-desc">Certified in project management, OKR leadership, AI for program managers, regulatory compliance, and cloud computing law.</p>
+          <p class="credential-number">115+</p>
+          <p class="credential-label">Countries reached through events</p>
+          <p class="credential-desc">300+ events — in-person sessions from 15 to 200, conferences of 450 to 800, global webinars to 7,000+. 5,000+ registrants annually.</p>
         </div>
       </div>
-    </section>
-
-    <!-- ═══ RECOGNITION ═══ -->
-    <section class="section-padded" aria-labelledby="recognition-label" style="padding-top: 0;">
-      <h2 class="section-label" id="recognition-label">Recognition</h2>
-      <div class="recognition-card">
-        <img src="/assets/dr-badge-best-coo-2026.png" alt="Digital Reference — Best Fractional COO Services in Canada 2026" class="recognition-badge" width="72" loading="lazy">
-        <div class="recognition-card-body">
-          <p class="recognition-card-source"><span>Digital Reference</span> &nbsp;·&nbsp; 2026</p>
-          <p class="recognition-card-headline">Best Fractional COO Services in Canada</p>
-          <p class="recognition-card-desc">Northlight Advisory Services named on Digital Reference's national list of top fractional COO practices, alongside recognition of Elizabeth Lemoine as a Founder to Watch in 2026.</p>
-          <a href="/news/digital-reference-best-coo-2026.html" class="recognition-card-link">Read the feature →</a>
+      <!-- Row 2: 2 wider credential cards -->
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:2px;">
+        <div class="credential-card">
+          <p class="credential-number">PMI</p>
+          <p class="credential-label">Member · Google PM · OKR · Agile</p>
+          <p class="credential-desc">Google PM Specialization · OKR Leadership · Agile PM · Cloud Computing Law (U of Penn) · ClickUp Expert.</p>
+        </div>
+        <div class="credential-card">
+          <p class="credential-number">AI</p>
+          <p class="credential-label">Certified Practitioner · Builder</p>
+          <p class="credential-desc">IBM Gen AI Specializations (PM, Programs &amp; Marketing) · Anthropic Claude · Google Cloud Gen AI · Vibe Coding with Claude Code. Three production tools shipped.</p>
         </div>
       </div>
     </section>
 
     <div class="aurora-divider" role="presentation"></div>
 
-    <!-- ═══ HOW NORTHLIGHT WORKS ═══ -->
-    <section class="section-padded" aria-labelledby="how-label">
+    <!-- ═══ HOW NORTHLIGHT WORKS + CTA ═══ -->
+    <section class="section-padded" style="padding-bottom: 0;" aria-labelledby="how-label">
       <h2 class="section-label" id="how-label">How Northlight works</h2>
-      <div class="how-grid">
+      <div class="how-grid" style="margin-bottom: 2px;">
         <div class="how-card">
           <p class="how-step">Step 01</p>
           <h3 class="how-title">A direct conversation</h3>
@@ -771,6 +823,57 @@
           <p class="how-step">Step 03</p>
           <h3 class="how-title">Work that holds</h3>
           <p class="how-body">Strategy, systems, or tools — whatever you need, built to survive contact with reality. Not a report that lives in a folder. Decisions you can stand behind and structures that scale.</p>
+        </div>
+      </div>
+      <!-- CTA band flush beneath steps -->
+      <div class="everyexpert-card" aria-labelledby="everyexpert-label">
+        <div class="everyexpert-text">
+          <h3 id="everyexpert-label">Ready when you are.</h3>
+          <p>45 minutes, one operational decision made. No framework to read later — just a clear next step.</p>
+        </div>
+        <a href="https://www.everyexpert.com/elizabethlemoine" class="btn-clarity" target="_blank" rel="noopener">
+          Book an Operational Clarity Call — $99
+        </a>
+      </div>
+    </section>
+
+    <div class="aurora-divider" role="presentation" style="margin-top: 72px;"></div>
+
+    <!-- ═══ RECOGNITION ═══ -->
+    <section class="section-padded" aria-labelledby="recognition-label" style="padding-top: 72px;">
+      <h2 class="section-label" id="recognition-label">Recognition</h2>
+      <div class="recognition-card">
+        <img src="/assets/dr-badge-best-coo-2026.png" alt="Digital Reference — Best Fractional COO Services in Canada 2026" class="recognition-badge" width="72" loading="lazy">
+        <div class="recognition-card-body">
+          <p class="recognition-card-source"><span>Digital Reference</span> &nbsp;·&nbsp; 2026</p>
+          <p class="recognition-card-headline">Best Fractional COO Services in Canada</p>
+          <p class="recognition-card-desc">Northlight Advisory Services named on Digital Reference's national list of top fractional COO practices, alongside recognition of Elizabeth Lemoine as a Founder to Watch in 2026.</p>
+          <a href="/news/digital-reference-best-coo-2026.html" class="recognition-card-link">Read the feature →</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="aurora-divider" role="presentation"></div>
+
+    <!-- ═══ TESTIMONIALS ═══ -->
+    <section class="section-padded" aria-labelledby="testimonials-label">
+      <h2 class="section-label" id="testimonials-label">What people have said about working with Elizabeth</h2>
+      <div class="testimonial-list">
+        <div class="testimonial-card">
+          <p class="testimonial-quote">If you are thinking of it, need it or ask for it, she's either planning it, doing it or has it already done. She's always willing to learn and grow, to be flexible, and to take on new challenges. I recommend her highly.</p>
+          <div class="testimonial-attribution">
+            <a href="https://www.linkedin.com/in/elizabethannelemoine" class="testimonial-name" target="_blank" rel="noopener">Danny King</a>
+            <span class="testimonial-dot">·</span>
+            <span class="testimonial-role">Co-founder &amp; CEO, Accredible</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">She is able to take open ended aims and turn them into action independently. She is a great communicator and a natural organiser. Elizabeth brings humour, honesty and integrity to the team and combines that with an enviable work ethic.</p>
+          <div class="testimonial-attribution">
+            <a href="https://www.linkedin.com/in/elizabethannelemoine" class="testimonial-name" target="_blank" rel="noopener">Alan Heppenstall</a>
+            <span class="testimonial-dot">·</span>
+            <span class="testimonial-role">CTO &amp; Co-founder, Accredible</span>
+          </div>
         </div>
       </div>
     </section>
