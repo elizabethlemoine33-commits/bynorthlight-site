@@ -1,0 +1,40 @@
+title: "Northlight Advisory Services"
+url: "https://bynorthlight.ca"
+baseurl: ""
+description: "AI adoption and operations strategy for Canadian small businesses."
+author: "Elizabeth Lemoine"
+
+# Markdown processor
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-redirect-from
+
+# Exclude from Jekyll processing (not copied to _site)
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - generate-sitemap.py
+  - LEARNINGS.md
+  - "*.gem"
+  - node_modules/
+  - vendor/
+  - .claude/
+
+# Files Jekyll normally ignores but we want to include
+include:
+  - CNAME
+  - robots.txt
+  - llms.txt
+  - .gitattributes
+
+# Allow future-dated posts
+future: true
+
+# Don't show drafts
+show_drafts: false

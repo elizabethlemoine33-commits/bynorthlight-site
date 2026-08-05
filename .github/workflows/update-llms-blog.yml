@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'blog/*.html'
+      - 'blog/*.md'
 
 concurrency:
   group: auto-commit
