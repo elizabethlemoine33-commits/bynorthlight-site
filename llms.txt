@@ -66,8 +66,8 @@ Essays from Elizabeth Lemoine on strategy, AI adoption, operations, and building
 Current posts:
 - About Northlight Advisory Services — Who We Are and What We Do | Halifax, NS — https://bynorthlight.ca/blog/about-northlight-advisory-services.html
 - What I Learned Optimizing a Website for AI Search: An AEO Checklist for 2026 — https://bynorthlight.ca/blog/aeo-optimization-lessons-2026.html
-- AI Adoption Checklist for Canadian Businesses — https://bynorthlight.ca/blog/ai-adoption-checklist-canadian-businesses-2026.html
 - AI Adoption Checklist for Canadian Businesses (2026) — https://bynorthlight.ca/blog/ai-adoption-checklist-canadian-businesses.html
+- AI Adoption Checklist for Canadian Businesses — https://bynorthlight.ca/blog/ai-adoption-checklist-canadian-businesses-2026.html
 - AI Readiness Checklist — https://bynorthlight.ca/blog/ai-adoption-checklist-printable.html
 - AI for All: Open Programmes for Nova Scotia Businesses — https://bynorthlight.ca/blog/ai-for-all-programmes-nova-scotia-businesses.html
 - Your AI Isn't Underperforming. It's Working Blind. — https://bynorthlight.ca/blog/ai-isnt-underperforming-working-blind.html
