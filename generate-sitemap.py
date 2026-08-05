@@ -13,6 +13,8 @@ CANONICAL_PATTERN = re.compile(
     r'<link[^>]+rel=["\']canonical["\'][^>]+href=["\']([^"\']+)["\']',
     re.IGNORECASE
 )
+FM_PERMALINK = re.compile(r"^permalink:\s*(.+?)\s*$", re.MULTILINE)
+FM_NOINDEX = re.compile(r"^noindex:\s*true\s*$", re.MULTILINE)
 
 
 def get_priority_and_freq(url_path):
@@ -73,6 +75,24 @@ def collect_urls():
         if full_url not in urls:
             priority, changefreq = get_priority_and_freq(url_path)
             urls[full_url] = (priority, changefreq)
+
+    # Markdown blog posts — migrated posts override their HTML counterpart
+    for md_file in sorted(Path("blog").glob("*.md")):
+        content = md_file.read_text(encoding="utf-8", errors="ignore")
+        # Skip redirect-only files
+        if "redirect_to:" in content and "layout: redirect" in content:
+            continue
+        if FM_NOINDEX.search(content):
+            continue
+        perm_match = FM_PERMALINK.search(content)
+        if perm_match:
+            url_path = perm_match.group(1).strip()
+        else:
+            url_path = f"/blog/{md_file.stem}.html"
+        full_url = BASE_URL + url_path
+        # Always overwrite — .md is the migrated canonical version
+        priority, changefreq = get_priority_and_freq(url_path)
+        urls[full_url] = (priority, changefreq)
 
     return urls
 
