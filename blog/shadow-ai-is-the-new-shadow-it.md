@@ -8,8 +8,8 @@ date: 2026-01-01
 date_modified: "2026-07-09"
 published_time: "2026-01-01T00:00:00.000Z"
 permalink: /blog/shadow-ai-is-the-new-shadow-it.html
-source_label: "Aurora Brief · Essay"
-source_class: source-aurora
+source_label: "Blog · Essay"
+source_class: source-essay
 read_time: 6
 tags:
   - ai governance
