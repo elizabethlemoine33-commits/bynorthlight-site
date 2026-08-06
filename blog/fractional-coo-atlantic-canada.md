@@ -67,7 +67,7 @@ In a smaller market, hiring a full-time COO is a bigger bet. If it doesn't work,
 
 The relationship piece matters too. Atlantic Canada business culture runs on trust and reputation more than credentials. A consultant flying in from Toronto with a Big Four deck doesn't land the same way here. People want to know: do you understand how we work? Have you done this in a market like ours? Are you going to be around, or is this a parachute-in situation?
 
-I'm based in Halifax. I work with businesses across the region — some in person, most remotely, all with the understanding that I know what it's like to operate here. [Seventy new IT companies launched in Nova Scotia in 2023](https://www.canada.ca/en/atlantic-canada-opportunities/news/2024/10/halifax-based-startups-poised-for-growth.html){:rel="noopener"}, and Halifax ranks second in Canada for tech sector diversity and wage growth. The ecosystem is growing. But it's still a place where the executive director of a nonprofit might also be the de facto COO, or where a 30-person professional services firm is considered mid-sized, not small.
+I'm based in Halifax. I work with businesses across the region — some in person, most remotely, all with the understanding that I know what it's like to operate here. [Halifax ranked second among North America's emerging tech markets in 2025](https://digitalnovascotia.com/news/halifax-and-nova-scotia-climbing-the-ranks-in-north-americas-tech-landscape/){:rel="noopener"}, with the tech workforce growing to 22,100 jobs — a 43.5% increase over three years. The ecosystem is growing. But it's still a place where the executive director of a nonprofit might also be the de facto COO, or where a 30-person professional services firm is considered mid-sized, not small.
 
 > Fractional COO work in Atlantic Canada isn't a scaled-down version of what companies get in bigger markets. It's shaped by the realities here: owner-operators who are still in every decision, smaller teams where one bad hire costs you more, and growth that happens in careful stages, not funding-round leaps.
 
@@ -87,7 +87,7 @@ The trade-off: I'm not in your office every day. If your model depends on someon
 
 Let me be direct about this, because cost is usually the first question and the thing most service providers dance around.
 
-[Fractional COO retainers in North America](https://topfractionalexecs.com/fractional-coo/){:rel="noopener"} typically run $8,000–$18,000 per month, depending on scope, hours, and market. For context, a full-time COO in Canada costs an organisation $280,000–$305,000+ per year when you factor in salary, benefits, payroll taxes, and equity or bonus structures.
+[Fractional COO retainers in North America](https://fractionus.com/blog/fractional-executive-rates-by-role){:rel="noopener"} typically run $8,000–$18,000 per month, depending on scope, hours, and market. For context, a full-time COO in Canada costs an organisation $280,000–$305,000+ per year when you factor in salary, benefits, payroll taxes, and equity or bonus structures.
 
 In Atlantic Canada, rates typically run $6,000–$16,000 per month, reflecting regional market conditions. You're looking at the lower end of that national range, adjusted for the kinds of businesses operating here. A typical engagement might be 10–20 hours per week over six months to a year — enough time to build something real, not so much that you're paying for a full-time role you don't need.
 
