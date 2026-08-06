@@ -100,13 +100,13 @@ Here's the trade-off: if you're using these tools for general brainstorming, dra
 
 I use these tools. I use them carefully. I don't put client information in them. If you're going to use them, strip identifying details first, document what you're doing, and know that you're accepting the risk that the data is leaving Canada.
 
-⚠️ FACT NEEDED: Current ChatGPT Plus pricing in CAD; Claude Pro pricing in CAD; Gemini Advanced pricing in CAD — verify and update before publishing
+ChatGPT Plus and Claude Pro are US$20/month each; Gemini Advanced (Google One AI Premium) is US$19.99/month — all billed in USD regardless of your location, charged at the exchange rate at time of billing.
 
 ### Meeting Notes & Transcription
 
 Taking notes in client meetings is one of the highest-value uses of AI for small businesses, and it's also one of the riskiest from a compliance perspective. If the meeting includes anything sensitive — legal advice, financial planning, HR discussions, client strategy — the transcript is personal information under [PIPEDA](https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/){:rel="noopener"}.
 
-⚠️ FACT NEEDED: Canadian-hosted or European meeting transcription tools — research needed to provide honest recommendations. Most tools in this category (Otter.ai, Fireflies, Fathom) are American-hosted. Flag if no compliant option exists yet.
+As of mid-2026, there is no Canadian-hosted meeting transcription tool I can confidently recommend. Otter.ai, Fireflies, and Fathom are all US-hosted. If your meetings contain sensitive information, see the guidance below.
 
 <div class="callout-block"><p>If you need to transcribe meetings and the content is sensitive, your safest move is either taking manual notes or using a tool with explicit Canadian data residency and checking their DPA (data processing agreement). If no Canadian option exists yet, the honest answer is: you're choosing between convenience and compliance, and that's a decision you need to document.</p></div>
 
@@ -114,7 +114,7 @@ Taking notes in client meetings is one of the highest-value uses of AI for small
 
 This is for getting words out of your brain and onto the page fast — emails, reports, documentation, anything where typing is the bottleneck.
 
-#### 🇺🇸 Wispr Flow — ~US$10–15/month (estimate)
+#### 🇺🇸 Wispr Flow — Free / Pro: US$12–15/month
 
 I've tried [Wispr Flow](https://www.wispr.ai/){:rel="noopener"}. It works well — dictate anywhere on your computer, it transcribes in real time with solid accuracy, integrates across apps. It's American-hosted, which means the audio is processed in the US.
 
@@ -122,7 +122,7 @@ If you're dictating internal thoughts, draft structures, or anything that doesn'
 
 I use it. I use it for my own thinking, not for client work.
 
-⚠️ FACT NEEDED: Wispr Flow current pricing in CAD; data residency policy specifics — verify before publishing
+Free tier: 2,000 words/week. Pro: US$12/month (annual) or US$15/month (monthly) — unlimited dictation. Audio is not stored on Wispr's servers (Privacy Mode). US-hosted; not for client data.
 
 ### Coding & Building Internal Tools
 
@@ -136,7 +136,7 @@ I haven't stress-tested this yet, but the fact that it exists — a Canadian cod
 
 If you're writing code that references client databases, internal file structures, or anything sensitive, having a Canadian option matters.
 
-⚠️ FACT NEEDED: Augure Code usage limits, language support specifics, CLI requirements — research needed for complete recommendation
+Install via CLI: `curl -fsSL https://augureai.ca/install.sh | sh`. Runs on macOS (Apple Silicon + Intel) and Linux (Ubuntu 22.04+, Debian 12+, RHEL 9+). Bilingual: English and Quebec French. Zero data retention. Included in Augure Pro (C$20/month) and Max (C$80/month); API keys available for pay-per-use.
 
 #### 🇺🇸 GitHub Copilot, Cursor, Replit — ~US$10–20/month
 
@@ -162,7 +162,7 @@ I don't have detailed usage experience with NorthCloud yet, but the data residen
 
 Email is one of the highest-risk vectors for [PIPEDA](https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/){:rel="noopener"} exposure — client communications, contracts, sensitive attachments all flow through it. Hosting in Canada doesn't eliminate all risk (you still need to secure your email practices), but it removes the cross-border transfer question.
 
-⚠️ FACT NEEDED: NorthCloud pricing, storage limits, feature set details; NorthMail.ca pricing and migration support — research needed for complete recommendations
+NorthMail.ca: Free (1 GB, ad-supported) or C$0.99/month for the Castor plan (100 GB, no ads, IMAP/SMTP, 2 aliases, AI assistant, 30-day trial). NorthCloud is a companion mobile app (iOS and Android) that requires a NorthMail account — it is not standalone file storage.
 
 ### What to Do If the Canadian Option Isn't There Yet
 
