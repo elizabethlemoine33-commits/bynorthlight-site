@@ -163,7 +163,7 @@ Based on what we actually did, here is what I'd recommend for a small business s
 - ☑ **Crunchbase profile** — AI frequently checks Crunchbase for entity verification.
 - ☑ **LinkedIn company page** — consistent name, address, URL.
 - ☑ **Industry directories** (Clutch, Fractionus, Digital Reference, relevant niche sites) — consistent NAP data (Name, Address, Phone/URL) across all.
-- ☐ **Wikipedia** — 40% of ChatGPT citations come from Wikipedia. Worth pursuing once you have enough external signals to meet notability requirements.
+- ☐ **Wikipedia** — [40% of ChatGPT citations come from Wikipedia](https://offers.hubspot.com/state-of-aeo){:rel="noopener"}. Worth pursuing once you have enough external signals to meet notability requirements.
 - ☐ **Peer channel listings** — get listed on the sites AI already cites for your target prompts. This is often more impactful than any technical work.
 
 ### Measurement
