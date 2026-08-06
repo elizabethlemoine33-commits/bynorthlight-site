@@ -64,7 +64,7 @@ URL: https://bynorthlight.ca/who-we-help.html
 Essays from Elizabeth Lemoine on strategy, AI adoption, operations, and building Northlight Advisory Services. Published at https://bynorthlight.ca/blog/
 
 Current posts:
-- About Northlight Advisory Services — Who We Are and What We Do | Halifax, NS — https://bynorthlight.ca/blog/about-northlight-advisory-services.html
+- About Northlight Advisory Services — Who We Are and What We Do — https://bynorthlight.ca/blog/about-northlight-advisory-services.html
 - What I Learned Optimizing a Website for AI Search: An AEO Checklist for 2026 — https://bynorthlight.ca/blog/aeo-optimization-lessons-2026.html
 - How to Prepare Your Business for AI Adoption: A Canadian Checklist — https://bynorthlight.ca/blog/ai-adoption-checklist-canadian-businesses-2026.html
 - AI Readiness Checklist — https://bynorthlight.ca/blog/ai-adoption-checklist-printable.html
