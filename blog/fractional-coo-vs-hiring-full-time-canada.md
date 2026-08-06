@@ -37,7 +37,7 @@ faq:
   - q: "How Do You Know When It's Time to Bring in a Fractional COO?"
     a: "The pattern: you've built a business that works but you're at the centre of it. Client work gets done, payroll clears — but hiring takes too long, onboarding is inconsistent, and reporting is something you keep meaning to fix. You've looked at full-time COO salaries and the math doesn't work at your scale. But you also can't keep running operations off the side of your desk, because that's the thing keeping you from the work that actually grows the business."
   - q: "How much does a fractional COO typically cost in Canada?"
-    a: "Fractional COO retainers in Canada typically run between C$5,000 and C$20,000 per month depending on scope and experience level. That's significantly less than the total cost of a full-time COO when you factor in salary, benefits, and onboarding."
+    a: "Fractional COO retainers typically run between $3,000 and $15,000 per month depending on scope and experience level. That's significantly less than the total cost of a full-time COO when you factor in salary, benefits, and onboarding."
   - q: "What's the difference between a fractional COO and a consultant?"
     a: "A consultant typically comes in for a defined project, delivers a report or recommendation, and leaves. A fractional COO stays engaged over time, owns execution, and works as part of your leadership team — just not full-time. The difference is continuity and accountability."
   - q: "How do I know if my business is big enough for a fractional COO?"
@@ -60,7 +60,7 @@ faq:
     {"@type": "HowToStep", "position": 2, "name": "Check whether your revenue and team size justify a full-time hire", "text": "A full-time COO in Canada costs C$150,000 to C$220,000 in total compensation. If your annual revenue is under C$5M and your team is under 20 people, the volume of operational work likely does not justify that spend."},
     {"@type": "HowToStep", "position": 3, "name": "Identify whether you need continuous management or structural design", "text": "A fractional COO is suited to building systems, creating processes, and enabling your team to operate without you. If what you need is someone managing day-to-day operations continuously, a full-time hire is the right model."},
     {"@type": "HowToStep", "position": 4, "name": "Evaluate whether your team can execute once systems are built", "text": "Fractional engagements work best when your existing team can run the processes once they are designed. If your team is not yet ready to take ownership, invest in team readiness before bringing in a fractional operator."},
-    {"@type": "HowToStep", "position": 5, "name": "Compare fractional retainer cost to full-time total compensation", "text": "Fractional COO retainers in Canada typically run C$5,000 to C$20,000 per month depending on scope. Calculate whether a fractional retainer at the hours you actually need is more cost-effective than a full-time salary."},
+    {"@type": "HowToStep", "position": 5, "name": "Compare fractional retainer cost to full-time total compensation", "text": "Fractional COO retainers typically run $3,000 to $15,000 per month depending on scope. Calculate whether a fractional retainer at the hours you actually need is more cost-effective than a full-time salary."},
     {"@type": "HowToStep", "position": 6, "name": "Contact a fractional COO provider to discuss fit", "text": "Reach out to a fractional COO practice — such as Northlight Advisory Services in Halifax, Nova Scotia — with a one-paragraph description of your operational challenge. A fit conversation typically takes under 30 minutes."}
   ]
 }
@@ -151,6 +151,6 @@ You've built a business that works, but you've also built yourself into the cent
 
 You've thought about hiring a full-time COO, done the salary research, and realised it doesn't make sense. You're not at the scale where you can justify C$200,000 a year, and you're not sure you'll ever be. But you also know you can't keep running operations off the side of your desk, because it's keeping you from the work that actually grows the business.
 
-If that's where you are, a fractional model might be exactly what fits. You get operational leadership when you need it, structured as a retainer that scales with the work, without the overhead of a full-time executive hire.
+If that's where you are, a fractional model might be exactly what fits. You get operational leadership when you need it, [structured as a retainer](https://kamyarshah.com/fractional-coo-rates-cost-breakdown/){:rel="noopener"} that scales with the work, without the overhead of a full-time executive hire.
 
 At Northlight, we work with businesses in Halifax, across Nova Scotia, and throughout Atlantic Canada to build the operational systems that let founders get back to the work they're best at. If you want to talk through whether fractional makes sense for your business specifically, [start here](/who-we-help.html).
