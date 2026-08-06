@@ -49,7 +49,7 @@ The failure mode isn't that the hire was wrong. It's that the structure to let t
 
 What does that look like in a normal week? Constant check-ins. Re-dos. Bailouts. The new hire sends you a draft, you realise it's not quite right, and instead of sending it back with edits, you just... do it yourself. Because it's faster. Because you know exactly what it needs to be. Because the meeting is tomorrow and there's no time to explain.
 
-Or: they ask a question in Slack. You answer. They ask a follow-up. You answer. Then another. And you realise you've just spent forty-five minutes recreating the context that lives only in your head — context you didn't know you had, context you never wrote down, context that the [organisational systems you built when it was just you were never designed to transfer](https://hbr.org/2020/07/your-company-is-only-as-good-as-your-writing){:rel="noopener"}.
+Or: they ask a question in Slack. You answer. They ask a follow-up. You answer. Then another. And you realise you've just spent forty-five minutes recreating the context that lives only in your head — context you didn't know you had, context you never wrote down, context that the [organisational systems you built when it was just you were never designed to transfer](https://hbr.org/2013/07/your-company-is-only-as-good-a){:rel="noopener"}.
 
 The hire isn't failing. The handoff is. And the handoff is failing because it was never built.
 
@@ -77,7 +77,7 @@ Not another hire.
 
 I know that's the obvious next move. If one senior hire didn't clear the bottleneck, maybe two will. Maybe a COO. Maybe an executive assistant. Maybe just one more person who can "take things off your plate."
 
-But here's the thing: [adding more people to a system that doesn't have clear ownership and decision structure just adds more coordination overhead](https://www.joelonsoftware.com/2001/04/21/dont-let-architecture-astronauts-scare-you/){:rel="noopener"}. More people means more handoffs. More handoffs means more places for things to fall through. More meetings. More alignment conversations. More Slack channels where you're still the one answering the question because you're still the one who actually knows.
+But here's the thing: adding more people to a system that doesn't have clear ownership and decision structure just adds more coordination overhead. More people means more handoffs. More handoffs means more places for things to fall through. More meetings. More alignment conversations. More Slack channels where you're still the one answering the question because you're still the one who actually knows.
 
 What fixes it is building the structure that should have been there before the hire — or at least, building it now, in parallel with the team you already have. And that usually doesn't happen from the inside, because the founder is too deep in the execution to step back and build the system, and the new hire doesn't have enough context yet to do it themselves.
 

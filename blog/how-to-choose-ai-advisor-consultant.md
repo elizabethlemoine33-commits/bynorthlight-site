@@ -113,7 +113,7 @@ Just as important: here are the things that should make you end the conversation
 
 Let me be direct about something most AI consultants won't tell you: even if you find the right advisor, pick the right tool, and implement it well, your results will depend on things outside the technology.
 
-[Canada ranks 42nd out of 47 countries on AI trust](https://www.hrreporter.com/focus-areas/automation-ai/canada-ranks-near-the-bottom-globally-for-ai-trust-closing-that-gap-is-hrs-job/394531){:rel="noopener"}. Sixty-seven per cent of Canadians say AI makes them nervous. Only twenty-four per cent have received any AI training. That's not a small thing. If your team doesn't trust the tool, they won't use it — or they'll use it badly, which is worse.
+[Canada ranks 42nd out of 47 countries on AI trust](https://kpmg.com/ca/en/insights/2025/06/canada-lagging-global-peers-in-ai-trust-and-literacy.html){:rel="noopener"}. Sixty-seven per cent of Canadians say AI makes them nervous. Only twenty-four per cent have received any AI training. That's not a small thing. If your team doesn't trust the tool, they won't use it — or they'll use it badly, which is worse.
 
 And here's the other thing: your team is probably already using AI. They're just doing it quietly, on their personal ChatGPT accounts, because there's no organisational policy and they don't want to ask permission. That's not a problem to solve by banning it. That's a problem to solve by helping them do it well — giving them tools they can trust, teaching them what AI is good at and what it isn't, and building guardrails so they don't accidentally put sensitive information somewhere it shouldn't go.
 

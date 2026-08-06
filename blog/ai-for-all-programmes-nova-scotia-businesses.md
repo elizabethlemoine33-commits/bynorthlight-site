@@ -37,7 +37,7 @@ faq:
   - q: "How can Northlight Advisory Services help Nova Scotia businesses apply for AI funding?"
     a: "Northlight can help you scope the work, assess whether eligibility is plausible, and decide whether pursuing an application is worth your time. Elizabeth Lemoine works with Nova Scotia businesses on AI adoption and governance — helping identify what to solve, who owns decisions, and what guardrails make implementation trustworthy."
   - q: "What's the first step for Nova Scotia businesses exploring AI funding?"
-    a: "Read the RAII programme applicant guide and the BDC LIFT terms — not the AI for All press releases. If RAII looks plausible and your project is in the $250K+ range, contact your nearest ACOA office to discuss it. If LIFT fits your scale and you have a real use case with a Canadian tool vendor, start with a BDC advisor. If neither fits right now, close the tab. The strategy is ten years long. You have time."
+    a: "Read the RAII programme applicant guide and the <a href="https://www.bdc.ca/en/solutions/lift" target="_blank" rel="noopener">BDC LIFT terms</a> — not the AI for All press releases. If RAII looks plausible and your project is in the $250K+ range, contact your nearest ACOA office to discuss it. If LIFT fits your scale and you have a real use case with a Canadian tool vendor, start with a BDC advisor. If neither fits right now, close the tab. The strategy is ten years long. You have time."
 ---
 
 <p style="font-size:15px;color:#B0B8D8;background:rgba(79,195,200,0.07);border-left:3px solid #4FC3C8;padding:12px 16px;border-radius:4px;margin:0 0 28px 0;line-height:1.6;">Northlight Advisory Services breaks down which AI funding programmes are actually open to Nova Scotia SMEs right now — translated from press-release language into something you can use on a Wednesday afternoon.</p>
@@ -54,7 +54,7 @@ The door is open. Here's where it leads.
 
 ## What Did the AI for All Announcement Actually Include?
 
-<div class="answer-block"><p>Canada's AI for All strategy, launched June 4, 2026 by Prime Minister Carney, targets $200 billion in economic growth over five years and 250,000 new jobs. The pieces that matter for Nova Scotia businesses: $200 million in regional funding delivered through ACOA via the Regional Artificial Intelligence Initiative, and BDC's LIFT program for loans of $25,000–$5M for AI adoption. Those are the fundable programmes that exist now.</p></div>
+<div class="answer-block"><p>Canada's AI for All strategy, launched June 4, 2026 by Prime Minister Carney, targets $200 billion in economic growth over five years and 250,000 new jobs. The pieces that matter for Nova Scotia businesses: $200 million in regional funding delivered through ACOA via the Regional Artificial Intelligence Initiative, and <a href="https://www.bdc.ca/en/solutions/lift" target="_blank" rel="noopener">BDC's LIFT program</a> for loans of $25,000–$5M for AI adoption. Those are the fundable programmes that exist now.</p></div>
 
 On June 4, 2026, Prime Minister Carney launched [AI for All](https://www.pm.gc.ca/en/news/news-releases/2026/06/04/prime-minister-carney-launches-ai-all-canadas-new-national-artificial), Canada's new national artificial intelligence strategy. The headline target: $200 billion in economic growth over five years, with 250,000 new jobs created. The strategy includes $500 million in LIFT financing for AI-enabled infrastructure, $200 million for health AI, and $700 million for sovereign AI compute access for SMEs.
 
@@ -62,7 +62,7 @@ That's the big number. Here's what it means for a business in Nova Scotia.
 
 ## Which AI Funding Programmes Are Open to Nova Scotia SMEs Right Now?
 
-<div class="answer-block"><p>Two programmes are currently open: the Regional Artificial Intelligence Initiative (RAII) through ACOA — $250,000 to $5M per project for AI adoption or commercialisation, accepting applications on an ongoing basis; and BDC's LIFT program — loans of $25,000 to $5M for AI adoption, available to businesses with $1M+ in annual sales, paired with an AI advisor. Most other programmes in the AI for All announcement are not yet launched or have closed intake.</p></div>
+<div class="answer-block"><p>Two programmes are currently open: the Regional Artificial Intelligence Initiative (RAII) through ACOA — $250,000 to $5M per project for AI adoption or commercialisation, accepting applications on an ongoing basis; and <a href="https://www.bdc.ca/en/solutions/lift" target="_blank" rel="noopener">BDC's LIFT program</a> — loans of $25,000 to $5M for AI adoption, available to businesses with $1M+ in annual sales, paired with an AI advisor. Most other programmes in the AI for All announcement are not yet launched or have closed intake.</p></div>
 
 These programmes are accepting applications now or have a clear intake process. Each one includes what it funds, who's eligible, how much is available, how to apply, and what your next step looks like.
 
@@ -144,7 +144,7 @@ Email me at [elizabeth@bynorthlight.ca](mailto:elizabeth@bynorthlight.ca). No ha
 
 ## What's the First Step for Nova Scotia Businesses Exploring AI Funding?
 
-<div class="answer-block"><p>Read the RAII programme applicant guide and the BDC LIFT terms — not the AI for All press releases. If RAII looks plausible and your project is in the $250K+ range, contact your nearest ACOA office to discuss it. If LIFT fits your scale and you have a real use case with a Canadian tool vendor, start with a BDC advisor. If neither fits right now, close the tab. The strategy is ten years long. You have time.</p></div>
+<div class="answer-block"><p>Read the RAII programme applicant guide and the <a href="https://www.bdc.ca/en/solutions/lift" target="_blank" rel="noopener">BDC LIFT terms</a> — not the AI for All press releases. If RAII looks plausible and your project is in the $250K+ range, contact your nearest ACOA office to discuss it. If LIFT fits your scale and you have a real use case with a Canadian tool vendor, start with a BDC advisor. If neither fits right now, close the tab. The strategy is ten years long. You have time.</p></div>
 
 The $200 billion number is real. So is the $200 million in RAII funding being delivered through ACOA. The question isn't whether the funding exists — it's whether it's worth your time to find out if it fits.
 
