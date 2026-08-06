@@ -8,7 +8,7 @@ date: 2026-06-15
 date_modified: "2026-07-09"
 published_time: "2026-06-15T00:00:00.000Z"
 permalink: /blog/ai-for-all-programmes-nova-scotia-businesses.html
-source_label: "Blog · Essay"
+source_label: "Blog · AI Strategy"
 source_class: source-essay
 read_time: 6
 tags:
