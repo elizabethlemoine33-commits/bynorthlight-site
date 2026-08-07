@@ -5,6 +5,7 @@ description: "What a fractional COO does, what it costs, and who should hire one
 og_title: "Fractional COO Services in Atlantic Canada | Northlight"
 og_description: "What a fractional COO does, what it costs, and who should hire one. Written for businesses in Halifax, Moncton, and Fredericton."
 date: 2026-07-21
+date_modified: "2026-08-07"
 published_time: "2026-07-21T00:00:00.000Z"
 permalink: /blog/fractional-coo-atlantic-canada.html
 source_label: "Blog · Essay"
@@ -118,6 +119,8 @@ Fractional COO work fits best for businesses in a specific stage and structure. 
 - You want a consultant to tell you what to do, hand you a deck, and leave — that's not what this is
 
 I work with professional services firms, tech startups past seed stage, established trades and marine businesses, nonprofits that have outgrown their founding structure, and agencies that have grown fast and need operational backbone to hold it. [The mix of industries across Halifax, Moncton, and Fredericton](https://atlanticcanadabusinessgrants.com/nova-scotia/halifax-industries/){:rel="noopener"} — from ocean tech to creative services to healthcare — means the operational challenges are varied, but the fundamentals are the same: clear structure, defined ownership, systems that don't break when someone goes on vacation.
+
+<div class="callout-block"><p><strong>Wondering if you're ready for a fractional COO?</strong> The <a href="/fractional-readiness-check.html">Fractional Executive Readiness Check</a> walks through the question in about two minutes — no email required, results on the page.</p></div>
 
 **What working with Northlight looks like**
 
