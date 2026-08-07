@@ -5,7 +5,7 @@ description: "A fractional executive provides part-time leadership, owning outco
 og_title: "What Is a Fractional Executive? Guide for Canadian Businesses"
 og_description: "A fractional executive provides part-time leadership, owning outcomes and building systems. Learn the four types, when to hire, and when full-time is better."
 date: 2026-07-27
-date_modified: "2026-07-27"
+date_modified: "2026-08-07"
 published_time: "2026-07-27T00:00:00.000Z"
 permalink: /blog/what-is-fractional-executive-guide-canadian-businesses.html
 source_label: "Blog · Guide"
@@ -141,6 +141,8 @@ A fractional executive is not the right answer in every situation, and pretendin
 **When you want someone to do the founder's job.** A fractional executive can't replace the founder's judgement, risk tolerance, or accountability. They can own a function, but they can't own the business. If the real problem is that the founder is burned out or checked out, hiring a fractional COO to "run operations" won't fix it. That's a different conversation.
 
 If any of those apply, full-time is probably the right call, or you're not ready yet. That's fine. Knowing when you don't need something is just as useful as knowing when you do.
+
+<div class="callout-block"><p><strong>Not sure which role fits — or whether you're ready at all?</strong> The <a href="/fractional-readiness-check.html">Fractional Executive Readiness Check</a> walks you through both questions in about two minutes. Results on the page, no email required.</p></div>
 
 ### If You're Still Weighing It
 
