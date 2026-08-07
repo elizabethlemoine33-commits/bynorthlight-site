@@ -5,7 +5,7 @@ description: "I have no idea who downloaded Northlight Vault this week. None. An
 og_title: "How We Built Northlight Vault: Privacy-First Thinking in a World of Unnecessary Data"
 og_description: "I have no idea who downloaded Northlight Vault this week. None. And I think that's exactly right."
 date: 2026-06-15
-date_modified: "2026-07-09"
+date_modified: "2026-08-07"
 published_time: "2026-06-15T00:00:00.000Z"
 permalink: /blog/how-we-built-northlight-vault-privacy-first.html
 source_label: "Aurora Brief · Essay"
@@ -14,6 +14,10 @@ read_time: 4
 tags:
   - Vault
   - Privacy
+  - canadian privacy
+  - PIPEDA
+  - product design
+  - data minimization
 related_reading:
   - title: "Implementing AI Without Breaking Canadian Privacy Law: A PIPEDA Guide"
     url: /blog/pipeda-privacy-first-ai-canada.html
@@ -30,6 +34,31 @@ faq:
     a: "Privacy-first isn't a feature or a compliance checkbox — it's the design principle that determines what Northlight collects before anyone asks. The result: if someone asks 'what do you know about me?', the answer is first name, email address, and what they've chosen to share. Nothing else, because nothing else was taken. That's the kind of organisation Northlight Advisory Services is building: one that has less to answer for because it asked less in the first place."
 ---
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How We Built Northlight Vault: Privacy-First Thinking in a World of Unnecessary Data",
+  "description": "I have no idea who downloaded Northlight Vault this week. None. And I think that's exactly right. On privacy-first design and the choices behind Vault.",
+  "datePublished": "2026-06-15",
+  "dateModified": "2026-08-07",
+  "author": {
+    "@type": "Person",
+    "name": "Elizabeth Lemoine",
+    "url": "https://bynorthlight.ca/about.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Northlight Advisory Services",
+    "url": "https://bynorthlight.ca"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://bynorthlight.ca/blog/how-we-built-northlight-vault-privacy-first.html"
+  }
+}
+</script>
+
 I have no idea who downloaded Northlight Vault this week. None. And I think that's exactly right.
 
 I built Vault for myself first. I had too many cloud accounts — [Dropbox](https://www.dropbox.com){:rel="noopener"}, [Google Drive](https://workspace.google.com/products/drive/){:rel="noopener"}, [OneDrive](https://www.microsoft.com/en-ca/microsoft-365/onedrive/online-cloud-storage){:rel="noopener"} — and I was spending more time logging in and out than actually finding anything. So I built a tool that lets me browse all of them from one place, on my own computer, without touching the web.
@@ -40,7 +69,7 @@ When you're building something just for yourself, you make decisions by instinct
 
 I've experienced instances where privacy was an afterthought; where people working on a project genuinely believed that collecting vast amounts of personal information was fine because the cause was good. I understand that sentiment — it comes from a good place. But good intentions don't change what data is. When you're holding someone's personal information, you have a responsibility to it. Full stop. The reason you collected it doesn't make the obligation smaller.
 
-That's where I started with Vault. Not "what do we need to be compliant" but "what do we actually need, and what can we leave alone?"
+That's where I started with Vault. Not "what do we need to be compliant" but "what do we actually need, and what can we leave alone?" That question is actually at the heart of [PIPEDA](https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/){:rel="noopener"} — Canada's federal private-sector privacy law — which requires that personal information be collected only for an identified purpose, and only to the extent necessary for that purpose. But compliance was never the ceiling; it was the floor.
 
 ## What User Data Does Northlight Vault Not Collect?
 
@@ -73,7 +102,7 @@ We do track some things; I'm not going to pretend otherwise. We use [Plausible A
 
 What I can't do — and won't do — is tell you that a specific person with a specific name looked at a specific page for a specific amount of time and then clicked this link. I can't build a profile. I don't want to.
 
-There are two real problems with over-collection. The first is obvious: you know more about a person than you have any right to know. The second is less talked about: too much data stops being useful. When you have everything, you can't find anything; you end up drowning in information you can't parse into anything meaningful, and you've still violated someone's privacy to get there.
+There are two real problems with over-collection. The first is obvious: you know more about a person than you have any right to know. [The Office of the Privacy Commissioner of Canada](https://www.priv.gc.ca/en/opc-news/speeches/2023/sp-d_20230427/){:rel="noopener"} has been consistent on this for years: the principle of data minimization isn't just good ethics, it's a legal expectation under Canadian privacy law. The second problem is less talked about: too much data stops being useful. When you have everything, you can't find anything; you end up drowning in information you can't parse into anything meaningful, and you've still violated someone's privacy to get there.
 
 The less we know, the better — not as a slogan, but as a practical design principle.
 

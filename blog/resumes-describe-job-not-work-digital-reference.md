@@ -5,7 +5,7 @@ description: "Why achievement-based profiles matter more than job titles, and ho
 og_title: "Most Resumes Describe the Job. Almost None Describe the Work"
 og_description: "Why achievement-based profiles matter more than job titles, and how Digital Reference is changing the way we credential our work."
 date: 2026-07-16
-date_modified: "2026-07-16"
+date_modified: "2026-08-07"
 published_time: "2026-07-16T00:00:00.000Z"
 permalink: /blog/resumes-describe-job-not-work-digital-reference.html
 source_label: "Blog · Essay"
@@ -17,12 +17,12 @@ tags:
   - hiring
   - professional development
 related_reading:
-  - title: "The Wall on Day 200: When Plans Don't Go to Plan"
-    url: /blog/the-wall-on-day-200.html
-  - title: "Growth Is No Longer the Hard Part"
-    url: /blog/growth-is-no-longer-the-hard-part.html
-  - title: "You Hired Them. Now What? When New Hires Don't Clear the Bottleneck"
-    url: /blog/you-hired-them-now-what.html
+  - title: "What I Learned Optimizing for AI Search: AEO Checklist 2026"
+    url: /blog/aeo-optimization-lessons-2026.html
+  - title: "How to Choose an AI Advisor for Your Canadian Business"
+    url: /blog/how-to-choose-ai-advisor-consultant.html
+  - title: "About Northlight Advisory Services — Who We Are and What We Do"
+    url: /blog/about-northlight-advisory-services.html
 faq:
   - q: "Why do most resumes still describe the job rather than the work?"
     a: "Because job-description formatting — responsibilities, scope, team size — is the default template most of us learned to follow. It captures what you were asked to do, not what you actually did. Achievement-based profiles ask a different question: what did you build, fix, or change, and what's different because you were there? Most people have those answers. Very few have written them down in a form anyone can read."
@@ -34,11 +34,11 @@ faq:
     a: "It's self-description, not self-promotion. Personal branding often feels like manufacturing a public image; achievement-based profiles simply name work that already happened. You're not constructing a persona — you're writing down what you built, who you worked with, and what the outcome was. Most people find it easier to do this when they stop thinking of it as marketing and start thinking of it as documentation."
 ---
 
-As of mid-2026, most resumes still describe the job. Almost none describe the work.
+[As of mid-2026, most resumes still describe the job](https://www.resumepreferred.com/your-resume-is-not-a-job-description){:rel="noopener"}. Almost none describe the work.
 
-You know the pattern: bullet points listing responsibilities, scope, and team size. "Managed a team of twelve." "Oversaw operations for a $2M budget." "Responsible for stakeholder communications." It's all true, but it tells you almost nothing about what actually happened — what you built, what you fixed, what you shipped, what broke and how you put it back together. You know, the things that make you smile or that enable you to drink that 5th cup of coffee to keep you on task to solve something today, when you really just feel like giving up. Those things that also become achievements, part of your legacy...maybe even your legend.
+You know the pattern: bullet points listing responsibilities, scope, and team size. "Managed a team of twelve." "Oversaw operations for a $2M budget." "Responsible for stakeholder communications." It's all true — but [recruiters often stop reading precisely because this format tells them almost nothing](https://www.randstad.ca/job-seeker/career-resources/resume-tips/this-is-why-recruiters-arent-reading-your-resume/){:rel="noopener"} about what actually happened. What you built, what you fixed, what you shipped, what broke and how you put it back together. You know, the things that make you smile or that enable you to drink that 5th cup of coffee to keep you on task to solve something today, when you really just feel like giving up. Those things that also become achievements, part of your legacy...maybe even your legend.
 
-I've been thinking about this gap for years. Most of us know how to write the job-description version of a resume. Very few of us write the accomplishment version — the one that names what we actually did, what we're legitimately proud of, and what we'd point to if someone asked, "What did you make better?" Which you will be asked during your next interview.
+I've been thinking about this gap for years. Most of us know how to write the job-description version of a resume. Very few of us write [the accomplishment version](https://craresources.com/blog/resume-isnt-read/){:rel="noopener"} — the one that names what we actually did, what we're legitimately proud of, and what we'd point to if someone asked, "What did you make better?" Which you will be asked during your next interview.
 
 ## From job descriptions to actual accomplishments
 
@@ -61,6 +61,12 @@ Achievement-based profiles ask you to write about your work in three dimensions:
 - **Outcomes:** What's different because you were there?
 
 Most of us have these answers. Very few of us have written them down in a form anyone can read.
+
+## If You're on the Hiring Side
+
+<div class="answer-block"><p>The same logic applies in reverse. When you're evaluating a fractional executive, a consultant, or a senior hire, a resume that lists "Managed operations for a $15M portfolio" tells you almost nothing about fit. What you actually need to know: what was broken before they arrived, what did they change, and what's different because they were there? Context, actions, outcomes — the three-dimension framework works both ways, whether you're describing your own work or evaluating someone else's.</p></div>
+
+If you're a founder evaluating fractional COOs or senior hires, try this in your first conversation: ask them to walk you through something they're legitimately proud of from a previous engagement. The specificity of the answer — the context they give, the decisions they owned, the outcomes they can name — will tell you more than a formatted resume. That's the same question Digital Reference is built on. And it's the question worth asking before you hire anyone.
 
 ## Why timing matters
 

@@ -5,7 +5,7 @@ description: "How three MCP skills — Morning Briefing Pro, Strategic Voice Fra
 og_title: "I Built Three AI Tools for My Own Work. Now They're on MCP Market."
 og_description: "Morning Briefing Pro, Strategic Voice Framework, and MCP Market Publisher — what each one does, why I built it, and what the iterative process actually looked like."
 date: 2026-07-11
-date_modified: "2026-07-11"
+date_modified: "2026-08-07"
 published_time: "2026-07-11T00:00:00.000Z"
 permalink: /blog/northlight-mcp-skills-market.html
 source_label: "Blog · Essay"
@@ -29,7 +29,7 @@ related_reading:
     url: /blog/your-agents-need-a-chain-of-command.html
 faq:
   - q: "What is an MCP skill?"
-    a: "An MCP skill is a packaged AI workflow built on the Model Context Protocol — the standard that lets AI assistants like Claude connect to external tools, data, and processes. MCP skills are reusable and sold on platforms like MCP Market. You install a skill and it extends what your AI assistant can do — automating a specific workflow, applying a framework, or accessing specific data — without building the underlying logic yourself."
+    a: "An MCP skill is a packaged AI workflow built on the [Model Context Protocol](https://modelcontextprotocol.io){:rel=\"noopener\"} — the standard that lets AI assistants like Claude connect to external tools, data, and processes. MCP skills are reusable and sold on platforms like MCP Market. You install a skill and it extends what your AI assistant can do — automating a specific workflow, applying a framework, or accessing specific data — without building the underlying logic yourself."
   - q: "What MCP skills does Northlight Advisory Services offer?"
     a: "Northlight Advisory Services has three skills on MCP Market: Morning Briefing Pro ($19), which prepares you for your workday by pulling together what's happening and what needs to happen; Strategic Voice Framework ($29), which captures your brand voice and applies it consistently with Claude; and MCP Market Publisher ($29), which standardizes the process of listing skills on MCP Market. All three are at mcpmarket.com/sellers/northlight-skills."
   - q: "What does the Strategic Voice Framework MCP skill do?"
@@ -39,6 +39,31 @@ faq:
   - q: "What is the MCP Market Publisher skill?"
     a: "MCP Market Publisher is a skill that standardizes the process of preparing and listing a new skill on MCP Market. It came directly from the friction of doing it the first time — figuring out what's required, in what format, without a clear template. The skill gives you a repeatable process so the second time is significantly faster than the first."
 ---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "I Built Three AI Tools for My Own Work. Now They're on MCP Market.",
+  "description": "How three MCP skills — Morning Briefing Pro, Strategic Voice Framework, and MCP Market Publisher — went from personal tools for a one-woman advisory practice to listed products on MCP Market.",
+  "datePublished": "2026-07-11",
+  "dateModified": "2026-08-07",
+  "author": {
+    "@type": "Person",
+    "name": "Elizabeth Lemoine",
+    "url": "https://bynorthlight.ca/about.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Northlight Advisory Services",
+    "url": "https://bynorthlight.ca"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://bynorthlight.ca/blog/northlight-mcp-skills-market.html"
+  }
+}
+</script>
 
 <div class="at-a-glance">
 <h2>At a glance</h2>
@@ -52,7 +77,11 @@ faq:
 </ul>
 </div>
 
-Northlight Advisory Services has three MCP skills listed on [MCP Market](https://mcpmarket.com/sellers/northlight-skills){:target="_blank" rel="noopener"}: Morning Briefing Pro ($19), Strategic Voice Framework ($29), and MCP Market Publisher ($29). None of them were designed to be products. Each one started as something I built to make running a one-person advisory practice more manageable — wearing 72 hats, needing to be skilled in a lot of topics, needing to produce real work every day. They worked well enough that it felt wrong not to share them.
+Northlight Advisory Services has three MCP skills listed on [MCP Market](https://mcpmarket.com/sellers/northlight-skills){:target="_blank" rel="noopener"}: Morning Briefing Pro ($19), Strategic Voice Framework ($29), and MCP Market Publisher ($29). None of them were designed to be products. Each one started as something I built to make running a one-person advisory practice more manageable — wearing 72 hats, needing to be skilled in a lot of topics, needing to produce real work every day.
+
+MCP — short for [Model Context Protocol](https://www.anthropic.com/news/model-context-protocol){:rel="noopener"}, the open standard Anthropic released in late 2024 — is what makes this kind of extensibility possible. Instead of building integrations from scratch every time, MCP gives AI assistants like Claude a standard way to connect to external tools, data, and processes. The skills market is a direct consequence of that: if the protocol is standardized, the tools built on top of it can be shared.
+
+They worked well enough that it felt wrong not to share them.
 
 ## Why did we list on MCP Market?
 
