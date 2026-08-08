@@ -191,6 +191,12 @@
     .faq-q{font-family:'Jost',sans-serif;font-weight:600;font-size:15px;color:var(--text);margin-bottom:8px;}
     .faq-a{font-family:'Outfit',sans-serif;font-size:15px;line-height:1.7;color:var(--haze);margin:0;}
 
+    #sidebar-toc{display:none;}
+    .toc-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:2px;}
+    .toc-link{font-family:'Outfit',sans-serif;font-size:12px;color:var(--muted);text-decoration:none;padding:4px 8px;border-left:2px solid var(--border);display:block;line-height:1.4;transition:color .15s,border-color .15s;}
+    .toc-link:hover{color:var(--cloud);border-left-color:var(--glacial);}
+    .toc-link.toc-active{color:var(--glacial);border-left-color:var(--glacial);}
+
     @media(max-width:800px){.policy-doc{padding:20px;}.policy-download-bar{flex-direction:column;align-items:flex-start;}}
 
     .aurora-card{background:linear-gradient(150deg,rgba(79,195,200,.05) 0%,rgba(139,111,212,.08) 55%,rgba(196,111,170,.04) 100%);border:1px solid var(--border-2);border-radius:8px;padding:16px;}
@@ -293,6 +299,10 @@
     </main>
 
     <aside class="blog-sidebar" aria-label="Post sidebar">
+      <div id="sidebar-toc" class="sidebar-section">
+        <p class="sidebar-label">In this post</p>
+        <ul class="toc-list" id="toc-list"></ul>
+      </div>
       <div class="sidebar-section">
         <p class="sidebar-label">Published</p>
         <div class="pub-card">
@@ -361,5 +371,38 @@
   </div>
 
   <script defer data-domain="bynorthlight.ca" src="https://plausible.io/js/script.js"></script>
+  <script>
+  (function(){
+    var headings = document.querySelectorAll('.post-body h2');
+    if(headings.length < 2) return;
+    var list = document.getElementById('toc-list');
+    var links = [];
+    headings.forEach(function(h, i){
+      if(!h.id){
+        h.id = 'section-' + (h.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'') || i);
+      }
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = '#' + h.id;
+      a.className = 'toc-link';
+      a.textContent = h.textContent;
+      li.appendChild(a);
+      list.appendChild(li);
+      links.push({a:a, h:h});
+    });
+    document.getElementById('sidebar-toc').style.display = '';
+    var onScroll = function(){
+      var scrollY = window.scrollY + 120;
+      var active = links[0];
+      links.forEach(function(item){
+        if(item.h.getBoundingClientRect().top + window.scrollY <= scrollY) active = item;
+      });
+      links.forEach(function(item){ item.a.classList.remove('toc-active'); });
+      if(active) active.a.classList.add('toc-active');
+    };
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+  })();
+  </script>
 </body>
 </html>
