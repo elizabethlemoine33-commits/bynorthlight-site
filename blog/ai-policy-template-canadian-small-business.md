@@ -65,6 +65,10 @@ This template is built for Canadian small and medium businesses — around the l
 
 **Legal note:** This template is a starting point, not legal advice. It's designed to help you think through the right questions and get something workable in place. If you operate in a regulated sector — healthcare, financial services, law — or you handle personal data at significant scale, review this with a lawyer before putting it in front of your team.
 
+<div class="answer-block">
+<p>A Canadian AI policy needs to cover five things: which tools are approved, what data can go into those tools, which outputs require human review before use, what you're required to disclose (including Ontario's January 2026 job posting rule), and who owns the policy with a review schedule. Each section answers a question that surfaces when something goes wrong.</p>
+</div>
+
 ## What Canadian Law Actually Requires
 
 There is no comprehensive federal AI law in Canada. [Bill C-27 — which included the Artificial Intelligence and Data Act — died in early 2025](https://www.airdberlis.com/insights/publications/publication/canada-s-2026-ai-strategy--what-businesses-need-to-know){:rel="noopener"} when Parliament dissolved. In June 2026, the federal government released "AI for All," a strategy document that commits existing regulators to use their current powers. No new obligations for businesses.
@@ -76,6 +80,10 @@ Quebec's Law 25 is worth particular attention: it includes transparency requirem
 [As of January 1, 2026, Ontario's Employment Standards Act requires employers with 25 or more employees to disclose AI use in job postings](https://www.ontario.ca/document/your-guide-employment-standards-act-0/artificial-intelligence){:rel="noopener"} when AI is used to screen, assess, or select candidates. That's a live obligation. If you're in Ontario and using AI in hiring, check Section 4 of the template carefully.
 
 An AI policy isn't preparing you for a future regulatory wave. It's operationalising obligations you already have.
+
+<div class="answer-block">
+<p>Your AI use is governed by PIPEDA — Canada's federal privacy law — plus provincial statutes if you operate in Quebec, Alberta, or BC. No federal AI law exists yet. Quebec's Law 25 adds transparency requirements for automated decisions affecting individuals. Ontario's Employment Standards Act requires AI disclosure in job postings for employers with 25 or more staff, effective January 1, 2026. These are live obligations, not upcoming ones.</p>
+</div>
 
 ## The Template
 
@@ -168,6 +176,10 @@ An AI policy isn't preparing you for a future regulatory wave. It's operationali
 
 </div>
 
+<div class="answer-block">
+<p>The section that needs the most care is data handling. You need to specify which jurisdiction covers your data storage, which tools are cleared for personal information, and what the threshold is for confidential business data. If those three decisions are accurate for your actual tools and team, the rest of the policy follows from them.</p>
+</div>
+
 ## What to Change — and What to Keep
 
 **Fill in every field in square brackets.** Each one is a decision your business needs to make. Which tools are approved? Which jurisdiction governs your data storage? Does the Ontario rule apply to your hiring process? Name the policy owner. Set the next review date. A template with unfilled fields is not a policy.
@@ -177,6 +189,10 @@ An AI policy isn't preparing you for a future regulatory wave. It's operationali
 **Keep the structure.** The five sections cover the questions that come up when something goes wrong: Was this tool approved? Should that data have gone in? Did anyone review it before it went out? Did we disclose what we needed to? Who owns this? If your policy can answer all five, it's doing its job.
 
 **Set a calendar reminder.** Quarterly. The policy you write today will need updating — new tools get adopted, regulations evolve, your team's practices change. A quarterly check-in keeps it current. If you're still in the early stages of figuring out how AI fits into your operations, the [AI Adoption Checklist for Canadian Businesses](/blog/ai-adoption-checklist-canadian-businesses-2026.html) is a good place to start before you write the policy — it covers the groundwork that makes a policy like this easier to fill in accurately.
+
+<div class="answer-block">
+<p>A policy is good enough if it answers five questions when something goes wrong: Was this tool approved? Should that data have gone in? Did someone review the output before it went out? Did you disclose what was required? Who owns this? If your adapted version answers all five for how your business actually operates — not how you intend to — it's doing its job.</p>
+</div>
 
 ## When to Get Help
 
