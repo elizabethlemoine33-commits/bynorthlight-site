@@ -10,6 +10,7 @@ published_time: "2026-06-15T00:00:00.000Z"
 permalink: /blog/how-we-built-northlight-vault-privacy-first.html
 source_label: "Aurora Brief · Essay"
 source_class: source-aurora
+aurora_brief: true
 read_time: 4
 tags:
   - Vault
