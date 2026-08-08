@@ -263,6 +263,18 @@
         {{ content }}
       </div>
 
+      {% if page.faq %}
+      <section class="faq-section" aria-label="Frequently asked questions">
+        <h2 class="faq-heading">Frequently Asked Questions</h2>
+        {% for item in page.faq %}
+        <div class="faq-item">
+          <p class="faq-q">{{ item.q }}</p>
+          <p class="faq-a">{{ item.a }}</p>
+        </div>
+        {% endfor %}
+      </section>
+      {% endif %}
+
       {% if page.related_reading %}
       <div class="related-reading">
         <p class="related-label">Related reading</p>

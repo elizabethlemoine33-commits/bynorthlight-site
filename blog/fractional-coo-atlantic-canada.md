@@ -5,7 +5,7 @@ description: "What a fractional COO does, what it costs, and who should hire one
 og_title: "Fractional COO Services in Atlantic Canada | Northlight"
 og_description: "What a fractional COO does, what it costs, and who should hire one. Written for businesses in Halifax, Moncton, and Fredericton."
 date: 2026-07-21
-date_modified: "2026-08-07"
+date_modified: "2026-08-08"
 published_time: "2026-07-21T00:00:00.000Z"
 permalink: /blog/fractional-coo-atlantic-canada.html
 source_label: "Blog · Essay"
@@ -31,6 +31,10 @@ faq:
     a: "The right time is usually when you're spending 10+ hours a week on operations work that's keeping you from revenue or strategy, when you're about to scale and need structure first, or when you've tried to hire for operations roles but can't justify a full-time executive yet. If you're asking the question, you're probably close."
   - q: "What industries do fractional COOs work with in Atlantic Canada?"
     a: "Fractional COOs work across industries — professional services, tech startups past seed stage, nonprofits, creative agencies, trades, and marine businesses. The operational fundamentals (structure, systems, clarity, execution) apply regardless of sector. What matters more is stage: 10–75 people, $1M–$15M revenue, and real operational complexity."
+  - q: "How much does a fractional COO cost in Atlantic Canada?"
+    a: "Fractional COO retainers in Atlantic Canada typically run $6,000–$16,000 per month, reflecting regional market conditions. For context, a full-time COO in Canada costs $150,000–$220,000+ in total annual compensation. Most engagements are structured at 10–20 hours per week — enough to build real systems without the cost of a full-time executive role."
+  - q: "How do I get started with a fractional COO in Halifax or Atlantic Canada?"
+    a: "The first step is a 30-minute conversation to assess whether fractional is the right model for your business. At Northlight Advisory Services, we start by understanding where you are operationally, what problems need solving, and whether the engagement scope makes sense for your stage and budget. If it's a fit, we define the scope, hours, and timeline together — and get to work. Email elizabeth@bynorthlight.ca to start."
 ---
 
 <script type="application/ld+json">
