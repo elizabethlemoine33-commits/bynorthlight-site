@@ -68,6 +68,45 @@ faq:
 
 <div class="at-a-glance" aria-label="At a glance"><h2>At a Glance</h2><ul><li>A full-time COO in Canada costs between <a href="https://www.payscale.com/research/CA/Job=Chief_Operating_Officer_(COO)/Salary" rel="noopener">C$144,000–C$239,000 annually</a> depending on experience and total compensation structure</li><li>Fractional COOs typically cost significantly less than full-time hires, with <a href="https://kamyarshah.com/fractional-coo-rates-cost-breakdown/" rel="noopener">Canadian retainers running C$5,000–C$20,000 per month</a></li><li>Most Atlantic Canadian businesses under C$5M in revenue don't have the operational volume to keep a full-time COO productive</li><li>The real question isn't "COO or no COO" — it's how much operational leadership your business actually needs, and what's the cleanest way to buy it</li><li>AI-enabled operations change the math: what used to require a full team can now run through one highly capable person with the right tools</li></ul></div>
 
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Fractional COO</th>
+      <th>Full-Time COO</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Monthly cost</strong></td>
+      <td>C$3,000–$15,000 retainer</td>
+      <td>C$12,500–$20,000+ salary</td>
+    </tr>
+    <tr>
+      <td><strong>Commitment</strong></td>
+      <td>Project-based, defined scope</td>
+      <td>Permanent employment</td>
+    </tr>
+    <tr>
+      <td><strong>Ramp time</strong></td>
+      <td>Days to weeks</td>
+      <td>3–6 months</td>
+    </tr>
+    <tr>
+      <td><strong>Best for</strong></td>
+      <td>Building systems, structural fixes, episodic leadership needs</td>
+      <td>Continuous daily operations management, large teams</td>
+    </tr>
+    <tr>
+      <td><strong>Wrong for</strong></td>
+      <td>Businesses needing constant reactive management on-site</td>
+      <td>Businesses under C$5M without enough volume to keep them busy</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
 ## How Much Does a Full-Time COO Cost in Canada?
 
 <div class="answer-block"><p>A full-time COO in Canada costs an average base salary around C$144,000, with total compensation including bonuses, benefits, and equity commonly reaching C$300,000 or more for experienced operators. In Atlantic Canada, expect C$150,000–$220,000 in total compensation before onboarding costs and the six-month ramp before they know where anything is. And you need enough work to keep a senior executive engaged — which most businesses under C$5M in revenue don't have.</p></div>

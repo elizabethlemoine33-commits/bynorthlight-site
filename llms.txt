@@ -1,4 +1,4 @@
-﻿Last updated: 2026-07-09
+﻿Last updated: 2026-08-07
 
 # Northlight Advisory Services
 
@@ -96,6 +96,10 @@ Current posts:
 
 ### Newsletter
 Aurora Brief — a monthly briefing from Elizabeth Lemoine on strategy, AI adoption, and what she is learning and building at Northlight Advisory Services. Subscribe at https://aurora-brief.kit.com/110f173cf7
+
+### Fractional Executive Readiness Check
+A two-part interactive tool: are you ready for a fractional executive, and if so, which role fits your business right now? Results on the page — no email required.
+URL: https://bynorthlight.ca/fractional-readiness-check.html
 
 ### FAQ
 A standalone FAQ page covering common questions about Northlight Advisory Services, Elizabeth Lemoine, and how engagements work.

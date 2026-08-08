@@ -37,7 +37,7 @@ faq:
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Article",
+  "@type": ["Article", "BlogPosting"],
   "headline": "The Wall on Day 200: When Plans Don't Go to Plan",
   "description": "Why the constraints that kill your plan only show up once you're close enough to bump into them — and the small habit that gets you there sooner.",
   "datePublished": "2026-06-04",

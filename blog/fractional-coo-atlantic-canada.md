@@ -33,6 +33,26 @@ faq:
     a: "Fractional COOs work across industries — professional services, tech startups past seed stage, nonprofits, creative agencies, trades, and marine businesses. The operational fundamentals (structure, systems, clarity, execution) apply regardless of sector. What matters more is stage: 10–75 people, $1M–$15M revenue, and real operational complexity."
 ---
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Fractional COO Services",
+  "description": "Part-time operations leadership for Atlantic Canadian businesses earning $1M–$15M annually. Northlight Advisory Services provides fractional COO engagements in Halifax and across Atlantic Canada.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Northlight Advisory Services",
+    "url": "https://bynorthlight.ca"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Atlantic Canada"
+  },
+  "serviceType": "Fractional COO Advisory",
+  "url": "https://bynorthlight.ca/blog/fractional-coo-atlantic-canada.html"
+}
+</script>
+
 <div class="at-a-glance" aria-label="At a glance"><h2>At a glance</h2><ul><li>A fractional COO provides part-time operations leadership — the same work a full-time COO does, scoped to 10–20 hours per week</li><li>The model fits Atlantic Canada businesses earning $1M–$15M annually who need senior operations help but can't justify a $280K+ full-time hire</li><li>Typical retainers run $8,000–$18,000/month nationally; regional rates in Atlantic Canada trend toward the lower end</li><li>Most work happens remotely using your existing tools, with in-person sessions when they add value</li><li>Best fit: 10–75 person organisations where the owner-operator is doing operations by default and needs to delegate</li></ul></div>
 
 Nobody writes about fractional COO work in Atlantic Canada. So I will.
