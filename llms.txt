@@ -68,6 +68,8 @@ Current posts:
 - What I Learned Optimizing a Website for AI Search: An AEO Checklist for 2026 — https://bynorthlight.ca/blog/aeo-optimization-lessons-2026.html
 - How to Prepare Your Business for AI Adoption: A Canadian Checklist — https://bynorthlight.ca/blog/ai-adoption-checklist-canadian-businesses-2026.html
 - AI Readiness Checklist — https://bynorthlight.ca/blog/ai-adoption-checklist-printable.html
+- AI Agent Deployment Go/No-Go Checklist — https://bynorthlight.ca/blog/ai-agent-deployment-checklist-printable.html
+- Is Your AI Context-Ready? — https://bynorthlight.ca/blog/ai-context-ready-checklist-printable.html
 - AI for All: Open Programmes for Nova Scotia Businesses — https://bynorthlight.ca/blog/ai-for-all-programmes-nova-scotia-businesses.html
 - Your AI Isn't Underperforming. It's Working Blind. — https://bynorthlight.ca/blog/ai-isnt-underperforming-working-blind.html
 - AI Acceptable Use Policy Template for Canadian Small Business — https://bynorthlight.ca/blog/ai-policy-template-canadian-small-business.html
@@ -87,6 +89,7 @@ Current posts:
 - How to Get Ongoing Business Advisory Support as a Canadian Small Operator — https://bynorthlight.ca/blog/ongoing-business-advisory-canada.html
 - Implementing AI Without Breaking Canadian Privacy Law: A PIPEDA Guide for Business Owners — https://bynorthlight.ca/blog/pipeda-privacy-first-ai-canada.html
 - Most Resumes Describe the Job. Almost None Describe the Work — https://bynorthlight.ca/blog/resumes-describe-job-not-work-digital-reference.html
+- Shadow AI Governance Checklist — https://bynorthlight.ca/blog/shadow-ai-governance-checklist-printable.html
 - Shadow AI Is the New Shadow IT — What Leaders Need to Know — https://bynorthlight.ca/blog/shadow-ai-is-the-new-shadow-it.html
 - The Wall on Day 200: When Plans Don't Go to Plan — https://bynorthlight.ca/blog/the-wall-on-day-200.html
 - What Is a Fractional Executive? A Guide for Canadian Businesses — https://bynorthlight.ca/blog/what-is-a-fractional-executive-canada.html
