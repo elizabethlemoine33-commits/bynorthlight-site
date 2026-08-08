@@ -89,6 +89,10 @@ You don't need more people. You need the people you have to be able to do the jo
 
 ## If This Sounds Like Your Week
 
+<div class="answer-block">
+<p>If your new hire has been in role for 90 days and the bottleneck hasn't moved, the problem is structural, not the person. A fractional engagement in this situation is a defined-scope operator who maps the actual decision rights, builds the handoff structures, and transfers capability to your existing team — then leaves. The goal is not to add a third person to the same broken system. It's to make the people already there able to do the jobs you hired them for.</p>
+</div>
+
 Let's talk. Not a pitch — a real conversation about what's stuck, where the handoff is breaking, and whether fractional support is the right shape of help for what you're actually dealing with.
 
 I've built these structures before; I know what it looks like when hiring creates a trust gap instead of solving a capacity problem. And I know what it takes to close that gap — not with another hire, but with the clarity and structure that should have been there in the first place.

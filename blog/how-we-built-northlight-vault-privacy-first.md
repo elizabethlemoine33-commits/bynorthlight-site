@@ -71,6 +71,10 @@ I've experienced instances where privacy was an afterthought; where people worki
 
 That's where I started with Vault. Not "what do we need to be compliant" but "what do we actually need, and what can we leave alone?" That question is actually at the heart of [PIPEDA](https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/){:rel="noopener"} — Canada's federal private-sector privacy law — which requires that personal information be collected only for an identified purpose, and only to the extent necessary for that purpose. But compliance was never the ceiling; it was the floor.
 
+<div class="answer-block">
+<p>Northlight Vault is a Mac app that lets you browse Dropbox, Google Drive, and OneDrive from a single interface — without a browser, without cloud uploads, and without giving Vault access to anything you don't point it at. It runs locally and collects no personal information from users. Every design decision started from the same question: do we actually need this, or can we leave it alone?</p>
+</div>
+
 ## What User Data Does Northlight Vault Not Collect?
 
 <div class="answer-block"><p>Northlight Vault collects no personal information from users. You don't register, create an account, or give a name — the app doesn't report back which cloud accounts you've connected or what files you've viewed. The only analytics Northlight collects is aggregate, anonymised web data through Plausible: visitor counts, page views, approximate location, and operating system. No profiles. No individual tracking. If someone asks 'what do you know about me?', the answer is: nothing, unless they've chosen to share it.</p></div>

@@ -105,6 +105,10 @@ You don't have to like the answers. You just have to know them. Because the wall
 
 You're going to find out the thing won't work the way you thought it would. That part isn't optional. The only thing that's optional is when.
 
+<div class="answer-block">
+<p>Sunk cost makes honest assessment harder because the question stops being about the project and starts being about you — whether the time was wasted, whether you were wrong to start. Checkpoints interrupt that before it takes hold. Run one every 60–90 days: has anything you assumed last quarter turned out not to be true? If no, keep building. If yes, name the assumption and decide what it means before more time accumulates on top of it.</p>
+</div>
+
 Most of the founders who come to Northlight Advisory Services arrive around this point — not day one, when everything is still a sketch, but somewhere in the middle, when the thing is real enough that the constraints have become visible and the cost of getting it wrong has started to matter. That's the juncture fractional advisory work is built for: not to tell you what you should have done differently, but to help you scope the options clearly from where you actually are.
 
 If you're at one of those moments — re-examining a direction, a model, a plan — and want a thinking partner who's been inside organisations at that juncture, [start here to see if Northlight Advisory Services is the right fit](/who-we-help.html).
