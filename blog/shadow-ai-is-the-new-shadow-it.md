@@ -11,6 +11,10 @@ permalink: /blog/shadow-ai-is-the-new-shadow-it.html
 source_label: "Blog · Essay"
 source_class: source-essay
 read_time: 6
+download_label: "Download"
+download_title: "Shadow AI Governance Checklist"
+download_desc: "The four-question audit and follow-up framework for surfacing unsanctioned AI use in your organisation. No sign-up required."
+download_url: /blog/shadow-ai-governance-checklist-printable.html
 tags:
   - ai governance
   - shadow ai
@@ -107,9 +111,7 @@ That person is probably you.
 
 I built a governance audit checklist — the actual questions to ask, the format to capture answers in, and the follow-up decision tree that tells you what to do with what you find. It's designed for someone who's running this audit for the first time, in an organisation that doesn't have an AI policy yet and isn't sure it needs one.
 
-[Download the AI Governance Readiness Checklist](/assets/downloads/AI_Governance_Readiness.pdf)
-
-If this is useful — if you run the audit and it surfaces something you didn't know, or if you forward it to someone on your leadership team and it helps you have the conversation you've been avoiding — that's the signal I'm looking for. I write about this kind of work once a month in Aurora Brief. It's where I think out loud about AI adoption, governance decisions, and what actually works when you're trying to move an organisation forward without breaking it.
+[Download the Shadow AI Governance Checklist →](/blog/shadow-ai-governance-checklist-printable.html)
 
 Shadow AI isn't going away. The tools are too useful, the behaviour is too embedded, and the next wave — agentic AI that takes actions on your behalf, not just generates text — is going to make this ten times harder if you don't have the basics sorted now.
 

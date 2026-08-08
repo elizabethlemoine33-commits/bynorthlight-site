@@ -11,6 +11,10 @@ permalink: /blog/ai-isnt-underperforming-working-blind.html
 source_label: "Blog · AI"
 source_class: source-aurora
 read_time: 6
+download_label: "Download"
+download_title: "Is Your AI Context-Ready?"
+download_desc: "A 5-layer self-assessment to identify where your AI can't see — and what to fix first. No sign-up required."
+download_url: /blog/ai-context-ready-checklist-printable.html
 tags:
   - AI Adoption
   - Organizational Strategy
@@ -94,6 +98,6 @@ If you're reading this and recognising your organisation in at least two of thos
 
 It's not a vendor pitch. It's not a sales funnel. It's a tool to help you see what your AI can't see — so you can decide what to fix first.
 
-[Download the checklist here.](/assets/downloads/AI_Context_Ready.pdf) You'll also get Aurora Brief — my monthly briefing on what I'm learning, building, and observing — in your inbox once a month while you're at it. No spam, no upsell, just the work.
+[Download the checklist →](/blog/ai-context-ready-checklist-printable.html)
 
 And if you finish the checklist and realise the gaps are bigger than you thought — or you're not sure where to start — that's a conversation Northlight can help with. But start with the checklist first. You need to see the problem clearly before you can solve it.
