@@ -65,7 +65,7 @@ Marketing tells the organisation what customers want. What prospects are asking.
 
 That is intelligence. Organisational intelligence. And it has a direct bearing on strategy, sales, delivery, capacity planning, finance, and client experience.
 
-Research on market orientation — the degree to which an organisation systematically gathers and responds to market intelligence — has consistently shown that firms with higher market orientation outperform those without it. Kohli and Jaworski established this in 1990. Narver and Slater confirmed it the same year. The finding has replicated across industries and geographies for three decades.
+Research on market orientation — the degree to which an organisation systematically gathers and responds to market intelligence — has consistently shown that firms with higher market orientation outperform those without it. [Kohli and Jaworski established this in 1990](https://journals.sagepub.com/doi/10.1177/002224299005400201). [Narver and Slater confirmed it the same year](https://journals.sagepub.com/doi/10.1177/002224299005400403). The finding has replicated across industries and geographies for three decades.
 
 The problem is that most of this research treats market orientation as a firm-level trait, not as an operational practice. It asks whether the organisation is market-oriented. It rarely asks how market intelligence actually moves through the operating system — or whether the COO is part of that movement.
 
@@ -73,7 +73,7 @@ I would argue they should be.
 
 If marketing learns something important — about what customers are asking for, about why prospects disappear partway through the sales process, about what a competitor just changed — and that intelligence never reaches operations, delivery, finance, or strategy, the organisation has paid to acquire that intelligence and then ignored it.
 
-Cross-functional information integration matters. Griffin and Hauser showed in 1996 that cross-functional coordination between marketing and operations improves outcomes. Ruekert and Walker found similar patterns nearly a decade earlier. The principle generalises: when intelligence stays inside one function, the rest of the organisation makes decisions without it.
+Cross-functional information integration matters. [Griffin and Hauser showed in 1996](https://onlinelibrary.wiley.com/doi/abs/10.1111/1540-5885.1330191) that cross-functional coordination between marketing and operations improves outcomes. [Ruekert and Walker found similar patterns nearly a decade earlier](https://journals.sagepub.com/doi/10.1177/002224298705100101). The principle generalises: when intelligence stays inside one function, the rest of the organisation makes decisions without it.
 
 The Market-Aware COO treats marketing as a signal, not a silo. That does not mean the COO does marketing. It means the COO reads what marketing is learning and asks: what does this mean for how we operate?
 
@@ -89,7 +89,7 @@ What actually changes at ten times today's volume? What breaks? Where do the bot
 
 These are the questions a COO should be asking. Not "can our current systems handle more?" but "what will our systems need to become?"
 
-This distinction matters because the research on dynamic capabilities — the work Teece, Pisano, and Shuen did in 1997 — draws a sharp line between operational capabilities (doing what you do well today) and dynamic capabilities (the ability to sense change, seize opportunity, and reconfigure how you operate as your environment changes). O'Reilly and Tushman extended this in 2008: organisations that over-optimise for efficiency and scale systematically destroy their capacity for adaptation. You build a very good machine for the world as it is, and then the world changes.
+This distinction matters because the research on dynamic capabilities — [the work Teece, Pisano, and Shuen did in 1997](https://www.semanticscholar.org/paper/DYNAMIC-CAPABILITIES-AND-STRATEGIC-MANAGEMENT-Teece-Pisano/98c866fca6473ab62136477b7bd416b848f303f8) — draws a sharp line between operational capabilities (doing what you do well today) and dynamic capabilities (the ability to sense change, seize opportunity, and reconfigure how you operate as your environment changes). [O'Reilly and Tushman extended this in 2008](https://www.sciencedirect.com/science/article/abs/pii/S0191308508000105): organisations that over-optimise for efficiency and scale systematically destroy their capacity for adaptation. You build a very good machine for the world as it is, and then the world changes.
 
 The goal is not a system that can theoretically handle ten times today's volume. The goal is **adaptive capacity**: enough structure to protect what matters, and enough flexibility to respond intelligently when reality changes.
 
@@ -107,13 +107,13 @@ I am arguing that the COO needs enough understanding of marketing to read the si
 
 The COO does not have to be the expert. The COO has to be the person who asks the question that helps the expert see what they could not see before.
 
-Edgar Schein called this *humble inquiry* — the practice of asking questions you genuinely do not know the answer to, rather than questions designed to steer toward a conclusion you have already reached. It is the opposite of arriving in a room with the answer and using questions to confirm it. The best operating leaders I have worked with used this approach instinctively. They asked from different angles until the person closest to the work could surface what was missing. The point was never to give the answer. It was to help the expert find it.
+Edgar Schein called this [*humble inquiry*](https://www.penguinrandomhouse.com/books/786686/humble-inquiry-3rd-edition-by-edgar-h-schein-and-peter-a-schein/) — the practice of asking questions you genuinely do not know the answer to, rather than questions designed to steer toward a conclusion you have already reached. It is the opposite of arriving in a room with the answer and using questions to confirm it. The best operating leaders I have worked with used this approach instinctively. They asked from different angles until the person closest to the work could surface what was missing. The point was never to give the answer. It was to help the expert find it.
 
-Owens, Johnson, and Mitchell found in 2013 that leaders who express genuine intellectual humility — acknowledging their own limitations, spotlighting others' strengths, modelling openness to learning — lead higher-performing teams with better engagement. The mechanism is not complicated: if the leader is willing to not know, the team is safer to not know. And organisations where people are safe to say what they do not know learn faster than organisations where they are not.
+[Owens, Johnson, and Mitchell found in 2013](https://www.semanticscholar.org/paper/Expressed-Humility-in-Organizations:-Implications-Owens-Johnson/ef9c15e03300b757e1c90b149dbff35d1400a460) that leaders who express genuine intellectual humility — acknowledging their own limitations, spotlighting others' strengths, modelling openness to learning — lead higher-performing teams with better engagement. The mechanism is not complicated: if the leader is willing to not know, the team is safer to not know. And organisations where people are safe to say what they do not know learn faster than organisations where they are not.
 
 The COO's value is often in the seams between functions. Noticing that sales promised something delivery cannot provide. That finance is waiting for information nobody knows it needs. That marketing is generating demand the organisation cannot fulfil. That a database problem is quietly damaging client relationships. That the organisation has three clients because something in the acquisition or delivery system is creating a ceiling nobody has named yet.
 
-Cameron Herold describes the COO in *Second in Command* as a chameleon: executor, integrator, moderator, enforcer, devil's advocate, mentor, second-in-command — depending on what the CEO and organisation need. I find that accurate. The role is not fixed. It changes as the organisation changes.
+Cameron Herold describes the COO in [*Second in Command*](https://cameronherold.com/thesecondincommand/) as a chameleon: executor, integrator, moderator, enforcer, devil's advocate, mentor, second-in-command — depending on what the CEO and organisation need. I find that accurate. The role is not fixed. It changes as the organisation changes.
 
 A Market-Aware COO is that same chameleon, with an additional orientation: they are looking outward as well as inward. They are asking what the market is telling the organisation, and what the organisation needs to do about it.
 
@@ -123,7 +123,7 @@ A Market-Aware COO is that same chameleon, with an additional orientation: they 
 
 I want to challenge one more piece of conventional operations language: continuous improvement.
 
-Continuous improvement implies endless optimisation of the same machine. Detect the error. Correct the error. Move on. Argyris and Schön called this single-loop learning — operating within existing rules and assumptions, fixing what breaks without questioning whether the rules themselves are right.
+Continuous improvement implies endless optimisation of the same machine. Detect the error. Correct the error. Move on. [Argyris and Schön](https://infed.org/dir/welcome/chris-argyris-theories-of-action-double-loop-learning-and-organizational-learning/) called this single-loop learning — operating within existing rules and assumptions, fixing what breaks without questioning whether the rules themselves are right.
 
 Single-loop learning is necessary. It is not sufficient.
 
@@ -175,7 +175,7 @@ Each iteration begins from a different place than the one before, because the or
 
 This requires two conditions that organisations consistently fail to hold at the same time.
 
-The first is psychological safety: people need to feel safe surfacing real problems, admitting uncertainty, and naming failures without fear of punishment. Edmondson's research on this is unambiguous — teams with higher psychological safety learn faster, report errors more reliably, and perform better over time.
+The first is psychological safety: people need to feel safe surfacing real problems, admitting uncertainty, and naming failures without fear of punishment. [Edmondson's research on this is unambiguous](https://journals.sagepub.com/doi/10.2307/2666999) — teams with higher psychological safety learn faster, report errors more reliably, and perform better over time.
 
 The second is accountability: something actually has to change as a result. High psychological safety without accountability produces a comfort zone, not a learning organisation. People feel safe, but nothing improves. Edmondson's learning zone requires both: it is safe to surface the problem, and the organisation is expected to do something about it.
 
@@ -193,7 +193,7 @@ A COO who simply knows how things are done becomes a constraint. An increasingly
 
 A COO who keeps asking whether this is still how things *should* be done — and stays genuinely curious about the answer — becomes an organisational advantage.
 
-Kashdan's research on dispositional curiosity describes it as a stable trait linked to sustained engagement and openness to new information. Curious people stay mentally active, and mental activity compounds over a career. This is not soft language. It is a documented mechanism.
+[Kashdan's research on dispositional curiosity](https://www.tandfonline.com/doi/abs/10.1207/s15327752jpa8203_05) describes it as a stable trait linked to sustained engagement and openness to new information. Curious people stay mentally active, and mental activity compounds over a career. This is not soft language. It is a documented mechanism.
 
 Curiosity is not a personality bonus for a COO. It is a job requirement.
 
