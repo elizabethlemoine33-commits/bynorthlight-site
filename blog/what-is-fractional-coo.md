@@ -2,11 +2,11 @@
 layout: post
 title: "What Is a Fractional COO? (And How to Know If You Need One)"
 description: "A fractional COO owns operations part-time and stays accountable for outcomes — not a consultant who hands you a deck. Learn what they do, when you need one, and what to ask before hiring."
-og_title: "What Is a Fractional COO? Role & When You Need One | Northlight"
+og_title: "What Is a Fractional COO? Role & When You Need One | Northlight Advisory Services"
 og_description: "A fractional COO owns operations part-time and stays accountable for outcomes — not a consultant who hands you a deck. Learn what they do, when you need one, and what to ask before hiring."
-date: 2026-08-08
-date_modified: "2026-08-08"
-published_time: "2026-08-08T00:00:00.000Z"
+date: 2026-08-09
+date_modified: "2026-08-09"
+published_time: "2026-08-09T00:00:00.000Z"
 permalink: /blog/what-is-fractional-coo.html
 source_label: "Blog · Topic Guide"
 source_class: source-essay
@@ -45,8 +45,8 @@ faq:
   "@type": "Article",
   "headline": "What Is a Fractional COO? (And How to Know If You Need One)",
   "description": "A fractional COO owns operations part-time and stays accountable for outcomes — not a consultant who hands you a deck. Learn what they do, when you need one, and what to ask before hiring.",
-  "datePublished": "2026-08-08",
-  "dateModified": "2026-08-08",
+  "datePublished": "2026-08-09",
+  "dateModified": "2026-08-09",
   "author": {
     "@type": "Person",
     "name": "Elizabeth Lemoine",
@@ -62,6 +62,8 @@ faq:
 </script>
 
 <div class="at-a-glance" aria-label="At a glance"><h2>At a glance</h2><ul><li>A fractional COO is a part-time operations executive who owns outcomes and stays accountable — not a consultant who delivers a report and exits</li><li>Typical engagements run 10–20 hours per week; pricing is scope-dependent and varies by business complexity and hours</li><li>You need one if you're the operational bottleneck and your team has outgrown your systems — but it's too early if you're still finding product-market fit</li><li>Fractional COOs work directly with your leadership team, make operational decisions, and build systems that let your business scale without you</li></ul></div>
+
+<p class="author-note"><em>Elizabeth Lemoine is a fractional COO with 10+ years of director-level operations experience working with Canadian businesses. <a href="/about.html">About Elizabeth →</a></em></p>
 
 A fractional COO is a senior operator who joins your executive team part-time and owns outcomes — not a consultant who hands you a deck and leaves. That's the whole answer. The rest of this post is for founders trying to figure out whether they actually need one.
 
@@ -103,7 +105,7 @@ These terms get used interchangeably. They shouldn't.
 
 ## What does a fractional COO cost in Canada?
 
-<div class="answer-block"><p>Fractional COO pricing is scope-dependent. It varies based on hours per week, operational complexity, and the structure of the engagement — and there's no universal rate that maps cleanly across businesses at different stages.</p></div>
+<div class="answer-block"><p>Fractional COO pricing is scope-dependent. It varies based on hours per week, operational complexity, and the structure of the engagement — and there's no universal rate that maps cleanly across businesses at different stages. For most businesses, fractional costs significantly less than a full-time executive hire at the same seniority level.</p></div>
 
 What most founders want to know is whether it's affordable before they're ready to hire full-time. The honest answer: for businesses that need this kind of leadership, fractional almost always costs significantly less than a full-time hire at the same seniority level — without the benefits, equity, and full-time commitment.
 
