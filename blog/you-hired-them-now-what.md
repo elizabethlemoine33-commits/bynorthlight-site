@@ -7,8 +7,8 @@ og_description: "You made the hire. They're qualified. But you're still doing th
 date: 2026-07-10
 published_time: "2026-07-10T00:00:00.000Z"
 permalink: /blog/you-hired-them-now-what.html
-source_label: "Aurora Brief · Essay"
-source_class: source-aurora
+source_label: "Blog · Essay"
+source_class: source-essay
 read_time: 6
 tags:
   - leadership

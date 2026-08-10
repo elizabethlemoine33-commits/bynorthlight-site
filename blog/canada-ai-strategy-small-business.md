@@ -8,8 +8,8 @@ date: 2026-06-13
 date_modified: "2026-07-09"
 published_time: "2026-06-13T00:00:00.000Z"
 permalink: /blog/canada-ai-strategy-small-business.html
-source_label: "Aurora Brief · Essay"
-source_class: source-aurora
+source_label: "Blog · Essay"
+source_class: source-essay
 read_time: 5
 tags:
   - AI Strategy
