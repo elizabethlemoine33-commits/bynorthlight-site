@@ -79,6 +79,8 @@ Current posts:
 - Best AI Tools for Canadian Small Businesses (2026) — https://bynorthlight.ca/blog/best-ai-tools-canadian-small-businesses-2026.html
 - Best Fractional Advisory Services for Canadian Small Business Operators (2026) — https://bynorthlight.ca/blog/best-fractional-advisory-services-canada.html
 - Canada's AI Strategy: What It Means for Canadian Small Business (2026) — https://bynorthlight.ca/blog/canada-ai-strategy-small-business.html
+- EOS Rocks: A Practical Guide for Small Business Operators — https://bynorthlight.ca/blog/eos-rocks-practical-guide.html
+- EOS Rocks vs. OKRs: Which Goal-Setting Framework Is Right for Your Business? — https://bynorthlight.ca/blog/eos-rocks-vs-okrs.html
 - Fractional COO Services in Atlantic Canada — https://bynorthlight.ca/blog/fractional-coo-atlantic-canada.html
 - Fractional COO vs. Hiring a COO: What's Right for a Growing Canadian Business? — https://bynorthlight.ca/blog/fractional-coo-vs-hiring-full-time-canada.html
 - Growth Is No Longer the Hard Part — https://bynorthlight.ca/blog/growth-is-no-longer-the-hard-part.html
@@ -86,6 +88,7 @@ Current posts:
 - How to Choose an AI Implementation Partner: A Canadian Operator's Guide and RFP Template — https://bynorthlight.ca/blog/how-to-choose-ai-implementation-partner.html
 - How We Built Northlight Vault: Privacy-First Thinking in a World of Unnecessary Data — https://bynorthlight.ca/blog/how-we-built-northlight-vault-privacy-first.html
 - I Built Three AI Tools for My Own Work. Now They're on MCP Market. — https://bynorthlight.ca/blog/northlight-mcp-skills-market.html
+- OKRs for Canadian Small Businesses: A Practical Guide to Focusing on What Actually Matters — https://bynorthlight.ca/blog/okrs-for-canadian-small-businesses.html
 - How to Get Ongoing Business Advisory Support as a Canadian Small Operator — https://bynorthlight.ca/blog/ongoing-business-advisory-canada.html
 - Implementing AI Without Breaking Canadian Privacy Law: A PIPEDA Guide for Business Owners — https://bynorthlight.ca/blog/pipeda-privacy-first-ai-canada.html
 - Most Resumes Describe the Job. Almost None Describe the Work — https://bynorthlight.ca/blog/resumes-describe-job-not-work-digital-reference.html
