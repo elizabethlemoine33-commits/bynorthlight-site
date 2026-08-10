@@ -65,6 +65,7 @@ Essays from Elizabeth Lemoine on strategy, AI adoption, operations, and building
 
 Current posts:
 - About Northlight Advisory Services — Who We Are and What We Do — https://bynorthlight.ca/blog/about-northlight-advisory-services.html
+- AEO Audit Checklist — https://bynorthlight.ca/blog/aeo-audit-checklist-printable.html
 - What I Learned Optimizing a Website for AI Search: An AEO Checklist for 2026 — https://bynorthlight.ca/blog/aeo-optimization-lessons-2026.html
 - How to Prepare Your Business for AI Adoption: A Canadian Checklist — https://bynorthlight.ca/blog/ai-adoption-checklist-canadian-businesses-2026.html
 - AI Readiness Checklist — https://bynorthlight.ca/blog/ai-adoption-checklist-printable.html
@@ -83,6 +84,7 @@ Current posts:
 - EOS Rocks vs. OKRs: Which Goal-Setting Framework Is Right for Your Business? — https://bynorthlight.ca/blog/eos-rocks-vs-okrs.html
 - Fractional COO Services in Atlantic Canada — https://bynorthlight.ca/blog/fractional-coo-atlantic-canada.html
 - Fractional COO vs. Hiring a COO: What's Right for a Growing Canadian Business? — https://bynorthlight.ca/blog/fractional-coo-vs-hiring-full-time-canada.html
+- Fractional Executive RFP Template — https://bynorthlight.ca/blog/fractional-rfp-template-printable.html
 - Growth Is No Longer the Hard Part — https://bynorthlight.ca/blog/growth-is-no-longer-the-hard-part.html
 - How to Choose an AI Advisor for Your Canadian Business — https://bynorthlight.ca/blog/how-to-choose-ai-advisor-consultant.html
 - How to Choose an AI Implementation Partner: A Canadian Operator's Guide and RFP Template — https://bynorthlight.ca/blog/how-to-choose-ai-implementation-partner.html
@@ -90,6 +92,7 @@ Current posts:
 - I Built Three AI Tools for My Own Work. Now They're on MCP Market. — https://bynorthlight.ca/blog/northlight-mcp-skills-market.html
 - OKRs for Canadian Small Businesses: A Practical Guide to Focusing on What Actually Matters — https://bynorthlight.ca/blog/okrs-for-canadian-small-businesses.html
 - How to Get Ongoing Business Advisory Support as a Canadian Small Operator — https://bynorthlight.ca/blog/ongoing-business-advisory-canada.html
+- PIPEDA AI Compliance Checklist — https://bynorthlight.ca/blog/pipeda-ai-compliance-checklist-printable.html
 - Implementing AI Without Breaking Canadian Privacy Law: A PIPEDA Guide for Business Owners — https://bynorthlight.ca/blog/pipeda-privacy-first-ai-canada.html
 - Most Resumes Describe the Job. Almost None Describe the Work — https://bynorthlight.ca/blog/resumes-describe-job-not-work-digital-reference.html
 - Shadow AI Governance Checklist — https://bynorthlight.ca/blog/shadow-ai-governance-checklist-printable.html
