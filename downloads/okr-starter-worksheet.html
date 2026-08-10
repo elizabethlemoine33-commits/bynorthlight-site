@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OKR Starter Worksheet — Northlight Advisory Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Outfit:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Outfit', 'Segoe UI', system-ui, sans-serif;
+  color: #1C1F2E;
+  background: #FFFFFF;
+  font-size: 12.5px;
+  line-height: 1.55;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.page {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 36px 44px 52px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.wordmark-lockup {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.wm-main {
+  font-family: 'Jost', 'Segoe UI', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 33%, #8B6FD4 66%, #C46FAA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+}
+
+.wm-sub {
+  font-family: 'Jost', 'Segoe UI', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #8A92A8;
+}
+
+.worksheet-title {
+  font-family: 'Jost', 'Segoe UI', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 21px;
+  letter-spacing: 0.02em;
+  color: #1C1F2E;
+}
+
+.gradient-bar {
+  height: 2.5px;
+  background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);
+  margin-bottom: 18px;
+  border-radius: 2px;
+}
+
+/* Meta row */
+.meta-row {
+  display: flex;
+  gap: 36px;
+  margin-bottom: 22px;
+  align-items: baseline;
+}
+
+.meta-item {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.meta-label {
+  font-family: 'Jost', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 9.5px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #5A607A;
+  white-space: nowrap;
+}
+
+.meta-line {
+  display: inline-block;
+  width: 110px;
+  border-bottom: 1px solid #C0C4D8;
+  min-height: 14px;
+}
+
+/* Reference panel */
+.reference {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+  border: 1px solid #C8CCDF;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 26px;
+  background: #F8F9FC;
+}
+
+.ref-col {
+  padding: 13px 15px;
+  border-right: 1px solid #C8CCDF;
+}
+
+.ref-col:last-child { border-right: none; }
+
+.ref-col h3 {
+  font-family: 'Jost', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #5A607A;
+  margin-bottom: 9px;
+}
+
+.ref-type-row {
+  display: flex;
+  gap: 7px;
+  margin-bottom: 7px;
+  align-items: flex-start;
+}
+
+.rbadge {
+  display: inline-block;
+  font-family: 'Jost', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 7.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 2px;
+  color: white;
+  white-space: nowrap;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+.rb-c { background: #4FC3C8; }
+.rb-a { background: #8B6FD4; }
+.rb-l { background: #C46FAA; }
+
+.ref-type-row p {
+  font-size: 10.5px;
+  color: #1C1F2E;
+  line-height: 1.45;
+}
+
+.ref-tests {
+  list-style: none;
+  padding: 0;
+}
+
+.ref-tests li {
+  font-size: 10.5px;
+  color: #1C1F2E;
+  padding-left: 16px;
+  position: relative;
+  margin-bottom: 5px;
+  line-height: 1.45;
+}
+
+.ref-tests li::before {
+  content: attr(data-n);
+  position: absolute;
+  left: 0;
+  font-family: 'Jost', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 9.5px;
+  color: #8B6FD4;
+  top: 1px;
+}
+
+.grade-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  margin-bottom: 5px;
+  font-size: 10.5px;
+  color: #1C1F2E;
+  line-height: 1.4;
+}
+
+.gdot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.gdot-g { background: #16A34A; }
+.gdot-y { background: #D97706; }
+.gdot-r { background: #DC2626; }
+
+.ref-note {
+  font-size: 9.5px;
+  color: #8B8FAA;
+  margin-top: 8px;
+  line-height: 1.45;
+  border-top: 1px solid #DDE0EE;
+  padding-top: 6px;
+}
+
+/* Section markers */
+.section-marker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.section-marker h2 {
+  font-family: 'Jost', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 9.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #8B8FAA;
+  white-space: nowrap;
+}
+
+.sm-line {
+  flex: 1;
+  height: 1px;
+  background: #DDE0EE;
+}
+
+.section-note {
+  font-size: 11px;
+  color: #8B8FAA;
+  margin-bottom: 14px;
+  font-style: italic;
+}
+
+/* OKR blocks */
+.okr-block {
+  border: 1px solid #C8CCDF;
+  border-radius: 6px;
+  padding: 15px 17px;
+  margin-bottom: 11px;
+}
+
+.sample-block {
+  background: #EEF0FA;
+  border-color: #B8BEDD;
+}
+
+.okr-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 11px;
+}
+
+.type-badge {
+  display: inline-block;
+  font-family: 'Jost', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 8.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 3px;
+  color: white;
+}
+
+.tb-committed   { background: #4FC3C8; }
+.tb-aspirational { background: #8B6FD4; }
+.tb-learning    { background: #C46FAA; }
+
+.type-selector {
+  display: flex;
+  gap: 18px;
+}
+
+.type-opt {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11.5px;
+  color: #1C1F2E;
+}
+
+.t-box {
+  width: 11px;
+  height: 11px;
+  border: 1.5px solid #9094AA;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.owner-row {
+  font-size: 11px;
+  color: #5A607A;
+}
+
+.owner-row strong { color: #1C1F2E; font-weight: 500; }
+
+.owner-blank {
+  display: inline-block;
+  width: 130px;
+  border-bottom: 1.5px dashed #B0B5CC;
+  min-height: 13px;
+  vertical-align: bottom;
+}
+
+/* Objective */
+.obj-label {
+  font-family: 'Jost', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #5A607A;
+  margin-bottom: 4px;
+}
+
+.obj-value {
+  font-size: 13px;
+  font-weight: 500;
+  color: #1C1F2E;
+  line-height: 1.4;
+  padding: 4px 0 8px;
+  border-bottom: 1px solid #C8CCDF;
+  margin-bottom: 12px;
+}
+
+.obj-blank {
+  padding: 3px 0 22px;
+  border-bottom: 1.5px dashed #B0B5CC;
+  margin-bottom: 12px;
+}
+
+/* KR table */
+.kr-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  table-layout: fixed;
+}
+
+.kr-table thead th {
+  font-family: 'Jost', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 8.5px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #8B8FAA;
+  padding: 0 6px 6px;
+  text-align: left;
+  border-bottom: 1px solid #C8CCDF;
+}
+
+.col-n { width: 22px; }
+.col-kr { width: auto; }
+.col-grade { width: 58px; }
+
+.kr-table tbody td {
+  padding: 7px 6px;
+  border-bottom: 1px solid #C8CCDF;
+  vertical-align: middle;
+}
+
+.kr-table tbody tr:last-child td { border-bottom: none; }
+
+.td-n {
+  font-family: 'Jost', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  color: #9094AA;
+}
+
+.td-kr { font-size: 12px; line-height: 1.4; }
+
+.td-grade { text-align: center; font-variant-numeric: tabular-nums; }
+
+.grade-blank {
+  display: inline-block;
+  width: 40px;
+  border-bottom: 1.5px dashed #B0B5CC;
+  min-height: 15px;
+}
+
+.kr-blank-line {
+  display: block;
+  border-bottom: 1.5px dashed #B0B5CC;
+  min-height: 18px;
+}
+
+/* Expectation row */
+.exp-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding-top: 9px;
+  border-top: 1px solid #C8CCDF;
+}
+
+.exp-label {
+  font-family: 'Jost', system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 8.5px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #8B8FAA;
+  white-space: nowrap;
+  padding-top: 2px;
+  flex-shrink: 0;
+}
+
+.exp-value {
+  font-size: 11px;
+  color: #5A607A;
+  font-style: italic;
+  line-height: 1.45;
+}
+
+.exp-blank {
+  flex: 1;
+  border-bottom: 1.5px dashed #B0B5CC;
+  min-height: 16px;
+}
+
+/* Divider */
+.section-divider {
+  border: none;
+  border-top: 2px solid #E2E5EF;
+  margin: 22px 0 18px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 36px;
+  padding-top: 13px;
+  border-top: 1px solid #C8CCDF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  color: #9094AA;
+}
+
+.footer a { color: #8B6FD4; text-decoration: none; }
+
+/* Print */
+@media print {
+  body { font-size: 11px; }
+  .page { padding: 12px 20px; max-width: 100%; }
+  .okr-block { break-inside: avoid; }
+  .reference { break-inside: avoid; }
+  .gradient-bar { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div class="wordmark-lockup">
+      <span class="wm-main">Northlight</span>
+      <span class="wm-sub">Advisory Services</span>
+    </div>
+    <span class="worksheet-title">OKR Starter Worksheet</span>
+  </div>
+  <div class="gradient-bar"></div>
+
+  <div class="meta-row">
+    <div class="meta-item"><span class="meta-label">Quarter</span><span class="meta-line"></span></div>
+    <div class="meta-item"><span class="meta-label">Team / Owner</span><span class="meta-line"></span></div>
+    <div class="meta-item"><span class="meta-label">Date</span><span class="meta-line" style="width:90px"></span></div>
+  </div>
+
+  <!-- Reference panel -->
+  <div class="reference">
+    <div class="ref-col">
+      <h3>OKR Types</h3>
+      <div class="ref-type-row">
+        <span class="rbadge rb-c">Committed</span>
+        <p>Must reach 100%. Non-negotiable — essential to operations.</p>
+      </div>
+      <div class="ref-type-row">
+        <span class="rbadge rb-a">Aspirational</span>
+        <p>70% = success. Designed to stretch you further than you'd otherwise go.</p>
+      </div>
+      <div class="ref-type-row">
+        <span class="rbadge rb-l">Learning</span>
+        <p>Outcome is a decision, not a score. Success means you got a clear answer.</p>
+      </div>
+    </div>
+    <div class="ref-col">
+      <h3>Key Result Tests</h3>
+      <p style="font-size:10px;color:#5A607A;margin-bottom:7px;font-style:italic">A strong Key Result passes all three:</p>
+      <ul class="ref-tests">
+        <li data-n="1"><strong>Specific &amp; time-bound</strong> — no ambiguity about what or when</li>
+        <li data-n="2"><strong>Aggressive yet realistic</strong> — not too easy, not impossible</li>
+        <li data-n="3"><strong>Measurable &amp; verifiable</strong> — anyone on the team can score it at end of cycle</li>
+      </ul>
+    </div>
+    <div class="ref-col">
+      <h3>Grading</h3>
+      <div class="grade-row"><span class="gdot gdot-g"></span><span><strong>Green</strong> — 70–100% aspirational · 100% committed</span></div>
+      <div class="grade-row"><span class="gdot gdot-y"></span><span><strong>Yellow</strong> — 40–69% · progress, but short of target</span></div>
+      <div class="grade-row"><span class="gdot gdot-r"></span><span><strong>Red</strong> — 0–39% · significant gap, review what happened</span></div>
+      <p class="ref-note">Committed OKRs: 100% or it's a conversation — colour is secondary.</p>
+    </div>
+  </div>
+
+  <!-- Sample section -->
+  <div class="section-marker">
+    <h2>Sample — How It Works</h2>
+    <div class="sm-line"></div>
+  </div>
+  <p class="section-note">Real Northlight examples. Use them to understand structure before completing your own below.</p>
+
+  <div class="okr-block sample-block">
+    <div class="okr-head">
+      <span class="type-badge tb-committed">Committed</span>
+      <span class="owner-row">Owner: <strong>Elizabeth Lemoine</strong></span>
+    </div>
+    <p class="obj-label">Objective</p>
+    <p class="obj-value">Deliver reliably on every active client engagement this quarter.</p>
+    <table class="kr-table">
+      <thead>
+        <tr>
+          <th class="col-n">#</th>
+          <th class="col-kr">Key Result</th>
+          <th class="col-grade" style="text-align:center">Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-n">1</td>
+          <td class="td-kr">Complete all agreed deliverables for current client engagements by contracted deadlines — 100%.</td>
+          <td class="td-grade"><span class="grade-blank"></span></td>
+        </tr>
+        <tr>
+          <td class="td-n">2</td>
+          <td class="td-kr">Conduct a structured mid-quarter check-in with each active client.</td>
+          <td class="td-grade"><span class="grade-blank"></span></td>
+        </tr>
+        <tr>
+          <td class="td-n">3</td>
+          <td class="td-kr">Invoice within five business days of each deliverable milestone.</td>
+          <td class="td-grade"><span class="grade-blank"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="exp-row">
+      <span class="exp-label">Expectation</span>
+      <span class="exp-value">Must reach 100%. Anything less is a conversation about what went wrong.</span>
+    </div>
+  </div>
+
+  <div class="okr-block sample-block">
+    <div class="okr-head">
+      <span class="type-badge tb-aspirational">Aspirational</span>
+      <span class="owner-row">Owner: <strong>Elizabeth Lemoine</strong></span>
+    </div>
+    <p class="obj-label">Objective</p>
+    <p class="obj-value">Make bynorthlight.ca a go-to resource for Canadian founders navigating strategy and operations.</p>
+    <table class="kr-table">
+      <thead>
+        <tr>
+          <th class="col-n">#</th>
+          <th class="col-kr">Key Result</th>
+          <th class="col-grade" style="text-align:center">Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-n">1</td>
+          <td class="td-kr">Publish six long-form posts that each earn at least one backlink from an external source.</td>
+          <td class="td-grade"><span class="grade-blank"></span></td>
+        </tr>
+        <tr>
+          <td class="td-n">2</td>
+          <td class="td-kr">Grow organic search traffic by 40% quarter-over-quarter.</td>
+          <td class="td-grade"><span class="grade-blank"></span></td>
+        </tr>
+        <tr>
+          <td class="td-n">3</td>
+          <td class="td-kr">Receive 10 direct referrals to bynorthlight.ca from other Canadian business resources.</td>
+          <td class="td-grade"><span class="grade-blank"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="exp-row">
+      <span class="exp-label">Expectation</span>
+      <span class="exp-value">70% or above is a success. If we hit 100%, we set the bar too low.</span>
+    </div>
+  </div>
+
+  <div class="okr-block sample-block">
+    <div class="okr-head">
+      <span class="type-badge tb-learning">Learning</span>
+      <span class="owner-row">Owner: <strong>Elizabeth Lemoine</strong></span>
+    </div>
+    <p class="obj-label">Objective</p>
+    <p class="obj-value">Determine whether a packaged AI governance workshop is worth developing for small business clients.</p>
+    <table class="kr-table">
+      <thead>
+        <tr>
+          <th class="col-n">#</th>
+          <th class="col-kr">Key Result</th>
+          <th class="col-grade" style="text-align:center">Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-n">1</td>
+          <td class="td-kr">Pilot the concept with two clients by end of Q3, with structured feedback collected from each.</td>
+          <td class="td-grade"><span class="grade-blank"></span></td>
+        </tr>
+        <tr>
+          <td class="td-n">2</td>
+          <td class="td-kr">Document findings on pricing, format, duration, and buyer motivation.</td>
+          <td class="td-grade"><span class="grade-blank"></span></td>
+        </tr>
+        <tr>
+          <td class="td-n">3</td>
+          <td class="td-kr">Make a go / no-go decision on formal development by the end of the quarter.</td>
+          <td class="td-grade"><span class="grade-blank"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="exp-row">
+      <span class="exp-label">Expectation</span>
+      <span class="exp-value">Success means we have a clear answer — yes, no, or not yet and why. The outcome is the decision itself.</span>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- Your OKRs -->
+  <div class="section-marker">
+    <h2>Your OKRs</h2>
+    <div class="sm-line"></div>
+  </div>
+  <p class="section-note" style="margin-bottom:16px">No more than 3 Objectives. Designate type before the cycle begins — not halfway through.</p>
+
+  <!-- Blank 1 -->
+  <div class="okr-block">
+    <div class="okr-head">
+      <div class="type-selector">
+        <div class="type-opt"><span class="t-box"></span>&nbsp;Committed</div>
+        <div class="type-opt"><span class="t-box"></span>&nbsp;Aspirational</div>
+        <div class="type-opt"><span class="t-box"></span>&nbsp;Learning</div>
+      </div>
+      <span class="owner-row">Owner:&nbsp;<span class="owner-blank"></span></span>
+    </div>
+    <p class="obj-label">Objective</p>
+    <div class="obj-blank"></div>
+    <table class="kr-table">
+      <thead>
+        <tr>
+          <th class="col-n">#</th>
+          <th class="col-kr">Key Result</th>
+          <th class="col-grade" style="text-align:center">Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-n">1</td>
+          <td class="td-kr"><span class="kr-blank-line"></span></td>
+          <td class="td-grade"><span class="grade-blank"></span></td>
+        </tr>
+        <tr>
+          <td class="td-n">2</td>
+          <td class="td-kr"><span class="kr-blank-line"></span></td>
+          <td class="td-grade"><span class="grade-blank"></span></td>
+        </tr>
+        <tr>
+          <td class="td-n">3</td>
+          <td class="td-kr"><span class="kr-blank-line"></span></td>
+          <td class="td-grade"><span class="grade-blank"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="exp-row">
+      <span class="exp-label">Expectation</span>
+      <div class="exp-blank"></div>
+    </div>
+  </div>
+
+  <!-- Blank 2 -->
+  <div class="okr-block">
+    <div class="okr-head">
+      <div class="type-selector">
+        <div class="type-opt"><span class="t-box"></span>&nbsp;Committed</div>
+        <div class="type-opt"><span class="t-box"></span>&nbsp;Aspirational</div>
+        <div class="type-opt"><span class="t-box"></span>&nbsp;Learning</div>
+      </div>
+      <span class="owner-row">Owner:&nbsp;<span class="owner-blank"></span></span>
+    </div>
+    <p class="obj-label">Objective</p>
+    <div class="obj-blank"></div>
+    <table class="kr-table">
+      <thead>
+        <tr>
+          <th class="col-n">#</th>
+          <th class="col-kr">Key Result</th>
+          <th class="col-grade" style="text-align:center">Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-n">1</td>
+          <td class="td-kr"><span class="kr-blank-line"></span></td>
+          <td class="td-grade"><span class="grade-blank"></span></td>
+        </tr>
+        <tr>
+          <td class="td-n">2</td>
+          <td class="td-kr"><span class="kr-blank-line"></span></td>
+          <td class="td-grade"><span class="grade-blank"></span></td>
+        </tr>
+        <tr>
+          <td class="td-n">3</td>
+          <td class="td-kr"><span class="kr-blank-line"></span></td>
+          <td class="td-grade"><span class="grade-blank"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="exp-row">
+      <span class="exp-label">Expectation</span>
+      <div class="exp-blank"></div>
+    </div>
+  </div>
+
+  <!-- Blank 3 -->
+  <div class="okr-block">
+    <div class="okr-head">
+      <div class="type-selector">
+        <div class="type-opt"><span class="t-box"></span>&nbsp;Committed</div>
+        <div class="type-opt"><span class="t-box"></span>&nbsp;Aspirational</div>
+        <div class="type-opt"><span class="t-box"></span>&nbsp;Learning</div>
+      </div>
+      <span class="owner-row">Owner:&nbsp;<span class="owner-blank"></span></span>
+    </div>
+    <p class="obj-label">Objective</p>
+    <div class="obj-blank"></div>
+    <table class="kr-table">
+      <thead>
+        <tr>
+          <th class="col-n">#</th>
+          <th class="col-kr">Key Result</th>
+          <th class="col-grade" style="text-align:center">Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-n">1</td>
+          <td class="td-kr"><span class="kr-blank-line"></span></td>
+          <td class="td-grade"><span class="grade-blank"></span></td>
+        </tr>
+        <tr>
+          <td class="td-n">2</td>
+          <td class="td-kr"><span class="kr-blank-line"></span></td>
+          <td class="td-grade"><span class="grade-blank"></span></td>
+        </tr>
+        <tr>
+          <td class="td-n">3</td>
+          <td class="td-kr"><span class="kr-blank-line"></span></td>
+          <td class="td-grade"><span class="grade-blank"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="exp-row">
+      <span class="exp-label">Expectation</span>
+      <div class="exp-blank"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>From <a href="https://bynorthlight.ca/blog/okrs-for-canadian-small-businesses.html">OKRs for Canadian Small Businesses</a> — bynorthlight.ca</span>
+    <span>Free to use · No attribution required · Share freely</span>
+  </div>
+
+</div>
+</body>
+</html>

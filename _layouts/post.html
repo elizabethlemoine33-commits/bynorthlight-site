@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} — Northlight</title>
+  <title>{{ page.seo_title | default: page.title }} — Northlight Advisory Services</title>
   <meta name="description" content="{{ page.description }}">
   <meta name="author" content="Elizabeth Lemoine">
   <link rel="canonical" href="{{ page.url | prepend: site.url }}">
@@ -16,6 +16,8 @@
   <meta property="og:site_name" content="Northlight Advisory Services">
   <meta property="article:author" content="Elizabeth Lemoine">
   <meta property="og:image" content="{{ site.url }}/northlight-og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   {% if page.published_time %}<meta property="article:published_time" content="{{ page.published_time }}">{% endif %}
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ page.og_title | default: page.title }}">
@@ -33,6 +35,7 @@
     "dateModified": "{{ page.date_modified | default: page.date | date: '%Y-%m-%d' }}",
     "author": { "@type": "Person", "name": "Elizabeth Lemoine", "url": "https://bynorthlight.ca/about.html" },
     "publisher": { "@type": "Organization", "name": "Northlight Advisory Services", "url": "https://bynorthlight.ca" },
+    "image": "https://bynorthlight.ca/northlight-og-image.png",
     "url": {{ page.url | prepend: site.url | jsonify }}
   }
   </script>

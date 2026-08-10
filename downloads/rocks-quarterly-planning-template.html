@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rocks Quarterly Planning Template — Northlight Advisory Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Outfit:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --aurora-bar: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);
+    --aurora-text: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 33%, #8B6FD4 66%, #C46FAA 100%);
+    --teal:   #4FC3C8;
+    --blue:   #5B8DD9;
+    --violet: #8B6FD4;
+    --rose:   #C46FAA;
+    --ink:    #1A1A2E;
+    --body:   #2C2C44;
+    --muted:  #6B7280;
+    --rule:   #D1D5DB;
+    --sample-bg: #EEF0FA;
+    --sample-border: #C7CCEE;
+  }
+
+  body {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    color: var(--ink);
+    background: #fff;
+    line-height: 1.5;
+    padding: 28px 32px 36px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  /* === GRADIENT BAR === */
+  .gradient-bar {
+    height: 2.5px;
+    background: var(--aurora-bar);
+    margin-bottom: 20px;
+    border-radius: 2px;
+  }
+
+  /* === HEADER === */
+  .header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    gap: 16px;
+  }
+  .wordmark {
+    line-height: 1;
+  }
+  .wordmark-top {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.04em;
+    background: var(--aurora-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: block;
+  }
+  .wordmark-sub {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 8.5px;
+    letter-spacing: 0.22em;
+    color: #8A92A8;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 3px;
+  }
+  .doc-title {
+    text-align: right;
+  }
+  .doc-title h1 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+  }
+  .doc-title p {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  /* === META ROW === */
+  .meta-row {
+    display: flex;
+    gap: 20px;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 9px 0;
+    margin-bottom: 16px;
+  }
+  .meta-field {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    flex: 1;
+  }
+  .meta-label {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 9.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .meta-line {
+    flex: 1;
+    border: none;
+    border-bottom: 1px dashed var(--rule);
+    height: 18px;
+  }
+
+  /* === REFERENCE PANEL === */
+  .ref-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+  .ref-card {
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 10px 11px;
+  }
+  .ref-card-title {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    margin-bottom: 6px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .ref-card ol, .ref-card ul {
+    padding-left: 14px;
+    font-size: 10.5px;
+    color: var(--body);
+    line-height: 1.55;
+  }
+  .ref-card li { margin-bottom: 2px; }
+  .ref-card p {
+    font-size: 10.5px;
+    color: var(--body);
+    line-height: 1.55;
+    margin-bottom: 4px;
+  }
+  .ref-card p:last-child { margin-bottom: 0; }
+  .ref-highlight {
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  /* === SECTION HEADERS === */
+  .section-label {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    color: var(--muted);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+  .sample-tag {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    background: var(--aurora-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border: 1px solid #C7CCEE;
+    border-radius: 3px;
+    padding: 1px 6px;
+    margin-left: 6px;
+  }
+
+  /* === ROCK BLOCK (SAMPLE) === */
+  .sample-section {
+    background: var(--sample-bg);
+    border: 1px solid var(--sample-border);
+    border-radius: 8px;
+    padding: 14px 16px 16px;
+    margin-bottom: 16px;
+  }
+  .sample-section .section-label {
+    margin-bottom: 12px;
+  }
+  .sample-section .section-label::after {
+    background: var(--sample-border);
+  }
+
+  .rock-block {
+    background: #fff;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  .rock-block:last-child { margin-bottom: 0; }
+
+  .rock-block.sample-rock {
+    border-color: var(--sample-border);
+  }
+
+  .rock-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 12px;
+    border-bottom: 1px solid var(--rule);
+    background: #F9FAFB;
+    gap: 12px;
+  }
+  .rock-block.sample-rock .rock-header {
+    background: #E8ECF8;
+    border-bottom-color: var(--sample-border);
+  }
+
+  .rock-number {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--muted);
+  }
+  .rock-owner-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10.5px;
+    color: var(--muted);
+  }
+  .rock-owner-label {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+  .rock-owner-value {
+    font-weight: 500;
+    color: var(--ink);
+    font-size: 10.5px;
+  }
+  .owner-blank {
+    display: inline-block;
+    width: 110px;
+    border-bottom: 1px dashed #9CA3AF;
+    height: 14px;
+    vertical-align: bottom;
+  }
+
+  .rock-body {
+    padding: 10px 12px 11px;
+  }
+
+  .rock-statement {
+    font-size: 11.5px;
+    color: var(--body);
+    line-height: 1.55;
+    margin-bottom: 9px;
+    font-weight: 400;
+  }
+  .rock-statement.filled {
+    font-style: normal;
+  }
+
+  .blank-lines {
+    margin-bottom: 8px;
+  }
+  .blank-line {
+    display: block;
+    width: 100%;
+    border-bottom: 1px dashed #D1D5DB;
+    height: 20px;
+    margin-bottom: 4px;
+  }
+  .blank-line:last-child { margin-bottom: 0; }
+
+  .done-when-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+    padding-top: 8px;
+    border-top: 1px dotted #E5E7EB;
+  }
+  .done-label {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--teal);
+    white-space: nowrap;
+    padding-top: 2px;
+    min-width: 68px;
+  }
+  .done-text {
+    font-size: 11px;
+    color: var(--body);
+    line-height: 1.5;
+  }
+  .done-blank {
+    flex: 1;
+  }
+  .done-blank .blank-line {
+    height: 18px;
+    margin-bottom: 3px;
+  }
+
+  .rock-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+    padding: 6px 12px;
+    border-top: 1px solid #F3F4F6;
+    background: #F9FAFB;
+  }
+  .rock-block.sample-rock .rock-footer {
+    background: #E8ECF8;
+    border-top-color: var(--sample-border);
+  }
+  .status-label {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 8.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--muted);
+  }
+  .status-options {
+    display: flex;
+    gap: 12px;
+  }
+  .status-option {
+    font-size: 10.5px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .status-check {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    border: 1px solid #9CA3AF;
+    border-radius: 2px;
+    flex-shrink: 0;
+    font-size: 9px;
+    text-align: center;
+    line-height: 11px;
+  }
+  .status-check.checked {
+    border-color: var(--teal);
+    background: var(--teal);
+    color: #fff;
+  }
+
+  /* === BLANK ROCKS SECTION === */
+  .blank-section {
+    margin-bottom: 16px;
+  }
+
+  /* === PARKING LOT === */
+  .parking-lot {
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 16px;
+  }
+  .parking-lot-header {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .parking-lot-title {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+  }
+  .parking-lot-desc {
+    font-size: 10.5px;
+    color: var(--muted);
+  }
+  .parking-lot-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  .parking-lot-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .parking-lot-num {
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    font-size: 10px;
+    color: #CBD5E1;
+    width: 14px;
+    flex-shrink: 0;
+    text-align: right;
+  }
+  .parking-lot-line {
+    flex: 1;
+    border-bottom: 1px dashed var(--rule);
+    height: 18px;
+  }
+  .parking-lot-quarter {
+    font-size: 10px;
+    color: #CBD5E1;
+    font-family: 'Jost', sans-serif;
+    white-space: nowrap;
+  }
+  .quarter-blank {
+    display: inline-block;
+    width: 40px;
+    border-bottom: 1px dashed #D1D5DB;
+    height: 14px;
+    vertical-align: bottom;
+  }
+
+  /* === FOOTER === */
+  .page-footer {
+    border-top: 1px solid var(--rule);
+    padding-top: 10px;
+    font-size: 9.5px;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .page-footer a { color: var(--muted); }
+
+  /* === PRINT === */
+  @media print {
+    body { padding: 18px 24px 24px; }
+    .rock-block { break-inside: avoid; }
+    .sample-section { break-inside: avoid; }
+    .parking-lot { break-inside: avoid; }
+    .ref-panel { break-inside: avoid; }
+    @page { margin: 0.5in; }
+    * { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<div class="gradient-bar"></div>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="wordmark">
+    <span class="wordmark-top">Northlight</span>
+    <span class="wordmark-sub">Advisory Services</span>
+  </div>
+  <div class="doc-title">
+    <h1>Rocks Quarterly Planning Template</h1>
+    <p>Based on EOS® / <em>Traction</em> by Gino Wickman</p>
+  </div>
+</div>
+
+<!-- META ROW -->
+<div class="meta-row">
+  <div class="meta-field">
+    <span class="meta-label">Quarter</span>
+    <div class="meta-line"></div>
+  </div>
+  <div class="meta-field">
+    <span class="meta-label">Team / Owner</span>
+    <div class="meta-line"></div>
+  </div>
+  <div class="meta-field">
+    <span class="meta-label">Date</span>
+    <div class="meta-line"></div>
+  </div>
+</div>
+
+<!-- REFERENCE PANEL -->
+<div class="ref-panel">
+  <div class="ref-card">
+    <div class="ref-card-title">What Makes a Good Rock</div>
+    <ol>
+      <li><span class="ref-highlight">Specific</span> — clear enough to have a done state</li>
+      <li><span class="ref-highlight">Completable</span> in 90 days</li>
+      <li><span class="ref-highlight">Binary</span> — done or not done</li>
+      <li><span class="ref-highlight">One owner</span> — not "the team"</li>
+      <li><span class="ref-highlight">Important enough to protect</span> all quarter</li>
+    </ol>
+  </div>
+  <div class="ref-card">
+    <div class="ref-card-title">Done When</div>
+    <p>Write the done definition <em>before</em> the quarter begins — not at the end.</p>
+    <p>At quarter close: <span class="ref-highlight">Done</span> = completion criteria met. <span class="ref-highlight">Not Done</span> = they weren't. No debate, no partial credit.</p>
+    <p>L10 weekly: <span class="ref-highlight">On Track</span> or <span class="ref-highlight">Off Track</span>. If off track, it goes on the Issues list.</p>
+  </div>
+  <div class="ref-card">
+    <div class="ref-card-title">The 80% Target</div>
+    <p><span class="ref-highlight">≥ 80% completed</span> — healthy. You're setting Rocks well and protecting them.</p>
+    <p><span class="ref-highlight">100% every quarter</span> — Rocks aren't ambitious enough, or the team is underreporting off-track status.</p>
+    <p><span class="ref-highlight">Consistently &lt; 80%</span> — investigate. Too many Rocks, too vague, or business-as-usual is winning.</p>
+  </div>
+</div>
+
+<!-- SAMPLE SECTION -->
+<div class="sample-section">
+  <div class="section-label">
+    Sample Rocks<span class="sample-tag">Northlight Example</span>
+  </div>
+
+  <!-- Sample Rock 1 -->
+  <div class="rock-block sample-rock">
+    <div class="rock-header">
+      <span class="rock-number">Rock 1</span>
+      <div class="rock-owner-row">
+        <span class="rock-owner-label">Owner</span>
+        <span class="rock-owner-value">Elizabeth</span>
+      </div>
+    </div>
+    <div class="rock-body">
+      <p class="rock-statement filled">Complete all active client deliverables on schedule and within agreed scope for Q3, with a structured mid-quarter check-in documented for each engagement.</p>
+      <div class="done-when-row">
+        <span class="done-label">Done when</span>
+        <p class="done-text">All Q3 deliverables signed off by contracted deadlines; written mid-quarter check-in summary exists for each active client.</p>
+      </div>
+    </div>
+    <div class="rock-footer">
+      <span class="status-label">Quarter-end status</span>
+      <div class="status-options">
+        <span class="status-option"><span class="status-check checked">✓</span> Done</span>
+        <span class="status-option"><span class="status-check"></span> Not Done</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sample Rock 2 -->
+  <div class="rock-block sample-rock">
+    <div class="rock-header">
+      <span class="rock-number">Rock 2</span>
+      <div class="rock-owner-row">
+        <span class="rock-owner-label">Owner</span>
+        <span class="rock-owner-value">Elizabeth</span>
+      </div>
+    </div>
+    <div class="rock-body">
+      <p class="rock-statement filled">Publish six long-form posts on bynorthlight.ca and submit the site to five Canadian business resource directories.</p>
+      <div class="done-when-row">
+        <span class="done-label">Done when</span>
+        <p class="done-text">Six posts live on bynorthlight.ca; five directory submission confirmations on file.</p>
+      </div>
+    </div>
+    <div class="rock-footer">
+      <span class="status-label">Quarter-end status</span>
+      <div class="status-options">
+        <span class="status-option"><span class="status-check"></span> Done</span>
+        <span class="status-option"><span class="status-check checked">✓</span> Not Done</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sample Rock 3 -->
+  <div class="rock-block sample-rock">
+    <div class="rock-header">
+      <span class="rock-number">Rock 3</span>
+      <div class="rock-owner-row">
+        <span class="rock-owner-label">Owner</span>
+        <span class="rock-owner-value">Elizabeth</span>
+      </div>
+    </div>
+    <div class="rock-body">
+      <p class="rock-statement filled">Run the AI governance workshop pilot with two clients, collect structured feedback from each, and write a one-page go/no-go recommendation on formal development.</p>
+      <div class="done-when-row">
+        <span class="done-label">Done when</span>
+        <p class="done-text">Both pilots complete; structured feedback documented from each; written go/no-go recommendation on file.</p>
+      </div>
+    </div>
+    <div class="rock-footer">
+      <span class="status-label">Quarter-end status</span>
+      <div class="status-options">
+        <span class="status-option"><span class="status-check"></span> Done</span>
+        <span class="status-option"><span class="status-check"></span> Not Done</span>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end sample section -->
+
+<!-- YOUR ROCKS -->
+<div class="blank-section">
+  <div class="section-label">Your Rocks — 3 to 7 per quarter</div>
+
+  <!-- Blank Rock 1 -->
+  <div class="rock-block">
+    <div class="rock-header">
+      <span class="rock-number">Rock 1</span>
+      <div class="rock-owner-row">
+        <span class="rock-owner-label">Owner</span>
+        <span class="owner-blank"></span>
+      </div>
+    </div>
+    <div class="rock-body">
+      <div class="blank-lines">
+        <span class="blank-line"></span>
+        <span class="blank-line"></span>
+      </div>
+      <div class="done-when-row">
+        <span class="done-label">Done when</span>
+        <div class="done-blank">
+          <span class="blank-line"></span>
+          <span class="blank-line"></span>
+        </div>
+      </div>
+    </div>
+    <div class="rock-footer">
+      <span class="status-label">Quarter-end status</span>
+      <div class="status-options">
+        <span class="status-option"><span class="status-check"></span> Done</span>
+        <span class="status-option"><span class="status-check"></span> Not Done</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blank Rock 2 -->
+  <div class="rock-block">
+    <div class="rock-header">
+      <span class="rock-number">Rock 2</span>
+      <div class="rock-owner-row">
+        <span class="rock-owner-label">Owner</span>
+        <span class="owner-blank"></span>
+      </div>
+    </div>
+    <div class="rock-body">
+      <div class="blank-lines">
+        <span class="blank-line"></span>
+        <span class="blank-line"></span>
+      </div>
+      <div class="done-when-row">
+        <span class="done-label">Done when</span>
+        <div class="done-blank">
+          <span class="blank-line"></span>
+          <span class="blank-line"></span>
+        </div>
+      </div>
+    </div>
+    <div class="rock-footer">
+      <span class="status-label">Quarter-end status</span>
+      <div class="status-options">
+        <span class="status-option"><span class="status-check"></span> Done</span>
+        <span class="status-option"><span class="status-check"></span> Not Done</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blank Rock 3 -->
+  <div class="rock-block">
+    <div class="rock-header">
+      <span class="rock-number">Rock 3</span>
+      <div class="rock-owner-row">
+        <span class="rock-owner-label">Owner</span>
+        <span class="owner-blank"></span>
+      </div>
+    </div>
+    <div class="rock-body">
+      <div class="blank-lines">
+        <span class="blank-line"></span>
+        <span class="blank-line"></span>
+      </div>
+      <div class="done-when-row">
+        <span class="done-label">Done when</span>
+        <div class="done-blank">
+          <span class="blank-line"></span>
+          <span class="blank-line"></span>
+        </div>
+      </div>
+    </div>
+    <div class="rock-footer">
+      <span class="status-label">Quarter-end status</span>
+      <div class="status-options">
+        <span class="status-option"><span class="status-check"></span> Done</span>
+        <span class="status-option"><span class="status-check"></span> Not Done</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blank Rock 4 -->
+  <div class="rock-block">
+    <div class="rock-header">
+      <span class="rock-number">Rock 4</span>
+      <div class="rock-owner-row">
+        <span class="rock-owner-label">Owner</span>
+        <span class="owner-blank"></span>
+      </div>
+    </div>
+    <div class="rock-body">
+      <div class="blank-lines">
+        <span class="blank-line"></span>
+        <span class="blank-line"></span>
+      </div>
+      <div class="done-when-row">
+        <span class="done-label">Done when</span>
+        <div class="done-blank">
+          <span class="blank-line"></span>
+          <span class="blank-line"></span>
+        </div>
+      </div>
+    </div>
+    <div class="rock-footer">
+      <span class="status-label">Quarter-end status</span>
+      <div class="status-options">
+        <span class="status-option"><span class="status-check"></span> Done</span>
+        <span class="status-option"><span class="status-check"></span> Not Done</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blank Rock 5 -->
+  <div class="rock-block">
+    <div class="rock-header">
+      <span class="rock-number">Rock 5</span>
+      <div class="rock-owner-row">
+        <span class="rock-owner-label">Owner</span>
+        <span class="owner-blank"></span>
+      </div>
+    </div>
+    <div class="rock-body">
+      <div class="blank-lines">
+        <span class="blank-line"></span>
+        <span class="blank-line"></span>
+      </div>
+      <div class="done-when-row">
+        <span class="done-label">Done when</span>
+        <div class="done-blank">
+          <span class="blank-line"></span>
+          <span class="blank-line"></span>
+        </div>
+      </div>
+    </div>
+    <div class="rock-footer">
+      <span class="status-label">Quarter-end status</span>
+      <div class="status-options">
+        <span class="status-option"><span class="status-check"></span> Done</span>
+        <span class="status-option"><span class="status-check"></span> Not Done</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- PARKING LOT -->
+<div class="parking-lot">
+  <div class="parking-lot-header">
+    <span class="parking-lot-title">Parking Lot</span>
+    <span class="parking-lot-desc">Good ideas that aren't Rocks this quarter — keep them here, revisit next planning session</span>
+  </div>
+  <div class="parking-lot-rows">
+    <div class="parking-lot-row">
+      <span class="parking-lot-num">1</span>
+      <div class="parking-lot-line"></div>
+      <span class="parking-lot-quarter">→ Q<span class="quarter-blank"></span></span>
+    </div>
+    <div class="parking-lot-row">
+      <span class="parking-lot-num">2</span>
+      <div class="parking-lot-line"></div>
+      <span class="parking-lot-quarter">→ Q<span class="quarter-blank"></span></span>
+    </div>
+    <div class="parking-lot-row">
+      <span class="parking-lot-num">3</span>
+      <div class="parking-lot-line"></div>
+      <span class="parking-lot-quarter">→ Q<span class="quarter-blank"></span></span>
+    </div>
+    <div class="parking-lot-row">
+      <span class="parking-lot-num">4</span>
+      <div class="parking-lot-line"></div>
+      <span class="parking-lot-quarter">→ Q<span class="quarter-blank"></span></span>
+    </div>
+    <div class="parking-lot-row">
+      <span class="parking-lot-num">5</span>
+      <div class="parking-lot-line"></div>
+      <span class="parking-lot-quarter">→ Q<span class="quarter-blank"></span></span>
+    </div>
+    <div class="parking-lot-row">
+      <span class="parking-lot-num">6</span>
+      <div class="parking-lot-line"></div>
+      <span class="parking-lot-quarter">→ Q<span class="quarter-blank"></span></span>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="page-footer">
+  <span>From <a href="https://bynorthlight.ca/blog/eos-rocks-practical-guide.html">EOS Rocks: A Practical Guide for Small Business Operators</a> — bynorthlight.ca</span>
+  <span>Free to use · No attribution required · Share freely</span>
+</div>
+
+</body>
+</html>
