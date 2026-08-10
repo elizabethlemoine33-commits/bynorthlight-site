@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -329,6 +329,20 @@
 .wm-main{font-family:'Jost',sans-serif;font-weight:600;font-size:20px;letter-spacing:.08em;background:linear-gradient(105deg,#4fc3c8 0%,#5b8dd9 33%,#8b6fd4 66%,#c46faa 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .wm-sub{font-family:'Jost',sans-serif;font-weight:500;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#8A92A8;}
   </style>
+
+<style>
+  /* NAV DROPDOWNS */
+  .dropdown { position: relative; }
+  .nav-dropdown-btn { background: none; border: none; cursor: pointer; padding: 0; font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); transition: color 0.2s; display: flex; align-items: center; gap: 4px; }
+  .nav-dropdown-btn:hover { color: var(--text); }
+  .nav-caret { font-size: 9px; transition: transform 0.2s; }
+  .dropdown:hover .nav-caret { transform: rotate(180deg); }
+  .dropdown-menu { display: none; position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%); background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 8px; min-width: 160px; z-index: 100; box-shadow: 0 8px 24px rgba(0,0,0,0.4); flex-direction: column; }
+  .dropdown:hover .dropdown-menu { display: flex; }
+  .dropdown-menu a { font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); text-decoration: none; padding: 8px 12px; border-radius: 4px; white-space: nowrap; }
+  .dropdown-menu a:hover { color: var(--text); background: var(--border); }
+  .dropdown-divider { height: 1px; background: var(--border); margin: 4px 0; }
+</style>
 </head>
 <body>
 
@@ -336,15 +350,25 @@
 
 <nav class="site-nav" aria-label="Site navigation">
   <a href="/" class="nav-wordmark" aria-label="Northlight Advisory Services"><span class="wm-main">Northlight</span><span class="wm-sub">Advisory Services</span></a>
-  <ul class="nav-links">
-    <li><a href="/#services">Services</a></li>
-    <li><a href="/about.html">About</a></li>
-    <li><a href="/vault.html">Vault</a></li>
-    <li><a href="/meetings.html">Meetings</a></li>
-    <li><a href="/blog/">Blog</a></li>
-    <li><a href="/case-studies/">Work</a></li>
-    <li><a href="mailto:support@bynorthlight.ca">Contact</a></li>
-  </ul>
+  <ul class="nav-links">      <li><a href="/#services">Services</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li class="dropdown">
+        <button class="nav-dropdown-btn">Work <span class="nav-caret">&#x25BE;</span></button>
+        <div class="dropdown-menu">
+          <a href="/case-studies/">Case Studies</a>
+          <div class="dropdown-divider"></div>
+          <a href="/vault.html">Vault</a>
+          <a href="/meetings.html">Meetings</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <button class="nav-dropdown-btn">Resources <span class="nav-caret">&#x25BE;</span></button>
+        <div class="dropdown-menu">
+          <a href="/blog/">Blog</a>
+          <a href="/resources.html">Free Tools &amp; Templates</a>
+        </div>
+      </li>
+      <li><a href="mailto:support@bynorthlight.ca">Contact</a></li>    </ul>
 </nav>
 
 <main class="page-shell">
@@ -352,7 +376,7 @@
   <p class="page-eyebrow">Resources</p>
   <h1 class="page-title">Free Tools &amp; Templates</h1>
   <p class="page-desc">Checklists, frameworks, and interactive tools for Canadian business operators navigating AI adoption and fractional leadership.</p>
-  <p class="no-gate-note"><span class="no-gate-dot"></span>No email required — everything here is ungated</p>
+  <p class="no-gate-note"><span class="no-gate-dot"></span>No email required</p>
 
   <!-- Finding the Right Fit -->
   <section class="section" aria-labelledby="fit-heading">
@@ -393,7 +417,7 @@
   <section class="section" aria-labelledby="ai-heading">
     <div class="section-header">
       <h2 class="section-title" id="ai-heading">AI Tools &amp; Resources</h2>
-      <span class="section-count">6 resources</span>
+      <span class="section-count">7 resources</span>
     </div>
     <div class="resource-grid">
 
@@ -475,6 +499,19 @@
         <span class="resource-card-cta">Learn more →</span>
       </a>
 
+      <a class="resource-card" href="/blog/pipeda-ai-compliance-checklist-printable.html">
+        <span class="badge badge-printable">
+          <svg width="9" height="9" viewBox="0 0 9 9" fill="none" aria-hidden="true">
+            <path d="M4.5 1v5.5M4.5 6.5L2.5 4.5M4.5 6.5L6.5 4.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1 8h7" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+          </svg>
+          Printable
+        </span>
+        <p class="resource-card-title">PIPEDA AI Compliance Checklist</p>
+        <p class="resource-card-desc">Six-step checklist for Canadian businesses using AI tools — covers consent, data location, vendor accountability, individual rights, and breach response under <a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/" style="color:inherit;">PIPEDA</a>.</p>
+        <span class="resource-card-cta">Open →</span>
+      </a>
+
     </div>
   </section>
 
@@ -515,14 +552,55 @@
     </div>
   </section>
 
+  <!-- Content & Marketing -->
+  <section class="section" aria-labelledby="cm-heading">
+    <div class="section-header">
+      <h2 class="section-title" id="cm-heading">Content &amp; Marketing</h2>
+      <span class="section-count">1 resource</span>
+    </div>
+    <div class="resource-grid">
+
+      <a class="resource-card" href="/blog/aeo-audit-checklist-printable.html">
+        <span class="badge badge-printable">
+          <svg width="9" height="9" viewBox="0 0 9 9" fill="none" aria-hidden="true">
+            <path d="M4.5 1v5.5M4.5 6.5L2.5 4.5M4.5 6.5L6.5 4.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1 8h7" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+          </svg>
+          Printable
+        </span>
+        <p class="resource-card-title">AEO Audit Checklist</p>
+        <p class="resource-card-desc">Six-area audit to check whether your website content is structured for AI answer engines — FAQ schema, answer blocks, numbered sequences, and authority signals.</p>
+        <span class="resource-card-cta">Open →</span>
+      </a>
+
+    </div>
+  </section>
+
   <!-- Fractional Leadership -->
   <section class="section" aria-labelledby="fl-heading">
     <div class="section-header">
       <h2 class="section-title" id="fl-heading">Fractional Leadership</h2>
+      <span class="section-count">1 resource</span>
     </div>
-    <div class="coming-soon-card">
+    <div class="resource-grid">
+
+      <a class="resource-card" href="/blog/fractional-rfp-template-printable.html">
+        <span class="badge badge-printable">
+          <svg width="9" height="9" viewBox="0 0 9 9" fill="none" aria-hidden="true">
+            <path d="M4.5 1v5.5M4.5 6.5L2.5 4.5M4.5 6.5L6.5 4.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1 8h7" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+          </svg>
+          Printable
+        </span>
+        <p class="resource-card-title">Fractional Executive RFP Template</p>
+        <p class="resource-card-desc">Define scope, time commitment, decision authority, success criteria, and budget before you start conversations with candidates — COO, CMO, or CFO.</p>
+        <span class="resource-card-cta">Open →</span>
+      </a>
+
+    </div>
+    <div class="coming-soon-card" style="margin-top:14px;">
       <strong>More guides coming</strong>
-      <p>Upcoming resources include role-specific guides for fractional COO, CMO, and CFO engagements. If you're weighing OKRs against EOS Rocks, the <a href="/blog/eos-rocks-vs-okrs.html">comparison guide</a> is on the blog. The <a href="/fractional-readiness-check.html">Fractional Executive Readiness Check</a> above is the starting point for finding the right fit.</p>
+      <p>Role-specific guides for fractional COO, CMO, and CFO engagements are in progress. The <a href="/fractional-readiness-check.html">Fractional Executive Readiness Check</a> in the Finding the Right Fit section above is the starting point for most operators.</p>
     </div>
   </section>
 
