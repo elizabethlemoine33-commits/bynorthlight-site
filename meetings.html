@@ -7,7 +7,7 @@
   <meta name="description" content="Northlight Meetings records client calls, transcribes them automatically, and pushes structured notes, action items, and calendar events to Google Drive, ClickUp, and Google Calendar.">
   <link rel="canonical" href="https://bynorthlight.ca/meetings.html">
   <meta property="og:title" content="Northlight Meetings — Every Call. Captured and Filed.">
-  <meta property="og:description" content="Records client calls, transcribes with Groq Whisper, and pushes structured notes to Google Drive, ClickUp, and Google Calendar. Coming soon.">
+  <meta property="og:description" content="Records client calls, transcribes with Groq Whisper, and pushes structured notes to Google Drive, ClickUp, and Google Calendar.">
   <meta property="og:url" content="https://bynorthlight.ca/meetings.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Northlight Advisory Services">
@@ -16,7 +16,7 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Northlight Meetings — Every Call. Captured and Filed.">
-  <meta name="twitter:description" content="Records client calls, transcribes with Groq Whisper, and pushes structured notes to Google Drive, ClickUp, and Google Calendar. Coming soon.">
+  <meta name="twitter:description" content="Records client calls, transcribes with Groq Whisper, and pushes structured notes to Google Drive, ClickUp, and Google Calendar.">
   <meta name="twitter:image" content="https://bynorthlight.ca/northlight-og-image.png">
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,8 +32,8 @@
     "applicationCategory": "BusinessApplication",
     "offers": {
       "@type": "Offer",
-      "availability": "https://schema.org/PreOrder",
-      "price": "0",
+      "availability": "https://schema.org/InStock",
+      "price": "299",
       "priceCurrency": "CAD"
     },
     "description": "A Windows desktop application that records client calls, transcribes them using Groq Whisper, and runs AI analysis to extract action items, key decisions, and follow-up dates — then pushes structured notes to Google Drive, tasks to ClickUp, and events to Google Calendar automatically.",
@@ -104,6 +104,18 @@
       { "@type": "ListItem", "position": 2, "name": "Northlight Meetings", "item": "https://bynorthlight.ca/meetings.html" }
     ]
   }
+  </script>
+
+  <!-- Paddle Billing -->
+  <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+  <script>
+    Paddle.Environment.set('sandbox');
+    Paddle.Initialize({ token: 'test_244cb0e66e733282edea257a473' });
+    function openPaddleCheckout() {
+      Paddle.Checkout.open({
+        items: [{ priceId: 'pri_01kzygngp82769yf80r85pw0sr', quantity: 1 }]
+      });
+    }
   </script>
 
   <!-- Privacy-friendly analytics by Plausible -->
@@ -241,6 +253,7 @@
     }
     .cta-primary:hover { opacity: 0.88; }
     .cta-primary:focus-visible { outline: 2px solid var(--dusk); outline-offset: 4px; }
+    button.cta-primary { border: none; cursor: pointer; }
     .cta-secondary {
       font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 500;
       letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-decoration: none;
@@ -497,14 +510,14 @@
     <div class="page-wrap">
       <div class="meetings-hero">
         <div class="meetings-hero-left">
-          <p class="eyebrow">Northlight · Windows App · Coming Soon</p>
+          <p class="eyebrow">Northlight · Windows App · Early Access</p>
           <h1 class="meetings-title">Northlight Meetings</h1>
           <h2 class="meetings-subtitle">Every call.<br>Captured and filed.</h2>
           <p class="meetings-body">
             Records client calls, transcribes with Groq Whisper, and runs AI analysis to extract action items, key decisions, and follow-up dates — then pushes everything to Google Drive, ClickUp, and Google Calendar automatically.
           </p>
           <div class="cta-group">
-            <a href="https://aurora-brief.kit.com/110f173cf7" target="_blank" rel="noopener" class="cta-primary">Get notified when it's ready</a>
+            <button class="cta-primary" onclick="openPaddleCheckout()">Buy Northlight Meetings — $299 CAD</button>
             <a href="/meetings-privacy.html" class="cta-secondary">Privacy policy →</a>
           </div>
         </div>
@@ -528,7 +541,7 @@
           <li style="font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--cloud); line-height: 1.5;"><span style="color: var(--dusk); margin-right: 8px;" aria-hidden="true">·</span>It records client calls via VB-Audio Cable, transcribes them using Groq Whisper, and analyzes the transcript with Groq Llama to extract action items, decisions, and follow-up dates.</li>
           <li style="font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--cloud); line-height: 1.5;"><span style="color: var(--dusk); margin-right: 8px;" aria-hidden="true">·</span>Structured meeting notes are pushed to Google Drive. Approved action items go to ClickUp. Follow-up dates go to Google Calendar.</li>
           <li style="font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--cloud); line-height: 1.5;"><span style="color: var(--dusk); margin-right: 8px;" aria-hidden="true">·</span>You review and approve everything before it's pushed. Nothing is sent automatically without your confirmation.</li>
-          <li style="font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--cloud); line-height: 1.5;"><span style="color: var(--dusk); margin-right: 8px;" aria-hidden="true">·</span>Windows only. Coming soon. Built by Northlight Advisory Services, Halifax, Nova Scotia, Canada.</li>
+          <li style="font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--cloud); line-height: 1.5;"><span style="color: var(--dusk); margin-right: 8px;" aria-hidden="true">·</span>Windows only. One-time purchase — $299 CAD. Built by Northlight Advisory Services, Halifax, Nova Scotia, Canada.</li>
         </ul>
       </div>
     </div>
@@ -670,7 +683,7 @@
               <th style="padding:0 6px 0 0; border:none; vertical-align:bottom;">
                 <div style="background:linear-gradient(150deg,rgba(91,141,217,.12) 0%,rgba(139,111,212,.14) 45%,rgba(196,111,170,.1) 100%); border:1px solid rgba(139,111,212,.35); border-bottom:none; border-radius:12px 12px 0 0; padding:18px 16px 16px; position:relative; overflow:hidden;">
                   <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#4fc3c8,#5b8dd9,#8b6fd4,#c46faa);"></div>
-                  <div style="font-family:'Jost',sans-serif; font-size:9px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; background:linear-gradient(90deg,#5b8dd9,#8b6fd4); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:4px;">Coming soon</div>
+                  <div style="font-family:'Jost',sans-serif; font-size:9px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; background:linear-gradient(90deg,#5b8dd9,#8b6fd4); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:4px;">Early Access</div>
                   <div style="font-family:'Jost',sans-serif; font-weight:600; font-size:15px; color:var(--text); letter-spacing:.02em;">Northlight<br>Meetings</div>
                 </div>
               </th>
@@ -884,17 +897,17 @@
       </div>
     </section>
 
-    <!-- ═══ NOTIFY CTA ═══ -->
+    <!-- ═══ BUY CTA ═══ -->
     <div class="aurora-divider" role="presentation"></div>
-    <section class="section-padded" aria-label="Get notified about Northlight Meetings">
+    <section class="section-padded" aria-label="Buy Northlight Meetings">
       <div style="display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;">
         <div>
-          <h2 style="font-family:'Jost',sans-serif; font-size:28px; font-weight:600; color:var(--text); margin-bottom:10px;">Want to know when it's ready?</h2>
-          <p style="font-size:15px; color:var(--haze); max-width:440px;">Subscribe to the Aurora Brief — the Northlight monthly newsletter. You'll hear about Northlight Meetings availability before anyone else.</p>
+          <h2 style="font-family:'Jost',sans-serif; font-size:28px; font-weight:600; color:var(--text); margin-bottom:10px;">Ready to stop losing what was said?</h2>
+          <p style="font-size:15px; color:var(--haze); max-width:440px;">One-time purchase. No subscription. Works on Windows with any call platform. Payments processed securely by Paddle.</p>
         </div>
         <div style="display:flex; flex-direction:column; gap:10px; align-items:flex-end;">
-          <a href="https://aurora-brief.kit.com/110f173cf7" target="_blank" rel="noopener" class="cta-primary">Subscribe to Aurora Brief</a>
-          <p style="font-family:'Jost',sans-serif; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted);">Windows · Coming soon</p>
+          <button class="cta-primary" onclick="openPaddleCheckout()">Buy Northlight Meetings — $299 CAD</button>
+          <p style="font-family:'Jost',sans-serif; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted);">Windows · One-time purchase</p>
           <a href="/meetings-privacy.html" style="font-family:'Jost',sans-serif; font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); text-decoration:none; border-bottom:1px solid var(--border-2); transition:color 0.2s;">Privacy policy →</a>
         </div>
       </div>
@@ -915,7 +928,7 @@
           </button>
           <div class="faq-answer" role="region">
             <div class="faq-answer-inner">
-              Northlight Meetings is currently in final testing. It has received Google OAuth verification as of July 2026. Subscribe to the <a href="https://aurora-brief.kit.com/110f173cf7" target="_blank" rel="noopener" style="color:var(--glacial);">Aurora Brief newsletter</a> for updates.
+              Northlight Meetings is available now as an Early Access release for Windows. It has received Google OAuth verification as of July 2026. Purchase once — no subscription required.
             </div>
           </div>
         </div>
