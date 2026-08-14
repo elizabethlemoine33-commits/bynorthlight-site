@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "About Northlight Advisory Services — Who We Are and What We Do"
 description: "Northlight Advisory Services is a Halifax, Nova Scotia strategy, AI adoption, and fractional COO advisory practice founded by Elizabeth Lemoine. This page clarifies who we are and what we do — including what we are not."
@@ -8,7 +8,7 @@ date: 2026-07-09
 date_modified: "2026-07-09"
 published_time: "2026-07-09T00:00:00.000Z"
 permalink: /blog/about-northlight-advisory-services.html
-source_label: "Blog · Essay"
+source_label: "Northlight · About"
 source_class: source-essay
 read_time: 5
 tags:

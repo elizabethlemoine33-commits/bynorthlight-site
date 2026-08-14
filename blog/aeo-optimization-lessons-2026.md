@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "What I Learned Optimizing a Website for AI Search: An AEO Checklist for 2026"
 description: "Two phases of hands-on Answer Engine Optimization work on bynorthlight.ca — what actually moves the needle, what's overhyped, and a practical AEO checklist for 2026."
@@ -8,7 +8,7 @@ date: 2026-07-09
 date_modified: "2026-07-09"
 published_time: "2026-07-09T00:00:00.000Z"
 permalink: /blog/aeo-optimization-lessons-2026.html
-source_label: "Blog · AI Strategy"
+source_label: "Blog · Guide"
 source_class: source-essay
 read_time: 12
 tags:

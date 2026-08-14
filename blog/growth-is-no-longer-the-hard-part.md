@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Growth Is No Longer the Hard Part"
 description: "When AI makes work faster, who benefits? The distribution question at the heart of AI adoption — for countries and 40-person businesses alike."
@@ -8,7 +8,7 @@ date: 2026-07-08
 date_modified: "2026-07-09"
 published_time: "2026-07-08T00:00:00.000Z"
 permalink: /blog/growth-is-no-longer-the-hard-part.html
-source_label: "Blog · AI"
+source_label: "Blog · Essay"
 source_class: source-aurora
 read_time: 6
 tags:

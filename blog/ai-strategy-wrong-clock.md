@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Your AI Strategy Is Running on the Wrong Clock"
 description: "Most leaders have an AI strategy. The problem isn't the plan — it's the planning cadence. Why annual strategy breaks when capability moves quarterly."
@@ -8,7 +8,7 @@ date: 2026-07-08
 date_modified: "2026-07-09"
 published_time: "2026-07-08T00:00:00.000Z"
 permalink: /blog/ai-strategy-wrong-clock.html
-source_label: "Blog · AI Strategy"
+source_label: "Blog · Essay"
 source_class: source-aurora
 read_time: 6
 tags:

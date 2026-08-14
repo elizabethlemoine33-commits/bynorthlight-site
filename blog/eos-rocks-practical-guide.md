@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "EOS Rocks: A Practical Guide for Small Business Operators"
 description: "EOS Rocks are a 90-day priority tool from Traction. What they are, how the L10 keeps them alive, and the failure patterns that catch teams by surprise."
@@ -9,7 +9,7 @@ date: 2026-08-10
 date_modified: "2026-08-10"
 published_time: "2026-08-10T00:00:00.000Z"
 permalink: /blog/eos-rocks-practical-guide.html
-source_label: "Blog · Topic Guide"
+source_label: "Blog · Guide"
 source_class: source-essay
 read_time: 11
 tags:

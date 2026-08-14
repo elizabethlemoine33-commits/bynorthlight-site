@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "Your AI Isn't Underperforming. It's Working Blind."
 description: "Your AI rollout didn't fail because of the tool. It failed because your AI can't see the organisational context it needs to work. Here's how to fix it."
@@ -8,7 +8,7 @@ date: 2026-07-08
 date_modified: "2026-07-09"
 published_time: "2026-07-08T00:00:00.000Z"
 permalink: /blog/ai-isnt-underperforming-working-blind.html
-source_label: "Blog · AI"
+source_label: "Blog · Essay"
 source_class: source-aurora
 read_time: 6
 download_label: "Download"

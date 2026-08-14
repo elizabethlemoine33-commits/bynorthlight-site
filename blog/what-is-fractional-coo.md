@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "What Is a Fractional COO? (And How to Know If You Need One)"
 description: "A fractional COO owns operations part-time and stays accountable for outcomes — not a consultant who hands you a deck. Learn what they do, when you need one, and what to ask before hiring."
@@ -8,7 +8,7 @@ date: 2026-08-09
 date_modified: "2026-08-09"
 published_time: "2026-08-09T00:00:00.000Z"
 permalink: /blog/what-is-fractional-coo.html
-source_label: "Blog · Topic Guide"
+source_label: "Blog · Guide"
 source_class: source-essay
 read_time: 9
 tags:

@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "EOS Rocks vs. OKRs: Which Goal-Setting Framework Is Right for Your Business?"
 description: "OKRs and EOS Rocks solve different problems. A direct side-by-side comparison — same priorities, both frameworks — to decide which fits."
@@ -9,7 +9,7 @@ date: 2026-08-10
 date_modified: "2026-08-10"
 published_time: "2026-08-10T00:00:00.000Z"
 permalink: /blog/eos-rocks-vs-okrs.html
-source_label: "Blog · Comparison Guide"
+source_label: "Blog · Guide"
 source_class: source-essay
 read_time: 12
 tags:

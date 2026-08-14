@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "How to Choose an AI Advisor for Your Canadian Business"
 description: "Most AI consultants don't actually use AI. Here's how to find one who does — and the red flags Canadian small business owners should walk away from."
@@ -8,7 +8,7 @@ date: 2026-06-12
 date_modified: "2026-07-09"
 published_time: "2026-06-12T00:00:00.000Z"
 permalink: /blog/how-to-choose-ai-advisor-consultant.html
-source_label: "Blog · AI"
+source_label: "Blog · Guide"
 source_class: source-aurora
 read_time: 8
 tags:
