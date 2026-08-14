@@ -109,11 +109,10 @@
   <!-- Paddle Billing -->
   <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
   <script>
-    Paddle.Environment.set('sandbox');
-    Paddle.Initialize({ token: 'test_244cb0e66e733282edea257a473' });
+    Paddle.Initialize({ token: 'live_eb50e721af69f599b42ae9327a5' });
     function openPaddleCheckout() {
       Paddle.Checkout.open({
-        items: [{ priceId: 'pri_01kzygngp82769yf80r85pw0sr', quantity: 1 }]
+        items: [{ priceId: 'pri_01kzz9w0dcndd0jhm5m4s31z83', quantity: 1 }]
       });
     }
   </script>
@@ -510,14 +509,14 @@
     <div class="page-wrap">
       <div class="meetings-hero">
         <div class="meetings-hero-left">
-          <p class="eyebrow">Northlight · Windows App · Early Access</p>
+          <p class="eyebrow">Northlight · Windows App · Coming Soon</p>
           <h1 class="meetings-title">Northlight Meetings</h1>
           <h2 class="meetings-subtitle">Every call.<br>Captured and filed.</h2>
           <p class="meetings-body">
             Records client calls, transcribes with Groq Whisper, and runs AI analysis to extract action items, key decisions, and follow-up dates — then pushes everything to Google Drive, ClickUp, and Google Calendar automatically.
           </p>
           <div class="cta-group">
-            <button class="cta-primary" onclick="openPaddleCheckout()">Buy Northlight Meetings — $299 CAD</button>
+            <span class="cta-primary" style="opacity:0.5; cursor:default;">Coming Soon</span>
             <a href="/meetings-privacy.html" class="cta-secondary">Privacy policy →</a>
           </div>
         </div>
@@ -906,8 +905,8 @@
           <p style="font-size:15px; color:var(--haze); max-width:440px;">One-time purchase. No subscription. Works on Windows with any call platform. Payments processed securely by Paddle.</p>
         </div>
         <div style="display:flex; flex-direction:column; gap:10px; align-items:flex-end;">
-          <button class="cta-primary" onclick="openPaddleCheckout()">Buy Northlight Meetings — $299 CAD</button>
-          <p style="font-family:'Jost',sans-serif; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted);">Windows · One-time purchase</p>
+          <a href="https://app.kit.com/landing_pages/1703423" class="cta-primary" style="text-decoration:none; display:inline-block;">Get notified when it launches</a>
+          <p style="font-family:'Jost',sans-serif; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted);">Windows · One-time purchase · $299 CAD</p>
           <a href="/meetings-privacy.html" style="font-family:'Jost',sans-serif; font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); text-decoration:none; border-bottom:1px solid var(--border-2); transition:color 0.2s;">Privacy policy →</a>
         </div>
       </div>
