@@ -1,23 +1,20 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free Resources — Northlight Advisory Services</title>
-  <meta name="description" content="Free tools, templates, and frameworks for Canadian business operators navigating AI adoption and fractional leadership. No email gates, no sign-up required.">
-  <link rel="canonical" href="https://bynorthlight.ca/resources.html">
-  <meta property="og:title" content="Free Resources — Northlight Advisory Services">
-  <meta property="og:description" content="Free tools, templates, and frameworks for Canadian business operators. No email gates, no sign-up required.">
-  <meta property="og:image" content="https://bynorthlight.ca/northlight-og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:url" content="https://bynorthlight.ca/resources.html">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Northlight Advisory Services">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Free Resources — Northlight Advisory Services">
-  <meta name="twitter:description" content="Free tools, templates, and frameworks for Canadian business operators. No email gates, no sign-up required.">
-  <meta name="twitter:image" content="https://bynorthlight.ca/northlight-og-image.png">
+---
+layout: page
+title: "Free Resources — Northlight Advisory Services"
+description: "Free tools, templates, and frameworks for Canadian business operators navigating AI adoption and fractional leadership. No email gates, no sign-up required."
+canonical: "https://bynorthlight.ca/resources.html"
+og_title: "Free Resources — Northlight Advisory Services"
+og_description: "Free tools, templates, and frameworks for Canadian business operators. No email gates, no sign-up required."
+og_image: "https://bynorthlight.ca/northlight-og-image.png"
+og_image_width: "1200"
+og_image_height: "630"
+og_type: "website"
+breadcrumbs:
+  - name: "Home"
+    url: "https://bynorthlight.ca/"
+  - name: "Free Resources"
+    url: "https://bynorthlight.ca/resources.html"
+head_extra: |
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -32,49 +29,8 @@
     }
   }
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --midnight: #0E0E14;
-      --surface: #12121E;
-      --surface-2: #10101C;
-      --border: #1E2035;
-      --border-2: #2A2A48;
-      --text: #FFFFFF;
-      --cloud: #C8CCE0;
-      --haze: #B0B8D8;
-      --muted: #8A92A8;
-      --structural: #5A6080;
-      --glacial: #4FC3C8;
-      --boreal: #5B8DD9;
-      --dusk: #8B6FD4;
-      --aurora: #C46FAA;
-    }
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background: var(--midnight);
-      color: var(--cloud);
-      font-family: 'Outfit', sans-serif;
-      min-height: 100vh;
-    }
-
     a:visited { color: var(--glacial); }
-    .top-bar { height: 2px; background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%); }
-    nav.site-nav {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 20px 64px; border-bottom: 1px solid var(--border);
-      max-width: 1280px; margin: 0 auto;
-    }
-    .nav-links { display: flex; gap: 28px; list-style: none; }
-    .nav-links a {
-      font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 500;
-      letter-spacing: 0.14em; text-transform: uppercase;
-      color: var(--muted); text-decoration: none; transition: color 0.2s;
-    }
-    .nav-links a:hover,
-    .nav-links a[aria-current="page"] { color: var(--text); }
-    .nav-links a:focus-visible { outline: 2px solid var(--dusk); outline-offset: 4px; border-radius: 2px; }
 
     .page-shell {
       max-width: 900px;
@@ -152,7 +108,6 @@
       letter-spacing: .08em;
     }
 
-    /* Badges */
     .badge {
       display: inline-flex;
       align-items: center;
@@ -181,7 +136,6 @@
       border: 1px solid rgba(91,141,217,.2);
     }
 
-    /* Feature cards */
     .feature-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -220,7 +174,6 @@
       margin-top: 4px;
     }
 
-    /* Resource grid */
     .resource-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -264,7 +217,6 @@
     }
     .resource-card.app-card .resource-card-cta { color: var(--boreal); }
 
-    /* Coming soon */
     .coming-soon-card {
       background: var(--surface-2);
       border: 1px dashed var(--border);
@@ -285,94 +237,21 @@
       color: var(--structural);
       line-height: 1.7;
     }
-    .coming-soon-card a {
-      color: var(--glacial);
-      text-decoration: none;
-    }
-
-    /* Footer */
-    .footer-border { border-top: 1px solid var(--border); }
-    footer { padding: 32px 64px; max-width: 1280px; margin: 0 auto; }
-    .footer-inner { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; }
-    .footer-left { display: flex; flex-direction: column; gap: 8px; }
-    .footer-copy { font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.1em; color: var(--muted); }
-    .footer-powered { font-family: 'Jost', sans-serif; font-size: 13px; letter-spacing: 0.12em; color: var(--muted); opacity: 0.8; display: flex; align-items: center; gap: 10px; }
-    .footer-powered a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
-    .footer-powered a:hover { color: var(--text); }
-    .footer-os-icon { width: 36px; height: 36px; flex-shrink: 0; border-radius: 8px; }
-    .footer-right { display: flex; flex-direction: column; align-items: flex-end; gap: 16px; }
-    .footer-links { display: flex; gap: 24px; list-style: none; flex-wrap: wrap; justify-content: flex-end; }
-    .footer-links a { font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.1em; color: var(--muted); text-decoration: none; transition: color 0.2s; }
-    .footer-links a:hover { color: var(--text); }
-    .footer-social { display: flex; gap: 16px; list-style: none; align-items: center; }
-    .footer-social a { font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.1em; color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: 6px; transition: color 0.2s; }
-    .footer-social a:hover { color: var(--text); }
+    .coming-soon-card a { color: var(--glacial); text-decoration: none; }
 
     @media (max-width: 768px) {
-      nav.site-nav, footer { padding-left: 24px; padding-right: 24px; }
       .page-shell { padding: 40px 20px 72px; }
       .page-title { font-size: 28px; }
       .feature-grid { grid-template-columns: 1fr; }
       .resource-grid { grid-template-columns: 1fr 1fr; }
-      .footer-inner { flex-direction: column; }
-      .footer-right { align-items: flex-start; }
-      .footer-links { justify-content: flex-start; }
-      .nav-links { gap: 16px; }
-      .nav-links a { font-size: 11px; }
     }
     @media (max-width: 480px) {
       .resource-grid { grid-template-columns: 1fr; }
     }
   </style>
-  <style>
-.nav-wordmark,.wordmark{text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:4px;background:none;-webkit-text-fill-color:unset;color:unset;font-size:unset;letter-spacing:unset;}
-.wm-main{font-family:'Jost',sans-serif;font-weight:600;font-size:20px;letter-spacing:.08em;background:linear-gradient(105deg,#4fc3c8 0%,#5b8dd9 33%,#8b6fd4 66%,#c46faa 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.wm-sub{font-family:'Jost',sans-serif;font-weight:500;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#8A92A8;}
-  </style>
+---
 
-<style>
-  /* NAV DROPDOWNS */
-  .dropdown { position: relative; display: flex; align-items: center; }
-  .nav-dropdown-btn { background: none; border: none; cursor: pointer; padding: 0; font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); transition: color 0.2s; display: flex; align-items: center; gap: 4px; }
-  .nav-dropdown-btn:hover { color: var(--text); }
-  .nav-caret { font-size: 9px; transition: transform 0.2s; }
-  .dropdown:hover .nav-caret { transform: rotate(180deg); }
-  .dropdown-menu { display: none; position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 8px; min-width: 160px; z-index: 100; box-shadow: 0 8px 24px rgba(0,0,0,0.4); flex-direction: column; }
-  .dropdown-menu::before { content: ''; display: block; position: absolute; top: -8px; left: 0; right: 0; height: 8px; }
-  .dropdown:hover .dropdown-menu { display: flex; }
-  .dropdown-menu a { font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); text-decoration: none; padding: 8px 12px; border-radius: 4px; white-space: nowrap; }
-  .dropdown-menu a:hover { color: var(--text); background: var(--border); }
-  .dropdown-divider { height: 1px; background: var(--border); margin: 4px 0; }
-</style>
-</head>
-<body>
-
-<div class="top-bar" role="presentation"></div>
-
-<nav class="site-nav" aria-label="Site navigation">
-  <a href="/" class="nav-wordmark" aria-label="Northlight Advisory Services"><span class="wm-main">Northlight</span><span class="wm-sub">Advisory Services</span></a>
-  <ul class="nav-links">      <li><a href="/services.html">Services</a></li>
-      <li><a href="/about.html">About</a></li>
-      <li class="dropdown">
-        <button class="nav-dropdown-btn">Work <span class="nav-caret">&#x25BE;</span></button>
-        <div class="dropdown-menu">
-          <a href="/case-studies/">Case Studies</a>
-          <div class="dropdown-divider"></div>
-          <a href="/vault.html">Vault</a>
-          <a href="/meetings.html">Meetings</a>
-        </div>
-      </li>
-      <li class="dropdown">
-        <button class="nav-dropdown-btn">Resources <span class="nav-caret">&#x25BE;</span></button>
-        <div class="dropdown-menu">
-          <a href="/blog/">Blog</a>
-          <a href="/resources.html">Free Tools &amp; Templates</a>
-        </div>
-      </li>
-      <li><a href="mailto:support@bynorthlight.ca">Contact</a></li>    </ul>
-</nav>
-
-<main class="page-shell">
+<main class="page-shell" id="main-content">
 
   <p class="page-eyebrow">Resources</p>
   <h1 class="page-title">Free Tools &amp; Templates</h1>
@@ -606,42 +485,3 @@
   </section>
 
 </main>
-
-<div class="footer-border">
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-left">
-        <p class="footer-copy">© 2026 Northlight Advisory Services</p>
-        <p class="footer-powered"><img src="/northlight-os-icon.svg" alt="" role="presentation" class="footer-os-icon" width="36" height="36"><span>Powered by <a href="/">Northlight OS</a></span></p>
-      </div>
-      <nav aria-label="Footer navigation">
-        <div class="footer-right">
-          <ul class="footer-links">
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/vault.html">Northlight Vault</a></li>
-            <li><a href="/blog/">Blog</a></li>
-            <li><a href="/northlight-privacy.html">Privacy Policy</a></li>
-            <li><a href="https://aurora-brief.kit.com/110f173cf7" target="_blank" rel="noopener">Aurora Brief</a></li>
-          </ul>
-          <ul class="footer-social">
-            <li>
-              <a href="https://www.linkedin.com/company/bynorthlight" aria-label="Northlight on LinkedIn" target="_blank" rel="noopener">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                LinkedIn
-              </a>
-            </li>
-            <li>
-              <a href="https://www.threads.com/@northlightcomms" aria-label="Northlight on Threads" target="_blank" rel="noopener">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.312-.883-2.371-.887h-.018c-.87 0-1.952.26-2.716 1.294l-1.694-1.252c1.083-1.464 2.715-2.193 4.41-2.193h.023c3.016.016 4.877 1.913 5.115 5.19.238.071.471.15.698.234 1.947.713 3.008 2.163 3.225 4.225.179 1.702-.198 4.403-2.628 6.797-1.82 1.79-4.133 2.684-6.835 2.706l-.034.001z"/></svg>
-                Threads
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </footer>
-</div>
-
-</body>
-</html>
