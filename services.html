@@ -49,6 +49,15 @@ head_extra: |
       },
       {
         "@type": "SoftwareApplication",
+        "@id": "https://bynorthlight.ca/services.html#os",
+        "name": "Northlight OS",
+        "description": "An AI-native operating system for small business — an intelligent dispatcher that connects your tools, automates routine decisions, and keeps your operations running without manual handoffs.",
+        "applicationCategory": "BusinessApplication",
+        "provider": { "@id": "https://bynorthlight.ca#northlight" },
+        "url": "https://bynorthlight.ca/northlight-os.html"
+      },
+      {
+        "@type": "SoftwareApplication",
         "@id": "https://bynorthlight.ca/services.html#mcp",
         "name": "Northlight Skills Market",
         "description": "A curated marketplace of MCP skills for Claude — purpose-built tools that extend what AI assistants can do for Canadian operators and founders.",
@@ -216,7 +225,7 @@ head_extra: |
 
     /* Product cards */
     .product-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
       margin-bottom: 24px;
     }
     .product-card {
@@ -298,6 +307,9 @@ head_extra: |
       .services-page { padding-left: 32px; padding-right: 32px; }
       .page-hero { padding: 48px 0 36px; }
     }
+    @media (max-width: 900px) {
+      .product-grid { grid-template-columns: 1fr 1fr; }
+    }
     @media (max-width: 768px) {
       .services-page { padding-left: 24px; padding-right: 24px; }
       .page-headline { font-size: 30px; }
@@ -365,6 +377,14 @@ head_extra: |
         </div>
 
         <div class="product-card">
+          <p class="product-label">Business Operations Platform</p>
+          <h3 class="product-name">Northlight OS</h3>
+          <p class="product-body">An AI-native dispatcher for small business operations — connects your tools, automates routine decisions, and surfaces what needs attention without manual handoffs. Built to run quietly in the background.</p>
+          <p class="product-price"><strong>Used internally.</strong> Available to select advisory clients.</p>
+          <a href="/northlight-os.html" class="product-cta">Learn more →</a>
+        </div>
+
+        <div class="product-card">
           <p class="product-label">MCP Marketplace</p>
           <h3 class="product-name">Northlight Skills Market</h3>
           <p class="product-body">A curated marketplace of MCP skills for Claude — tools that extend what AI assistants can do for Canadian operators and founders. Connect your workflows to Claude with skills built for real business use cases.</p>
@@ -391,6 +411,7 @@ head_extra: |
           <span class="support-icon" aria-hidden="true">📦</span>
           <p class="support-label">Product Refunds</p>
           <p class="support-value">Northlight Meetings</p>
+          <p class="support-body">One-time purchase at $299 CAD. Refunds are handled by Paddle as Merchant of Record per <a href="/meetings-refunds.html">Paddle's refund policy</a>. You can also email <a href="mailto:support@bynorthlight.ca">support@bynorthlight.ca</a>.</p>
         </div>
         <div class="support-item">
           <span class="support-icon" aria-hidden="true">📋</span>
@@ -427,7 +448,7 @@ head_extra: |
             Do you work with businesses outside Canada?
           </summary>
           <div style="padding: 16px 24px 20px; font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--haze); line-height: 1.75; border-top: 1px solid var(--border);">
-            Occasionally. Northlight Advisory Services focuses on Canadian organisations because they face a distinct set of regulatory, funding, and market conditions — particularly around AI adoption and privacy law (PIPEDA, Quebec Law 25) — that general advice doesn't address well.
+            Occasionally. Northlight Advisory Services focuses on Canadian organisations because they face a distinct set of regulatory, funding, and market conditions — particularly around AI adoption and privacy law (<a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/" style="color: var(--glacial); text-decoration: none;">PIPEDA</a>, Quebec Law 25) — that general advice doesn't address well.
           </div>
         </details>
 
