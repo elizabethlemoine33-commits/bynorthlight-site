@@ -1,7 +1,17 @@
 <!-- ── AURORA BRIEF SIGNUP ── -->
-<section style="background: var(--surface-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 40px 64px; position: relative; overflow: hidden;" aria-label="Aurora Brief newsletter signup">
+<section class="nl-section" style="background: var(--surface-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 40px 64px; position: relative; overflow: hidden;" aria-label="Aurora Brief newsletter signup">
+  <style>
+    @media (max-width: 768px) {
+      .nl-inner { flex-direction: column !important; gap: 28px !important; padding: 0 !important; }
+      .nl-section { padding: 32px 24px !important; }
+    }
+    @media (max-width: 480px) {
+      .nl-form-row { flex-direction: column !important; }
+      .nl-form-row input { max-width: 100% !important; }
+    }
+  </style>
   <div style="position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);"></div>
-  <div style="max-width: 960px; margin: 0 auto; display: flex; align-items: center; gap: 56px;">
+  <div class="nl-inner" style="max-width: 960px; margin: 0 auto; display: flex; align-items: center; gap: 56px;">
     <div style="flex: 1.4;">
       <div style="font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 10px; background: linear-gradient(90deg, #4FC3C8, #8B6FD4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: inline-block;">Aurora Brief</div>
       <div style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 20px; color: var(--text); margin-bottom: 6px; letter-spacing: 0.01em;">Stay in the Loop with Northlight</div>
@@ -9,7 +19,7 @@
     </div>
     <form action="https://app.kit.com/forms/9467797/subscriptions" method="post" style="display: flex; flex-direction: column; gap: 10px; flex: 1; min-width: 260px;">
       <input type="hidden" name="redirect_to" value="https://bynorthlight.ca/subscription-confirmed.html" />
-      <div style="display: flex; gap: 8px;">
+      <div class="nl-form-row" style="display: flex; gap: 8px;">
         <input type="text" name="fields[first_name]" placeholder="First name" style="max-width: 110px; flex: 1; background: var(--midnight); border: 1px solid var(--border-2); border-radius: 8px; padding: 11px 14px; font-size: 14px; color: var(--cloud); font-family: 'Outfit', sans-serif; outline: none;" />
         <input type="email" name="email_address" placeholder="Email address" required style="flex: 1; background: var(--midnight); border: 1px solid var(--border-2); border-radius: 8px; padding: 11px 14px; font-size: 14px; color: var(--cloud); font-family: 'Outfit', sans-serif; outline: none;" />
       </div>

@@ -229,6 +229,72 @@
       .nav-links { gap: 12px; }
       .nav-links a { letter-spacing: 0.08em; }
     }
+
+    /* ── HAMBURGER (mobile only) ── */
+    .nav-hamburger { display: none; }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-hamburger {
+        display: flex; flex-direction: column; justify-content: space-between;
+        width: 24px; height: 17px;
+        background: none; border: none; cursor: pointer; padding: 0; flex-shrink: 0;
+      }
+      .nav-hamburger span {
+        display: block; height: 2px; background: var(--muted);
+        border-radius: 2px; transition: background 0.2s;
+      }
+      .nav-hamburger:hover span,
+      .nav-hamburger[aria-expanded="true"] span { background: var(--text); }
+      .nav-hamburger:focus-visible { outline: 2px solid var(--dusk); outline-offset: 4px; border-radius: 2px; }
+    }
+
+    /* ── MOBILE DRAWER ── */
+    .nav-mobile-drawer {
+      display: none; position: fixed; inset: 0;
+      background: var(--midnight); z-index: 500;
+      flex-direction: column;
+      padding: 20px 24px 40px;
+      overflow-y: auto;
+      border-right: none;
+    }
+    .nav-mobile-drawer.open { display: flex; }
+    .nav-mobile-header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 40px; border-bottom: 1px solid var(--border); padding-bottom: 20px;
+    }
+    .nav-mobile-close {
+      background: none; border: none; color: var(--muted); cursor: pointer;
+      font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase; padding: 8px;
+      transition: color 0.2s;
+    }
+    .nav-mobile-close:hover { color: var(--text); }
+    .nav-mobile-close:focus-visible { outline: 2px solid var(--dusk); outline-offset: 2px; border-radius: 2px; }
+    .nav-mobile-links { list-style: none; display: flex; flex-direction: column; gap: 0; }
+    .nav-mobile-links > li { border-bottom: 1px solid var(--border); }
+    .nav-mobile-links > li > a {
+      display: block; font-family: 'Jost', sans-serif; font-size: 18px; font-weight: 600;
+      letter-spacing: 0.04em; color: var(--text); text-decoration: none;
+      padding: 20px 0; transition: color 0.2s;
+    }
+    .nav-mobile-links > li > a:hover { color: var(--glacial); }
+    .nav-mobile-section-label {
+      display: block; font-family: 'Jost', sans-serif; font-size: 18px; font-weight: 600;
+      letter-spacing: 0.04em; color: var(--text); padding: 20px 0 8px;
+    }
+    .nav-mobile-sub { list-style: none; padding-bottom: 12px; }
+    .nav-mobile-sub li a {
+      display: block; font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 500;
+      letter-spacing: 0.08em; color: var(--muted); text-decoration: none;
+      padding: 9px 0 9px 16px; transition: color 0.2s;
+    }
+    .nav-mobile-sub li a:hover { color: var(--text); }
+
+    /* ── CTA BUTTON MOBILE OVERFLOW FIX ── */
+    @media (max-width: 480px) {
+      .cta-primary { white-space: normal; letter-spacing: 0.05em; }
+    }
   </style>
 
   <!-- Privacy-friendly analytics -->
@@ -245,5 +311,32 @@
   {{ content }}
   {% unless page.hide_newsletter %}{% include newsletter.html %}{% endunless %}
   {% include footer.html %}
+  <script>
+    (function() {
+      var hamburger = document.getElementById('nav-hamburger');
+      var drawer = document.getElementById('nav-mobile-drawer');
+      var closeBtn = document.getElementById('nav-mobile-close');
+      if (!hamburger || !drawer) return;
+      function openMenu() {
+        drawer.classList.add('open');
+        drawer.removeAttribute('aria-hidden');
+        hamburger.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+        if (closeBtn) closeBtn.focus();
+      }
+      function closeMenu() {
+        drawer.classList.remove('open');
+        drawer.setAttribute('aria-hidden', 'true');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        hamburger.focus();
+      }
+      hamburger.addEventListener('click', openMenu);
+      if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && drawer.classList.contains('open')) closeMenu();
+      });
+    })();
+  </script>
 </body>
 </html>
