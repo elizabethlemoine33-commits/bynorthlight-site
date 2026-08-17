@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ page.description }}">
+  <link rel="canonical" href="{{ page.canonical }}">
+  <meta property="og:title" content="{{ page.og_title | default: page.title }}">
+  <meta property="og:description" content="{{ page.og_description | default: page.description }}">
+  <meta property="og:image" content="{{ page.og_image | default: 'https://bynorthlight.ca/northlight-og-image.png' }}">
+  {% if page.og_image_width %}<meta property="og:image:width" content="{{ page.og_image_width }}">{% endif %}
+  {% if page.og_image_height %}<meta property="og:image:height" content="{{ page.og_image_height }}">{% endif %}
+  <meta property="og:url" content="{{ page.canonical }}">
+  <meta property="og:type" content="{{ page.og_type | default: 'website' }}">
+  <meta property="og:site_name" content="Northlight Advisory Services">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.og_title | default: page.title }}">
+  <meta name="twitter:description" content="{{ page.og_description | default: page.description }}">
+  <meta name="twitter:image" content="{{ page.og_image | default: 'https://bynorthlight.ca/northlight-og-image.png' }}">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  {% if page.breadcrumbs %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {% for crumb in page.breadcrumbs %}
+      {
+        "@type": "ListItem",
+        "position": {{ forloop.index }},
+        "name": {{ crumb.name | jsonify }},
+        "item": {{ crumb.url | jsonify }}
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  }
+  </script>
+  {% endif %}
+
+  {{ page.head_extra }}
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --midnight:   #0E0E14;
+      --deep-night: #08080F;
+      --surface:    #12121E;
+      --surface-2:  #10101C;
+      --border:     #1E2035;
+      --border-2:   #2A2A48;
+      --text:       #FFFFFF;
+      --cloud:      #C8CCE0;
+      --haze:       #BCC2DC;
+      --muted:      #99A1B6;
+      --structural: #6C7295;
+      --glacial:    #4FC3C8;
+      --boreal:     #5B8DD9;
+      --dusk:       #8B6FD4;
+      --aurora:     #C46FAA;
+    }
+
+    body {
+      background: var(--midnight);
+      color: var(--cloud);
+      font-family: 'Outfit', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── SKIP NAV ── */
+    .skip-nav {
+      position: absolute; top: -100px; left: 0;
+      background: var(--dusk); color: #fff;
+      padding: 10px 20px;
+      font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600;
+      letter-spacing: 0.06em; text-decoration: none;
+      border-radius: 0 0 6px 0; z-index: 9999; transition: top 0.2s;
+    }
+    .skip-nav:focus { top: 0; }
+
+    a:visited { color: var(--glacial); }
+
+    /* ── TOP BAR ── */
+    .top-bar {
+      height: 2px;
+      background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);
+    }
+
+    /* ── NAV ── */
+    nav.site-nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 20px 64px;
+      border-bottom: 1px solid var(--border);
+      max-width: 1280px; margin: 0 auto;
+    }
+    .nav-wordmark, .wordmark {
+      text-decoration: none; display: flex; flex-direction: column;
+      align-items: center; gap: 4px;
+      background: none; -webkit-text-fill-color: unset; color: unset;
+      font-size: unset; letter-spacing: unset;
+    }
+    .wm-main {
+      font-family: 'Jost', sans-serif; font-weight: 600; font-size: 20px;
+      letter-spacing: .08em;
+      background: linear-gradient(105deg, #4fc3c8 0%, #5b8dd9 33%, #8b6fd4 66%, #c46faa 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .wm-sub {
+      font-family: 'Jost', sans-serif; font-weight: 500; font-size: 10px;
+      letter-spacing: .22em; text-transform: uppercase; color: #8A92A8;
+    }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a {
+      font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--muted); text-decoration: none; transition: color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--text); }
+
+    /* ── NAV DROPDOWNS ── */
+    .dropdown { position: relative; display: flex; align-items: center; }
+    .nav-dropdown-btn {
+      background: none; border: none; cursor: pointer; padding: 0;
+      font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--muted); transition: color 0.2s;
+      display: flex; align-items: center; gap: 4px;
+    }
+    .nav-dropdown-btn:hover { color: var(--text); }
+    .nav-caret { font-size: 9px; transition: transform 0.2s; }
+    .dropdown:hover .nav-caret { transform: rotate(180deg); }
+    .dropdown-menu {
+      display: none; position: absolute; top: calc(100% + 8px); left: 50%;
+      transform: translateX(-50%); background: var(--surface);
+      border: 1px solid var(--border); border-radius: 8px; padding: 8px;
+      min-width: 160px; z-index: 100; box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      flex-direction: column;
+    }
+    .dropdown-menu::before {
+      content: ''; display: block; position: absolute;
+      top: -8px; left: 0; right: 0; height: 8px;
+    }
+    .dropdown:hover .dropdown-menu { display: flex; }
+    .dropdown-menu a {
+      font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--muted); text-decoration: none;
+      padding: 8px 12px; border-radius: 4px; white-space: nowrap;
+    }
+    .dropdown-menu a:hover { color: var(--text); background: var(--border); }
+    .dropdown-divider { height: 1px; background: var(--border); margin: 4px 0; }
+
+    /* ── LAYOUT UTILITIES ── */
+    .page-wrap { max-width: 1280px; margin: 0 auto; padding: 0 64px; }
+    .aurora-divider {
+      height: 1px;
+      background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);
+      opacity: 0.25; max-width: 1280px; margin: 0 auto;
+    }
+
+    /* ── BREADCRUMB ── */
+    .breadcrumb-nav { max-width: 1280px; margin: 0 auto; padding: 16px 64px 0; }
+    .breadcrumb-list {
+      display: flex; align-items: center; gap: 6px; list-style: none;
+      font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .breadcrumb-item a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .breadcrumb-item a:hover { color: var(--text); }
+    .breadcrumb-item span[aria-current] { color: var(--structural); }
+    .breadcrumb-sep { color: var(--border-2); }
+
+    /* ── FOOTER ── */
+    .footer-border { border-top: 1px solid var(--border); }
+    footer { padding: 32px 64px; max-width: 1280px; margin: 0 auto; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; }
+    .footer-left { display: flex; flex-direction: column; gap: 8px; }
+    .footer-copy { font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.1em; color: var(--muted); }
+    .footer-powered {
+      font-family: 'Jost', sans-serif; font-size: 13px; letter-spacing: 0.12em;
+      color: var(--muted); opacity: 0.8;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .footer-powered a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .footer-powered a:hover { color: var(--text); }
+    .footer-os-icon { width: 36px; height: 36px; flex-shrink: 0; border-radius: 8px; }
+    .footer-right { display: flex; flex-direction: column; align-items: flex-end; gap: 16px; }
+    .footer-links { display: flex; gap: 24px; list-style: none; flex-wrap: wrap; justify-content: flex-end; }
+    .footer-links a {
+      font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.1em;
+      color: var(--muted); text-decoration: none; transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--text); }
+    .footer-social { display: flex; gap: 16px; list-style: none; align-items: center; }
+    .footer-social a {
+      font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.1em;
+      color: var(--muted); text-decoration: none;
+      display: flex; align-items: center; gap: 6px; transition: color 0.2s;
+    }
+    .footer-social a:hover { color: var(--text); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      nav.site-nav { padding: 20px 32px; }
+      .page-wrap { padding: 0 32px; }
+      footer { padding: 32px 32px; }
+      .breadcrumb-nav { padding-left: 32px; padding-right: 32px; }
+    }
+    @media (max-width: 768px) {
+      nav.site-nav { padding: 16px 24px; }
+      .page-wrap { padding: 0 24px; }
+      footer { padding: 24px; }
+      .footer-inner { flex-direction: column; gap: 24px; }
+      .footer-right { align-items: flex-start; }
+      .footer-links { justify-content: flex-start; }
+      .nav-links { gap: 16px; }
+      .nav-links a { font-size: 11px; }
+      .breadcrumb-nav { padding-left: 24px; padding-right: 24px; }
+    }
+    @media (max-width: 480px) {
+      .nav-links { gap: 12px; }
+      .nav-links a { letter-spacing: 0.08em; }
+    }
+  </style>
+
+  <!-- Privacy-friendly analytics -->
+  <script async src="https://plausible.io/js/pa-uccdYD5d_-tjjiMlRo9eR.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
+</head>
+<body>
+  <a class="skip-nav" href="#main-content">Skip to content</a>
+  <div class="top-bar" role="presentation"></div>
+  {% include nav.html %}
+  {{ content }}
+  {% unless page.hide_newsletter %}{% include newsletter.html %}{% endunless %}
+  {% include footer.html %}
+</body>
+</html>
