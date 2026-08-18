@@ -2,7 +2,7 @@
 layout: post
 title: "EOS Rocks: A Practical Guide for Small Business Operators"
 description: "EOS Rocks are a 90-day priority tool from Traction. What they are, how the L10 keeps them alive, and the failure patterns that catch teams by surprise."
-seo_title: "EOS Rocks: A Practical Guide"
+seo_title: "What Are EOS Rocks? A Practical Guide for Teams"
 og_title: "EOS Rocks: A Practical Guide for Small Business Operators | Northlight Advisory Services"
 og_description: "EOS Rocks are a deceptively simple tool for quarterly execution discipline. Here's what they are, how they work, how to pick them well, and the failure patterns that catch most teams by surprise."
 date: 2026-08-10

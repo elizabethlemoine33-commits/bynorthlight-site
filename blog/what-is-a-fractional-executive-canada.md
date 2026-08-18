@@ -4,6 +4,7 @@ title: "What Is a Fractional Executive? A Guide for Canadian Businesses"
 description: "A fractional executive provides part-time senior leadership — owning outcomes, building systems, and exiting once the work is done. Here's how the model works for Canadian businesses with 10–75 employees."
 og_title: "What Is a Fractional Executive? A Guide for Canadian Businesses"
 og_description: "A fractional executive provides part-time senior leadership — owning outcomes, building systems, and exiting once the work is done. Here's how the model works for Canadian businesses with 10–75 employees."
+seo_title: "What Is a Fractional Executive? Definition & Guide"
 date: 2026-07-27
 date_modified: "2026-07-27"
 published_time: "2026-07-27T00:00:00.000Z"
