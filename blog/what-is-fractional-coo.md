@@ -66,7 +66,7 @@ faq:
 
 <p class="author-note"><em>Elizabeth Lemoine is a fractional COO with 10+ years of director-level operations experience working with Canadian businesses. <a href="/about.html">About Elizabeth →</a></em></p>
 
-A fractional COO is a type of [fractional executive](/blog/what-is-a-fractional-executive-canada.html) — a senior operator who joins your executive team part-time and owns outcomes, rather than a consultant who hands you a deck and leaves. That's the whole answer. The rest of this post is for founders trying to figure out whether they actually need one.
+A fractional COO is a type of [fractional executive](/blog/what-is-a-fractional-executive-canada.html) — a senior operator who joins your executive team part-time and owns outcomes, rather than a consultant who hands you a deck and leaves. That's the whole answer. The rest of this post is for Canadian founders trying to figure out whether they actually need one.
 
 ## What is a fractional COO and how is it different from consulting?
 
