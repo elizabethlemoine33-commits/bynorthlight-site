@@ -271,14 +271,7 @@ head_extra: |
       .everyexpert-card { flex-wrap: wrap; }
       /* ── EXPERIENCE GRID COLLAPSE ── */
       .experience-grid { grid-template-columns: 1fr !important; }
-      .exp-wrapper { position: relative; }
-      .exp-wrapper.collapsed { max-height: 300px; overflow: hidden; }
-      .exp-wrapper.collapsed .exp-fade {
-        display: block; position: absolute; bottom: 0; left: 0; right: 0; height: 80px;
-        background: linear-gradient(to bottom, transparent, var(--midnight));
-        pointer-events: none;
-      }
-      .exp-fade { display: none; }
+      .exp-wrapper.collapsed { display: none; }
       .exp-toggle {
         display: block; width: 100%; margin-top: 10px;
         background: none; border: 1px solid var(--border-2); border-radius: 8px;
@@ -288,10 +281,6 @@ head_extra: |
         text-align: center;
       }
       .exp-toggle:hover { color: var(--text); border-color: var(--dusk); }
-    }
-    @media (min-width: 769px) {
-      .exp-fade { display: none !important; }
-      .exp-toggle { display: none !important; }
     }
     @media (max-width: 640px) {
       .section-padded { padding: 48px 24px; }
@@ -466,9 +455,9 @@ head_extra: |
         <p>The industries have varied. The work has remained remarkably consistent: bringing clarity to complexity by designing systems, strengthening operations, and helping leadership teams execute with confidence.</p>
       </div>
 
+      <button class="exp-toggle" onclick="toggleExperience(this)" aria-expanded="false">See experience breakdown ↓</button>
       <div class="exp-wrapper collapsed">
-        <div class="exp-fade" aria-hidden="true"></div>
-      <div class="experience-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; margin-bottom: 2px;">
+      <div class="experience-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; margin-bottom: 2px; margin-top: 10px;">
         <div class="how-card">
           <p class="results-cap-heading">Strategy &amp; Executive Leadership</p>
           <ul class="glance-list">
@@ -518,27 +507,30 @@ head_extra: |
         </div>
       </div>
       </div>
-      <button class="exp-toggle" onclick="toggleExperience(this)" aria-expanded="false">Show all 6 areas of experience ↓</button>
 
-      <div class="glance-box">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:24px;">
+        <div class="glance-box">
         <p class="glance-eyebrow">At a Glance</p>
-        <ul class="glance-list">
-          <li>300+ operational initiatives led</li>
-          <li>Teams working across 115+ countries</li>
-          <li>$4M+ in annual financial oversight</li>
-          <li>Microsoft 365, Salesforce, ClickUp, Xero, and AI implementations</li>
-          <li>Governance frameworks, HR systems, and board operations</li>
-          <li>Three production AI applications built and used daily</li>
-        </ul>
-        <p class="glance-eyebrow" style="margin-top: 20px;">Experience across industries</p>
-        <ul class="glance-list">
-          <li>Professional services</li>
-          <li>Nonprofits</li>
-          <li>Faith-based organisations</li>
-          <li>Education technology</li>
-          <li>Membership organisations</li>
-          <li>Founder-led businesses</li>
-        </ul>
+          <ul class="glance-list">
+            <li>300+ operational initiatives led</li>
+            <li>Teams working across 115+ countries</li>
+            <li>$4M+ in annual financial oversight</li>
+            <li>Microsoft 365, Salesforce, ClickUp, Xero, and AI implementations</li>
+            <li>Governance frameworks, HR systems, and board operations</li>
+            <li>Three production AI applications built and used daily</li>
+          </ul>
+        </div>
+        <div class="glance-box">
+          <p class="glance-eyebrow">Experience across industries</p>
+          <ul class="glance-list">
+            <li>Professional services</li>
+            <li>Nonprofits</li>
+            <li>Faith-based organisations</li>
+            <li>Education technology</li>
+            <li>Membership organisations</li>
+            <li>Founder-led businesses</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -605,6 +597,7 @@ head_extra: |
             <span class="testimonial-role">Executive Coach &amp; Leadership Mentor</span>
           </div>
         </div>
+        <div id="testimonials-more" style="display:none;">
         <div class="testimonial-card">
           <p class="testimonial-quote">Elizabeth is a hard-working talented team member. It&#8217;s tricky to balance both human caring and focused tenacity but Elizabeth is able to bring both to a team and to an organization. Elizabeth can be relied on to make things move and has a gift for seeing and naming details in larger complex projects. She is great at mapping out work not just for herself, but for teams around her. I&#8217;ve seen Elizabeth thrive at being the centre of an organization, traffic copping work and keeping people connected. In my years of working with Elizabeth, I was personally always grateful when she turned her tenacity in my direction to ensure that I wasn&#8217;t letting important things slip out of my line of sight.</p>
           <div class="testimonial-attribution">
@@ -629,6 +622,8 @@ head_extra: |
             <span class="testimonial-role">CTO &amp; Co-founder, Accredible</span>
           </div>
         </div>
+        </div><!-- /testimonials-more -->
+        <button class="exp-toggle" onclick="toggleTestimonials(this)" aria-expanded="false" style="margin-top:16px;">Show 3 more testimonials ↓</button>
       </div>
     </section>
 
@@ -708,11 +703,19 @@ head_extra: |
 
 <script>
   function toggleExperience(btn) {
-    var wrapper = btn.previousElementSibling;
+    var wrapper = btn.nextElementSibling;
     var isCollapsed = wrapper.classList.contains('collapsed');
     wrapper.classList.toggle('collapsed', !isCollapsed);
     btn.setAttribute('aria-expanded', String(isCollapsed));
-    btn.textContent = isCollapsed ? 'Show less ↑' : 'Show all 6 areas of experience ↓';
+    btn.textContent = isCollapsed ? 'Hide breakdown ↑' : 'See experience breakdown ↓';
+  }
+
+  function toggleTestimonials(btn) {
+    var more = document.getElementById('testimonials-more');
+    var isHidden = more.style.display === 'none';
+    more.style.display = isHidden ? 'contents' : 'none';
+    btn.setAttribute('aria-expanded', String(isHidden));
+    btn.textContent = isHidden ? 'Show less ↑' : 'Show 3 more testimonials ↓';
   }
 
   function toggleFaq(btn) {
