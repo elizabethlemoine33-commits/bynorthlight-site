@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Best AI Tools for Canadian Small Businesses (2026)"
+seo_title: "15 Best AI Tools for Canadian Small Businesses (2026)"
 description: "Honest recommendations for PIPEDA-compliant AI tools — Canadian-hosted options for chat, transcription, storage, and when to use US tools carefully."
 og_title: "Best AI Tools for Canadian Small Businesses (2026)"
 og_description: "Honest recommendations for PIPEDA-compliant AI tools — Canadian-hosted options for chat, transcription, storage, and when to use US tools carefully."

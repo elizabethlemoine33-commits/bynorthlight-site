@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "How to Prepare Your Business for AI Adoption: A Canadian Checklist"
+seo_title: "AI Adoption Checklist for Canadian Small Businesses (2026)"
 description: "An AI readiness checklist for Canadian SMBs — covers problem definition, data audits, PIPEDA compliance, and pilot structure before you buy a single tool."
 og_title: "How to Prepare Your Business for AI Adoption: A Canadian Checklist"
 og_description: "An AI readiness checklist for Canadian small and medium businesses — problem definition, data audits, compliance, pilot structure, and change management before you buy a single tool."

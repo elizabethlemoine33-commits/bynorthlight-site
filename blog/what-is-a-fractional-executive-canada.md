@@ -106,7 +106,7 @@ A fractional COO builds the operational backbone of your business — the system
 
 Common scenario: the business is growing, but operations are held together by one long-tenured person who knows where all the bodies are buried, and if that person leaves, the whole thing collapses. A fractional COO comes in, documents what's actually happening, builds repeatable processes, distributes the knowledge, and exits once the operational risk is manageable.
 
-If you're weighing the difference between a fractional COO and a full-time hire, I wrote a longer comparison [here](/blog/fractional-coo-vs-hiring-full-time-canada.html).
+For a full breakdown of the role, see [What Is a Fractional COO?](/blog/what-is-fractional-coo.html). If you're weighing the difference between a fractional COO and a full-time hire, I wrote a longer comparison [here](/blog/fractional-coo-vs-hiring-full-time-canada.html).
 
 ### What an Engagement Actually Looks Like
 
