@@ -1,123 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Northlight Vault — Help &amp; Documentation</title>
-  <meta name="description" content="Quick-start guide for Northlight Vault. Learn how to add accounts, search files, open documents, and manage your connected cloud storage.">
-  <link rel="canonical" href="https://bynorthlight.ca/vault-docs.html">
-  <meta property="og:title" content="Northlight Vault — Help &amp; Documentation">
-  <meta property="og:description" content="Quick-start guide for Northlight Vault. Learn how to add accounts, search files, open documents, and manage your connected cloud storage.">
-  <meta property="og:image" content="https://bynorthlight.ca/northlight-vault-icon-512x512.png">
-  <meta property="og:url" content="https://bynorthlight.ca/vault-docs.html">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Northlight">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Northlight Vault — Help &amp; Documentation">
-  <meta name="twitter:description" content="Quick-start guide for Northlight Vault. Learn how to add accounts, search files, and open documents.">
-  <meta name="twitter:image" content="https://bynorthlight.ca/northlight-vault-icon-512x512.png">
-  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bynorthlight.ca/" },
-      { "@type": "ListItem", "position": 2, "name": "Northlight Vault", "item": "https://bynorthlight.ca/vault.html" },
-      { "@type": "ListItem", "position": 3, "name": "Help & Documentation", "item": "https://bynorthlight.ca/vault-docs.html" }
-    ]
-  }
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+---
+layout: page
+title: "Northlight Vault — Help & Documentation"
+description: "Quick-start guide for Northlight Vault. Learn how to add accounts, search files, open documents, and manage your connected cloud storage."
+canonical: "https://bynorthlight.ca/vault-docs.html"
+og_title: "Northlight Vault — Help & Documentation"
+og_description: "Quick-start guide for Northlight Vault. Learn how to add accounts, search files, open documents, and manage your connected cloud storage."
+og_image: "https://bynorthlight.ca/northlight-vault-icon-512x512.png"
+og_type: website
+breadcrumbs:
+  - { name: "Home", url: "https://bynorthlight.ca/" }
+  - { name: "Northlight Vault", url: "https://bynorthlight.ca/vault.html" }
+  - { name: "Help & Documentation", url: "https://bynorthlight.ca/vault-docs.html" }
+head_extra: |
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    :root {
-      --midnight:   #0E0E14;
-      --surface:    #12121E;
-      --surface-2:  #10101C;
-      --border:     #1E2035;
-      --border-2:   #2A2A48;
-      --text:       #FFFFFF;
-      --cloud:      #C8CCE0;
-      --haze:       #BCC2DC;
-      --muted:      #99A1B6;
-      --structural: #6C7295;
-      --glacial:    #4FC3C8;
-      --boreal:     #5B8DD9;
-      --dusk:       #8B6FD4;
-      --aurora:     #C46FAA;
-    }
-
-    body {
-      background: var(--midnight);
-      color: var(--cloud);
-      font-family: 'Outfit', sans-serif;
-      min-height: 100vh;
-    }
-
-    .skip-nav {
-      position: absolute;
-      top: -100px; left: 0;
-      background: var(--dusk);
-      color: #fff;
-      padding: 10px 20px;
-      font-family: 'Jost', sans-serif;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-decoration: none;
-      border-radius: 0 0 6px 0;
-      z-index: 9999;
-      transition: top 0.2s;
-    }
-    .skip-nav:focus { top: 0; }
-
-    .top-bar {
-      height: 2px;
-      background: linear-gradient(90deg, #4fc3c8 0%, #5b8dd9 30%, #8b6fd4 65%, #c46faa 100%);
-    }
-
-    header {
-      padding: 24px 72px;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    .wordmark {
-      font-family: 'Jost', sans-serif;
-      font-weight: 600;
-      font-size: 24px;
-      letter-spacing: 0.07em;
-      background: linear-gradient(90deg, #4fc3c8 0%, #5b8dd9 33%, #8b6fd4 66%, #c46faa 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-decoration: none;
-    }
-
-    .header-product {
-      font-family: 'Jost', sans-serif;
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.20em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    main {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 60px 72px 100px;
-    }
-
     .back-link {
       display: inline-block;
       font-family: 'Jost', sans-serif;
@@ -131,7 +26,11 @@
       transition: color 0.2s;
     }
     .back-link:hover { color: var(--cloud); }
-
+    .doc-main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 72px 100px;
+    }
     h1 {
       font-family: 'Jost', sans-serif;
       font-weight: 600;
@@ -140,14 +39,12 @@
       color: var(--text);
       margin-bottom: 8px;
     }
-
     .page-meta {
       font-family: 'Outfit', sans-serif;
       font-size: 14px;
       color: var(--muted);
       margin-bottom: 0;
     }
-
     .aurora-line {
       width: 36px;
       height: 2px;
@@ -155,8 +52,6 @@
       border-radius: 2px;
       margin: 24px 0 48px;
     }
-
-    /* Table of contents */
     .toc {
       background: var(--surface-2);
       border: 1px solid var(--border);
@@ -164,7 +59,6 @@
       padding: 24px 28px;
       margin-bottom: 56px;
     }
-
     .toc-label {
       font-family: 'Jost', sans-serif;
       font-size: 10px;
@@ -174,7 +68,6 @@
       color: var(--muted);
       margin-bottom: 14px;
     }
-
     .toc ol {
       margin: 0;
       padding-left: 20px;
@@ -182,14 +75,7 @@
       flex-direction: column;
       gap: 8px;
     }
-
-    .toc li {
-      font-family: 'Outfit', sans-serif;
-      font-size: 14px;
-      color: var(--haze);
-      margin-bottom: 0;
-    }
-
+    .toc li { font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--haze); margin-bottom: 0; }
     .toc a {
       color: var(--haze);
       text-decoration: none;
@@ -197,13 +83,7 @@
       transition: color 0.2s, border-color 0.2s;
     }
     .toc a:hover { color: var(--glacial); border-color: rgba(79,195,200,0.4); }
-
-    /* Sections */
-    .doc-section {
-      margin-bottom: 56px;
-      scroll-margin-top: 24px;
-    }
-
+    .doc-section { margin-bottom: 56px; scroll-margin-top: 24px; }
     h2 {
       font-family: 'Jost', sans-serif;
       font-weight: 600;
@@ -217,7 +97,6 @@
       align-items: center;
       gap: 12px;
     }
-
     .section-num {
       display: inline-flex;
       align-items: center;
@@ -232,7 +111,6 @@
       color: #fff;
       flex-shrink: 0;
     }
-
     p {
       font-family: 'Outfit', sans-serif;
       font-size: 15px;
@@ -240,21 +118,8 @@
       color: var(--cloud);
       margin-bottom: 16px;
     }
-
-    /* Numbered steps */
-    .steps {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-top: 4px;
-    }
-
-    .step {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-    }
-
+    .steps { display: flex; flex-direction: column; gap: 12px; margin-top: 4px; }
+    .step { display: flex; gap: 16px; align-items: flex-start; }
     .step-num {
       display: inline-flex;
       align-items: center;
@@ -270,17 +135,13 @@
       flex-shrink: 0;
       margin-top: 1px;
     }
-
     .step-text {
       font-family: 'Outfit', sans-serif;
       font-size: 15px;
       line-height: 1.75;
       color: var(--cloud);
     }
-
     .step-text strong { color: var(--text); font-weight: 600; }
-
-    /* Tip / note callout */
     .tip {
       background: var(--surface);
       border: 1px solid var(--border-2);
@@ -289,13 +150,7 @@
       padding: 14px 18px;
       margin-top: 20px;
     }
-
-    .tip p {
-      font-size: 14px;
-      color: var(--haze);
-      margin-bottom: 0;
-    }
-
+    .tip p { font-size: 14px; color: var(--haze); margin-bottom: 0; }
     .tip-label {
       font-family: 'Jost', sans-serif;
       font-size: 10px;
@@ -305,8 +160,6 @@
       color: var(--glacial);
       margin-bottom: 6px;
     }
-
-    /* Warning callout */
     .warning {
       background: var(--surface);
       border: 1px solid var(--border-2);
@@ -315,13 +168,7 @@
       padding: 14px 18px;
       margin-top: 20px;
     }
-
-    .warning p {
-      font-size: 14px;
-      color: var(--haze);
-      margin-bottom: 0;
-    }
-
+    .warning p { font-size: 14px; color: var(--haze); margin-bottom: 0; }
     .warning-label {
       font-family: 'Jost', sans-serif;
       font-size: 10px;
@@ -331,8 +178,6 @@
       color: var(--aurora);
       margin-bottom: 6px;
     }
-
-    /* Contact section */
     .contact-card {
       background: var(--surface-2);
       border: 1px solid var(--border);
@@ -340,99 +185,22 @@
       padding: 24px 28px;
       margin-top: 56px;
     }
-
     .contact-card h2 {
       border-bottom: none;
       padding-bottom: 0;
       margin-bottom: 12px;
       font-size: 16px;
     }
-
-    .contact-card p {
-      font-size: 14px;
-      color: var(--haze);
-      margin-bottom: 8px;
-    }
-
+    .contact-card p { font-size: 14px; color: var(--haze); margin-bottom: 8px; }
     .contact-card p:last-child { margin-bottom: 0; }
-
-    a {
-      color: var(--glacial);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(79,195,200,0.25);
-      transition: border-color 0.2s, color 0.2s;
-    }
-    a:visited { color: var(--glacial); }
-    a:hover { color: var(--glacial); border-color: var(--glacial); }
-    a:focus { outline: 2px solid var(--dusk); outline-offset: 2px; border-radius: 2px; }
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 24px 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .footer-copy {
-      font-family: 'Outfit', sans-serif;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .footer-copy a { color: var(--muted); border-bottom: 1px solid var(--border-2); }
-    .footer-copy a:hover { color: var(--haze); }
-
-    .footer-links {
-      display: flex;
-      gap: 20px;
-    }
-
-    .footer-link {
-      font-family: 'Outfit', sans-serif;
-      font-size: 13px;
-      color: var(--muted);
-      text-decoration: none;
-      border: none;
-      transition: color 0.2s;
-    }
-    .footer-link:hover { color: var(--haze); }
-
     @media (max-width: 640px) {
-      header { padding: 20px 24px; }
-      main { padding: 40px 24px 64px; }
-      footer { padding: 20px 24px; flex-direction: column; align-items: flex-start; }
+      .doc-main { padding: 40px 24px 64px; }
       h1 { font-size: 26px; }
-      .footer-links { flex-wrap: wrap; gap: 14px; }
     }
   </style>
-  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <!-- Privacy-friendly analytics by Plausible -->
-  <script async src="https://plausible.io/js/pa-uccdYD5d_-tjjiMlRo9eR.js"></script>
-  <script>
-    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-    plausible.init()
-  </script>
-<style>
-.nav-wordmark,.wordmark{text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:4px;background:none;-webkit-text-fill-color:unset;color:unset;font-size:unset;letter-spacing:unset;}
-.wm-main{font-family:'Jost',sans-serif;font-weight:600;font-size:20px;letter-spacing:.08em;background:linear-gradient(105deg,#4fc3c8 0%,#5b8dd9 33%,#8b6fd4 66%,#c46faa 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.wm-sub{font-family:'Jost',sans-serif;font-weight:500;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#8A92A8;}
-</style>
-</head>
-<body>
-
-  <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div class="top-bar" role="presentation"></div>
-
-  <header>
-    <a href="/" class="wordmark"><span class="wm-main">Northlight</span><span class="wm-sub">Advisory Services</span></a>
-    <p class="header-product">Vault — Help &amp; Documentation</p>
-  </header>
-
-  <main id="main-content">
+---
+<main id="main-content">
+  <div class="doc-main">
 
     <a href="/vault.html" class="back-link">← Back to Northlight Vault</a>
 
@@ -447,7 +215,7 @@
         <li><a href="#delete-account">How to remove an account</a></li>
         <li><a href="#search">How to search your files</a></li>
         <li><a href="#open-file">How to open a file</a></li>
-          <li><a href="#feedback">How to leave feedback</a></li>
+        <li><a href="#feedback">How to leave feedback</a></li>
       </ol>
     </nav>
 
@@ -594,18 +362,5 @@
       <p><a href="mailto:support@bynorthlight.ca">support@bynorthlight.ca</a></p>
     </div>
 
-  </main>
-
-  <footer>
-    <p class="footer-copy">© 2026 Northlight &nbsp;·&nbsp; <a href="/vault-privacy.html">Vault Privacy Policy</a></p>
-    <nav aria-label="Footer navigation">
-      <div class="footer-links">
-        <a href="/vault.html" class="footer-link">Northlight Vault</a>
-        <a href="/index.html" class="footer-link">Northlight home</a>
-        <a href="/blog/" class="footer-link">Blog</a>
-      </div>
-    </nav>
-  </footer>
-
-</body>
-</html>
+  </div>
+</main>

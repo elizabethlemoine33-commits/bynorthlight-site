@@ -1,49 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Northlight Meetings — Download</title>
-  <meta name="robots" content="noindex">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+---
+layout: legal
+title: "Northlight Meetings — Download"
+description: "Your purchase of Northlight Meetings is confirmed. Download the installer and follow the setup steps."
+canonical: "https://bynorthlight.ca/meetings-thankyou.html"
+robots: noindex
+head_extra: |
   <style>
-    :root {
-      --midnight:   #0E0E14;
-      --surface:    #12121E;
-      --border:     #1E2035;
-      --text:       #FFFFFF;
-      --cloud:      #C8CCE0;
-      --haze:       #BCC2DC;
-      --muted:      #99A1B6;
-      --structural: #6C7295;
-      --glacial:    #4FC3C8;
-      --boreal:     #5B8DD9;
-      --dusk:       #8B6FD4;
-      --aurora:     #C46FAA;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      background: var(--midnight);
-      color: var(--cloud);
-      font-family: 'Outfit', sans-serif;
-      font-size: 16px;
-      line-height: 1.75;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      -webkit-font-smoothing: antialiased;
-    }
-    .top-bar {
-      height: 2px;
-      background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);
-    }
-    .page-wrap {
-      flex: 1;
+    .thankyou-shell {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 64px 24px;
+      padding: 64px 24px 96px;
+      min-height: 60vh;
     }
     .card {
       background: var(--surface);
@@ -92,8 +60,9 @@
       border-radius: 4px;
       transition: opacity 0.2s;
       margin-bottom: 20px;
+      border: none;
     }
-    .btn-download:hover { opacity: 0.88; }
+    .btn-download:hover { opacity: 0.88; color: #fff; }
     .install-steps {
       text-align: left;
       background: var(--midnight);
@@ -133,14 +102,10 @@
       color: var(--structural);
       margin-top: 8px;
     }
-    .support-note a {
-      color: var(--muted);
-    }
   </style>
-</head>
-<body>
-  <div class="top-bar"></div>
-  <div class="page-wrap">
+---
+<main id="main-content">
+  <div class="thankyou-shell">
     <div class="card">
       <div class="check-icon">✓</div>
       <h1 class="card-title">You're all set.</h1>
@@ -168,8 +133,7 @@
         </div>
       </div>
 
-      <p class="support-note">Questions? Email <a href="mailto:support@bynorthlight.ca">support@bynorthlight.ca</a></p>
+      <p class="support-note">Questions? Email <a href="mailto:support@bynorthlight.ca" style="color:var(--muted)">support@bynorthlight.ca</a></p>
     </div>
   </div>
-</body>
-</html>
+</main>

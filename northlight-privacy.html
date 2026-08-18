@@ -1,105 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — Northlight</title>
-  <meta name="description" content="Northlight's privacy policy. We collect minimal personal data and are committed to PIPEDA and GDPR compliance.">
-  <meta name="robots" content="noindex, nofollow">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+---
+layout: legal
+title: "Privacy Policy — Northlight Advisory Services"
+description: "Northlight's privacy policy. We collect minimal personal data and are committed to PIPEDA and GDPR compliance."
+canonical: "https://bynorthlight.ca/northlight-privacy.html"
+robots: "noindex, nofollow"
+head_extra: |
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    :root {
-      --midnight:   #0E0E14;
-      --surface:    #12121E;
-      --surface-2:  #10101C;
-      --border:     #1E2035;
-      --border-2:   #2A2A48;
-      --text:       #FFFFFF;
-      --cloud:      #C8CCE0;
-      --haze:       #BCC2DC;
-      --muted:      #99A1B6;
-      --structural: #6C7295;
-      --glacial:    #4FC3C8;
-      --boreal:     #5B8DD9;
-      --dusk:       #8B6FD4;
-      --aurora:     #C46FAA;
-    }
-
-    body {
-      background: var(--midnight);
-      color: var(--cloud);
-      font-family: 'Outfit', sans-serif;
-      min-height: 100vh;
-    }
-
-    /* ── SKIP NAV ── */
-    .skip-nav {
-      position: absolute;
-      top: -100px; left: 0;
-      background: var(--dusk);
-      color: #fff;
-      padding: 10px 20px;
-      font-family: 'Jost', sans-serif;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-decoration: none;
-      border-radius: 0 0 6px 0;
-      z-index: 9999;
-      transition: top 0.2s;
-    }
-    .skip-nav:focus { top: 0; }
-
-    /* ── TOP BAR ── */
-    .top-bar {
-      height: 2px;
-      background: linear-gradient(90deg, #4fc3c8 0%, #5b8dd9 30%, #8b6fd4 65%, #c46faa 100%);
-    }
-
-    /* ── HEADER ── */
-    header {
-      padding: 28px 72px;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    .wordmark {
-      font-family: 'Jost', sans-serif;
-      font-weight: 600;
-      font-size: 28px;
-      letter-spacing: 0.07em;
-      background: linear-gradient(90deg, #4fc3c8 0%, #5b8dd9 33%, #8b6fd4 66%, #c46faa 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-decoration: none;
-      border-bottom: none;
-      display: inline-block;
-    }
-
-    .header-product {
-      font-family: 'Jost', sans-serif;
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.20em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    /* ── MAIN ── */
     main {
       max-width: 740px;
       margin: 0 auto;
       padding: 64px 72px 80px;
     }
-
     .page-title {
       font-family: 'Jost', sans-serif;
       font-weight: 600;
@@ -108,14 +19,12 @@
       color: var(--text);
       margin-bottom: 8px;
     }
-
     .page-meta {
       font-family: 'Outfit', sans-serif;
       font-size: 14px;
       color: var(--muted);
       margin-bottom: 6px;
     }
-
     .aurora-line {
       width: 36px;
       height: 2px;
@@ -123,9 +32,7 @@
       border-radius: 2px;
       margin: 24px 0 48px;
     }
-
     section { margin-bottom: 48px; }
-
     h2 {
       font-family: 'Jost', sans-serif;
       font-weight: 600;
@@ -137,7 +44,6 @@
       padding-bottom: 12px;
       border-bottom: 1px solid var(--border);
     }
-
     h3 {
       font-family: 'Jost', sans-serif;
       font-weight: 600;
@@ -146,7 +52,6 @@
       color: var(--haze);
       margin: 24px 0 10px;
     }
-
     p {
       font-family: 'Outfit', sans-serif;
       font-size: 15px;
@@ -154,14 +59,8 @@
       color: var(--cloud);
       margin-bottom: 14px;
     }
-
     p:last-child { margin-bottom: 0; }
-
-    ul, ol {
-      margin: 10px 0 16px 24px;
-      color: var(--cloud);
-    }
-
+    ul, ol { margin: 10px 0 16px 24px; color: var(--cloud); }
     li {
       font-family: 'Outfit', sans-serif;
       font-size: 15px;
@@ -169,28 +68,21 @@
       color: var(--cloud);
       margin-bottom: 6px;
     }
-
     li strong { color: var(--haze); font-weight: 600; }
-
     a {
       color: var(--glacial);
       text-decoration: none;
       border-bottom: 1px solid rgba(79,195,200,0.25);
       transition: border-color 0.2s, color 0.2s;
     }
-
     a:visited { color: var(--glacial); }
     a:hover { border-color: var(--glacial); }
-
     a:focus {
       outline: 2px solid var(--dusk);
       outline-offset: 2px;
       border-radius: 2px;
     }
-
     strong { color: var(--text); font-weight: 600; }
-
-    /* ── TABLES ── */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -198,7 +90,6 @@
       font-family: 'Outfit', sans-serif;
       font-size: 14px;
     }
-
     thead th {
       font-family: 'Jost', sans-serif;
       font-size: 10px;
@@ -210,7 +101,6 @@
       padding: 10px 14px;
       border-bottom: 1px solid var(--border-2);
     }
-
     td {
       padding: 12px 14px;
       border-bottom: 1px solid var(--border);
@@ -218,8 +108,6 @@
       vertical-align: top;
       line-height: 1.7;
     }
-
-    /* Label column in two-column data tables */
     table.data-table td:first-child {
       width: 130px;
       color: var(--muted);
@@ -229,8 +117,6 @@
       letter-spacing: 0.04em;
       white-space: nowrap;
     }
-
-    /* ── INFO CARD ── */
     .info-card {
       background: var(--surface-2);
       border: 1px solid var(--border);
@@ -238,16 +124,8 @@
       padding: 20px 24px;
       margin: 16px 0;
     }
-
-    .info-card p {
-      font-size: 14px;
-      color: var(--haze);
-      margin-bottom: 6px;
-    }
-
+    .info-card p { font-size: 14px; color: var(--haze); margin-bottom: 6px; }
     .info-card p:last-child { margin-bottom: 0; }
-
-    /* ── ADDRESS TOGGLE ── */
     .address-toggle {
       display: inline-flex;
       align-items: center;
@@ -265,17 +143,13 @@
       margin-top: 4px;
       transition: color 0.2s;
     }
-
     .address-toggle:hover { color: var(--haze); }
-
     .address-toggle .toggle-icon {
       font-size: 10px;
       transition: transform 0.25s ease;
       display: inline-block;
     }
-
     .address-toggle.open .toggle-icon { transform: rotate(90deg); }
-
     .address-revealed {
       display: none;
       font-family: 'Outfit', sans-serif;
@@ -289,15 +163,11 @@
       border-radius: 6px;
       animation: fadeIn 0.2s ease;
     }
-
     .address-revealed.visible { display: block; }
-
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-4px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-
-    /* ── TECH DETAIL CARD ── */
     .tech-detail {
       background: var(--surface-2);
       border: 1px solid var(--border);
@@ -305,7 +175,6 @@
       padding: 18px 22px;
       margin: 14px 0;
     }
-
     .tech-label {
       font-family: 'Jost', sans-serif;
       font-size: 10px;
@@ -315,28 +184,10 @@
       color: var(--muted);
       margin-bottom: 14px;
     }
-
-    .tech-detail p {
-      font-size: 14px;
-      color: var(--haze);
-      margin-bottom: 10px;
-    }
-
+    .tech-detail p { font-size: 14px; color: var(--haze); margin-bottom: 10px; }
     .tech-detail p:last-child { margin-bottom: 0; }
-
-    .tech-detail ul,
-    .tech-detail ol {
-      margin: 0 0 10px 20px;
-      color: var(--haze);
-    }
-
-    .tech-detail li {
-      font-size: 14px;
-      color: var(--haze);
-      margin-bottom: 5px;
-    }
-
-    /* ── NOTICE (coloured sidebar) ── */
+    .tech-detail ul, .tech-detail ol { margin: 0 0 10px 20px; color: var(--haze); }
+    .tech-detail li { font-size: 14px; color: var(--haze); margin-bottom: 5px; }
     .notice {
       background: var(--surface);
       border: 1px solid var(--border-2);
@@ -345,451 +196,360 @@
       padding: 16px 20px;
       margin: 14px 0;
     }
-
     .notice.teal { border-left-color: var(--glacial); }
-
-    .notice p {
-      font-size: 14px;
-      color: var(--haze);
-      margin-bottom: 8px;
-    }
-
+    .notice p { font-size: 14px; color: var(--haze); margin-bottom: 8px; }
     .notice p:last-child { margin-bottom: 0; }
-
-    /* ── FOOTER ── */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 24px 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .footer-left {
-      font-family: 'Outfit', sans-serif;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .footer-left a {
-      color: var(--muted);
-      border-bottom: 1px solid var(--border-2);
-    }
-
-    .footer-left a:hover { color: var(--haze); border-color: var(--muted); }
-
-    .footer-right {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .footer-link {
-      font-family: 'Outfit', sans-serif;
-      font-size: 13px;
-      color: var(--muted);
-      text-decoration: none;
-      border: none;
-      transition: color 0.2s;
-    }
-
-    .footer-link:hover { color: var(--haze); }
-
-    /* ── RESPONSIVE ── */
     @media (max-width: 640px) {
-      header { padding: 28px 28px 24px; }
       main { padding: 48px 28px 64px; }
-      footer { padding: 20px 28px; flex-direction: column; align-items: flex-start; }
       .page-title { font-size: 28px; }
       table { font-size: 13px; }
       table.data-table td:first-child { width: auto; white-space: normal; }
-      .footer-right { flex-wrap: wrap; gap: 14px; }
     }
   </style>
-  <!-- Privacy-friendly analytics by Plausible -->
-  <script async src="https://plausible.io/js/pa-uccdYD5d_-tjjiMlRo9eR.js"></script>
-  <script>
-    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-    plausible.init()
-  </script>
-    <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<style>
-.nav-wordmark,.wordmark{text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:4px;background:none;-webkit-text-fill-color:unset;color:unset;font-size:unset;letter-spacing:unset;}
-.wm-main{font-family:'Jost',sans-serif;font-weight:600;font-size:20px;letter-spacing:.08em;background:linear-gradient(105deg,#4fc3c8 0%,#5b8dd9 33%,#8b6fd4 66%,#c46faa 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.wm-sub{font-family:'Jost',sans-serif;font-weight:500;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#8A92A8;}
-</style>
-</head>
-<body>
+---
+<main id="main-content">
 
-  <a href="#main-content" class="skip-nav">Skip to main content</a>
-  <div class="top-bar" role="presentation"></div>
+  <h1 class="page-title">Northlight Privacy Policy</h1>
+  <p class="page-meta">Effective Date: May 21, 2026 &nbsp;·&nbsp; Last Updated: June 11, 2026</p>
+  <div class="aurora-line" role="presentation"></div>
 
-  <header>
-    <a href="/index.html" class="wordmark"><span class="wm-main">Northlight</span><span class="wm-sub">Advisory Services</span></a>
-    <p class="header-product">Privacy Policy</p>
-  </header>
-
-  <main id="main-content">
-
-    <h1 class="page-title">Northlight Privacy Policy</h1>
-    <p class="page-meta">Effective Date: May 21, 2026 &nbsp;·&nbsp; Last Updated: June 11, 2026</p>
-    <div class="aurora-line" role="presentation"></div>
-
-    <!-- 1. WHO WE ARE -->
-    <section aria-labelledby="who-we-are">
-      <h2 id="who-we-are">1 · Who We Are</h2>
-      <p>Northlight is a strategy and operations consulting business created by Elizabeth Lemoine.</p>
-      <div class="info-card">
-        <p><strong style="color:#ffffff;">Operator:</strong> Elizabeth Lemoine</p>
-        <p><strong style="color:#ffffff;">Privacy Officer:</strong> Elizabeth Lemoine</p>
-        <p><strong style="color:#ffffff;">Business Registration:</strong> Nova Scotia Registration No. 4823949</p>
-        <p><strong style="color:#ffffff;">Contact:</strong> <a href="mailto:support@bynorthlight.ca">support@bynorthlight.ca</a></p>
-        <p><strong style="color:#ffffff;">Website:</strong> <a href="https://bynorthlight.ca">bynorthlight.ca</a></p>
-        <p style="margin-bottom:0;">
-          <strong style="color:#ffffff;">Physical Address:</strong>
-          <button class="address-toggle" onclick="toggleAddress('addr-1', this)" aria-expanded="false">
-            <span class="toggle-icon">▶</span> Show address
-          </button>
-          <span class="address-revealed" id="addr-1">
-            15 Kaleigh Drive, Eastern Passage, Nova Scotia B3G 1E3, Canada
-          </span>
-        </p>
-      </div>
-    </section>
-
-    <!-- 2. COMMITMENT -->
-    <section aria-labelledby="commitment">
-      <h2 id="commitment">2 · Our Commitment to Your Privacy</h2>
-      <p>Northlight is built on a philosophy of <strong>minimal data collection</strong> and <strong>maximum transparency</strong>. We collect only the information we need to serve you and improve our work — never to identify you personally or build profiles for advertising.</p>
-      <p>This policy explains:</p>
-      <ul>
-        <li>What information we collect on this website</li>
-        <li>How we use third-party services (responsibly)</li>
-        <li>Your rights under Canadian privacy law (PIPEDA) and international standards (GDPR)</li>
-        <li>How to access, correct, or delete your data</li>
-      </ul>
-      <p><strong>Note:</strong> If you use Northlight Vault or Northlight Meetings (our desktop apps), each has a separate privacy policy tailored to its specific data practices. <a href="/vault-privacy.html">View the Northlight Vault Privacy Policy</a> · <a href="/meetings-privacy.html">View the Northlight Meetings Privacy Policy</a>.</p>
-    </section>
-
-    <!-- 3. INFORMATION WE COLLECT -->
-    <section aria-labelledby="information-collect">
-      <h2 id="information-collect">3 · Information We Collect</h2>
-
-      <h3>On This Website (bynorthlight.ca)</h3>
-
-      <h3>Newsletter Signup — Aurora Brief</h3>
-      <div class="tech-detail">
-        <div class="tech-label">Aurora Brief — Subscription Flow</div>
-        <ol>
-          <li>You enter your first name and email address on our signup form</li>
-          <li>You see optional consent checkboxes for promotional emails and personalised ads (controlled by Kit.com)</li>
-          <li>You receive a confirmation email with a link to verify your subscription</li>
-          <li>After confirming, you're subscribed to the Aurora Brief newsletter (sent monthly)</li>
-        </ol>
-        <p>Your subscription to the Aurora Brief is confirmed whether or not you consent to the optional checkboxes.</p>
-      </div>
-
-      <h3>Analytics — Plausible</h3>
-      <div class="notice teal">
-        <p>Plausible collects <strong>no personal data</strong> — no cookies, no tracking IDs, no email addresses or names. Only anonymous aggregated data: page views, traffic sources, device types.</p>
-        <p>This helps us understand trends and improve the website, but we cannot tie any activity back to you as an individual.</p>
-      </div>
-
-      <h3>No Contact Form</h3>
-      <div class="notice">
-        <p>We don't have a contact form on this website. If you'd like to reach out, email us at <a href="mailto:support@bynorthlight.ca">support@bynorthlight.ca</a>.</p>
-      </div>
-
-      <h3>From the Aurora Brief Newsletter (Kit.com)</h3>
-      <div class="tech-detail">
-        <div class="tech-label">Kit.com — Data Handling</div>
-        <p>Kit.com collects and stores your first name, email address, and your optional consent choices for promotional emails and personalised ad targeting.</p>
-        <p>Kit.com's servers are US-based. Data is transferred under the EU–U.S. Data Privacy Framework, UK extension, and Swiss–U.S. Data Privacy Framework. Kit.com is SOC 2 Type II compliant and committed to GDPR, PIPEDA, and CCPA compliance.</p>
-        <p>When you confirm your subscription, Kit.com shows you two optional checkboxes. We encourage you to consent to promotional emails — that's how we share updates, early access, and relevant product news. You can manage these preferences at any time through Kit.com.</p>
-      </div>
-
-      <h3>Unsubscribing</h3>
-      <ul>
-        <li>Unsubscribe from promotional emails: link in any email from us, or manage in Kit.com account settings</li>
-        <li>Unsubscribe from the Aurora Brief: same process</li>
-      </ul>
-
-      <h3>Delete Your Data — Right to Be Forgotten</h3>
-      <p>Under PIPEDA and GDPR, you have the right to request deletion of your personal data.</p>
-      <div class="notice teal">
-        <p><strong>Self-service (fastest):</strong> <a href="https://kit.com/account/request-to-be-forgotten">Fill out Kit.com's Right to Be Forgotten form</a></p>
-        <p><strong>Or through us:</strong> Email <a href="mailto:support@bynorthlight.ca">support@bynorthlight.ca</a> with "Data Deletion Request" in the subject line, and we'll submit the form on your behalf.</p>
-      </div>
-
-      <h3>From Northlight Vault — If You Submit Feedback</h3>
-      <div class="tech-detail">
-        <div class="tech-label">Vault Feedback — What We Collect</div>
-        <p>If you submit feedback about Northlight Vault, we collect your name (optional), email address, and feedback text and type (bug report, feature idea, or general feedback).</p>
-        <p>Your feedback is stored in ClickUp (our task management system) so we can review, respond, and improve the app. We keep feedback for 12 months, then automatically delete it. You can request earlier deletion at any time by emailing <a href="mailto:support@bynorthlight.ca">support@bynorthlight.ca</a>.</p>
-      </div>
-      <p>For full details on how Vault works with your data, see the <a href="/vault-privacy.html">Northlight Vault Privacy Policy</a>.</p>
-
-      <h3>From Client Projects — If You Engage Northlight for Services</h3>
-      <p>If you work with Northlight on a project or consulting engagement, we may collect personal and business information needed to deliver the work: your name, email, and company information; documents you share with us; communications (emails, meeting notes, feedback); and project-related data specific to your engagement.</p>
-      <div class="tech-detail">
-        <div class="tech-label">Client Data — Storage</div>
-        <p><strong>Google Workspace</strong> — email, documents, and communications</p>
-        <p><strong>ClickUp</strong> — project tracking, timelines, and feedback</p>
-      </div>
-      <p>Both services are PIPEDA and GDPR compliant. We only access data needed for your project, don't use it for marketing, don't share it with third parties, and retain it for the duration of your project plus seven years as required by the Income Tax Act (Canada), then securely delete it. You may request deletion of non-legally-required records at any time.</p>
-    </section>
-
-    <!-- 4. THIRD-PARTY SERVICES -->
-    <section aria-labelledby="third-party">
-      <h2 id="third-party">4 · Third-Party Services &amp; Data Flows</h2>
-      <p>We use several tools to run Northlight. Here's where your data goes and why:</p>
-
-      <h3>Kit.com — Newsletter Platform</h3>
-      <table class="data-table">
-        <tbody>
-          <tr><td>What data</td><td>First name, email, consent preferences</td></tr>
-          <tr><td>Where</td><td>US-based servers (data transferred via EU–U.S. DPF)</td></tr>
-          <tr><td>Why</td><td>Manages our Aurora Brief newsletter, sends monthly emails, handles subscriber preferences</td></tr>
-          <tr><td>Privacy</td><td><a href="https://kit.com/privacy">Kit.com Privacy Policy</a></td></tr>
-          <tr><td>Your control</td><td>Manage subscription settings in Kit.com account, or use the right-to-be-forgotten form linked above</td></tr>
-        </tbody>
-      </table>
-
-      <h3>Plausible Analytics</h3>
-      <table class="data-table">
-        <tbody>
-          <tr><td>What data</td><td>None. Anonymous aggregated website traffic only — no personal data collected</td></tr>
-          <tr><td>Where</td><td>Plausible servers (EU-based)</td></tr>
-          <tr><td>Why</td><td>Understand how people use bynorthlight.ca, identify trends, improve the site</td></tr>
-          <tr><td>Privacy</td><td><a href="https://plausible.io/privacy">Plausible Privacy Policy</a></td></tr>
-          <tr><td>Your control</td><td>No personal data is collected, so there's nothing to manage or delete</td></tr>
-        </tbody>
-      </table>
-
-      <h3>Google Workspace</h3>
-      <table class="data-table">
-        <tbody>
-          <tr><td>What data</td><td>Email communications and documents (only if engaging Northlight for services)</td></tr>
-          <tr><td>Where</td><td>Google's global data centres (no regional lock on current plan)</td></tr>
-          <tr><td>Why</td><td>We use Gmail and Google Drive to manage client projects, store documents, and communicate</td></tr>
-          <tr><td>Privacy</td><td>Cloud Data Processing Addendum (CDPA) accepted June 11, 2026.<br>EU Standard Contractual Clauses accepted June 11, 2026.<br>EU–US Data Privacy Framework certified.<br>ISO 27001 certified. SOC 3 audited.<br>Google Cloud Platform data sharing: Disabled.<br><a href="https://policies.google.com/privacy">Google Privacy Policy</a></td></tr>
-          <tr><td>Your control</td><td>If you engage Northlight, we'll discuss data handling as part of your project agreement. You can request deletion when the project ends.</td></tr>
-        </tbody>
-      </table>
-
-      <h3>ClickUp — Project Management &amp; Feedback</h3>
-      <table class="data-table">
-        <tbody>
-          <tr><td>What data</td><td>Vault feedback (name, email, feedback text — with your consent) or client project data (name, email, project-related information)</td></tr>
-          <tr><td>Where</td><td>AWS servers (US and international, GDPR/SOC 2 compliant)</td></tr>
-          <tr><td>Why</td><td>We use ClickUp to track feedback, manage projects, and respond to users</td></tr>
-          <tr><td>Privacy</td><td><a href="https://clickup.com/privacy">ClickUp Privacy Policy</a></td></tr>
-          <tr><td>Your control</td><td>For Vault feedback: request deletion by emailing <a href="mailto:support@bynorthlight.ca">support@bynorthlight.ca</a> (we delete within 30 days). For client projects: deletion handled per your project agreement.</td></tr>
-        </tbody>
-      </table>
-
-      <h3>Social Media</h3>
-      <p>Northlight has a presence on LinkedIn, Threads (Meta), and Instagram. We link to these platforms on our website. When you click through to our social profiles, those platforms collect data according to their own privacy policies — we don't control this.</p>
-      <ul>
-        <li><a href="https://www.linkedin.com/legal/privacy-policy">LinkedIn Privacy Policy</a></li>
-        <li><a href="https://www.meta.com/privacy/">Meta Privacy Policy (Instagram &amp; Threads)</a></li>
-      </ul>
-    </section>
-
-    <!-- 5. COOKIES -->
-    <section aria-labelledby="cookies">
-      <h2 id="cookies">5 · Cookies &amp; Tracking</h2>
-      <p><strong>Plausible Analytics:</strong> No cookies, no tracking IDs.</p>
-      <p><strong>Kit.com:</strong> Embeds a tracking pixel in emails to record opens, and rewrites links to track clicks. May also use cookies to manage your subscription preferences. See the <a href="https://kit.com/privacy">Kit.com Privacy Policy</a> for details.</p>
-      <p><strong>Retargeting &amp; Ads:</strong> Northlight does not use retargeting pixels, ad trackers, or external ad networks, and does not track you across other websites. Kit.com's optional "personalised ads" consent checkbox (shown at signup) is controlled entirely by Kit.com, not Northlight — see <a href="https://kit.com/privacy">Kit.com's Privacy Policy</a> for how they handle that data if you opt in.</p>
-    </section>
-
-    <!-- 6. DATA RETENTION -->
-    <section aria-labelledby="retention">
-      <h2 id="retention">6 · Data Retention</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Data Type</th>
-            <th>Retention</th>
-            <th>Who Manages</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Newsletter email</td>
-            <td>Active while subscribed. On unsubscribe, deletion is managed by Kit within their platform. Northlight holds no independent copy of subscriber data.</td>
-            <td>Kit.com</td>
-          </tr>
-          <tr>
-            <td>Vault feedback</td>
-            <td>12 months, then auto-deleted</td>
-            <td>Northlight</td>
-          </tr>
-          <tr>
-            <td>Vault feedback — early deletion</td>
-            <td>Deleted immediately upon request</td>
-            <td>Northlight</td>
-          </tr>
-          <tr>
-            <td>Website analytics</td>
-            <td>N/A — anonymous only</td>
-            <td>Plausible</td>
-          </tr>
-          <tr>
-            <td>Client project data</td>
-            <td>As long as needed for project; deleted upon request</td>
-            <td>Northlight</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- 7. YOUR RIGHTS -->
-    <section aria-labelledby="rights">
-      <h2 id="rights">7 · Your Rights Under Canadian &amp; International Privacy Law</h2>
-
-      <h3>PIPEDA — Personal Information Protection and Electronic Documents Act</h3>
-      <p>As a Canadian resident, you have the right to:</p>
-      <ul>
-        <li><strong>Know</strong> whether Northlight holds personal information about you</li>
-        <li><strong>Access</strong> any personal information we hold</li>
-        <li><strong>Correct</strong> inaccurate or incomplete information</li>
-        <li><strong>Withdraw consent</strong> for the collection or use of your personal information</li>
-        <li><strong>Request deletion</strong> of your personal information</li>
-        <li><strong>Lodge a complaint</strong> with the Office of the Privacy Commissioner of Canada</li>
-      </ul>
-
-      <h3>GDPR — If You're in the EU</h3>
-      <p>If you're in the European Union, United Kingdom, or Switzerland, GDPR and similar laws give you additional rights:</p>
-      <ul>
-        <li>All PIPEDA rights above</li>
-        <li><strong>Right to erasure</strong> ("right to be forgotten")</li>
-        <li><strong>Right to restrict processing</strong></li>
-        <li><strong>Right to data portability</strong> — receive your data in a portable format</li>
-        <li><strong>Right to object</strong> to certain processing</li>
-        <li>Lodge a complaint with your local data protection authority</li>
-      </ul>
-
-      <h3>Our Lawful Basis for Processing (GDPR Article 6)</h3>
-      <p>Where GDPR applies, we rely on one or more of the following lawful bases, depending on the data and purpose:</p>
-      <table class="data-table">
-        <thead>
-          <tr><th>Data collected</th><th>Purpose</th><th>Lawful basis</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Name, email (Aurora Brief)</td><td>Sending the newsletter</td><td>Consent</td></tr>
-          <tr><td>Email engagement (opens/clicks)</td><td>Understanding what content resonates</td><td>Legitimate interest</td></tr>
-          <tr><td>Client contact/project data</td><td>Delivering contracted services</td><td>Contract</td></tr>
-          <tr><td>Financial/invoicing records</td><td>Tax and legal compliance</td><td>Legal obligation</td></tr>
-        </tbody>
-      </table>
-
-      <h3>CASL — Canada's Anti-Spam Legislation</h3>
-      <p>As a Canadian business sending commercial electronic messages, Northlight complies with Canada's Anti-Spam Legislation (CASL):</p>
-      <ul>
-        <li>We only send marketing emails to people who have given express consent, verified through our double opt-in process</li>
-        <li>Every email identifies who it's from and how to contact us</li>
-        <li>Every email includes a working unsubscribe mechanism, honoured within 10 business days</li>
-      </ul>
-
-      <h3>How to Exercise Your Rights</h3>
-      <p>Email <a href="mailto:support@bynorthlight.ca">support@bynorthlight.ca</a> with your name, email, and a description of what you're requesting. We'll respond within 30 days. If your request involves a third-party service (Kit.com, ClickUp, etc.), we'll direct you to their forms or submit on your behalf.</p>
-      <p><strong>For Kit.com right-to-be-forgotten requests:</strong> <a href="https://kit.com/account/request-to-be-forgotten">Fill out Kit.com's form directly</a> — it's fastest.</p>
-    </section>
-
-    <!-- 8. BILL C-27 -->
-    <section aria-labelledby="bill-c27">
-      <h2 id="bill-c27">8 · Bill C-27 &amp; Emerging Privacy Standards</h2>
-      <p>Canada's proposed Consumer Privacy Protection Act (Bill C-27) died on the Order Paper in January 2025 when Parliament was prorogued. As of June 2026, no replacement legislation has received Royal Assent. Reintroduction in some form is anticipated, but the timeline and content remain unconfirmed. Northlight has elected to align with the more rigorous standards anticipated under future reform, and with GDPR-adjacent international standards:</p>
-      <ul>
-        <li><strong>Minimal data collection:</strong> We collect only what we need</li>
-        <li><strong>Clear consent:</strong> Explicit opt-in for promotional communications</li>
-        <li><strong>User control:</strong> Easy access to manage, correct, and delete your data</li>
-        <li><strong>No dark patterns:</strong> We don't use manipulative design to trick you into sharing data</li>
-        <li><strong>Transparency:</strong> This policy is written in plain language, not legalese</li>
-      </ul>
-      <p>When Bill C-27 becomes law, Northlight will be ready.</p>
-    </section>
-
-    <!-- 9. CHILDREN -->
-    <section aria-labelledby="children">
-      <h2 id="children">9 · Children's Privacy</h2>
-      <p>Northlight services are not directed at anyone under 18. If you're under 18, please do not subscribe to our newsletter or submit feedback without parental consent.</p>
-    </section>
-
-    <!-- 10. CHANGES -->
-    <section aria-labelledby="changes">
-      <h2 id="changes">10 · Changes to This Policy</h2>
-      <p>We may update this privacy policy as our practices evolve. Material changes include:</p>
-      <ul>
-        <li>Adding new data collection practices</li>
-        <li>Changing data retention periods</li>
-        <li>Adding or removing third-party services that store your data</li>
-        <li>Changes to how we use or share your personal information</li>
-      </ul>
-      <p>We'll notify newsletter subscribers of material changes via email and updated release notes. Continued use of our services after notification constitutes acceptance of the updated policy.</p>
-      <p>Minor clarifications or corrections don't require notification.</p>
-    </section>
-
-    <!-- 11. CONTACT -->
-    <section aria-labelledby="contact">
-      <h2 id="contact">11 · Contact Us</h2>
-      <p>Questions about this privacy policy or your privacy rights?</p>
-      <div class="info-card">
-        <p><strong style="color:#ffffff;">Northlight</strong></p>
-        <p><a href="mailto:support@bynorthlight.ca">support@bynorthlight.ca</a></p>
-        <p><a href="https://bynorthlight.ca">bynorthlight.ca</a></p>
-        <p style="margin-bottom:0;">
-          <strong style="color:#ffffff;">Physical Address:</strong>
-          <button class="address-toggle" onclick="toggleAddress('addr-2', this)" aria-expanded="false">
-            <span class="toggle-icon">▶</span> Show address
-          </button>
-          <span class="address-revealed" id="addr-2">
-            15 Kaleigh Drive, Eastern Passage, Nova Scotia B3G 1E3, Canada
-          </span>
-        </p>
-      </div>
-      <p>
-        <strong>Privacy Commissioner of Canada — to lodge a complaint:</strong><br>
-        <a href="https://www.priv.gc.ca">Office of the Privacy Commissioner of Canada</a>
+  <!-- 1. WHO WE ARE -->
+  <section aria-labelledby="who-we-are">
+    <h2 id="who-we-are">1 · Who We Are</h2>
+    <p>Northlight is a strategy and operations consulting business created by Elizabeth Lemoine.</p>
+    <div class="info-card">
+      <p><strong style="color:#ffffff;">Operator:</strong> Elizabeth Lemoine</p>
+      <p><strong style="color:#ffffff;">Privacy Officer:</strong> Elizabeth Lemoine</p>
+      <p><strong style="color:#ffffff;">Business Registration:</strong> Nova Scotia Registration No. 4823949</p>
+      <p><strong style="color:#ffffff;">Contact:</strong> <a href="mailto:support@bynorthlight.ca">support@bynorthlight.ca</a></p>
+      <p><strong style="color:#ffffff;">Website:</strong> <a href="https://bynorthlight.ca">bynorthlight.ca</a></p>
+      <p style="margin-bottom:0;">
+        <strong style="color:#ffffff;">Physical Address:</strong>
+        <button class="address-toggle" onclick="toggleAddress('addr-1', this)" aria-expanded="false">
+          <span class="toggle-icon">▶</span> Show address
+        </button>
+        <span class="address-revealed" id="addr-1">
+          15 Kaleigh Drive, Eastern Passage, Nova Scotia B3G 1E3, Canada
+        </span>
       </p>
-    </section>
+    </div>
+  </section>
 
-  </main>
+  <!-- 2. COMMITMENT -->
+  <section aria-labelledby="commitment">
+    <h2 id="commitment">2 · Our Commitment to Your Privacy</h2>
+    <p>Northlight is built on a philosophy of <strong>minimal data collection</strong> and <strong>maximum transparency</strong>. We collect only the information we need to serve you and improve our work — never to identify you personally or build profiles for advertising.</p>
+    <p>This policy explains:</p>
+    <ul>
+      <li>What information we collect on this website</li>
+      <li>How we use third-party services (responsibly)</li>
+      <li>Your rights under Canadian privacy law (<a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/">PIPEDA</a>) and international standards (GDPR)</li>
+      <li>How to access, correct, or delete your data</li>
+    </ul>
+    <p><strong>Note:</strong> If you use Northlight Vault or Northlight Meetings (our desktop apps), each has a separate privacy policy tailored to its specific data practices. <a href="/vault-privacy.html">View the Northlight Vault Privacy Policy</a> · <a href="/meetings-privacy.html">View the Northlight Meetings Privacy Policy</a>.</p>
+  </section>
 
-  <footer>
-    <div class="footer-left">Questions? <a href="mailto:support@bynorthlight.ca">support@bynorthlight.ca</a> &nbsp;·&nbsp; © 2026 Northlight</div>
-    <nav aria-label="Footer navigation">
-      <div class="footer-right">
-        <a href="/index.html" class="footer-link">Northlight home</a>
-        <a href="/vault.html" class="footer-link">Northlight Vault</a>
-        <a href="/blog/" class="footer-link">Blog</a>
-        <a href="https://aurora-brief.kit.com/110f173cf7" class="footer-link">Aurora Brief</a>
-      </div>
-    </nav>
-  </footer>
+  <!-- 3. INFORMATION WE COLLECT -->
+  <section aria-labelledby="information-collect">
+    <h2 id="information-collect">3 · Information We Collect</h2>
 
-  <script>
-    function toggleAddress(id, btn) {
-      var el = document.getElementById(id);
-      var isOpen = el.classList.contains('visible');
-      if (isOpen) {
-        el.classList.remove('visible');
-        btn.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-        btn.querySelector('.toggle-icon').nextSibling.textContent = ' Show address';
-      } else {
-        el.classList.add('visible');
-        btn.classList.add('open');
-        btn.setAttribute('aria-expanded', 'true');
-        btn.querySelector('.toggle-icon').nextSibling.textContent = ' Hide address';
-      }
+    <h3>On This Website (bynorthlight.ca)</h3>
+
+    <h3>Newsletter Signup — Aurora Brief</h3>
+    <div class="tech-detail">
+      <div class="tech-label">Aurora Brief — Subscription Flow</div>
+      <ol>
+        <li>You enter your first name and email address on our signup form</li>
+        <li>You see optional consent checkboxes for promotional emails and personalised ads (controlled by Kit.com)</li>
+        <li>You receive a confirmation email with a link to verify your subscription</li>
+        <li>After confirming, you're subscribed to the Aurora Brief newsletter (sent monthly)</li>
+      </ol>
+      <p>Your subscription to the Aurora Brief is confirmed whether or not you consent to the optional checkboxes.</p>
+    </div>
+
+    <h3>Analytics — Plausible</h3>
+    <div class="notice teal">
+      <p>Plausible collects <strong>no personal data</strong> — no cookies, no tracking IDs, no email addresses or names. Only anonymous aggregated data: page views, traffic sources, device types.</p>
+      <p>This helps us understand trends and improve the website, but we cannot tie any activity back to you as an individual.</p>
+    </div>
+
+    <h3>No Contact Form</h3>
+    <div class="notice">
+      <p>We don't have a contact form on this website. If you'd like to reach out, email us at <a href="mailto:support@bynorthlight.ca">support@bynorthlight.ca</a>.</p>
+    </div>
+
+    <h3>From the Aurora Brief Newsletter (Kit.com)</h3>
+    <div class="tech-detail">
+      <div class="tech-label">Kit.com — Data Handling</div>
+      <p>Kit.com collects and stores your first name, email address, and your optional consent choices for promotional emails and personalised ad targeting.</p>
+      <p>Kit.com's servers are US-based. Data is transferred under the EU–U.S. Data Privacy Framework, UK extension, and Swiss–U.S. Data Privacy Framework. Kit.com is SOC 2 Type II compliant and committed to GDPR, <a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/">PIPEDA</a>, and CCPA compliance.</p>
+      <p>When you confirm your subscription, Kit.com shows you two optional checkboxes. We encourage you to consent to promotional emails — that's how we share updates, early access, and relevant product news. You can manage these preferences at any time through Kit.com.</p>
+    </div>
+
+    <h3>Unsubscribing</h3>
+    <ul>
+      <li>Unsubscribe from promotional emails: link in any email from us, or manage in Kit.com account settings</li>
+      <li>Unsubscribe from the Aurora Brief: same process</li>
+    </ul>
+
+    <h3>Delete Your Data — Right to Be Forgotten</h3>
+    <p>Under <a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/">PIPEDA</a> and GDPR, you have the right to request deletion of your personal data.</p>
+    <div class="notice teal">
+      <p><strong>Self-service (fastest):</strong> <a href="https://kit.com/account/request-to-be-forgotten">Fill out Kit.com's Right to Be Forgotten form</a></p>
+      <p><strong>Or through us:</strong> Email <a href="mailto:support@bynorthlight.ca">support@bynorthlight.ca</a> with "Data Deletion Request" in the subject line, and we'll submit the form on your behalf.</p>
+    </div>
+
+    <h3>From Northlight Vault — If You Submit Feedback</h3>
+    <div class="tech-detail">
+      <div class="tech-label">Vault Feedback — What We Collect</div>
+      <p>If you submit feedback about Northlight Vault, we collect your name (optional), email address, and feedback text and type (bug report, feature idea, or general feedback).</p>
+      <p>Your feedback is stored in ClickUp (our task management system) so we can review, respond, and improve the app. We keep feedback for 12 months, then automatically delete it. You can request earlier deletion at any time by emailing <a href="mailto:support@bynorthlight.ca">support@bynorthlight.ca</a>.</p>
+    </div>
+    <p>For full details on how Vault works with your data, see the <a href="/vault-privacy.html">Northlight Vault Privacy Policy</a>.</p>
+
+    <h3>From Client Projects — If You Engage Northlight for Services</h3>
+    <p>If you work with Northlight on a project or consulting engagement, we may collect personal and business information needed to deliver the work: your name, email, and company information; documents you share with us; communications (emails, meeting notes, feedback); and project-related data specific to your engagement.</p>
+    <div class="tech-detail">
+      <div class="tech-label">Client Data — Storage</div>
+      <p><strong>Google Workspace</strong> — email, documents, and communications</p>
+      <p><strong>ClickUp</strong> — project tracking, timelines, and feedback</p>
+    </div>
+    <p>Both services are <a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/">PIPEDA</a> and GDPR compliant. We only access data needed for your project, don't use it for marketing, don't share it with third parties, and retain it for the duration of your project plus seven years as required by the Income Tax Act (Canada), then securely delete it. You may request deletion of non-legally-required records at any time.</p>
+  </section>
+
+  <!-- 4. THIRD-PARTY SERVICES -->
+  <section aria-labelledby="third-party">
+    <h2 id="third-party">4 · Third-Party Services &amp; Data Flows</h2>
+    <p>We use several tools to run Northlight. Here's where your data goes and why:</p>
+
+    <h3>Kit.com — Newsletter Platform</h3>
+    <table class="data-table">
+      <tbody>
+        <tr><td>What data</td><td>First name, email, consent preferences</td></tr>
+        <tr><td>Where</td><td>US-based servers (data transferred via EU–U.S. DPF)</td></tr>
+        <tr><td>Why</td><td>Manages our Aurora Brief newsletter, sends monthly emails, handles subscriber preferences</td></tr>
+        <tr><td>Privacy</td><td><a href="https://kit.com/privacy">Kit.com Privacy Policy</a></td></tr>
+        <tr><td>Your control</td><td>Manage subscription settings in Kit.com account, or use the right-to-be-forgotten form linked above</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Plausible Analytics</h3>
+    <table class="data-table">
+      <tbody>
+        <tr><td>What data</td><td>None. Anonymous aggregated website traffic only — no personal data collected</td></tr>
+        <tr><td>Where</td><td>Plausible servers (EU-based)</td></tr>
+        <tr><td>Why</td><td>Understand how people use bynorthlight.ca, identify trends, improve the site</td></tr>
+        <tr><td>Privacy</td><td><a href="https://plausible.io/privacy">Plausible Privacy Policy</a></td></tr>
+        <tr><td>Your control</td><td>No personal data is collected, so there's nothing to manage or delete</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Google Workspace</h3>
+    <table class="data-table">
+      <tbody>
+        <tr><td>What data</td><td>Email communications and documents (only if engaging Northlight for services)</td></tr>
+        <tr><td>Where</td><td>Google's global data centres (no regional lock on current plan)</td></tr>
+        <tr><td>Why</td><td>We use Gmail and Google Drive to manage client projects, store documents, and communicate</td></tr>
+        <tr><td>Privacy</td><td>Cloud Data Processing Addendum (CDPA) accepted June 11, 2026.<br>EU Standard Contractual Clauses accepted June 11, 2026.<br>EU–US Data Privacy Framework certified.<br>ISO 27001 certified. SOC 3 audited.<br>Google Cloud Platform data sharing: Disabled.<br><a href="https://policies.google.com/privacy">Google Privacy Policy</a></td></tr>
+        <tr><td>Your control</td><td>If you engage Northlight, we'll discuss data handling as part of your project agreement. You can request deletion when the project ends.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>ClickUp — Project Management &amp; Feedback</h3>
+    <table class="data-table">
+      <tbody>
+        <tr><td>What data</td><td>Vault feedback (name, email, feedback text — with your consent) or client project data (name, email, project-related information)</td></tr>
+        <tr><td>Where</td><td>AWS servers (US and international, GDPR/SOC 2 compliant)</td></tr>
+        <tr><td>Why</td><td>We use ClickUp to track feedback, manage projects, and respond to users</td></tr>
+        <tr><td>Privacy</td><td><a href="https://clickup.com/privacy">ClickUp Privacy Policy</a></td></tr>
+        <tr><td>Your control</td><td>For Vault feedback: request deletion by emailing <a href="mailto:support@bynorthlight.ca">support@bynorthlight.ca</a> (we delete within 30 days). For client projects: deletion handled per your project agreement.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Social Media</h3>
+    <p>Northlight has a presence on LinkedIn, Threads (Meta), and Instagram. We link to these platforms on our website. When you click through to our social profiles, those platforms collect data according to their own privacy policies — we don't control this.</p>
+    <ul>
+      <li><a href="https://www.linkedin.com/legal/privacy-policy">LinkedIn Privacy Policy</a></li>
+      <li><a href="https://www.meta.com/privacy/">Meta Privacy Policy (Instagram &amp; Threads)</a></li>
+    </ul>
+  </section>
+
+  <!-- 5. COOKIES -->
+  <section aria-labelledby="cookies">
+    <h2 id="cookies">5 · Cookies &amp; Tracking</h2>
+    <p><strong>Plausible Analytics:</strong> No cookies, no tracking IDs.</p>
+    <p><strong>Kit.com:</strong> Embeds a tracking pixel in emails to record opens, and rewrites links to track clicks. May also use cookies to manage your subscription preferences. See the <a href="https://kit.com/privacy">Kit.com Privacy Policy</a> for details.</p>
+    <p><strong>Retargeting &amp; Ads:</strong> Northlight does not use retargeting pixels, ad trackers, or external ad networks, and does not track you across other websites. Kit.com's optional "personalised ads" consent checkbox (shown at signup) is controlled entirely by Kit.com, not Northlight — see <a href="https://kit.com/privacy">Kit.com's Privacy Policy</a> for how they handle that data if you opt in.</p>
+  </section>
+
+  <!-- 6. DATA RETENTION -->
+  <section aria-labelledby="retention">
+    <h2 id="retention">6 · Data Retention</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Data Type</th>
+          <th>Retention</th>
+          <th>Who Manages</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Newsletter email</td>
+          <td>Active while subscribed. On unsubscribe, deletion is managed by Kit within their platform. Northlight holds no independent copy of subscriber data.</td>
+          <td>Kit.com</td>
+        </tr>
+        <tr>
+          <td>Vault feedback</td>
+          <td>12 months, then auto-deleted</td>
+          <td>Northlight</td>
+        </tr>
+        <tr>
+          <td>Vault feedback — early deletion</td>
+          <td>Deleted immediately upon request</td>
+          <td>Northlight</td>
+        </tr>
+        <tr>
+          <td>Website analytics</td>
+          <td>N/A — anonymous only</td>
+          <td>Plausible</td>
+        </tr>
+        <tr>
+          <td>Client project data</td>
+          <td>As long as needed for project; deleted upon request</td>
+          <td>Northlight</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 7. YOUR RIGHTS -->
+  <section aria-labelledby="rights">
+    <h2 id="rights">7 · Your Rights Under Canadian &amp; International Privacy Law</h2>
+
+    <h3><a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/">PIPEDA</a> — Personal Information Protection and Electronic Documents Act</h3>
+    <p>As a Canadian resident, you have the right to:</p>
+    <ul>
+      <li><strong>Know</strong> whether Northlight holds personal information about you</li>
+      <li><strong>Access</strong> any personal information we hold</li>
+      <li><strong>Correct</strong> inaccurate or incomplete information</li>
+      <li><strong>Withdraw consent</strong> for the collection or use of your personal information</li>
+      <li><strong>Request deletion</strong> of your personal information</li>
+      <li><strong>Lodge a complaint</strong> with the Office of the Privacy Commissioner of Canada</li>
+    </ul>
+
+    <h3>GDPR — If You're in the EU</h3>
+    <p>If you're in the European Union, United Kingdom, or Switzerland, GDPR and similar laws give you additional rights:</p>
+    <ul>
+      <li>All PIPEDA rights above</li>
+      <li><strong>Right to erasure</strong> ("right to be forgotten")</li>
+      <li><strong>Right to restrict processing</strong></li>
+      <li><strong>Right to data portability</strong> — receive your data in a portable format</li>
+      <li><strong>Right to object</strong> to certain processing</li>
+      <li>Lodge a complaint with your local data protection authority</li>
+    </ul>
+
+    <h3>Our Lawful Basis for Processing (GDPR Article 6)</h3>
+    <p>Where GDPR applies, we rely on one or more of the following lawful bases, depending on the data and purpose:</p>
+    <table class="data-table">
+      <thead>
+        <tr><th>Data collected</th><th>Purpose</th><th>Lawful basis</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Name, email (Aurora Brief)</td><td>Sending the newsletter</td><td>Consent</td></tr>
+        <tr><td>Email engagement (opens/clicks)</td><td>Understanding what content resonates</td><td>Legitimate interest</td></tr>
+        <tr><td>Client contact/project data</td><td>Delivering contracted services</td><td>Contract</td></tr>
+        <tr><td>Financial/invoicing records</td><td>Tax and legal compliance</td><td>Legal obligation</td></tr>
+      </tbody>
+    </table>
+
+    <h3>CASL — Canada's Anti-Spam Legislation</h3>
+    <p>As a Canadian business sending commercial electronic messages, Northlight complies with Canada's Anti-Spam Legislation (CASL):</p>
+    <ul>
+      <li>We only send marketing emails to people who have given express consent, verified through our double opt-in process</li>
+      <li>Every email identifies who it's from and how to contact us</li>
+      <li>Every email includes a working unsubscribe mechanism, honoured within 10 business days</li>
+    </ul>
+
+    <h3>How to Exercise Your Rights</h3>
+    <p>Email <a href="mailto:support@bynorthlight.ca">support@bynorthlight.ca</a> with your name, email, and a description of what you're requesting. We'll respond within 30 days. If your request involves a third-party service (Kit.com, ClickUp, etc.), we'll direct you to their forms or submit on your behalf.</p>
+    <p><strong>For Kit.com right-to-be-forgotten requests:</strong> <a href="https://kit.com/account/request-to-be-forgotten">Fill out Kit.com's form directly</a> — it's fastest.</p>
+  </section>
+
+  <!-- 8. BILL C-27 -->
+  <section aria-labelledby="bill-c27">
+    <h2 id="bill-c27">8 · Bill C-27 &amp; Emerging Privacy Standards</h2>
+    <p>Canada's proposed Consumer Privacy Protection Act (Bill C-27) died on the Order Paper in January 2025 when Parliament was prorogued. As of June 2026, no replacement legislation has received Royal Assent. Reintroduction in some form is anticipated, but the timeline and content remain unconfirmed. Northlight has elected to align with the more rigorous standards anticipated under future reform, and with GDPR-adjacent international standards:</p>
+    <ul>
+      <li><strong>Minimal data collection:</strong> We collect only what we need</li>
+      <li><strong>Clear consent:</strong> Explicit opt-in for promotional communications</li>
+      <li><strong>User control:</strong> Easy access to manage, correct, and delete your data</li>
+      <li><strong>No dark patterns:</strong> We don't use manipulative design to trick you into sharing data</li>
+      <li><strong>Transparency:</strong> This policy is written in plain language, not legalese</li>
+    </ul>
+    <p>When Bill C-27 becomes law, Northlight will be ready.</p>
+  </section>
+
+  <!-- 9. CHILDREN -->
+  <section aria-labelledby="children">
+    <h2 id="children">9 · Children's Privacy</h2>
+    <p>Northlight services are not directed at anyone under 18. If you're under 18, please do not subscribe to our newsletter or submit feedback without parental consent.</p>
+  </section>
+
+  <!-- 10. CHANGES -->
+  <section aria-labelledby="changes">
+    <h2 id="changes">10 · Changes to This Policy</h2>
+    <p>We may update this privacy policy as our practices evolve. Material changes include:</p>
+    <ul>
+      <li>Adding new data collection practices</li>
+      <li>Changing data retention periods</li>
+      <li>Adding or removing third-party services that store your data</li>
+      <li>Changes to how we use or share your personal information</li>
+    </ul>
+    <p>We'll notify newsletter subscribers of material changes via email and updated release notes. Continued use of our services after notification constitutes acceptance of the updated policy.</p>
+    <p>Minor clarifications or corrections don't require notification.</p>
+  </section>
+
+  <!-- 11. CONTACT -->
+  <section aria-labelledby="contact">
+    <h2 id="contact">11 · Contact Us</h2>
+    <p>Questions about this privacy policy or your privacy rights?</p>
+    <div class="info-card">
+      <p><strong style="color:#ffffff;">Northlight Advisory Services</strong></p>
+      <p><a href="mailto:support@bynorthlight.ca">support@bynorthlight.ca</a></p>
+      <p><a href="https://bynorthlight.ca">bynorthlight.ca</a></p>
+      <p style="margin-bottom:0;">
+        <strong style="color:#ffffff;">Physical Address:</strong>
+        <button class="address-toggle" onclick="toggleAddress('addr-2', this)" aria-expanded="false">
+          <span class="toggle-icon">▶</span> Show address
+        </button>
+        <span class="address-revealed" id="addr-2">
+          15 Kaleigh Drive, Eastern Passage, Nova Scotia B3G 1E3, Canada
+        </span>
+      </p>
+    </div>
+    <p>
+      <strong>Privacy Commissioner of Canada — to lodge a complaint:</strong><br>
+      <a href="https://www.priv.gc.ca">Office of the Privacy Commissioner of Canada</a>
+    </p>
+  </section>
+
+</main>
+
+<script>
+  function toggleAddress(id, btn) {
+    var el = document.getElementById(id);
+    var isOpen = el.classList.contains('visible');
+    if (isOpen) {
+      el.classList.remove('visible');
+      btn.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.querySelector('.toggle-icon').nextSibling.textContent = ' Show address';
+    } else {
+      el.classList.add('visible');
+      btn.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      btn.querySelector('.toggle-icon').nextSibling.textContent = ' Hide address';
     }
-  </script>
-
-</body>
-</html>
+  }
+</script>

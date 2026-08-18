@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ page.description }}">
+  {% if page.robots %}<meta name="robots" content="{{ page.robots }}">{% endif %}
+  <link rel="canonical" href="{{ page.canonical }}">
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  {{ page.head_extra }}
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --midnight:   #0E0E14;
+      --deep-night: #08080F;
+      --surface:    #12121E;
+      --surface-2:  #10101C;
+      --border:     #1E2035;
+      --border-2:   #2A2A48;
+      --text:       #FFFFFF;
+      --cloud:      #C8CCE0;
+      --haze:       #BCC2DC;
+      --muted:      #99A1B6;
+      --structural: #6C7295;
+      --glacial:    #4FC3C8;
+      --boreal:     #5B8DD9;
+      --dusk:       #8B6FD4;
+      --aurora:     #C46FAA;
+    }
+
+    body {
+      background: var(--midnight);
+      color: var(--cloud);
+      font-family: 'Outfit', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── SKIP NAV ── */
+    .skip-nav {
+      position: absolute; top: -100px; left: 0;
+      background: var(--dusk); color: #fff;
+      padding: 10px 20px;
+      font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600;
+      letter-spacing: 0.06em; text-decoration: none;
+      border-radius: 0 0 6px 0; z-index: 9999; transition: top 0.2s;
+    }
+    .skip-nav:focus { top: 0; }
+
+    a { color: var(--glacial); }
+    a:visited { color: var(--glacial); }
+
+    /* ── TOP BAR ── */
+    .top-bar {
+      height: 2px;
+      background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);
+    }
+
+    /* ── LEGAL NAV ── */
+    .legal-nav {
+      display: flex; align-items: center;
+      padding: 20px 64px;
+      border-bottom: 1px solid var(--border);
+    }
+    .legal-wordmark {
+      text-decoration: none; display: flex; flex-direction: column;
+      align-items: center; gap: 4px;
+    }
+    .wm-main {
+      font-family: 'Jost', sans-serif; font-weight: 600; font-size: 20px;
+      letter-spacing: .08em;
+      background: linear-gradient(105deg, #4fc3c8 0%, #5b8dd9 33%, #8b6fd4 66%, #c46faa 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .wm-sub {
+      font-family: 'Jost', sans-serif; font-weight: 500; font-size: 10px;
+      letter-spacing: .22em; text-transform: uppercase; color: #8A92A8;
+    }
+
+    /* ── LAYOUT UTILITIES ── */
+    .page-wrap { max-width: 860px; margin: 0 auto; padding: 60px 64px 80px; }
+
+    /* ── LEGAL FOOTER ── */
+    .legal-footer-wrap { border-top: 1px solid var(--border); }
+    .legal-footer {
+      padding: 28px 64px;
+      max-width: 1280px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between; gap: 24px;
+      flex-wrap: wrap;
+    }
+    .legal-footer-copy {
+      font-family: 'Jost', sans-serif; font-size: 11px;
+      letter-spacing: 0.1em; color: var(--muted);
+    }
+    .legal-footer-links {
+      display: flex; gap: 20px; list-style: none; flex-wrap: wrap;
+    }
+    .legal-footer-links a {
+      font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.1em;
+      color: var(--muted); text-decoration: none; transition: color 0.2s;
+    }
+    .legal-footer-links a:hover { color: var(--text); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .legal-nav { padding: 20px 32px; }
+      .page-wrap { padding: 48px 32px 64px; }
+      .legal-footer { padding: 24px 32px; }
+    }
+    @media (max-width: 768px) {
+      .legal-nav { padding: 16px 24px; }
+      .page-wrap { padding: 40px 24px 60px; }
+      .legal-footer { padding: 20px 24px; flex-direction: column; align-items: flex-start; gap: 12px; }
+    }
+  </style>
+
+  <!-- Privacy-friendly analytics -->
+  <script async src="https://plausible.io/js/pa-uccdYD5d_-tjjiMlRo9eR.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
+</head>
+<body>
+  <a class="skip-nav" href="#main-content">Skip to content</a>
+  <div class="top-bar" role="presentation"></div>
+  <nav class="legal-nav" aria-label="Site navigation">
+    <a href="/" class="legal-wordmark" aria-label="Northlight Advisory Services — home">
+      <span class="wm-main">Northlight</span>
+      <span class="wm-sub">Advisory Services</span>
+    </a>
+  </nav>
+  {{ content }}
+  <div class="legal-footer-wrap">
+    <footer class="legal-footer">
+      <p class="legal-footer-copy">© 2026 Northlight Advisory Services</p>
+      <ul class="legal-footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/northlight-privacy.html">Privacy Policy</a></li>
+        <li><a href="mailto:hello@bynorthlight.ca">hello@bynorthlight.ca</a></li>
+      </ul>
+    </footer>
+  </div>
+</body>
+</html>

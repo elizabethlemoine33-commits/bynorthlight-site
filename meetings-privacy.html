@@ -1,101 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — Northlight Meetings</title>
-  <meta name="description" content="Privacy policy for Northlight Meetings, a desktop application for recording, transcribing, and analyzing client calls.">
-  <meta name="robots" content="noindex, nofollow">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+---
+layout: legal
+title: "Privacy Policy — Northlight Meetings"
+description: "Privacy policy for Northlight Meetings, a desktop application for recording, transcribing, and analyzing client calls."
+canonical: "https://bynorthlight.ca/meetings-privacy.html"
+robots: "noindex, nofollow"
+head_extra: |
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    :root {
-      --midnight:   #0E0E14;
-      --surface:    #12121E;
-      --surface-2:  #10101C;
-      --border:     #1E2035;
-      --border-2:   #2A2A48;
-      --text:       #FFFFFF;
-      --cloud:      #C8CCE0;
-      --haze:       #BCC2DC;
-      --muted:      #99A1B6;
-      --structural: #6C7295;
-      --glacial:    #4FC3C8;
-      --boreal:     #5B8DD9;
-      --dusk:       #8B6FD4;
-      --aurora:     #C46FAA;
-    }
-
-    body {
-      background: var(--midnight);
-      color: var(--cloud);
-      font-family: 'Outfit', sans-serif;
-      min-height: 100vh;
-    }
-
-    .skip-nav {
-      position: absolute;
-      top: -100px; left: 0;
-      background: var(--dusk);
-      color: #fff;
-      padding: 10px 20px;
-      font-family: 'Jost', sans-serif;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-decoration: none;
-      border-radius: 0 0 6px 0;
-      z-index: 9999;
-      transition: top 0.2s;
-    }
-    .skip-nav:focus { top: 0; }
-
-    .top-bar {
-      height: 2px;
-      background: linear-gradient(90deg, #4fc3c8 0%, #5b8dd9 30%, #8b6fd4 65%, #c46faa 100%);
-    }
-
-    header {
-      padding: 28px 72px;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    .wordmark {
-      font-family: 'Jost', sans-serif;
-      font-weight: 600;
-      font-size: 28px;
-      letter-spacing: 0.07em;
-      background: linear-gradient(90deg, #4fc3c8 0%, #5b8dd9 33%, #8b6fd4 66%, #c46faa 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-decoration: none;
-      border-bottom: none;
-      display: inline-block;
-    }
-
-    .header-product {
-      font-family: 'Jost', sans-serif;
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.20em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
     main {
       max-width: 740px;
       margin: 0 auto;
       padding: 64px 72px 80px;
     }
-
     .page-title {
       font-family: 'Jost', sans-serif;
       font-weight: 600;
@@ -104,14 +19,12 @@
       color: var(--text);
       margin-bottom: 8px;
     }
-
     .page-meta {
       font-family: 'Outfit', sans-serif;
       font-size: 14px;
       color: var(--muted);
       margin-bottom: 6px;
     }
-
     .aurora-line {
       width: 36px;
       height: 2px;
@@ -119,9 +32,7 @@
       border-radius: 2px;
       margin: 24px 0 48px;
     }
-
     section { margin-bottom: 48px; }
-
     h2 {
       font-family: 'Jost', sans-serif;
       font-weight: 600;
@@ -133,7 +44,6 @@
       padding-bottom: 12px;
       border-bottom: 1px solid var(--border);
     }
-
     h3 {
       font-family: 'Jost', sans-serif;
       font-weight: 600;
@@ -142,7 +52,6 @@
       color: var(--haze);
       margin: 24px 0 10px;
     }
-
     p {
       font-family: 'Outfit', sans-serif;
       font-size: 15px;
@@ -150,14 +59,8 @@
       color: var(--cloud);
       margin-bottom: 14px;
     }
-
     p:last-child { margin-bottom: 0; }
-
-    ul, ol {
-      margin: 10px 0 16px 24px;
-      color: var(--cloud);
-    }
-
+    ul, ol { margin: 10px 0 16px 24px; color: var(--cloud); }
     li {
       font-family: 'Outfit', sans-serif;
       font-size: 15px;
@@ -165,27 +68,8 @@
       color: var(--cloud);
       margin-bottom: 6px;
     }
-
     li strong { color: var(--haze); font-weight: 600; }
-
-    a {
-      color: var(--glacial);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(79,195,200,0.25);
-      transition: border-color 0.2s, color 0.2s;
-    }
-
-    a:visited { color: var(--glacial); }
-    a:hover { border-color: var(--glacial); }
-
-    a:focus {
-      outline: 2px solid var(--dusk);
-      outline-offset: 2px;
-      border-radius: 2px;
-    }
-
     strong { color: var(--text); font-weight: 600; }
-
     table {
       width: 100%;
       border-collapse: collapse;
@@ -193,7 +77,6 @@
       font-family: 'Outfit', sans-serif;
       font-size: 14px;
     }
-
     thead th {
       font-family: 'Jost', sans-serif;
       font-size: 10px;
@@ -205,7 +88,6 @@
       padding: 10px 14px;
       border-bottom: 1px solid var(--border-2);
     }
-
     td {
       padding: 12px 14px;
       border-bottom: 1px solid var(--border);
@@ -213,7 +95,6 @@
       vertical-align: top;
       line-height: 1.7;
     }
-
     .info-card {
       background: var(--surface-2);
       border: 1px solid var(--border);
@@ -221,15 +102,8 @@
       padding: 20px 24px;
       margin: 16px 0;
     }
-
-    .info-card p {
-      font-size: 14px;
-      color: var(--haze);
-      margin-bottom: 6px;
-    }
-
+    .info-card p { font-size: 14px; color: var(--haze); margin-bottom: 6px; }
     .info-card p:last-child { margin-bottom: 0; }
-
     .tech-detail {
       background: var(--surface-2);
       border: 1px solid var(--border);
@@ -237,7 +111,6 @@
       padding: 18px 22px;
       margin: 14px 0;
     }
-
     .tech-label {
       font-family: 'Jost', sans-serif;
       font-size: 10px;
@@ -247,23 +120,10 @@
       color: var(--muted);
       margin-bottom: 14px;
     }
-
-    .tech-detail p {
-      font-size: 14px;
-      color: var(--haze);
-      margin-bottom: 10px;
-    }
-
+    .tech-detail p { font-size: 14px; color: var(--haze); margin-bottom: 10px; }
     .tech-detail p:last-child { margin-bottom: 0; }
-
     .tech-detail ul { margin: 0 0 10px 20px; color: var(--haze); }
-
-    .tech-detail li {
-      font-size: 14px;
-      color: var(--haze);
-      margin-bottom: 5px;
-    }
-
+    .tech-detail li { font-size: 14px; color: var(--haze); margin-bottom: 5px; }
     .notice {
       background: var(--surface);
       border: 1px solid var(--border-2);
@@ -272,81 +132,15 @@
       padding: 16px 20px;
       margin: 14px 0;
     }
-
     .notice.teal { border-left-color: var(--glacial); }
-
-    .notice p {
-      font-size: 14px;
-      color: var(--haze);
-      margin-bottom: 8px;
-    }
-
+    .notice p { font-size: 14px; color: var(--haze); margin-bottom: 8px; }
     .notice p:last-child { margin-bottom: 0; }
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 24px 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .footer-left {
-      font-family: 'Outfit', sans-serif;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .footer-left a {
-      color: var(--muted);
-      border-bottom: 1px solid var(--border-2);
-    }
-
-    .footer-left a:hover { color: var(--haze); border-color: var(--muted); }
-
-    .footer-right {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .footer-link {
-      font-family: 'Outfit', sans-serif;
-      font-size: 13px;
-      color: var(--muted);
-      text-decoration: none;
-      border: none;
-      transition: color 0.2s;
-    }
-
-    .footer-link:hover { color: var(--haze); }
-
     @media (max-width: 760px) {
-      header, footer { padding: 24px 28px; }
       main { padding: 48px 28px 64px; }
       .page-title { font-size: 28px; }
     }
   </style>
-<style>
-.nav-wordmark,.wordmark{text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:4px;background:none;-webkit-text-fill-color:unset;color:unset;font-size:unset;letter-spacing:unset;}
-.wm-main{font-family:'Jost',sans-serif;font-weight:600;font-size:20px;letter-spacing:.08em;background:linear-gradient(105deg,#4fc3c8 0%,#5b8dd9 33%,#8b6fd4 66%,#c46faa 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.wm-sub{font-family:'Jost',sans-serif;font-weight:500;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#8A92A8;}
-</style>
-</head>
-<body>
-
-<a class="skip-nav" href="#main-content">Skip to main content</a>
-<div class="top-bar" role="presentation"></div>
-
-<header>
-  <div>
-    <a href="https://bynorthlight.ca" class="wordmark" aria-label="Northlight Advisory Services"><span class="wm-main">Northlight</span><span class="wm-sub">Advisory Services</span></a>
-  </div>
-  <span class="header-product">Meetings — Privacy Policy</span>
-</header>
-
+---
 <main id="main-content">
 
   <h1 class="page-title">Privacy Policy</h1>
@@ -453,7 +247,7 @@
     <h2>Call Participant Consent</h2>
     <p>You are responsible for obtaining consent from call participants before recording. Requirements vary by jurisdiction:</p>
     <ul>
-      <li><strong>Canada (PIPEDA / provincial laws):</strong> One-party consent in most provinces; two-party consent required in some contexts.</li>
+      <li><strong>Canada (<a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/">PIPEDA</a> / provincial laws):</strong> One-party consent in most provinces; two-party consent required in some contexts.</li>
       <li><strong>United States:</strong> Federal law requires one-party consent; some states (California, Florida, Illinois, etc.) require all-party consent.</li>
       <li><strong>European Union (GDPR):</strong> Explicit informed consent from all participants is typically required.</li>
     </ul>
@@ -479,24 +273,11 @@
   <section>
     <h2>Contact</h2>
     <div class="info-card">
-      <p><strong>Northlight</strong></p>
+      <p><strong>Northlight Advisory Services</strong></p>
       <p>Privacy inquiries: <a href="mailto:hello@bynorthlight.ca">hello@bynorthlight.ca</a></p>
       <p><a href="https://bynorthlight.ca">bynorthlight.ca</a></p>
     </div>
-    <p>For privacy questions related specifically to Northlight Meetings — including requests to understand what data may be held on your behalf, or to exercise rights under PIPEDA or GDPR — email the address above with the subject line "Meetings Privacy".</p>
+    <p>For privacy questions related specifically to Northlight Meetings — including requests to understand what data may be held on your behalf, or to exercise rights under <a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/">PIPEDA</a> or GDPR — email the address above with the subject line "Meetings Privacy".</p>
   </section>
 
 </main>
-
-<footer>
-  <div class="footer-left">
-    &copy; 2026 Northlight &nbsp;&middot;&nbsp;
-    <a href="https://bynorthlight.ca/northlight-privacy.html">General Privacy Policy</a>
-  </div>
-  <div class="footer-right">
-    <a href="https://bynorthlight.ca" class="footer-link">bynorthlight.ca</a>
-  </div>
-</footer>
-
-</body>
-</html>

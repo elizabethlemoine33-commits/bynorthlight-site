@@ -1,66 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Service — Northlight Meetings</title>
-  <meta name="description" content="Terms of Service for Northlight Meetings, a Windows desktop application by Northlight Advisory Services.">
-  <link rel="canonical" href="https://bynorthlight.ca/meetings-terms.html">
-  <meta name="robots" content="noindex">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <script defer data-domain="bynorthlight.ca" src="https://plausible.io/js/script.js"></script>
+---
+layout: legal
+title: "Terms of Service — Northlight Meetings"
+description: "Terms of Service for Northlight Meetings, a Windows desktop application by Northlight Advisory Services."
+canonical: "https://bynorthlight.ca/meetings-terms.html"
+robots: noindex
+head_extra: |
   <style>
-    :root {
-      --midnight:   #0E0E14;
-      --surface:    #12121E;
-      --border:     #1E2035;
-      --text:       #FFFFFF;
-      --cloud:      #C8CCE0;
-      --haze:       #BCC2DC;
-      --muted:      #99A1B6;
-      --structural: #6C7295;
-      --glacial:    #4FC3C8;
-      --boreal:     #5B8DD9;
-      --dusk:       #8B6FD4;
-      --aurora:     #C46FAA;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      background: var(--midnight);
-      color: var(--cloud);
-      font-family: 'Outfit', sans-serif;
-      font-size: 16px;
-      line-height: 1.75;
-      min-height: 100vh;
-      -webkit-font-smoothing: antialiased;
-    }
-    .top-bar {
-      height: 2px;
-      background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);
-    }
-    .nav {
-      padding: 20px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-brand {
+    .back-link {
+      display: inline-block;
       font-family: 'Jost', sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--text);
-      text-decoration: none;
-      letter-spacing: 0.04em;
-    }
-    .nav-link {
-      font-size: 13px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
       color: var(--muted);
       text-decoration: none;
+      margin-bottom: 32px;
+      transition: color 0.2s;
     }
-    .nav-link:hover { color: var(--cloud); }
-    .page-wrap {
+    .back-link:hover { color: var(--cloud); }
+    .content-wrap {
       max-width: 720px;
       margin: 0 auto;
       padding: 64px 32px 96px;
@@ -101,8 +60,6 @@
       line-height: 1.75;
       margin-bottom: 16px;
     }
-    a { color: var(--glacial); text-decoration: none; }
-    a:hover { text-decoration: underline; }
     ul {
       margin: 0 0 16px 20px;
       color: var(--haze);
@@ -124,20 +81,14 @@
     }
     .contact-block p { margin-bottom: 4px; }
     @media (max-width: 600px) {
-      .nav { padding: 16px 20px; }
-      .page-wrap { padding: 40px 20px 64px; }
+      .content-wrap { padding: 40px 20px 64px; }
       h1 { font-size: 26px; }
     }
   </style>
-</head>
-<body>
-  <div class="top-bar"></div>
-  <nav class="nav">
-    <a class="nav-brand" href="https://bynorthlight.ca">Northlight</a>
-    <a class="nav-link" href="https://bynorthlight.ca/meetings.html">← Back to Northlight Meetings</a>
-  </nav>
-
-  <div class="page-wrap">
+---
+<main id="main-content">
+  <div class="content-wrap">
+    <a href="/meetings.html" class="back-link">← Back to Northlight Meetings</a>
     <div class="eyebrow">Legal</div>
     <h1>Terms of Service</h1>
     <p class="meta">Northlight Meetings &nbsp;·&nbsp; Last updated August 14, 2026</p>
@@ -199,5 +150,4 @@
       <p style="margin-top: 12px; font-size: 13px; color: var(--structural);">Northlight Advisory Services &nbsp;·&nbsp; Halifax, Nova Scotia, Canada</p>
     </div>
   </div>
-</body>
-</html>
+</main>
