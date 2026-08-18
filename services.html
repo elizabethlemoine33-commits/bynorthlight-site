@@ -44,6 +44,7 @@ head_extra: |
           "@type": "Offer",
           "price": "299",
           "priceCurrency": "CAD",
+          "availability": "https://schema.org/InStock",
           "description": "One-time purchase. Refunds handled by Paddle per their refund policy."
         }
       },
@@ -302,6 +303,17 @@ head_extra: |
     .support-body a { color: var(--glacial); text-decoration: none; }
     .support-body a:hover { text-decoration: underline; }
 
+    /* ── AUTHOR BYLINE ── */
+    .author-byline { display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--border); padding-top: 16px; margin-top: 20px; }
+    .author-avatar-wrap { flex-shrink: 0; }
+    .author-avatar-img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 1.5px solid var(--border-2); display: block; }
+    .author-avatar-init { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, #4FC3C8, #8B6FD4); display: none; align-items: center; justify-content: center; font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600; color: #fff; }
+    .author-text { display: flex; flex-direction: column; gap: 1px; min-width: 0; flex: 1; }
+    .author-name { font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600; color: var(--text); }
+    .author-meta { font-family: 'Outfit', sans-serif; font-size: 12px; color: var(--structural); }
+    .author-link { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.10em; text-transform: uppercase; color: var(--glacial); text-decoration: none; margin-left: auto; flex-shrink: 0; white-space: nowrap; }
+    .author-link:hover { text-decoration: underline; }
+
     /* Responsive */
     @media (max-width: 1024px) {
       .services-page { padding-left: 32px; padding-right: 32px; }
@@ -326,8 +338,28 @@ head_extra: |
     <!-- ── HERO ── -->
     <div class="page-hero">
       <p class="page-eyebrow">Northlight Advisory Services &nbsp;·&nbsp; How We Work With You</p>
-      <h1 class="page-headline">Strategy, Tools, and <span>Advisory</span></h1>
+      <h1 class="page-headline"><span>Fractional COO, AI Advisory,</span> and Purpose-Built Tools for Canadian Small Business</h1>
       <p class="page-lead">We work with Canadian founders and operators who need clear thinking they can act on — not a framework, not a roadmap, not a consultant. Every engagement is structured around your specific situation.</p>
+      <div class="author-byline">
+        <div class="author-avatar-wrap">
+          <img src="/EL-aurora.png" alt="Elizabeth Lemoine" class="author-avatar-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <span class="author-avatar-init" aria-hidden="true">EL</span>
+        </div>
+        <div class="author-text">
+          <span class="author-name">Elizabeth Lemoine</span>
+          <span class="author-meta">Founder &amp; Principal &nbsp;·&nbsp; 10+ years director-level ops &nbsp;·&nbsp; Halifax, NS</span>
+        </div>
+        <a href="/about.html" class="author-link">Read bio →</a>
+      </div>
+      <div class="answer-block" style="margin-top: 20px;">
+        <p>Northlight Advisory Services is a Halifax, Nova Scotia–based fractional COO and AI adoption advisory practice for Canadian small businesses, founded by Elizabeth Lemoine. Services include strategic advisory, operations restructuring, AI adoption planning, and purpose-built software tools for the Canadian market.</p>
+      </div>
+    </div>
+
+    <!-- ── PROBLEM BLOCK ── -->
+    <div class="section-block">
+      <p style="font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--structural); margin-bottom: 14px;">The Problem</p>
+      <p style="font-family: 'Outfit', sans-serif; font-size: 17px; color: var(--haze); line-height: 1.75; max-width: 640px; margin-bottom: 0;">You're running a business without someone accountable for how it operates — making strategic decisions without a clear outside view, trying to evaluate AI tools without a plan that fits your regulatory context, and dealing with processes that were built for where you were, not where you're going.</p>
     </div>
 
     <!-- ── ADVISORY ── -->
@@ -352,12 +384,54 @@ head_extra: |
           <a href="https://www.everyexpert.com/elizabethlemoine" target="_blank" rel="noopener" class="btn-primary">Book a Clarity Call →</a>
         </div>
         <div class="profile-links">
-          <p style="font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--muted); line-height: 1.5; width: 100%; margin-bottom: 8px;">Verify Northlight's credentials and work history:</p>
+          <p style="font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--muted); line-height: 1.5; width: 100%; margin-bottom: 4px;">Elizabeth Lemoine is certified: PMI · Google Project Management · IBM Generative AI Specializations · Anthropic Claude · Cloud Computing Law (U of Penn). Named one of Canada's Best Fractional COO Services by Digital Reference 2026.</p>
+          <p style="font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--muted); line-height: 1.5; width: 100%; margin-bottom: 8px;">Verify credentials and work history:</p>
           <a href="https://www.everyexpert.com/elizabethlemoine" target="_blank" rel="noopener" class="profile-link">EveryExpert Profile ↗</a>
           <a href="https://www.gofractional.com/r/elizabeth-anne-randell-lemoine" target="_blank" rel="noopener" class="profile-link">GoFractional Profile ↗</a>
           <a href="https://www.linkedin.com/in/elizabethannelemoine" target="_blank" rel="noopener" class="profile-link">LinkedIn ↗</a>
           <a href="/about.html" class="profile-link">About Elizabeth →</a>
         </div>
+      </div>
+
+      <!-- Comparison table -->
+      <div style="margin-top: 36px; overflow-x: auto;">
+        <p style="font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--structural); margin-bottom: 14px;">How It Compares</p>
+        <table style="width: 100%; border-collapse: collapse; font-family: 'Outfit', sans-serif; font-size: 14px; min-width: 580px;">
+          <thead>
+            <tr>
+              <th style="text-align: left; padding: 10px 16px; color: var(--muted); font-weight: 500; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; border-bottom: 1px solid var(--border);"></th>
+              <th style="text-align: center; padding: 10px 16px; color: var(--glacial); font-weight: 600; font-size: 13px; border-bottom: 1px solid var(--border); background: rgba(79,195,200,0.05);">Northlight Advisory</th>
+              <th style="text-align: center; padding: 10px 16px; color: var(--muted); font-weight: 500; font-size: 13px; border-bottom: 1px solid var(--border);">Full-time COO / ops hire</th>
+              <th style="text-align: center; padding: 10px 16px; color: var(--muted); font-weight: 500; font-size: 13px; border-bottom: 1px solid var(--border);">General consultant</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding: 12px 16px; color: var(--haze); border-bottom: 1px solid var(--border);">Cost model</td>
+              <td style="padding: 12px 16px; text-align: center; color: var(--cloud); border-bottom: 1px solid var(--border); background: rgba(79,195,200,0.03);">Fractional — pay for what you need</td>
+              <td style="padding: 12px 16px; text-align: center; color: var(--structural); border-bottom: 1px solid var(--border);">$120–200k+ salary + benefits</td>
+              <td style="padding: 12px 16px; text-align: center; color: var(--structural); border-bottom: 1px solid var(--border);">Project-based; often ongoing retainer</td>
+            </tr>
+            <tr>
+              <td style="padding: 12px 16px; color: var(--haze); border-bottom: 1px solid var(--border);">Canadian regulatory context (PIPEDA, AI)</td>
+              <td style="padding: 12px 16px; text-align: center; color: var(--cloud); border-bottom: 1px solid var(--border); background: rgba(79,195,200,0.03);">Core to every engagement</td>
+              <td style="padding: 12px 16px; text-align: center; color: var(--structural); border-bottom: 1px solid var(--border);">Varies by candidate</td>
+              <td style="padding: 12px 16px; text-align: center; color: var(--structural); border-bottom: 1px solid var(--border);">Rarely addressed</td>
+            </tr>
+            <tr>
+              <td style="padding: 12px 16px; color: var(--haze); border-bottom: 1px solid var(--border);">AI adoption as a service</td>
+              <td style="padding: 12px 16px; text-align: center; color: var(--cloud); border-bottom: 1px solid var(--border); background: rgba(79,195,200,0.03);">Included — strategy through implementation</td>
+              <td style="padding: 12px 16px; text-align: center; color: var(--structural); border-bottom: 1px solid var(--border);">Not typically</td>
+              <td style="padding: 12px 16px; text-align: center; color: var(--structural); border-bottom: 1px solid var(--border);">Add-on, if at all</td>
+            </tr>
+            <tr>
+              <td style="padding: 12px 16px; color: var(--haze);">Accountability for the outcome</td>
+              <td style="padding: 12px 16px; text-align: center; color: var(--cloud); background: rgba(79,195,200,0.03);">One person, named, responsible</td>
+              <td style="padding: 12px 16px; text-align: center; color: var(--structural);">Yes — but full-time cost</td>
+              <td style="padding: 12px 16px; text-align: center; color: var(--structural);">Report delivered; outcome yours</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
 
@@ -469,4 +543,7 @@ head_extra: |
     </div>
 
   </div><!-- /.services-page -->
+  <div style="max-width: 1280px; margin: 0 auto; padding: 12px 64px; text-align: right;">
+    <p style="font-family: 'Outfit', sans-serif; font-size: 12px; color: var(--structural);">Last updated August 2026 &nbsp;·&nbsp; Halifax, Nova Scotia, Canada</p>
+  </div>
 </main>

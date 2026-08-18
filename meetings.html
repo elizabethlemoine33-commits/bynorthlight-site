@@ -432,6 +432,21 @@
     }
     .footer-social a:hover { color: var(--text); }
 
+    /* ── ANSWER BLOCK ── */
+    .answer-block { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-left: 3px solid #4FC3C8; border-radius: 0 6px 6px 0; padding: 14px 20px; margin: 0 0 24px; }
+    .answer-block p { font-family: 'Outfit', sans-serif; font-size: 15px; color: rgba(255,255,255,0.65); line-height: 1.7; margin: 0; }
+
+    /* ── AUTHOR BYLINE ── */
+    .author-byline { display: flex; align-items: center; gap: 12px; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 16px; margin-top: 20px; }
+    .author-avatar-wrap { flex-shrink: 0; }
+    .author-avatar-img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 1.5px solid rgba(255,255,255,0.12); display: block; }
+    .author-avatar-init { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, #4FC3C8, #8B6FD4); display: none; align-items: center; justify-content: center; font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600; color: #fff; }
+    .author-text { display: flex; flex-direction: column; gap: 1px; min-width: 0; flex: 1; }
+    .author-name { font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600; color: #fff; }
+    .author-meta { font-family: 'Outfit', sans-serif; font-size: 12px; color: rgba(255,255,255,0.4); }
+    .author-link { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.10em; text-transform: uppercase; color: #4FC3C8; text-decoration: none; margin-left: auto; flex-shrink: 0; white-space: nowrap; }
+    .author-link:hover { text-decoration: underline; }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       .meetings-hero { grid-template-columns: 1fr; gap: 40px; }
@@ -509,12 +524,23 @@
     <div class="page-wrap">
       <div class="meetings-hero">
         <div class="meetings-hero-left">
-          <p class="eyebrow">Northlight · Windows App · Coming Soon</p>
-          <h1 class="meetings-title">Northlight Meetings</h1>
-          <h2 class="meetings-subtitle">Every call.<br>Captured and filed.</h2>
+          <p class="eyebrow">Northlight Meetings · Windows App · Early Access</p>
+          <h1 class="meetings-title">Stop Losing an Hour After Every Client Call</h1>
+          <h2 class="meetings-subtitle">Automatic recording, transcription,<br>and filing — one Windows app.</h2>
           <p class="meetings-body">
             Records client calls, transcribes with Groq Whisper, and runs AI analysis to extract action items, key decisions, and follow-up dates — then pushes everything to Google Drive, ClickUp, and Google Calendar automatically.
           </p>
+          <div class="author-byline">
+            <div class="author-avatar-wrap">
+              <img src="/EL-aurora.png" alt="Elizabeth Lemoine" class="author-avatar-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+              <span class="author-avatar-init" aria-hidden="true">EL</span>
+            </div>
+            <div class="author-text">
+              <span class="author-name">Elizabeth Lemoine</span>
+              <span class="author-meta">Founder &amp; Principal &nbsp;·&nbsp; Northlight Advisory Services</span>
+            </div>
+            <a href="/about.html" class="author-link">About →</a>
+          </div>
           <div class="cta-group">
             <span class="cta-primary" style="opacity:0.5; cursor:default;">Coming Soon</span>
             <a href="/meetings-privacy.html" class="cta-secondary">Privacy policy →</a>
@@ -531,6 +557,13 @@
       </div>
     </div>
 
+    <!-- ── ANSWER BLOCK ── -->
+    <div class="page-wrap" style="padding-top: 0; padding-bottom: 0;">
+      <div class="answer-block" style="margin-bottom: 24px;">
+        <p>Northlight Meetings is a Windows desktop application built by Northlight Advisory Services. It records client calls via a virtual audio cable, transcribes the audio using Groq Whisper, and runs AI analysis to extract action items, key decisions, and follow-up dates — then pushes structured notes to Google Drive, ClickUp, and Google Calendar. Everything is reviewed and approved before it's filed. One-time licence: $299 CAD.</p>
+      </div>
+    </div>
+
     <!-- ── AT A GLANCE ── -->
     <div class="page-wrap" style="padding-top: 0; padding-bottom: 0;">
       <div style="background: var(--surface-2); border: 1px solid var(--border); border-left: 4px solid var(--dusk); border-radius: 6px; padding: 20px 28px; margin-bottom: 48px;">
@@ -541,6 +574,7 @@
           <li style="font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--cloud); line-height: 1.5;"><span style="color: var(--dusk); margin-right: 8px;" aria-hidden="true">·</span>Structured meeting notes are pushed to Google Drive. Approved action items go to ClickUp. Follow-up dates go to Google Calendar.</li>
           <li style="font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--cloud); line-height: 1.5;"><span style="color: var(--dusk); margin-right: 8px;" aria-hidden="true">·</span>You review and approve everything before it's pushed. Nothing is sent automatically without your confirmation.</li>
           <li style="font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--cloud); line-height: 1.5;"><span style="color: var(--dusk); margin-right: 8px;" aria-hidden="true">·</span>Windows only. One-time purchase — $299 CAD. Built by Northlight Advisory Services, Halifax, Nova Scotia, Canada.</li>
+          <li style="font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--cloud); line-height: 1.5;"><span style="color: var(--dusk); margin-right: 8px;" aria-hidden="true">·</span>Built by Elizabeth Lemoine: PMI · IBM Generative AI Specializations · Anthropic Claude certified. Named one of Canada's Best Fractional COO Services by <a href="/news/digital-reference-best-coo-2026.html" style="color: var(--cloud);">Digital Reference 2026</a>.</li>
         </ul>
       </div>
     </div>
@@ -1005,6 +1039,9 @@
       </div>
     </section>
 
+  <div style="max-width: 1280px; margin: 0 auto; padding: 12px 64px; text-align: right;">
+    <p style="font-family: 'Outfit', sans-serif; font-size: 12px; color: rgba(255,255,255,0.25);">Last updated August 2026 &nbsp;·&nbsp; Halifax, Nova Scotia, Canada</p>
+  </div>
   </main>
 
   <div class="footer-border">
