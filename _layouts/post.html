@@ -243,6 +243,7 @@
 .nav-wordmark,.wordmark{text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:4px;background:none;-webkit-text-fill-color:unset;color:unset;font-size:unset;letter-spacing:unset;}
 .wm-main{font-family:'Jost',sans-serif;font-weight:600;font-size:20px;letter-spacing:.08em;background:linear-gradient(105deg,#4fc3c8 0%,#5b8dd9 33%,#8b6fd4 66%,#c46faa 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .wm-sub{font-family:'Jost',sans-serif;font-weight:500;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#8A92A8;}
+.post-breadcrumb{margin-bottom:24px;}.post-breadcrumb-list{display:flex;align-items:center;gap:6px;list-style:none;font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;flex-wrap:wrap;}.post-breadcrumb-list li{display:flex;align-items:center;gap:6px;}.post-breadcrumb-list a{color:var(--muted);text-decoration:none;transition:color .2s;}.post-breadcrumb-list a:hover{color:var(--text);}.post-breadcrumb-list span[aria-current]{color:var(--structural);}.bc-sep{color:var(--border-2);}
 </style>
 </head>
 <body>
@@ -264,6 +265,13 @@
     </div>
 
     <main class="blog-reading" id="main-content">
+      <nav aria-label="Breadcrumb" class="post-breadcrumb">
+        <ol class="post-breadcrumb-list">
+          <li><a href="/">Home</a></li>
+          <li><span class="bc-sep" aria-hidden="true">/</span><a href="/blog/">Blog</a></li>
+          <li><span class="bc-sep" aria-hidden="true">/</span><span aria-current="page">{{ page.title }}</span></li>
+        </ol>
+      </nav>
       <a href="/blog/" class="post-back">← All posts</a>
       {% if page.source_label %}
       <span class="source-label {{ page.source_class | default: 'source-aurora' }}">{{ page.source_label }}</span>

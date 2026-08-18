@@ -330,6 +330,13 @@
   .dropdown-menu a { font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); text-decoration: none; padding: 8px 12px; border-radius: 4px; white-space: nowrap; }
   .dropdown-menu a:hover { color: var(--text); background: var(--border); }
   .dropdown-divider { height: 1px; background: var(--border); margin: 4px 0; }
+    .breadcrumb-nav{max-width:1280px;margin:0 auto;padding:16px 64px 0;}
+    .breadcrumb-list{display:flex;align-items:center;gap:6px;list-style:none;font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;flex-wrap:wrap;}
+    .breadcrumb-item{display:flex;align-items:center;gap:6px;}
+    .breadcrumb-item a{color:var(--muted);text-decoration:none;transition:color .2s;}
+    .breadcrumb-item a:hover{color:var(--text);}
+    .breadcrumb-item span[aria-current]{color:var(--structural);}
+    .breadcrumb-sep{color:var(--border-2);}
 </style>
 </head>
 <body>
@@ -358,6 +365,14 @@
         </div>
       </li>
       <li><a href="mailto:support@bynorthlight.ca">Contact</a></li>    </ul>
+  </nav>
+
+  <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+    <ol class="breadcrumb-list">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item">      <span class="breadcrumb-sep" aria-hidden="true">/</span><a href="/case-studies/">Case Studies</a></li>
+      <li class="breadcrumb-item">      <span class="breadcrumb-sep" aria-hidden="true">/</span><span aria-current="page">Northlight OS</span></li>
+    </ol>
   </nav>
 
   <main id="main-content">

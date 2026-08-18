@@ -108,7 +108,24 @@
 .nav-wordmark,.wordmark{text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:4px;background:none;-webkit-text-fill-color:unset;color:unset;font-size:unset;letter-spacing:unset;}
 .wm-main{font-family:'Jost',sans-serif;font-weight:600;font-size:20px;letter-spacing:.08em;background:linear-gradient(105deg,#4fc3c8 0%,#5b8dd9 33%,#8b6fd4 66%,#c46faa 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .wm-sub{font-family:'Jost',sans-serif;font-weight:500;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#8A92A8;}
+    .breadcrumb-nav{max-width:1280px;margin:0 auto;padding:16px 64px 0;}
+    .breadcrumb-list{display:flex;align-items:center;gap:6px;list-style:none;font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;flex-wrap:wrap;}
+    .breadcrumb-item{display:flex;align-items:center;gap:6px;}
+    .breadcrumb-item a{color:var(--muted);text-decoration:none;transition:color .2s;}
+    .breadcrumb-item a:hover{color:var(--text);}
+    .breadcrumb-item span[aria-current]{color:var(--structural);}
+    .breadcrumb-sep{color:var(--border-2);}
 </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://bynorthlight.ca/"},
+      {"@type":"ListItem","position":2,"name":"Blog","item":"https://bynorthlight.ca/blog/"}
+    ]
+  }
+  </script>
 </head>
 <body>
   <a href="#main-content" class="skip-nav">Skip to main content</a>
@@ -131,6 +148,12 @@
 
     <!-- Reading column -->
     <main class="blog-reading" id="main-content">
+      <nav aria-label="Breadcrumb" class="breadcrumb-nav" style="padding:0 0 16px;">
+        <ol class="breadcrumb-list">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item"><span class="breadcrumb-sep" aria-hidden="true">/</span><span aria-current="page">Blog</span></li>
+        </ol>
+      </nav>
       <p class="page-eyebrow">Writing</p>
       <h1 class="page-title">Essays &amp; thinking</h1>
       <p class="page-desc">Ideas from advisory work, building Vault, and watching how AI adoption actually happens.</p>
