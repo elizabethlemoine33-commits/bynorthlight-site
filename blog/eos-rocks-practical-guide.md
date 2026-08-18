@@ -45,7 +45,7 @@ faq:
 
 By week six of most quarters, at least one of your most important priorities has quietly fallen off the agenda. Not because anyone decided it wasn't important. Because the urgent kept arriving, the calendar kept filling, and the thing that was supposed to be a priority this quarter became the thing you'd get to next week.
 
-EOS Rocks exist to solve exactly this problem.
+EOS Rocks exist to solve exactly this problem. A Rock is a specific, 90-day priority — the most important thing one person must complete this quarter to move the business forward.
 
 ## What Rocks Are
 
