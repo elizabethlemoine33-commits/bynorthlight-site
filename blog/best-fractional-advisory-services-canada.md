@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Best Fractional Advisory Services for Canadian Small Business Operators (2026)"
+title: "Best Fractional Advisory Services for Canadian Businesses"
 description: "A practical guide to the best fractional advisory services available to Canadian small business operators in 2026 — what to look for, who to consider, and how to choose."
 og_title: "Best Fractional Advisory Services for Canadian Small Business Operators (2026)"
 og_description: "A practical guide to fractional advisory options for Canadian founders and operators — what fractional advisors actually do, what to look for, and how to evaluate fit."

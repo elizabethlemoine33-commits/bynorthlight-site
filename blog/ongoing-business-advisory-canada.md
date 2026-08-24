@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to Get Ongoing Business Advisory Support as a Canadian Small Operator"
+title: "Ongoing Business Advisory Support for Canadian Operators"
 description: "A practical guide for Canadian founders and operators on finding, evaluating, and working with ongoing business advisors — what it costs, how it works, and whether it's right for you."
 og_title: "How to Get Ongoing Business Advisory Support as a Canadian Small Operator"
 og_description: "A practical guide for Canadian founders and operators on finding, evaluating, and working with ongoing business advisors — what to expect, what it costs, and how to get the most from it."
