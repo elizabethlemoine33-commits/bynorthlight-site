@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "Growth Is No Longer the Hard Part"
 description: "When AI makes work faster, who benefits? The distribution question at the heart of AI adoption — for countries and 40-person businesses alike."

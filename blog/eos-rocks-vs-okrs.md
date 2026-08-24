@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "EOS Rocks vs. OKRs: Which Goal-Setting Framework Is Right for Your Business?"
 description: "OKRs and EOS Rocks solve different problems. A direct side-by-side comparison — same priorities, both frameworks — to decide which fits."

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "OKRs for Canadian Small Businesses: A Practical Guide to Focusing on What Actually Matters"
 description: "OKRs are one of the most talked-about goal-setting frameworks — and one of the most misunderstood. A practical guide for Canadian small businesses."

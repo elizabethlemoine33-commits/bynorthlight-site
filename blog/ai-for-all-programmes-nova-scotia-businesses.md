@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "AI for All: Open Programmes for Nova Scotia Businesses"
 description: "Which AI funding programmes are actually open to Nova Scotia SMEs right now, how much they offer, and what your next step looks like."

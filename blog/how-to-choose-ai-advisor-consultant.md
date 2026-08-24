@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "How to Choose an AI Advisor for Your Canadian Business"
 description: "Most AI consultants don't actually use AI. Here's how to find one who does — and the red flags Canadian small business owners should walk away from."

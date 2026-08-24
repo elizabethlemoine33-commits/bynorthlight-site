@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "Your AI Isn't Underperforming. It's Working Blind."
 description: "Your AI rollout didn't fail because of the tool. It failed because your AI can't see the organisational context it needs to work. Here's how to fix it."

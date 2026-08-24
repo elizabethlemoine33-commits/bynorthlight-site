@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: "Your AI Strategy Is Running on the Wrong Clock"
 description: "Most leaders have an AI strategy. The problem isn't the plan — it's the planning cadence. Why annual strategy breaks when capability moves quarterly."
