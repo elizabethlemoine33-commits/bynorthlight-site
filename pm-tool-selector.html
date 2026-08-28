@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PM Tool Selector — Northlight</title>
+  <meta name="description" content="Answer 10 questions. Get your top 3 project management tool recommendations — matched to how you actually work, with the reasoning behind each one.">
+  <link rel="canonical" href="https://bynorthlight.ca/pm-tool-selector.html">
+  <meta property="og:title" content="PM Tool Selector — Northlight">
+  <meta property="og:description" content="Answer 10 questions. Get your top 3 PM tool recommendations — matched to how you actually work.">
+  <meta property="og:url" content="https://bynorthlight.ca/pm-tool-selector.html">
+  <meta property="og:site_name" content="Northlight Advisory Services">
+  <meta property="og:image" content="https://bynorthlight.ca/northlight-og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PM Tool Selector — Northlight">
+  <meta name="twitter:description" content="10 questions. Your top 3 PM tool recommendations, matched to how you work.">
+  <meta name="twitter:image" content="https://bynorthlight.ca/northlight-og-image.png">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script defer data-domain="bynorthlight.ca" src="https://plausible.io/js/script.js"></script>
+  <style>
+    :root {
+      --midnight: #0E0E14;
+      --surface: #12121E;
+      --surface-2: #10101C;
+      --border: #1E2035;
+      --border-2: #2A2A48;
+      --text: #FFFFFF;
+      --cloud: #C8CCE0;
+      --haze: #B0B8D8;
+      --muted: #8A92A8;
+      --structural: #5A6080;
+      --glacial: #4FC3C8;
+      --boreal: #5B8DD9;
+      --dusk: #8B6FD4;
+      --aurora: #C46FAA;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--midnight);
+      color: var(--cloud);
+      font-family: 'Outfit', sans-serif;
+      min-height: 100vh;
+    }
+    .top-bar {
+      height: 3px;
+      background: linear-gradient(90deg, #4fc3c8 0%, #5b8dd9 30%, #8b6fd4 65%, #c46faa 100%);
+    }
+    .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 48px;
+      border-bottom: 1px solid var(--border);
+    }
+    .wordmark { text-decoration: none; display: flex; flex-direction: column; line-height: 1.2; }
+    .wm-main { font-family:'Jost',sans-serif; font-weight:600; font-size:20px; letter-spacing:.08em; background:linear-gradient(105deg,#4fc3c8 0%,#5b8dd9 33%,#8b6fd4 66%,#c46faa 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .wm-sub  { font-family:'Jost',sans-serif; font-weight:500; font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:#8A92A8; }
+    .header-nav {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+    .header-nav a {
+      font-family: 'Jost', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .header-nav a:hover { color: var(--cloud); }
+
+    .tool-shell {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 56px 24px 100px;
+    }
+
+    /* ── Intro ── */
+    .intro-eyebrow {
+      font-family: 'Jost', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--glacial);
+      margin-bottom: 16px;
+    }
+    .intro-title {
+      font-family: 'Jost', sans-serif;
+      font-weight: 600;
+      font-size: 34px;
+      line-height: 1.15;
+      color: var(--text);
+      margin-bottom: 16px;
+      letter-spacing: .01em;
+    }
+    .intro-desc {
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.75;
+      margin-bottom: 12px;
+      max-width: 560px;
+    }
+    .intro-meta {
+      font-size: 13px;
+      color: var(--structural);
+      margin-bottom: 40px;
+    }
+    .btn-start {
+      font-family: 'Jost', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #fff;
+      background: linear-gradient(105deg, #4FC3C8, #5B8DD9, #8B6FD4);
+      border: none;
+      border-radius: 6px;
+      padding: 14px 32px;
+      cursor: pointer;
+      transition: opacity .2s;
+    }
+    .btn-start:hover { opacity: .85; }
+
+    /* ── Progress bar ── */
+    .progress-wrap {
+      margin-bottom: 40px;
+    }
+    .progress-label {
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--structural);
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .progress-bar-track {
+      height: 2px;
+      background: var(--border);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .progress-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #4FC3C8, #5B8DD9, #8B6FD4);
+      border-radius: 2px;
+      transition: width .35s ease;
+    }
+
+    /* ── Quiz ── */
+    .quiz-screen { animation: fadeIn .25s ease; }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .question-text {
+      font-family: 'Jost', sans-serif;
+      font-weight: 600;
+      font-size: 21px;
+      line-height: 1.4;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .question-note {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .options-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+    .option-btn {
+      background: var(--surface);
+      border: 1px solid var(--border-2);
+      border-radius: 8px;
+      padding: 16px 20px;
+      text-align: left;
+      cursor: pointer;
+      font-family: 'Outfit', sans-serif;
+      font-size: 15px;
+      color: var(--cloud);
+      line-height: 1.5;
+      transition: all .18s;
+      width: 100%;
+    }
+    .option-btn:hover {
+      border-color: rgba(79,195,200,.4);
+      background: rgba(79,195,200,.04);
+      color: var(--text);
+    }
+    .option-btn.selected {
+      border-color: var(--glacial);
+      background: rgba(79,195,200,.08);
+      color: var(--text);
+    }
+    .quiz-nav {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-next {
+      font-family: 'Jost', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #fff;
+      background: linear-gradient(105deg, #4FC3C8, #5B8DD9, #8B6FD4);
+      border: none;
+      border-radius: 6px;
+      padding: 12px 24px;
+      cursor: pointer;
+      transition: opacity .2s;
+    }
+    .btn-next:disabled { opacity: .3; cursor: default; }
+    .btn-next:not(:disabled):hover { opacity: .85; }
+    .btn-back {
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 12px 20px;
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .btn-back:hover { color: var(--cloud); border-color: var(--border-2); }
+
+    /* ── Results ── */
+    .results-screen { animation: fadeIn .3s ease; }
+    .results-eyebrow {
+      font-family: 'Jost', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--glacial);
+      margin-bottom: 8px;
+    }
+    .results-title {
+      font-family: 'Jost', sans-serif;
+      font-weight: 600;
+      font-size: 30px;
+      color: var(--text);
+      margin-bottom: 8px;
+      letter-spacing: .01em;
+    }
+    .results-sub {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+
+    /* data residency advisory */
+    .data-advisory {
+      background: rgba(139,111,212,.08);
+      border: 1px solid rgba(139,111,212,.3);
+      border-left: 3px solid var(--dusk);
+      border-radius: 0 8px 8px 0;
+      padding: 18px 22px;
+      margin-bottom: 32px;
+      font-size: 14px;
+      color: var(--haze);
+      line-height: 1.7;
+    }
+    .data-advisory strong {
+      font-family: 'Jost', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--dusk);
+      display: block;
+      margin-bottom: 6px;
+    }
+    .data-advisory a { color: var(--dusk); }
+
+    /* tool cards */
+    .tool-card {
+      background: var(--surface);
+      border: 1px solid var(--border-2);
+      border-radius: 10px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+    }
+    .tool-rank {
+      font-family: 'Jost', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .rank-1 .tool-rank { color: var(--glacial); }
+    .rank-2 .tool-rank { color: var(--boreal); }
+    .rank-3 .tool-rank { color: var(--dusk); }
+    .tool-name {
+      font-family: 'Jost', sans-serif;
+      font-weight: 600;
+      font-size: 22px;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .tool-tagline {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .tool-why {
+      font-size: 15px;
+      color: var(--haze);
+      line-height: 1.75;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .tool-pricing {
+      font-family: 'Jost', sans-serif;
+      font-size: 12px;
+      letter-spacing: .05em;
+      color: var(--structural);
+      margin-bottom: 18px;
+    }
+    .tool-pricing span { color: var(--muted); }
+    .tool-visit {
+      display: inline-block;
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--glacial);
+      text-decoration: none;
+      border: 1px solid rgba(79,195,200,.3);
+      border-radius: 5px;
+      padding: 8px 16px;
+      transition: all .2s;
+    }
+    .tool-visit:hover {
+      background: rgba(79,195,200,.07);
+      border-color: var(--glacial);
+    }
+    .tool-onepager {
+      display: inline-block;
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      border: 1px solid var(--border-2);
+      border-radius: 5px;
+      padding: 8px 16px;
+      margin-left: 8px;
+      transition: all .2s;
+    }
+    .tool-onepager:hover { background: rgba(255,255,255,.04); border-color: var(--structural); color: var(--haze); }
+
+    /* feature comparison table */
+    .compare-wrap {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    .compare-label {
+      font-family: 'Jost', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--structural);
+      margin-bottom: 16px;
+    }
+    .compare-table-wrap {
+      overflow-x: auto;
+      border-radius: 8px;
+      border: 1px solid var(--border-2);
+    }
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    .compare-table th {
+      background: var(--surface-2);
+      font-family: 'Jost', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+    .compare-table th:first-child {
+      color: var(--structural);
+      min-width: 140px;
+    }
+    .compare-table td {
+      padding: 11px 16px;
+      border-bottom: 1px solid var(--border);
+      color: var(--cloud);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table td:first-child {
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--structural);
+      background: var(--surface-2);
+      white-space: nowrap;
+    }
+    .check-yes { color: var(--glacial); font-weight: 600; }
+    .check-no  { color: var(--structural); }
+
+    /* CTA */
+    .cta-wrap {
+      background: var(--surface);
+      border: 1px solid var(--border-2);
+      border-radius: 10px;
+      padding: 36px 40px;
+      margin-top: 8px;
+    }
+    .cta-title {
+      font-family: 'Jost', sans-serif;
+      font-weight: 600;
+      font-size: 22px;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .cta-desc {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+    .cta-paths {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .path-option {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      cursor: pointer;
+      padding: 16px 18px;
+      border: 1px solid var(--border-2);
+      border-radius: 8px;
+      transition: all .2s;
+      background: var(--surface-2);
+    }
+    .path-option:hover { border-color: rgba(79,195,200,.3); }
+    .path-option.active {
+      border-color: var(--glacial);
+      background: rgba(79,195,200,.05);
+    }
+    .path-option input[type="radio"] { margin-top: 3px; accent-color: var(--glacial); flex-shrink: 0; }
+    .path-label strong {
+      font-family: 'Jost', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      display: block;
+      margin-bottom: 2px;
+    }
+    .path-label span {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .cta-form {
+      display: none;
+    }
+    .cta-form.visible { display: block; }
+    .form-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+    .form-field {
+      flex: 1;
+      min-width: 180px;
+    }
+    .form-field label {
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--structural);
+      display: block;
+      margin-bottom: 6px;
+    }
+    .form-field input {
+      width: 100%;
+      background: var(--midnight);
+      border: 1px solid var(--border-2);
+      border-radius: 6px;
+      padding: 11px 14px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 15px;
+      color: var(--text);
+      outline: none;
+      transition: border-color .2s;
+    }
+    .form-field input:focus { border-color: var(--glacial); }
+    .form-field input::placeholder { color: var(--structural); }
+    .btn-submit {
+      font-family: 'Jost', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #fff;
+      background: linear-gradient(105deg, #4FC3C8, #5B8DD9, #8B6FD4);
+      border: none;
+      border-radius: 6px;
+      padding: 13px 28px;
+      cursor: pointer;
+      transition: opacity .2s;
+      width: 100%;
+    }
+    .btn-submit:hover { opacity: .85; }
+    .btn-submit:disabled { opacity: .5; cursor: default; }
+    .submit-note {
+      font-size: 12px;
+      color: var(--structural);
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+    .success-msg {
+      display: none;
+      background: rgba(79,195,200,.07);
+      border: 1px solid rgba(79,195,200,.3);
+      border-radius: 8px;
+      padding: 20px 24px;
+      font-size: 15px;
+      color: var(--haze);
+      line-height: 1.7;
+    }
+    .success-msg strong {
+      font-family: 'Jost', sans-serif;
+      color: var(--glacial);
+      display: block;
+      margin-bottom: 4px;
+    }
+    .restart-wrap {
+      margin-top: 40px;
+      text-align: center;
+    }
+    .btn-restart {
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--structural);
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color .2s;
+    }
+    .btn-restart:hover { color: var(--muted); }
+
+    /* hidden util */
+    .hidden { display: none !important; }
+
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-copy {
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      letter-spacing: .06em;
+      color: var(--structural);
+    }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a {
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      letter-spacing: .06em;
+      color: var(--structural);
+      text-decoration: none;
+    }
+    .footer-links a:hover { color: var(--muted); }
+
+    /* mobile */
+    @media (max-width: 640px) {
+      .site-header { padding: 14px 20px; }
+      .header-nav { display: none; }
+      .tool-shell { padding: 36px 16px 80px; }
+      .intro-title { font-size: 26px; }
+      .results-title { font-size: 24px; }
+      .tool-card { padding: 22px 20px; }
+      .cta-wrap { padding: 24px 20px; }
+      .form-row { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="top-bar"></div>
+
+<header class="site-header">
+  <a href="/" class="wordmark"><span class="wm-main">Northlight</span><span class="wm-sub">Advisory Services</span></a>
+  <nav>
+    <ul class="header-nav">
+      <li><a href="/who-we-help.html">Work With Us</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/about.html">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="tool-shell">
+
+  <!-- ── Intro ── -->
+  <section id="intro-screen">
+    <p class="intro-eyebrow">PM Tool Selector</p>
+    <h1 class="intro-title">Find the right project management tool — for how you actually work.</h1>
+    <p class="intro-desc">There's no shortage of PM tools. There's a shortage of honest guidance on which one fits your situation. Answer 10 questions and we'll match you with the top 3 options from a field of 12 — with the reasoning behind each recommendation.</p>
+    <p class="intro-meta">Takes about 3 minutes &nbsp;·&nbsp; Results on the page &nbsp;·&nbsp; Full report delivered by email</p>
+    <button class="btn-start" onclick="startQuiz()">Start the selector →</button>
+  </section>
+
+  <!-- ── Quiz ── -->
+  <section id="quiz-screen" class="hidden">
+    <div class="progress-wrap">
+      <div class="progress-label">
+        <span id="progress-text">Question 1 of 10</span>
+        <span id="progress-pct">0%</span>
+      </div>
+      <div class="progress-bar-track">
+        <div class="progress-bar-fill" id="progress-fill" style="width:0%"></div>
+      </div>
+    </div>
+
+    <div class="quiz-screen" id="question-container">
+      <!-- rendered by JS -->
+    </div>
+
+    <div class="quiz-nav">
+      <button class="btn-back" id="btn-back" onclick="prevQuestion()">← Back</button>
+      <button class="btn-next" id="btn-next" onclick="nextQuestion()" disabled>Continue →</button>
+    </div>
+  </section>
+
+  <!-- ── Results ── -->
+  <section id="results-screen" class="hidden">
+    <p class="results-eyebrow">Your Results</p>
+    <h2 class="results-title" id="results-title">Your top 3 recommendations</h2>
+    <p class="results-sub" id="results-sub">Based on your answers, here are the tools that fit your situation best — and why.</p>
+
+    <div id="data-advisory" class="data-advisory hidden">
+      <strong>Data Residency — A Note for Your Situation</strong>
+      One or more tools below store data on US-based servers. If you're storing personal client information, this may be relevant to your compliance obligations depending on where you operate and where your clients are located. <strong style="display:inline;font-family:inherit;font-size:inherit;letter-spacing:normal;text-transform:none;color:inherit;">Canadian businesses:</strong> review your obligations under <a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/" target="_blank" rel="noopener">PIPEDA</a>. <strong style="display:inline;font-family:inherit;font-size:inherit;letter-spacing:normal;text-transform:none;color:inherit;">EU businesses:</strong> review your obligations under <a href="https://gdpr.eu/" target="_blank" rel="noopener">GDPR</a>. The Data Residency column in the comparison below notes which tools offer regional storage options.
+    </div>
+
+    <div id="tool-cards"></div>
+
+    <div class="cta-wrap">
+      <h3 class="cta-title">Get the full comparison</h3>
+      <p class="cta-desc">Enter your email and we'll send you a complete side-by-side comparison of all 12 tools — formatted to share with a board, executive, or decision-maker. You'll also receive the Aurora Brief, Northlight's monthly strategy newsletter. Unsubscribe anytime.</p>
+
+      <div class="cta-form visible" id="cta-form">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="field-name">First name</label>
+            <input type="text" id="field-name" name="fields[first_name]" placeholder="Your first name" autocomplete="given-name">
+          </div>
+          <div class="form-field">
+            <label for="field-email">Email address</label>
+            <input type="email" id="field-email" name="email_address" placeholder="you@example.com" autocomplete="email">
+          </div>
+        </div>
+        <button class="btn-submit" id="btn-submit" onclick="submitReport()">Send the comparison →</button>
+        <p class="submit-note" id="submit-note">You'll receive a confirmation email — click the link to activate before we send anything.</p>
+      </div>
+
+      <div class="success-msg" id="success-msg">
+        <strong>Check your inbox.</strong>
+        We've sent a confirmation email — click the link inside to activate your subscription. Once confirmed, the comparison is on its way.
+      </div>
+    </div>
+
+    <div class="restart-wrap">
+      <button class="btn-restart" onclick="restartQuiz()">Start over</button>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <span class="footer-copy">© 2026 Northlight Advisory Services</span>
+  <div class="footer-links">
+    <a href="/northlight-privacy.html">Privacy</a>
+    <a href="/blog/">Blog</a>
+    <a href="/contact">Contact</a>
+  </div>
+</footer>
+
+<script>
+// ─────────────────────────────────────────────
+// TOOL DATA
+// ─────────────────────────────────────────────
+const TOOLS = {
+  clickup: {
+    name: 'ClickUp',
+    tagline: 'Built for operational depth',
+    url: 'https://clickup.com',
+    freeTier: 'Yes — unlimited users, 100MB storage',
+    paidPrice: '$7/user/mo (annual)',
+    views: 'List, Board, Calendar, Gantt, Timeline, Mind Map, Workload',
+    subtasks: true,
+    dependencies: 'Yes — with lag times and blocking',
+    automations: '100/mo free; 1,000+/mo on paid plans',
+    apiAccess: 'Yes — 100 req/min',
+    mcpConnector: true,
+    dashboards: 'Yes — custom dashboards',
+    guestAccess: 'Yes — on paid plans',
+    mobileApp: true,
+    dataResidency: 'US-based (SOC 2 Type II; HIPAA on Business)',
+    nativeAI: 'Yes — ClickUp Brain (paid add-on)',
+    reasons: {
+      operations: "You're building operational systems, not just tracking tasks — ClickUp's Spaces / Folders / Lists hierarchy and deep automation give you the structure to run a whole practice.",
+      concurrent: "Running multiple workstreams is where ClickUp stands out — you can track everything in one place without projects bleeding into each other.",
+      auto_yes: "Automations are genuinely powerful here: trigger on status changes, custom fields, dates, or incoming webhooks — without a separate automation tool.",
+      dep_critical: "Dependencies are a first-class feature — you can block tasks, set lag times, and visualize the critical path.",
+      api_critical: "100 req/min API plus a native MCP connector makes ClickUp the strongest option for teams integrating with other systems or AI workflows.",
+      large: "ClickUp's permission model and workspace hierarchy scale to larger teams without things falling apart.",
+    }
+  },
+  asana: {
+    name: 'Asana',
+    tagline: 'Project management with polish',
+    url: 'https://asana.com',
+    freeTier: 'Yes — up to 2 users',
+    paidPrice: '$10.99/user/mo (annual)',
+    views: 'List, Board, Calendar, Timeline, Workload',
+    subtasks: true,
+    dependencies: 'Yes — on paid plans',
+    automations: 'Yes — on paid plans',
+    apiAccess: 'Yes — 1,500 req/min (paid)',
+    mcpConnector: true,
+    dashboards: 'Yes — reporting dashboards',
+    guestAccess: 'Yes — unlimited guests',
+    mobileApp: true,
+    dataResidency: 'US-based (GDPR compliant; EU data residency on Enterprise)',
+    nativeAI: 'Yes — Asana Intelligence (paid plans)',
+    reasons: {
+      projects: "Asana is purpose-built for project management — clear task ownership, timeline views, and milestone tracking without the complexity of ops-focused tools.",
+      concurrent: "Multiple projects with clear accountability is Asana's core strength — each project is a clean container with its own views and reporting.",
+      ext_yes: "Unlimited guests on paid plans means clients and contractors can be looped in without extra seat costs.",
+      dep_critical: "Timeline view and dependencies let you model a real project schedule — useful when sequencing matters.",
+      api_critical: "At 1,500 req/min on paid plans, Asana has one of the highest API rate limits in this category. Add the MCP connector and it integrates cleanly.",
+      medium: "Well-suited to teams of 5–20 — the interface is clear enough that adoption friction is low.",
+    }
+  },
+  monday: {
+    name: 'Monday.com',
+    tagline: 'Flexible, visual, and fast to set up',
+    url: 'https://monday.com',
+    freeTier: 'Yes — up to 2 users',
+    paidPrice: '$9/user/mo (min 3 seats, annual)',
+    views: 'Board, List, Table, Calendar, Timeline, Chart',
+    subtasks: true,
+    dependencies: 'Yes — on paid plans',
+    automations: '250/mo (Basic); 25,000 actions/day (Pro)',
+    apiAccess: 'Yes',
+    mcpConnector: false,
+    dashboards: 'Yes — cross-board dashboards',
+    guestAccess: 'Yes — viewer access on paid plans',
+    mobileApp: true,
+    dataResidency: 'US-based (EU data residency available on Enterprise)',
+    nativeAI: 'Yes — monday AI (paid plans)',
+    reasons: {
+      concurrent: "Monday's Board view makes running multiple parallel workstreams visual and easy to track — you can see everything at a glance.",
+      operations: "Strong automation (up to 25K actions/day on Pro) and flexible board structure make Monday a reasonable fit for operational workflows.",
+      kanban: "The Board view is one of Monday's core strengths — clear columns, drag-and-drop, and status roll-ups.",
+      auto_yes: "25,000 automation actions/day on Pro is substantial — Monday handles repetitive workflow routing well.",
+      table: "Table view gives you a spreadsheet-like layout without losing the project context.",
+    }
+  },
+  trello: {
+    name: 'Trello',
+    tagline: 'Simple Kanban for straightforward work',
+    url: 'https://trello.com',
+    freeTier: 'Yes — unlimited cards, 10 boards/workspace',
+    paidPrice: '$5/user/mo (annual)',
+    views: 'Board, List, Calendar, Table, Timeline (paid)',
+    subtasks: 'Via checklists',
+    dependencies: 'No',
+    automations: 'Yes — Butler automations (limited on free)',
+    apiAccess: 'Yes',
+    mcpConnector: false,
+    dashboards: 'No',
+    guestAccess: 'Yes — workspace guests',
+    mobileApp: true,
+    dataResidency: 'US-based',
+    nativeAI: 'No',
+    reasons: {
+      kanban: "Trello was built around the Kanban board — if that's your primary view, it's one of the most intuitive implementations.",
+      solo: "For solo work, Trello's free tier is generous and the interface is fast to navigate.",
+      todo: "Task list management without project complexity is Trello's comfort zone.",
+      free: "One of the stronger free tiers for individual or small-team task tracking — unlimited cards, 10 boards.",
+      low: "At $5/user/mo it's the most affordable paid option in this group.",
+      ext_occasional: "Workspace guest access makes it easy to loop in an external collaborator without managing seat costs.",
+    }
+  },
+  basecamp: {
+    name: 'Basecamp',
+    tagline: 'Flat-fee team communication and task management',
+    url: 'https://basecamp.com',
+    freeTier: 'No free plan (30-day trial)',
+    paidPrice: '$15/user/mo or $299/mo flat (unlimited users)',
+    views: 'To-do lists, Message board, Schedule',
+    subtasks: 'No',
+    dependencies: 'No',
+    automations: 'No',
+    apiAccess: 'Yes',
+    mcpConnector: false,
+    dashboards: 'No',
+    guestAccess: 'Yes — clients included',
+    mobileApp: true,
+    dataResidency: 'US-based',
+    nativeAI: 'No',
+    reasons: {
+      large: "At $299/mo flat rate (unlimited users), Basecamp becomes cost-competitive as headcount grows — one of few tools where bigger teams aren't penalized per seat.",
+      ext_yes: "Client-facing access is built in — clients get their own view of the project without seeing internal discussions.",
+      projects: "Basecamp organizes work by project with to-do lists, message boards, and file sharing — simple, but effective for client-delivery work.",
+    }
+  },
+  notion: {
+    name: 'Notion',
+    tagline: 'Docs, databases, and projects in one workspace',
+    url: 'https://notion.so',
+    freeTier: 'Yes — unlimited blocks, limited collaboration',
+    paidPrice: '$10/user/mo (annual)',
+    views: 'Table, Board, Calendar, List, Gallery, Timeline',
+    subtasks: true,
+    dependencies: 'Yes — via relations',
+    automations: 'Yes — basic automations',
+    apiAccess: 'Yes',
+    mcpConnector: true,
+    dashboards: 'Limited — via linked databases',
+    guestAccess: 'Yes',
+    mobileApp: true,
+    dataResidency: 'US-based',
+    nativeAI: 'Yes — Notion AI (paid add-on)',
+    reasons: {
+      operations: "Notion's flexibility makes it useful for operations teams who want to combine process documentation, project tracking, and reference material in one place.",
+      table: "Notion databases in Table view behave like a flexible spreadsheet with linked relations — useful for tracking anything with multiple properties.",
+      api_critical: "Notion has an API and MCP connector, making it a reasonable hub if you're building internal tooling or AI workflows on top of your workspace.",
+      todo: "For knowledge workers managing their own workload, Notion's combination of notes and tasks is a strong fit.",
+      solo: "Solo practitioners often get the most value from Notion — the flexibility suits someone who wears multiple hats.",
+    }
+  },
+  todoist: {
+    name: 'Todoist',
+    tagline: 'Clean task management for individuals and small teams',
+    url: 'https://todoist.com',
+    freeTier: 'Yes — up to 5 projects',
+    paidPrice: '$4/user/mo (annual)',
+    views: 'List, Board, Calendar',
+    subtasks: true,
+    dependencies: 'No',
+    automations: 'No native automations',
+    apiAccess: 'Yes',
+    mcpConnector: false,
+    dashboards: 'No',
+    guestAccess: 'Limited — shared projects',
+    mobileApp: true,
+    dataResidency: 'US-based',
+    nativeAI: 'Yes — limited (task suggestions)',
+    reasons: {
+      todo: "Todoist is purpose-built for task management — clean interface, natural language date entry, and a quick-capture experience that stays out of your way.",
+      solo: "For individual use, Todoist is one of the fastest and most reliable task managers in this group.",
+      free: "The free plan supports up to 5 projects — workable for straightforward personal task management.",
+      low: "At $4/user/mo it's the most affordable paid option in this group.",
+    }
+  },
+  mstodo: {
+    name: 'Microsoft To Do',
+    tagline: 'Simple task lists, deeply integrated with M365',
+    url: 'https://todo.microsoft.com',
+    freeTier: 'Yes — free with any Microsoft account',
+    paidPrice: 'Included in Microsoft 365 ($6–$22/user/mo)',
+    views: 'List only',
+    subtasks: 'Yes — steps within tasks',
+    dependencies: 'No',
+    automations: 'Via Power Automate',
+    apiAccess: 'Yes — via Microsoft Graph API',
+    mcpConnector: false,
+    dashboards: 'No',
+    guestAccess: 'No',
+    mobileApp: true,
+    dataResidency: 'Microsoft regional data centres',
+    nativeAI: 'Yes — Copilot integration',
+    reasons: {
+      ms_yes: "If your team is already in Microsoft 365, To Do is already there — Outlook task sync, Teams integration, and Copilot without adding a new vendor or managing another login.",
+      todo: "For straightforward personal task management within an M365 environment, To Do keeps things simple and synced.",
+      solo: "Works well for individual task management when Microsoft 365 is your primary workspace.",
+    }
+  },
+  msplanner: {
+    name: 'Microsoft Planner',
+    tagline: 'Team task boards inside Microsoft 365',
+    url: 'https://tasks.office.com',
+    freeTier: 'Yes — included with Microsoft 365',
+    paidPrice: 'Included in qualifying M365 plans; Planner Plan 1 $10/user/mo (Gantt, dependencies, reporting); Plan 3 $30/user/mo (portfolio mgmt)',
+    views: 'Board, List, Schedule (Gantt on Plan 1+)',
+    subtasks: 'No',
+    dependencies: 'Yes — on Planner Premium',
+    automations: 'Yes — via Power Automate',
+    apiAccess: 'Yes — via Microsoft Graph API',
+    mcpConnector: false,
+    dashboards: 'Yes — on Planner Premium',
+    guestAccess: 'Yes — M365 guest access',
+    mobileApp: true,
+    dataResidency: 'Microsoft regional data centres',
+    nativeAI: 'Yes — Copilot integration',
+    reasons: {
+      ms_yes: "If your organization is already paying for Microsoft 365, Planner comes with it — no new vendor, no new login, native Teams integration, and Copilot built in.",
+      projects: "For teams managing projects within an M365 environment, Planner handles task boards and (with Premium) full project timelines without leaving the Microsoft ecosystem.",
+      dep_critical: "Planner Plan 1 adds Gantt-style timelines and dependencies — relevant if you're managing sequenced project work inside M365. Confirm which plan tier covers your requirements before signing.",
+      medium: "Works well for mid-sized teams already organized around Microsoft 365 — the integration with Teams reduces adoption friction.",
+    }
+  },
+  airtable: {
+    name: 'Airtable',
+    tagline: 'Databases that work like project management',
+    url: 'https://airtable.com',
+    freeTier: 'Yes — 1 creator + 1 editor, 1,000 records/base',
+    paidPrice: '$20/user/mo (annual)',
+    views: 'Grid, Kanban, Calendar, Gallery, Timeline, Gantt',
+    subtasks: true,
+    dependencies: 'Yes — via linked records',
+    automations: 'Yes',
+    apiAccess: 'Yes — 1,200 req/min',
+    mcpConnector: false,
+    dashboards: 'Yes — via extensions',
+    guestAccess: 'Yes',
+    mobileApp: true,
+    dataResidency: 'US-based',
+    nativeAI: 'Yes — AI fields (paid plans)',
+    reasons: {
+      table: "Airtable's Grid view is a relational database that behaves like a spreadsheet — better structured data, linked records, and formula fields than any standard PM tool.",
+      operations: "Operations teams managing data-heavy workflows (client records, content calendars, resource tracking) benefit from Airtable's database approach.",
+      api_critical: "At 1,200 req/min, Airtable has one of the highest API limits in this group — strong if you're building automations or integrations on top of your data.",
+      concurrent: "Multiple workstreams with different data structures can each have their own Base without cluttering a shared workspace.",
+    }
+  },
+  smartsheet: {
+    name: 'Smartsheet',
+    tagline: 'Spreadsheet-style project management with enterprise depth',
+    url: 'https://smartsheet.com',
+    freeTier: 'No free plan (30-day trial)',
+    paidPrice: '$9/user/mo Pro, $19/user/mo Business (annual)',
+    views: 'Grid, Gantt, Card, Calendar',
+    subtasks: true,
+    dependencies: 'Yes — with Gantt timelines',
+    automations: 'Yes',
+    apiAccess: 'Yes',
+    mcpConnector: false,
+    dashboards: 'Yes — live dashboards',
+    guestAccess: 'Yes',
+    mobileApp: true,
+    dataResidency: 'US-based (EU data residency available on paid plans)',
+    nativeAI: 'Yes — Smartsheet AI (paid plans)',
+    reasons: {
+      projects: "Smartsheet's Gantt view and dependency tracking make it one of the strongest options for traditional project planning — particularly for teams familiar with MS Project's approach.",
+      dep_critical: "Full Gantt timelines with task dependencies, critical path highlighting, and milestone tracking — built-in, not an add-on.",
+      table: "The grid view is a familiar spreadsheet layout with real project management logic layered on top — a lower learning curve for Excel-comfortable teams.",
+      medium: "Well-suited to mid-sized project teams that need reporting and dashboards without full enterprise complexity.",
+    }
+  },
+  wrike: {
+    name: 'Wrike',
+    tagline: 'Collaborative work management for growing teams',
+    url: 'https://wrike.com',
+    freeTier: 'Yes — unlimited users, limited features',
+    paidPrice: '$9.80/user/mo Team (annual)',
+    views: 'List, Board, Table, Gantt, Calendar, Workload',
+    subtasks: true,
+    dependencies: 'Yes — Gantt with dependencies',
+    automations: 'Yes',
+    apiAccess: 'Yes',
+    mcpConnector: false,
+    dashboards: 'Yes',
+    guestAccess: 'Yes',
+    mobileApp: true,
+    dataResidency: 'US and EU data centres available',
+    nativeAI: 'Yes — Wrike Lightspeed AI',
+    reasons: {
+      projects: "Wrike handles multi-project portfolio management with Gantt, workload views, and cross-project reporting — a fit for teams running several projects simultaneously.",
+      concurrent: "Workload view and cross-project dashboards make it easier to see where resources are committed across multiple active projects.",
+      dep_critical: "Full Gantt-based dependency management with critical path visualization — one of the more complete implementations in this group.",
+      auto_yes: "Built-in automations handle task routing, approvals, and status triggers without requiring a third-party connector.",
+      data_yes: "EU and US data centres give teams in regulated industries more control over where data is stored.",
+    }
+  }
+};
+
+// ─────────────────────────────────────────────
+// QUIZ QUESTIONS
+// ─────────────────────────────────────────────
+const QUESTIONS = [
+  {
+    id: 'q1',
+    text: 'What are you primarily trying to manage?',
+    note: "Pick the one that best describes the work — we'll use this to anchor the recommendation.",
+    options: [
+      { id: 'todo',       label: 'My personal task list — things I need to do and when' },
+      { id: 'projects',   label: 'Specific projects — defined deliverables, team members, deadlines' },
+      { id: 'concurrent', label: 'Multiple projects running at the same time' },
+      { id: 'operations', label: 'Ongoing operations — recurring processes, client work, business systems' },
+    ]
+  },
+  {
+    id: 'q2',
+    text: 'How many people need to actively use this tool?',
+    note: 'Count only people creating or updating tasks — not people you might share reports with.',
+    options: [
+      { id: 'solo',   label: 'Just me' },
+      { id: 'small',  label: '2–5 people' },
+      { id: 'medium', label: '6–20 people' },
+      { id: 'large',  label: 'More than 20 people' },
+    ]
+  },
+  {
+    id: 'q3',
+    text: 'Are you already working in Microsoft 365?',
+    note: "Microsoft 365 includes Word, Excel, Teams, Outlook, SharePoint — if your organization uses these as standard tools, that's a yes.",
+    options: [
+      { id: 'ms_yes',     label: 'Yes — Microsoft 365 is our primary platform' },
+      { id: 'ms_partial', label: 'Partially — we use some Microsoft tools but not as a primary platform' },
+      { id: 'ms_no',      label: 'No — we use other tools (Google Workspace, or no standard platform)' },
+    ]
+  },
+  {
+    id: 'q4',
+    text: 'How do you prefer to see your work?',
+    options: [
+      { id: 'kanban',   label: 'Kanban board — columns and cards, work moves across stages' },
+      { id: 'list',     label: 'List view — task by task, clean and linear' },
+      { id: 'table',    label: 'Spreadsheet / table — rows and columns, data-forward' },
+      { id: 'calendar', label: 'Calendar — I think in dates and time blocks' },
+      { id: 'multi',    label: 'I switch between views depending on what I\'m doing' },
+    ]
+  },
+  {
+    id: 'q5',
+    text: 'What\'s your budget per person per month?',
+    note: 'Annual billing typically gives the best rate — these ranges reflect annual pricing.',
+    options: [
+      { id: 'free', label: 'Free — I need it to cost nothing to start' },
+      { id: 'low',  label: 'Under $10/person/mo' },
+      { id: 'mid',  label: '$10–$25/person/mo' },
+      { id: 'open', label: 'Open — cost isn\'t the deciding factor' },
+    ]
+  },
+  {
+    id: 'q6',
+    text: 'Do you need task dependencies or project timelines?',
+    note: 'Dependencies = "Task B can\'t start until Task A is done." Timelines = a visual Gantt-style view of scheduled work.',
+    options: [
+      { id: 'dep_critical', label: 'Yes — this is essential to how we plan work' },
+      { id: 'dep_nice',     label: 'Useful, but not a must-have' },
+      { id: 'dep_no',       label: 'No — our work doesn\'t need sequencing' },
+    ]
+  },
+  {
+    id: 'q7',
+    text: 'Do you need automations to handle repetitive work?',
+    note: 'For example: auto-assign tasks when a status changes, send a notification when a deadline passes, create recurring tasks on a schedule.',
+    options: [
+      { id: 'auto_yes',        label: 'Yes — we have repetitive workflows that should run automatically' },
+      { id: 'auto_occasional', label: 'Maybe a few — not a core requirement right now' },
+      { id: 'auto_no',         label: 'No — we handle workflow manually' },
+    ]
+  },
+  {
+    id: 'q8',
+    text: 'Do external people (clients, contractors, partners) need access?',
+    options: [
+      { id: 'ext_yes',        label: 'Yes — external people regularly need to view or update tasks' },
+      { id: 'ext_occasional', label: 'Occasionally — external access would be useful sometimes' },
+      { id: 'ext_no',         label: 'No — this is internal only' },
+    ]
+  },
+  {
+    id: 'q9',
+    text: 'Do you need to connect this tool to other systems via API or automation?',
+    note: 'For example: syncing with your CRM, triggering actions from a webhook, or connecting to AI workflows via MCP.',
+    options: [
+      { id: 'api_critical', label: 'Yes — we need strong integration capabilities, ideally with an MCP connector' },
+      { id: 'api_nice',     label: 'Useful, but not a dealbreaker' },
+      { id: 'api_no',       label: 'No — we\'re not connecting this to other systems' },
+    ]
+  },
+  {
+    id: 'q10',
+    text: 'Will you store personal client information in this tool?',
+    note: 'Names, email addresses, phone numbers, financial details, health information, or anything else that could identify a specific person.',
+    options: [
+      { id: 'data_yes',    label: 'Yes — we\'ll definitely store personal client data' },
+      { id: 'data_unsure', label: 'Possibly — we haven\'t decided how we\'ll use it yet' },
+      { id: 'data_no',     label: 'No — we\'ll only track tasks and project information' },
+    ]
+  }
+];
+
+// ─────────────────────────────────────────────
+// SCORING MATRIX
+// ─────────────────────────────────────────────
+const SCORE_MAP = {
+  // Q1 primary use
+  todo:       { clickup:-3, asana:-2, monday:-1, trello:3, basecamp:0, notion:3, todoist:7, mstodo:6, msplanner:2, airtable:0, smartsheet:-5, wrike:-5 },
+  projects:   { clickup:5, asana:6, monday:5, trello:2, basecamp:3, notion:3, todoist:-2, mstodo:-4, msplanner:4, airtable:3, smartsheet:4, wrike:5 },
+  concurrent: { clickup:7, asana:5, monday:6, trello:1, basecamp:2, notion:3, todoist:-3, mstodo:-5, msplanner:3, airtable:4, smartsheet:4, wrike:5 },
+  operations: { clickup:8, asana:5, monday:6, trello:1, basecamp:1, notion:4, todoist:-4, mstodo:-5, msplanner:3, airtable:5, smartsheet:4, wrike:4 },
+
+  // Q2 team size
+  solo:   { clickup:1, asana:0, monday:-2, trello:2, basecamp:-2, notion:2, todoist:3, mstodo:3, msplanner:0, airtable:0, smartsheet:-2, wrike:0 },
+  small:  { clickup:2, asana:0, monday:1, trello:2, basecamp:-1, notion:2, todoist:1, mstodo:1, msplanner:1, airtable:1, smartsheet:0, wrike:1 },
+  medium: { clickup:2, asana:2, monday:2, trello:-1, basecamp:1, notion:1, todoist:-2, mstodo:-3, msplanner:2, airtable:2, smartsheet:2, wrike:2 },
+  large:  { clickup:3, asana:3, monday:3, trello:-2, basecamp:4, notion:1, todoist:-3, mstodo:-5, msplanner:2, airtable:2, smartsheet:3, wrike:3 },
+
+  // Q3 Microsoft
+  ms_yes:     { clickup:-1, asana:-1, monday:-1, trello:-1, basecamp:-2, notion:-1, todoist:-2, mstodo:5, msplanner:6, airtable:-1, smartsheet:0, wrike:0 },
+  ms_partial: { clickup:0, asana:0, monday:0, trello:0, basecamp:0, notion:0, todoist:0, mstodo:2, msplanner:2, airtable:0, smartsheet:0, wrike:0 },
+  ms_no:      { clickup:1, asana:1, monday:1, trello:1, basecamp:0, notion:1, todoist:1, mstodo:-6, msplanner:-8, airtable:1, smartsheet:1, wrike:1 },
+
+  // Q4 views
+  kanban:   { clickup:3, asana:3, monday:4, trello:5, basecamp:0, notion:3, todoist:0, mstodo:-2, msplanner:3, airtable:3, smartsheet:1, wrike:3 },
+  list:     { clickup:2, asana:3, monday:2, trello:1, basecamp:1, notion:2, todoist:4, mstodo:3, msplanner:2, airtable:1, smartsheet:2, wrike:2 },
+  table:    { clickup:2, asana:1, monday:2, trello:-2, basecamp:-2, notion:4, todoist:-2, mstodo:-3, msplanner:0, airtable:6, smartsheet:5, wrike:2 },
+  calendar: { clickup:2, asana:2, monday:2, trello:2, basecamp:1, notion:3, todoist:1, mstodo:-2, msplanner:2, airtable:2, smartsheet:2, wrike:2 },
+  multi:    { clickup:5, asana:4, monday:4, trello:1, basecamp:-1, notion:4, todoist:-2, mstodo:-4, msplanner:2, airtable:3, smartsheet:3, wrike:4 },
+
+  // Q5 budget
+  free:  { clickup:3, asana:3, monday:-2, trello:4, basecamp:-5, notion:3, todoist:4, mstodo:4, msplanner:2, airtable:1, smartsheet:-8, wrike:2 },
+  low:   { clickup:2, asana:1, monday:2, trello:4, basecamp:-3, notion:2, todoist:4, mstodo:3, msplanner:1, airtable:-1, smartsheet:2, wrike:2 },
+  mid:   { clickup:2, asana:2, monday:2, trello:1, basecamp:1, notion:2, todoist:1, mstodo:0, msplanner:1, airtable:1, smartsheet:2, wrike:2 },
+  open:  { clickup:1, asana:1, monday:1, trello:0, basecamp:1, notion:1, todoist:0, mstodo:0, msplanner:0, airtable:1, smartsheet:1, wrike:1 },
+
+  // Q6 dependencies
+  dep_critical: { clickup:5, asana:5, monday:4, trello:-3, basecamp:-5, notion:2, todoist:-5, mstodo:-5, msplanner:3, airtable:4, smartsheet:5, wrike:5 },
+  dep_nice:     { clickup:2, asana:2, monday:2, trello:0, basecamp:-1, notion:1, todoist:-1, mstodo:-2, msplanner:2, airtable:2, smartsheet:2, wrike:2 },
+  dep_no:       { clickup:0, asana:0, monday:0, trello:1, basecamp:1, notion:0, todoist:1, mstodo:1, msplanner:0, airtable:0, smartsheet:0, wrike:0 },
+
+  // Q7 automations
+  auto_yes:        { clickup:5, asana:4, monday:6, trello:1, basecamp:-5, notion:2, todoist:-4, mstodo:-4, msplanner:3, airtable:4, smartsheet:4, wrike:4 },
+  auto_occasional: { clickup:2, asana:2, monday:2, trello:1, basecamp:-1, notion:1, todoist:0, mstodo:0, msplanner:1, airtable:2, smartsheet:2, wrike:2 },
+  auto_no:         { clickup:0, asana:0, monday:0, trello:1, basecamp:1, notion:0, todoist:1, mstodo:1, msplanner:0, airtable:0, smartsheet:0, wrike:0 },
+
+  // Q8 guest access
+  ext_yes:        { clickup:4, asana:5, monday:3, trello:3, basecamp:3, notion:4, todoist:-2, mstodo:-4, msplanner:2, airtable:3, smartsheet:2, wrike:3 },
+  ext_occasional: { clickup:2, asana:2, monday:1, trello:2, basecamp:2, notion:2, todoist:-1, mstodo:-2, msplanner:1, airtable:1, smartsheet:1, wrike:1 },
+  ext_no:         { clickup:0, asana:0, monday:0, trello:0, basecamp:0, notion:0, todoist:1, mstodo:1, msplanner:0, airtable:0, smartsheet:0, wrike:0 },
+
+  // Q9 API / MCP
+  api_critical: { clickup:6, asana:5, monday:3, trello:2, basecamp:2, notion:4, todoist:1, mstodo:2, msplanner:2, airtable:5, smartsheet:2, wrike:2 },
+  api_nice:     { clickup:2, asana:2, monday:2, trello:1, basecamp:1, notion:2, todoist:0, mstodo:1, msplanner:1, airtable:2, smartsheet:1, wrike:1 },
+  api_no:       { clickup:0, asana:0, monday:0, trello:0, basecamp:0, notion:0, todoist:0, mstodo:0, msplanner:0, airtable:0, smartsheet:0, wrike:0 },
+
+  // Q10 data residency (scoring — advisory triggered separately)
+  data_yes:    { clickup:0, asana:0, monday:1, trello:0, basecamp:0, notion:0, todoist:0, mstodo:2, msplanner:2, airtable:0, smartsheet:1, wrike:2 },
+  data_unsure: { clickup:0, asana:0, monday:0, trello:0, basecamp:0, notion:0, todoist:0, mstodo:1, msplanner:1, airtable:0, smartsheet:0, wrike:1 },
+  data_no:     { clickup:0, asana:0, monday:0, trello:0, basecamp:0, notion:0, todoist:0, mstodo:0, msplanner:0, airtable:0, smartsheet:0, wrike:0 },
+};
+
+
+// ─────────────────────────────────────────────
+// STATE
+// ─────────────────────────────────────────────
+let current = 0;
+let answers = {};
+// single-path submit — no path selection needed
+
+// ─────────────────────────────────────────────
+// QUIZ FLOW
+// ─────────────────────────────────────────────
+function startQuiz() {
+  document.getElementById('intro-screen').classList.add('hidden');
+  document.getElementById('quiz-screen').classList.remove('hidden');
+  renderQuestion();
+}
+
+function renderQuestion() {
+  const q = QUESTIONS[current];
+  const pct = Math.round((current / QUESTIONS.length) * 100);
+
+  document.getElementById('progress-text').textContent = `Question ${current + 1} of ${QUESTIONS.length}`;
+  document.getElementById('progress-pct').textContent = pct + '%';
+  document.getElementById('progress-fill').style.width = pct + '%';
+
+  const chosen = answers[q.id];
+  let html = `<div class="question-text">${q.text}</div>`;
+  if (q.note) html += `<p class="question-note">${q.note}</p>`;
+  html += '<div class="options-list">';
+  q.options.forEach(opt => {
+    const sel = chosen === opt.id ? ' selected' : '';
+    html += `<button class="option-btn${sel}" onclick="selectOption('${q.id}','${opt.id}',this)">${opt.label}</button>`;
+  });
+  html += '</div>';
+
+  const container = document.getElementById('question-container');
+  container.innerHTML = html;
+  container.className = 'quiz-screen';
+  void container.offsetWidth; // force reflow for animation
+
+  document.getElementById('btn-back').style.visibility = current === 0 ? 'hidden' : 'visible';
+  document.getElementById('btn-next').disabled = !chosen;
+  document.getElementById('btn-next').textContent = current === QUESTIONS.length - 1 ? 'See my results →' : 'Continue →';
+}
+
+function selectOption(qid, optId, el) {
+  answers[qid] = optId;
+  document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+  el.classList.add('selected');
+  document.getElementById('btn-next').disabled = false;
+}
+
+function nextQuestion() {
+  if (!answers[QUESTIONS[current].id]) return;
+  if (current < QUESTIONS.length - 1) {
+    current++;
+    renderQuestion();
+  } else {
+    showResults();
+  }
+}
+
+function prevQuestion() {
+  if (current > 0) {
+    current--;
+    renderQuestion();
+  }
+}
+
+function restartQuiz() {
+  current = 0;
+  answers = {};
+  document.getElementById('results-screen').classList.add('hidden');
+  document.getElementById('intro-screen').classList.remove('hidden');
+  document.getElementById('success-msg').style.display = 'none';
+  document.getElementById('cta-form').style.display = '';
+  document.getElementById('field-name').value = '';
+  document.getElementById('field-email').value = '';
+  const btn = document.getElementById('btn-submit');
+  btn.disabled = false;
+  btn.textContent = 'Send the comparison →';
+}
+
+// ─────────────────────────────────────────────
+// SCORING
+// ─────────────────────────────────────────────
+function computeScores() {
+  const scores = {};
+  Object.keys(TOOLS).forEach(t => scores[t] = 0);
+  Object.values(answers).forEach(answerId => {
+    const row = SCORE_MAP[answerId];
+    if (!row) return;
+    Object.keys(row).forEach(t => { scores[t] += row[t]; });
+  });
+
+  // special: free answer + Asana small/medium/large → penalise (free = 2 user cap)
+  if (answers.q5 === 'free' && answers.q2 !== 'solo') {
+    scores.asana -= 4;
+  }
+
+  return scores;
+}
+
+function getTop3(scores) {
+  return Object.entries(scores)
+    .filter(([, s]) => s > 0)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 3)
+    .map(([id]) => id);
+}
+
+// ─────────────────────────────────────────────
+// WHY TEXT
+// pick the top 2 reasons matched to actual answers
+// ─────────────────────────────────────────────
+function buildWhyText(toolId) {
+  const tool = TOOLS[toolId];
+  const reasons = tool.reasons;
+  const matched = [];
+
+  // check each answer against reason keys
+  Object.values(answers).forEach(a => {
+    if (reasons[a] && !matched.includes(reasons[a])) {
+      matched.push(reasons[a]);
+    }
+  });
+
+  if (matched.length === 0) {
+    return 'Based on your combination of answers, this tool offers a reasonable balance of features for your situation.';
+  }
+  return matched.slice(0, 2).join(' ');
+}
+
+// ─────────────────────────────────────────────
+// RESULTS SCREEN
+// ─────────────────────────────────────────────
+function showResults() {
+  document.getElementById('quiz-screen').classList.add('hidden');
+  const results = document.getElementById('results-screen');
+  results.classList.remove('hidden');
+
+  const scores = computeScores();
+  const top3 = getTop3(scores);
+
+  if (top3.length === 0) {
+    document.getElementById('tool-cards').innerHTML = '<p style="color:var(--muted);font-size:15px;">No tools scored above zero for your combination of answers. Try adjusting your budget or feature requirements.</p>';
+    return;
+  }
+
+  // data residency advisory
+  if (answers.q10 === 'data_yes' || answers.q10 === 'data_unsure') {
+    document.getElementById('data-advisory').classList.remove('hidden');
+  }
+
+  // tool cards
+  const rankLabels = ['Best match', 'Strong alternative', 'Also worth considering'];
+  const rankClasses = ['rank-1', 'rank-2', 'rank-3'];
+  let cardsHtml = '';
+  top3.forEach((toolId, i) => {
+    const tool = TOOLS[toolId];
+    cardsHtml += `
+      <div class="tool-card ${rankClasses[i]}">
+        <p class="tool-rank">${rankLabels[i]}</p>
+        <h3 class="tool-name">${tool.name}</h3>
+        <p class="tool-tagline">${tool.tagline}</p>
+        <p class="tool-why">${buildWhyText(toolId)}</p>
+        <p class="tool-pricing">
+          Free tier: <span>${tool.freeTier}</span><br>
+          Paid: <span>${tool.paidPrice}</span>
+        </p>
+        <a class="tool-visit" href="${tool.url}" target="_blank" rel="noopener">Visit ${tool.name} →</a>
+        <a class="tool-onepager" href="/pm-tools/${toolId}.html" target="_blank" rel="noopener">View one-pager →</a>
+      </div>`;
+  });
+  document.getElementById('tool-cards').innerHTML = cardsHtml;
+
+  // store tool names for Kit submission
+  window._topTools = top3.map(id => TOOLS[id].name);
+
+  results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// ─────────────────────────────────────────────
+// CTA / EMAIL PATHS
+// ─────────────────────────────────────────────
+function submitReport() {
+  const name = document.getElementById('field-name').value.trim();
+  const email = document.getElementById('field-email').value.trim();
+  if (!name || !email) {
+    alert('Please enter your name and email address.');
+    return;
+  }
+
+  const btn = document.getElementById('btn-submit');
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+
+  const tools = window._topTools || [];
+  const formUrl = 'https://app.kit.com/forms/9467797/subscriptions';
+
+  const body = new URLSearchParams();
+  body.append('fields[first_name]', name);
+  body.append('email_address', email);
+  if (tools[0]) body.append('fields[tool_1]', tools[0]);
+  if (tools[1]) body.append('fields[tool_2]', tools[1]);
+  if (tools[2]) body.append('fields[tool_3]', tools[2]);
+
+  fetch(formUrl, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: body.toString(),
+  }).then(() => {
+    document.getElementById('cta-form').style.display = 'none';
+    document.getElementById('success-msg').style.display = 'block';
+    if (typeof plausible !== 'undefined') {
+      plausible('PM Tool Comparison Requested');
+    }
+  }).catch(() => {
+    btn.disabled = false;
+    btn.textContent = 'Send the comparison →';
+    alert('Something went wrong — please try again.');
+  });
+}
+</script>
+</body>
+</html>
