@@ -1412,6 +1412,7 @@ function submitReport() {
   if (tools[0]) body.append('fields[tool_1]', tools[0]);
   if (tools[1]) body.append('fields[tool_2]', tools[1]);
   if (tools[2]) body.append('fields[tool_3]', tools[2]);
+  body.append('tags[]', 'pm-tool-selector');
 
   fetch(formUrl, {
     method: 'POST',
