@@ -23,7 +23,7 @@ jobs:
           for file in blog/*.md; do
             if grep -q "^published: false" "$file"; then
               POST_DATE=$(grep "^date:" "$file" | head -1 | sed 's/date: //' | tr -d '"' | cut -c1-10)
-              if [ -n "$POST_DATE" ] && [[ "$POST_DATE" <= "$TODAY" ]]; then
+              if [ -n "$POST_DATE" ] && [[ ! "$POST_DATE" > "$TODAY" ]]; then
                 echo "Publishing: $file (scheduled: $POST_DATE)"
                 sed -i '/^published: false$/d' "$file"
                 CHANGED=1
