@@ -10,12 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Publish due posts
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           TODAY=$(date -u +%Y-%m-%d)
           CHANGED=0
@@ -32,11 +35,19 @@ jobs:
           done
 
           if [ "$CHANGED" = "1" ]; then
+            BRANCH="auto-publish/$TODAY"
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
+            git checkout -b "$BRANCH"
             git add blog/*.md
             git commit -m "Auto-publish posts scheduled for $TODAY"
-            git push
+            git push -u origin "$BRANCH"
+            gh pr create \
+              --base main \
+              --head "$BRANCH" \
+              --title "Auto-publish posts scheduled for $TODAY" \
+              --body "Automated scheduled publish. No review required."
+            gh pr merge "$BRANCH" --squash --delete-branch
           else
             echo "No posts due today."
           fi
