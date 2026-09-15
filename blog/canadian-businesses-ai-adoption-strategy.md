@@ -7,7 +7,6 @@ og_description: "58% of Canadian businesses are using AI. Most don't have a poli
 date: 2026-09-29
 date_modified: "2026-09-29"
 published_time: "2026-09-29T00:00:00.000Z"
-published: false
 permalink: /blog/canadian-businesses-ai-adoption-strategy.html
 source_label: "Blog · Essay"
 source_class: source-essay

@@ -6,7 +6,6 @@ og_title: "AI Stack Security Checklist — Northlight Advisory Services"
 og_description: "Three-part checklist for auditing new AI tool connections, quarterly reviews, and team onboarding. Free from Northlight Advisory Services."
 permalink: /blog/ai-stack-security-checklist-printable.html
 date: 2026-10-13
-published: false
 ---
 
 <div class="no-print-bar">

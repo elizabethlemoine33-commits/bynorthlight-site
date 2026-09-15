@@ -7,7 +7,6 @@ og_description: "91% of Canadian organizations report IT HR challenges. The IT s
 date: 2026-10-27
 date_modified: "2026-10-27"
 published_time: "2026-10-27T00:00:00.000Z"
-published: false
 permalink: /blog/canada-it-skills-gap-business-problem.html
 source_label: "Blog · Essay"
 source_class: source-essay

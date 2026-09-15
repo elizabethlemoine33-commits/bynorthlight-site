@@ -7,7 +7,6 @@ og_description: "92% of Canadian companies feel secure. Only 38% have tested the
 date: 2026-10-20
 date_modified: "2026-10-20"
 published_time: "2026-10-20T00:00:00.000Z"
-published: false
 permalink: /blog/cybersecurity-confidence-gap-canadian-smb.html
 source_label: "Blog · Essay"
 source_class: source-essay

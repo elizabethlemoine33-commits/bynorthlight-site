@@ -7,7 +7,6 @@ og_description: "ChatGPT searches Bing, not Google. Most Canadian businesses hav
 date: 2026-09-22
 date_modified: "2026-09-22"
 published_time: "2026-09-22T00:00:00.000Z"
-published: false
 permalink: /blog/chatgpt-searches-bing-not-google.html
 source_label: "Blog · Guide"
 source_class: source-guide

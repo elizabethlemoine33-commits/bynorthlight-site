@@ -7,7 +7,6 @@ og_description: "97% of Canadian SMEs that adopted AI report tangible benefits. 
 date: 2026-10-06
 date_modified: "2026-10-06"
 published_time: "2026-10-06T00:00:00.000Z"
-published: false
 permalink: /blog/measure-ai-tool-effectiveness.html
 source_label: "Blog · Guide"
 source_class: source-guide
