@@ -7,7 +7,6 @@ og_description: "Every AI tool you connect to another app opens a data channel. 
 date: 2026-10-13
 date_modified: "2026-10-13"
 published_time: "2026-10-13T00:00:00.000Z"
-published: false
 permalink: /blog/ai-tool-data-security-canadian-businesses.html
 source_label: "Blog · Guide"
 source_class: source-guide
