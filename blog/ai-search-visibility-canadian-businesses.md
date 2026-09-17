@@ -7,7 +7,6 @@ og_description: "Your Google SEO work won't help you in ChatGPT. Here's why — 
 date: 2026-09-08
 date_modified: "2026-09-08"
 published_time: "2026-09-08T00:00:00.000Z"
-published: false
 permalink: /blog/ai-search-visibility-canadian-businesses.html
 source_label: "Blog · Guide"
 source_class: source-guide

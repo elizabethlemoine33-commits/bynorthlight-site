@@ -7,7 +7,6 @@ og_description: "Meltwater's analysis of 9 million AI citations found LinkedIn i
 date: 2026-09-15
 date_modified: "2026-09-15"
 published_time: "2026-09-15T00:00:00.000Z"
-published: false
 permalink: /blog/linkedin-ai-citations-personal-profiles.html
 source_label: "Blog · Essay"
 source_class: source-essay
