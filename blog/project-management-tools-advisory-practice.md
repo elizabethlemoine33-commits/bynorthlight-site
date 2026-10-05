@@ -68,6 +68,10 @@ Over that process, I evaluated or used [Basecamp](https://basecamp.com){:target=
 
 ClickUp won.
 
+<div class="answer-block">
+<p>I evaluated twelve project management tools in 2022 for a large, distributed organisation and chose ClickUp. In 2026 I chose it again for a one-person advisory practice. It won on depth that grows from a simple list, workflows that surface the next task, guest access that does not use up paid seats, and an API that connects to AI and to Northlight OS. If you only need a to-do list, use a to-do list; if you have real projects with dates and dependencies, ClickUp is a good place to start.</p>
+</div>
+
 ## What I learned from the alternatives
 
 Several of them were strong products — the right fit for different teams or different problems. The table below captures my actual evaluation — not a benchmark, just what I found.

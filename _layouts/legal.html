@@ -7,6 +7,13 @@
   <meta name="description" content="{{ page.description }}">
   {% if page.robots %}<meta name="robots" content="{{ page.robots }}">{% endif %}
   <link rel="canonical" href="{{ page.canonical }}">
+  <meta property="og:title" content="{{ page.og_title | default: page.title }}">
+  <meta property="og:description" content="{{ page.og_description | default: page.description }}">
+  <meta property="og:image" content="{{ page.og_image | default: 'https://bynorthlight.ca/northlight-og-image.png' }}">
+  <meta property="og:url" content="{{ page.canonical }}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Northlight Advisory Services">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">

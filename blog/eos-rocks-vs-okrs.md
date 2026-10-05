@@ -49,6 +49,10 @@ OKRs and EOS Rocks solve different problems. OKRs are designed to answer *what d
 
 ## What Each Framework Is — in Brief
 
+<div class="answer-block">
+<p>EOS Rocks and OKRs answer different questions. Rocks are 90-day, done-or-not-done commitments — three to seven per person or team, each with one owner — built to make sure you finish your most important work; a healthy quarter is about 80% of Rocks complete. OKRs pair a qualitative Objective with 2–5 measurable Key Results scored from 0 to 1.0, built to define what success looks like and whether you are reaching far enough. If your problem is finishing what you have already identified, start with Rocks. If it is defining and measuring the outcomes, start with OKRs.</p>
+</div>
+
 If you've read [OKRs for Canadian Small Businesses](/blog/okrs-for-canadian-small-businesses.html) and [EOS Rocks: A Practical Guide for Small Business Operators](/blog/eos-rocks-practical-guide.html), you already know the mechanics. The short version:
 
 **EOS Rocks** — from Gino Wickman's [*Traction*](https://www.eosworldwide.com/traction-book) (2011) — are 90-day commitments with a binary done/not-done assessment. Three to seven per person or team per quarter. Each Rock has one owner and a clear done definition written in advance. Progress is reviewed weekly in the L10 meeting: on track or off track, nothing more. Healthy completion is 80% — not 100%, which would mean the Rocks weren't ambitious enough.

@@ -14,6 +14,7 @@ CANONICAL_PATTERN = re.compile(
     re.IGNORECASE
 )
 FM_PERMALINK = re.compile(r"^permalink:\s*(.+?)\s*$", re.MULTILINE)
+FM_ROBOTS_NOINDEX = re.compile(r"^robots:.*noindex", re.MULTILINE)
 FM_UNPUBLISHED = re.compile(r"^published:\s*false\s*$", re.MULTILINE)
 FM_NOINDEX = re.compile(r"^noindex:\s*true\s*$", re.MULTILINE)
 
@@ -44,7 +45,7 @@ def collect_urls():
         content = html_file.read_text(encoding="utf-8", errors="ignore")
 
         # Skip noindex pages
-        if NOINDEX_PATTERN.search(content):
+        if NOINDEX_PATTERN.search(content) or FM_ROBOTS_NOINDEX.search(content[:1000]):
             continue
 
         # Get canonical URL
