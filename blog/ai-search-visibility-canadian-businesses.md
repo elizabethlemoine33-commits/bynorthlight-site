@@ -63,7 +63,7 @@ AI models don't skim. They parse.
 
 They're particularly good at finding answers to specific questions: "Who provides fractional operations support in Ontario?" "What should I look for in a project management consultant?" "What's the difference between a COO and a fractional COO?" If your website doesn't answer those questions plainly — in complete sentences, under clear headings — you're invisible to the model that's about to answer your potential client's question.
 
-Three things make content AI-citable, and none of them require a developer:
+Four things make content AI-citable, and none of them require a developer:
 
 **Clear headings written as statements or questions.** "What does a fractional COO actually do?" is better than "Our Services." The model can read the question, match it to a query, and cite your answer. A vague heading gives it nothing to work with.
 
