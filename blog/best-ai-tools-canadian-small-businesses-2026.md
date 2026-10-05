@@ -21,7 +21,7 @@ related_reading:
   - title: "AI Adoption Checklist for Canadian Businesses (2026)"
     url: /blog/ai-adoption-checklist-canadian-businesses-2026.html
   - title: "What Is a Fractional Executive? Guide for Canadian Businesses"
-    url: /blog/what-is-a-fractional-executive-canada.html
+    url: /blog/what-is-fractional-executive-guide-canadian-businesses.html
   - title: "How to Choose an AI Advisor Who Won't Waste Your Time"
     url: /blog/how-to-choose-ai-advisor-consultant.html
 faq:
