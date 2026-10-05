@@ -14,6 +14,7 @@ CANONICAL_PATTERN = re.compile(
     re.IGNORECASE
 )
 FM_PERMALINK = re.compile(r"^permalink:\s*(.+?)\s*$", re.MULTILINE)
+FM_UNPUBLISHED = re.compile(r"^published:\s*false\s*$", re.MULTILINE)
 FM_NOINDEX = re.compile(r"^noindex:\s*true\s*$", re.MULTILINE)
 
 
@@ -37,7 +38,7 @@ def collect_urls():
     urls = {}  # full_url -> (priority, changefreq)
 
     for html_file in sorted(Path(".").rglob("*.html")):
-        if ".github" in html_file.parts:
+        if any(part in (".github", ".claude", "_includes", "_layouts", "_site") for part in html_file.parts):
             continue
 
         content = html_file.read_text(encoding="utf-8", errors="ignore")
@@ -82,7 +83,7 @@ def collect_urls():
         # Skip redirect-only files
         if "redirect_to:" in content and "layout: redirect" in content:
             continue
-        if FM_NOINDEX.search(content):
+        if FM_NOINDEX.search(content) or FM_UNPUBLISHED.search(content):
             continue
         perm_match = FM_PERMALINK.search(content)
         if perm_match:
