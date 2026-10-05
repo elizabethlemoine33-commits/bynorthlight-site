@@ -17,7 +17,7 @@ tags:
   - Atlantic Canada Business
 related_reading:
   - title: "What Is a Fractional Executive? Guide for Canadian Businesses"
-    url: /blog/what-is-a-fractional-executive-canada.html
+    url: /blog/what-is-fractional-executive-guide-canadian-businesses.html
   - title: "Fractional COO vs. Full-Time COO: Cost & Value in Canada"
     url: /blog/fractional-coo-vs-hiring-full-time-canada.html
 faq:

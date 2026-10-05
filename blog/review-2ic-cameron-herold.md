@@ -26,7 +26,7 @@ related_reading:
   - title: "The Market-Aware COO"
     url: /blog/the-market-aware-coo.html
   - title: "What Is a Fractional Executive? A Guide for Canadian Businesses"
-    url: /blog/what-is-a-fractional-executive-canada.html
+    url: /blog/what-is-fractional-executive-guide-canadian-businesses.html
 faq:
   - q: "What is The Second in Command about?"
     a: "It is a guide for CEOs and founders — how to recognize when you need a second-in-command, how to define the role, hire the right person, onboard them, and make the relationship work. Cameron Herold draws on his experience as COO of 1-800-GOT-JUNK? and years of advising through the COO Alliance. The book is primarily written for CEOs, though COOs will find it just as useful from a different angle."
