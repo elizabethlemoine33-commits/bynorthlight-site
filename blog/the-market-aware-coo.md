@@ -65,6 +65,10 @@ Marketing tells the organisation what customers want. What prospects are asking.
 
 That is intelligence. Organisational intelligence. And it has a direct bearing on strategy, sales, delivery, capacity planning, finance, and client experience.
 
+<div class="answer-block">
+<p>A Market-Aware COO treats marketing as organisational intelligence: the part of the business that systematically watches the outside world — what customers want, how prospects find you, what competitors change — and reports back. The COO does not do the marketing; they read what marketing learns and ask what it means for how the organisation operates. Research on market orientation (Kohli and Jaworski; Narver and Slater, both 1990) has consistently found that firms that gather and respond to market intelligence outperform those that do not.</p>
+</div>
+
 Research on market orientation — the degree to which an organisation systematically gathers and responds to market intelligence — has consistently shown that firms with higher market orientation outperform those without it. [Kohli and Jaworski established this in 1990](https://journals.sagepub.com/doi/10.1177/002224299005400201). [Narver and Slater confirmed it the same year](https://journals.sagepub.com/doi/10.1177/002224299005400403). The finding has replicated across industries and geographies for three decades.
 
 The problem is that most of this research treats market orientation as a firm-level trait, not as an operational practice. It asks whether the organisation is market-oriented. It rarely asks how market intelligence actually moves through the operating system — or whether the COO is part of that movement.

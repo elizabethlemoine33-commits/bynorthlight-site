@@ -45,6 +45,10 @@ This is the shift that most Canadian SMBs haven't caught up to yet; and it isn't
 
 ## What AEO and GEO actually mean
 
+<div class="answer-block">
+<p>AEO (Answer Engine Optimization) is writing content that voice assistants and featured snippets can quote directly. GEO (Generative Engine Optimization) is how AI tools like ChatGPT pull and cite content when they build an answer. A 2024 study by Aggarwal et al., presented at the KDD conference, found that structured, well-cited content raised AI visibility by up to 40%. In practice that comes down to four things: clear question-style headings, one consistent business name everywhere, structured data such as FAQPage schema, and consistent third-party directory listings.</p>
+</div>
+
 Two acronyms are circulating right now: AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization). They're related — AEO is the older concept, originally developed around voice search and featured snippets; GEO is specifically about how AI-generated responses pull and cite content when constructing an answer.
 
 You don't need to hold both acronyms in your head. The practical question is simpler: *is your content clear enough that an AI model can summarize what your business does — and accurate enough that you'd want it to?*

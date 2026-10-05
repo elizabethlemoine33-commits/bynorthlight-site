@@ -57,30 +57,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bynorthlight.ca/meetings-privacy.html</loc>
-    <lastmod>2026-10-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bynorthlight.ca/meetings-refunds.html</loc>
-    <lastmod>2026-10-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bynorthlight.ca/meetings-terms.html</loc>
-    <lastmod>2026-10-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bynorthlight.ca/meetings-thankyou.html</loc>
-    <lastmod>2026-10-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bynorthlight.ca/meetings.html</loc>
     <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
@@ -94,12 +70,6 @@
   </url>
   <url>
     <loc>https://bynorthlight.ca/news/digital-reference-best-coo-2026.html</loc>
-    <lastmod>2026-10-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bynorthlight.ca/northlight-privacy.html</loc>
     <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -201,19 +171,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bynorthlight.ca/subscription-confirmed.html</loc>
-    <lastmod>2026-10-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bynorthlight.ca/vault-docs.html</loc>
-    <lastmod>2026-10-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bynorthlight.ca/vault-privacy.html</loc>
     <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

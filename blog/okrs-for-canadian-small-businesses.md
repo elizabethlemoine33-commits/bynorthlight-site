@@ -51,6 +51,10 @@ That's the problem OKRs were designed to solve.
 
 ## What OKRs Actually Are
 
+<div class="answer-block">
+<p>OKRs (Objectives and Key Results) are a quarterly goal-setting framework that pairs one qualitative Objective — where you want to go — with 2–5 measurable Key Results that show whether you got there. They are a focus and communication tool, not a task list or a performance review. There are three types: committed (must reach 100%), aspirational (70% counts as a win) and learning (success is a clear decision, not a score).</p>
+</div>
+
 OKR stands for Objectives and Key Results. The framework was developed at Intel in the 1970s by CEO Andy Grove, popularised at Google in its earliest years, and brought to a wider business audience through John Doerr's 2018 book [*Measure What Matters*](https://www.whatmatters.com/).
 
 The structure is simple:
