@@ -6,7 +6,7 @@ description: "Which AI tools keep client data in Canada? Honest picks for chat, 
 og_title: "Best AI Tools for Canadian Small Businesses (2026)"
 og_description: "Honest recommendations for PIPEDA-compliant AI tools — Canadian-hosted options for chat, transcription, storage, and when to use US tools carefully."
 date: 2026-07-25
-date_modified: "2026-07-25"
+date_modified: "2026-10-06"
 published_time: "2026-07-25T00:00:00.000Z"
 permalink: /blog/best-ai-tools-canadian-small-businesses-2026.html
 source_label: "Blog · Guide"

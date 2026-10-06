@@ -6,7 +6,7 @@ seo_title: "EOS Rocks: Definition, Examples & How to Write One"
 og_title: "EOS Rocks: A Practical Guide for Small Business Operators | Northlight Advisory Services"
 og_description: "EOS Rocks are a deceptively simple tool for quarterly execution discipline. Here's what they are, how they work, how to pick them well, and the failure patterns that catch most teams by surprise."
 date: 2026-08-10
-date_modified: "2026-08-10"
+date_modified: "2026-10-06"
 published_time: "2026-08-10T00:00:00.000Z"
 permalink: /blog/eos-rocks-practical-guide.html
 source_label: "Blog · Guide"

@@ -6,7 +6,7 @@ description: "What fractional COOs, CFOs and advisors cost in Canada ($1,500–$
 og_title: "Best Fractional Advisory Services for Canadian Small Business Operators (2026)"
 og_description: "A practical guide to fractional advisory options for Canadian founders and operators — what fractional advisors actually do, what to look for, and how to evaluate fit."
 date: 2026-07-09
-date_modified: "2026-07-09"
+date_modified: "2026-10-06"
 published_time: "2026-07-09T00:00:00.000Z"
 permalink: /blog/best-fractional-advisory-services-canada.html
 source_label: "Blog · Guide"
