@@ -20,6 +20,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Generate sitemap.xml and update llms.txt blog list
+        # Generated fresh on every deploy and shipped in the site build.
+        # Nothing is committed back, so branch protection on main can't block it.
+        run: |
+          python3 generate-sitemap.py
+          python3 .github/scripts/update_llms_blog.py
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
