@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "EOS Rocks vs. OKRs: Which Goal-Setting Framework Is Right for Your Business?"
-description: "OKRs and EOS Rocks solve different problems. A direct side-by-side comparison — same priorities, both frameworks — to decide which fits."
-seo_title: "EOS Rocks vs. OKRs: The Right Fit"
+description: "OKRs or EOS Rocks? The same three business priorities written both ways, plus when each fits and whether to combine them."
+seo_title: "EOS Rocks vs. OKRs: Which Should You Use?"
 og_title: "EOS Rocks vs. OKRs: Which Goal-Setting Framework Is Right for Your Business? | Northlight Advisory Services"
 og_description: "OKRs and EOS Rocks both solve the priority problem — but they solve different versions of it. A direct comparison for Canadian small business operators."
 date: 2026-08-10
-date_modified: "2026-08-10"
+date_modified: "2026-10-06"
 published_time: "2026-08-10T00:00:00.000Z"
 permalink: /blog/eos-rocks-vs-okrs.html
 source_label: "Blog · Guide"
