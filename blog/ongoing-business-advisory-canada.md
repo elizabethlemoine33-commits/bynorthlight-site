@@ -5,7 +5,7 @@ description: "A practical guide for Canadian founders and operators on finding, 
 og_title: "How to Get Ongoing Business Advisory Support as a Canadian Small Operator"
 og_description: "A practical guide for Canadian founders and operators on finding, evaluating, and working with ongoing business advisors — what to expect, what it costs, and how to get the most from it."
 date: 2026-07-09
-date_modified: "2026-07-09"
+date_modified: "2026-10-06"
 published_time: "2026-07-09T00:00:00.000Z"
 permalink: /blog/ongoing-business-advisory-canada.html
 source_label: "Blog · Guide"
@@ -22,7 +22,7 @@ tags:
 related_reading:
   - title: "Fractional COO vs. Hiring a COO: What's Right for Canadian Business?"
     url: /blog/fractional-coo-vs-hiring-full-time-canada.html
-  - title: "Best Fractional Advisory Services for Canadian Small Business (2026)"
+  - title: "Fractional Advisory Services in Canada: Types, Costs and How to Choose"
     url: /blog/best-fractional-advisory-services-canada.html
   - title: "How to Choose an AI Advisor Who Won't Waste Your Time"
     url: /blog/how-to-choose-ai-advisor-consultant.html

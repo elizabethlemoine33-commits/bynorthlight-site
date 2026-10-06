@@ -5,7 +5,7 @@ description: "Full-time COOs cost C$150K–$220K+ in Canada. Most Canadian busin
 og_title: "Fractional COO vs. Hiring a COO: What's Right for a Growing Canadian Business?"
 og_description: "Full-time COOs cost C$150K–$220K+ in Canada. Most Canadian businesses under C$5M don't need one full-time. Here's when fractional makes sense."
 date: 2026-07-08
-date_modified: "2026-07-09"
+date_modified: "2026-10-06"
 published_time: "2026-07-08T00:00:00.000Z"
 permalink: /blog/fractional-coo-vs-hiring-full-time-canada.html
 source_label: "Blog · Guide"
@@ -21,7 +21,7 @@ related_reading:
     url: /blog/what-is-fractional-executive-guide-canadian-businesses.html
   - title: "Fractional COO Services in Atlantic Canada"
     url: /blog/fractional-coo-atlantic-canada.html
-  - title: "Best Fractional Advisory Services for Canadian Small Business (2026)"
+  - title: "Fractional Advisory Services in Canada: Types, Costs and How to Choose"
     url: /blog/best-fractional-advisory-services-canada.html
 faq:
   - q: "How Much Does a Full-Time COO Cost in Canada?"

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Best Fractional Advisory Services for Canadian Businesses"
-seo_title: "Best Fractional Advisory Services Canada 2026"
-description: "What fractional COOs, CFOs and advisors typically cost in Canada ($2,000–$8,000/month), how to choose one, and the questions to ask before you hire."
-og_title: "Best Fractional Advisory Services for Canadian Small Business Operators (2026)"
+title: "Fractional Advisory Services in Canada: Types, Costs and How to Choose"
+seo_title: "Fractional Advisory Services Canada: Types & Costs"
+description: "The types of fractional advisory available to Canadian small businesses (COO, CFO, CMO, strategic), what they typically cost ($2,000–$8,000/month), and how to choose."
+og_title: "Fractional Advisory Services for Canadian Small Business: Types, Costs, Fit"
 og_description: "A practical guide to fractional advisory options for Canadian founders and operators — what fractional advisors actually do, what to look for, and how to evaluate fit."
 date: 2026-07-09
 date_modified: "2026-10-06"
