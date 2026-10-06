@@ -119,7 +119,7 @@ For founders who aren't yet sure whether they need an operations lead, a marketi
 ## How much does fractional advisory cost in Canada?
 
 <div class="answer-block">
-<p>Fractional advisory in Canada runs $1,500–$3,000/month for light retainers (4–8 hours), $3,000–$6,000 for standard fractional COO or CFO engagements (8–16 hours), and $6,000–$12,000+ for deep fractional work (20+ hours). Project-based engagements run $5,000–$20,000 depending on scope. A rate that feels comfortable without making you wince is usually too cheap — senior advisory experience commands senior rates.</p>
+<p>Fractional advisory in Canada typically ranges from $1,500–$3,000/month for light retainers (4–8 hours), $3,000–$6,000 for standard fractional COO or CFO engagements (8–16 hours), and $6,000–$12,000+ for deep fractional work (20+ hours). Project-based engagements run $5,000–$20,000 depending on scope. A rate that feels comfortable without making you wince is usually too cheap — senior advisory experience commands senior rates.</p>
 </div>
 
 Fractional advisory pricing in Canada varies considerably by type, experience level, and scope:
