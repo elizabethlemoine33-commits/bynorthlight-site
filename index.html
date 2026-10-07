@@ -384,8 +384,30 @@
     letter-spacing: 0.26em; text-transform: uppercase;
     color: var(--muted); margin-bottom: 32px;
   }
+  .outcomes-row {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+    margin-bottom: 40px;
+    list-style: none; margin-left: 0; padding: 0;
+  }
+  .outcome-item { display: flex; flex-direction: column; gap: 14px; }
+  .outcome-icon {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: linear-gradient(135deg, #4FC3C8 0%, #5B8DD9 33%, #8B6FD4 66%, #C46FAA 100%);
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .outcome-item p {
+    font-family: 'Outfit', sans-serif; font-size: 15px; color: var(--cloud); line-height: 1.6; margin: 0;
+  }
+
+  .problem-grid {
+    display: grid; grid-template-columns: 1fr 340px; gap: 40px; align-items: center;
+  }
+  .problem-diagram { display: flex; justify-content: center; }
+  .problem-diagram svg { width: 100%; max-width: 340px; height: auto; }
+
   .services-grid {
-    display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+    list-style: none; margin: 0; padding: 0;
   }
   .service-card {
     background: var(--surface); padding: 36px 32px;
@@ -399,6 +421,12 @@
     opacity: 0; transition: opacity 0.2s;
   }
   .service-card:hover::before { opacity: 1; }
+  .service-icon {
+    width: 44px; height: 44px; border-radius: 10px;
+    background: linear-gradient(135deg, #4FC3C8 0%, #5B8DD9 33%, #8B6FD4 66%, #C46FAA 100%);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 16px;
+  }
   .service-title {
     font-family: 'Jost', sans-serif; font-size: 16px; font-weight: 600;
     letter-spacing: 0.04em; color: var(--text); margin-bottom: 10px;
@@ -478,6 +506,12 @@
     .footer-links { justify-content: flex-start; }
     .nav-links { gap: 16px; }
     .nav-links a { font-size: 11px; }
+    .recognition-strip { padding: 16px 24px; }
+    .recognition-strip-inner { flex-direction: column; gap: 6px; text-align: center; }
+    .recognition-strip-dot { display: none; }
+    .problem-grid { grid-template-columns: 1fr; }
+    .problem-diagram { display: none; }
+    .outcomes-row { grid-template-columns: 1fr; gap: 20px; }
   }
   @media (max-width: 480px) {
     .nav-links { gap: 12px; }
@@ -495,10 +529,7 @@
       "name": "Northlight Advisory Services",
       "alternateName": "Northlight",
       "url": "https://bynorthlight.ca",
-      "founder": {
-        "@type": "Person",
-        "name": "Elizabeth Lemoine"
-      },
+      "founder": { "@id": "https://bynorthlight.ca#elizabeth-lemoine" },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Halifax",
@@ -530,6 +561,7 @@
         "@type": "ContactPoint",
         "contactType": "customer service",
         "url": "https://bynorthlight.ca/coffee.html",
+        "email": "support@bynorthlight.ca",
         "areaServed": "CA"
       },
       "dateModified": "2026-08-07T00:00:00Z"
@@ -542,10 +574,29 @@
       "publisher": { "@id": "https://bynorthlight.ca#northlight" }
     },
     {
+      "@type": "Person",
+      "@id": "https://bynorthlight.ca#elizabeth-lemoine",
+      "name": "Elizabeth Lemoine",
+      "jobTitle": "Founder & Principal",
+      "url": "https://bynorthlight.ca/about.html",
+      "sameAs": ["https://www.linkedin.com/in/elizabethannelemoine"],
+      "worksFor": { "@id": "https://bynorthlight.ca#northlight" }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://bynorthlight.ca#services-list",
+      "name": "Northlight Advisory Services: Services",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Fractional COO & Advisory", "url": "https://bynorthlight.ca/services.html" },
+        { "@type": "ListItem", "position": 2, "name": "Strategy", "url": "https://bynorthlight.ca/services.html" },
+        { "@type": "ListItem", "position": 3, "name": "AI Adoption", "url": "https://bynorthlight.ca/services.html" }
+      ]
+    },
+    {
       "@type": "Service",
       "@id": "https://bynorthlight.ca#advisory-service",
       "name": "Fractional COO and AI Adoption Advisory",
-      "description": "Bespoke strategy, operations, and AI adoption advisory for Canadian small businesses. Engagements are structured around each organisation's specific situation — not a package.",
+      "description": "Strategy, operations, and AI adoption advisory for Canadian small businesses, structured as a defined monthly scope of hours with regular progress reporting.",
       "provider": { "@id": "https://bynorthlight.ca#northlight" },
       "areaServed": { "@type": "Country", "name": "Canada" },
       "url": "https://bynorthlight.ca/services.html",
@@ -570,7 +621,7 @@
       "name": "Who does Northlight Advisory Services work with?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Northlight Advisory Services works primarily with Canadian founders, operators, and small organisations — typically under 50 people — who have a real operational challenge and need clear thinking they can act on quickly. Most clients are in a moment of transition: scaling, restructuring, adopting AI, or navigating a regulatory or market shift that requires a decision they can move on right away."
+        "text": "Northlight Advisory Services works primarily with Canadian founders, operators, and small organisations (typically under 50 people) who have a real operational challenge and need clear thinking they can act on quickly. Most clients are in a moment of transition: scaling, restructuring, adopting AI, or navigating a regulatory or market shift that requires a decision they can move on right away."
       }
     },
     {
@@ -586,7 +637,7 @@
       "name": "Does Northlight Advisory Services work with businesses outside Canada?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Occasionally. Northlight Advisory Services focuses on Canadian organisations because they face a distinct set of regulatory, funding, and market conditions — particularly around AI adoption — that general advice does not address well. Canadian businesses navigating PIPEDA, Quebec Law 25, or federal funding programs like BDC LIFT need context-specific guidance, not generic frameworks."
+        "text": "Occasionally. Northlight Advisory Services focuses on Canadian organisations because they face a distinct set of regulatory, funding, and market conditions, particularly around AI adoption, that general advice does not address well. Canadian businesses navigating PIPEDA, Quebec Law 25, or federal funding programs like BDC LIFT need context-specific guidance, not generic frameworks."
       }
     },
     {
@@ -594,7 +645,7 @@
       "name": "How do Northlight Advisory Services engagements start?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Northlight Advisory Services engagements begin with a direct email to elizabeth@bynorthlight.ca. A paragraph describing the problem is enough to start a real conversation. There is no intake form, no automated email sequence, and no discovery call disguised as a sales call. Elizabeth Lemoine reads every inquiry herself and responds personally."
+        "text": "Northlight Advisory Services engagements begin with a direct email to support@bynorthlight.ca. A paragraph describing the problem is enough to start a real conversation. There is no intake form and no automated email sequence. Elizabeth Lemoine reads every inquiry herself and responds personally."
       }
     },
     {
@@ -669,83 +720,143 @@
 
     <!-- ── HERO ── -->
     <div class="page-wrap">
-      <section class="hero" aria-labelledby="hero-headline">
+      <section class="hero" aria-labelledby="hero-headline" style="padding-bottom: 16px;">
         <p class="eyebrow">Northlight Advisory Services &nbsp;·&nbsp; Halifax, Nova Scotia</p>
-        <h1 class="hero-headline" id="hero-headline"><span class="grad">Fractional COO and AI Strategy</span> for Canadian Small Business</h1>
+        <h1 class="hero-headline" id="hero-headline">Every operational decision still runs through you. <span class="grad">That's not a leadership problem. It's a structure problem.</span></h1>
         <div class="aurora-line" role="presentation"></div>
-        <h2 class="tagline">Strategy, operations, and AI adoption advisory — delivered by one person, built around your situation.</h2>
+        <h2 class="tagline">The business grew. The operating model hasn't. Yet.</h2>
         <p class="body-copy" style="margin-bottom: 14px;">
-          Northlight Advisory Services helps small and mid-sized organisations in Halifax and Atlantic Canada become AI-enabled businesses — combining strategy, operations advisory, AI adoption, and purpose-built tools in a single engagement, with one person accountable for the outcome.
+          A fractional COO grows the operating model: taking operational ownership off your plate, embedding in your leadership team, and making the calls you've been making alone.
         </p>
-        <p class="body-copy" style="margin-top: 0; font-size: 15px; color: var(--haze);">Built for founders and operators who need more than a consultant. <a href="/who-we-help.html" style="color: var(--glacial); text-decoration: none; border-bottom: 1px solid rgba(79,195,200,0.3);">Find out if it's right for you →</a></p>
-        <div class="author-byline">
-          <div class="author-avatar-wrap">
-            <img src="/EL-aurora.png" alt="Elizabeth Lemoine" class="author-avatar-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-            <span class="author-avatar-init" aria-hidden="true">EL</span>
-          </div>
-          <div class="author-text">
-            <span class="author-name">Elizabeth Lemoine</span>
-            <span class="author-meta">Founder &amp; Principal &nbsp;·&nbsp; 10+ years director-level ops &nbsp;·&nbsp; Halifax, NS</span>
-          </div>
-          <a href="/about.html" class="author-link">Read bio →</a>
-        </div>
-        <p class="contact-label">Get in touch</p>
-        <a href="mailto:support@bynorthlight.ca" class="email-link">support@bynorthlight.ca</a>
       </section>
     </div>
 
-    <!-- ── ANSWER BLOCK ── -->
-    <div class="page-wrap" style="padding-top: 0; padding-bottom: 0;">
-      <div class="answer-block" style="margin-bottom: 24px;">
-        <p>Northlight Advisory Services is a Halifax, Nova Scotia–based fractional COO and AI adoption advisory practice for Canadian small businesses. Founded by Elizabeth Lemoine, Northlight works with founder-led organisations typically under 50 people navigating a strategic or operational inflection point. Services include fractional COO and CIO advisory, AI adoption strategy and implementation, and purpose-built operations tools for the Canadian market.</p>
-      </div>
-    </div>
-
-    <!-- ── AT A GLANCE ── -->
-    <div class="page-wrap" style="padding-top: 0; padding-bottom: 0;">
-      <div style="background: var(--surface-2); border: 1px solid var(--border); border-left: 4px solid var(--glacial); border-radius: 6px; padding: 20px 28px; margin-bottom: 48px;">
-        <p style="font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; background: linear-gradient(90deg, #4FC3C8, #8B6FD4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 12px; display: inline-block;">At a Glance</p>
-        <ul style="list-style: none; display: flex; flex-direction: column; gap: 7px;">
-          <li style="font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--cloud); line-height: 1.5;"><span style="color: var(--glacial); margin-right: 8px;" aria-hidden="true">·</span>Northlight Advisory Services is a Halifax, Nova Scotia–based strategy, AI adoption, and advisory practice.</li>
-          <li style="font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--cloud); line-height: 1.5;"><span style="color: var(--glacial); margin-right: 8px;" aria-hidden="true">·</span>Elizabeth Lemoine founded Northlight Advisory Services with 10+ years of director-level operations experience — 300+ initiatives across 115+ countries, spanning nonprofit, tech, and global organisations.</li>
-          <li style="font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--cloud); line-height: 1.5;"><span style="color: var(--glacial); margin-right: 8px;" aria-hidden="true">·</span>Northlight Advisory Services works with Canadian founders and operations leaders at organisations typically under 50 people.</li>
-          <li style="font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--cloud); line-height: 1.5;"><span style="color: var(--glacial); margin-right: 8px;" aria-hidden="true">·</span>Services: strategy, fractional COO and CIO advisory, AI adoption (PIPEDA-aware), and purpose-built app development for small businesses in Halifax and Atlantic Canada.</li>
-          <li style="font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--cloud); line-height: 1.5;"><span style="color: var(--glacial); margin-right: 8px;" aria-hidden="true">·</span>Certified: PMI · Google Project Management · IBM Generative AI Specializations · Anthropic Claude · Cloud Computing Law (U of Penn) · ClickUp Expert. Named one of Canada's Best Fractional COO Services by <a href="/news/digital-reference-best-coo-2026.html" style="color: var(--haze);">Digital Reference 2026</a>.</li>
-          <li style="font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--cloud); line-height: 1.5;"><span style="color: var(--glacial); margin-right: 8px;" aria-hidden="true">·</span>To start a conversation: <a href="mailto:support@bynorthlight.ca" style="color: var(--haze);">support@bynorthlight.ca</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="aurora-divider" role="presentation"></div>
-
     <!-- ── PROBLEM BLOCK ── -->
-    <div class="page-wrap" style="padding-top: 48px; padding-bottom: 0;">
-      <p style="font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--structural); margin-bottom: 14px;">The Problem</p>
-      <p style="font-family: 'Outfit', sans-serif; font-size: 17px; color: var(--haze); line-height: 1.75; max-width: 640px; margin-bottom: 48px;">Most small Canadian businesses are running without an operations layer. Founders make strategy decisions from inside the work, adopt AI tools one at a time without a coherent plan, and build systems that hold until growth breaks them. The direction gets fuzzy — not suddenly, but slowly — as decisions accumulate without anyone holding the whole picture.</p>
+    <div class="page-wrap problem-grid" style="padding-top: 0; padding-bottom: 0;">
+      <div class="problem-text">
+        <p style="font-family: 'Outfit', sans-serif; font-size: 17px; color: var(--haze); line-height: 1.75; margin-bottom: 20px;">Maybe that's you. Or maybe it's something else. Maybe you've got a team, but something's become the bottleneck: three rounds of feedback, two revised decks, one meeting pushed to next week, and somehow the decision still isn't made.</p>
+        <p style="font-family: 'Outfit', sans-serif; font-size: 17px; color: var(--haze); line-height: 1.75; margin-bottom: 20px;">Or maybe you've mostly figured this out. What you're looking for is a thinking partner, not a fixer, who can hold the same strategic altitude you do. Someone to pressure-test an idea with at 11pm, when there's no one else in the room.</p>
+        <p style="font-family: 'Outfit', sans-serif; font-size: 17px; color: var(--haze); line-height: 1.75; margin-bottom: 0;">Whatever your situation, there's a matching kind of support. Getting clear on which one you're actually in changes what's worth looking for.</p>
+      </div>
+      <div class="problem-diagram">
+        <svg viewBox="0 0 460 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagram showing six decision areas -- hiring, sales, vendors, product, finance, and operations -- all connecting into a single overloaded central node.">
+          <defs>
+            <radialGradient id="centerGrad" cx="35%" cy="30%" r="75%">
+              <stop offset="0%" stop-color="#8FE0E3"/>
+              <stop offset="35%" stop-color="#4FC3C8"/>
+              <stop offset="70%" stop-color="#5B8DD9"/>
+              <stop offset="100%" stop-color="#8B6FD4"/>
+            </radialGradient>
+            <filter id="nodeGlow" x="-80%" y="-80%" width="260%" height="260%">
+              <feGaussianBlur stdDeviation="10" result="blur"/>
+              <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+
+          <line x1="182" y1="82" x2="210" y2="240" stroke="#4B5563" stroke-width="1.4" opacity="0.55"/>
+          <line x1="333" y1="137" x2="210" y2="240" stroke="#4B5563" stroke-width="1.4" opacity="0.55"/>
+          <line x1="360" y1="295" x2="210" y2="240" stroke="#4B5563" stroke-width="1.4" opacity="0.55"/>
+          <line x1="238" y1="398" x2="210" y2="240" stroke="#4B5563" stroke-width="1.4" opacity="0.55"/>
+          <line x1="87" y1="343" x2="210" y2="240" stroke="#4B5563" stroke-width="1.4" opacity="0.55"/>
+          <line x1="60" y1="185" x2="210" y2="240" stroke="#4B5563" stroke-width="1.4" opacity="0.55"/>
+
+          <circle cx="182" cy="82" r="8" fill="#12121E" stroke="#4B5563" stroke-width="1.4"/>
+          <text x="182" y="62" text-anchor="middle" font-family="Jost, sans-serif" font-size="11" font-weight="500" letter-spacing="0.06em" fill="#99A1B6">HIRING</text>
+
+          <circle cx="333" cy="137" r="8" fill="#12121E" stroke="#4B5563" stroke-width="1.4"/>
+          <text x="349" y="141" text-anchor="start" font-family="Jost, sans-serif" font-size="11" font-weight="500" letter-spacing="0.06em" fill="#99A1B6">SALES</text>
+
+          <circle cx="360" cy="295" r="8" fill="#12121E" stroke="#4B5563" stroke-width="1.4"/>
+          <text x="376" y="299" text-anchor="start" font-family="Jost, sans-serif" font-size="11" font-weight="500" letter-spacing="0.06em" fill="#99A1B6">VENDORS</text>
+
+          <circle cx="238" cy="398" r="8" fill="#12121E" stroke="#4B5563" stroke-width="1.4"/>
+          <text x="238" y="420" text-anchor="middle" font-family="Jost, sans-serif" font-size="11" font-weight="500" letter-spacing="0.06em" fill="#99A1B6">PRODUCT</text>
+
+          <circle cx="87" cy="343" r="8" fill="#12121E" stroke="#4B5563" stroke-width="1.4"/>
+          <text x="71" y="347" text-anchor="end" font-family="Jost, sans-serif" font-size="11" font-weight="500" letter-spacing="0.06em" fill="#99A1B6">FINANCE</text>
+
+          <circle cx="60" cy="185" r="8" fill="#12121E" stroke="#4B5563" stroke-width="1.4"/>
+          <text x="44" y="189" text-anchor="end" font-family="Jost, sans-serif" font-size="11" font-weight="500" letter-spacing="0.06em" fill="#99A1B6">OPS</text>
+
+          <circle cx="210" cy="240" r="30" fill="url(#centerGrad)" filter="url(#nodeGlow)"/>
+          <text x="210" y="244" text-anchor="middle" font-family="Jost, sans-serif" font-size="12" font-weight="700" letter-spacing="0.08em" fill="#0E0E14">YOU</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- ── WHO WE HELP (TEASE) ── -->
+    <div class="page-wrap" style="padding-top: 0; padding-bottom: 0;">
+      <div class="answer-block" style="background: var(--surface-2); border: 1px solid var(--border); border-left: 4px solid var(--dusk); border-radius: 6px; padding: 28px 32px; margin-bottom: 48px;">
+        <p style="font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; background: linear-gradient(90deg, #8B6FD4, #C46FAA); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 12px; display: inline-block;">Who We Help</p>
+        <p style="font-family: 'Outfit', sans-serif; font-size: 17px; color: var(--haze); line-height: 1.7; max-width: 780px; margin-bottom: 18px;">More than one of these might sound like your week. The diagnostic takes five minutes and tells you what actually helps.</p>
+        <a href="/who-we-help.html" style="display: inline-block; font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; color: var(--glacial); text-decoration: none; border-bottom: 1px solid rgba(79,195,200,0.3); padding-bottom: 2px;">Find your situation →</a>
+      </div>
+    </div>
+
+    <!-- ── PRIMARY CTA ── -->
+    <div class="page-wrap" style="padding-top: 0; padding-bottom: 0;">
+      <p style="font-family: 'Outfit', sans-serif; font-size: 17px; color: var(--haze); line-height: 1.75; max-width: 780px; margin-bottom: 24px;">Whatever you've just named for yourself, that's the actual conversation. Grab a virtual coffee and talk it through.</p>
+      <a href="/coffee.html" style="display: inline-block; font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.04em; color: #fff; background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 33%, #8B6FD4 66%, #C46FAA 100%); padding: 13px 26px; border-radius: 8px; text-decoration: none; margin-bottom: 48px;">Grab a virtual coffee →</a>
+    </div>
+
+    <!-- ── OUTCOMES ROW ── -->
+    <div class="page-wrap" style="padding-top: 0; padding-bottom: 0;">
+      <h2 style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 22px; letter-spacing: 0.02em; color: var(--text); margin-bottom: 24px;">What changes when you work with Northlight Advisory Services</h2>
+      <ol class="outcomes-row">
+        <li class="outcome-item">
+          <div class="outcome-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke="#0E0E14" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <p>Decisions stop stalling, even when you're not in the room.</p>
+        </li>
+        <li class="outcome-item">
+          <div class="outcome-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke="#0E0E14" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <p>The operating model grows with the business, not around it.</p>
+        </li>
+        <li class="outcome-item">
+          <div class="outcome-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke="#0E0E14" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <p>One person accountable for the outcome, start to finish.</p>
+        </li>
+        <li class="outcome-item">
+          <div class="outcome-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke="#0E0E14" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <p>Someone tells you what's actually going on, what matters, and what to do next, without an agenda.</p>
+        </li>
+        <li class="outcome-item">
+          <div class="outcome-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke="#0E0E14" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <p>You stop wondering whether something's been handled.</p>
+        </li>
+      </ol>
+    </div>
+
+    <!-- ── ABOUT / AEO SUMMARY ── -->
+    <div class="page-wrap" style="padding-top: 0; padding-bottom: 0;">
+      <h2 class="section-label" style="margin-bottom: 20px;">Who is Northlight Advisory Services</h2>
+      <div class="answer-block" style="margin-bottom: 16px;">
+        <p>Northlight Advisory Services is a Halifax, Nova Scotia–based fractional COO and AI adoption advisory practice for Canadian small businesses. It's built for founder-led organisations typically under 50 people that are navigating a strategic or operational inflection point. One person, accountable end-to-end, not a team of junior staff billing by the hour.</p>
+      </div>
     </div>
 
     <!-- ── WHAT WE DO ── -->
     <section class="services-section" id="services" aria-labelledby="services-label">
       <h2 class="section-label" id="services-label">What we do</h2>
-      <p style="font-family: 'Outfit', sans-serif; font-size: 15px; color: var(--haze); line-height: 1.7; margin-bottom: 28px;">Northlight Advisory Services provides strategy, fractional COO and CIO advisory, AI adoption, and purpose-built app development to small and mid-sized organisations in Halifax, Nova Scotia and across Atlantic Canada.</p>
-      <div class="services-grid">
-        <div class="service-card">
-          <h3 class="service-title">Strategy</h3>
-          <p class="service-body">Clarity before execution. Northlight Advisory Services helps organisations diagnose what's actually blocking progress — and build a path forward that holds up when the plan meets reality.</p>
-        </div>
-        <div class="service-card">
+      <ol class="services-grid">
+        <li class="service-card">
+          <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="5" r="2.3" stroke="#0E0E14" stroke-width="1.8"/><line x1="12" y1="7.3" x2="12" y2="20" stroke="#0E0E14" stroke-width="1.8" stroke-linecap="round"/><line x1="8" y1="10" x2="16" y2="10" stroke="#0E0E14" stroke-width="1.8" stroke-linecap="round"/><path d="M6 14C6 17.5 8.5 20 12 20C15.5 20 18 17.5 18 14" stroke="#0E0E14" stroke-width="1.8" stroke-linecap="round"/></svg></div>
           <h3 class="service-title">Fractional COO &amp; Advisory</h3>
-          <p class="service-body">Ongoing thinking partnership for founders and operators who need a sharp outside perspective — and someone who can actually run things. Fractional COO engagements bring Elizabeth in as an embedded part of your leadership team to drive operations, process design, and execution. Where the work requires it, engagements can also extend to CIO-scope: AI strategy, knowledge systems, and technology governance. A relationship that moves the work forward, month over month.</p>
-        </div>
-        <div class="service-card">
+          <p class="service-body">Ongoing thinking partnership for founders and operators who need a sharp outside perspective, and someone who can actually run things. A fractional COO becomes an embedded part of your leadership team, driving operations, process design, and execution. Where the work requires it, that scope extends to CIO-level: AI strategy, knowledge systems, technology governance. A relationship that moves the work forward, month over month.</p>
+        </li>
+        <li class="service-card">
+          <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="8" stroke="#0E0E14" stroke-width="1.8"/><circle cx="12" cy="12" r="4.5" stroke="#0E0E14" stroke-width="1.8"/><circle cx="12" cy="12" r="1.4" fill="#0E0E14"/></svg></div>
+          <h3 class="service-title">Strategy</h3>
+          <p class="service-body">Clarity before execution. Northlight Advisory Services helps organisations diagnose what's actually blocking progress, and build a path forward that holds up when the plan meets reality.</p>
+        </li>
+        <li class="service-card">
+          <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L14 10L22 12L14 14L12 22L10 14L2 12L10 10Z" fill="#0E0E14"/></svg></div>
           <h3 class="service-title">AI Adoption</h3>
-          <p class="service-body">Practical AI implementation for Canadian businesses — not what's trending, but what applies to your operations. Northlight Advisory Services identifies the tasks AI is actually good for and builds from there.</p>
-        </div>
-        <div class="service-card">
-          <h3 class="service-title">Apps &amp; Tools We Build</h3>
-          <p class="service-body">Small, purposeful tools built to solve real workflow problems. <a href="/vault.html">Northlight Vault</a> is a free Windows file browser across Google Drive, OneDrive, and Dropbox. <a href="/meetings.html">Northlight Meetings</a> records and analyses client calls automatically. <a href="https://mcpmarket.com/sellers/northlight-skills" target="_blank" rel="noopener">Northlight Skills</a> are purpose-built MCP integrations for Claude. Northlight Advisory Services builds for clients too, when the problem is specific enough to deserve a real solution.</p>
-        </div>
-      </div>
+          <p class="service-body">Practical AI implementation for Canadian businesses: what applies to your operations, not what's trending. Northlight Advisory Services identifies the tasks AI is actually good for and builds from there.</p>
+        </li>
+      </ol>
       <div style="margin-top: 36px; overflow-x: auto;">
         <p style="font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--structural); margin-bottom: 14px;">How It Compares</p>
         <table style="width: 100%; border-collapse: collapse; font-family: 'Outfit', sans-serif; font-size: 14px; min-width: 520px;">
@@ -760,8 +871,8 @@
           <tbody>
             <tr>
               <td style="padding: 11px 14px; color: var(--haze); border-bottom: 1px solid var(--border);">Cost model</td>
-              <td style="padding: 11px 14px; text-align: center; color: var(--cloud); border-bottom: 1px solid var(--border); background: rgba(79,195,200,0.03);">Fractional — pay for scope</td>
-              <td style="padding: 11px 14px; text-align: center; color: var(--structural); border-bottom: 1px solid var(--border);">$120–200k+ all-in</td>
+              <td style="padding: 11px 14px; text-align: center; color: var(--cloud); border-bottom: 1px solid var(--border); background: rgba(79,195,200,0.03);">Fractional: pay for scope</td>
+              <td style="padding: 11px 14px; text-align: center; color: var(--structural); border-bottom: 1px solid var(--border);">C$150K–$220K+ all-in</td>
               <td style="padding: 11px 14px; text-align: center; color: var(--structural); border-bottom: 1px solid var(--border);">Project fee; no outcome guarantee</td>
             </tr>
             <tr>
@@ -773,14 +884,14 @@
             <tr>
               <td style="padding: 11px 14px; color: var(--haze);">Outcome accountability</td>
               <td style="padding: 11px 14px; text-align: center; color: var(--cloud); background: rgba(79,195,200,0.03);">One named person, end-to-end</td>
-              <td style="padding: 11px 14px; text-align: center; color: var(--structural);">Yes — full-time cost</td>
+              <td style="padding: 11px 14px; text-align: center; color: var(--structural);">Yes: full-time cost</td>
               <td style="padding: 11px 14px; text-align: center; color: var(--structural);">Deliverable only</td>
             </tr>
           </tbody>
         </table>
       </div>
       <div class="answer-block" style="margin-top: 32px;">
-        <p>Northlight Advisory Services is different from a traditional consultant or fractional service in three ways: engagements are built around each client's specific situation — not packages; Elizabeth Lemoine stays accountable for the outcome, not just the deliverable; and the work is grounded in Canadian regulatory context (PIPEDA, Quebec Law 25) that general advisory ignores. There is no discovery call disguised as a sales call. The Clarity Call ($99 CAD) is the work.</p>
+        <p>Most engagements start around 20 hours a month against the priorities we've agreed on, with a straightforward update each month on what moved and what's next. One person stays accountable for the outcome, not just the deliverable, and the work is grounded in Canadian regulatory context (<a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/" style="color: var(--glacial); text-decoration: none; border-bottom: 1px solid rgba(79,195,200,0.3);">PIPEDA</a>, <a href="https://www.cai.gouv.qc.ca/protection-renseignements-personnels/sujets-et-domaines-dinteret/principaux-changements-loi-25" style="color: var(--glacial); text-decoration: none; border-bottom: 1px solid rgba(79,195,200,0.3);">Quebec Law 25</a>) from day one.</p>
       </div>
     </section>
 
@@ -788,98 +899,11 @@
     <div class="recognition-strip" role="complementary" aria-label="Recognition">
       <div class="recognition-strip-inner">
         <span class="recognition-strip-source">Digital Reference 2026</span>
-        <span aria-hidden="true">·</span>
+        <span class="recognition-strip-dot" aria-hidden="true">·</span>
         <span>Named one of Canada's Best Fractional COO Services &amp; Founder to Watch</span>
         <a href="/news/digital-reference-best-coo-2026.html" class="recognition-strip-link">Read the feature →</a>
       </div>
     </div>
-
-    <div class="aurora-divider" role="presentation"></div>
-
-    <!-- ── WHAT WE'RE BUILDING ── -->
-    <section class="building-section" id="vault" aria-labelledby="building-label">
-      <h2 class="building-label" id="building-label">What we're building</h2>
-      <div class="building-row">
-
-
-        <!-- Vault card -->
-        <div class="vault-card">
-          <div class="vault-card-inner">
-            <div class="vault-header">
-              <div class="vault-logo">
-                <img src="northlight-vault-icon-512x512.png" alt="Northlight Vault app icon">
-              </div>
-              <div>
-                <p class="vault-name">Northlight Vault</p>
-                <p class="vault-product-label">Cloud File Browser &nbsp;·&nbsp; Windows</p>
-              </div>
-            </div>
-            <p class="vault-tagline"><span>All your cloud storage.</span><br>One place.</p>
-            <p class="vault-blurb">Browse files across Google Drive, OneDrive, and Dropbox in a single desktop app — without switching tabs.</p>
-            <a href="/vault.html" class="vault-cta">Learn more about Northlight Vault →</a>
-            <p class="vault-early">
-              <span class="vault-early-dot" role="presentation"></span>
-              Free
-            </p>
-          </div>
-        </div>
-
-        <!-- Meetings card -->
-        <div class="vault-card">
-          <div class="vault-card-inner">
-            <div class="vault-header">
-              <div class="vault-logo">
-                <img src="northlight-meetings-icon-512x512.png" alt="Northlight Meetings app icon">
-              </div>
-              <div>
-                <p class="vault-name">Northlight Meetings</p>
-                <p class="vault-product-label">Call Recorder &amp; Analyzer &nbsp;·&nbsp; Windows</p>
-              </div>
-            </div>
-            <p class="vault-tagline"><span>Every call.</span><br>Captured and filed.</p>
-            <p class="vault-blurb">Records client calls, transcribes with Groq Whisper, and pushes structured notes, action items, and calendar events directly to Google Drive and ClickUp.</p>
-            <a href="/meetings.html" class="vault-cta" style="color:var(--glacial);border-color:rgba(79,195,200,0.2);">Learn more →</a>
-            <p class="vault-early">
-              <span class="vault-early-dot" role="presentation" style="background:var(--dusk)"></span>
-              Coming soon
-            </p>
-          </div>
-        </div>
-
-        <!-- Skills Market card -->
-        <div class="vault-card">
-          <div class="vault-card-inner">
-            <div class="vault-header">
-              <div class="vault-logo">
-                <svg viewBox="0 0 48 48" width="48" height="48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                  <defs>
-                    <linearGradient id="skills-icon-g" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stop-color="#4FC3C8"/>
-                      <stop offset="40%" stop-color="#8B6FD4"/>
-                      <stop offset="100%" stop-color="#C46FAA"/>
-                    </linearGradient>
-                  </defs>
-                  <rect width="48" height="48" fill="url(#skills-icon-g)"/>
-                  <path d="M28 9 L15 28 L23.5 28 L20 39 L33 20 L24.5 20 Z" fill="white" opacity="0.95"/>
-                </svg>
-              </div>
-              <div>
-                <p class="vault-name">Northlight Skills</p>
-                <p class="vault-product-label">MCP Marketplace &nbsp;·&nbsp; AI Integrations</p>
-              </div>
-            </div>
-            <p class="vault-tagline"><span>AI automations.</span><br>Ready to install.</p>
-            <p class="vault-blurb">Purpose-built MCP skills for Claude — morning briefings, strategic voice, and more. Available now on MCP Market.</p>
-            <a href="https://mcpmarket.com/sellers/northlight-skills" class="vault-cta" target="_blank" rel="noopener">Browse Northlight Skills →</a>
-            <p class="vault-early">
-              <span class="vault-early-dot" role="presentation" style="background:var(--glacial)"></span>
-              3 skills listed
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section>
 
     <div class="aurora-divider" role="presentation"></div>
 
@@ -895,7 +919,7 @@
           </button>
           <div class="faq-answer" role="region">
             <div class="faq-answer-inner">
-              Mostly Canadian founders, operators, and small organisations — typically under 50 people — who have a real operational challenge and need clear thinking they can act on quickly. If you have a specific problem and want a direct conversation, we're likely a fit.
+              Mostly Canadian founders, operators, and small organisations (typically under 50 people) who have a real operational challenge and need clear thinking they can act on quickly. If you have a specific problem and want a direct conversation, we're likely a fit.
             </div>
           </div>
         </div>
@@ -919,7 +943,7 @@
           </button>
           <div class="faq-answer" role="region">
             <div class="faq-answer-inner">
-              Occasionally. The focus is Canadian because Canadian organisations face a distinct set of regulatory, funding, and market conditions — particularly around AI — that general advice doesn't address well. That said, if the problem is specific enough, geography is negotiable.
+              Occasionally. The focus is Canadian because Canadian organisations face a distinct set of regulatory, funding, and market conditions, particularly around AI, that general advice doesn't address well. That said, if the problem is specific enough, geography is negotiable.
             </div>
           </div>
         </div>
@@ -931,19 +955,7 @@
           </button>
           <div class="faq-answer" role="region">
             <div class="faq-answer-inner">
-              <a href="mailto:elizabeth@bynorthlight.ca">Email</a> is the best place to start. Tell us what you're working on — a paragraph is enough. We'll follow up with a short call to see whether there's a fit. No intake form, no automated sequence, no discovery call disguised as a sales call.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item" role="listitem">
-          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-            <span class="faq-q-text">What is Northlight Meetings?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer" role="region">
-            <div class="faq-answer-inner">
-              Northlight Meetings is a Windows desktop app that records client calls, transcribes them using Groq Whisper, and runs AI analysis to extract action items, key decisions, and follow-up dates. It then pushes structured notes to Google Drive, tasks to ClickUp, and events to Google Calendar — automatically. Coming soon.
+              <a href="mailto:support@bynorthlight.ca">Email</a> is the best place to start. Tell us what you're working on (a paragraph is enough). We'll follow up with a short call to see whether there's a fit. No intake form, no automated sequence, just a direct reply from Elizabeth.
             </div>
           </div>
         </div>
@@ -955,7 +967,7 @@
           </button>
           <div class="faq-answer" role="region">
             <div class="faq-answer-inner">
-              <a href="/vault.html">Northlight Vault</a> is a free Windows desktop app that lets you browse files across Google Drive, OneDrive, and Dropbox in a single interface — without switching tabs or apps. It's a read-only file browser: it finds and opens files, it doesn't move or delete them. Free.
+              <a href="/vault.html">Northlight Vault</a> is a free Windows desktop app that lets you browse files across Google Drive, OneDrive, and Dropbox in a single interface, without switching tabs or apps. It's a read-only file browser: it finds and opens files, it doesn't move or delete them. Free.
             </div>
           </div>
         </div>
@@ -977,7 +989,7 @@
       <div style="flex: 1.4;">
         <div style="font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 10px; background: linear-gradient(90deg, #4FC3C8, #8B6FD4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: inline-block;">Aurora Brief</div>
         <div style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 20px; color: var(--text); margin-bottom: 6px; letter-spacing: 0.01em;">Stay in the Loop with Northlight</div>
-        <div style="font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--muted); line-height: 1.6;">Clear thinking. Real results. Strategy insights, operations learnings, and updates on what Northlight is building — delivered monthly.</div>
+        <div style="font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--muted); line-height: 1.6;">Clear thinking. Real results. Strategy insights, operations learnings, and updates on what Northlight is building, delivered monthly.</div>
       </div>
       <form action="https://app.kit.com/forms/9467797/subscriptions" method="post" style="display: flex; flex-direction: column; gap: 10px; flex: 1; min-width: 260px;">
         <input type="hidden" name="redirect_to" value="https://bynorthlight.ca/subscription-confirmed.html" />
@@ -1003,7 +1015,6 @@
             <ul class="footer-links">
               <li><a href="/about.html">About</a></li>
               <li><a href="/vault.html">Northlight Vault</a></li>
-              <li><a href="/meetings-privacy.html">Northlight Meetings</a></li>
               <li><a href="/case-studies/">Case Studies</a></li>
               <li><a href="/blog/">Blog</a></li>
               <li><a href="/news/">In the News</a></li>
