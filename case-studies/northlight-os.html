@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Northlight OS — AI-Native Business Operating System</title>
-<meta name="description" content="Northlight OS is a custom AI-native dashboard that automates daily business operations — overnight task execution, financial tracking, content pipeline, and more.">
+<title>Northlight OS, AI-Native Business Operating System</title>
+<meta name="description" content="A case study of Northlight OS, a custom AI-native dashboard built to run a solo advisory practice: the decisions behind it, the results, and what I learned.">
 <link rel="canonical" href="https://bynorthlight.ca/case-studies/northlight-os.html">
-<meta property="og:title" content="Northlight OS — AI-Native Business Operating System">
+<meta property="og:title" content="Northlight OS, AI-Native Business Operating System">
 <meta property="og:description" content="A custom AI-native operating system built to run Northlight's daily workflow. One dashboard. Your entire operation.">
 <meta property="og:image" content="https://bynorthlight.ca/northlight-og-image.png">
 <meta property="og:image:width" content="1200">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Northlight Advisory Services">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Northlight OS — AI-Native Business Operating System">
+<meta name="twitter:title" content="Northlight OS, AI-Native Business Operating System">
 <meta name="twitter:description" content="A custom AI-native operating system built to run Northlight's daily workflow. One dashboard. Your entire operation.">
 <meta name="twitter:image" content="https://bynorthlight.ca/northlight-og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -338,6 +338,17 @@
     .breadcrumb-item span[aria-current]{color:var(--structural);}
     .breadcrumb-sep{color:var(--border-2);}
 </style>
+
+<style>
+  .cs-lead { font-family:'Outfit',sans-serif; font-size:16px; line-height:1.8; color:var(--cloud); max-width:760px; margin-bottom:16px; }
+  .cs-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:24px; }
+  .cs-grid-2 { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:24px; }
+  .cs-card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:22px 24px; }
+  .cs-card h3 { font-family:'Jost',sans-serif; font-size:15px; font-weight:600; color:var(--text); letter-spacing:0.02em; margin-bottom:8px; }
+  .cs-card p { font-family:'Outfit',sans-serif; font-size:14px; line-height:1.7; color:var(--haze); margin:0; }
+  .cs-tag { display:block; font-family:'Jost',sans-serif; font-size:10px; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color:var(--glacial); margin-bottom:10px; }
+  @media (max-width:760px) { .cs-grid,.cs-grid-2 { grid-template-columns:1fr; } }
+</style>
 </head>
 <body>
 
@@ -381,17 +392,15 @@
     <div class="page-wrap">
       <section class="os-hero" aria-labelledby="hero-title">
         <img src="/northlight-os-icon.svg" alt="Northlight OS icon" class="hero-os-icon" width="100" height="100">
-        <p class="hero-eyebrow">Case Study &nbsp;·&nbsp; Built &amp; operated by Elizabeth Lemoine</p>
+        <p class="hero-eyebrow">Case Study &nbsp;·&nbsp; Built for my own use</p>
         <h1 class="hero-title" id="hero-title">One dashboard.<br><span>Your entire operation.</span></h1>
-        <p class="hero-subtitle">
-          Northlight OS is a custom AI-native business operating system built to run a solo advisory and app development practice. It connects ClickUp, Gmail, Google Workspace, Slack, and Claude into a single dashboard — automating the repetitive parts so work happens while you sleep.
-        </p>
+        <p class="hero-subtitle">Built for my own use. A custom AI-native operating system that runs a solo advisory and app development practice. It connects ClickUp, Gmail, Google Workspace, Slack and Claude in one dashboard and handles the repetitive parts of the work.</p>
         <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
           <span class="status-pill">
             <span class="status-dot" role="presentation"></span>
             Live in production
           </span>
-          <span style="font-family:'Outfit',sans-serif;font-size:13px;color:var(--muted);">Running daily since early 2026</span>
+          <span style="font-family:'Outfit',sans-serif;font-size:13px;color:var(--muted);">Running daily since May 2026</span>
         </div>
       </section>
     </div>
@@ -420,13 +429,26 @@
 
     <div class="aurora-divider" role="presentation"></div>
 
-    <!-- ── THE PROBLEM ── -->
+    <!-- ── SITUATION AND OBJECTIVE ── -->
     <div class="page-wrap">
-      <section class="content-section" aria-labelledby="problem-heading">
-        <h2 class="section-label" id="problem-heading">The problem</h2>
-        <div class="problem-card">
-          <p>Running a solo advisory and app development practice means constant context-switching. Tasks live in ClickUp. Client emails arrive in Gmail. Finances are scattered across bank statements and email receipts. Content ideas sit in Slack. No off-the-shelf tool connects all of that in a way that actually matches how a one-person practice works.</p>
-          <p>The options were: pay for five separate tools and check them all manually, or build the right tool. <strong>Northlight OS is the right tool.</strong></p>
+      <section class="content-section" aria-labelledby="situation-heading">
+        <h2 class="section-label" id="situation-heading">Situation</h2>
+        <p class="cs-lead">Running a solo advisory and app development practice means constant context-switching. Tasks live in ClickUp. Client emails arrive in Gmail. Finances are scattered across bank statements and email receipts. Content ideas sit in Slack. No off-the-shelf tool connected all of that in a way that matched how a one-person practice works.</p>
+        <p class="cs-lead">The options were to pay for several separate tools and check them all by hand, or to build the right tool. I built it.</p>
+      </section>
+    </div>
+
+    <div class="aurora-divider" role="presentation"></div>
+
+    <div class="page-wrap">
+      <section class="content-section" aria-labelledby="objective-heading">
+        <h2 class="section-label" id="objective-heading">Objective</h2>
+        <p class="cs-lead">One place to see and run the whole practice, with the repetitive work done overnight and a person approving everything that matters. Four jobs in particular:</p>
+        <div class="cs-grid-2">
+          <div class="cs-card"><span class="cs-tag">01</span><h3>Overnight execution</h3><p>Tasks assigned to Claude in ClickUp are drafted or researched by morning, ready to review.</p></div>
+          <div class="cs-card"><span class="cs-tag">02</span><h3>Finance automation</h3><p>Expense and revenue emails are parsed so entries can be logged in one click.</p></div>
+          <div class="cs-card"><span class="cs-tag">03</span><h3>Content pipeline</h3><p>An idea becomes a brief, a task and a tracked piece of content.</p></div>
+          <div class="cs-card"><span class="cs-tag">04</span><h3>Idea to action</h3><p>Ideas posted to Slack are assessed with a clear verdict: go, needs more thought, or park longer.</p></div>
         </div>
       </section>
     </div>
@@ -436,14 +458,14 @@
     <!-- ── KEY WORKFLOWS ── -->
     <div class="page-wrap">
       <section class="content-section content-section-mid" aria-labelledby="workflows-heading">
-        <h2 class="section-label" id="workflows-heading">Key workflows</h2>
+        <h2 class="section-label" id="workflows-heading">How it works</h2>
         <div class="workflow-grid">
 
           <div class="workflow-card">
             <div class="workflow-card-header">
               <p class="workflow-number">01</p>
               <h3 class="workflow-title">Overnight Execution Loop</h3>
-              <p class="workflow-desc">Assign a task to Claude in ClickUp. By morning, it's done — research compiled, copy drafted, brief written. Review in the dashboard: Approve, Send Back with notes, or Take Over.</p>
+              <p class="workflow-desc">Assign a task to Claude in ClickUp. By morning, it's done, research compiled, copy drafted, brief written. Review in the dashboard: Approve, Send Back with notes, or Take Over.</p>
             </div>
             <div class="workflow-mockup" aria-label="Mock dashboard showing overnight task results">
               <div class="mock-card">
@@ -503,7 +525,7 @@
                   <span class="mock-meta" style="margin-left:auto;">Gmail → extracted</span>
                 </div>
                 <div style="display:flex;align-items:center;justify-content:space-between;margin:6px 0;">
-                  <div class="mock-title">Railway — hosting</div>
+                  <div class="mock-title">Railway, hosting</div>
                   <div class="mock-amount">$23.00</div>
                 </div>
                 <div class="mock-input-row">
@@ -535,7 +557,7 @@
                 <div class="mock-col">
                   <div class="mock-col-label">Review</div>
                   <div class="mock-task">
-                    <div style="margin-bottom:3px;font-size:11px;">Aurora Brief — June edition</div>
+                    <div style="margin-bottom:3px;font-size:11px;">Aurora Brief, June edition</div>
                     <div><span class="mock-badge badge-stage">Newsletter</span></div>
                   </div>
                 </div>
@@ -583,6 +605,20 @@
             </div>
           </div>
 
+        </div>
+      </section>
+    </div>
+
+    <div class="aurora-divider" role="presentation"></div>
+
+    <!-- ── DECISIONS ── -->
+    <div class="page-wrap">
+      <section class="content-section content-section-mid" aria-labelledby="decisions-heading">
+        <h2 class="section-label" id="decisions-heading">Decisions and the reasoning</h2>
+        <div class="cs-grid">
+          <div class="cs-card"><span class="cs-tag">Build or buy</span><h3>Build the right tool</h3><p>Connecting six platforms the way a one-person practice actually works was not something I could buy, so I built it around my own workflow.</p></div>
+          <div class="cs-card"><span class="cs-tag">Control</span><h3>A person approves everything</h3><p>Every overnight result waits for review with three choices: approve, send back with notes, or take over. Nothing goes out on its own.</p></div>
+          <div class="cs-card"><span class="cs-tag">Reliability</span><h3>Route writes through one endpoint</h3><p>When the ClickUp connector proved unreliable under load, I moved all task updates to a single batch endpoint in the dashboard and kept the connector for reading only.</p></div>
         </div>
       </section>
     </div>
@@ -644,7 +680,7 @@
           <rect x="726" y="210" width="156" height="36" rx="7" fill="#10101C" stroke="#1E2035" stroke-width="1"/><rect x="878" y="210" width="3" height="36" rx="2" fill="#8B6FD4"/><text x="738" y="233" font-family="Jost,sans-serif" font-size="12" font-weight="600" letter-spacing="0.04em" fill="#BCC2DC">Content tasks</text><text x="738" y="245" font-family="Outfit,sans-serif" font-size="10" fill="#6C7295">ClickUp + Drive</text>
           <rect x="726" y="290" width="156" height="36" rx="7" fill="#10101C" stroke="#1E2035" stroke-width="1"/><rect x="878" y="290" width="3" height="36" rx="2" fill="#C46FAA"/><text x="738" y="313" font-family="Jost,sans-serif" font-size="12" font-weight="600" letter-spacing="0.04em" fill="#BCC2DC">Morning briefing</text><text x="738" y="325" font-family="Outfit,sans-serif" font-size="10" fill="#6C7295">Posted to Slack</text>
           <rect x="20" y="405" width="862" height="30" rx="7" fill="url(#g-claude)" stroke="#2A2A48" stroke-width="1"/>
-          <text x="451" y="426" font-family="Jost,sans-serif" font-size="10" font-weight="500" letter-spacing="0.20em" text-anchor="middle" fill="#5B8DD9">ANTHROPIC CLAUDE API — powers all AI skills</text>
+          <text x="451" y="426" font-family="Jost,sans-serif" font-size="10" font-weight="500" letter-spacing="0.20em" text-anchor="middle" fill="#5B8DD9">ANTHROPIC CLAUDE API, powers all AI skills</text>
         </svg>
       </section>
     </div>
@@ -656,18 +692,18 @@
       <section class="content-section content-section-mid" aria-labelledby="skills-heading">
         <h2 class="section-label" id="skills-heading">AI skills framework</h2>
         <p style="font-family:'Outfit',sans-serif;font-size:15px;line-height:1.75;color:var(--haze);margin-bottom:28px;max-width:640px;">
-          Northlight OS runs 18+ reusable Claude skills — modular agents that can be chained together or run independently. Tasks in ClickUp are assigned to a skill, and the system handles the rest.
+          Northlight OS runs 18+ reusable Claude skills, modular agents that can be chained together or run independently. Tasks in ClickUp are assigned to a skill, and the system handles the rest.
         </p>
         <div class="skills-grid">
           <div class="skill-chip"><span class="skill-dot" style="background:#4FC3C8;"></span><div><div class="skill-name">Content Strategist</div><div class="skill-desc">Defines messaging, audience, and content structure before any writing begins</div></div></div>
-          <div class="skill-chip"><span class="skill-dot" style="background:#5B8DD9;"></span><div><div class="skill-name">Draft</div><div class="skill-desc">Writes first-pass content from a brief — articles, posts, reports, emails</div></div></div>
+          <div class="skill-chip"><span class="skill-dot" style="background:#5B8DD9;"></span><div><div class="skill-name">Draft</div><div class="skill-desc">Writes first-pass content from a brief, articles, posts, reports, emails</div></div></div>
           <div class="skill-chip"><span class="skill-dot" style="background:#8B6FD4;"></span><div><div class="skill-name">Critic</div><div class="skill-desc">Reviews a draft against brand voice, strategy, and audience fit</div></div></div>
           <div class="skill-chip"><span class="skill-dot" style="background:#C46FAA;"></span><div><div class="skill-name">Polish</div><div class="skill-desc">Copy-edits and refines writing for clarity, tone, and flow</div></div></div>
           <div class="skill-chip"><span class="skill-dot" style="background:#4FC3C8;"></span><div><div class="skill-name">Research</div><div class="skill-desc">Compiles structured research briefs from web sources and Drive files</div></div></div>
           <div class="skill-chip"><span class="skill-dot" style="background:#5B8DD9;"></span><div><div class="skill-name">Expense Extract</div><div class="skill-desc">Parses expense emails to extract vendor, amount, and date reliably</div></div></div>
           <div class="skill-chip"><span class="skill-dot" style="background:#8B6FD4;"></span><div><div class="skill-name">Revenue Extract</div><div class="skill-desc">Parses payment confirmation emails to extract client and amount</div></div></div>
           <div class="skill-chip"><span class="skill-dot" style="background:#C46FAA;"></span><div><div class="skill-name">Weekly Review</div><div class="skill-desc">Generates a structured week-in-review summary from ClickUp data</div></div></div>
-          <div class="skill-chip"><span class="skill-dot" style="background:#4FC3C8;"></span><div><div class="skill-name">Draft → Critic → Polish</div><div class="skill-desc">Full content pipeline in one skill chain — strategist, draft, critique, and final polish</div></div></div>
+          <div class="skill-chip"><span class="skill-dot" style="background:#4FC3C8;"></span><div><div class="skill-name">Draft → Critic → Polish</div><div class="skill-desc">Full content pipeline in one skill chain, strategist, draft, critique, and final polish</div></div></div>
         </div>
       </section>
     </div>
@@ -695,17 +731,50 @@
 
     <div class="aurora-divider" role="presentation"></div>
 
+    <!-- ── RESULTS ── -->
+    <div class="page-wrap">
+      <section class="content-section" aria-labelledby="results-heading">
+        <h2 class="section-label" id="results-heading">Results</h2>
+        <p class="cs-lead">The system has run daily since May 2026. It handles overnight first drafts and research, parses expense and revenue emails, and produces a morning briefing. I have not run a formal time study, so I make no claim about hours saved. The results below are about what happened, including where it fell short.</p>
+      </section>
+    </div>
+
+    <div class="aurora-divider" role="presentation"></div>
+
+    <div class="page-wrap">
+      <section class="content-section" aria-labelledby="learned-heading">
+        <h2 class="section-label" id="learned-heading">What I learned</h2>
+        <div class="cs-grid-2">
+          <div class="cs-card"><h3>Check the output, not the status</h3><p>The content pipeline once reported 12 posts as ready. On inspection, 10 of them had no copy, only refusal messages. A status that says "done" tells you the process ran, not that it worked.</p></div>
+          <div class="cs-card"><h3>Automation exposes the quality of the process</h3><p>I automated first drafts, and the drafts did not sound like me. I paused drafting and moved to a stories-first approach, where the ideas come from things that really happened.</p></div>
+          <div class="cs-card"><h3>A connector is not a guarantee</h3><p>A tool that works in testing can fail under load. Keeping one controlled route for every write made failures easier to see and fix.</p></div>
+          <div class="cs-card"><h3>Keep a person in the loop</h3><p>The approve, send back and take over step is what made it safe to let the system work overnight.</p></div>
+        </div>
+      </section>
+    </div>
+
+    <div class="aurora-divider" role="presentation"></div>
+
+    <div class="page-wrap">
+      <section class="content-section" aria-labelledby="connects-heading">
+        <h2 class="section-label" id="connects-heading">How this connects to my client work</h2>
+        <p class="cs-lead">When I help a business adopt automation or AI, I start with the process and not the tool: where work is actually getting stuck, who approves what, and how we will know the output is good. Building and running my own system is where I test those questions first.</p>
+      </section>
+    </div>
+
+    <div class="aurora-divider" role="presentation"></div>
+
     <!-- ── PMI RECORD ── -->
     <div class="page-wrap">
       <section class="content-section" aria-labelledby="pmi-heading">
         <h2 class="section-label" id="pmi-heading">Project record</h2>
         <div class="pmi-card">
-          <div class="pmi-row"><span class="pmi-label">Project</span><span class="pmi-value">Northlight OS — Custom AI Business Operating System</span></div>
+          <div class="pmi-row"><span class="pmi-label">Project</span><span class="pmi-value">Northlight OS, Custom AI Business Operating System</span></div>
           <div class="pmi-row"><span class="pmi-label">Role</span><span class="pmi-value">Designer, Developer, and Product Owner (solo)</span></div>
           <div class="pmi-row"><span class="pmi-label">Industry</span><span class="pmi-value">Technology · Professional Services</span></div>
-          <div class="pmi-row"><span class="pmi-label">Methodology</span><span class="pmi-value">Agile — continuous iteration with weekly review cycles</span></div>
+          <div class="pmi-row"><span class="pmi-label">Timeline</span><span class="pmi-value">In daily use since May 2026</span></div>
           <div class="pmi-row"><span class="pmi-label">Scope</span><span class="pmi-value">Full-stack web application integrating 6 external platforms (ClickUp, Google Workspace, Slack, NewsAPI, Anthropic Claude API, Railway). 9 workflow modules, 18+ AI skill agents, automated 6am daily dispatcher.</span></div>
-          <div class="pmi-row"><span class="pmi-label">Outcome</span><span class="pmi-value">Production system running daily — replaces 4–6 separate tools. Overnight AI task execution eliminates manual first-draft and research work. Automated expense and revenue parsing reduces financial admin from hours to minutes per week.</span></div>
+          <div class="pmi-row"><span class="pmi-label">Outcome</span><span class="pmi-value">A production system running daily for a solo practice. Overnight task execution removes manual first-draft and research work, and automated expense and revenue parsing reduces manual entry.</span></div>
         </div>
       </section>
     </div>
@@ -718,7 +787,7 @@
       <div style="flex: 1.4;">
         <div style="font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 10px; background: linear-gradient(90deg, #4FC3C8, #8B6FD4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: inline-block;">Aurora Brief</div>
         <div style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 20px; color: var(--text); margin-bottom: 6px; letter-spacing: 0.01em;">Stay in the Loop with Northlight</div>
-        <div style="font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--muted); line-height: 1.6;">Clear thinking. Real results. Strategy insights, operations learnings, and updates on what Northlight is building — delivered monthly.</div>
+        <div style="font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--muted); line-height: 1.6;">Clear thinking. Real results. Strategy insights, operations learnings, and updates on what Northlight is building, delivered monthly.</div>
       </div>
       <form action="https://app.kit.com/forms/9467797/subscriptions" method="post" style="display: flex; flex-direction: column; gap: 10px; flex: 1; min-width: 260px;">
         <input type="hidden" name="redirect_to" value="https://bynorthlight.ca/subscription-confirmed.html" />

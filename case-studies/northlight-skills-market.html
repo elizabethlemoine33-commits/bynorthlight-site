@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Northlight Skills Market — How We Built It</title>
-<meta name="description" content="A case study on the Northlight Skills Market — three MCP skills built for internal use, iterated until they were genuinely useful, and listed on MCP Market because keeping them private felt like a waste.">
+<title>Northlight Skills Market, How We Built It</title>
+<meta name="description" content="A case study on the Northlight Skills Market, three MCP skills built for internal use, iterated until they were genuinely useful, and listed on MCP Market because keeping them private felt like a waste.">
 <link rel="canonical" href="https://bynorthlight.ca/case-studies/northlight-skills-market.html">
-<meta property="og:title" content="Northlight Skills Market — How We Built It">
-<meta property="og:description" content="Morning Briefing Pro, Strategic Voice Framework, and MCP Market Publisher — three tools built for a one-woman advisory practice, now listed on MCP Market.">
+<meta property="og:title" content="Northlight Skills Market, How We Built It">
+<meta property="og:description" content="Morning Briefing Pro, Strategic Voice Framework, and MCP Market Publisher, three tools built for a one-woman advisory practice, now listed on MCP Market.">
 <meta property="og:image" content="https://bynorthlight.ca/northlight-og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -15,7 +15,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Northlight Advisory Services">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Northlight Skills Market — How We Built It">
+<meta name="twitter:title" content="Northlight Skills Market, How We Built It">
 <meta name="twitter:description" content="Three MCP skills built for internal use, iterated until genuinely useful, and listed because keeping them private felt like a waste.">
 <meta name="twitter:image" content="https://bynorthlight.ca/northlight-og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -306,6 +306,15 @@
     .breadcrumb-item span[aria-current]{color:var(--structural);}
     .breadcrumb-sep{color:var(--border-2);}
 </style>
+
+<style>
+  .cs-lead { font-family:'Outfit',sans-serif; font-size:16px; line-height:1.8; color:var(--cloud); max-width:760px; margin-bottom:16px; }
+  .cs-grid-2 { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:24px; }
+  .cs-card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:22px 24px; }
+  .cs-card h3 { font-family:'Jost',sans-serif; font-size:15px; font-weight:600; color:var(--text); letter-spacing:0.02em; margin-bottom:8px; }
+  .cs-card p { font-family:'Outfit',sans-serif; font-size:14px; line-height:1.7; color:var(--haze); margin:0; }
+  @media (max-width:760px) { .cs-grid-2 { grid-template-columns:1fr; } }
+</style>
 </head>
 <body>
 
@@ -348,13 +357,11 @@
     <!-- ── HERO ── -->
     <div class="page-wrap">
       <section class="os-hero" aria-labelledby="hero-title">
-        <p class="hero-eyebrow">Case Study &nbsp;·&nbsp; Built by Elizabeth Lemoine</p>
+        <p class="hero-eyebrow">Case Study &nbsp;·&nbsp; Built for my own use, then listed</p>
         <h1 class="hero-title" id="hero-title">Built for one.<br><span>Listed for all.</span></h1>
-        <p class="hero-subtitle">
-          The Northlight Skills Market is three MCP skills — Morning Briefing Pro, Strategic Voice Framework, and MCP Market Publisher — built to make running a one-woman advisory practice manageable. They worked well enough that keeping them private felt like a waste. Now they're listed on MCP Market.
-        </p>
+        <p class="hero-subtitle">Three MCP skills built to make a one-person advisory practice manageable: Morning Briefing Pro, Strategic Voice Framework, and MCP Market Publisher. They worked well enough that I listed them on MCP Market in July 2026. They have had no sales. This is what that taught me.</p>
         <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
-          <span class="status-pill">Live on MCP Market</span>
+          <span class="status-pill">Listed on MCP Market</span>
           <a href="https://mcpmarket.com/sellers/northlight-skills" target="_blank" rel="noopener" class="cta-link">Browse the skills →</a>
         </div>
       </section>
@@ -368,16 +375,16 @@
           <span class="stat-label">Skills listed</span>
         </div>
         <div class="stat-block" role="listitem">
-          <span class="stat-value">$77</span>
-          <span class="stat-label">Total value at list price</span>
+          <span class="stat-value">$0</span>
+          <span class="stat-label">Sales to date, as of October 2026</span>
         </div>
         <div class="stat-block" role="listitem">
           <span class="stat-value">Solo</span>
           <span class="stat-label">One builder, one user, one publisher</span>
         </div>
         <div class="stat-block" role="listitem">
-          <span class="stat-value">2026</span>
-          <span class="stat-label">Year launched</span>
+          <span class="stat-value">July 2026</span>
+          <span class="stat-label">Listed on MCP Market</span>
         </div>
       </div>
     </div>
@@ -387,10 +394,10 @@
     <!-- ── THE PROBLEM ── -->
     <div class="page-wrap">
       <section class="content-section content-section-narrow" aria-labelledby="problem-heading">
-        <h2 class="section-label" id="problem-heading">The problem</h2>
+        <h2 class="section-label" id="problem-heading">Situation</h2>
         <div class="problem-card">
-          <p>Running a solo advisory practice means wearing a lot of hats. Strategy, operations, business development, content, compliance — the work doesn't stop, and neither does the context-switching. AI tools help, but they help differently depending on how they're configured, what they know about you and your work, and whether they've been iterated on enough to actually be reliable.</p>
-          <p>Off-the-shelf AI tools are built for the median user. They don't know that you have specific brand constraints, or that your day needs a specific kind of orientation before it starts, or that you just went through the friction of publishing your first MCP skill and want a process for the next one. <strong>The tools that actually help are the ones you build yourself — and then take the time to get right.</strong></p>
+          <p>Running a solo advisory practice means wearing a lot of hats. Strategy, operations, business development, content, compliance, the work doesn't stop, and neither does the context-switching. AI tools help, but they help differently depending on how they're configured, what they know about you and your work, and whether they've been iterated on enough to actually be reliable.</p>
+          <p>Off-the-shelf AI tools are built for the median user. They don't know that you have specific brand constraints, or that your day needs a specific kind of orientation before it starts, or that you just went through the friction of publishing your first MCP skill and want a process for the next one. <strong>The tools that actually help are the ones you build yourself, and then take the time to get right.</strong></p>
         </div>
       </section>
     </div>
@@ -407,7 +414,7 @@
             <div class="workflow-card-header">
               <p class="workflow-number">01 · $19</p>
               <h3 class="workflow-title">Morning Briefing Pro</h3>
-              <p class="workflow-desc">Prepares you for the day before work starts — what's happening, what needs to happen, what's urgent. Centres the day when no one else is doing it for you.</p>
+              <p class="workflow-desc">Prepares you for the day before work starts, what's happening, what needs to happen, what's urgent. Centres the day when no one else is doing it for you.</p>
             </div>
             <div class="workflow-mockup">
               <ul class="decision-list">
@@ -421,7 +428,7 @@
                 </li>
                 <li class="decision-item">
                   <span class="decision-dot" style="background:#5B8DD9;"></span>
-                  <div><div class="decision-label">Why it works</div><div class="decision-desc">Iterated through real daily use until it was reliable — not just functional. The difference matters.</div></div>
+                  <div><div class="decision-label">Why it works</div><div class="decision-desc">Iterated through real daily use until it was reliable, not just functional. The difference matters.</div></div>
                 </li>
               </ul>
             </div>
@@ -431,7 +438,7 @@
             <div class="workflow-card-header">
               <p class="workflow-number">02 · $29</p>
               <h3 class="workflow-title">Strategic Voice Framework</h3>
-              <p class="workflow-desc">Captures your brand voice and applies it consistently when Claude drafts content. Also holds you to it — if you drift off-brand, it flags and corrects.</p>
+              <p class="workflow-desc">Captures your brand voice and applies it consistently when Claude drafts content. Also holds you to it, if you drift off-brand, it flags and corrects.</p>
             </div>
             <div class="workflow-mockup">
               <ul class="decision-list">
@@ -445,7 +452,7 @@
                 </li>
                 <li class="decision-item">
                   <span class="decision-dot" style="background:#5B8DD9;"></span>
-                  <div><div class="decision-label">What it captures</div><div class="decision-desc">Tone, vocabulary, style, what to avoid — then applies it from the first draft, not after editing.</div></div>
+                  <div><div class="decision-label">What it captures</div><div class="decision-desc">Tone, vocabulary, style, what to avoid, then applies it from the first draft, not after editing.</div></div>
                 </li>
               </ul>
             </div>
@@ -455,7 +462,7 @@
             <div class="workflow-card-header">
               <p class="workflow-number">03 · $29</p>
               <h3 class="workflow-title">MCP Market Publisher</h3>
-              <p class="workflow-desc">Standardizes the process of preparing and listing a skill on MCP Market — what's required, in what format, in what order. Born from the friction of doing it the first time.</p>
+              <p class="workflow-desc">Standardizes the process of preparing and listing a skill on MCP Market, what's required, in what format, in what order. Born from the friction of doing it the first time.</p>
             </div>
             <div class="workflow-mockup">
               <ul class="decision-list">
@@ -465,7 +472,7 @@
                 </li>
                 <li class="decision-item">
                   <span class="decision-dot" style="background:#8B6FD4;"></span>
-                  <div><div class="decision-label">What it does</div><div class="decision-desc">Gives you a repeatable process for everything MCP Market requires — format, content, sequence — so publishing becomes fast and consistent.</div></div>
+                  <div><div class="decision-label">What it does</div><div class="decision-desc">Gives you a repeatable process for everything MCP Market requires, format, content, sequence, so publishing becomes fast and consistent.</div></div>
                 </li>
                 <li class="decision-item">
                   <span class="decision-dot" style="background:#5B8DD9;"></span>
@@ -479,13 +486,13 @@
             <div class="workflow-card-header">
               <p class="workflow-number">04</p>
               <h3 class="workflow-title">The iterative process</h3>
-              <p class="workflow-desc">None of these skills shipped in their final form the first time. What made them good — not just functional — was iteration.</p>
+              <p class="workflow-desc">None of these skills shipped in their final form the first time. What made them good, not just functional, was iteration.</p>
             </div>
             <div class="workflow-mockup">
               <ul class="decision-list">
                 <li class="decision-item">
                   <span class="decision-dot" style="background:#C46FAA;"></span>
-                  <div><div class="decision-label">Start with good skills and good prompts</div><div class="decision-desc">The foundation matters. Weak prompting produces weak tools — there's no iteration path that fixes a bad start.</div></div>
+                  <div><div class="decision-label">Start with good skills and good prompts</div><div class="decision-desc">The foundation matters. Weak prompting produces weak tools, there's no iteration path that fixes a bad start.</div></div>
                 </li>
                 <li class="decision-item">
                   <span class="decision-dot" style="background:#8B6FD4;"></span>
@@ -510,7 +517,7 @@
       <section class="content-section content-section-narrow" aria-labelledby="platform-heading">
         <h2 class="section-label" id="platform-heading">Why MCP Market</h2>
         <div class="problem-card">
-          <p>MCP Market was discovered organically — not from a vendor pitch, but from downloading something ourselves. When they opened for sellers, the decision to list was easy: they handle Stripe, the listing infrastructure, and discovery. There was no need to build a payment system or a seller portal from scratch.</p>
+          <p>MCP Market was discovered organically, not from a vendor pitch, but from downloading something ourselves. When they opened for sellers, the decision to list was easy: they handle Stripe, the listing infrastructure, and discovery. There was no need to build a payment system or a seller portal from scratch.</p>
           <p>More importantly, they have a real reputation in the MCP community. For tools this specific, being where people are already looking matters more than owning the transaction layer. <strong>A clean, established marketplace beats a homegrown one that nobody visits.</strong></p>
         </div>
 
@@ -526,6 +533,39 @@
 
     <div class="aurora-divider" role="presentation"></div>
 
+    <!-- ── RESULTS ── -->
+    <div class="page-wrap">
+      <section class="content-section content-section-narrow" aria-labelledby="results-heading">
+        <h2 class="section-label" id="results-heading">Results</h2>
+        <p class="cs-lead">All three skills were published on July 3, 2026. As of October 2026 there have been no sales. The marketplace is crowded, which leaves little room for a new seller to be seen, and I had planned on-site marketing that got crowded out by other work.</p>
+        <p class="cs-lead">I also can't tell what, if anything, people have done with the listings. Activity data is only available on a paid plan, at $19 a month, and I chose not to pay for visibility into something that had not yet earned anything.</p>
+      </section>
+    </div>
+
+    <div class="aurora-divider" role="presentation"></div>
+
+    <div class="page-wrap">
+      <section class="content-section content-section-narrow" aria-labelledby="learned-heading">
+        <h2 class="section-label" id="learned-heading">What I learned</h2>
+        <div class="cs-grid-2">
+          <div class="cs-card"><h3>Not everything works</h3><p>A tool being useful to me is not evidence that anyone else will find it or pay for it.</p></div>
+          <div class="cs-card"><h3>Distribution is part of the build</h3><p>Listing on an established marketplace removed the work of building a store, and it did not replace the work of being found. I planned the product and not the marketing.</p></div>
+          <div class="cs-card"><h3>Check what a platform will show you</h3><p>Before committing to a channel, find out what it tells you about performance and what that costs. Without data, I had no way to decide whether to keep going.</p></div>
+        </div>
+      </section>
+    </div>
+
+    <div class="aurora-divider" role="presentation"></div>
+
+    <div class="page-wrap">
+      <section class="content-section content-section-narrow" aria-labelledby="connects-heading">
+        <h2 class="section-label" id="connects-heading">How this connects to my client work</h2>
+        <p class="cs-lead">Before a business launches something, I ask who will find it, how they will find it, and what we will measure to know whether it is working. This listing is a small, honest example of what happens when those questions are skipped.</p>
+      </section>
+    </div>
+
+    <div class="aurora-divider" role="presentation"></div>
+
     <!-- ── PROJECT METADATA ── -->
     <div class="page-wrap">
       <section class="content-section content-section-narrow" aria-labelledby="meta-heading">
@@ -533,11 +573,11 @@
         <div class="pmi-card">
           <div class="pmi-row">
             <span class="pmi-label">Type</span>
-            <span class="pmi-value">MCP Skills · Internal tools made public</span>
+            <span class="pmi-value">MCP skills · Internal tools, listed publicly</span>
           </div>
           <div class="pmi-row">
             <span class="pmi-label">Status</span>
-            <span class="pmi-value">Live — 3 skills listed on MCP Market</span>
+            <span class="pmi-value">Three skills listed on MCP Market since July 3, 2026. No sales to date.</span>
           </div>
           <div class="pmi-row">
             <span class="pmi-label">Platform</span>
@@ -549,7 +589,7 @@
           </div>
           <div class="pmi-row">
             <span class="pmi-label">Built by</span>
-            <span class="pmi-value">Elizabeth Lemoine, Northlight Advisory Services — solo build, solo user, solo publisher</span>
+            <span class="pmi-value">Elizabeth Lemoine, Northlight Advisory Services: solo build, solo user, solo publisher</span>
           </div>
           <div class="pmi-row">
             <span class="pmi-label">Origin</span>
@@ -568,9 +608,9 @@
     <!-- ── CTA ── -->
     <div class="page-wrap">
       <section class="content-section content-section-narrow" aria-labelledby="cta-heading" style="padding-bottom: 96px;">
-        <h2 class="section-label" id="cta-heading">Browse the skills</h2>
+        <h2 class="section-label" id="cta-heading">See the listings</h2>
         <p style="font-family:'Outfit',sans-serif;font-size:16px;color:var(--haze);line-height:1.75;margin-bottom:28px;max-width:560px;">
-          All three skills are listed on MCP Market. If you're running a consulting practice, operating solo, or producing a lot of written content with AI, at least one of them will help.
+          The three skills are still listed on MCP Market if you want to look at them.
         </p>
         <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;">
           <a href="https://mcpmarket.com/sellers/northlight-skills" target="_blank" rel="noopener" class="cta-link">View skills on MCP Market →</a>
