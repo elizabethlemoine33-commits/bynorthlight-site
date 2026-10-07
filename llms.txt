@@ -7,14 +7,14 @@ Northlight Advisory Services is a Halifax, Nova Scotia–based strategy, operati
 ## Key Pages
 
 - [Home](https://bynorthlight.ca/): Overview of Northlight Advisory Services — who we work with, what we do, and how to get in touch.
-- [Services](https://bynorthlight.ca/services.html): Advisory engagements (including the $99 Clarity Call), Northlight Meetings, and the Northlight Skills Market. Support hours and cancellation policy.
+- [Services](https://bynorthlight.ca/services.html): Advisory engagements (including the $99 Clarity Call), Northlight OS, and the Northlight Skills Market. Support hours and cancellation policy.
 - [About](https://bynorthlight.ca/about.html): Elizabeth Lemoine — founder, 10+ years director-level operations experience, 300+ initiatives across 115+ countries.
 - [Who We Help](https://bynorthlight.ca/who-we-help.html): Three locked client personas — the types of founders and operators Northlight works with.
 - [Blog](https://bynorthlight.ca/blog/): Strategy, operations, and AI adoption articles written for Canadian small business owners.
 - [FAQ](https://bynorthlight.ca/faq.html): Common questions about working with Northlight Advisory Services.
 - [Case Studies](https://bynorthlight.ca/case-studies/): Project work including Northlight Vault, Northlight OS, Northlight Meetings, and the Skills Market.
 - [Northlight Vault](https://bynorthlight.ca/vault.html): Free Windows desktop app — browse Google Drive, OneDrive, and Dropbox in a single interface.
-- [Northlight Meetings](https://bynorthlight.ca/meetings.html): AI-powered meeting recorder and summariser for Windows. Records system audio and microphone, transcribes in real time with Groq.
+- [Northlight Meetings](https://bynorthlight.ca/meetings.html): Case study of a Windows call recorder built for my own use. Records both sides of a call, transcribes with Groq, and files notes, tasks and dates to Google Drive, ClickUp and Google Calendar after review.
 - [Resources](https://bynorthlight.ca/resources.html): Free tools and templates for Canadian small business owners.
 - [Privacy Policy](https://bynorthlight.ca/northlight-privacy.html): How Northlight Advisory Services handles personal information under PIPEDA.
 - [Sitemap](https://bynorthlight.ca/sitemap.xml): Full XML sitemap.
