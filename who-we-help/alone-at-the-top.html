@@ -48,6 +48,7 @@ head_extra: |
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
+      { "@type": "Question", "name": "I don't think I'm ready for a call. What can I do?", "acceptedAnswer": { "@type": "Answer", "text": "If a call feels like too much right now, try the Convergence Check. It is free, takes under five minutes, and nothing is sent anywhere. It shows which of your initiatives is actually closest to done. The Coffee Chat will still be here when you are ready." } },
       {
         "@type": "Question",
         "name": "What does a Coffee Chat with Northlight involve?",
@@ -156,8 +157,7 @@ head_extra: |
     /* ── CALLOUTS ── */
     .callout {
       background: var(--surface); border: 1px solid var(--border);
-      border-left: 3px solid transparent; border-image: linear-gradient(180deg, #4FC3C8 0%, #8B6FD4 100%) 1;
-      border-image-width: 0 0 0 3px;
+      border-left: 3px solid var(--glacial);
       padding: 20px 24px; margin: 1.8em 0;
     }
     .callout-quote {
@@ -166,13 +166,28 @@ head_extra: |
     }
     .callout-eyebrow {
       font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
-      background: linear-gradient(90deg, #4FC3C8, #8B6FD4);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      color: var(--glacial);
       display: inline-block; margin-bottom: 8px;
     }
     .story .callout p.callout-text { font-size: 15px; line-height: 1.7; margin: 0; color: var(--cloud); }
 
     /* ── CTA ── */
+
+    .story .step-list { display:grid; gap:14px; margin:20px 0 1.6em; }
+    .story .step { background: var(--surface); border:1px solid var(--border); border-radius:10px; padding:22px 26px; }
+    .story .step-num { font-family:'Jost',sans-serif; font-size:11px; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color: var(--glacial); display:block; margin-bottom:8px; }
+    .story .step h3 { font-family:'Jost',sans-serif; font-size:17px; font-weight:600; color: var(--text); margin:0 0 8px; }
+    .story .step p { font-size:15px; line-height:1.75; color: var(--haze); margin:0; }
+    .cta-alt { font-size:14px; color: var(--muted); margin: 20px 0 0; }
+    .cc-open-btn { font-family:'Jost',sans-serif; font-size:13px; font-weight:600; letter-spacing:0.04em; color: var(--glacial); background:none; border:1px solid rgba(79,195,200,0.4); border-radius:6px; padding:8px 16px; margin-left:8px; cursor:pointer; }
+    .cc-open-btn:hover { border-color: var(--glacial); color: var(--text); }
+    .cc-open-btn:focus-visible { outline:2px solid var(--dusk); outline-offset:2px; }
+    dialog.cc-dialog { background: var(--surface); color: var(--text); border:1px solid var(--border-2); border-radius:12px; padding:0; width:min(760px, 94vw); max-height:90vh; overflow:auto; }
+    dialog.cc-dialog::backdrop { background: rgba(5,6,12,0.72); }
+    dialog.cc-dialog .tool-shell { border:none; margin:0; background:transparent; max-width:none; }
+    .cc-close { position:sticky; top:8px; float:right; margin:8px 10px 0 0; background:none; border:1px solid var(--border-2); color: var(--muted); border-radius:6px; width:34px; height:34px; font-size:20px; line-height:1; cursor:pointer; z-index:2; }
+    .cc-close:hover { color: var(--text); border-color: var(--glacial); }
+  
     .cta-block {
       background: var(--surface); border: 1px solid var(--border-2);
       border-radius: 10px; padding: 28px 32px; margin: 32px 0 28px; max-width: 700px;
@@ -444,7 +459,7 @@ head_extra: |
 
         <p>There are three cold, half-consumed coffees on a desk covered in post-it notes. An inbox that hasn't been reviewed since Tuesday. The dashboard and the project plan don't exist. The board meeting is quickly approaching, whether you are ready or not.</p>
 
-        <p>You know what's in motion, but you're the only one who does. Some of the work is nearly done, some of it stalled two weeks ago, and one or two things are quietly dead; but nobody else can tell which is which, because the plan lives in your head, and the people who could help carry it have never been handed the whole picture (or you haven't yet decided who you trust with it). So you keep holding it together, and from the outside, it looks a lot like being &ldquo;fine&rdquo;.</p>
+        <p>You know what's in motion, but you're the only one who does. Some of the work is nearly done, some of it stalled two weeks ago, and one or two things are quietly dead; but nobody else can tell which is which, because the plan lives in your head, and the people who could help carry it have never been handed the whole picture (or you haven't yet decided who you trust with it). So you keep holding it together, and from the outside, it looks a lot like being &ldquo;fine&rdquo;. Sound familiar?</p>
 
         <h2 id="if-nothing-changes">What happens if nothing changes?</h2>
         <p>It slows down long before it breaks: the post-its multiply, and the decisions only you can make queue up behind the ones someone else could have made. Each board meeting takes more prep than the last.</p>
@@ -463,11 +478,11 @@ head_extra: |
         <h2 id="how-it-works">What does working together look like?</h2>
         <div class="answer-block"><p>Working together starts with a free 30-minute Coffee Chat, then a longer conversation and a plan you both agree on, and then work inside your company that starts at about 20 hours a month.</p></div>
         <p>This works in three steps, and the order matters, because each one earns the trust the next one needs. You'll know where we're going before we start; we can change the route along the way, as long as we agree on the destination.</p>
-        <ol>
-          <li><strong>A 30-minute Coffee Chat, free, and it goes where you need it to.</strong> You don't need the tidy version. Bring it as it is, post-its and all; I'm not asking for the one you'd give your board, just the accurate one. We talk about what's actually stuck, and why. I'll take notes, or record the call if you agree, so I can map it all out afterward.</li>
-          <li><strong>A plan we agree on.</strong> If it feels like a fit, we book a second, longer conversation where you tell me what's on your plate: the concerns, the issues, whatever is keeping the list from shrinking. I come back with a plan, and we work through it together until we agree on what &ldquo;done&rdquo; looks like. Nothing starts until you're satisfied.</li>
-          <li><strong>The work, starting at about 20 hours a month.</strong> I work inside your company, with you, your team, or both, whatever the work calls for. Each month you get a status update, and if the work needs more hours, they're available.</li>
-        </ol>
+        <div class="step-list">
+          <div class="step"><span class="step-num">Step 1</span><h3>A 30-minute Coffee Chat, free</h3><p>It goes where you need it to. You don't need the tidy version. Bring it as it is, post-its and all; I'm not asking for the one you'd give your board, just the accurate one. We talk about what's actually stuck, and why. I'll take notes, or record the call if you agree, so I can map it all out afterward.</p></div>
+          <div class="step"><span class="step-num">Step 2</span><h3>A plan we agree on</h3><p>If it feels like a fit, we book a second, longer conversation where you tell me what's on your plate: the concerns, the issues, whatever is keeping the list from shrinking. I come back with a plan, and we work through it together until we agree on what &ldquo;done&rdquo; looks like. Nothing starts until you're satisfied.</p></div>
+          <div class="step"><span class="step-num">Step 3</span><h3>The work, starting at about 20 hours a month</h3><p>I work inside your company, with you, your team, or both, whatever the work calls for. Each month you get a status update, and if the work needs more hours, they're available.</p></div>
+        </div>
         <div class="callout">
           <p class="callout-eyebrow">What &ldquo;done&rdquo; means</p>
           <p class="callout-text">We agree on it before anything starts, so nobody has to argue later about whether it counts as a win.</p>
@@ -481,11 +496,14 @@ head_extra: |
     <div class="cta-block">
       <a href="/coffee.html" class="cta-direct">Book a Coffee Chat</a>
       <p class="cta-supporting">Thirty minutes, free, no prep. Bring the post-its.</p>
+      <p class="cta-alt">Not ready for a call? <button type="button" class="cc-open-btn" onclick="ccOpen()">Try the Convergence Check</button></p>
     </div>
 
-    <!-- ── CONVERGENCE CHECK ── -->
+    <!-- ── CONVERGENCE CHECK (opens as a pop-out) ── -->
+    <dialog class="cc-dialog" id="cc-dialog" aria-labelledby="cc-title">
+      <button type="button" class="cc-close" onclick="ccClose()" aria-label="Close the Convergence Check">&times;</button>
     <div class="tool-shell" id="convergence-check">
-      <h2 class="tool-title">Not ready for a call? Try the Convergence Check.</h2>
+      <h2 class="tool-title" id="cc-title">The Convergence Check</h2>
       <p class="tool-intro">See which of your initiatives is actually closest to done. Free, under five minutes, and nothing is sent anywhere.</p>
 
       <p class="tool-step-label">Step 1: What are you actively working on?</p>
@@ -498,6 +516,8 @@ head_extra: |
 
       <div class="results-panel" id="cc-results" aria-live="polite"></div>
     </div>
+
+    </dialog>
 
     <!-- ── FAQ ── -->
     <section class="faq-section" aria-labelledby="faq-heading">
@@ -554,6 +574,16 @@ head_extra: |
           </div>
         </div>
 
+
+        <div class="faq-item" role="listitem">
+          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-a-6" id="faq-q-6" onclick="toggleFaq(this)">
+            <span class="faq-q-text">I don&rsquo;t think I&rsquo;m ready for a call. What can I do?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" id="faq-a-6" role="region" aria-labelledby="faq-q-6">
+            <div class="faq-answer-inner">If a call feels like too much right now, try the Convergence Check. It is free, takes under five minutes, and nothing is sent anywhere. It shows which of your initiatives is actually closest to done. The Coffee Chat will still be here when you are ready. <button type="button" class="cc-open-btn" style="margin-left:0;margin-top:12px;" onclick="ccOpen()">Try the Convergence Check</button></div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -572,6 +602,21 @@ head_extra: |
   /* ════════════════════════════════════════════
      FAQ ACCORDION
      ════════════════════════════════════════════ */
+
+  function ccOpen() {
+    var d = document.getElementById('cc-dialog');
+    if (d && !d.open) { d.showModal(); }
+  }
+  function ccClose() {
+    var d = document.getElementById('cc-dialog');
+    if (d && d.open) { d.close(); }
+  }
+  document.addEventListener('click', function (e) {
+    var d = document.getElementById('cc-dialog');
+    if (d && e.target === d) { d.close(); }
+  });
+  if (location.hash === '#convergence-check') { window.addEventListener('load', ccOpen); }
+
   function toggleFaq(btn) {
     const item = btn.closest('.faq-item');
     const isOpen = item.classList.contains('open');
