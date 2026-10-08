@@ -226,12 +226,13 @@ head_extra: |
     }
     .tool-row input[type="text"]:focus-visible { outline: 2px solid var(--dusk); outline-offset: 1px; }
     .row-remove-btn {
-      background: none; border: 1px solid var(--border-2); border-radius: 8px;
-      color: var(--muted); font-size: 12px; padding: 9px 12px; cursor: pointer;
+      background: none; border: 1px solid var(--structural); border-radius: 8px;
+      color: var(--haze); font-size: 12px; padding: 9px 12px; cursor: pointer;
       font-family: 'Jost', sans-serif;
     }
     .row-remove-btn:hover:not(:disabled) { color: var(--text); border-color: var(--structural); }
-    .row-remove-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+    .row-remove-btn:disabled { opacity: 0.55; cursor: not-allowed; }
+    .tool-hint { font-size: 13px; color: var(--muted); margin: 0 0 14px; }
     .tool-add-btn, .tool-action-btn {
       background: none; border: 1px solid var(--border-2); border-radius: 8px;
       color: var(--haze); font-size: 13px; font-weight: 500; padding: 10px 18px;
@@ -507,6 +508,7 @@ head_extra: |
       <p class="tool-intro">See which of your initiatives is actually closest to done. Free, under five minutes, and nothing is sent anywhere.</p>
 
       <p class="tool-step-label">Step 1: What are you actively working on?</p>
+      <p class="tool-hint">Start with two initiatives and add up to five. You can remove one once you have more than two.</p>
       <div id="cc-rows"></div>
       <button type="button" class="tool-add-btn" id="cc-add-btn" onclick="ccAddRow()">+ Add initiative</button>
 
