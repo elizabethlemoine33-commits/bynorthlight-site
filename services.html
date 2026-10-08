@@ -18,8 +18,22 @@ head_extra: |
       {
         "@type": "Service",
         "@id": "https://bynorthlight.ca/services.html#advisory",
-        "name": "Embedded Advisory (Fractional COO and AI Advisory)",
+        "name": "Embedded Advisory",
         "description": "Strategy, operations and AI adoption advisory for Canadian small businesses and founders, delivered as a part-time engagement of about 20 hours a month, inside the client's company, with a monthly status update.",
+        "provider": {
+          "@id": "https://bynorthlight.ca#northlight"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        "url": "https://bynorthlight.ca/services.html#advisory"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://bynorthlight.ca/services.html#on-call",
+        "name": "On-Call Advisory",
+        "description": "One-to-one advisory access for up to 5 hours a month, for founders who want a second opinion before a decision ships.",
         "provider": {
           "@id": "https://bynorthlight.ca#northlight"
         },
@@ -32,6 +46,14 @@ head_extra: |
       {
         "@type": "FAQPage",
         "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is On-Call Advisory?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "One-to-one access to an experienced second opinion, for up to 5 hours a month. You bring me a decision before it ships, and we pressure-test it together. You stay the one who decides. It is a flat monthly rate, and more time is available when a month needs it."
+            }
+          },
           {
             "@type": "Question",
             "name": "How does an engagement start?",
@@ -340,7 +362,7 @@ head_extra: |
         <a href="/about.html" class="author-link">Read bio →</a>
       </div>
       <div class="answer-block" style="margin-top: 20px;">
-        <p>Northlight Advisory Services is a Halifax, Nova Scotia fractional COO and AI adoption advisory practice for Canadian small businesses, founded by Elizabeth Lemoine. Engagements begin with a free 30-minute Coffee Chat and typically run about 20 hours a month, delivered remotely, with a monthly status update.</p>
+        <p>Northlight Advisory Services is a Halifax, Nova Scotia fractional COO and AI adoption advisory practice for Canadian small businesses, founded by Elizabeth Lemoine. Engagements begin with a free 30-minute Coffee Chat. They run either as Embedded Advisory, about 20 hours a month inside your company with a monthly status update, or as On-Call Advisory, up to 5 hours a month of one-to-one access. Both are delivered remotely.</p>
       </div>
     </div>
 
@@ -357,21 +379,31 @@ head_extra: |
         <div class="step"><span class="step-num">Step 3</span><h3>The work, starting at about 20 hours a month</h3><p>I work inside your company, with you, your team, or both, whatever the work calls for. Each month you get a status update, and if the work needs more hours, they're available.</p></div>
       </div>
       <p style="margin-top:22px;"><a href="/coffee.html" class="btn-primary">Book a Coffee Chat →</a></p>
-      <p style="font-family:'Outfit',sans-serif;font-size:14px;color:var(--muted);margin-top:18px;">Not sure this is you? <a href="/who-we-help.html">See who I help</a>.</p>
+      <p style="font-family:'Outfit',sans-serif;font-size:14px;color:var(--muted);margin-top:18px;">Prefer lighter, one-to-one access? <a href="#advisory">On-Call Advisory</a> follows the same first two steps. Not sure this is you? <a href="/who-we-help.html">See who I help</a>.</p>
     </div>
 
     <!-- ── ENGAGEMENT ── -->
     <div class="section-block" id="advisory">
       <div class="section-divider"></div>
-      <p class="section-eyebrow">The engagement</p>
-      <h2 class="section-title">What is Embedded Advisory?</h2>
-      <div class="answer-block"><p>Embedded Advisory is a part-time engagement where I work inside your company, with you, your team, or both, on strategy, operations and AI adoption, with a monthly status update.</p></div>
+      <p class="section-eyebrow">Two ways to work together</p>
+      <h2 class="section-title">What are the ways to work together?</h2>
+      <div class="answer-block"><p>There are two. Embedded Advisory is about 20 hours a month, with me working inside your company on strategy, operations and AI adoption. On-Call Advisory is up to 5 hours a month of one-to-one access, for decisions. Both start with a free 30-minute Coffee Chat.</p></div>
       <div class="advisory-card">
-        <p class="advisory-card-label">What the work covers</p>
+        <p class="advisory-card-label">Embedded Advisory &nbsp;·&nbsp; about 20 hours a month</p>
         <h3 class="advisory-card-title">Inside your company, with a monthly status update</h3>
         <p class="advisory-card-body">The work usually sits in one or more of three areas: strategy and decision clarity, operations and structure, and AI adoption and governance. It is shaped to your situation, and we agree on what done means before anything starts, so nobody has to argue later about whether it counts as a win.</p>
         <p class="advisory-card-body">Canadian regulation is part of the picture from the start, including <a href="https://www.priv.gc.ca/" target="_blank" rel="noopener">PIPEDA</a> and <a href="https://www.cai.gouv.qc.ca/protection-renseignements-personnels/sujets-et-domaines-dinteret/principaux-changements-loi-25" target="_blank" rel="noopener">Quebec Law 25</a>. I bring 10+ years of director-level operations experience, with 300+ initiatives across 115+ countries, and I stay invested in what you are building.</p>
-        <div class="profile-links">
+      </div>
+
+
+      <div class="advisory-card" style="margin-top: 20px;">
+        <p class="advisory-card-label">On-Call Advisory &nbsp;·&nbsp; up to 5 hours a month</p>
+        <h3 class="advisory-card-title">One-to-one access, whenever you want a second opinion</h3>
+        <p class="advisory-card-body">You bring me the decision before it ships: the pricing call, the hire, the bet, the contract terms. We pressure-test it together, from outside your own head, and you still decide. It is a flat monthly rate for up to five hours, and if a month needs more, more time is available.</p>
+        <p class="advisory-card-body">It follows the same first two steps as everything else: a free Coffee Chat, then a longer conversation where you tell me where things stand and we agree how we will work.</p>
+      </div>
+
+      <div class="profile-links" style="margin-top: 24px;">
           <p style="font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--muted); line-height: 1.5; width: 100%; margin-bottom: 4px;">Credentials: Google Project Management · IBM Generative AI Specializations · Anthropic Claude · Cloud Computing Law (U of Penn) · Project Management Institute member · CAPM candidate. Named one of Canada's Best Fractional COO Services by Digital Reference 2026.</p>
           <p style="font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--muted); line-height: 1.5; width: 100%; margin-bottom: 8px;">Verify credentials and work history:</p>
           <a href="https://www.everyexpert.com/elizabethlemoine" target="_blank" rel="noopener" class="profile-link">EveryExpert Profile ↗</a>
@@ -379,7 +411,6 @@ head_extra: |
           <a href="https://www.linkedin.com/in/elizabethannelemoine" target="_blank" rel="noopener" class="profile-link">LinkedIn ↗</a>
           <a href="/about.html" class="profile-link">About Elizabeth →</a>
         </div>
-      </div>
 
       <div style="margin-top: 36px; overflow-x: auto;">
         <p style="font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--structural); margin-bottom: 14px;">How It Compares</p>
@@ -444,7 +475,16 @@ head_extra: |
       <h3 style="font-family: 'Jost', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.04em; color: var(--text); margin-bottom: 20px;">Common Questions</h3>
       <div style="display: flex; flex-direction: column; gap: 2px;">
 
-        <details style="background: var(--surface); border: 1px solid var(--border); border-radius: 4px; overflow: hidden;">
+                <details style="background: var(--surface); border: 1px solid var(--border); border-radius: 4px; overflow: hidden;">
+          <summary style="font-family: 'Jost', sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 0.02em; color: var(--text); padding: 20px 24px; cursor: pointer; list-style: none;">
+            What is On-Call Advisory?
+          </summary>
+          <div style="padding: 16px 24px 20px; font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--haze); line-height: 1.75; border-top: 1px solid var(--border);">
+            One-to-one access to an experienced second opinion, for up to 5 hours a month. You bring me a decision before it ships, and we pressure-test it together. You stay the one who decides. It is a flat monthly rate, and more time is available when a month needs it.
+          </div>
+        </details>
+
+<details style="background: var(--surface); border: 1px solid var(--border); border-radius: 4px; overflow: hidden;">
           <summary style="font-family: 'Jost', sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 0.02em; color: var(--text); padding: 20px 24px; cursor: pointer; list-style: none;">
             How does an engagement start?
           </summary>

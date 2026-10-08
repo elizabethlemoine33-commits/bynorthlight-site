@@ -895,7 +895,7 @@ head_extra: |
     const value = hash.slice(eqIndex + 1);
     if (key === 'convergence-check' && value) {
       ccLoadFromHash(value);
-      document.getElementById('convergence-check').scrollIntoView({ block: 'start' });
+      window.addEventListener('load', ccOpen);
     }
   }
 
