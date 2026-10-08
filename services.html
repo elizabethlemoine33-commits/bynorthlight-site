@@ -308,6 +308,8 @@ head_extra: |
       .step p { font-family:'Outfit',sans-serif; font-size:15px; line-height:1.75; color: var(--haze); margin:0; }
       .advisory-card-body a, .step a { color: var(--glacial); text-decoration: underline; text-underline-offset: 3px; }
     .advisory-card-body a:visited, .step a:visited { color: var(--glacial); }
+    .services-page a:not([class]), .services-page a:not([class]):visited { color: var(--glacial); text-decoration: underline; text-decoration-color: rgba(79,195,200,.35); text-underline-offset: 3px; }
+    .services-page a:not([class]):hover { color: var(--text); }
     .who-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:20px; }
       .who-card { display:block; background: var(--surface); border:1px solid var(--border); border-radius:10px; padding:22px 24px; text-decoration:none; }
       .who-card:hover { border-color: var(--glacial); }
@@ -325,7 +327,7 @@ head_extra: |
     <div class="page-hero">
       <p class="page-eyebrow">Northlight Advisory Services &nbsp;·&nbsp; How We Work With You</p>
       <h1 class="page-headline"><span>Fractional COO and AI advisory,</span> and how we work together</h1>
-      <p class="page-lead">I work with Canadian founders and leaders who need an experienced person inside the business. My job is to help you sort the decisions from the noise, get the plan out of your head and onto the page, and take some of the work off your plate. Then I work inside it with you until it is real.</p>
+      <p class="page-lead">You are the founder or CEO of a small Canadian organisation, and too much of it still runs through you. I work inside the business with you. I help you sort the decisions from the noise, get the plan out of your head and onto the page, and take some of the work off your plate. Then I work through it with you until it is real.</p>
       <div class="author-byline">
         <div class="author-avatar-wrap">
           <img src="/EL-aurora.png" alt="Elizabeth Lemoine" class="author-avatar-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
@@ -342,22 +344,12 @@ head_extra: |
       </div>
     </div>
 
-    <!-- ── WHO THIS IS FOR ── -->
-    <div class="section-block" id="who">
-      <p class="section-eyebrow">Who this is for</p>
-      <h2 class="section-title">Which of these sounds like your week?</h2>
-      <div class="who-grid">
-        <a class="who-card" href="/who-we-help.html"><h3>Alone at the Top</h3><p>You are the only one who can see the whole plan, and the people who could help carry it have never been handed the whole picture.</p><span>See if this is you →</span></a>
-        <a class="who-card" href="/who-we-help.html"><h3>Stuck on Consensus</h3><p>You have a team and plenty of opinions, and the decision still has not been made.</p><span>See if this is you →</span></a>
-        <a class="who-card" href="/who-we-help.html"><h3>The Self-Reliant Builder</h3><p>You have chosen to build this yourself, and you want a sounding board you can trust.</p><span>See if this is you →</span></a>
-      </div>
-    </div>
-
     <!-- ── HOW IT WORKS ── -->
     <div class="section-block" id="how">
       <div class="section-divider"></div>
       <p class="section-eyebrow">How it works</p>
-      <h2 class="section-title">Three steps, in this order</h2>
+      <h2 class="section-title">How does working together start?</h2>
+      <div class="answer-block"><p>It starts with a free 30-minute Coffee Chat. If it feels like a fit, a second conversation leads to a plan we agree on, and the work begins at about 20 hours a month.</p></div>
       <p class="section-body">The order matters, because each step earns the trust the next one needs. You will know where we are going before we start. We can change the route along the way, as long as we agree on the destination.</p>
       <div class="step-list">
         <div class="step"><span class="step-num">Step 1</span><h3>A 30-minute Coffee Chat, free</h3><p>It goes where you need it to. You do not need the tidy version. Bring it as it is, because I am asking for the accurate one. We talk about what is actually stuck, and why. I will take notes, or record the call if you agree, so I can map it all out afterward.</p></div>
@@ -365,20 +357,22 @@ head_extra: |
         <div class="step"><span class="step-num">Step 3</span><h3>The work, starting at about 20 hours a month</h3><p>I work inside your company, with you, your team, or both, whatever the work calls for. Each month you get a status update, and if the work needs more hours, they are available.</p></div>
       </div>
       <p style="margin-top:22px;"><a href="/coffee.html" class="btn-primary">Book a Coffee Chat →</a></p>
+      <p style="font-family:'Outfit',sans-serif;font-size:14px;color:var(--muted);margin-top:18px;">Not sure this is you? <a href="/who-we-help.html">See who I help</a>.</p>
     </div>
 
     <!-- ── ENGAGEMENT ── -->
     <div class="section-block" id="advisory">
       <div class="section-divider"></div>
       <p class="section-eyebrow">The engagement</p>
-      <h2 class="section-title">Embedded Advisory</h2>
+      <h2 class="section-title">What is Embedded Advisory?</h2>
+      <div class="answer-block"><p>Embedded Advisory is a part-time engagement where I work inside your company, with you, your team, or both, on strategy, operations and AI adoption, with a monthly status update.</p></div>
       <div class="advisory-card">
-        <p class="advisory-card-label">About 20 hours a month</p>
+        <p class="advisory-card-label">What the work covers</p>
         <h3 class="advisory-card-title">Inside your company, with a monthly status update</h3>
         <p class="advisory-card-body">The work usually sits in one or more of three areas: strategy and decision clarity, operations and structure, and AI adoption and governance. It is shaped to your situation, and we agree on what done means before anything starts, so nobody has to argue later about whether it counts as a win.</p>
         <p class="advisory-card-body">Canadian regulation is part of the picture from the start, including <a href="https://www.priv.gc.ca/" target="_blank" rel="noopener">PIPEDA</a> and <a href="https://www.cai.gouv.qc.ca/protection-renseignements-personnels/sujets-et-domaines-dinteret/principaux-changements-loi-25" target="_blank" rel="noopener">Quebec Law 25</a>. I bring 10+ years of director-level operations experience, with 300+ initiatives across 115+ countries, and I stay invested in what you are building.</p>
         <div class="profile-links">
-          <p style="font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--muted); line-height: 1.5; width: 100%; margin-bottom: 4px;">Certified: PMI · Google Project Management · IBM Generative AI Specializations · Anthropic Claude · Cloud Computing Law (U of Penn). Named one of Canada's Best Fractional COO Services by Digital Reference 2026.</p>
+          <p style="font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--muted); line-height: 1.5; width: 100%; margin-bottom: 4px;">Credentials: Google Project Management · IBM Generative AI Specializations · Anthropic Claude · Cloud Computing Law (U of Penn) · Project Management Institute (CAPM candidate). Named one of Canada's Best Fractional COO Services by Digital Reference 2026.</p>
           <p style="font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--muted); line-height: 1.5; width: 100%; margin-bottom: 8px;">Verify credentials and work history:</p>
           <a href="https://www.everyexpert.com/elizabethlemoine" target="_blank" rel="noopener" class="profile-link">EveryExpert Profile ↗</a>
           <a href="https://www.gofractional.com/r/elizabeth-anne-randell-lemoine" target="_blank" rel="noopener" class="profile-link">GoFractional Profile ↗</a>
@@ -428,20 +422,21 @@ head_extra: |
     <div class="section-block" id="support">
       <div class="section-divider"></div>
       <p class="section-eyebrow">Policies</p>
-      <h2 class="section-title">Support &amp; Cancellation</h2>
+      <h2 class="section-title">How do support and cancellation work?</h2>
+      <div class="answer-block"><p>Support is available Monday to Friday, Atlantic Time, with a response within one business day. Cancellation terms are set out in your agreement before work begins.</p></div>
 
       <div class="support-grid">
         <div class="support-item">
-          <span class="support-icon" aria-hidden="true">⏱</span>
+          <span class="support-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4FC3C8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
           <p class="support-label">Support Hours</p>
-          <p class="support-value">Mon – Fri, Atlantic Time</p>
+          <p class="support-value">Monday to Friday, Atlantic Time</p>
           <p class="support-body">Response within one business day. Reach us at <a href="mailto:support@bynorthlight.ca">support@bynorthlight.ca</a>.</p>
         </div>
         <div class="support-item">
-          <span class="support-icon" aria-hidden="true">📋</span>
+          <span class="support-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4FC3C8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4h6v3H9zM9 12h6M9 16h4"/></svg></span>
           <p class="support-label">Advisory Engagements</p>
-          <p class="support-value">Per Engagement Letter</p>
-          <p class="support-body">Cancellation terms are set out in the engagement letter before work begins.</p>
+          <p class="support-value">Agreed in writing</p>
+          <p class="support-body">Cancellation terms are set out in your agreement before work begins.</p>
         </div>
       </div>
 
