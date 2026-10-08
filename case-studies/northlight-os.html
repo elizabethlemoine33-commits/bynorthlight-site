@@ -392,9 +392,9 @@
     <div class="page-wrap">
       <section class="os-hero" aria-labelledby="hero-title">
         <img src="/northlight-os-icon.svg" alt="Northlight OS icon" class="hero-os-icon" width="100" height="100">
-        <p class="hero-eyebrow">Case Study &nbsp;·&nbsp; Built for my own use</p>
+        <p class="hero-eyebrow">Case Study &nbsp;·&nbsp; Built for internal use</p>
         <h1 class="hero-title" id="hero-title">One dashboard.<br><span>Your entire operation.</span></h1>
-        <p class="hero-subtitle">Built for my own use. A custom AI-native operating system that runs a solo advisory and app development practice. It connects ClickUp, Gmail, Google Workspace, Slack and Claude in one dashboard and handles the repetitive parts of the work.</p>
+        <p class="hero-subtitle">Built for internal use. A custom AI-native operating system that runs a solo advisory and app development practice. It connects ClickUp, Gmail and Google Workspace, Slack, GitHub, Buffer, Kit, Plausible and Claude in one dashboard, and handles the repetitive parts of the work.</p>
         <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
           <span class="status-pill">
             <span class="status-dot" role="presentation"></span>
@@ -409,11 +409,11 @@
     <div class="page-wrap" style="padding-bottom:56px;">
       <div class="stats-row">
         <div class="stat-block">
-          <span class="stat-value">6</span>
+          <span class="stat-value">10+</span>
           <span class="stat-label">Integrated platforms</span>
         </div>
         <div class="stat-block">
-          <span class="stat-value">18+</span>
+          <span class="stat-value">20+</span>
           <span class="stat-label">Claude AI skills</span>
         </div>
         <div class="stat-block">
@@ -611,6 +611,20 @@
 
     <div class="aurora-divider" role="presentation"></div>
 
+    <!-- ── BOARDS ── -->
+    <div class="page-wrap">
+      <section class="content-section content-section-mid" aria-labelledby="boards-heading">
+        <h2 class="section-label" id="boards-heading">The advisory board and the marketing round table</h2>
+        <p class="cs-lead">Two groups of AI personas sit inside the dashboard. I give each group a question, they present their views and debate, and a secretary who never takes part in the debate writes up the decision. The record is saved to Google Drive. Each persona sees only the information relevant to its role, and each is built to challenge the idea, never the person holding it.</p>
+        <div class="cs-grid-2">
+          <div class="cs-card"><span class="cs-tag">Advisory board</span><h3>Business decisions</h3><p>A CFO, a Chief Privacy Officer, a CMO, a Founder Coach, a Technical and Product lead and a Strategy lead. The Founder Coach sees overdue and stale tasks to spot avoidance patterns, and the Technical and Product lead sees the open product backlogs.</p></div>
+          <div class="cs-card"><span class="cs-tag">Marketing round table</span><h3>Content and marketing</h3><p>A Strategist, a Drafter, a Critic, a CMO, an SEO agent and an Analytics and GEO agent. Together they work a piece of content from brief to draft to critique. The SEO agent is still a placeholder until it has a live data feed.</p></div>
+        </div>
+      </section>
+    </div>
+
+    <div class="aurora-divider" role="presentation"></div>
+
     <!-- ── DECISIONS ── -->
     <div class="page-wrap">
       <section class="content-section content-section-mid" aria-labelledby="decisions-heading">
@@ -725,7 +739,14 @@
           <span class="stack-chip">Slack API</span>
           <span class="stack-chip">NewsAPI</span>
           <span class="stack-chip">Tailwind CSS</span>
-        </div>
+          <span class="stack-chip">GitHub API</span>
+          <span class="stack-chip">Buffer API</span>
+          <span class="stack-chip">Kit API</span>
+          <span class="stack-chip">Plausible</span>
+          <span class="stack-chip">LinkedIn API (limited)</span>
+          <span class="stack-chip">Resend</span>
+          <span class="stack-chip">Sentry</span>
+          </div>
       </section>
     </div>
 
@@ -735,7 +756,7 @@
     <div class="page-wrap">
       <section class="content-section" aria-labelledby="results-heading">
         <h2 class="section-label" id="results-heading">Results</h2>
-        <p class="cs-lead">The system has run daily since May 2026. It handles overnight first drafts and research, parses expense and revenue emails, and produces a morning briefing. I have not run a formal time study, so I make no claim about hours saved. The results below are about what happened, including where it fell short.</p>
+        <p class="cs-lead">The system has run daily since May 2026. It handles overnight first drafts and research, parses expense and revenue emails, produces a morning briefing, and runs the advisory board and the marketing round table. It has also failed in instructive ways, and most of what I learned came from those failures.</p>
       </section>
     </div>
 
@@ -745,10 +766,12 @@
       <section class="content-section" aria-labelledby="learned-heading">
         <h2 class="section-label" id="learned-heading">What I learned</h2>
         <div class="cs-grid-2">
-          <div class="cs-card"><h3>Check the output, not the status</h3><p>The content pipeline once reported 12 posts as ready. On inspection, 10 of them had no copy, only refusal messages. A status that says "done" tells you the process ran, not that it worked.</p></div>
+          <div class="cs-card"><h3>Check the output, not the status</h3><p>The content pipeline once reported 12 posts as ready. On inspection, 10 of them had no copy, only refusal messages. A status that says done tells you the process ran, not that it worked.</p></div>
           <div class="cs-card"><h3>Automation exposes the quality of the process</h3><p>I automated first drafts, and the drafts did not sound like me. I paused drafting and moved to a stories-first approach, where the ideas come from things that really happened.</p></div>
-          <div class="cs-card"><h3>A connector is not a guarantee</h3><p>A tool that works in testing can fail under load. Keeping one controlled route for every write made failures easier to see and fix.</p></div>
-          <div class="cs-card"><h3>Keep a person in the loop</h3><p>The approve, send back and take over step is what made it safe to let the system work overnight.</p></div>
+          <div class="cs-card"><h3>A check that catches the same problem every time is a warning</h3><p>In one review, 5 of 6 debate rounds were flagged for invented context. The automatic regeneration kept producing a different wrong answer. The real cause was a prompt with no instruction for what to do when information is missing.</p></div>
+          <div class="cs-card"><h3>Silent failures are the expensive ones</h3><p>A three-line helper that started tasks without waiting for them was hiding failures across the pipeline. Finding it meant reading the code for the symptom, not sampling at random.</p></div>
+          <div class="cs-card"><h3>Working and usable are different bars</h3><p>A feature that worked end to end still failed the simple test of whether I could find what it produced. I now ask both questions.</p></div>
+          <div class="cs-card"><h3>Verify against the live system, not the documentation</h3><p>Buffer's documentation and several searches disagreed about what its API could return. Calling it settled the question in a minute.</p></div>
         </div>
       </section>
     </div>
@@ -773,7 +796,7 @@
           <div class="pmi-row"><span class="pmi-label">Role</span><span class="pmi-value">Designer, Developer, and Product Owner (solo)</span></div>
           <div class="pmi-row"><span class="pmi-label">Industry</span><span class="pmi-value">Technology · Professional Services</span></div>
           <div class="pmi-row"><span class="pmi-label">Timeline</span><span class="pmi-value">In daily use since May 2026</span></div>
-          <div class="pmi-row"><span class="pmi-label">Scope</span><span class="pmi-value">Full-stack web application integrating 6 external platforms (ClickUp, Google Workspace, Slack, NewsAPI, Anthropic Claude API, Railway). 9 workflow modules, 18+ AI skill agents, automated 6am daily dispatcher.</span></div>
+          <div class="pmi-row"><span class="pmi-label">Scope</span><span class="pmi-value">Full-stack web application integrating ClickUp, Google Workspace, Slack, GitHub, Buffer, Kit, Plausible, NewsAPI and the Anthropic Claude API, hosted on Railway. 20+ AI skills, an advisory board, a marketing round table, and an automated 6am daily dispatcher.</span></div>
           <div class="pmi-row"><span class="pmi-label">Outcome</span><span class="pmi-value">A production system running daily for a solo practice. Overnight task execution removes manual first-draft and research work, and automated expense and revenue parsing reduces manual entry.</span></div>
         </div>
       </section>
