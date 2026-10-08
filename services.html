@@ -1,10 +1,10 @@
 ---
 layout: page
-title: "Services & Products — Northlight Advisory Services"
-description: "Advisory engagements, Northlight OS, and the Northlight Skills Market. Bespoke strategy and AI adoption for Canadian small businesses — including a $99 Clarity Call to start."
+title: "Fractional COO Services — Northlight Advisory Services"
+description: "Fractional COO and AI advisory for Canadian founders: a free 30-minute Coffee Chat, a plan we agree on, then about 20 hours a month inside your company."
 canonical: "https://bynorthlight.ca/services.html"
-og_title: "Services & Products — Northlight Advisory Services"
-og_description: "Advisory engagements, Northlight OS, and the Northlight Skills Market. Bespoke strategy and AI adoption for Canadian small businesses."
+og_title: "Services: Fractional COO and AI Advisory | Northlight"
+og_description: "Fractional COO and AI advisory for Canadian founders: a free 30-minute Coffee Chat, a plan we agree on, then about 20 hours a month inside your company."
 breadcrumbs:
   - name: "Home"
     url: "https://bynorthlight.ca/"
@@ -18,62 +18,58 @@ head_extra: |
       {
         "@type": "Service",
         "@id": "https://bynorthlight.ca/services.html#advisory",
-        "name": "Fractional Advisory Services",
-        "description": "Bespoke strategy, operations, and AI adoption advisory for Canadian small businesses and founders. Engagements are structured around your specific situation — not a package.",
-        "provider": { "@id": "https://bynorthlight.ca#northlight" },
-        "areaServed": { "@type": "Country", "name": "Canada" },
-        "url": "https://bynorthlight.ca/services.html#advisory",
-        "offers": {
-          "@type": "Offer",
-          "name": "Clarity Call",
-          "price": "99",
-          "priceCurrency": "CAD",
-          "description": "A focused 60-minute working session to define your challenge and explore what a Northlight engagement could look like."
-        }
-      },
-      {
-        "@type": "SoftwareApplication",
-        "@id": "https://bynorthlight.ca/services.html#os",
-        "name": "Northlight OS",
-        "description": "An AI-native operating system for small business — an intelligent dispatcher that connects your tools, automates routine decisions, and keeps your operations running without manual handoffs.",
-        "applicationCategory": "BusinessApplication",
-        "provider": { "@id": "https://bynorthlight.ca#northlight" },
-        "url": "https://bynorthlight.ca/northlight-os.html"
-      },
-      {
-        "@type": "SoftwareApplication",
-        "@id": "https://bynorthlight.ca/services.html#mcp",
-        "name": "Northlight Skills Market",
-        "description": "A curated marketplace of MCP skills for Claude — purpose-built tools that extend what AI assistants can do for Canadian operators and founders.",
-        "applicationCategory": "DeveloperApplication",
-        "provider": { "@id": "https://bynorthlight.ca#northlight" },
-        "url": "https://mcpmarket.com/sellers/northlight-skills"
+        "name": "Embedded Advisory (Fractional COO and AI Advisory)",
+        "description": "Strategy, operations and AI adoption advisory for Canadian small businesses and founders, delivered as a part-time engagement of about 20 hours a month, inside the client's company, with a monthly status update.",
+        "provider": {
+          "@id": "https://bynorthlight.ca#northlight"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        "url": "https://bynorthlight.ca/services.html#advisory"
       },
       {
         "@type": "FAQPage",
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "How does a Northlight advisory engagement start?",
+            "name": "How does an engagement start?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Start with a Clarity Call — a $99 focused session where we define your challenge and explore whether a Northlight engagement is the right fit. Book at bynorthlight.ca or email support@bynorthlight.ca."
+              "text": "With a free 30-minute Coffee Chat. I take notes, or record the call if you agree. If it feels like a fit, we book a second, longer conversation, and then I come back with a plan we agree on. Nothing starts until you are satisfied."
             }
           },
           {
             "@type": "Question",
-            "name": "What does Northlight advisory cost?",
+            "name": "What does it cost?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Advisory engagements are bespoke — structured around your specific situation and scope. A Clarity Call is $99 and is the right starting point for understanding what an engagement would look like and what it would cost."
+              "text": "We talk about cost once we have agreed what done looks like. The work starts at about 20 hours a month, and if it needs more, more is available. Nothing begins until you are satisfied with the plan and what it will take."
             }
           },
           {
             "@type": "Question",
-            "name": "What are Northlight's support hours?",
+            "name": "Where do you work?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Support requests are responded to within one business day, Monday through Friday, Atlantic Time. Email support@bynorthlight.ca for product or engagement questions."
+              "text": "I am based in Halifax, Nova Scotia, and the work is done remotely, inside your company, with you, your team, or both."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What kind of organisation is this for?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Canadian founders and leaders of small and mid-sized organisations, typically under 50 people, who are at a strategic or operational turning point and need clear thinking they can act on."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you work with businesses outside Canada?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Occasionally. I focus on Canadian organisations because they face a distinct set of regulatory, funding, and market conditions, particularly around AI adoption and privacy law (PIPEDA, Quebec Law 25), that general advice does not address well. If the problem is specific enough, geography is negotiable."
             }
           }
         ]
@@ -82,229 +78,244 @@ head_extra: |
   }
   </script>
   <style>
-    .services-page { max-width: 1280px; margin: 0 auto; padding: 0 64px 80px; }
-
-    .page-hero {
-      padding: 64px 0 48px;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 64px;
-    }
-    .page-eyebrow {
-      font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500;
-      letter-spacing: 0.26em; text-transform: uppercase; color: var(--muted);
-      margin-bottom: 16px;
-    }
-    .page-headline {
-      font-family: 'Jost', sans-serif; font-weight: 600; font-size: 40px;
-      letter-spacing: 0.02em; line-height: 1.1; color: var(--text);
-      margin-bottom: 16px;
-    }
-    .page-headline span {
-      background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 33%, #8B6FD4 66%, #C46FAA 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
-    .page-lead {
-      font-family: 'Outfit', sans-serif; font-size: 17px; color: var(--cloud);
-      line-height: 1.75; max-width: 720px;
-    }
-
-    /* Section headers */
-    .section-block { margin-bottom: 72px; }
-    .section-eyebrow {
-      font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500;
-      letter-spacing: 0.26em; text-transform: uppercase;
-      background: linear-gradient(90deg, #4FC3C8, #8B6FD4);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-      display: inline-block; margin-bottom: 12px;
-    }
-    .section-title {
-      font-family: 'Jost', sans-serif; font-weight: 600; font-size: 26px;
-      letter-spacing: 0.02em; color: var(--text); margin-bottom: 12px;
-    }
-    .section-body {
-      font-family: 'Outfit', sans-serif; font-size: 16px; color: var(--haze);
-      line-height: 1.8; max-width: 680px; margin-bottom: 28px;
-    }
-    .section-divider {
-      height: 1px;
-      background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);
-      opacity: 0.2; margin-bottom: 40px;
-    }
-
-    /* Advisory card */
-    .advisory-card {
-      background: var(--surface); border: 1px solid var(--border-2);
-      border-radius: 12px; padding: 36px 40px; margin-bottom: 24px;
-      position: relative; overflow: hidden;
-    }
-    .advisory-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-      background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);
-    }
-    .advisory-card-label {
-      font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500;
-      letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted);
-      margin-bottom: 10px;
-    }
-    .advisory-card-title {
-      font-family: 'Jost', sans-serif; font-weight: 600; font-size: 20px;
-      letter-spacing: 0.02em; color: var(--text); margin-bottom: 10px;
-    }
-    .advisory-card-body {
-      font-family: 'Outfit', sans-serif; font-size: 15px; color: var(--haze);
-      line-height: 1.75; margin-bottom: 20px;
-    }
-    .clarity-call-box {
-      background: var(--surface-2); border: 1px solid var(--border);
-      border-left: 3px solid var(--glacial); border-radius: 0 8px 8px 0;
-      padding: 20px 24px; margin-top: 24px;
-    }
-    .clarity-call-label {
-      font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 600;
-      letter-spacing: 0.22em; text-transform: uppercase; color: var(--glacial);
-      margin-bottom: 6px;
-    }
-    .clarity-call-title {
-      font-family: 'Jost', sans-serif; font-weight: 600; font-size: 17px;
-      color: var(--text); margin-bottom: 8px;
-    }
-    .clarity-call-body {
-      font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--cloud);
-      line-height: 1.7; margin-bottom: 16px;
-    }
-    .clarity-call-price {
-      font-family: 'Jost', sans-serif; font-weight: 600; font-size: 22px;
-      color: var(--text); margin-bottom: 16px;
-    }
-    .clarity-call-price span {
-      font-size: 13px; font-weight: 400; color: var(--muted); letter-spacing: 0.08em;
-    }
-    .btn-primary {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 50%, #8B6FD4 100%);
-      border: none; border-radius: 8px; padding: 12px 24px;
-      font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600;
-      letter-spacing: 0.08em; text-transform: uppercase; color: #fff;
-      text-decoration: none; cursor: pointer; transition: opacity 0.2s;
-    }
-    .btn-primary:hover { opacity: 0.88; color: #fff; }
-    .profile-links {
-      display: flex; gap: 16px; flex-wrap: wrap; margin-top: 20px;
-    }
-    .profile-link {
-      font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 500;
-      letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
-      text-decoration: none; border-bottom: 1px solid var(--border-2);
-      padding-bottom: 2px; transition: color 0.2s, border-color 0.2s;
-    }
-    .profile-link:hover { color: var(--glacial); border-color: var(--glacial); }
-
-    /* Product cards */
-    .product-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
-      margin-bottom: 24px;
-    }
-    .product-card {
-      background: var(--surface); border: 1px solid var(--border);
-      border-radius: 12px; padding: 32px; position: relative;
-      overflow: hidden; transition: border-color 0.25s;
-    }
-    .product-card:hover { border-color: var(--border-2); }
-    .product-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-      background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);
-      opacity: 0; transition: opacity 0.25s;
-    }
-    .product-card:hover::before { opacity: 1; }
-    .product-label {
-      font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500;
-      letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted);
-      margin-bottom: 10px;
-    }
-    .product-name {
-      font-family: 'Jost', sans-serif; font-weight: 600; font-size: 20px;
-      color: var(--text); margin-bottom: 10px;
-    }
-    .product-body {
-      font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--haze);
-      line-height: 1.75; margin-bottom: 20px;
-    }
-    .product-price {
-      font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 500;
-      letter-spacing: 0.08em; color: var(--muted); margin-bottom: 16px;
-    }
-    .product-price strong { color: var(--cloud); }
-    .product-cta {
-      display: inline-flex; align-items: center; gap: 6px;
-      font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 600;
-      letter-spacing: 0.10em; text-transform: uppercase;
-      color: var(--glacial); text-decoration: none;
-      border-bottom: 1px solid rgba(79,195,200,0.3); padding-bottom: 2px;
-      transition: color 0.2s, border-color 0.2s;
-    }
-    .product-cta:hover { color: #fff; border-color: rgba(255,255,255,0.3); }
-    .product-refund {
-      display: block; margin-top: 10px;
-      font-family: 'Outfit', sans-serif; font-size: 12px; color: var(--structural);
-      text-decoration: none; transition: color 0.2s;
-    }
-    .product-refund:hover { color: var(--muted); }
-
-    /* Support & Cancellation */
-    .support-grid {
-      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px;
-      margin-bottom: 32px;
-    }
-    .support-item {
-      background: var(--surface); border: 1px solid var(--border);
-      padding: 28px 28px 32px;
-    }
-    .support-icon {
-      font-size: 22px; margin-bottom: 12px; display: block;
-    }
-    .support-label {
-      font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 600;
-      letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted);
-      margin-bottom: 8px;
-    }
-    .support-value {
-      font-family: 'Jost', sans-serif; font-weight: 600; font-size: 16px;
-      color: var(--text); margin-bottom: 8px;
-    }
-    .support-body {
-      font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--haze);
-      line-height: 1.7;
-    }
-    .support-body a { color: var(--glacial); text-decoration: none; }
-    .support-body a:hover { text-decoration: underline; }
-
-    /* ── AUTHOR BYLINE ── */
-    .author-byline { display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--border); padding-top: 16px; margin-top: 20px; }
-    .author-avatar-wrap { flex-shrink: 0; }
-    .author-avatar-img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 1.5px solid var(--border-2); display: block; }
-    .author-avatar-init { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, #4FC3C8, #8B6FD4); display: none; align-items: center; justify-content: center; font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600; color: #fff; }
-    .author-text { display: flex; flex-direction: column; gap: 1px; min-width: 0; flex: 1; }
-    .author-name { font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600; color: var(--text); }
-    .author-meta { font-family: 'Outfit', sans-serif; font-size: 12px; color: var(--structural); }
-    .author-link { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.10em; text-transform: uppercase; color: var(--glacial); text-decoration: none; margin-left: auto; flex-shrink: 0; white-space: nowrap; }
-    .author-link:hover { text-decoration: underline; }
-
-    /* Responsive */
-    @media (max-width: 1024px) {
-      .services-page { padding-left: 32px; padding-right: 32px; }
-      .page-hero { padding: 48px 0 36px; }
-    }
-    @media (max-width: 900px) {
-      .product-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 768px) {
-      .services-page { padding-left: 24px; padding-right: 24px; }
-      .page-headline { font-size: 30px; }
-      .product-grid { grid-template-columns: 1fr; }
-      .support-grid { grid-template-columns: 1fr; }
-      .advisory-card { padding: 28px 24px; }
-    }
-  </style>
+      .services-page { max-width: 1280px; margin: 0 auto; padding: 0 64px 80px; }
+  
+      .page-hero {
+        padding: 64px 0 48px;
+        border-bottom: 1px solid var(--border);
+        margin-bottom: 64px;
+      }
+      .page-eyebrow {
+        font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500;
+        letter-spacing: 0.26em; text-transform: uppercase; color: var(--muted);
+        margin-bottom: 16px;
+      }
+      .page-headline {
+        font-family: 'Jost', sans-serif; font-weight: 600; font-size: 40px;
+        letter-spacing: 0.02em; line-height: 1.1; color: var(--text);
+        margin-bottom: 16px;
+      }
+      .page-headline span {
+        background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 33%, #8B6FD4 66%, #C46FAA 100%);
+        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      }
+      .page-lead {
+        font-family: 'Outfit', sans-serif; font-size: 17px; color: var(--cloud);
+        line-height: 1.75; max-width: 720px;
+      }
+  
+      /* Section headers */
+      .section-block { margin-bottom: 72px; }
+      .section-eyebrow {
+        font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500;
+        letter-spacing: 0.26em; text-transform: uppercase;
+        background: linear-gradient(90deg, #4FC3C8, #8B6FD4);
+        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        display: inline-block; margin-bottom: 12px;
+      }
+      .section-title {
+        font-family: 'Jost', sans-serif; font-weight: 600; font-size: 26px;
+        letter-spacing: 0.02em; color: var(--text); margin-bottom: 12px;
+      }
+      .section-body {
+        font-family: 'Outfit', sans-serif; font-size: 16px; color: var(--haze);
+        line-height: 1.8; max-width: 680px; margin-bottom: 28px;
+      }
+      .section-divider {
+        height: 1px;
+        background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);
+        opacity: 0.2; margin-bottom: 40px;
+      }
+  
+      /* Advisory card */
+      .advisory-card {
+        background: var(--surface); border: 1px solid var(--border-2);
+        border-radius: 12px; padding: 36px 40px; margin-bottom: 24px;
+        position: relative; overflow: hidden;
+      }
+      .advisory-card::before {
+        content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+        background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);
+      }
+      .advisory-card-label {
+        font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500;
+        letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted);
+        margin-bottom: 10px;
+      }
+      .advisory-card-title {
+        font-family: 'Jost', sans-serif; font-weight: 600; font-size: 20px;
+        letter-spacing: 0.02em; color: var(--text); margin-bottom: 10px;
+      }
+      .advisory-card-body {
+        font-family: 'Outfit', sans-serif; font-size: 15px; color: var(--haze);
+        line-height: 1.75; margin-bottom: 20px;
+      }
+      .clarity-call-box {
+        background: var(--surface-2); border: 1px solid var(--border);
+        border-left: 3px solid var(--glacial); border-radius: 0 8px 8px 0;
+        padding: 20px 24px; margin-top: 24px;
+      }
+      .clarity-call-label {
+        font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 600;
+        letter-spacing: 0.22em; text-transform: uppercase; color: var(--glacial);
+        margin-bottom: 6px;
+      }
+      .clarity-call-title {
+        font-family: 'Jost', sans-serif; font-weight: 600; font-size: 17px;
+        color: var(--text); margin-bottom: 8px;
+      }
+      .clarity-call-body {
+        font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--cloud);
+        line-height: 1.7; margin-bottom: 16px;
+      }
+      .clarity-call-price {
+        font-family: 'Jost', sans-serif; font-weight: 600; font-size: 22px;
+        color: var(--text); margin-bottom: 16px;
+      }
+      .clarity-call-price span {
+        font-size: 13px; font-weight: 400; color: var(--muted); letter-spacing: 0.08em;
+      }
+      .btn-primary {
+        display: inline-flex; align-items: center; gap: 8px;
+        background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 50%, #8B6FD4 100%);
+        border: none; border-radius: 8px; padding: 12px 24px;
+        font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600;
+        letter-spacing: 0.08em; text-transform: uppercase; color: #fff;
+        text-decoration: none; cursor: pointer; transition: opacity 0.2s;
+      }
+      .btn-primary:hover { opacity: 0.88; color: #fff; }
+      .profile-links {
+        display: flex; gap: 16px; flex-wrap: wrap; margin-top: 20px;
+      }
+      .profile-link {
+        font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 500;
+        letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
+        text-decoration: none; border-bottom: 1px solid var(--border-2);
+        padding-bottom: 2px; transition: color 0.2s, border-color 0.2s;
+      }
+      .profile-link:hover { color: var(--glacial); border-color: var(--glacial); }
+  
+      /* Product cards */
+      .product-grid {
+        display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+        margin-bottom: 24px;
+      }
+      .product-card {
+        background: var(--surface); border: 1px solid var(--border);
+        border-radius: 12px; padding: 32px; position: relative;
+        overflow: hidden; transition: border-color 0.25s;
+      }
+      .product-card:hover { border-color: var(--border-2); }
+      .product-card::before {
+        content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+        background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);
+        opacity: 0; transition: opacity 0.25s;
+      }
+      .product-card:hover::before { opacity: 1; }
+      .product-label {
+        font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500;
+        letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted);
+        margin-bottom: 10px;
+      }
+      .product-name {
+        font-family: 'Jost', sans-serif; font-weight: 600; font-size: 20px;
+        color: var(--text); margin-bottom: 10px;
+      }
+      .product-body {
+        font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--haze);
+        line-height: 1.75; margin-bottom: 20px;
+      }
+      .product-price {
+        font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 500;
+        letter-spacing: 0.08em; color: var(--muted); margin-bottom: 16px;
+      }
+      .product-price strong { color: var(--cloud); }
+      .product-cta {
+        display: inline-flex; align-items: center; gap: 6px;
+        font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 600;
+        letter-spacing: 0.10em; text-transform: uppercase;
+        color: var(--glacial); text-decoration: none;
+        border-bottom: 1px solid rgba(79,195,200,0.3); padding-bottom: 2px;
+        transition: color 0.2s, border-color 0.2s;
+      }
+      .product-cta:hover { color: #fff; border-color: rgba(255,255,255,0.3); }
+      .product-refund {
+        display: block; margin-top: 10px;
+        font-family: 'Outfit', sans-serif; font-size: 12px; color: var(--structural);
+        text-decoration: none; transition: color 0.2s;
+      }
+      .product-refund:hover { color: var(--muted); }
+  
+      /* Support & Cancellation */
+      .support-grid {
+        display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px;
+        margin-bottom: 32px;
+      }
+      .support-item {
+        background: var(--surface); border: 1px solid var(--border);
+        padding: 28px 28px 32px;
+      }
+      .support-icon {
+        font-size: 22px; margin-bottom: 12px; display: block;
+      }
+      .support-label {
+        font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 600;
+        letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted);
+        margin-bottom: 8px;
+      }
+      .support-value {
+        font-family: 'Jost', sans-serif; font-weight: 600; font-size: 16px;
+        color: var(--text); margin-bottom: 8px;
+      }
+      .support-body {
+        font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--haze);
+        line-height: 1.7;
+      }
+      .support-body a { color: var(--glacial); text-decoration: none; }
+      .support-body a:hover { text-decoration: underline; }
+  
+      /* ── AUTHOR BYLINE ── */
+      .author-byline { display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--border); padding-top: 16px; margin-top: 20px; }
+      .author-avatar-wrap { flex-shrink: 0; }
+      .author-avatar-img { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 1.5px solid var(--border-2); display: block; }
+      .author-avatar-init { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, #4FC3C8, #8B6FD4); display: none; align-items: center; justify-content: center; font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600; color: #fff; }
+      .author-text { display: flex; flex-direction: column; gap: 1px; min-width: 0; flex: 1; }
+      .author-name { font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600; color: var(--text); }
+      .author-meta { font-family: 'Outfit', sans-serif; font-size: 12px; color: var(--structural); }
+      .author-link { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.10em; text-transform: uppercase; color: var(--glacial); text-decoration: none; margin-left: auto; flex-shrink: 0; white-space: nowrap; }
+      .author-link:hover { text-decoration: underline; }
+  
+      /* Responsive */
+      @media (max-width: 1024px) {
+        .services-page { padding-left: 32px; padding-right: 32px; }
+        .page-hero { padding: 48px 0 36px; }
+      }
+      @media (max-width: 900px) {
+        .product-grid { grid-template-columns: 1fr 1fr; }
+      }
+      @media (max-width: 768px) {
+        .services-page { padding-left: 24px; padding-right: 24px; }
+        .page-headline { font-size: 30px; }
+        .product-grid { grid-template-columns: 1fr; }
+        .support-grid { grid-template-columns: 1fr; }
+        .advisory-card { padding: 28px 24px; }
+      }
+    
+      .step-list { display:grid; gap:14px; margin-top:20px; }
+      .step { background: var(--surface); border:1px solid var(--border); border-radius:10px; padding:22px 26px; }
+      .step-num { font-family:'Jost',sans-serif; font-size:11px; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; color: var(--glacial); display:block; margin-bottom:8px; }
+      .step h3 { font-family:'Jost',sans-serif; font-size:17px; font-weight:600; color: var(--text); margin-bottom:8px; }
+      .step p { font-family:'Outfit',sans-serif; font-size:15px; line-height:1.75; color: var(--haze); margin:0; }
+      .advisory-card-body a, .step a { color: var(--glacial); text-decoration: underline; text-underline-offset: 3px; }
+    .advisory-card-body a:visited, .step a:visited { color: var(--glacial); }
+    .who-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:20px; }
+      .who-card { display:block; background: var(--surface); border:1px solid var(--border); border-radius:10px; padding:22px 24px; text-decoration:none; }
+      .who-card:hover { border-color: var(--glacial); }
+      .who-card h3 { font-family:'Jost',sans-serif; font-size:16px; font-weight:600; color: var(--text); margin-bottom:8px; }
+      .who-card p { font-family:'Outfit',sans-serif; font-size:14px; line-height:1.7; color: var(--haze); margin:0 0 10px; }
+      .who-card span { font-family:'Jost',sans-serif; font-size:12px; letter-spacing:0.08em; color: var(--glacial); }
+      @media (max-width:768px) { .who-grid { grid-template-columns:1fr; } }
+    </style>
 ---
 
 <main id="main-content">
@@ -313,8 +324,8 @@ head_extra: |
     <!-- ── HERO ── -->
     <div class="page-hero">
       <p class="page-eyebrow">Northlight Advisory Services &nbsp;·&nbsp; How We Work With You</p>
-      <h1 class="page-headline"><span>Fractional COO, AI Advisory,</span> and Purpose-Built Tools for Canadian Small Business</h1>
-      <p class="page-lead">We work with Canadian founders and operators who need clear thinking they can act on — not a framework, not a roadmap, not a consultant. Every engagement is structured around your specific situation.</p>
+      <h1 class="page-headline"><span>Fractional COO and AI advisory,</span> and how we work together</h1>
+      <p class="page-lead">I work with Canadian founders and leaders who need an experienced person inside the business. My job is to help you sort the decisions from the noise, get the plan out of your head and onto the page, and take some of the work off your plate. Then I work inside it with you until it is real.</p>
       <div class="author-byline">
         <div class="author-avatar-wrap">
           <img src="/EL-aurora.png" alt="Elizabeth Lemoine" class="author-avatar-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
@@ -327,39 +338,47 @@ head_extra: |
         <a href="/about.html" class="author-link">Read bio →</a>
       </div>
       <div class="answer-block" style="margin-top: 20px;">
-        <p>Northlight Advisory Services is a Halifax, Nova Scotia–based fractional COO and AI adoption advisory practice for Canadian small businesses, founded by Elizabeth Lemoine. Services include strategic advisory, operations restructuring, AI adoption planning, and purpose-built software tools for the Canadian market.</p>
+        <p>Northlight Advisory Services is a Halifax, Nova Scotia fractional COO and AI adoption advisory practice for Canadian small businesses, founded by Elizabeth Lemoine. Engagements begin with a free 30-minute Coffee Chat and typically run about 20 hours a month, delivered remotely, with a monthly status update.</p>
       </div>
     </div>
 
-    <!-- ── PROBLEM BLOCK ── -->
-    <div class="section-block">
-      <p style="font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--structural); margin-bottom: 14px;">The Problem</p>
-      <p style="font-family: 'Outfit', sans-serif; font-size: 17px; color: var(--haze); line-height: 1.75; max-width: 640px; margin-bottom: 0;">You're running a business without someone accountable for how it operates — making strategic decisions without a clear outside view, trying to evaluate AI tools without a plan that fits your regulatory context, and dealing with processes that were built for where you were, not where you're going.</p>
+    <!-- ── WHO THIS IS FOR ── -->
+    <div class="section-block" id="who">
+      <p class="section-eyebrow">Who this is for</p>
+      <h2 class="section-title">Which of these sounds like your week?</h2>
+      <div class="who-grid">
+        <a class="who-card" href="/who-we-help.html"><h3>Alone at the Top</h3><p>You are the only one who can see the whole plan, and the people who could help carry it have never been handed the whole picture.</p><span>See if this is you →</span></a>
+        <a class="who-card" href="/who-we-help.html"><h3>Stuck on Consensus</h3><p>You have a team and plenty of opinions, and the decision still has not been made.</p><span>See if this is you →</span></a>
+        <a class="who-card" href="/who-we-help.html"><h3>The Self-Reliant Builder</h3><p>You have chosen to build this yourself, and you want a sounding board you can trust.</p><span>See if this is you →</span></a>
+      </div>
     </div>
 
-    <!-- ── ADVISORY ── -->
+    <!-- ── HOW IT WORKS ── -->
+    <div class="section-block" id="how">
+      <div class="section-divider"></div>
+      <p class="section-eyebrow">How it works</p>
+      <h2 class="section-title">Three steps, in this order</h2>
+      <p class="section-body">The order matters, because each step earns the trust the next one needs. You will know where we are going before we start. We can change the route along the way, as long as we agree on the destination.</p>
+      <div class="step-list">
+        <div class="step"><span class="step-num">Step 1</span><h3>A 30-minute Coffee Chat, free</h3><p>It goes where you need it to. You do not need the tidy version. Bring it as it is, because I am asking for the accurate one. We talk about what is actually stuck, and why. I will take notes, or record the call if you agree, so I can map it all out afterward.</p></div>
+        <div class="step"><span class="step-num">Step 2</span><h3>A plan we agree on</h3><p>If it feels like a fit, we book a second, longer conversation where you tell me what is on your plate. I come back with a plan, and we work through it together until we agree on what done looks like. Nothing starts until you are satisfied.</p></div>
+        <div class="step"><span class="step-num">Step 3</span><h3>The work, starting at about 20 hours a month</h3><p>I work inside your company, with you, your team, or both, whatever the work calls for. Each month you get a status update, and if the work needs more hours, they are available.</p></div>
+      </div>
+      <p style="margin-top:22px;"><a href="/coffee.html" class="btn-primary">Book a Coffee Chat →</a></p>
+    </div>
+
+    <!-- ── ENGAGEMENT ── -->
     <div class="section-block" id="advisory">
       <div class="section-divider"></div>
-      <p class="section-eyebrow">Advisory</p>
-      <h2 class="section-title">Fractional Advisory Engagements</h2>
-      <p class="section-body">Strategy, operations, and AI adoption advisory — delivered as a <a href="/blog/what-is-fractional-executive-guide-canadian-businesses.html">part-time, embedded engagement</a>. You get someone who understands both the strategic and operational layers, and stays accountable for the outcome.</p>
-
-      <div class="answer-block"><p>A Northlight advisory engagement starts with a $99 Clarity Call — a focused 60-minute session to define your challenge and determine whether an engagement is the right fit. From there, scope and structure are built around your specific situation. Northlight works with Canadian organisations typically under 50 people navigating a strategic or operational inflection point.</p></div>
-
+      <p class="section-eyebrow">The engagement</p>
+      <h2 class="section-title">Embedded Advisory</h2>
       <div class="advisory-card">
-        <p class="advisory-card-label">What's Included</p>
-        <h3 class="advisory-card-title">Bespoke Engagements</h3>
-        <p class="advisory-card-body">Advisory engagements are not packages. They are structured around your specific challenge — whether that's a growth inflection point, an AI adoption programme, an operational restructure, or a regulatory shift that requires clear direction. Northlight Advisory Services works with organisations typically under 50 people navigating a moment that requires more than a consultant.</p>
-        <p class="advisory-card-body">Elizabeth Lemoine brings 10+ years of director-level operations experience — 300+ initiatives across 115+ countries — and stays invested in what you're building.</p>
-        <div class="clarity-call-box">
-          <p class="clarity-call-label">Start Here</p>
-          <h3 class="clarity-call-title">Clarity Call</h3>
-          <p class="clarity-call-body">A focused 60-minute working session. We'll define your challenge, identify where Northlight can help, and outline what an engagement would look like — with no pressure to proceed. The Clarity Call fee applies as a credit if you move forward.</p>
-          <p class="clarity-call-price">$99 CAD <span>per session</span></p>
-          <a href="https://www.everyexpert.com/elizabethlemoine" target="_blank" rel="noopener" class="btn-primary">Book a Clarity Call →</a>
-        </div>
+        <p class="advisory-card-label">About 20 hours a month</p>
+        <h3 class="advisory-card-title">Inside your company, with a monthly status update</h3>
+        <p class="advisory-card-body">The work usually sits in one or more of three areas: strategy and decision clarity, operations and structure, and AI adoption and governance. It is shaped to your situation, and we agree on what done means before anything starts, so nobody has to argue later about whether it counts as a win.</p>
+        <p class="advisory-card-body">Canadian regulation is part of the picture from the start, including <a href="https://www.priv.gc.ca/" target="_blank" rel="noopener">PIPEDA</a> and <a href="https://www.cai.gouv.qc.ca/protection-renseignements-personnels/sujets-et-domaines-dinteret/principaux-changements-loi-25" target="_blank" rel="noopener">Quebec Law 25</a>. I bring 10+ years of director-level operations experience, with 300+ initiatives across 115+ countries, and I stay invested in what you are building.</p>
         <div class="profile-links">
-          <p style="font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--muted); line-height: 1.5; width: 100%; margin-bottom: 4px;">Elizabeth Lemoine is certified: PMI · Google Project Management · IBM Generative AI Specializations · Anthropic Claude · Cloud Computing Law (U of Penn). Named one of Canada's Best Fractional COO Services by Digital Reference 2026.</p>
+          <p style="font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--muted); line-height: 1.5; width: 100%; margin-bottom: 4px;">Certified: PMI · Google Project Management · IBM Generative AI Specializations · Anthropic Claude · Cloud Computing Law (U of Penn). Named one of Canada's Best Fractional COO Services by Digital Reference 2026.</p>
           <p style="font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--muted); line-height: 1.5; width: 100%; margin-bottom: 8px;">Verify credentials and work history:</p>
           <a href="https://www.everyexpert.com/elizabethlemoine" target="_blank" rel="noopener" class="profile-link">EveryExpert Profile ↗</a>
           <a href="https://www.gofractional.com/r/elizabeth-anne-randell-lemoine" target="_blank" rel="noopener" class="profile-link">GoFractional Profile ↗</a>
@@ -368,74 +387,41 @@ head_extra: |
         </div>
       </div>
 
-      <!-- Comparison table -->
       <div style="margin-top: 36px; overflow-x: auto;">
         <p style="font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--structural); margin-bottom: 14px;">How It Compares</p>
-        <table style="width: 100%; border-collapse: collapse; font-family: 'Outfit', sans-serif; font-size: 14px; min-width: 580px;">
+        <table style="width: 100%; border-collapse: collapse; font-family: 'Outfit', sans-serif; font-size: 14px; min-width: 520px;">
           <thead>
             <tr>
-              <th style="text-align: left; padding: 10px 16px; color: var(--muted); font-weight: 500; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; border-bottom: 1px solid var(--border);"></th>
-              <th style="text-align: center; padding: 10px 16px; color: var(--glacial); font-weight: 600; font-size: 13px; border-bottom: 1px solid var(--border); background: rgba(79,195,200,0.05);">Northlight Advisory</th>
-              <th style="text-align: center; padding: 10px 16px; color: var(--muted); font-weight: 500; font-size: 13px; border-bottom: 1px solid var(--border);">Full-time COO / ops hire</th>
-              <th style="text-align: center; padding: 10px 16px; color: var(--muted); font-weight: 500; font-size: 13px; border-bottom: 1px solid var(--border);">General consultant</th>
+              <th style="text-align: left; padding: 10px 14px; color: var(--muted); font-weight: 500; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; border-bottom: 1px solid var(--border);"></th>
+              <th style="text-align: center; padding: 10px 14px; color: var(--glacial); font-weight: 600; font-size: 13px; border-bottom: 1px solid var(--border); background: rgba(79,195,200,0.05);">Northlight Advisory</th>
+              <th style="text-align: center; padding: 10px 14px; color: var(--muted); font-weight: 500; font-size: 13px; border-bottom: 1px solid var(--border);">Full-time hire</th>
+              <th style="text-align: center; padding: 10px 14px; color: var(--muted); font-weight: 500; font-size: 13px; border-bottom: 1px solid var(--border);">General consultant</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td style="padding: 12px 16px; color: var(--haze); border-bottom: 1px solid var(--border);">Cost model</td>
-              <td style="padding: 12px 16px; text-align: center; color: var(--cloud); border-bottom: 1px solid var(--border); background: rgba(79,195,200,0.03);">Fractional — pay for what you need</td>
-              <td style="padding: 12px 16px; text-align: center; color: var(--structural); border-bottom: 1px solid var(--border);">$120–200k+ salary + benefits</td>
-              <td style="padding: 12px 16px; text-align: center; color: var(--structural); border-bottom: 1px solid var(--border);">Project-based; often ongoing retainer</td>
+              <td style="padding: 11px 14px; color: var(--haze); border-bottom: 1px solid var(--border);">Cost model</td>
+              <td style="padding: 11px 14px; text-align: center; color: var(--cloud); border-bottom: 1px solid var(--border); background: rgba(79,195,200,0.03);">Fractional: pay for scope</td>
+              <td style="padding: 11px 14px; text-align: center; color: var(--structural); border-bottom: 1px solid var(--border);">C$150K–$220K+ all-in</td>
+              <td style="padding: 11px 14px; text-align: center; color: var(--structural); border-bottom: 1px solid var(--border);">Project fee; no outcome guarantee</td>
             </tr>
             <tr>
-              <td style="padding: 12px 16px; color: var(--haze); border-bottom: 1px solid var(--border);">Canadian regulatory context (PIPEDA, AI)</td>
-              <td style="padding: 12px 16px; text-align: center; color: var(--cloud); border-bottom: 1px solid var(--border); background: rgba(79,195,200,0.03);">Core to every engagement</td>
-              <td style="padding: 12px 16px; text-align: center; color: var(--structural); border-bottom: 1px solid var(--border);">Varies by candidate</td>
-              <td style="padding: 12px 16px; text-align: center; color: var(--structural); border-bottom: 1px solid var(--border);">Rarely addressed</td>
+              <td style="padding: 11px 14px; color: var(--haze); border-bottom: 1px solid var(--border);">Canadian AI &amp; privacy context</td>
+              <td style="padding: 11px 14px; text-align: center; color: var(--cloud); border-bottom: 1px solid var(--border); background: rgba(79,195,200,0.03);">Core to every engagement</td>
+              <td style="padding: 11px 14px; text-align: center; color: var(--structural); border-bottom: 1px solid var(--border);">Varies</td>
+              <td style="padding: 11px 14px; text-align: center; color: var(--structural); border-bottom: 1px solid var(--border);">Rarely addressed</td>
             </tr>
             <tr>
-              <td style="padding: 12px 16px; color: var(--haze); border-bottom: 1px solid var(--border);">AI adoption as a service</td>
-              <td style="padding: 12px 16px; text-align: center; color: var(--cloud); border-bottom: 1px solid var(--border); background: rgba(79,195,200,0.03);">Included — strategy through implementation</td>
-              <td style="padding: 12px 16px; text-align: center; color: var(--structural); border-bottom: 1px solid var(--border);">Not typically</td>
-              <td style="padding: 12px 16px; text-align: center; color: var(--structural); border-bottom: 1px solid var(--border);">Add-on, if at all</td>
-            </tr>
-            <tr>
-              <td style="padding: 12px 16px; color: var(--haze);">Accountability for the outcome</td>
-              <td style="padding: 12px 16px; text-align: center; color: var(--cloud); background: rgba(79,195,200,0.03);">One person, named, responsible</td>
-              <td style="padding: 12px 16px; text-align: center; color: var(--structural);">Yes — but full-time cost</td>
-              <td style="padding: 12px 16px; text-align: center; color: var(--structural);">Report delivered; outcome yours</td>
+              <td style="padding: 11px 14px; color: var(--haze);">Outcome accountability</td>
+              <td style="padding: 11px 14px; text-align: center; color: var(--cloud); background: rgba(79,195,200,0.03);">One named person, end-to-end</td>
+              <td style="padding: 11px 14px; text-align: center; color: var(--structural);">Yes: full-time cost</td>
+              <td style="padding: 11px 14px; text-align: center; color: var(--structural);">Deliverable only</td>
             </tr>
           </tbody>
         </table>
       </div>
-    </div>
 
-    <!-- ── PRODUCTS ── -->
-    <div class="section-block" id="products">
-      <div class="section-divider"></div>
-      <p class="section-eyebrow">Products</p>
-      <h2 class="section-title">Northlight Tools</h2>
-      <p class="section-body">Purpose-built tools for operators and founders who need more than off-the-shelf software. Built by Northlight, for how Canadian businesses actually work.</p>
-
-      <div class="answer-block"><p>Northlight builds tools for operators who need more than off-the-shelf software. The Northlight Skills Market offers purpose-built MCP skills for Claude at individual pricing, with free starter skills available.</p></div>
-
-      <div class="product-grid">
-        <div class="product-card">
-          <p class="product-label">Business Operations Platform</p>
-          <h3 class="product-name">Northlight OS</h3>
-          <p class="product-body">An AI-native dispatcher for small business operations — connects your tools, automates routine decisions, and surfaces what needs attention without manual handoffs. Built to run quietly in the background.</p>
-          <p class="product-price"><strong>Used internally.</strong> Available to select advisory clients.</p>
-          <a href="/northlight-os.html" class="product-cta">Learn more →</a>
-        </div>
-
-        <div class="product-card">
-          <p class="product-label">MCP Marketplace</p>
-          <h3 class="product-name">Northlight Skills Market</h3>
-          <p class="product-body">A curated marketplace of MCP skills for Claude — tools that extend what AI assistants can do for Canadian operators and founders. Connect your workflows to Claude with skills built for real business use cases.</p>
-          <p class="product-price"><strong>Individual skill pricing varies.</strong> Starter skills available free.</p>
-          <a href="https://mcpmarket.com/sellers/northlight-skills" target="_blank" rel="noopener" class="product-cta">Browse the Skills Market →</a>
-        </div>
-      </div>
+      <p style="font-family:'Outfit',sans-serif;font-size:14px;color:var(--muted);margin-top:24px;">Want to see how I work on my own tools? Read the <a href="/case-studies/">case studies</a>.</p>
     </div>
 
     <!-- ── SUPPORT & CANCELLATION ── -->
@@ -455,7 +441,7 @@ head_extra: |
           <span class="support-icon" aria-hidden="true">📋</span>
           <p class="support-label">Advisory Engagements</p>
           <p class="support-value">Per Engagement Letter</p>
-          <p class="support-body">Cancellation terms are set out in the engagement letter before work begins. Clarity Calls are non-refundable but credited toward a future engagement.</p>
+          <p class="support-body">Cancellation terms are set out in the engagement letter before work begins.</p>
         </div>
       </div>
 
@@ -465,19 +451,37 @@ head_extra: |
 
         <details style="background: var(--surface); border: 1px solid var(--border); border-radius: 4px; overflow: hidden;">
           <summary style="font-family: 'Jost', sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 0.02em; color: var(--text); padding: 20px 24px; cursor: pointer; list-style: none;">
-            How does a Northlight engagement start?
+            How does an engagement start?
           </summary>
           <div style="padding: 16px 24px 20px; font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--haze); line-height: 1.75; border-top: 1px solid var(--border);">
-            Start with a Clarity Call — a $99 focused session where we define your challenge and explore whether a Northlight engagement is the right fit. Email <a href="mailto:support@bynorthlight.ca" style="color: var(--glacial); text-decoration: none;">support@bynorthlight.ca</a> with a paragraph describing the problem. Elizabeth reads every inquiry personally and responds within one business day.
+            With a free 30-minute <a href="/coffee.html">Coffee Chat</a>. I take notes, or record the call if you agree. If it feels like a fit, we book a second, longer conversation, and then I come back with a plan we agree on. Nothing starts until you are satisfied.
           </div>
         </details>
 
         <details style="background: var(--surface); border: 1px solid var(--border); border-radius: 4px; overflow: hidden;">
           <summary style="font-family: 'Jost', sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 0.02em; color: var(--text); padding: 20px 24px; cursor: pointer; list-style: none;">
-            What does advisory cost?
+            What does it cost?
           </summary>
           <div style="padding: 16px 24px 20px; font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--haze); line-height: 1.75; border-top: 1px solid var(--border);">
-            Advisory engagements are bespoke — structured around your specific situation and scope. A Clarity Call is $99 and is the right starting point for understanding what an engagement would look like and what it would cost. There are no packages because the work doesn't come in packages.
+            We talk about cost once we have agreed what done looks like. The work starts at about 20 hours a month, and if it needs more, more is available. Nothing begins until you are satisfied with the plan and what it will take.
+          </div>
+        </details>
+
+        <details style="background: var(--surface); border: 1px solid var(--border); border-radius: 4px; overflow: hidden;">
+          <summary style="font-family: 'Jost', sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 0.02em; color: var(--text); padding: 20px 24px; cursor: pointer; list-style: none;">
+            Where do you work?
+          </summary>
+          <div style="padding: 16px 24px 20px; font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--haze); line-height: 1.75; border-top: 1px solid var(--border);">
+            I am based in Halifax, Nova Scotia, and the work is done remotely, inside your company, with you, your team, or both.
+          </div>
+        </details>
+
+        <details style="background: var(--surface); border: 1px solid var(--border); border-radius: 4px; overflow: hidden;">
+          <summary style="font-family: 'Jost', sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 0.02em; color: var(--text); padding: 20px 24px; cursor: pointer; list-style: none;">
+            What kind of organisation is this for?
+          </summary>
+          <div style="padding: 16px 24px 20px; font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--haze); line-height: 1.75; border-top: 1px solid var(--border);">
+            Canadian founders and leaders of small and mid-sized organisations, typically under 50 people, who are at a strategic or operational turning point and need clear thinking they can act on.
           </div>
         </details>
 
@@ -486,16 +490,7 @@ head_extra: |
             Do you work with businesses outside Canada?
           </summary>
           <div style="padding: 16px 24px 20px; font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--haze); line-height: 1.75; border-top: 1px solid var(--border);">
-            Occasionally. Northlight Advisory Services focuses on Canadian organisations because they face a distinct set of regulatory, funding, and market conditions — particularly around AI adoption and privacy law (<a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/" style="color: var(--glacial); text-decoration: none;">PIPEDA</a>, Quebec Law 25) — that general advice doesn't address well.
-          </div>
-        </details>
-
-        <details style="background: var(--surface); border: 1px solid var(--border); border-radius: 4px; overflow: hidden;">
-          <summary style="font-family: 'Jost', sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 0.02em; color: var(--text); padding: 20px 24px; cursor: pointer; list-style: none;">
-            Is the Clarity Call fee refundable?
-          </summary>
-          <div style="padding: 16px 24px 20px; font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--haze); line-height: 1.75; border-top: 1px solid var(--border);">
-            The Clarity Call fee is non-refundable but credited toward an engagement if you move forward within 30 days.
+            Occasionally. I focus on Canadian organisations because they face a distinct set of regulatory, funding, and market conditions, particularly around AI adoption and privacy law (<a href="https://www.priv.gc.ca/" target="_blank" rel="noopener">PIPEDA</a>, <a href="https://www.cai.gouv.qc.ca/protection-renseignements-personnels/sujets-et-domaines-dinteret/principaux-changements-loi-25" target="_blank" rel="noopener">Quebec Law 25</a>), that general advice does not address well. If the problem is specific enough, geography is negotiable.
           </div>
         </details>
 
@@ -504,6 +499,6 @@ head_extra: |
 
   </div><!-- /.services-page -->
   <div style="max-width: 1280px; margin: 0 auto; padding: 12px 64px; text-align: right;">
-    <p style="font-family: 'Outfit', sans-serif; font-size: 12px; color: var(--structural);">Last updated August 2026 &nbsp;·&nbsp; Halifax, Nova Scotia, Canada</p>
+    <p style="font-family: 'Outfit', sans-serif; font-size: 12px; color: var(--structural);">Last updated October 2026 &nbsp;·&nbsp; Halifax, Nova Scotia, Canada</p>
   </div>
 </main>
