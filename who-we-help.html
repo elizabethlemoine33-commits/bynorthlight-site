@@ -1,10 +1,10 @@
 ---
 layout: page
 title: "Who We Help — Northlight Advisory Services"
-description: "Founders alone at the top. Leaders stuck on consensus. Builders who decide alone. Northlight works with all three — inside the work, not at a distance."
+description: "Three challenges Canadian leaders bring to Northlight: alone at the top, stuck on consensus, or deciding alone. Find yours, then start with a free 30-minute Coffee Chat."
 canonical: "https://bynorthlight.ca/who-we-help.html"
-og_title: "Who We Help — Northlight Advisory Services"
-og_description: "Founders alone at the top. Leaders stuck on consensus. Builders who decide alone. Northlight works with all three — inside the work, not at a distance."
+og_title: "Who We Help | Northlight Advisory Services"
+og_description: "Three challenges Canadian leaders bring to Northlight: alone at the top, stuck on consensus, or deciding alone. Find yours, then start with a free 30-minute Coffee Chat."
 og_image: "https://bynorthlight.ca/northlight-og-image.png"
 og_image_width: "1200"
 og_image_height: "630"
@@ -19,230 +19,211 @@ head_extra: |
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Who We Help — Northlight Advisory Services",
-    "description": "Northlight Advisory Services works with founders and operations leaders at small and mid-sized Canadian organisations. Find which situation sounds like yours, then run a free 5-minute diagnostic.",
-    "url": "https://bynorthlight.ca/who-we-help.html",
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "Northlight Advisory Services",
-      "url": "https://bynorthlight.ca"
-    },
-    "dateModified": "2026-06-24T00:00:00Z"
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "name": "Who We Help",
+        "description": "Three challenges Canadian leaders bring to Northlight: alone at the top, stuck on consensus, or deciding alone. Find yours, then start with a free 30-minute Coffee Chat.",
+        "url": "https://bynorthlight.ca/who-we-help.html",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Northlight Advisory Services",
+          "url": "https://bynorthlight.ca"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Elizabeth Lemoine",
+          "url": "https://bynorthlight.ca/about.html"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Northlight Advisory Services",
+          "url": "https://bynorthlight.ca"
+        },
+        "dateModified": "2026-10-13T00:00:00Z",
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Who We Help: Alone at the Top",
+              "url": "https://bynorthlight.ca/who-we-help/alone-at-the-top.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Who We Help: Stuck on Consensus",
+              "url": "https://bynorthlight.ca/who-we-help/stuck-on-consensus.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Who We Help: The Self-Reliant Builder",
+              "url": "https://bynorthlight.ca/who-we-help/the-self-reliant-builder.html"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "I'm not sure which one is me. Is there a quick way to find out?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. There is a five-question quiz that takes about a minute. Nothing's sent anywhere, and it points you to the page that fits best. If more than one sounds like you, that's normal. They all start the same way, with a free 30-minute Coffee Chat."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the work different for each one?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Somewhat. Embedded Advisory, about 20 hours a month inside your company, fits the first two. On-Call Advisory, up to 5 hours a month of one-to-one access, is built for the third. The first conversation is how we find which one fits."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What do all three have in common?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A leader's relationship to control and trust. The first has no one to trust with the whole plan, the second has too many voices to get past, and the third has chosen to decide alone."
+            }
+          }
+        ]
+      }
+    ]
   }
   </script>
   <style>
-    a:visited { color: var(--glacial); }
-
-    /* ── HERO ── */
-    .hero { padding: 72px 0 56px; }
-    .eyebrow {
-      font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500;
-      letter-spacing: 0.26em; text-transform: uppercase;
-      color: var(--muted); margin-bottom: 18px;
-    }
-    h1.page-title {
-      font-family: 'Jost', sans-serif; font-weight: 600; font-size: 40px;
-      letter-spacing: 0.02em; line-height: 1.15; color: var(--text);
-      margin-bottom: 16px; max-width: 760px;
-    }
-    .page-title-accent {
-      background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 33%, #8B6FD4 66%, #C46FAA 100%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
-    .hero-sub { font-family: 'Outfit', sans-serif; font-size: 16px; color: var(--haze); max-width: 620px; }
-
-    /* ── AT A GLANCE ── */
-    .glance-panel {
-      background: var(--surface-2); border-left: 4px solid var(--glacial);
-      border-radius: 0 8px 8px 0; padding: 18px 22px; margin: 32px 0 40px;
-      max-width: 680px;
-    }
-    .glance-label {
-      font-family: 'Jost', sans-serif; font-size: 9px; font-weight: 700;
-      letter-spacing: 0.22em; text-transform: uppercase;
-      background: linear-gradient(90deg, #4FC3C8, #5B8DD9);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-      margin-bottom: 10px;
-    }
-    .glance-panel ul { list-style: none; padding: 0; }
-    .glance-panel li {
-      font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--cloud);
-      padding: 4px 0 4px 14px; position: relative; line-height: 1.5;
-    }
-    .glance-panel li::before { content: '·'; position: absolute; left: 0; color: var(--glacial); }
-    .content-capsule {
-      font-family: 'Outfit', sans-serif; font-size: 15px; color: var(--haze);
-      max-width: 660px; margin: 20px 0 0; line-height: 1.65;
-      border-top: 1px solid var(--border); padding-top: 20px;
-    }
-
-    /* ── PERSONA SELECTOR ── */
-    .persona-selector {
-      padding-bottom: 16px; display: flex; gap: 2px; flex-wrap: wrap;
-    }
-    .persona-card {
-      flex: 1 1 240px; text-align: left; cursor: pointer;
-      background: var(--surface); border: 1px solid var(--border);
-      padding: 26px 28px; position: relative; transition: border-color 0.2s, padding 0.2s, background 0.2s;
-      display: flex; flex-direction: column; gap: 6px;
-    }
-    .persona-card:hover, .persona-card[aria-selected="true"] { border-color: var(--border-2); }
-    .persona-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-      background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);
-      opacity: 0; transition: opacity 0.2s;
-    }
-    .persona-card:hover::before, .persona-card[aria-selected="true"]::before { opacity: 1; }
-    .persona-card:focus-visible { outline: 2px solid var(--dusk); outline-offset: -2px; }
-    .persona-card-label {
-      font-family: 'Jost', sans-serif; font-size: 16px; font-weight: 600;
-      letter-spacing: 0.02em; color: var(--text);
-    }
-    .persona-card-line { font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--haze); }
-
-    .persona-selector.collapsed { gap: 8px; }
-    .persona-selector.collapsed .persona-card {
-      flex: 0 0 auto; flex-direction: row; align-items: center; gap: 0;
-      padding: 9px 18px; border-radius: 20px;
-    }
-    .persona-selector.collapsed .persona-card::before { display: none; }
-    .persona-selector.collapsed .persona-card-line { display: none; }
-    .persona-selector.collapsed .persona-card-label { font-size: 12px; }
-    .persona-selector.collapsed .persona-card[aria-selected="true"] {
-      background: linear-gradient(105deg, rgba(79,195,200,0.18), rgba(139,111,212,0.22));
-      border-color: var(--dusk);
-    }
-    .persona-selector.collapsed .persona-card[aria-selected="true"] .persona-card-label { color: var(--text); }
-
-    /* ── PERSONA PANEL ── */
-    .persona-panel {
-      display: none; background: var(--surface-2); border: 1px solid var(--border);
-      border-radius: 10px; margin-top: 24px;
-    }
-    .persona-panel.active { display: block; }
-    .persona-inner { padding: 48px 56px 64px; max-width: 760px; }
-    .persona-kicker {
-      font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500;
-      letter-spacing: 0.22em; text-transform: uppercase; color: var(--dusk); margin-bottom: 14px;
-    }
-    .persona-body p {
-      font-family: 'Outfit', sans-serif; font-size: 15px; line-height: 1.85;
-      color: var(--cloud); margin-bottom: 1.3em;
-    }
-    .persona-body blockquote {
-      border-left: 2px solid var(--dusk); padding-left: 20px;
-      color: var(--haze); font-style: italic; margin-bottom: 1.3em;
-    }
-    .persona-body h3 {
-      font-family: 'Jost', sans-serif; font-weight: 600; font-size: 15px;
-      letter-spacing: 0.04em; color: var(--text); margin: 1.8em 0 0.5em;
-    }
-    .persona-body ol {
-      color: var(--cloud); font-size: 15px; line-height: 1.8; padding-left: 1.3em;
-      margin-bottom: 1.3em;
-    }
-    .persona-body ol li { margin-bottom: 0.5em; }
-
-    /* ── CTA ── */
+      :root {
+        --grad: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 33%, #8B6FD4 66%, #C46FAA 100%);
+      }
+  
+      /* ── HERO ── */
+      .hero { padding: 72px 0 40px; }
+      .eyebrow {
+        font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500;
+        letter-spacing: 0.26em; text-transform: uppercase;
+        color: var(--muted); margin-bottom: 18px;
+      }
+      h1.page-title {
+        font-family: 'Jost', sans-serif; font-weight: 600; font-size: 44px;
+        letter-spacing: 0.02em; line-height: 1.1; margin-bottom: 16px; max-width: 760px;
+        color: var(--text);
+      }
+      .grad-text {
+        background: var(--grad);
+        -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      }
+      .hero-sub { font-family: 'Outfit', sans-serif; font-size: 16px; color: var(--haze); max-width: 620px; }
+  
+      
+      .hub-answer { max-width: 700px; margin: 0 0 36px; }
+      .hub-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; max-width: 1040px; margin: 0 0 44px; }
+      .hub-card { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 28px 26px; text-decoration: none; transition: border-color .2s; }
+      .hub-card, .hub-card:visited { color: var(--text); }
+    .hub-card:hover { border-color: var(--glacial); }
+      .hub-card:focus-visible { outline: 2px solid var(--dusk); outline-offset: 3px; }
+      .hub-card h2 { font-family: 'Jost', sans-serif; font-size: 22px; font-weight: 600; color: var(--text); margin: 0 0 6px; }
+      .hub-card .hub-for { font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--muted); margin: 0 0 16px; }
+      .hub-card .hub-scene { font-family: 'Outfit', sans-serif; font-size: 16px; line-height: 1.65; color: var(--cloud); margin: 0 0 22px; flex: 1; }
+      .hub-card .hub-go { font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--glacial); }
+      .hub-start { max-width: 1040px; }
+      .hub-start .cta-block { max-width: 700px; margin-top: 0; }
+      .hub-links { font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--muted); margin: 18px 0 0; }
+      .hub-links a { color: var(--glacial); }
+      .hub-links a:visited { color: var(--glacial); }
+  
+      .hub-quiz-line { font-family: 'Outfit', sans-serif; font-size: 15px; color: var(--haze); margin: 22px 0 0; }
+      .quiz-open-btn { font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; color: var(--glacial); background: none; border: 1px solid rgba(79,195,200,0.4); border-radius: 6px; padding: 8px 16px; margin-left: 8px; cursor: pointer; }
+      .quiz-open-btn:hover { border-color: var(--glacial); color: var(--text); }
+      .quiz-open-btn:focus-visible { outline: 2px solid var(--dusk); outline-offset: 2px; }
+      dialog.quiz-dialog { position: fixed; inset: 0; margin: auto; background: var(--surface); color: var(--text); border: 1px solid var(--border-2); border-radius: 12px; padding: 0; width: min(760px, 94vw); max-height: 88vh; overflow: auto; box-shadow: 0 24px 80px rgba(0,0,0,0.55); }
+      dialog.quiz-dialog::backdrop { background: rgba(5,6,12,0.72); }
+      .quiz-close { position: sticky; top: 8px; float: right; margin: 8px 10px 0 0; background: none; border: 1px solid var(--border-2); color: var(--muted); border-radius: 6px; width: 34px; height: 34px; font-size: 20px; line-height: 1; cursor: pointer; z-index: 2; }
+      .quiz-close:hover { color: var(--text); border-color: var(--glacial); }
+      .quiz-shell { padding: 30px 34px 34px; }
+      .quiz-title { font-family: 'Jost', sans-serif; font-size: 24px; font-weight: 600; color: var(--text); margin: 0 0 8px; }
+      .quiz-intro { font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--muted); margin: 0 0 22px; }
+      .quiz-q { border: none; padding: 0; margin: 0 0 22px; }
+      .quiz-q legend { font-family: 'Jost', sans-serif; font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 10px; padding: 0; }
+      .quiz-q label { display: block; font-family: 'Outfit', sans-serif; font-size: 14.5px; line-height: 1.55; color: var(--haze); background: var(--midnight); border: 1px solid var(--border-2); border-radius: 8px; padding: 11px 14px; margin-bottom: 8px; cursor: pointer; }
+      .quiz-q label:hover { border-color: var(--glacial); }
+      .quiz-q input { margin-right: 10px; accent-color: #4FC3C8; }
+      .quiz-q input:focus-visible { outline: 2px solid var(--dusk); outline-offset: 2px; }
+      .quiz-submit { background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 50%, #8B6FD4 100%); border: none; border-radius: 8px; color: #fff; font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; padding: 12px 22px; cursor: pointer; }
+      .quiz-submit:focus-visible, .quiz-again:focus-visible, .quiz-go:focus-visible { outline: 2px solid var(--dusk); outline-offset: 2px; }
+      .quiz-error { font-family: 'Outfit', sans-serif; font-size: 14px; color: #E8A0B8; margin: 12px 0 0; }
+      .quiz-result-label { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--glacial); margin: 0 0 8px; }
+      .quiz-result h3 { font-family: 'Jost', sans-serif; font-size: 26px; font-weight: 600; color: var(--text); margin: 0 0 10px; }
+      .quiz-result p { font-family: 'Outfit', sans-serif; font-size: 15px; line-height: 1.7; color: var(--haze); margin: 0 0 18px; }
+      .quiz-go, .quiz-go:visited { display: inline-block; font-family: 'Jost', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; text-decoration: none; background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 50%, #8B6FD4 100%); border-radius: 8px; padding: 12px 22px; margin: 0 8px 8px 0; }
+      .quiz-after a, .quiz-after a:visited { color: var(--glacial); }
+      .quiz-again { font-family: 'Jost', sans-serif; font-size: 13px; color: var(--muted); background: none; border: 1px solid var(--border-2); border-radius: 6px; padding: 8px 14px; cursor: pointer; }
+      @media (max-width: 600px) { .quiz-shell { padding: 22px 18px 26px; } }
+        @media (max-width: 900px) { .hub-grid { grid-template-columns: 1fr; } .hub-card { padding: 22px 20px; } h1.page-title { font-size: 32px; } }
+    .faq-section { max-width: 700px; padding-bottom: 72px; }
+      .faq-section h2 {
+        font-family: 'Jost', sans-serif; font-weight: 600; font-size: 26px; line-height: 1.2;
+        margin-bottom: 24px; width: fit-content; max-width: 100%;
+        color: var(--text);
+      }
+      .faq-list { display: flex; flex-direction: column; gap: 2px; }
+      .faq-item { border: 1px solid var(--border); background: var(--surface); overflow: hidden; }
+      .faq-question { width: 100%; background: none; border: none; display: flex; justify-content: space-between; align-items: center; padding: 20px 24px; cursor: pointer; text-align: left; gap: 16px; }
+      .faq-question:focus-visible { outline: 2px solid var(--dusk); outline-offset: -2px; }
+      .faq-q-text { font-family: 'Jost', sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 0.02em; color: var(--text); }
+      .faq-chevron { flex-shrink: 0; width: 18px; height: 18px; color: var(--muted); transition: transform 0.25s; }
+      .faq-item.open .faq-chevron { transform: rotate(180deg); }
+      .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+      .faq-item.open .faq-answer { max-height: 500px; }
+      .faq-answer-inner { padding: 18px 24px 22px; font-size: 14.5px; color: var(--haze); line-height: 1.75; border-top: 1px solid var(--border); }
+      .faq-answer-inner a { color: var(--glacial); text-decoration: none; border-bottom: 1px solid rgba(79,195,200,0.25); }
+      .faq-answer-inner a:visited { color: var(--glacial); }
+  
+      /* ── RESPONSIVE ── */
+      @media (max-width: 1100px) {
+        .persona-layout { grid-template-columns: minmax(0, 700px) 300px; gap: 48px; }
+      }
+      @media (max-width: 960px) {
+        .persona-layout { display: flex; flex-direction: column; gap: 0; }
+        .persona-aside { display: contents; }
+        .desk-figure { order: 1; max-width: 520px; margin-bottom: 32px; }
+        .story { order: 2; }
+        .glance-box { order: 3; margin: 8px 0 24px; max-width: 700px; }
+      }
+      @media (max-width: 768px) {
+        .hero { padding: 48px 0 28px; }
+        h1.page-title { font-size: 32px; }
+        .story p, .story ol { font-size: 15px; }
+        .story h2 { font-size: 22px; }
+        .callout-quote { font-size: 18px; }
+        .cta-block, .tool-shell { padding: 24px 20px; }
+        .tool-row { flex-direction: column; align-items: stretch; }
+        .faq-question { padding: 18px 18px; }
+        .faq-answer-inner { padding: 16px 18px 20px; }
+      }
+    
+      .other-pages { max-width: 700px; margin: 8px 0 40px; padding: 18px 22px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; }
+      .other-pages p { font-family: 'Outfit', sans-serif; font-size: 14.5px; line-height: 1.7; color: var(--haze); margin: 0; }
+      .other-pages a, .other-pages a:visited { color: var(--glacial); }
     .cta-block {
-      background: var(--surface); border: 1px solid var(--border-2);
-      border-radius: 10px; padding: 28px 32px; margin: 28px 0;
-    }
-    .cta-direct {
-      display: inline-block; font-family: 'Jost', sans-serif; font-weight: 600;
-      font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
-      color: #fff; text-decoration: none;
-      background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 50%, #8B6FD4 100%);
-      border-radius: 8px; padding: 13px 26px; margin-bottom: 12px;
-    }
-    .cta-supporting { font-size: 13px; color: var(--muted); margin-bottom: 0; }
-    .cta-transitional {
-      font-size: 13px; color: var(--haze); margin-top: 18px; padding-top: 18px;
-      border-top: 1px solid var(--border);
-    }
-    .cta-transitional a { color: var(--boreal); text-decoration: none; border-bottom: 1px solid rgba(91,141,217,0.3); }
-    .cta-transitional a:hover { color: var(--glacial); }
-
-    /* ── TOOL SHELL ── */
-    .tool-shell {
-      background: var(--surface); border: 1px solid var(--border-2);
-      border-radius: 10px; padding: 32px 32px 28px; margin: 32px 0;
-    }
-    .tool-title {
-      font-family: 'Jost', sans-serif; font-weight: 600; font-size: 17px;
-      color: var(--text); margin-bottom: 8px;
-    }
-    .tool-intro { font-size: 14px; color: var(--haze); margin-bottom: 22px; }
-    .tool-step-label {
-      font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500;
-      letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin: 22px 0 12px;
-    }
-    .tool-row { display: flex; gap: 10px; align-items: center; margin-bottom: 10px; }
-    .tool-row input[type="text"] {
-      flex: 1; background: var(--midnight); border: 1px solid var(--border-2);
-      border-radius: 8px; padding: 10px 14px; font-size: 14px; color: var(--cloud);
-      font-family: 'Outfit', sans-serif; outline: none;
-    }
-    .tool-row input[type="text"]:focus-visible { outline: 2px solid var(--dusk); outline-offset: 1px; }
-    .row-remove-btn {
-      background: none; border: 1px solid var(--border-2); border-radius: 8px;
-      color: var(--muted); font-size: 12px; padding: 9px 12px; cursor: pointer;
-      font-family: 'Jost', sans-serif;
-    }
-    .row-remove-btn:hover:not(:disabled) { color: var(--text); border-color: var(--structural); }
-    .row-remove-btn:disabled { opacity: 0.35; cursor: not-allowed; }
-    .tool-add-btn, .tool-action-btn {
-      background: none; border: 1px solid var(--border-2); border-radius: 8px;
-      color: var(--haze); font-size: 13px; font-weight: 500; padding: 10px 18px;
-      cursor: pointer; font-family: 'Jost', sans-serif; letter-spacing: 0.02em;
-    }
-    .tool-add-btn:hover:not(:disabled), .tool-action-btn:hover { color: var(--text); border-color: var(--dusk); }
-    .tool-add-btn:disabled { opacity: 0.35; cursor: not-allowed; }
-    .tool-primary-btn {
-      background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 50%, #8B6FD4 100%);
-      border: none; border-radius: 8px; color: #fff; font-size: 13px; font-weight: 600;
-      letter-spacing: 0.04em; padding: 12px 22px; cursor: pointer;
-      font-family: 'Jost', sans-serif; margin-top: 8px;
-    }
-    .question-block { border-top: 1px solid var(--border); padding-top: 16px; margin-top: 16px; }
-    .question-name {
-      font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 600;
-      color: var(--text); margin-bottom: 12px;
-    }
-    .question-row { margin-bottom: 12px; }
-    .question-text { font-size: 13px; color: var(--haze); margin-bottom: 8px; display: block; }
-    .yn-group { display: flex; gap: 8px; }
-    .yn-btn {
-      background: var(--midnight); border: 1px solid var(--border-2); border-radius: 6px;
-      color: var(--muted); font-size: 12px; font-weight: 600; padding: 7px 16px;
-      cursor: pointer; font-family: 'Jost', sans-serif; letter-spacing: 0.04em;
-    }
-    .yn-btn[aria-pressed="true"] {
-      color: #fff; border-color: var(--dusk);
-      background: linear-gradient(105deg, rgba(79,195,200,0.25), rgba(139,111,212,0.35));
-    }
-    .yn-btn:focus-visible { outline: 2px solid var(--dusk); outline-offset: 1px; }
-    .results-panel { border-top: 1px solid var(--border-2); margin-top: 24px; padding-top: 22px; }
-    .result-line { font-size: 14px; color: var(--cloud); margin-bottom: 10px; line-height: 1.7; }
-    .result-label { font-family: 'Jost', sans-serif; font-weight: 600; font-size: 13px; color: var(--text); }
-    .result-closing {
-      font-size: 14px; color: var(--haze); margin-top: 14px; padding-top: 14px;
-      border-top: 1px solid var(--border); font-style: italic;
-    }
-    .result-actions { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 1024px) {
-      .persona-inner { padding: 40px 32px 48px; }
-    }
-    @media (max-width: 768px) {
-      h1.page-title { font-size: 30px; }
-      .persona-inner { padding: 32px 24px 40px; }
-      .tool-row { flex-direction: column; align-items: stretch; }
-      .persona-selector { flex-direction: column; }
-      .persona-selector.collapsed { flex-direction: row; flex-wrap: wrap; }
-    }
+        background: var(--surface); border: 1px solid var(--border-2);
+        border-radius: 10px; padding: 28px 32px; margin: 32px 0 28px; max-width: 700px;
+      }
+      .cta-direct {
+        display: inline-block; font-family: 'Jost', sans-serif; font-weight: 600;
+        font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
+        color: #fff; text-decoration: none;
+        background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 50%, #8B6FD4 100%);
+        border-radius: 8px; padding: 13px 26px; margin-bottom: 12px;
+      }
+      .cta-direct:visited { color: #fff; }
+      .cta-direct:focus-visible { outline: 2px solid var(--dusk); outline-offset: 3px; }
+      .cta-supporting { font-size: 14px; color: var(--muted); margin-bottom: 0; }
   </style>
 ---
 
@@ -250,665 +231,203 @@ head_extra: |
 
   <div class="page-wrap">
 
-    <!-- ── HERO ── -->
     <section class="hero" aria-labelledby="page-title">
       <p class="eyebrow">Who we help</p>
-      <h1 class="page-title" id="page-title">Three ways this gets hard. See <span class="page-title-accent">which one is yours</span>.</h1>
-      <p class="hero-sub">Pick the one that sounds the most like your week. Each one opens into how Northlight actually helps — two come with a free, 5-minute diagnostic you can run right now.</p>
+      <h1 class="page-title" id="page-title"><span class="grad-text">Three challenges leaders bring me.</span> Which one sounds like yours?</h1>
+      <p class="hero-sub">I work with founders and leaders of small and mid-sized Canadian organizations, typically under 50 people. Pick the one that sounds the most like your week.</p>
+      <p class="hub-quiz-line">Want to know which scenario is most like yours? <button type="button" class="quiz-open-btn" onclick="quizOpen()">Take the one-minute quiz</button></p>
     </section>
 
-    <div class="answer-block" style="margin: 0 0 32px;"><p>Northlight Advisory Services works primarily with Canadian founders and operators — typically in organisations under 50 people — who are navigating a moment that requires more than a consultant. Common situations include AI adoption, operational restructuring, growth inflection points, and regulatory shifts. Engagements are bespoke; a Clarity Call is the right starting point.</p></div>
+    <div class="answer-block hub-answer"><p>Northlight Advisory Services works with three kinds of leaders: founders who are the only ones who can see the whole plan, leaders whose teams keep a decision circling, and self-reliant founders who decide alone and want a second pair of eyes. Every engagement starts with the same free 30-minute Coffee Chat.</p></div>
 
-    <!-- ── AT A GLANCE ── -->
-    <div class="glance-panel">
-      <p class="glance-label">At a Glance</p>
-      <ul>
-        <li>Northlight Advisory Services works with founders and operations leaders at small and mid-sized Canadian organisations, typically under 50 people.</li>
-        <li>Based in Halifax, Nova Scotia — Elizabeth Lemoine brings hands-on experience inside organisations, not just advisory distance from them.</li>
-        <li>Three engagement patterns: fractional leadership, focused decision sprints, and strategy engagements — each matched to a specific situation.</li>
-        <li>To start a conversation: <a href="mailto:support@bynorthlight.ca" style="color:var(--glacial);">support@bynorthlight.ca</a></li>
-      </ul>
+    <div class="hub-grid">
+      <a class="hub-card" href="/who-we-help/alone-at-the-top.html">
+        <h2>Alone at the Top</h2>
+        <p class="hub-for">For the founder without a trusted team.</p>
+        <p class="hub-scene">Three cold coffees, a plan that lives in your head, and a board meeting getting closer.</p>
+        <span class="hub-go">Read this one &rarr;</span>
+      </a>
+      <a class="hub-card" href="/who-we-help/stuck-on-consensus.html">
+        <h2>Stuck on Consensus</h2>
+        <p class="hub-for">For the leader with a team around them.</p>
+        <p class="hub-scene">Forty messages in the thread, and still no decision.</p>
+        <span class="hub-go">Read this one &rarr;</span>
+      </a>
+      <a class="hub-card" href="/who-we-help/the-self-reliant-builder.html">
+        <h2>The Self-Reliant Builder</h2>
+        <p class="hub-for">For the founder who decides alone and wants a second pair of eyes.</p>
+        <p class="hub-scene">Past midnight, a proposal due tomorrow, and a number that looks too low.</p>
+        <span class="hub-go">Read this one &rarr;</span>
+      </a>
     </div>
 
-    <p class="content-capsule">Northlight Advisory Services helps founders and operations leaders at small and mid-sized Canadian organisations cut through the noise — clearing the decisions, systems, and blockers that slow down what's actually ready to move.</p>
-
-    <!-- ── PERSONA SELECTOR ── -->
-    <div class="persona-selector" id="persona-selector" role="tablist" aria-label="Choose who you are">
-      <button class="persona-card" id="card-alone-at-the-top" role="tab" aria-selected="false" aria-controls="alone-at-the-top" onclick="selectPersona('alone-at-the-top')">
-        <span class="persona-card-label">Alone at the Top</span>
-        <span class="persona-card-line">No dashboard. Just post-its, a bot log that's busy all day, and a board meeting getting closer.</span>
-      </button>
-      <button class="persona-card" id="card-stuck-on-consensus" role="tab" aria-selected="false" aria-controls="stuck-on-consensus" onclick="selectPersona('stuck-on-consensus')">
-        <span class="persona-card-label">Stuck on Consensus</span>
-        <span class="persona-card-line">Forty Slack messages. Still no decision.</span>
-      </button>
-      <button class="persona-card" id="card-self-reliant-builder" role="tab" aria-selected="false" aria-controls="self-reliant-builder" onclick="selectPersona('self-reliant-builder')">
-        <span class="persona-card-label">The Self-Reliant Builder</span>
-        <span class="persona-card-line">Your sounding board is increasingly just... you, at midnight.</span>
-      </button>
+    <div class="hub-start">
+      <div class="cta-block">
+        <p style="font-family:'Jost',sans-serif;font-size:18px;font-weight:600;color:var(--text);margin:0 0 8px;">Whichever one is yours, it starts getting better the same way.</p>
+        <p style="font-size:15px;color:var(--haze);line-height:1.7;margin:0 0 18px;">A free 30-minute Coffee Chat. If it feels like a fit, we have a second, longer conversation and agree on a plan. Nothing starts until you're satisfied.</p>
+        <a href="/coffee.html" class="cta-direct">Book a Coffee Chat</a>
+        <p class="cta-supporting">Thirty minutes, free, no prep.</p>
+      </div>
+      <p class="hub-links">Want the detail on what the work looks like? Read <a href="/services.html">how we work together</a>.</p>
     </div>
 
-    <!-- ── PERSONA CONTENT ── -->
-    <div id="persona-content">
+    <section class="faq-section" aria-labelledby="faq-heading" style="margin-top:48px;">
+      <h2 id="faq-heading">Frequently asked questions</h2>
+      <div class="faq-list" role="list">
 
-      <!-- WHO #1 -->
-      <section class="persona-panel" id="alone-at-the-top" role="tabpanel" aria-labelledby="card-alone-at-the-top">
-        <div class="persona-inner">
-          <h2 class="persona-kicker">For the founder without a trusted team</h2>
-          <div class="persona-body">
-            <h3>How Northlight Advisory Services helps</h3>
-            <p>I've sat in the rooms where this happens — where founders manage the appearance of control because the alternative felt riskier than the mess itself.</p>
-            <p>I'm <a href="/about.html" style="color:var(--glacial);">Elizabeth Lemoine</a>. I've spent years inside organisations untangling exactly this: too many things moving, no one trusted yet to move them. I've built the systems myself, not just advised on them — which means I know the difference between a plan that looks good in a deck and one that actually survives contact with a Tuesday.</p>
-
-            <h3>What this looks like</h3>
-            <ol>
-              <li><strong>A real conversation, no deck.</strong> We figure out what's actually stuck, and why — not the version you'd tell a board.</li>
-              <li><strong>A focused engagement, fractional if that fits.</strong> Someone earns enough trust to actually execute on the one thing that needs to ship — not five things, one.</li>
-              <li><strong>You walk into the next board meeting with something live.</strong> Not a status update. A result.</li>
-            </ol>
-
-            <h3>If nothing changes</h3>
-            <blockquote>Keep managing the appearance of focus, and the gap between how it looks and how it actually is just gets wider. Another launch slips. The next board meeting gets harder to walk into, not easier. And the team watching you hold it together quietly stops believing that you are.</blockquote>
-
-            <h3>What's possible</h3>
-            <p>Picture the board meeting where you're not managing optics — you're presenting something that shipped. Where the bot logs aren't just busy, they're backing up real progress. Where the desk full of post-it notes turns into an actual plan, because someone else is finally trusted to run it. You're back where you're useful: the ideas, the strategy, the room only you can lead.</p>
-          </div>
-
-          <div class="cta-block">
-            <a href="https://calendar.app.google/b1najmMeWbBeLYkF6" class="cta-direct" target="_blank" rel="noopener">Book a clarity call</a>
-            <p class="cta-supporting">No commitments. Just a starting point for a real conversation.</p>
-          </div>
-
-          <!-- ── CONVERGENCE CHECK TOOL ── -->
-          <div class="tool-shell" id="convergence-check">
-            <h3 class="tool-title">Not ready for a call? Try the Convergence Check.</h3>
-            <p class="tool-intro">See which of your initiatives is actually closest to done. Free, under 5 minutes, nothing is sent anywhere.</p>
-
-            <p class="tool-step-label">Step 1 — What are you actively working on?</p>
-            <div id="cc-rows"></div>
-            <button class="tool-add-btn" id="cc-add-btn" onclick="ccAddRow()">+ Add initiative</button>
-
-            <div id="cc-questions"></div>
-
-            <button class="tool-primary-btn" onclick="ccRunResults()">See results</button>
-
-            <div class="results-panel" id="cc-results" aria-live="polite"></div>
+        <div class="faq-item" role="listitem">
+          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-a-1" id="faq-q-1" onclick="toggleFaq(this)">
+            <span class="faq-q-text">I'm not sure which one is me. Is there a quick way to find out?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" id="faq-a-1" role="region" aria-labelledby="faq-q-1">
+            <div class="faq-answer-inner">Yes. There is a five-question quiz that takes about a minute. Nothing's sent anywhere, and it points you to the page that fits best. If more than one sounds like you, that's normal. They all start the same way, with a free 30-minute Coffee Chat. <button type="button" class="quiz-open-btn" style="margin-left:0;margin-top:12px;" onclick="quizOpen()">Take the quiz</button></div>
           </div>
         </div>
-      </section>
 
-      <!-- WHO #2 -->
-      <section class="persona-panel" id="stuck-on-consensus" role="tabpanel" aria-labelledby="card-stuck-on-consensus">
-        <div class="persona-inner">
-          <h2 class="persona-kicker">For the leader with a team around them</h2>
-          <div class="persona-body">
-            <h3>How Northlight Advisory Services helps</h3>
-            <p>You don't need someone to make the call for you. You need someone willing to say it out loud — the thing the room already half-knows — so you don't have to carry "dictator" for doing what nobody else would.</p>
-            <p>I'm <a href="/about.html" style="color:var(--glacial);">Elizabeth Lemoine</a>. I've sat in the rooms where a team has all the information and none of the will to act on it — and I've watched what happens when someone finally just says: this is the call. I'm not here to run a workshop you'll forget. I'm here to make the decision happen, then build the structure so the next one doesn't take three weeks either.</p>
-
-            <h3>What this looks like</h3>
-            <ol>
-              <li><strong>A focused 1–2 week engagement.</strong> I come in, see where the real decision is actually hiding.</li>
-              <li><strong>We make the go/no-go and put a RACI in the room.</strong> Everyone knows who owns the next call.</li>
-              <li><strong>A 30-day check-in.</strong> So the decision sticks, and the RACI doesn't quietly get talked back into a guessing game.</li>
-            </ol>
-
-            <h3>If nothing changes</h3>
-            <blockquote>Keep waiting for the room to agree, and the cost isn't one bad call — it's every call after it. The roadmap stays frozen. The team stops believing alignment means progress. And somewhere in there, you stop being sure whether you're leading the room or just managing it.</blockquote>
-
-            <h3>What's possible</h3>
-            <p>Picture walking into the next all-hands with a decision that's actually done — not reopened, not relitigated. Your team knows who owns the next call before it even comes up. And you're still the collaborative leader you set out to be — you just don't have to wait on consensus to prove it anymore.</p>
-          </div>
-
-          <div class="cta-block">
-            <a href="https://calendar.app.google/b1najmMeWbBeLYkF6" class="cta-direct" target="_blank" rel="noopener">Book a decision sprint</a>
-            <p class="cta-supporting">One to two weeks. One real decision made. A way to make the next one, too.</p>
-          </div>
-
-          <!-- ── WHY IS THIS STILL CIRCLING TOOL ── -->
-          <div class="tool-shell" id="why-is-this-circling">
-            <h3 class="tool-title">Not ready for a sprint? Run "Why Is This Still Circling?"</h3>
-            <p class="tool-intro">A short diagnostic that names what's actually stalling the decision. Free, nothing is sent anywhere.</p>
-
-            <p class="tool-step-label">Step 1 — Name 1 to 3 decisions that have been circling for weeks</p>
-            <div id="wc-rows"></div>
-            <button class="tool-add-btn" id="wc-add-btn" onclick="wcAddRow()">+ Add decision</button>
-
-            <div id="wc-questions"></div>
-
-            <button class="tool-primary-btn" onclick="wcRunResults()">See results</button>
-
-            <div class="results-panel" id="wc-results" aria-live="polite"></div>
+        <div class="faq-item" role="listitem">
+          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-a-2" id="faq-q-2" onclick="toggleFaq(this)">
+            <span class="faq-q-text">Is the work different for each one?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" id="faq-a-2" role="region" aria-labelledby="faq-q-2">
+            <div class="faq-answer-inner">Somewhat. Embedded Advisory, about 20 hours a month inside your company, fits the first two. On-Call Advisory, up to 5 hours a month of one-to-one access, is built for the third. The first conversation is how we find which one fits.</div>
           </div>
         </div>
-      </section>
 
-      <!-- WHO #3 -->
-      <section class="persona-panel" id="self-reliant-builder" role="tabpanel" aria-labelledby="card-self-reliant-builder">
-        <div class="persona-inner">
-          <h2 class="persona-kicker">For the self-sufficient founder who needs a sounding board</h2>
-          <div class="persona-body">
-            <h3>How Northlight Advisory Services helps</h3>
-            <p>I get it — you don't want someone to take the wheel. You want someone sharp enough to tell you when the price is too low, or when "I need more information" is really just you putting off a decision you've already made.</p>
-            <p>I'm <a href="/about.html" style="color:var(--glacial);">Elizabeth Lemoine</a>. I've built things myself, made the underpriced-quote mistake myself, and learned the same way you're learning — the hard way, alone, until someone finally said the thing out loud. I'm not interested in running your business. I'm interested in being the person who pushes back before the decision ships, not after.</p>
-
-            <h3>What this looks like</h3>
-            <ol>
-              <li><strong>Get a sense of how I think, first.</strong> Read Aurora Brief. No pitch, no call required — just a monthly look at how I actually reason through things.</li>
-              <li><strong>When you're ready, not before.</strong> Start a recurring sounding-board retainer — a standing rhythm, not a one-off engagement, because the value compounds the more I know your business.</li>
-              <li><strong>Bring the real decision before it ships.</strong> The pricing call, the hire, the bet — pressure-tested by someone outside your own head, before it's final.</li>
-            </ol>
-
-            <h3>If nothing changes</h3>
-            <blockquote>Keep deciding alone, and the cost doesn't show up as one dramatic mistake — it shows up as a $3,000 quote that quietly becomes a $10,000 job you're still doing for $3,000. As "I need more information" buying you another week, then another. As family dinners you missed for a decision that needed an outside eye, not more solo hours.</blockquote>
-
-            <h3>What's possible</h3>
-            <p>Picture the next time the price feels too low, and someone says so before you send the quote. The next time you're about to put off a decision "for more information," and someone calls it what it actually is. You're still the one who decides — that never changes. You're just not the only one checking your own work anymore.</p>
+        <div class="faq-item" role="listitem">
+          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-a-3" id="faq-q-3" onclick="toggleFaq(this)">
+            <span class="faq-q-text">What do all three have in common?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer" id="faq-a-3" role="region" aria-labelledby="faq-q-3">
+            <div class="faq-answer-inner">A leader's relationship to control and trust. The first has no one to trust with the whole plan, the second has too many voices to get past, and the third has chosen to decide alone.</div>
           </div>
-
-          <div class="cta-block">
-            <a href="https://calendar.app.google/b1najmMeWbBeLYkF6" class="cta-direct" target="_blank" rel="noopener">Start a sounding-board retainer</a>
-            <p class="cta-supporting">Not a takeover. Not a hire. One person, on a standing basis, whose job is to catch what you can't see because you're too close to it.</p>
-          </div>
-
-          <!-- ── AURORA BRIEF SIGNUP (custom variant — kept inline; hide_newsletter: true prevents duplicate) ── -->
-          <section style="background: var(--surface); border: 1px solid var(--border-2); border-radius: 10px; padding: 28px 32px; margin: 28px 0; position: relative; overflow: hidden;" aria-label="Aurora Brief newsletter signup">
-            <div style="position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);"></div>
-            <div style="font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 10px; background: linear-gradient(90deg, #4FC3C8, #8B6FD4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: inline-block;">Aurora Brief</div>
-            <div style="font-family: 'Jost', sans-serif; font-weight: 600; font-size: 18px; color: var(--text); margin-bottom: 6px; letter-spacing: 0.01em;">Read Aurora Brief first</div>
-            <div style="font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--muted); line-height: 1.6; margin-bottom: 18px;">See how I think before you ever have to trust me with your business. Strategy insights, operations learnings, and updates on what Northlight is building — delivered monthly.</div>
-            <form action="https://app.kit.com/forms/9467797/subscriptions" method="post" style="display: flex; flex-direction: column; gap: 10px; max-width: 420px;">
-              <input type="hidden" name="redirect_to" value="https://bynorthlight.ca/subscription-confirmed.html" />
-              <div style="display: flex; gap: 8px;">
-                <input type="text" name="fields[first_name]" placeholder="First name" style="max-width: 110px; flex: 1; background: var(--midnight); border: 1px solid var(--border-2); border-radius: 8px; padding: 11px 14px; font-size: 14px; color: var(--cloud); font-family: 'Outfit', sans-serif; outline: none;" />
-                <input type="email" name="email_address" placeholder="Email address" required style="flex: 1; background: var(--midnight); border: 1px solid var(--border-2); border-radius: 8px; padding: 11px 14px; font-size: 14px; color: var(--cloud); font-family: 'Outfit', sans-serif; outline: none;" />
-              </div>
-              <button type="submit" style="background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 50%, #8B6FD4 100%); border: none; border-radius: 8px; padding: 11px 24px; font-size: 13px; font-weight: 600; color: #fff; cursor: pointer; font-family: 'Jost', sans-serif; letter-spacing: 0.06em; text-transform: uppercase;">Subscribe →</button>
-              <div style="font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--structural); line-height: 1.5;">By subscribing you agree to our <a href="/northlight-privacy.html" style="color: var(--muted); text-decoration: underline;">privacy policy</a>. Unsubscribe at any time. We never share your information.</div>
-            </form>
-          </section>
         </div>
-      </section>
-
-    </div>
+      </div>
+    </section>
 
   </div>
 
 </main>
 
+
+<dialog class="quiz-dialog" id="quiz-dialog" aria-labelledby="quiz-title">
+  <button type="button" class="quiz-close" onclick="quizClose()" aria-label="Close the quiz">&times;</button>
+  <div class="quiz-shell">
+    <h2 class="quiz-title" id="quiz-title">Which one is yours?</h2>
+    <p class="quiz-intro">Five questions, about a minute. Pick the answer closest to your week. Nothing's sent anywhere.</p>
+    <form id="quiz-form" onsubmit="return quizScore(event)">
+      <fieldset class="quiz-q"><legend>1. What does a hard week look like right now?</legend>
+        <label><input type="radio" name="q1" value="alone"> The plan lives in my head, and I'm the only one who can see all of it.</label>
+        <label><input type="radio" name="q1" value="stuck"> We've talked it through, everyone has weighed in, and nobody has said yes or no.</label>
+        <label><input type="radio" name="q1" value="builder"> I'm deciding alone again, and something about a number or a call doesn't feel right.</label>
+      </fieldset>
+      <fieldset class="quiz-q"><legend>2. When a big decision comes up, what usually happens?</legend>
+        <label><input type="radio" name="q2" value="alone"> I make it, mostly because no one else has the whole picture.</label>
+        <label><input type="radio" name="q2" value="stuck"> I ask the team for input, and it keeps going around.</label>
+        <label><input type="radio" name="q2" value="builder"> I think it through alone and sometimes put it off for more information.</label>
+      </fieldset>
+      <fieldset class="quiz-q"><legend>3. What would help most right now?</legend>
+        <label><input type="radio" name="q3" value="alone"> A plan on paper, and someone I can trust with all of it.</label>
+        <label><input type="radio" name="q3" value="stuck"> Someone to help the room get to a clear yes or no.</label>
+        <label><input type="radio" name="q3" value="builder"> A second pair of eyes before the decision goes out.</label>
+      </fieldset>
+      <fieldset class="quiz-q"><legend>4. What worries you most if nothing changes?</legend>
+        <label><input type="radio" name="q4" value="alone"> Every board meeting takes more prep than the last.</label>
+        <label><input type="radio" name="q4" value="stuck"> The decisions pile up behind the one that's stuck.</label>
+        <label><input type="radio" name="q4" value="builder"> A small mistake turns into an expensive one before I notice.</label>
+      </fieldset>
+      <fieldset class="quiz-q"><legend>5. Who do you have around you right now?</legend>
+        <label><input type="radio" name="q5" value="alone"> People I like, but no one I've handed the whole picture to yet.</label>
+        <label><input type="radio" name="q5" value="stuck"> A capable team with plenty of opinions.</label>
+        <label><input type="radio" name="q5" value="builder"> Mostly just me, and I like it that way.</label>
+      </fieldset>
+      <button type="submit" class="quiz-submit">See which one is yours</button>
+      <p class="quiz-error" id="quiz-error" role="alert" hidden>Please answer all five questions.</p>
+    </form>
+    <div class="quiz-result" id="quiz-result" aria-live="polite" hidden></div>
+  </div>
+</dialog>
+
 <script>
-  /* ════════════════════════════════════════════
-     PERSONA SELECTOR (card row → compact tabs)
-     ════════════════════════════════════════════ */
-  function selectPersona(sectionId) {
-    const selector = document.getElementById('persona-selector');
-    selector.classList.add('collapsed');
-    document.querySelectorAll('.persona-card').forEach(c => c.setAttribute('aria-selected', String(c.getAttribute('aria-controls') === sectionId)));
-    document.querySelectorAll('.persona-panel').forEach(p => p.classList.toggle('active', p.id === sectionId));
-  }
-
-  function resizePanel() {
-    // No-op: panels are shown/hidden via display, not height-animated.
-  }
-
-  /* ════════════════════════════════════════════
-     SHARED HELPERS
-     ════════════════════════════════════════════ */
-  function ynGroup(name, q) {
-    return '<div class="question-row">' +
-      '<span class="question-text" id="' + name + '-label">' + q + '</span>' +
-      '<div class="yn-group" role="radiogroup" aria-labelledby="' + name + '-label">' +
-        '<button type="button" class="yn-btn" role="radio" aria-checked="false" data-name="' + name + '" data-val="1" aria-pressed="false" onclick="ynPick(this)">Yes</button>' +
-        '<button type="button" class="yn-btn" role="radio" aria-checked="false" data-name="' + name + '" data-val="0" aria-pressed="false" onclick="ynPick(this)">No</button>' +
-      '</div></div>';
-  }
-
-  function ynPick(btn) {
-    const name = btn.dataset.name;
-    document.querySelectorAll('[data-name="' + name + '"]').forEach(b => {
-      b.setAttribute('aria-pressed', 'false');
-      b.setAttribute('aria-checked', 'false');
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(el => {
+      el.classList.remove('open');
+      el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
     });
-    btn.setAttribute('aria-pressed', 'true');
-    btn.setAttribute('aria-checked', 'true');
-    const panel = btn.closest('.persona-panel');
-    if (panel) resizePanel(panel);
-  }
-
-  function getYnValue(name) {
-    const picked = document.querySelector('[data-name="' + name + '"][aria-pressed="true"]');
-    return picked ? picked.dataset.val : null;
-  }
-
-  function copyToClipboard(text) {
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      return navigator.clipboard.writeText(text).then(() => true).catch(() => copyViaFallback(text));
-    }
-    return Promise.resolve(copyViaFallback(text));
-  }
-
-  function copyViaFallback(text) {
-    try {
-      const ta = document.createElement('textarea');
-      ta.value = text;
-      ta.style.position = 'fixed';
-      ta.style.left = '-9999px';
-      document.body.appendChild(ta);
-      ta.focus();
-      ta.select();
-      const ok = document.execCommand('copy');
-      document.body.removeChild(ta);
-      return ok;
-    } catch (e) {
-      return false;
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
     }
   }
 
-  function setBtnFeedback(btn, successText, failText) {
-    const original = btn.textContent;
-    return (ok) => {
-      btn.textContent = ok ? successText : failText;
-      setTimeout(() => { btn.textContent = original; }, 2500);
-    };
-  }
-
-  function copyResultsText(text, btn) {
-    copyToClipboard(text).then(setBtnFeedback(btn, 'Copied', "Couldn't copy — select & copy manually"));
-  }
-
-  /* ════════════════════════════════════════════
-     TOOL 1 — THE CONVERGENCE CHECK
-     ════════════════════════════════════════════ */
-  let ccRowCount = 0;
-  const CC_MIN = 2, CC_MAX = 5;
-
-  function ccAddRow(prefillName) {
-    if (ccRowCount >= CC_MAX) return;
-    ccRowCount++;
-    const id = ccRowCount;
-    const rowsEl = document.getElementById('cc-rows');
-    const row = document.createElement('div');
-    row.className = 'tool-row';
-    row.dataset.rowId = id;
-    row.innerHTML =
-      '<input type="text" id="cc-name-' + id + '" placeholder="Initiative name" value="' + (prefillName ? escapeHtml(prefillName) : '') + '" oninput="ccRefreshQuestions()">' +
-      '<button type="button" class="row-remove-btn" onclick="ccRemoveRow(' + id + ')">Remove</button>';
-    rowsEl.appendChild(row);
-    ccRefreshQuestions();
-    ccUpdateAddState();
-  }
-
-  function ccRemoveRow(id) {
-    const row = document.querySelector('#cc-rows [data-row-id="' + id + '"]');
-    if (!row) return;
-    if (document.querySelectorAll('#cc-rows .tool-row').length <= CC_MIN) return;
-    row.remove();
-    ccRefreshQuestions();
-    ccUpdateAddState();
-  }
-
-  function ccUpdateAddState() {
-    const count = document.querySelectorAll('#cc-rows .tool-row').length;
-    document.getElementById('cc-add-btn').disabled = count >= CC_MAX;
-    document.querySelectorAll('#cc-rows .row-remove-btn').forEach(b => { b.disabled = count <= CC_MIN; });
-  }
-
-  function ccRefreshQuestions() {
-    const container = document.getElementById('cc-questions');
-    const rows = document.querySelectorAll('#cc-rows .tool-row');
-    const saved = {};
-    rows.forEach(row => {
-      const id = row.dataset.rowId;
-      ['q1', 'q2', 'q3'].forEach(q => { saved['cc-' + id + '-' + q] = getYnValue('cc-' + id + '-' + q); });
-    });
-    let html = '';
-    if (rows.length > 0) {
-      html += '<p class="tool-step-label">Step 2 — Three questions per initiative</p>';
-    }
-    rows.forEach(row => {
-      const id = row.dataset.rowId;
-      const nameInput = document.getElementById('cc-name-' + id);
-      const name = (nameInput && nameInput.value.trim()) || 'Initiative ' + id;
-      html += '<div class="question-block">' +
-        '<p class="question-name">' + escapeHtml(name) + '</p>' +
-        ynGroup('cc-' + id + '-q1', 'Has this shipped or moved forward in the last 30 days?') +
-        ynGroup('cc-' + id + '-q2', 'Does anyone besides you know what the next decision on this is?') +
-        ynGroup('cc-' + id + '-q3', 'Does this still need to move in the next 30 days?') +
-        '</div>';
-    });
-    container.innerHTML = html;
-    Object.keys(saved).forEach(name => {
-      const val = saved[name];
-      if (val === null) return;
-      const btn = document.querySelector('[data-name="' + name + '"][data-val="' + val + '"]');
-      if (btn) { btn.setAttribute('aria-pressed', 'true'); btn.setAttribute('aria-checked', 'true'); }
-    });
-    const panel = container.closest('.persona-panel');
-    if (panel) resizePanel(panel);
-  }
-
-  function ccClassify(q1, q2, q3) {
-    if (q3 === '0') return 'Paused on purpose';
-    if (q1 === '1' && q2 === '1') return 'Actually moving';
-    if (q1 === '1' && q2 === '0') return "Moving, but only you'd know it";
-    if (q1 === '0' && q2 === '1') return 'Stalled, but visible';
-    return 'Quietly dead';
-  }
-
-  function ccReadout(label, name) {
-    switch (label) {
-      case 'Actually moving':
-        return name + ' shipped/is on track — next update [placeholder].';
-      case 'Stalled, but visible':
-        return name + ' is paused on a decision that someone else could make if asked.';
-      case 'Quietly dead':
-        return name + " needs a real decision — there's no clear next step right now, and only you know that.";
-      case 'Paused on purpose':
-        return name + " is paused on purpose — it's deliberately back-burnered, not avoided.";
-      default:
-        return name + " is moving, but only you'd know it — no one else can see the progress.";
-    }
-  }
-
-  function ccRunResults() {
-    const rows = document.querySelectorAll('#cc-rows .tool-row');
-    const results = [];
-    rows.forEach(row => {
-      const id = row.dataset.rowId;
-      const nameInput = document.getElementById('cc-name-' + id);
-      const name = (nameInput && nameInput.value.trim()) || 'Initiative ' + id;
-      const q1 = getYnValue('cc-' + id + '-q1');
-      const q2 = getYnValue('cc-' + id + '-q2');
-      const q3 = getYnValue('cc-' + id + '-q3');
-      const label = ccClassify(q1, q2, q3);
-      results.push({ name, label, line: ccReadout(label, name) });
-    });
-    ccRenderResults(results);
-  }
-
-  function ccRenderResults(results) {
-    const el = document.getElementById('cc-results');
-    if (results.length === 0) { el.innerHTML = ''; return; }
-    let html = '';
-    results.forEach(r => {
-      html += '<p class="result-line"><span class="result-label">' + escapeHtml(r.name) + ' — ' + escapeHtml(r.label) + '.</span><br>' + escapeHtml(r.line) + '</p>';
-    });
-    const dead = results.filter(r => r.label === 'Quietly dead');
-    if (dead.length > 0) {
-      const names = dead.map(d => d.name).join(', ');
-      html += '<p class="result-closing">' + escapeHtml(names) + (dead.length > 1 ? ' are' : ' is') + ' worth a real conversation first.</p>';
-    }
-    html += '<div class="result-actions">' +
-      '<button type="button" class="tool-action-btn" onclick="copyResultsText(ccResultsText(),this)">Copy results</button>' +
-      '<button type="button" class="tool-action-btn" onclick="ccSaveLink()">Save this link</button>' +
-      '</div>';
-    el.innerHTML = html;
-    el.dataset.results = JSON.stringify(results);
-    const panel = el.closest('.persona-panel');
-    if (panel) resizePanel(panel);
-  }
-
-  function ccResultsText() {
-    const results = JSON.parse(document.getElementById('cc-results').dataset.results || '[]');
-    let text = "Convergence Check results:\n\n";
-    results.forEach(r => { text += r.name + ' — ' + r.label + '\n' + r.line + '\n\n'; });
-    const dead = results.filter(r => r.label === 'Quietly dead');
-    if (dead.length > 0) {
-      text += dead.map(d => d.name).join(', ') + (dead.length > 1 ? ' are' : ' is') + ' worth a real conversation first.\n';
-    }
-    return text;
-  }
-
-  function ccSaveLink() {
-    const rows = document.querySelectorAll('#cc-rows .tool-row');
-    const data = [];
-    rows.forEach(row => {
-      const id = row.dataset.rowId;
-      const name = (document.getElementById('cc-name-' + id).value.trim()) || 'Initiative ' + id;
-      data.push([name, getYnValue('cc-' + id + '-q1') || '', getYnValue('cc-' + id + '-q2') || '', getYnValue('cc-' + id + '-q3') || '']);
-    });
-    const encoded = encodeURIComponent(JSON.stringify(data));
-    const url = location.origin + location.pathname + '#convergence-check=' + encoded;
-    window.history.replaceState(null, '', '#convergence-check=' + encoded);
-    const btn = document.querySelector('#cc-results .result-actions button:nth-child(2)');
-    if (btn) copyToClipboard(url).then(setBtnFeedback(btn, 'Link copied', "Couldn't copy — link is in your address bar"));
-  }
-
-  function ccLoadFromHash(encoded) {
-    let data;
-    try { data = JSON.parse(decodeURIComponent(encoded)); } catch (e) { return; }
-    document.getElementById('cc-rows').innerHTML = '';
-    ccRowCount = 0;
-    data.forEach(item => ccAddRow(item[0]));
-    const rows = document.querySelectorAll('#cc-rows .tool-row');
-    rows.forEach((row, i) => {
-      const id = row.dataset.rowId;
-      const item = data[i];
-      if (item[1]) document.querySelector('[data-name="cc-' + id + '-q1"][data-val="' + item[1] + '"]').click();
-      if (item[2]) document.querySelector('[data-name="cc-' + id + '-q2"][data-val="' + item[2] + '"]').click();
-      if (item[3]) document.querySelector('[data-name="cc-' + id + '-q3"][data-val="' + item[3] + '"]').click();
-    });
-    ccRunResults();
-  }
-
-  /* ════════════════════════════════════════════
-     TOOL 2 — WHY IS THIS STILL CIRCLING?
-     ════════════════════════════════════════════ */
-  let wcRowCount = 0;
-  const WC_MIN = 1, WC_MAX = 3;
-
-  const WC_PATTERN_EXPLAINERS = {
-    "No One's Been Told It's Their Call": "No one in the room has been explicitly handed this decision — so everyone's waiting for someone else to make it, and no one will, because no one's been told it's theirs.",
-    "Partial Information": "The room doesn't share the same facts. Until everyone's working from the same information, agreement is impossible — and what looks like indecision is really a data gap.",
-    "A No That Got Overruled by Silence": "Someone already said no, and got quietly overruled by the room not pushing back. The decision didn't actually get made — it got allowed to drift past a real objection.",
-    "The Real Disagreement Nobody's Named": "There's a genuine disagreement underneath this, and it hasn't been said out loud. Until it is, every meeting about it is really a meeting about something else.",
-    "Everything checks out on paper": "Everything checks out on paper — which usually means the real reason hasn't been said yet."
+  /* ── Quiz ── */
+  var QUIZ_PAGES = {
+    alone: { name: 'Alone at the Top', url: '/who-we-help/alone-at-the-top.html', line: 'You know what's in motion, and you're the only one who does. The plan lives in your head.' },
+    stuck: { name: 'Stuck on Consensus', url: '/who-we-help/stuck-on-consensus.html', line: 'You've got a good team, everyone's weighed in, and the decision still hasn't been made.' },
+    builder: { name: 'The Self-Reliant Builder', url: '/who-we-help/the-self-reliant-builder.html', line: 'You built this by deciding things alone, and you'd like a second pair of eyes before the big ones.' }
   };
-
-  function wcAddRow(prefillName) {
-    if (wcRowCount >= WC_MAX) return;
-    wcRowCount++;
-    const id = wcRowCount;
-    const rowsEl = document.getElementById('wc-rows');
-    const row = document.createElement('div');
-    row.className = 'tool-row';
-    row.dataset.rowId = id;
-    row.innerHTML =
-      '<input type="text" id="wc-name-' + id + '" placeholder="e.g. Whether to renew the Q4 vendor contract" value="' + (prefillName ? escapeHtml(prefillName) : '') + '" oninput="wcRefreshQuestions()">' +
-      '<button type="button" class="row-remove-btn" onclick="wcRemoveRow(' + id + ')">Remove</button>';
-    rowsEl.appendChild(row);
-    wcRefreshQuestions();
-    wcUpdateAddState();
-  }
-
-  function wcRemoveRow(id) {
-    const row = document.querySelector('#wc-rows [data-row-id="' + id + '"]');
-    if (!row) return;
-    if (document.querySelectorAll('#wc-rows .tool-row').length <= WC_MIN) return;
-    row.remove();
-    wcRefreshQuestions();
-    wcUpdateAddState();
-  }
-
-  function wcUpdateAddState() {
-    const count = document.querySelectorAll('#wc-rows .tool-row').length;
-    document.getElementById('wc-add-btn').disabled = count >= WC_MAX;
-    document.querySelectorAll('#wc-rows .row-remove-btn').forEach(b => { b.disabled = count <= WC_MIN; });
-  }
-
-  function wcRefreshQuestions() {
-    const container = document.getElementById('wc-questions');
-    const rows = document.querySelectorAll('#wc-rows .tool-row');
-    const saved = {};
-    rows.forEach(row => {
-      const id = row.dataset.rowId;
-      ['q1', 'q2', 'q3', 'q4'].forEach(q => { saved['wc-' + id + '-' + q] = getYnValue('wc-' + id + '-' + q); });
+  function quizOpen() { var d = document.getElementById('quiz-dialog'); if (d && !d.open) { d.showModal(); } }
+  function quizClose() { var d = document.getElementById('quiz-dialog'); if (d && d.open) { d.close(); } }
+  document.addEventListener('click', function (e) { var d = document.getElementById('quiz-dialog'); if (d && e.target === d) { d.close(); } });
+  function quizScore(ev) {
+    ev.preventDefault();
+    var form = document.getElementById('quiz-form');
+    var counts = { alone: 0, stuck: 0, builder: 0 };
+    var answered = 0;
+    ['q1', 'q2', 'q3', 'q4', 'q5'].forEach(function (q) {
+      var picked = form.querySelector('input[name="' + q + '"]:checked');
+      if (picked) { counts[picked.value]++; answered++; }
     });
-    let html = '';
-    if (rows.length > 0) {
-      html += '<p class="tool-step-label">Step 2 — Four questions per decision</p>';
+    var err = document.getElementById('quiz-error');
+    if (answered < 5) { err.hidden = false; return false; }
+    err.hidden = true;
+    var top = Math.max(counts.alone, counts.stuck, counts.builder);
+    var winners = Object.keys(counts).filter(function (k) { return counts[k] === top; });
+    var html = '';
+    if (winners.length === 1) {
+      var w = QUIZ_PAGES[winners[0]];
+      html += '<p class="quiz-result-label">This sounds most like</p><h3>' + w.name + '</h3><p>' + w.line + '</p>' +
+              '<a class="quiz-go" href="' + w.url + '">Read this one</a>';
+    } else {
+      html += '<p class="quiz-result-label">This sounds like a mix</p><h3>' + winners.map(function (k) { return QUIZ_PAGES[k].name; }).join(' and ') + '</h3><p>More than one fits, which is common. Read both and see which sounds more like your week.</p>';
+      winners.forEach(function (k) { html += '<a class="quiz-go" href="' + QUIZ_PAGES[k].url + '">' + QUIZ_PAGES[k].name + '</a> '; });
     }
-    rows.forEach(row => {
-      const id = row.dataset.rowId;
-      const nameInput = document.getElementById('wc-name-' + id);
-      const name = (nameInput && nameInput.value.trim()) || 'Decision ' + id;
-      html += '<div class="question-block">' +
-        '<p class="question-name">' + escapeHtml(name) + '</p>' +
-        ynGroup('wc-' + id + '-q1', 'Has someone been explicitly told this call is theirs to make?') +
-        ynGroup('wc-' + id + '-q2', 'Does everyone in the room have the same information about it?') +
-        ynGroup('wc-' + id + '-q3', 'Has anyone actually said no — and been quietly overruled by silence?') +
-        ynGroup('wc-' + id + '-q4', "Is there a real disagreement that hasn't been said out loud?") +
-        '</div>';
-    });
-    container.innerHTML = html;
-    Object.keys(saved).forEach(name => {
-      const val = saved[name];
-      if (val === null) return;
-      const btn = document.querySelector('[data-name="' + name + '"][data-val="' + val + '"]');
-      if (btn) { btn.setAttribute('aria-pressed', 'true'); btn.setAttribute('aria-checked', 'true'); }
-    });
-    const panel = container.closest('.persona-panel');
-    if (panel) resizePanel(panel);
+    html += '<p class="quiz-after">Either way, it starts with a free 30-minute <a href="/coffee.html">Coffee Chat</a>.</p>' +
+            '<button type="button" class="quiz-again" onclick="quizReset()">Start over</button>';
+    var out = document.getElementById('quiz-result');
+    out.innerHTML = html;
+    out.hidden = false;
+    form.hidden = true;
+    out.scrollIntoView({ block: 'nearest' });
+    return false;
   }
-
-  function wcClassify(q1, q2, q3, q4) {
-    if (q1 === '0') return "No One's Been Told It's Their Call";
-    if (q1 === '1' && q2 === '0') return 'Partial Information';
-    if (q1 === '1' && q2 === '1' && q3 === '1') return 'A No That Got Overruled by Silence';
-    if (q1 === '1' && q2 === '1' && q3 === '0' && q4 === '1') return "The Real Disagreement Nobody's Named";
-    return 'Everything checks out on paper';
+  function quizReset() {
+    var form = document.getElementById('quiz-form');
+    form.reset();
+    form.hidden = false;
+    document.getElementById('quiz-result').hidden = true;
   }
+  if (location.hash === '#quiz') { window.addEventListener('load', quizOpen); }
 
-  function wcRunResults() {
-    const rows = document.querySelectorAll('#wc-rows .tool-row');
-    const results = [];
-    rows.forEach(row => {
-      const id = row.dataset.rowId;
-      const nameInput = document.getElementById('wc-name-' + id);
-      const name = (nameInput && nameInput.value.trim()) || 'Decision ' + id;
-      const q1 = getYnValue('wc-' + id + '-q1');
-      const q2 = getYnValue('wc-' + id + '-q2');
-      const q3 = getYnValue('wc-' + id + '-q3');
-      const q4 = getYnValue('wc-' + id + '-q4');
-      const pattern = wcClassify(q1, q2, q3, q4);
-      results.push({ name, pattern, explainer: WC_PATTERN_EXPLAINERS[pattern] });
-    });
-    wcRenderResults(results);
-  }
-
-  function wcRenderResults(results) {
-    const el = document.getElementById('wc-results');
-    if (results.length === 0) { el.innerHTML = ''; return; }
-    let html = '';
-    results.forEach(r => {
-      html += '<p class="result-line"><span class="result-label">' + escapeHtml(r.name) + ' — ' + escapeHtml(r.pattern) + '</span><br>' + escapeHtml(r.explainer) + '</p>';
-    });
-    const counts = {};
-    results.forEach(r => { counts[r.pattern] = (counts[r.pattern] || 0) + 1; });
-    const shared = Object.keys(counts).find(p => counts[p] >= 2);
-    if (shared) {
-      html += '<p class="result-closing">' + counts[shared] + ' of your ' + results.length + ' decisions are stuck on the same pattern: ' + escapeHtml(shared) + ". That's not a decision problem. That's a structure problem.</p>";
+  /* Old links to this page used #hashes. Send each one to its new page. */
+  (function () {
+    var raw = location.hash.replace(/^#/, '');
+    if (!raw) return;
+    var key = raw.split('=')[0];
+    var targets = {
+      'alone-at-the-top': '/who-we-help/alone-at-the-top.html',
+      'convergence-check': '/who-we-help/alone-at-the-top.html',
+      'stuck-on-consensus': '/who-we-help/stuck-on-consensus.html',
+      'why-is-this-circling': '/who-we-help/stuck-on-consensus.html',
+      'self-reliant-builder': '/who-we-help/the-self-reliant-builder.html'
+    };
+    if (targets[key]) {
+      var keep = raw.indexOf('=') !== -1 ? location.hash : '';
+      location.replace(targets[key] + keep);
     }
-    html += '<div class="result-actions">' +
-      '<button type="button" class="tool-action-btn" onclick="copyResultsText(wcResultsText(),this)">Copy results</button>' +
-      '<button type="button" class="tool-action-btn" onclick="wcSaveLink()">Save this link</button>' +
-      '</div>';
-    el.innerHTML = html;
-    el.dataset.results = JSON.stringify(results);
-    const panel = el.closest('.persona-panel');
-    if (panel) resizePanel(panel);
-  }
-
-  function wcResultsText() {
-    const results = JSON.parse(document.getElementById('wc-results').dataset.results || '[]');
-    let text = "Why Is This Still Circling? results:\n\n";
-    results.forEach(r => { text += r.name + ' — ' + r.pattern + '\n' + r.explainer + '\n\n'; });
-    const counts = {};
-    results.forEach(r => { counts[r.pattern] = (counts[r.pattern] || 0) + 1; });
-    const shared = Object.keys(counts).find(p => counts[p] >= 2);
-    if (shared) {
-      text += counts[shared] + ' of your ' + results.length + ' decisions are stuck on the same pattern: ' + shared + ". That's not a decision problem. That's a structure problem.\n";
-    }
-    return text;
-  }
-
-  function wcSaveLink() {
-    const rows = document.querySelectorAll('#wc-rows .tool-row');
-    const data = [];
-    rows.forEach(row => {
-      const id = row.dataset.rowId;
-      const name = (document.getElementById('wc-name-' + id).value.trim()) || 'Decision ' + id;
-      data.push([name, getYnValue('wc-' + id + '-q1') || '', getYnValue('wc-' + id + '-q2') || '', getYnValue('wc-' + id + '-q3') || '', getYnValue('wc-' + id + '-q4') || '']);
-    });
-    const encoded = encodeURIComponent(JSON.stringify(data));
-    const url = location.origin + location.pathname + '#why-is-this-circling=' + encoded;
-    window.history.replaceState(null, '', '#why-is-this-circling=' + encoded);
-    const btn = document.querySelector('#wc-results .result-actions button:nth-child(2)');
-    if (btn) copyToClipboard(url).then(setBtnFeedback(btn, 'Link copied', "Couldn't copy — link is in your address bar"));
-  }
-
-  function wcLoadFromHash(encoded) {
-    let data;
-    try { data = JSON.parse(decodeURIComponent(encoded)); } catch (e) { return; }
-    document.getElementById('wc-rows').innerHTML = '';
-    wcRowCount = 0;
-    data.forEach(item => wcAddRow(item[0]));
-    const rows = document.querySelectorAll('#wc-rows .tool-row');
-    rows.forEach((row, i) => {
-      const id = row.dataset.rowId;
-      const item = data[i];
-      if (item[1]) document.querySelector('[data-name="wc-' + id + '-q1"][data-val="' + item[1] + '"]').click();
-      if (item[2]) document.querySelector('[data-name="wc-' + id + '-q2"][data-val="' + item[2] + '"]').click();
-      if (item[3]) document.querySelector('[data-name="wc-' + id + '-q3"][data-val="' + item[3] + '"]').click();
-      if (item[4]) document.querySelector('[data-name="wc-' + id + '-q4"][data-val="' + item[4] + '"]').click();
-    });
-    wcRunResults();
-  }
-
-  function escapeHtml(str) {
-    const div = document.createElement('div');
-    div.textContent = str;
-    return div.innerHTML;
-  }
-
-  /* ════════════════════════════════════════════
-     INIT — default rows + deep-link handling
-     ════════════════════════════════════════════ */
-  function initDefaultRows() {
-    if (document.querySelectorAll('#cc-rows .tool-row').length === 0) { ccAddRow(); ccAddRow(); }
-    if (document.querySelectorAll('#wc-rows .tool-row').length === 0) { wcAddRow(); }
-  }
-
-  function handleHashOnLoad() {
-    const hash = location.hash.replace(/^#/, '');
-    if (!hash) { initDefaultRows(); return; }
-
-    const eqIndex = hash.indexOf('=');
-    const key = eqIndex === -1 ? hash : hash.slice(0, eqIndex);
-    const value = eqIndex === -1 ? null : hash.slice(eqIndex + 1);
-
-    if (key === 'convergence-check' && value) {
-      initDefaultRows();
-      selectPersona('alone-at-the-top');
-      ccLoadFromHash(value);
-      document.getElementById('convergence-check').scrollIntoView({ block: 'start' });
-      return;
-    }
-    if (key === 'why-is-this-circling' && value) {
-      initDefaultRows();
-      selectPersona('stuck-on-consensus');
-      wcLoadFromHash(value);
-      document.getElementById('why-is-this-circling').scrollIntoView({ block: 'start' });
-      return;
-    }
-    if (key === 'alone-at-the-top' || key === 'stuck-on-consensus' || key === 'self-reliant-builder') {
-      initDefaultRows();
-      selectPersona(key);
-      document.getElementById(key).scrollIntoView({ block: 'start' });
-      return;
-    }
-    initDefaultRows();
-  }
-
-  handleHashOnLoad();
+  })();
 </script>
