@@ -17,6 +17,9 @@ breadcrumbs:
     url: "https://bynorthlight.ca/who-we-help.html"
   - name: "Alone at the Top"
     url: "https://bynorthlight.ca/who-we-help/alone-at-the-top.html"
+related_reading:
+  - title: "You Hired Them. Now What? When New Hires Don't Clear the Bottleneck"
+    url: /blog/you-hired-them-now-what.html
 head_extra: |
   <script type="application/ld+json">
   {
@@ -323,6 +326,13 @@ head_extra: |
     .other-pages { max-width: 700px; margin: 8px 0 40px; padding: 18px 22px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; }
     .other-pages p { font-family: 'Outfit', sans-serif; font-size: 14.5px; line-height: 1.7; color: var(--haze); margin: 0; }
     .other-pages a, .other-pages a:visited { color: var(--glacial); }
+  
+    .related-reading { max-width: 700px; padding-bottom: 56px; }
+    .related-reading h2 { font-family: 'Jost', sans-serif; font-weight: 600; font-size: 22px; color: var(--text); margin: 0 0 14px; }
+    .related-reading ul { list-style: none; padding: 0; margin: 0; }
+    .related-reading li { margin-bottom: 10px; }
+    .related-reading a, .related-reading a:visited { font-family: 'Outfit', sans-serif; font-size: 16px; line-height: 1.5; color: var(--glacial); text-decoration: none; border-bottom: 1px solid rgba(79,195,200,0.25); }
+    .related-reading a:hover { color: var(--text); }
   </style>
 ---
 
@@ -597,12 +607,19 @@ head_extra: |
       </div>
     </section>
 
-    <!-- TODO (held): cross-links to the other two persona pages. Add once those pages exist and have URLs.
-         Draft wording from the working doc:
-         "Does this sound like someone else on your team, or a different kind of hard?
-          Two other situations I see often: Stuck on Consensus and The Self-Reliant Builder." -->
+    <!-- RELATED READING: shows only when the page's front matter has a related_reading list.
+         Add entries as { title, url } to the front matter once the persona posts are published. -->
+    {% if page.related_reading %}
+    <section class="related-reading" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related reading</h2>
+      <ul>
+        {% for item in page.related_reading %}
+        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
 
-    <!-- TODO (held until the end): related blog posts for this reader. -->
 
   </div>
 
