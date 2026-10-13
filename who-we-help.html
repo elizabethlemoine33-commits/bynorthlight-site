@@ -136,7 +136,7 @@ head_extra: |
       .hub-links a { color: var(--glacial); }
       .hub-links a:visited { color: var(--glacial); }
   
-      .hub-quiz-line { font-family: 'Outfit', sans-serif; font-size: 15px; color: var(--haze); margin: 0 0 44px; }
+      .hub-quiz-line { font-family: 'Outfit', sans-serif; font-size: 15px; color: var(--haze); margin: 22px 0 0; }
       .quiz-open-btn { font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; color: var(--glacial); background: none; border: 1px solid rgba(79,195,200,0.4); border-radius: 6px; padding: 8px 16px; margin-left: 8px; cursor: pointer; }
       .quiz-open-btn:hover { border-color: var(--glacial); color: var(--text); }
       .quiz-open-btn:focus-visible { outline: 2px solid var(--dusk); outline-offset: 2px; }
@@ -234,6 +234,7 @@ head_extra: |
       <p class="eyebrow">Who we help</p>
       <h1 class="page-title" id="page-title"><span class="grad-text">Three challenges leaders bring me.</span> Which one sounds like yours?</h1>
       <p class="hero-sub">I work with founders and leaders of small and mid-sized Canadian organizations, typically under 50 people. Pick the one that sounds the most like your week.</p>
+      <p class="hub-quiz-line">Want to know which scenario is most like yours? <button type="button" class="quiz-open-btn" onclick="quizOpen()">Take the one-minute quiz</button></p>
     </section>
 
     <div class="answer-block hub-answer"><p>Northlight Advisory Services works with three kinds of leaders: founders who are the only ones who can see the whole plan, leaders whose teams keep a decision circling, and self-reliant founders who decide alone and want a second pair of eyes. Every engagement starts with the same free 30-minute Coffee Chat.</p></div>
@@ -258,8 +259,6 @@ head_extra: |
         <span class="hub-go">Read this one &rarr;</span>
       </a>
     </div>
-
-    <p class="hub-quiz-line">Not sure which one is you? <button type="button" class="quiz-open-btn" onclick="quizOpen()">Take the one-minute quiz</button></p>
 
     <div class="hub-start">
       <div class="cta-block">
@@ -325,11 +324,11 @@ head_extra: |
       </fieldset>
       <fieldset class="quiz-q"><legend>2. When a big decision comes up, what usually happens?</legend>
         <label><input type="radio" name="q2" value="alone"> I make it, mostly because no one else has the whole picture.</label>
-        <label><input type="radio" name="q2" value="stuck"> I ask the team for input, and it keeps going round.</label>
-        <label><input type="radio" name="q2" value="builder"> I think it through alone, and sometimes put it off for more information.</label>
+        <label><input type="radio" name="q2" value="stuck"> I ask the team for input, and it keeps going around.</label>
+        <label><input type="radio" name="q2" value="builder"> I think it through alone and sometimes put it off for more information.</label>
       </fieldset>
       <fieldset class="quiz-q"><legend>3. What would help most right now?</legend>
-        <label><input type="radio" name="q3" value="alone"> Someone I can trust with the whole plan, and the plan on paper.</label>
+        <label><input type="radio" name="q3" value="alone"> A plan on paper, and someone I can trust with all of it.</label>
         <label><input type="radio" name="q3" value="stuck"> Someone to help the room get to a clear yes or no.</label>
         <label><input type="radio" name="q3" value="builder"> A second pair of eyes before the decision goes out.</label>
       </fieldset>
@@ -339,7 +338,7 @@ head_extra: |
         <label><input type="radio" name="q4" value="builder"> A small mistake turns into an expensive one before I notice.</label>
       </fieldset>
       <fieldset class="quiz-q"><legend>5. Who do you have around you right now?</legend>
-        <label><input type="radio" name="q5" value="alone"> People I like, but not yet anyone I've handed the whole picture to.</label>
+        <label><input type="radio" name="q5" value="alone"> People I like, but no one I've handed the whole picture to yet.</label>
         <label><input type="radio" name="q5" value="stuck"> A capable team with plenty of opinions.</label>
         <label><input type="radio" name="q5" value="builder"> Mostly just me, and I like it that way.</label>
       </fieldset>
