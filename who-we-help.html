@@ -1,10 +1,10 @@
 ---
 layout: page
 title: "Who We Help — Northlight Advisory Services"
-description: "Three ways leading a small Canadian organization gets hard: alone at the top, stuck on consensus, or deciding alone. Find yours, then start with a free 30-minute Coffee Chat."
+description: "Three challenges Canadian leaders bring to Northlight: alone at the top, stuck on consensus, or deciding alone. Find yours, then start with a free 30-minute Coffee Chat."
 canonical: "https://bynorthlight.ca/who-we-help.html"
 og_title: "Who We Help | Northlight Advisory Services"
-og_description: "Three ways leading a small Canadian organization gets hard: alone at the top, stuck on consensus, or deciding alone. Find yours, then start with a free 30-minute Coffee Chat."
+og_description: "Three challenges Canadian leaders bring to Northlight: alone at the top, stuck on consensus, or deciding alone. Find yours, then start with a free 30-minute Coffee Chat."
 og_image: "https://bynorthlight.ca/northlight-og-image.png"
 og_image_width: "1200"
 og_image_height: "630"
@@ -23,7 +23,7 @@ head_extra: |
       {
         "@type": "CollectionPage",
         "name": "Who We Help",
-        "description": "Three ways leading a small Canadian organization gets hard: alone at the top, stuck on consensus, or deciding alone. Find yours, then start with a free 30-minute Coffee Chat.",
+        "description": "Three challenges Canadian leaders bring to Northlight: alone at the top, stuck on consensus, or deciding alone. Find yours, then start with a free 30-minute Coffee Chat.",
         "url": "https://bynorthlight.ca/who-we-help.html",
         "isPartOf": {
           "@type": "WebSite",
@@ -70,10 +70,10 @@ head_extra: |
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "How do I know which one is me?",
+            "name": "I'm not sure which one is me. Is there a quick way to find out?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Pick the one that sounds the most like your week. If more than one does, that is normal. They all start the same way, with a free 30-minute Coffee Chat, and we sort out the rest there."
+              "text": "Yes. There is a five-question quiz that takes about a minute. Nothing is sent anywhere, and it points you to the page that fits best. If more than one sounds like you, that is normal. They all start the same way, with a free 30-minute Coffee Chat."
             }
           },
           {
@@ -135,7 +135,35 @@ head_extra: |
       .hub-links { font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--muted); margin: 18px 0 0; }
       .hub-links a { color: var(--glacial); }
       .hub-links a:visited { color: var(--glacial); }
-      @media (max-width: 900px) { .hub-grid { grid-template-columns: 1fr; } .hub-card { padding: 22px 20px; } h1.page-title { font-size: 32px; } }
+  
+      .hub-quiz-line { font-family: 'Outfit', sans-serif; font-size: 15px; color: var(--haze); margin: 0 0 44px; }
+      .quiz-open-btn { font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; color: var(--glacial); background: none; border: 1px solid rgba(79,195,200,0.4); border-radius: 6px; padding: 8px 16px; margin-left: 8px; cursor: pointer; }
+      .quiz-open-btn:hover { border-color: var(--glacial); color: var(--text); }
+      .quiz-open-btn:focus-visible { outline: 2px solid var(--dusk); outline-offset: 2px; }
+      dialog.quiz-dialog { position: fixed; inset: 0; margin: auto; background: var(--surface); color: var(--text); border: 1px solid var(--border-2); border-radius: 12px; padding: 0; width: min(760px, 94vw); max-height: 88vh; overflow: auto; box-shadow: 0 24px 80px rgba(0,0,0,0.55); }
+      dialog.quiz-dialog::backdrop { background: rgba(5,6,12,0.72); }
+      .quiz-close { position: sticky; top: 8px; float: right; margin: 8px 10px 0 0; background: none; border: 1px solid var(--border-2); color: var(--muted); border-radius: 6px; width: 34px; height: 34px; font-size: 20px; line-height: 1; cursor: pointer; z-index: 2; }
+      .quiz-close:hover { color: var(--text); border-color: var(--glacial); }
+      .quiz-shell { padding: 30px 34px 34px; }
+      .quiz-title { font-family: 'Jost', sans-serif; font-size: 24px; font-weight: 600; color: var(--text); margin: 0 0 8px; }
+      .quiz-intro { font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--muted); margin: 0 0 22px; }
+      .quiz-q { border: none; padding: 0; margin: 0 0 22px; }
+      .quiz-q legend { font-family: 'Jost', sans-serif; font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 10px; padding: 0; }
+      .quiz-q label { display: block; font-family: 'Outfit', sans-serif; font-size: 14.5px; line-height: 1.55; color: var(--haze); background: var(--midnight); border: 1px solid var(--border-2); border-radius: 8px; padding: 11px 14px; margin-bottom: 8px; cursor: pointer; }
+      .quiz-q label:hover { border-color: var(--glacial); }
+      .quiz-q input { margin-right: 10px; accent-color: #4FC3C8; }
+      .quiz-q input:focus-visible { outline: 2px solid var(--dusk); outline-offset: 2px; }
+      .quiz-submit { background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 50%, #8B6FD4 100%); border: none; border-radius: 8px; color: #fff; font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; padding: 12px 22px; cursor: pointer; }
+      .quiz-submit:focus-visible, .quiz-again:focus-visible, .quiz-go:focus-visible { outline: 2px solid var(--dusk); outline-offset: 2px; }
+      .quiz-error { font-family: 'Outfit', sans-serif; font-size: 14px; color: #E8A0B8; margin: 12px 0 0; }
+      .quiz-result-label { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--glacial); margin: 0 0 8px; }
+      .quiz-result h3 { font-family: 'Jost', sans-serif; font-size: 26px; font-weight: 600; color: var(--text); margin: 0 0 10px; }
+      .quiz-result p { font-family: 'Outfit', sans-serif; font-size: 15px; line-height: 1.7; color: var(--haze); margin: 0 0 18px; }
+      .quiz-go, .quiz-go:visited { display: inline-block; font-family: 'Jost', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; text-decoration: none; background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 50%, #8B6FD4 100%); border-radius: 8px; padding: 12px 22px; margin: 0 8px 8px 0; }
+      .quiz-after a, .quiz-after a:visited { color: var(--glacial); }
+      .quiz-again { font-family: 'Jost', sans-serif; font-size: 13px; color: var(--muted); background: none; border: 1px solid var(--border-2); border-radius: 6px; padding: 8px 14px; cursor: pointer; }
+      @media (max-width: 600px) { .quiz-shell { padding: 22px 18px 26px; } }
+        @media (max-width: 900px) { .hub-grid { grid-template-columns: 1fr; } .hub-card { padding: 22px 20px; } h1.page-title { font-size: 32px; } }
     .faq-section { max-width: 700px; padding-bottom: 72px; }
       .faq-section h2 {
         font-family: 'Jost', sans-serif; font-weight: 600; font-size: 26px; line-height: 1.2;
@@ -177,6 +205,10 @@ head_extra: |
         .faq-question { padding: 18px 18px; }
         .faq-answer-inner { padding: 16px 18px 20px; }
       }
+    
+      .other-pages { max-width: 700px; margin: 8px 0 40px; padding: 18px 22px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; }
+      .other-pages p { font-family: 'Outfit', sans-serif; font-size: 14.5px; line-height: 1.7; color: var(--haze); margin: 0; }
+      .other-pages a, .other-pages a:visited { color: var(--glacial); }
     .cta-block {
         background: var(--surface); border: 1px solid var(--border-2);
         border-radius: 10px; padding: 28px 32px; margin: 32px 0 28px; max-width: 700px;
@@ -200,7 +232,7 @@ head_extra: |
 
     <section class="hero" aria-labelledby="page-title">
       <p class="eyebrow">Who we help</p>
-      <h1 class="page-title" id="page-title"><span class="grad-text">Three ways this gets hard.</span> Which one is yours?</h1>
+      <h1 class="page-title" id="page-title"><span class="grad-text">Three challenges leaders bring me.</span> Which one sounds like yours?</h1>
       <p class="hero-sub">I work with founders and leaders of small and mid-sized Canadian organizations, typically under 50 people. Pick the one that sounds the most like your week.</p>
     </section>
 
@@ -227,9 +259,11 @@ head_extra: |
       </a>
     </div>
 
+    <p class="hub-quiz-line">Not sure which one is you? <button type="button" class="quiz-open-btn" onclick="quizOpen()">Take the one-minute quiz</button></p>
+
     <div class="hub-start">
       <div class="cta-block">
-        <p style="font-family:'Jost',sans-serif;font-size:18px;font-weight:600;color:var(--text);margin:0 0 8px;">However it starts, it starts the same way.</p>
+        <p style="font-family:'Jost',sans-serif;font-size:18px;font-weight:600;color:var(--text);margin:0 0 8px;">Whichever one is yours, it starts getting better the same way.</p>
         <p style="font-size:15px;color:var(--haze);line-height:1.7;margin:0 0 18px;">A free 30-minute Coffee Chat. If it feels like a fit, we have a second, longer conversation and agree on a plan. Nothing starts until you're satisfied.</p>
         <a href="/coffee.html" class="cta-direct">Book a Coffee Chat</a>
         <p class="cta-supporting">Thirty minutes, free, no prep.</p>
@@ -243,11 +277,11 @@ head_extra: |
 
         <div class="faq-item" role="listitem">
           <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-a-1" id="faq-q-1" onclick="toggleFaq(this)">
-            <span class="faq-q-text">How do I know which one is me?</span>
+            <span class="faq-q-text">I'm not sure which one is me. Is there a quick way to find out?</span>
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-answer" id="faq-a-1" role="region" aria-labelledby="faq-q-1">
-            <div class="faq-answer-inner">Pick the one that sounds the most like your week. If more than one does, that is normal. They all start the same way, with a free 30-minute Coffee Chat, and we sort out the rest there.</div>
+            <div class="faq-answer-inner">Yes. There is a five-question quiz that takes about a minute. Nothing is sent anywhere, and it points you to the page that fits best. If more than one sounds like you, that is normal. They all start the same way, with a free 30-minute Coffee Chat. <button type="button" class="quiz-open-btn" style="margin-left:0;margin-top:12px;" onclick="quizOpen()">Take the quiz</button></div>
           </div>
         </div>
 
@@ -277,6 +311,45 @@ head_extra: |
 
 </main>
 
+
+<dialog class="quiz-dialog" id="quiz-dialog" aria-labelledby="quiz-title">
+  <button type="button" class="quiz-close" onclick="quizClose()" aria-label="Close the quiz">&times;</button>
+  <div class="quiz-shell">
+    <h2 class="quiz-title" id="quiz-title">Which one is yours?</h2>
+    <p class="quiz-intro">Five questions, about a minute. Pick the answer closest to your week. Nothing is sent anywhere.</p>
+    <form id="quiz-form" onsubmit="return quizScore(event)">
+      <fieldset class="quiz-q"><legend>1. What does a hard week look like right now?</legend>
+        <label><input type="radio" name="q1" value="alone"> The plan lives in my head, and I'm the only one who can see all of it.</label>
+        <label><input type="radio" name="q1" value="stuck"> We've talked it through, everyone has weighed in, and nobody has said yes or no.</label>
+        <label><input type="radio" name="q1" value="builder"> I'm deciding alone again, and something about a number or a call doesn't feel right.</label>
+      </fieldset>
+      <fieldset class="quiz-q"><legend>2. When a big decision comes up, what usually happens?</legend>
+        <label><input type="radio" name="q2" value="alone"> I make it, mostly because no one else has the whole picture.</label>
+        <label><input type="radio" name="q2" value="stuck"> I ask the team for input, and it keeps going round.</label>
+        <label><input type="radio" name="q2" value="builder"> I think it through alone, and sometimes put it off for more information.</label>
+      </fieldset>
+      <fieldset class="quiz-q"><legend>3. What would help most right now?</legend>
+        <label><input type="radio" name="q3" value="alone"> Someone I can trust with the whole plan, and the plan on paper.</label>
+        <label><input type="radio" name="q3" value="stuck"> Someone to help the room get to a clear yes or no.</label>
+        <label><input type="radio" name="q3" value="builder"> A second pair of eyes before the decision goes out.</label>
+      </fieldset>
+      <fieldset class="quiz-q"><legend>4. What worries you most if nothing changes?</legend>
+        <label><input type="radio" name="q4" value="alone"> Every board meeting takes more prep than the last.</label>
+        <label><input type="radio" name="q4" value="stuck"> The decisions pile up behind the one that's stuck.</label>
+        <label><input type="radio" name="q4" value="builder"> A small mistake turns into an expensive one before I notice.</label>
+      </fieldset>
+      <fieldset class="quiz-q"><legend>5. Who do you have around you right now?</legend>
+        <label><input type="radio" name="q5" value="alone"> People I like, but not yet anyone I've handed the whole picture to.</label>
+        <label><input type="radio" name="q5" value="stuck"> A capable team with plenty of opinions.</label>
+        <label><input type="radio" name="q5" value="builder"> Mostly just me, and I like it that way.</label>
+      </fieldset>
+      <button type="submit" class="quiz-submit">See which one is yours</button>
+      <p class="quiz-error" id="quiz-error" role="alert" hidden>Please answer all five questions.</p>
+    </form>
+    <div class="quiz-result" id="quiz-result" aria-live="polite" hidden></div>
+  </div>
+</dialog>
+
 <script>
   function toggleFaq(btn) {
     const item = btn.closest('.faq-item');
@@ -290,6 +363,55 @@ head_extra: |
       btn.setAttribute('aria-expanded', 'true');
     }
   }
+
+  /* ── Quiz ── */
+  var QUIZ_PAGES = {
+    alone: { name: 'Alone at the Top', url: '/who-we-help/alone-at-the-top.html', line: 'You know what is in motion, and you are the only one who does. The plan lives in your head.' },
+    stuck: { name: 'Stuck on Consensus', url: '/who-we-help/stuck-on-consensus.html', line: 'You have a good team, everyone has weighed in, and the decision still has not been made.' },
+    builder: { name: 'The Self-Reliant Builder', url: '/who-we-help/the-self-reliant-builder.html', line: 'You built this by deciding things alone, and you want a second pair of eyes before the big ones.' }
+  };
+  function quizOpen() { var d = document.getElementById('quiz-dialog'); if (d && !d.open) { d.showModal(); } }
+  function quizClose() { var d = document.getElementById('quiz-dialog'); if (d && d.open) { d.close(); } }
+  document.addEventListener('click', function (e) { var d = document.getElementById('quiz-dialog'); if (d && e.target === d) { d.close(); } });
+  function quizScore(ev) {
+    ev.preventDefault();
+    var form = document.getElementById('quiz-form');
+    var counts = { alone: 0, stuck: 0, builder: 0 };
+    var answered = 0;
+    ['q1', 'q2', 'q3', 'q4', 'q5'].forEach(function (q) {
+      var picked = form.querySelector('input[name="' + q + '"]:checked');
+      if (picked) { counts[picked.value]++; answered++; }
+    });
+    var err = document.getElementById('quiz-error');
+    if (answered < 5) { err.hidden = false; return false; }
+    err.hidden = true;
+    var top = Math.max(counts.alone, counts.stuck, counts.builder);
+    var winners = Object.keys(counts).filter(function (k) { return counts[k] === top; });
+    var html = '';
+    if (winners.length === 1) {
+      var w = QUIZ_PAGES[winners[0]];
+      html += '<p class="quiz-result-label">This sounds most like</p><h3>' + w.name + '</h3><p>' + w.line + '</p>' +
+              '<a class="quiz-go" href="' + w.url + '">Read this one</a>';
+    } else {
+      html += '<p class="quiz-result-label">This sounds like a mix</p><h3>' + winners.map(function (k) { return QUIZ_PAGES[k].name; }).join(' and ') + '</h3><p>More than one fits, which is common. Read both and see which one sounds more like your week.</p>';
+      winners.forEach(function (k) { html += '<a class="quiz-go" href="' + QUIZ_PAGES[k].url + '">' + QUIZ_PAGES[k].name + '</a> '; });
+    }
+    html += '<p class="quiz-after">Either way, it starts with a free 30-minute <a href="/coffee.html">Coffee Chat</a>.</p>' +
+            '<button type="button" class="quiz-again" onclick="quizReset()">Start over</button>';
+    var out = document.getElementById('quiz-result');
+    out.innerHTML = html;
+    out.hidden = false;
+    form.hidden = true;
+    out.scrollIntoView({ block: 'nearest' });
+    return false;
+  }
+  function quizReset() {
+    var form = document.getElementById('quiz-form');
+    form.reset();
+    form.hidden = false;
+    document.getElementById('quiz-result').hidden = true;
+  }
+  if (location.hash === '#quiz') { window.addEventListener('load', quizOpen); }
 
   /* Old links to this page used #hashes. Send each one to its new page. */
   (function () {
