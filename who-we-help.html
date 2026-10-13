@@ -73,7 +73,7 @@ head_extra: |
             "name": "I'm not sure which one is me. Is there a quick way to find out?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. There is a five-question quiz that takes about a minute. Nothing is sent anywhere, and it points you to the page that fits best. If more than one sounds like you, that is normal. They all start the same way, with a free 30-minute Coffee Chat."
+              "text": "Yes. There is a five-question quiz that takes about a minute. Nothing's sent anywhere, and it points you to the page that fits best. If more than one sounds like you, that's normal. They all start the same way, with a free 30-minute Coffee Chat."
             }
           },
           {
@@ -280,7 +280,7 @@ head_extra: |
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="faq-answer" id="faq-a-1" role="region" aria-labelledby="faq-q-1">
-            <div class="faq-answer-inner">Yes. There is a five-question quiz that takes about a minute. Nothing is sent anywhere, and it points you to the page that fits best. If more than one sounds like you, that is normal. They all start the same way, with a free 30-minute Coffee Chat. <button type="button" class="quiz-open-btn" style="margin-left:0;margin-top:12px;" onclick="quizOpen()">Take the quiz</button></div>
+            <div class="faq-answer-inner">Yes. There is a five-question quiz that takes about a minute. Nothing's sent anywhere, and it points you to the page that fits best. If more than one sounds like you, that's normal. They all start the same way, with a free 30-minute Coffee Chat. <button type="button" class="quiz-open-btn" style="margin-left:0;margin-top:12px;" onclick="quizOpen()">Take the quiz</button></div>
           </div>
         </div>
 
@@ -315,7 +315,7 @@ head_extra: |
   <button type="button" class="quiz-close" onclick="quizClose()" aria-label="Close the quiz">&times;</button>
   <div class="quiz-shell">
     <h2 class="quiz-title" id="quiz-title">Which one is yours?</h2>
-    <p class="quiz-intro">Five questions, about a minute. Pick the answer closest to your week. Nothing is sent anywhere.</p>
+    <p class="quiz-intro">Five questions, about a minute. Pick the answer closest to your week. Nothing's sent anywhere.</p>
     <form id="quiz-form" onsubmit="return quizScore(event)">
       <fieldset class="quiz-q"><legend>1. What does a hard week look like right now?</legend>
         <label><input type="radio" name="q1" value="alone"> The plan lives in my head, and I'm the only one who can see all of it.</label>
@@ -365,9 +365,9 @@ head_extra: |
 
   /* ── Quiz ── */
   var QUIZ_PAGES = {
-    alone: { name: 'Alone at the Top', url: '/who-we-help/alone-at-the-top.html', line: 'You know what is in motion, and you are the only one who does. The plan lives in your head.' },
-    stuck: { name: 'Stuck on Consensus', url: '/who-we-help/stuck-on-consensus.html', line: 'You have a good team, everyone has weighed in, and the decision still has not been made.' },
-    builder: { name: 'The Self-Reliant Builder', url: '/who-we-help/the-self-reliant-builder.html', line: 'You built this by deciding things alone, and you want a second pair of eyes before the big ones.' }
+    alone: { name: 'Alone at the Top', url: '/who-we-help/alone-at-the-top.html', line: 'You know what's in motion, and you're the only one who does. The plan lives in your head.' },
+    stuck: { name: 'Stuck on Consensus', url: '/who-we-help/stuck-on-consensus.html', line: 'You've got a good team, everyone's weighed in, and the decision still hasn't been made.' },
+    builder: { name: 'The Self-Reliant Builder', url: '/who-we-help/the-self-reliant-builder.html', line: 'You built this by deciding things alone, and you'd like a second pair of eyes before the big ones.' }
   };
   function quizOpen() { var d = document.getElementById('quiz-dialog'); if (d && !d.open) { d.showModal(); } }
   function quizClose() { var d = document.getElementById('quiz-dialog'); if (d && d.open) { d.close(); } }
@@ -392,7 +392,7 @@ head_extra: |
       html += '<p class="quiz-result-label">This sounds most like</p><h3>' + w.name + '</h3><p>' + w.line + '</p>' +
               '<a class="quiz-go" href="' + w.url + '">Read this one</a>';
     } else {
-      html += '<p class="quiz-result-label">This sounds like a mix</p><h3>' + winners.map(function (k) { return QUIZ_PAGES[k].name; }).join(' and ') + '</h3><p>More than one fits, which is common. Read both and see which one sounds more like your week.</p>';
+      html += '<p class="quiz-result-label">This sounds like a mix</p><h3>' + winners.map(function (k) { return QUIZ_PAGES[k].name; }).join(' and ') + '</h3><p>More than one fits, which is common. Read both and see which sounds more like your week.</p>';
       winners.forEach(function (k) { html += '<a class="quiz-go" href="' + QUIZ_PAGES[k].url + '">' + QUIZ_PAGES[k].name + '</a> '; });
     }
     html += '<p class="quiz-after">Either way, it starts with a free 30-minute <a href="/coffee.html">Coffee Chat</a>.</p>' +

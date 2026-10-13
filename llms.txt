@@ -19,6 +19,9 @@ Northlight Advisory Services is a Halifax, Nova Scotia–based strategy, operati
   - [Alone at the Top](https://bynorthlight.ca/who-we-help/alone-at-the-top.html): For the founder without a trusted team.
   - [Stuck on Consensus](https://bynorthlight.ca/who-we-help/stuck-on-consensus.html): For the leader with a team around them.
   - [The Self-Reliant Builder](https://bynorthlight.ca/who-we-help/the-self-reliant-builder.html): For the founder who decides alone and wants a second pair of eyes.
+  - [Alone at the Top](https://bynorthlight.ca/who-we-help/alone-at-the-top.html): For the founder without a trusted team.
+  - [Stuck on Consensus](https://bynorthlight.ca/who-we-help/stuck-on-consensus.html): For the leader with a team around them.
+  - [The Self-Reliant Builder](https://bynorthlight.ca/who-we-help/the-self-reliant-builder.html): For the founder who decides alone and wants a second pair of eyes.
 - [Blog](https://bynorthlight.ca/blog/): Strategy, operations, and AI adoption articles written for Canadian small business owners.
 - [FAQ](https://bynorthlight.ca/faq.html): Common questions about working with Northlight Advisory Services.
 - [Case Studies](https://bynorthlight.ca/case-studies/): Project work including Northlight Vault, Northlight OS, Northlight Meetings, and the Skills Market.
