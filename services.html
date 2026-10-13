@@ -206,16 +206,19 @@ head_extra: |
         text-decoration: none; cursor: pointer; transition: opacity 0.2s;
       }
       .btn-primary:hover { opacity: 0.88; color: #fff; }
-      .profile-links {
-        display: flex; gap: 16px; flex-wrap: wrap; margin-top: 20px;
-      }
-      .profile-link {
+      .btn-primary:visited { color: #fff; }
+      .cred-chips { list-style: none; padding: 0; margin: 20px 0 14px; display: flex; flex-wrap: wrap; gap: 10px; }
+      .cred-chips li { font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--haze); background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 8px 14px; }
+      .cred-note { font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--muted); margin: 0 0 28px; }
+      .cred-verify-label { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--structural); margin: 0 0 12px; }
+      .profile-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 0; }
+      .profile-link, .profile-link:visited {
         font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 500;
-        letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
-        text-decoration: none; border-bottom: 1px solid var(--border-2);
-        padding-bottom: 2px; transition: color 0.2s, border-color 0.2s;
+        letter-spacing: 0.12em; text-transform: uppercase; color: var(--glacial);
+        text-decoration: none; border: 1px solid rgba(79,195,200,0.35); border-radius: 6px;
+        padding: 9px 16px; transition: color 0.2s, border-color 0.2s;
       }
-      .profile-link:hover { color: var(--glacial); border-color: var(--glacial); }
+      .profile-link:hover { color: var(--text); border-color: var(--glacial); }
   
       /* Product cards */
       .product-grid {
@@ -403,14 +406,6 @@ head_extra: |
         <p class="advisory-card-body">It follows the same first two steps as everything else: a free Coffee Chat, then a longer conversation where you tell me where things stand and we agree how we will work.</p>
       </div>
 
-      <div class="profile-links" style="margin-top: 24px;">
-          <p style="font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--muted); line-height: 1.5; width: 100%; margin-bottom: 4px;">Credentials: Google Project Management · IBM Generative AI Specializations · Anthropic Claude · Cloud Computing Law (U of Penn) · Project Management Institute member · CAPM candidate. Named one of Canada's Best Fractional COO Services by Digital Reference 2026.</p>
-          <p style="font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--muted); line-height: 1.5; width: 100%; margin-bottom: 8px;">Verify credentials and work history:</p>
-          <a href="https://www.everyexpert.com/elizabethlemoine" target="_blank" rel="noopener" class="profile-link">EveryExpert Profile ↗</a>
-          <a href="https://www.gofractional.com/r/elizabeth-anne-randell-lemoine" target="_blank" rel="noopener" class="profile-link">GoFractional Profile ↗</a>
-          <a href="https://www.linkedin.com/in/elizabethannelemoine" target="_blank" rel="noopener" class="profile-link">LinkedIn ↗</a>
-          <a href="/about.html" class="profile-link">About Elizabeth →</a>
-        </div>
 
       <div style="margin-top: 36px; overflow-x: auto;">
         <p style="font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--structural); margin-bottom: 14px;">How It Compares</p>
@@ -447,6 +442,30 @@ head_extra: |
       </div>
 
       <p style="font-family:'Outfit',sans-serif;font-size:14px;color:var(--muted);margin-top:24px;">Want to see how I work on my own tools? Read the <a href="/case-studies/">case studies</a>.</p>
+    </div>
+
+    <!-- ── CREDENTIALS ── -->
+    <div class="section-block" id="credentials">
+      <div class="section-divider"></div>
+      <p class="section-eyebrow">Credentials</p>
+      <h2 class="section-title">Who will I be working with?</h2>
+      <div class="answer-block"><p>I'm Elizabeth Lemoine, with 10+ years of director-level operations experience and 300+ initiatives across 115+ countries. Here are my credentials, and where you can check my work history.</p></div>
+      <ul class="cred-chips">
+        <li>Google Project Management</li>
+        <li>IBM Generative AI Specializations</li>
+        <li>Anthropic Claude</li>
+        <li>Cloud Computing Law (University of Pennsylvania)</li>
+        <li>Project Management Institute member</li>
+        <li>CAPM candidate</li>
+      </ul>
+      <p class="cred-note">Named one of Canada's Best Fractional COO Services by Digital Reference 2026.</p>
+      <p class="cred-verify-label">Check my work history</p>
+      <div class="profile-links">
+        <a href="https://www.everyexpert.com/elizabethlemoine" target="_blank" rel="noopener" class="profile-link">EveryExpert &#8599;</a>
+        <a href="https://www.gofractional.com/r/elizabeth-anne-randell-lemoine" target="_blank" rel="noopener" class="profile-link">GoFractional &#8599;</a>
+        <a href="https://www.linkedin.com/in/elizabethannelemoine" target="_blank" rel="noopener" class="profile-link">LinkedIn &#8599;</a>
+        <a href="/about.html" class="profile-link">About Elizabeth &rarr;</a>
+      </div>
     </div>
 
     <!-- ── SUPPORT & CANCELLATION ── -->
