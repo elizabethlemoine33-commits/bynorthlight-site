@@ -364,6 +364,11 @@ redirect_from:
   .cs-no li::before { content:"\2715"; color:var(--structural); }
   @media (max-width:760px) { .cs-grid,.cs-grid-2,.cs-shots { grid-template-columns:1fr; } }
 </style>
+
+<style>
+  .answer-block { background: var(--surface); border: 1px solid var(--border-2); border-left: 3px solid var(--glacial); border-radius: 0 8px 8px 0; padding: 16px 20px; margin: 0 0 1.6em; max-width: 760px; }
+  .answer-block p { font-family: 'Outfit', sans-serif; font-size: 15px; color: var(--haze); margin: 0; line-height: 1.7; }
+</style>
 </head>
 <body>
 
@@ -449,6 +454,7 @@ redirect_from:
     <div class="page-wrap">
       <section class="content-section" aria-labelledby="situation-heading">
         <h2 class="section-label" id="situation-heading">Situation</h2>
+        <div class="answer-block"><p>Northlight Meetings was built to turn three kinds of call, discovery calls, client progress calls, and internal or vendor calls, into filed notes, tasks and dates without redoing the work by hand.</p></div>
         <p class="cs-lead">A practice that runs on conversations creates a steady stream of after-call work. Discovery calls need to become scoping documents and proposals. Client progress calls need to become updated task lists. Internal and vendor calls need a clean record of what was decided.</p>
         <p class="cs-lead">In each case the work is the same: reconstructing what was said from notes and memory, while the conversation is still fresh and other work is waiting. Client calls contain sensitive information, so how a tool handles data matters as much as what it produces.</p>
       </section>
@@ -459,6 +465,7 @@ redirect_from:
     <div class="page-wrap">
       <section class="content-section" aria-labelledby="objective-heading">
         <h2 class="section-label" id="objective-heading">Objective</h2>
+        <div class="answer-block"><p>The goal was one tool with three modes, Discover, Progress and Notes, that records a call, extracts what matters, and files it only after review and approval.</p></div>
         <p class="cs-lead">One tool covering three kinds of call, so the after-call work happens once and in a consistent format. Every mode also produces action items, key dates and a draft follow-up email. Nothing is filed until the output has been reviewed and approved.</p>
         <div class="cs-grid">
           <div class="cs-card"><span class="cs-tag">Mode 01</span><h3>Discover</h3><p>A client's needs and pain points become a draft statement of work and proposal.</p></div>
@@ -643,6 +650,7 @@ redirect_from:
     <div class="page-wrap">
       <section class="content-section content-section-mid" aria-labelledby="decisions-heading">
         <h2 class="section-label" id="decisions-heading">Decisions and the reasoning</h2>
+        <div class="answer-block"><p>Four decisions shaped it: bring your own AI key, record both sides of the call, review before filing, and keep recordings on your own machine.</p></div>
         <div class="cs-grid-2">
           <div class="cs-card"><span class="cs-tag">Privacy</span><h3>Bring your own key</h3><p>The app uses the user's own AI account key instead of routing audio through a Northlight server. Nothing passes through anyone else's system. It also meant asking each user to set up their own key, which added friction. I chose privacy over convenience, and for client calls I would make the same choice again.</p></div>
           <div class="cs-card"><span class="cs-tag">Capture</span><h3>Record both sides of the call</h3><p>The app records the microphone and the other participant's audio at the same time, using a virtual audio cable. Because it records system audio, it works with any call software. This was the core technical problem, and it worked.</p></div>
@@ -658,6 +666,7 @@ redirect_from:
     <div class="page-wrap">
       <section class="content-section content-section-mid" aria-labelledby="bounds-heading">
         <h2 class="section-label" id="bounds-heading">What it does, and what it doesn't</h2>
+        <div class="answer-block"><p>It records and transcribes calls and files approved notes, tasks and dates. It never files anything without approval, and it never stores recordings on a Northlight server.</p></div>
         <div class="cs-grid-2">
           <div class="cs-card"><h3>What it does</h3>
             <ul class="cs-list cs-yes">
@@ -801,6 +810,7 @@ redirect_from:
     <div class="page-wrap">
       <section class="content-section" aria-labelledby="results-heading">
         <h2 class="section-label" id="results-heading">Results</h2>
+        <div class="answer-block"><p>A discovery call produced a solid proposal draft with about ten minutes of review. No formal time study was run, so no larger claim is made.</p></div>
         <p class="cs-lead">A discovery call produced a solid proposal draft with about ten minutes of review. I did not run a formal time study, so I make no claim beyond that.</p>
       </section>
     </div>
@@ -810,6 +820,7 @@ redirect_from:
     <div class="page-wrap">
       <section class="content-section" aria-labelledby="learned-heading">
         <h2 class="section-label" id="learned-heading">What I learned</h2>
+        <div class="answer-block"><p>Two lessons: privacy by design has a real usability cost, and a prototype that works for me is not a product other people can rely on.</p></div>
         <div class="cs-grid-2">
           <div class="cs-card"><h3>Privacy by design has a real usability cost</h3><p>It is worth being explicit about that trade-off before building it in, because users feel it on the first day.</p></div>
           <div class="cs-card"><h3>A working prototype is not a product</h3><p>A prototype that works for me is not something other people can rely on. The distance between the two is larger than the build itself.</p></div>

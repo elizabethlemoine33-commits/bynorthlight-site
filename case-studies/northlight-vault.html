@@ -331,6 +331,11 @@
   .cs-card p { font-family:'Outfit',sans-serif; font-size:14px; line-height:1.7; color:var(--haze); margin:0; }
   @media (max-width:760px) { .cs-grid-2 { grid-template-columns:1fr; } }
 </style>
+
+<style>
+  .answer-block { background: var(--surface); border: 1px solid var(--border-2); border-left: 3px solid var(--glacial); border-radius: 0 8px 8px 0; padding: 16px 20px; margin: 0 0 1.6em; max-width: 760px; }
+  .answer-block p { font-family: 'Outfit', sans-serif; font-size: 15px; color: var(--haze); margin: 0; line-height: 1.7; }
+</style>
 </head>
 <body>
 
@@ -412,6 +417,7 @@
     <div class="page-wrap">
       <section class="content-section" aria-labelledby="situation-heading">
         <h2 class="section-label" id="situation-heading">Situation</h2>
+        <div class="answer-block"><p>Northlight Vault is a free Windows app for people whose files are spread across Google Drive, OneDrive and Dropbox, so finding anything no longer means opening three browser tabs.</p></div>
         <p class="cs-lead">Most professionals who use cloud storage don't use just one service. They have Google Drive for one client, OneDrive for another, Dropbox from a previous role. Finding anything means opening three browser tabs, signing into each one, navigating separately, and hoping you remembered which service it's actually on.</p>
         <p class="cs-lead">Many unified-storage tools require write access, which is a hard no in most professional settings, sync files locally, which is slow and unnecessary, or charge a monthly fee for what should be a simple browsing problem.</p>
       </section>
@@ -422,6 +428,7 @@
     <div class="page-wrap">
       <section class="content-section" aria-labelledby="objective-heading">
         <h2 class="section-label" id="objective-heading">Objective</h2>
+        <div class="answer-block"><p>The aim was the simple version of the idea: read-only, local, free, and clear about what it does.</p></div>
         <p class="cs-lead">The simple version of the idea: read-only, local, free, and clear about what it does. A person should be able to find a file across all three services in one place, and an IT administrator should be able to approve it without a long conversation.</p>
       </section>
     </div>
@@ -432,6 +439,7 @@
     <div class="page-wrap">
       <section class="content-section content-section-mid" aria-labelledby="decisions-heading">
         <h2 class="section-label" id="decisions-heading">Decisions and the reasoning</h2>
+        <div class="answer-block"><p>Four decisions define Vault: it is read-only, it runs on your machine instead of a server, it is free permanently, and its privacy practices are easy to audit.</p></div>
         <div class="workflow-grid">
 
           <div class="workflow-card">
@@ -526,6 +534,7 @@
     <div class="page-wrap">
       <section class="content-section content-section-mid" aria-labelledby="how-heading">
         <h2 class="section-label" id="how-heading">How it works</h2>
+        <div class="answer-block"><p>Vault connects to each provider directly through its official API and OAuth 2.0 with read-only permissions, and it stores tokens encrypted on your machine.</p></div>
         <p style="font-family:'Outfit',sans-serif;font-size:15px;line-height:1.75;color:var(--haze);margin-bottom:28px;max-width:640px;">
           Vault connects to each cloud provider directly using their official APIs and OAuth 2.0. When a user connects an account, they authenticate in their browser through the provider's own login flow, Vault never sees or stores passwords.
         </p>
@@ -584,6 +593,7 @@
     <div class="page-wrap">
       <section class="content-section" aria-labelledby="results-heading">
         <h2 class="section-label" id="results-heading">Results</h2>
+        <div class="answer-block"><p>As of October 2026 the installer has been downloaded more than 70 times, counted by GitHub, with no promotion.</p></div>
         <p class="cs-lead">As of October 2026 the installer has been downloaded more than 70 times, counted by GitHub, with no promotion. That number includes repeat downloads and cannot show who installed the app or kept using it. By design, Vault sends nothing back to us, so we know the download count and little else.</p>
         <p class="cs-lead">We haven't asked for enough feedback yet, nor have we received any (negative) feedback. Version 1.0.1 adds a feedback request inside the app.</p>
       </section>
@@ -594,6 +604,7 @@
     <div class="page-wrap">
       <section class="content-section" aria-labelledby="learned-heading">
         <h2 class="section-label" id="learned-heading">What I learned</h2>
+        <div class="answer-block"><p>Two lessons: I did not know I could measure downloads, and privacy by design limits what you can learn about your users.</p></div>
         <div class="cs-grid-2">
           <div class="cs-card"><h3>I didn't know I could measure it</h3><p>I stopped promoting Vault because I had no data and assumed nobody wanted it. I didn't know the download count existed, because the places I looked didn't show it. Once I found it, it told a different story.</p></div>
           <div class="cs-card"><h3>Privacy by design limits what you can learn</h3><p>Not collecting usage data protects users, and it also means asking them directly is the only way to find out what they think. I should have built that request in from the start.</p></div>

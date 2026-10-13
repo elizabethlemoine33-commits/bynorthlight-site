@@ -363,6 +363,11 @@
   @media (max-width:900px) { .int-grid { grid-template-columns:repeat(2,1fr); } }
   @media (max-width:520px) { .int-grid { grid-template-columns:1fr; } }
 </style>
+
+<style>
+  .answer-block { background: var(--surface); border: 1px solid var(--border-2); border-left: 3px solid var(--glacial); border-radius: 0 8px 8px 0; padding: 16px 20px; margin: 0 0 1.6em; max-width: 760px; }
+  .answer-block p { font-family: 'Outfit', sans-serif; font-size: 15px; color: var(--haze); margin: 0; line-height: 1.7; }
+</style>
 </head>
 <body>
 
@@ -448,6 +453,7 @@
     <div class="page-wrap">
       <section class="content-section" aria-labelledby="situation-heading">
         <h2 class="section-label" id="situation-heading">Situation</h2>
+        <div class="answer-block"><p>Northlight OS exists because no off-the-shelf tool connected ClickUp, Gmail, Google Workspace, Slack and Claude the way a one-person practice works, so I built one.</p></div>
         <p class="cs-lead">Running a solo advisory and app development practice means constant context-switching. Tasks live in ClickUp. Client emails arrive in Gmail. Finances are scattered across bank statements and email receipts. Content ideas sit in Slack. No off-the-shelf tool connected all of that in a way that matched how a one-person practice works.</p>
         <p class="cs-lead">The options were to pay for several separate tools and check them all by hand, or to build the right tool. I built it.</p>
       </section>
@@ -458,6 +464,7 @@
     <div class="page-wrap">
       <section class="content-section" aria-labelledby="objective-heading">
         <h2 class="section-label" id="objective-heading">Objective</h2>
+        <div class="answer-block"><p>The goal was one place to see and run the practice, with repetitive work done overnight and a person approving everything that matters.</p></div>
         <p class="cs-lead">One place to see and run the whole practice, with the repetitive work done overnight and a person approving everything that matters. Four jobs in particular:</p>
         <div class="cs-grid-2">
           <div class="cs-card"><span class="cs-tag">01</span><h3>Overnight execution</h3><p>Tasks assigned to Claude in ClickUp are drafted or researched by morning, ready to review.</p></div>
@@ -630,6 +637,7 @@
     <div class="page-wrap">
       <section class="content-section content-section-mid" aria-labelledby="tabs-heading">
         <h2 class="section-label" id="tabs-heading">Also in the dashboard</h2>
+        <div class="answer-block"><p>The dashboard has seven areas: Home, Focus, Marketing, Finance, Compass, Capture and System.</p></div>
         <p class="cs-lead">The four workflows above are the headline features. The dashboard itself is organised into seven areas, and each one does a job of its own.</p>
         <div class="cs-grid">
           <div class="cs-card"><span class="cs-tag">Area 01</span><h3>Home</h3><p>A morning command centre: what Claude finished overnight, what needs attention now, today's calendar, project health and the inbox. Goals, a wins board and an automatic weekly review every Friday also live here.</p></div>
@@ -649,6 +657,7 @@
     <div class="page-wrap">
       <section class="content-section content-section-mid" aria-labelledby="boards-heading">
         <h2 class="section-label" id="boards-heading">The advisory board and the marketing round table</h2>
+        <div class="answer-block"><p>The advisory board and the marketing round table are two groups of AI personas that debate a question, while a secretary who never debates writes up the decision and saves it to Google Drive.</p></div>
         <p class="cs-lead">Two groups of AI personas sit inside the dashboard. I give each group a question, they present their views and debate, and a secretary who never takes part in the debate writes up the decision. The record is saved to Google Drive. Each persona sees only the information relevant to its role, and each is built to challenge the idea, never the person holding it.</p>
         <div class="cs-grid-2">
           <div class="cs-card"><span class="cs-tag">Advisory board</span><h3>Business decisions</h3><p>A CFO, a Chief Privacy Officer, a CMO, a Founder Coach, a Technical and Product lead and a Strategy lead. The Founder Coach sees overdue and stale tasks to spot avoidance patterns, and the Technical and Product lead sees the open product backlogs.</p></div>
@@ -677,6 +686,7 @@
     <div class="page-wrap">
       <section class="content-section content-section-mid" aria-labelledby="integrations-heading">
         <h2 class="section-label" id="integrations-heading">Integrations</h2>
+        <div class="answer-block"><p>Northlight OS connects to sixteen tools, including ClickUp, Gmail, Google Workspace, Slack, GitHub, Buffer, Kit and Claude.</p></div>
         <p class="cs-lead">Northlight OS connects to sixteen tools, and all of them are part of how the system runs.</p>
         <div class="int-grid">
           <div class="int-tile"><div class="int-logo" aria-hidden="true"><img src="/assets/logos/clickup.svg" alt="" width="20" height="20" loading="lazy"></div><div><div class="int-name">ClickUp </div><div class="int-role">Tasks and projects</div></div></div>
@@ -767,6 +777,7 @@
     <div class="page-wrap">
       <section class="content-section content-section-mid" aria-labelledby="skills-heading">
         <h2 class="section-label" id="skills-heading">AI skills framework</h2>
+        <div class="answer-block"><p>Northlight OS runs more than twenty reusable Claude skills across content, operations and finance, and they can be chained together or run on their own.</p></div>
         <p style="font-family:'Outfit',sans-serif;font-size:15px;line-height:1.75;color:var(--haze);margin-bottom:28px;max-width:640px;">
           Northlight OS runs more than twenty reusable Claude skills, modular agents that can be chained together or run independently. Tasks in ClickUp are assigned to a skill, and the system handles the rest. All of them are listed here.
         </p>
@@ -836,6 +847,7 @@
     <div class="page-wrap">
       <section class="content-section" aria-labelledby="results-heading">
         <h2 class="section-label" id="results-heading">Results</h2>
+        <div class="answer-block"><p>The system has run daily since May 2026, handling overnight drafts and research, expense and revenue parsing, a morning briefing, and the two AI boards.</p></div>
         <p class="cs-lead">The system has run daily since May 2026. It handles overnight first drafts and research, parses expense and revenue emails, produces a morning briefing, and runs the advisory board and the marketing round table. It has also failed in instructive ways, and most of what I learned came from those failures.</p>
       </section>
     </div>
@@ -845,6 +857,7 @@
     <div class="page-wrap">
       <section class="content-section" aria-labelledby="learned-heading">
         <h2 class="section-label" id="learned-heading">What I learned</h2>
+        <div class="answer-block"><p>The biggest lesson is to check the output, not the status: a pipeline once reported 12 posts as ready when 10 of them had no copy.</p></div>
         <div class="cs-grid-2">
           <div class="cs-card"><h3>Check the output, not the status</h3><p>The content pipeline once reported 12 posts as ready. On inspection, 10 of them had no copy, only refusal messages. A status that says done tells you the process ran, not that it worked.</p></div>
           <div class="cs-card"><h3>Automation exposes the quality of the process</h3><p>I automated first drafts, and the drafts did not sound like me. I paused drafting and moved to a stories-first approach, where the ideas come from things that really happened.</p></div>
