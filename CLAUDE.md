@@ -34,5 +34,6 @@ The matching CSS classes in `blog/index.html` are:
 
 - Author is always Elizabeth Lemoine — hardcoded in `_layouts/post.html`
 - PIPEDA mentions must link to `https://www.priv.gc.ca/`
+- Quebec Law 25 mentions must link to CAI's Law 25 page (French only — no real English page exists): `https://www.cai.gouv.qc.ca/protection-renseignements-personnels/sujets-et-domaines-dinteret/principaux-changements-loi-25`
 - Registered entity name is "Northlight Advisory Services" — never shorten in schema, sameAs, or legal contexts
 - Internal links open in the same tab (no `target="_blank"`)
