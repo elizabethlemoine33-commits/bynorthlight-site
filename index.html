@@ -604,14 +604,20 @@
       "provider": { "@id": "https://bynorthlight.ca#northlight" },
       "areaServed": { "@type": "Country", "name": "Canada" },
       "url": "https://bynorthlight.ca/services.html",
-      "offers": {
-        "@type": "Offer",
-        "name": "Clarity Call",
-        "price": "99",
-        "priceCurrency": "CAD",
-        "availability": "https://schema.org/InStock",
-        "description": "A focused 60-minute session to define your challenge and explore what a Northlight engagement could look like."
-      }
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Embedded Advisory",
+          "availability": "https://schema.org/InStock",
+          "description": "Ongoing advisory of about 20 hours per month, embedded in your leadership team, after a free 30-minute Coffee Chat and an agreed plan."
+        },
+        {
+          "@type": "Offer",
+          "name": "On-Call Advisory",
+          "availability": "https://schema.org/InStock",
+          "description": "Up to 5 hours per month of advisory support for a flat monthly rate, after a free 30-minute Coffee Chat and an agreed plan."
+        }
+      ]
     }
   ]
 }
