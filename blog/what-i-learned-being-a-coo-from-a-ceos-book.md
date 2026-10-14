@@ -3,7 +3,7 @@ layout: post
 title: "What I Learned About Being a COO From a Book Written for CEOs"
 description: "Elizabeth Lemoine reads Cameron Herold's The Second in Command as both a COO and a founder — and finds a mirror she wasn't prepared for."
 seo_title: "COO Lessons From a CEO's Book"
-og_title: "What a CEO's Book Taught Me About Being a COO | Northlight"
+og_title: "What a CEO's Book Taught Me About Being a COO | Northlight Advisory Services"
 og_description: "Elizabeth Lemoine reads Cameron Herold's The Second in Command as both a COO and a founder — and finds a mirror she wasn't prepared for."
 date: 2026-08-15
 date_modified: "2026-08-15"

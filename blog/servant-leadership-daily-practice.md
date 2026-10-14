@@ -3,7 +3,7 @@ layout: post
 title: "I Don't Love the Term 'Servant Leadership.' Here's What I Keep."
 seo_title: "Servant Leadership: What I Keep"
 description: "The principles inside servant leadership are more useful than the term suggests. Here are the ones worth keeping — and what they look like in practice."
-og_title: "I Don't Love the Term 'Servant Leadership.' Here's What I Keep. | Northlight"
+og_title: "I Don't Love the Term 'Servant Leadership.' Here's What I Keep. | Northlight Advisory Services"
 og_description: "The principles inside servant leadership are more useful than the term suggests. Here are the ones worth keeping — and what they look like in practice."
 date: 2026-08-15
 date_modified: "2026-08-15"

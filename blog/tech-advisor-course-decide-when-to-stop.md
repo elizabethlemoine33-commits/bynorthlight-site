@@ -3,7 +3,7 @@ layout: post
 seo_title: "Tech Advisor Program Review"
 title: "What the Tech Advisor Course Gave Me: A Way to Decide When to Stop"
 description: "What the Tech Advisor Training Program taught me about exit strategy, and how it helped me decide when to stop building a tool."
-og_title: "What the Tech Advisor Course Gave Me: A Way to Decide When to Stop | Northlight"
+og_title: "What the Tech Advisor Course Gave Me: A Way to Decide When to Stop | Northlight Advisory Services"
 og_description: "What the Tech Advisor Training Program taught me about exit strategy, and how it helped me decide when to stop building a tool."
 date: 2026-10-13
 date_modified: "2026-10-13"
