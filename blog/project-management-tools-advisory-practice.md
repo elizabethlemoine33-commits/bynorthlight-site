@@ -3,7 +3,7 @@ layout: post
 seo_title: "How I Chose My PM Tool"
 title: "How I Chose a Project Management Tool for My Advisory Practice"
 description: "I evaluated 12 PM tools for a large organisation in 2022 and chose ClickUp. When I started Northlight, I didn't reopen the spreadsheet."
-og_title: "How I Chose a Project Management Tool for My Advisory Practice | Northlight"
+og_title: "How I Chose a Project Management Tool for My Advisory Practice | Northlight Advisory Services"
 og_description: "I evaluated 12 PM tools for a large organisation in 2022 and chose ClickUp. When I started Northlight, I didn't reopen the spreadsheet."
 date: 2026-08-10
 date_modified: "2026-08-10"

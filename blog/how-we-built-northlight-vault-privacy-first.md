@@ -123,6 +123,6 @@ What we can do is be trustworthy — actually, concretely, demonstrably trustwor
 
 That's the kind of organisation I want to build — one that has less to answer for because it asked less in the first place.
 
-*Northlight Vault is free to download at [bynorthlight.ca](/vault.html). If you have thoughts on this — or on privacy design more broadly — [just reply](mailto:hello@bynorthlight.ca). I'd like to hear them.*
+*Northlight Vault is free to download at [bynorthlight.ca](/vault.html). If you have thoughts on this — or on privacy design more broadly — [just reply](mailto:elizabeth@bynorthlight.ca). I'd like to hear them.*
 
 If you're curious about the advisory and strategy side of what Northlight Advisory Services does — beyond the tools — [this is the right place to start](/who-we-help.html).

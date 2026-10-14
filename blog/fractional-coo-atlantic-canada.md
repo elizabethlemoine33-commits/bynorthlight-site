@@ -2,7 +2,7 @@
 layout: post
 title: "Fractional COO Services in Atlantic Canada"
 description: "What a fractional COO does, what it costs, and who should hire one. Written for businesses in Halifax, Moncton, and Fredericton."
-og_title: "Fractional COO Services in Atlantic Canada | Northlight"
+og_title: "Fractional COO Services in Atlantic Canada | Northlight Advisory Services"
 og_description: "What a fractional COO does, what it costs, and who should hire one. Written for businesses in Halifax, Moncton, and Fredericton."
 date: 2026-07-21
 date_modified: "2026-08-08"
