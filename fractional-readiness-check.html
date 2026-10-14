@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -425,33 +427,33 @@
     }
     .aurora-ask-link:hover { color: var(--text); border-color: rgba(255,255,255,.3); }
 
-    .site-footer {
-      border-top: 1px solid var(--border);
-      padding: 28px 48px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 16px;
+    .footer-border { border-top: 1px solid var(--border); }
+    footer { padding: 32px 64px; max-width: 1280px; margin: 0 auto; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; }
+    .footer-left { display: flex; flex-direction: column; gap: 8px; }
+    .footer-copy { font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.1em; color: var(--muted); }
+    .footer-powered {
+      font-family: 'Jost', sans-serif; font-size: 13px; letter-spacing: 0.12em;
+      color: var(--muted); opacity: 0.8;
+      display: flex; align-items: center; gap: 10px;
     }
-    .footer-copy {
-      font-family: 'Jost', sans-serif;
-      font-size: 11px;
-      letter-spacing: .06em;
-      color: var(--structural);
-    }
-    .footer-links {
-      display: flex;
-      gap: 20px;
-    }
+    .footer-powered a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .footer-powered a:hover { color: var(--text); }
+    .footer-os-icon { width: 36px; height: 36px; flex-shrink: 0; border-radius: 8px; }
+    .footer-right { display: flex; flex-direction: column; align-items: flex-end; gap: 16px; }
+    .footer-links { display: flex; gap: 24px; list-style: none; flex-wrap: wrap; justify-content: flex-end; }
     .footer-links a {
-      font-family: 'Jost', sans-serif;
-      font-size: 11px;
-      letter-spacing: .06em;
-      color: var(--structural);
-      text-decoration: none;
+      font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.1em;
+      color: var(--muted); text-decoration: none; transition: color 0.2s;
     }
-    .footer-links a:hover { color: var(--muted); }
+    .footer-links a:hover { color: var(--text); }
+    .footer-social { display: flex; gap: 16px; list-style: none; align-items: center; }
+    .footer-social a {
+      font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.1em;
+      color: var(--muted); text-decoration: none;
+      display: flex; align-items: center; gap: 6px; transition: color 0.2s;
+    }
+    .footer-social a:hover { color: var(--text); }
 
     @media (max-width: 600px) {
       .site-header { padding: 16px 20px; }
@@ -459,13 +461,16 @@
       .tool-shell { padding: 40px 20px 80px; }
       .tool-title { font-size: 26px; }
       .result-card { padding: 18px 20px; }
-      .site-footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
+      footer { padding: 24px 20px; }
+      .footer-inner { flex-direction: column; gap: 24px; }
+      .footer-right { align-items: flex-start; }
+      .footer-links { justify-content: flex-start; }
     }
 
     @media print {
       .top-bar, .site-header, .tool-eyebrow, .tool-title, .tool-desc,
       .progress-track, .quiz-container, .result-actions, .aurora-ask,
-      .site-footer, .result-divider { display: none !important; }
+      .footer-border, .result-divider { display: none !important; }
       body { background: #fff; color: #111; font-family: Georgia, serif; }
       .result-container { display: block !important; }
       .result-eyebrow { color: #555; font-family: Helvetica, sans-serif; }
@@ -513,14 +518,7 @@
   <div id="result" class="result-container" style="display:none"></div>
 </main>
 
-<footer class="site-footer">
-  <span class="footer-copy">© 2026 Northlight Advisory Services</span>
-  <div class="footer-links">
-    <a href="/northlight-privacy.html">Privacy</a>
-    <a href="/blog/">Blog</a>
-    <a href="/contact">Contact</a>
-  </div>
-</footer>
+  {% include footer.html %}
 
 <script>
 const PART1 = [
