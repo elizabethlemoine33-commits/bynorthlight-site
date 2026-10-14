@@ -37,3 +37,4 @@ The matching CSS classes in `blog/index.html` are:
 - Quebec Law 25 mentions must link to CAI's Law 25 page (French only — no real English page exists): `https://www.cai.gouv.qc.ca/protection-renseignements-personnels/sujets-et-domaines-dinteret/principaux-changements-loi-25`
 - Registered entity name is "Northlight Advisory Services" — never shorten in schema, sameAs, or legal contexts
 - Internal links open in the same tab (no `target="_blank"`)
+- Email addresses (decided Oct 14 2026): `support@bynorthlight.ca` for privacy pages and privacy or data requests (and general support); `communications@bynorthlight.ca` for newsletter and social (Aurora Brief sender, subscription pages). `elizabeth@bynorthlight.ca` is allowed for personal contact, but avoid adding it to new pages. `hello@bynorthlight.ca` does not exist — never use it
