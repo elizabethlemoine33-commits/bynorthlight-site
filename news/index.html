@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+---
+---
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -119,6 +121,44 @@
       .footer-right { align-items: flex-start; }
       .footer-links { justify-content: flex-start; }
     }
+  
+    /* shared footer (matches _includes/footer.html) */
+    .footer-border { --muted: #99A1B6; }
+    .footer-border { border-top: 1px solid var(--border); }
+    footer { padding: 32px 64px; max-width: 1280px; margin: 0 auto; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; }
+    .footer-left { display: flex; flex-direction: column; gap: 8px; }
+    .footer-copy { font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.1em; color: var(--muted); }
+    .footer-powered {
+      font-family: 'Jost', sans-serif; font-size: 13px; letter-spacing: 0.12em;
+      color: var(--muted); opacity: 0.8;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .footer-powered a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .footer-powered a:hover { color: var(--text); }
+    .footer-os-icon { width: 36px; height: 36px; flex-shrink: 0; border-radius: 8px; }
+    .footer-right { display: flex; flex-direction: column; align-items: flex-end; gap: 16px; }
+    .footer-links { display: flex; gap: 24px; list-style: none; flex-wrap: wrap; justify-content: flex-end; }
+    .footer-links a {
+      font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.1em;
+      color: var(--muted); text-decoration: none; transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--text); }
+    .footer-social { display: flex; gap: 16px; list-style: none; align-items: center; }
+    .footer-social a {
+      font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.1em;
+      color: var(--muted); text-decoration: none;
+      display: flex; align-items: center; gap: 6px; transition: color 0.2s;
+    }
+    .footer-social a:hover { color: var(--text); }
+
+    @media (max-width: 1024px) { footer { padding: 32px 32px; } }
+    @media (max-width: 768px) {
+      footer { padding: 24px; }
+      .footer-inner { flex-direction: column; gap: 24px; }
+      .footer-right { align-items: flex-start; }
+      .footer-links { justify-content: flex-start; }
+    }
   </style>
 <style>
 .nav-wordmark,.wordmark{text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:4px;background:none;-webkit-text-fill-color:unset;color:unset;font-size:unset;letter-spacing:unset;}
@@ -210,34 +250,7 @@
     </div>
   </main>
 
-  <div class="footer-border">
-    <footer>
-      <div class="footer-inner">
-        <div class="footer-left">
-          <p class="footer-copy">© 2026 Northlight Advisory Services</p>
-          <p class="footer-powered"><img src="/northlight-os-icon.svg" alt="" role="presentation" class="footer-os-icon" width="36" height="36"><span>Powered by <a href="/">Northlight OS</a></span></p>
-        </div>
-        <nav aria-label="Footer navigation">
-          <div class="footer-right">
-            <ul class="footer-links">
-              <li><a href="/about.html">About</a></li>
-              <li><a href="/vault.html">Northlight Vault</a></li>
-              <li><a href="/meetings-privacy.html">Northlight Meetings</a></li>
-              <li><a href="/case-studies/">Case Studies</a></li>
-              <li><a href="/blog/">Blog</a></li>
-              <li><a href="/news/">In the News</a></li>
-              <li><a href="/northlight-privacy.html">Privacy Policy</a></li>
-              <li><a href="https://aurora-brief.kit.com/110f173cf7" target="_blank" rel="noopener">Aurora Brief</a></li>
-            </ul>
-            <ul class="footer-social">
-              <li><a href="https://www.linkedin.com/company/bynorthlight" aria-label="Northlight on LinkedIn" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a></li>
-              <li><a href="https://www.threads.com/@northlightcomms" aria-label="Northlight on Threads" target="_blank" rel="noopener">Threads</a></li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </footer>
-  </div>
+  {% include footer.html %}
 
 </body>
 </html>
