@@ -75,6 +75,10 @@
       .no-print-bar{display:none;}
       @page{margin:20mm 18mm;}
     }
+  
+    /* Privacy-law links (PIPEDA, GDPR, Law 25, BC/AB privacy) are always purple */
+    a[href*="priv.gc.ca"],a[href*="cai.gouv.qc.ca"],a[href*="gdpr.eu"],a[href*="eur-lex.europa.eu"],a[href*="oipc.bc.ca"],a[href*="oipc.ab.ca"],a[href*="priv.gc.ca"]:visited,a[href*="cai.gouv.qc.ca"]:visited,a[href*="gdpr.eu"]:visited,a[href*="eur-lex.europa.eu"]:visited,a[href*="oipc.bc.ca"]:visited,a[href*="oipc.ab.ca"]:visited{color:#6B4FB8 !important;border-bottom-color:rgba(107,79,184,.4) !important;}
+    a[href*="priv.gc.ca"]:hover,a[href*="cai.gouv.qc.ca"]:hover,a[href*="gdpr.eu"]:hover,a[href*="eur-lex.europa.eu"]:hover,a[href*="oipc.bc.ca"]:hover,a[href*="oipc.ab.ca"]:hover{color:var(--text,#fff) !important;}
   </style>
 <style>
 .nav-wordmark,.wordmark{text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:4px;background:none;-webkit-text-fill-color:unset;color:unset;font-size:unset;letter-spacing:unset;}

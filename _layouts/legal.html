@@ -164,6 +164,10 @@
       .footer-right { align-items: flex-start; }
       .footer-links { justify-content: flex-start; }
     }
+  
+    /* Privacy-law links (PIPEDA, GDPR, Law 25, BC/AB privacy) are always purple */
+    a[href*="priv.gc.ca"],a[href*="cai.gouv.qc.ca"],a[href*="gdpr.eu"],a[href*="eur-lex.europa.eu"],a[href*="oipc.bc.ca"],a[href*="oipc.ab.ca"],a[href*="priv.gc.ca"]:visited,a[href*="cai.gouv.qc.ca"]:visited,a[href*="gdpr.eu"]:visited,a[href*="eur-lex.europa.eu"]:visited,a[href*="oipc.bc.ca"]:visited,a[href*="oipc.ab.ca"]:visited{color:#8B6FD4 !important;border-bottom-color:rgba(139,111,212,.4) !important;}
+    a[href*="priv.gc.ca"]:hover,a[href*="cai.gouv.qc.ca"]:hover,a[href*="gdpr.eu"]:hover,a[href*="eur-lex.europa.eu"]:hover,a[href*="oipc.bc.ca"]:hover,a[href*="oipc.ab.ca"]:hover{color:var(--text,#fff) !important;}
   </style>
 
   <!-- Privacy-friendly analytics -->
