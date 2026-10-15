@@ -103,5 +103,5 @@ Once you know what's in play, you can figure out what needs a policy, what needs
 
 The businesses I see doing AI well aren't the ones who got there first — they're the ones who took enough time, early enough, to ask "what are we actually doing here, and does it make sense?" You can still be one of them.
 
-If you want help mapping out an AI strategy for your business — one that fits your actual team size, your tools, and your risk profile — [book a 30-minute coffee meeting](/coffee).
+If you want help mapping out an AI strategy for your business — one that fits your actual team size, your tools, and your risk profile — [book a free 30-minute Coffee Chat](/coffee).
 

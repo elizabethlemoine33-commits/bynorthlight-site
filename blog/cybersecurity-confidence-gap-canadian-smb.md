@@ -91,5 +91,5 @@ None of these require a security vendor, a consultant, or a budget conversation.
 
 None of these replaces a proper security assessment. But all three will give you an honest picture of where you stand — which is a better starting point than confidence built on assumption.
 
-If you want a more complete look — a structured assessment of where your security posture holds up and where an attacker would find the gaps — [book a 30-minute coffee meeting](/coffee) and we'll start there.
+If you want a more complete look — a structured assessment of where your security posture holds up and where an attacker would find the gaps — [book a free 30-minute Coffee Chat](/coffee) and we'll start there.
 

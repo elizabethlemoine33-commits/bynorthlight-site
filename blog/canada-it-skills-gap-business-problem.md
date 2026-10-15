@@ -81,5 +81,5 @@ Specifically, they've done three things:
 
 The IT skills gap is real, it's worsening, and it's not going to be solved by the national talent pipeline in time to help your business in the next 12 months. What you can control is how you manage the dependency you already have — and whether you're building the internal decision-making capability that keeps your operations resilient regardless of what's happening in the talent market.
 
-If you want to think through what that looks like for your specific situation, [book a 30-minute coffee meeting](/coffee).
+If you want to think through what that looks like for your specific situation, [book a free 30-minute Coffee Chat](/coffee).
 
