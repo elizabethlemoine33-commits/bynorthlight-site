@@ -25,7 +25,7 @@ head_extra: |
         "name": "Elizabeth Lemoine",
         "givenName": "Elizabeth",
         "familyName": "Lemoine",
-        "jobTitle": "Founder & Principal",
+        "jobTitle": "Fractional COO, Founder & Principal",
         "worksFor": { "@id": "https://bynorthlight.ca#northlight" },
         "address": {
           "@type": "PostalAddress",
@@ -45,10 +45,14 @@ head_extra: |
           "https://www.digitalreference.co/resume/elizabeth-lemoine-6zzlbgcq",
           "https://clutch.co/profile/northlight-advisory-services",
           "https://www.gofractional.com/r/elizabeth-anne-randell-lemoine",
-          "https://www.brownbook.net/user-profile/6453857"
+          "https://www.brownbook.net/user-profile/6453857",
+          "https://www.credly.com/users/elizabeth-randell-lemoine",
+          "https://www.salesforce.com/trailblazer/erandell",
+          "https://me.developers.google.com/u/105920909428240486985",
+          "https://github.com/Northlight-Advisory-Services"
         ],
-        "knowsAbout": ["Strategy","Operations","AI Adoption","Fractional Leadership","Enterprise Systems Implementation","Organisational Design","Program Delivery"],
-        "dateModified": "2026-07-29T00:00:00Z"
+        "knowsAbout": ["Fractional COO","Operations","AI Adoption","Canadian Privacy Compliance (PIPEDA, Quebec Law 25)","Strategy","Enterprise Systems Implementation","Organisational Design","Program Delivery"],
+        "dateModified": "2026-10-15T00:00:00Z"
       },
       {
         "@type": "Organization",
@@ -62,7 +66,7 @@ head_extra: |
           "addressRegion": "Nova Scotia",
           "addressCountry": "CA"
         },
-        "description": "Canadian strategy, advisory, AI adoption, and app development practice founded by Elizabeth Lemoine.",
+        "description": "Halifax, Nova Scotia fractional COO and operations advisory practice for Canadian founders and small businesses, with practical help on AI and Canadian privacy requirements. Founded by Elizabeth Lemoine.",
         "sameAs": [
           "https://www.linkedin.com/company/bynorthlight",
           "https://www.threads.com/@northlightcomms",
@@ -87,635 +91,286 @@ head_extra: |
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Who is Elizabeth Lemoine?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Elizabeth Lemoine is the founder and principal of Northlight Advisory Services, a Halifax, Nova Scotia–based strategy, advisory, AI adoption, and app development practice. Elizabeth Lemoine has over a decade of director-level experience across nonprofit, tech, and global organisations." }
+        "name": "What does Northlight Advisory Services do?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It helps Canadian founders and small leadership teams make clearer decisions, run better operations, use AI well, and handle Canadian privacy requirements. Most clients work with Elizabeth through Embedded Advisory (about 20 hours a month) or On-Call Advisory (up to 5 hours a month for a flat monthly rate)."
+        }
       },
       {
         "@type": "Question",
-        "name": "What is Northlight Advisory Services?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Northlight Advisory Services is a Halifax, Nova Scotia advisory practice founded by Elizabeth Lemoine. It provides strategy, fractional leadership, AI adoption guidance grounded in Canadian regulatory context (PIPEDA, Quebec Law 25), and purpose-built app development for small and mid-sized Canadian organisations. Northlight Advisory Services works primarily with founders and operators who need clear thinking they can act on quickly." }
+        "name": "Who does Elizabeth work with?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Primarily Canadian founders, directors, and operations leaders at small to mid-sized organisations, typically under 50 people, who have an operational challenge and need clear thinking they can act on quickly."
+        }
       },
       {
         "@type": "Question",
-        "name": "Where is Northlight Advisory Services located?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Northlight Advisory Services is based in Halifax, Nova Scotia, Canada, and operates fully remote. Elizabeth Lemoine leads all client work directly. Engagements are primarily with Canadian clients because the regulatory and funding landscape — PIPEDA, Quebec Law 25, programs like BDC LIFT — is specific to Canada and shapes most of the work." }
+        "name": "How does an engagement start?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "With a free 30-minute Coffee Chat, then a second conversation, then a plan we both agree on before any work begins."
+        }
       },
       {
         "@type": "Question",
-        "name": "What does Northlight Advisory Services specialize in?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Northlight Advisory Services specializes in strategy, AI adoption advisory grounded in Canadian regulatory context (PIPEDA, Quebec Law 25, OPC guidance), fractional leadership for founders and operators in transition, and purpose-built app development for small and mid-sized Canadian organisations. Work is direct — Elizabeth Lemoine leads every engagement personally, without delegating to junior staff." }
+        "name": "What is fractional leadership?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bringing in a senior operator, here Elizabeth, as an embedded part of your team for a defined period, without hiring a full-time executive. It suits organisations that need director-level operations or strategy capacity now but aren't ready to hire permanently."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Northlight Advisory Services build tools as well as advise?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Elizabeth has built and uses three production tools, Northlight Vault, Northlight Meetings, and Northlight OS, and can act as the go-between for your team and a developer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is Northlight Advisory Services based?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Founded and led by Elizabeth Lemoine in Halifax, Nova Scotia. Engagements are remote, with a focus on Canadian organisations, though geography is negotiable when the problem is specific."
+        }
       }
     ]
   }
   </script>
 
   <style>
-    .section-padded { padding: 72px 64px; max-width: 1280px; margin: 0 auto; }
-    .section-label {
-      font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500;
-      letter-spacing: 0.26em; text-transform: uppercase;
-      color: var(--muted); margin-bottom: 32px;
-    }
-
-    /* ── HERO — two column ── */
-    .about-hero {
-      padding: 72px 0 64px;
-      display: grid;
-      grid-template-columns: 340px 1fr;
-      gap: 72px;
-      align-items: start;
-    }
-
-    /* ── PHOTO ── */
-    .photo-col { display: flex; flex-direction: column; gap: 20px; }
-    .photo-wrap { position: relative; width: 100%; }
-    .photo-glow {
-      position: absolute; inset: -3px; border-radius: 50%;
-      background: linear-gradient(135deg, #4FC3C8 0%, #5B8DD9 33%, #8B6FD4 66%, #C46FAA 100%);
-      opacity: 0.5; filter: blur(12px); z-index: 0;
-    }
-    .photo-frame {
-      position: relative; z-index: 1; width: 100%; aspect-ratio: 1;
-      border-radius: 50%; overflow: hidden; border: 2px solid transparent;
-      background: linear-gradient(var(--surface), var(--surface)) padding-box,
-        linear-gradient(135deg, #4FC3C8 0%, #5B8DD9 33%, #8B6FD4 66%, #C46FAA 100%) border-box;
-    }
-    .photo-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .photo-name { font-family: 'Jost', sans-serif; font-size: 22px; font-weight: 600; letter-spacing: 0.04em; color: var(--text); text-align: center; }
-    .photo-title { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); text-align: center; margin-top: -14px; }
-    .photo-location { font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--muted); text-align: center; margin-top: -10px; }
-    .photo-cta {
-      display: block; font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 600;
-      letter-spacing: 0.1em; text-transform: uppercase; text-align: center;
-      background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 33%, #8B6FD4 66%, #C46FAA 100%);
-      color: #fff; text-decoration: none; padding: 12px 24px; border-radius: 4px;
-      transition: opacity 0.2s; margin-top: 4px;
-    }
-    .photo-cta:hover { opacity: 0.88; }
-    .photo-cta-subtext { font-family: 'Outfit', sans-serif; font-size: 13px; color: var(--structural); text-align: center; line-height: 1.6; margin-top: 8px; }
-
-    /* ── CREDENTIALS ROW ── */
-    .cred-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 18px; padding: 20px 0; border-top: 1px solid var(--border); }
-    .cred-item { display: inline-flex; align-items: center; gap: 7px; font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.14em; color: var(--structural); text-decoration: none; white-space: nowrap; transition: color 0.2s; }
-    .cred-item:hover { color: var(--cloud); }
-    a.cred-item:visited { color: var(--structural); }
-    .cred-item svg { opacity: 0.55; flex-shrink: 0; transition: opacity 0.2s; }
-    .cred-item:hover svg { opacity: 1; }
-    .cred-item--static { cursor: default; }
-
-    /* ── BIO COLUMN ── */
-    .bio-col { padding-top: 8px; }
-    .bio-eyebrow { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.26em; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; }
-    .bio-headline { font-family: 'Jost', sans-serif; font-size: 42px; font-weight: 600; letter-spacing: 0.03em; line-height: 1.08; color: var(--text); margin-bottom: 16px; }
-    .bio-subhead { font-family: 'Outfit', sans-serif; font-size: 16px; font-weight: 400; color: var(--haze); line-height: 1.65; margin-bottom: 28px; max-width: 560px; }
-    .bio-headline span { background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 33%, #8B6FD4 66%, #C46FAA 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .bio-body { font-size: 16px; color: var(--cloud); line-height: 1.8; display: flex; flex-direction: column; gap: 20px; }
-    .bio-body p { max-width: 640px; }
-    .bio-pull { font-family: 'Jost', sans-serif; font-size: 20px; font-weight: 600; letter-spacing: 0.02em; color: var(--text); line-height: 1.4; border-left: 2px solid; border-image: linear-gradient(180deg, #4FC3C8 0%, #8B6FD4 100%) 1; padding-left: 24px; margin: 8px 0; max-width: 560px; }
-    .bio-niche-heading { font-family: 'Jost', sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 0.03em; color: var(--glacial); line-height: 1.4; margin-bottom: 4px; margin-top: 4px; }
-
-    /* ── SELECTED RESULTS ── */
-    .results-cap-heading { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--glacial); margin-bottom: 12px; }
-
-    /* ── AT A GLANCE BOX ── */
-    .glance-box { background: var(--surface-2); border: 1px solid var(--border); border-left: 4px solid var(--glacial); border-radius: 6px; padding: 18px 24px; margin-bottom: 32px; }
-    .glance-eyebrow { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; background: linear-gradient(90deg, #4FC3C8, #8B6FD4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: inline-block; margin-bottom: 10px; }
-    .glance-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
-    .glance-list li { font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--cloud); line-height: 1.55; display: flex; gap: 8px; }
-    .glance-list li::before { content: '·'; color: var(--glacial); flex-shrink: 0; margin-top: 1px; }
-
-    /* ── BUILD ROW ── */
-    .build-row { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; overflow: hidden; position: relative; margin: 4px 0; max-width: 620px; }
-    .build-row::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%); }
-    .build-row-inner { padding: 18px 22px; display: flex; flex-direction: column; gap: 10px; }
-    .build-eyebrow { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
-    .build-tools { display: flex; flex-direction: column; gap: 6px; }
-    .build-tool { display: flex; align-items: baseline; gap: 10px; font-size: 14px; color: var(--cloud); line-height: 1.5; }
-    .build-tool-name { font-weight: 600; color: var(--text); white-space: nowrap; background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 33%, #8B6FD4 66%, #C46FAA 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; min-width: 160px; }
-    .build-desc { color: var(--haze); }
-
-    /* ── CREDENTIALS STRIP ── */
-    .credential-card { background: var(--surface); border: 1px solid var(--border); padding: 28px 24px; position: relative; transition: border-color 0.2s; }
-    .credential-card:hover { border-color: var(--border-2); }
-    .credential-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%); opacity: 0; transition: opacity 0.2s; }
-    .credential-card:hover::before { opacity: 1; }
-    .credential-number { font-family: 'Jost', sans-serif; font-size: 32px; font-weight: 600; letter-spacing: -0.01em; background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 33%, #8B6FD4 66%, #C46FAA 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 6px; }
-    .credential-label { font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600; color: var(--text); letter-spacing: 0.02em; margin-bottom: 6px; }
-    .credential-desc { font-size: 13px; color: var(--haze); line-height: 1.5; }
-
-    /* ── HOW WE WORK ── */
-    .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
-    .how-card { background: var(--surface); border: 1px solid var(--border); padding: 32px 28px; }
-    .how-step { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
-    .how-title { font-family: 'Jost', sans-serif; font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 10px; letter-spacing: 0.02em; }
-    .how-body { font-size: 14px; color: var(--haze); line-height: 1.7; }
-
-    /* ── EVERYEXPERT CTA BAND ── */
-    .everyexpert-card { background: var(--surface); border: 1px solid var(--border-2); border-left: 3px solid var(--glacial); padding: 22px 32px; display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: nowrap; }
-    .everyexpert-text { flex: 1; min-width: 0; }
-    .everyexpert-card h3 { font-family: 'Jost', sans-serif; font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
-    .everyexpert-card p { font-family: 'Outfit', sans-serif; font-size: 14px; color: var(--haze); line-height: 1.6; max-width: 480px; margin: 0; }
-    .btn-clarity { display: inline-block; flex-shrink: 0; font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 11px 22px; border: 1px solid var(--glacial); border-radius: 4px; color: var(--glacial); text-decoration: none; white-space: nowrap; transition: background 0.2s, color 0.2s; }
-    .btn-clarity:hover { background: var(--glacial); color: var(--deep-night); }
-
-    /* ── RECOGNITION CARD ── */
-    .recognition-card { display: flex; gap: 24px; align-items: flex-start; background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--glacial); border-radius: 10px; padding: 24px 28px; max-width: 640px; }
-    .recognition-badge { flex-shrink: 0; border-radius: 6px; width: 72px; height: auto; }
-    .recognition-card-body { display: flex; flex-direction: column; gap: 6px; }
-    .recognition-card-source { font-family: 'Jost', sans-serif; font-size: 10px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
-    .recognition-card-source span { color: var(--glacial); }
-    .recognition-card-headline { font-family: 'Jost', sans-serif; font-size: 15px; font-weight: 600; color: var(--cloud); }
-    .recognition-card-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
-    .recognition-card-link { font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--glacial); text-decoration: none; margin-top: 4px; }
-    .recognition-card-link:hover { color: var(--text); }
-
-    /* ── TESTIMONIALS ── */
-    .testimonial-list { display: flex; flex-direction: column; gap: 2px; }
-    .testimonial-card { background: var(--surface); border: 1px solid var(--border); padding: 28px 32px; position: relative; }
-    .testimonial-card::before { content: '\201C'; position: absolute; top: 16px; left: 24px; font-size: 48px; line-height: 1; font-weight: 700; color: var(--border-2); font-family: Georgia, serif; }
-    .testimonial-quote { font-size: 15px; color: var(--cloud); line-height: 1.75; padding-left: 28px; margin-bottom: 16px; }
-    .testimonial-attribution { display: flex; align-items: center; gap: 10px; padding-left: 28px; }
-    .testimonial-name { font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600; color: var(--text); text-decoration: none; letter-spacing: 0.02em; }
-    .testimonial-name:hover { color: var(--glacial); }
-    .testimonial-role { font-family: 'Outfit', sans-serif; font-size: 12px; color: var(--muted); }
-    .testimonial-dot { color: var(--border-2); font-size: 10px; }
-
-    /* ── FAQ ── */
-    .faq-list { display: flex; flex-direction: column; gap: 2px; }
-    .faq-item { border: 1px solid var(--border); background: var(--surface); overflow: hidden; }
-    .faq-question { width: 100%; background: none; border: none; display: flex; justify-content: space-between; align-items: center; padding: 22px 28px; cursor: pointer; text-align: left; gap: 16px; }
-    .faq-q-text { font-family: 'Jost', sans-serif; font-size: 15px; font-weight: 600; letter-spacing: 0.02em; color: var(--text); }
-    .faq-chevron { flex-shrink: 0; width: 18px; height: 18px; color: var(--muted); transition: transform 0.25s; }
-    .faq-item.open .faq-chevron { transform: rotate(180deg); }
-    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
-    .faq-item.open .faq-answer { max-height: 500px; }
-    .faq-answer-inner { padding: 20px 28px 24px; font-size: 14px; color: var(--haze); line-height: 1.75; border-top: 1px solid var(--border); }
-    .faq-answer-inner a, .faq-answer-inner a:visited { color: var(--glacial); text-decoration: underline; text-decoration-color: rgba(79,195,200,.35); text-underline-offset: 3px; }
-
-    /* ── CTA BAND ── */
-    .cta-band { background: var(--surface); border: 1px solid var(--border); padding: 48px 64px; display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap; max-width: 1280px; margin: 0 auto; }
-    .cta-band-left h2 { font-family: 'Jost', sans-serif; font-size: 28px; font-weight: 600; color: var(--text); margin-bottom: 10px; }
-    .cta-band-left p { font-size: 15px; color: var(--haze); max-width: 480px; }
-    .cta-primary { display: inline-block; font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 33%, #8B6FD4 66%, #C46FAA 100%); color: #fff; text-decoration: none; padding: 13px 28px; border-radius: 4px; transition: opacity 0.2s; white-space: nowrap; }
-    .cta-primary:hover { opacity: 0.88; }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 1024px) {
-      .about-hero { grid-template-columns: 280px 1fr; gap: 48px; }
-      .section-padded { padding: 72px 32px; }
-    }
-    .exp-wrapper.collapsed { display: none; }
-    .exp-toggle {
-      display: inline-block; margin-top: 10px;
-      background: linear-gradient(105deg, #4FC3C8 0%, #5B8DD9 33%, #8B6FD4 66%, #C46FAA 100%);
-      border: none; border-radius: 4px;
-      color: #fff; font-family: 'Jost', sans-serif; font-size: 13px;
-      font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
-      padding: 13px 28px; cursor: pointer; transition: opacity 0.2s;
-      text-align: center;
-    }
-    .exp-toggle:hover { opacity: 0.88; }
-    @media (max-width: 768px) {
-      .about-hero { grid-template-columns: 1fr; }
-      .photo-wrap { max-width: 260px; margin: 0 auto; }
-      .how-grid { grid-template-columns: 1fr; }
-      .everyexpert-card { flex-wrap: wrap; }
-      .experience-grid { grid-template-columns: 1fr !important; }
-      .exp-toggle { display: block; width: 100%; }
-    }
-    @media (max-width: 640px) {
-      .section-padded { padding: 48px 24px; }
-      .bio-headline { font-size: 32px; }
-      .cta-band { padding: 32px 24px; }
-    }
+    .ab-wrap{max-width:1240px;margin:0 auto;padding:56px 32px 24px;display:grid;grid-template-columns:290px 1fr;gap:52px}
+    @media(max-width:900px){.ab-wrap{grid-template-columns:1fr;padding:32px 24px 16px}}
+    .ab-rail{position:sticky;top:24px;align-self:start;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px 24px;text-align:center}
+    @media(max-width:900px){.ab-rail{position:static}}
+    .ab-photo{position:relative;width:170px;height:170px;margin:0 auto 18px}
+    .ab-photo:before{content:'';position:absolute;inset:-3px;border-radius:50%;background:linear-gradient(135deg,#4FC3C8 0%,#5B8DD9 33%,#8B6FD4 66%,#C46FAA 100%);opacity:.5;filter:blur(12px)}
+    .ab-photo img{position:relative;width:100%;height:100%;border-radius:50%;object-fit:cover;border:3px solid var(--surface-2)}
+    .ab-rail h2{font-family:'Jost',sans-serif;font-weight:600;font-size:24px;color:var(--text);margin:0 0 6px;line-height:1.3}
+    .ab-titles{list-style:none;margin:0 0 14px;padding:0;font-size:14px;color:var(--cloud);line-height:1.5}
+    .ab-titles li{padding:3px 0}
+    .ab-titles li.ab-org{color:var(--text);font-weight:500}
+    .ab-loc{font-size:13px;color:var(--muted);margin-bottom:18px}
+    .ab-btn{display:block;background:linear-gradient(105deg,#4FC3C8 0%,#5B8DD9 33%,#8B6FD4 66%,#C46FAA 100%);color:#fff !important;font-family:'Jost',sans-serif;font-weight:600;font-size:14px;letter-spacing:.04em;padding:13px 18px;border-radius:10px;margin-bottom:6px;text-decoration:none}
+    .ab-btn:visited,.ab-btn:hover{color:#fff !important}
+    .ab-btn small{display:block;font-family:'Outfit',sans-serif;font-weight:400;font-size:12px}
+    .ab-links{margin-top:18px;padding-top:16px;border-top:1px solid var(--border);font-size:13px;display:flex;flex-wrap:wrap;gap:8px 14px;justify-content:center}
+    .ab-links a{color:var(--muted);text-decoration:none}
+    .ab-links a:hover{color:var(--text)}
+    .ab-main a{color:var(--glacial);text-decoration:none}
+    .ab-main a:hover{color:var(--text)}
+    .ab-main h1{font-family:'Jost',sans-serif;font-weight:600;font-size:clamp(26px,3.4vw,36px);line-height:1.2;color:var(--text);margin:0 0 14px}
+    .ab-sub{font-size:18px;color:var(--cloud);margin:0 0 30px;max-width:760px}
+    .ab-label{font-family:'Jost',sans-serif;font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--glacial);margin:52px 0 16px}
+    .ab-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 20px}
+    @media(max-width:700px){.ab-stats{grid-template-columns:repeat(2,1fr)}}
+    .ab-stat{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px 18px}
+    .ab-stat b{display:inline-block;font-family:'Jost',sans-serif;font-weight:600;font-size:38px;background:linear-gradient(105deg,#4FC3C8 0%,#5B8DD9 33%,#8B6FD4 66%,#C46FAA 100%);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.1}
+    .ab-stat span{font-size:13.5px;color:var(--muted);line-height:1.4;display:block;margin-top:4px}
+    .ab-recog{display:flex;flex-wrap:wrap;gap:16px;align-items:center;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;margin:0 0 14px}
+    .ab-recog img{height:78px;width:auto;border-radius:8px}
+    .ab-recog p{margin:0;font-size:14.5px;flex:1;min-width:220px}
+    .ab-recog b{color:var(--text)}
+    .ab-ind{font-size:13px;color:var(--muted);margin:0}
+    .ab-quote{border-left:3px solid var(--dusk);padding:4px 0 4px 18px;margin:22px 0;font-size:18px;color:var(--text)}
+    .ab-main p{margin:0 0 14px}
+    .ab-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media(max-width:1000px){.ab-cards{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:640px){.ab-cards{grid-template-columns:1fr}}
+    .ab-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;display:block}
+    .ab-card h4{font-family:'Jost',sans-serif;font-weight:600;font-size:17px;color:var(--text);margin:0 0 8px}
+    .ab-card ul{margin:0;padding-left:18px;font-size:14.5px}
+    .ab-card li{margin-bottom:6px}
+    .ab-card p{margin:0;font-size:14.5px;color:var(--cloud)}
+    .ab-card .ab-more{display:block;margin-top:10px;font-size:13px;color:var(--glacial)}
+    .ab-built{border-color:rgba(79,195,200,.35)}
+    .ab-built a{display:block;padding:7px 0;border-top:1px solid var(--border);font-size:14.5px}
+    .ab-built a:first-of-type{border-top:0}
+    .ab-built a span{display:block;color:var(--muted);font-size:13px}
+    .ab-main details summary{cursor:pointer;color:var(--glacial);font-size:14px;margin-top:6px}
+    .ab-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:s}
+    @media(max-width:1000px){.ab-steps{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:560px){.ab-steps{grid-template-columns:1fr}}
+    .ab-step{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;counter-increment:s}
+    .ab-step:before{content:counter(s);display:flex;width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,#4FC3C8 0%,#5B8DD9 33%,#8B6FD4 66%,#C46FAA 100%);color:#fff;font-family:'Jost',sans-serif;font-weight:600;align-items:center;justify-content:center;margin-bottom:10px}
+    .ab-step b{display:block;font-family:'Jost',sans-serif;color:var(--text);margin-bottom:4px}
+    .ab-step p{margin:0;font-size:14.5px}
+    .ab-cred{display:flex;flex-wrap:wrap;gap:8px}
+    .ab-cred a,.ab-cred span{background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:6px 14px;font-size:13px;color:var(--cloud)}
+    .ab-cred a:hover{border-color:var(--glacial);color:var(--text)}
+    .ab-credlabel{font-size:13px;color:var(--muted);margin:16px 0 8px !important}
+    .ab-say{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    @media(max-width:700px){.ab-say{grid-template-columns:1fr}}
+    .ab-q{margin:0;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;font-size:15.5px;color:var(--text)}
+    .ab-q p{margin:0;color:var(--text)}
+    .ab-q cite{display:block;margin-top:12px;font-style:normal;font-size:13px;color:var(--muted)}
+    .ab-q .ab-full{font-size:14px;margin:8px 0 0;color:var(--cloud)}
+    .ab-more-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:14px}
+    @media(max-width:700px){.ab-more-list{grid-template-columns:1fr}}
+    .ab-faq details{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+    .ab-faq summary{margin:0 !important;color:var(--text) !important;font-family:'Jost',sans-serif;font-weight:500;font-size:16px !important}
+    .ab-faq p{margin:10px 0 0;font-size:15px}
+    .ab-full-exp{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:6px 20px;margin-top:14px}
+    .ab-full-exp summary{font-size:15px !important;padding:12px 0;margin:0 !important}
+    .ab-full-exp h5{font-family:'Jost',sans-serif;font-weight:600;font-size:15px;color:var(--text);margin:18px 0 6px}
+    .ab-full-exp ul{margin:0 0 6px;padding-left:18px;font-size:14.5px}
+    .ab-full-exp li{margin-bottom:5px}
+    .ab-full-exp p{font-size:14.5px;color:var(--muted)}
   </style>
+
 ---
-
 <main id="main-content">
+<div class="ab-wrap">
 
-    <!-- ═══ HERO ═══ -->
-    <div class="page-wrap">
-      <div class="about-hero">
+<aside class="ab-rail">
+  <div class="ab-photo"><img src="/EL-aurora.png" alt="Elizabeth Lemoine, Fractional COO and Founder of Northlight Advisory Services" width="170" height="170"></div>
+  <h2>Elizabeth Lemoine</h2>
+  <ul class="ab-titles">
+    <li>Fractional COO</li>
+    <li>Founder &amp; Principal</li>
+    <li class="ab-org">Northlight Advisory Services</li>
+  </ul>
+  <div class="ab-loc">Halifax, Nova Scotia · Remote</div>
+  <a class="ab-btn" href="/coffee.html">Book a free Coffee Chat<small>Thirty minutes, free, no pitch</small></a>
+  <div class="ab-links">
+    <a href="https://www.linkedin.com/in/elizabethannelemoine" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://www.digitalreference.co/resume/elizabeth-lemoine-6zzlbgcq" target="_blank" rel="noopener">Digital Reference</a>
+    <a href="https://www.everyexpert.com/elizabethlemoine" target="_blank" rel="noopener">EveryExpert</a>
+    <a href="https://www.gofractional.com/r/elizabeth-anne-randell-lemoine" target="_blank" rel="noopener">GoFractional</a>
+    <a href="https://clutch.co/profile/northlight-advisory-services" target="_blank" rel="noopener">Clutch</a>
+    <a href="https://www.crunchbase.com/organization/northlight-advisory-services" target="_blank" rel="noopener">Crunchbase</a>
+    <a href="https://www.outsourceaccelerator.com/company/northlight-advisory-services/" target="_blank" rel="noopener">Outsource Accelerator</a>
+  </div>
+</aside>
 
-        <!-- Photo column -->
-        <div class="photo-col">
-          <div class="photo-wrap">
-            <div class="photo-glow" role="presentation"></div>
-            <div class="photo-frame">
-              <img src="/EL-aurora.png" alt="Elizabeth Lemoine, Founder and Principal of Northlight Advisory Services">
-            </div>
-          </div>
-          <p class="photo-name">Elizabeth Lemoine</p>
-          <p class="photo-title">Founder &amp; Principal</p>
-          <p class="photo-location">Nova Scotia, Canada · Remote</p>
-          <a href="/coffee.html" class="photo-cta">Grab a virtual coffee</a>
-          <p class="photo-cta-subtext">A virtual coffee, no agenda required. Tell me what you're working on — no pitch, no pressure, just seeing if we're a fit or talking shop for 30 minutes.</p>
-          <div class="cred-row">
-            <a href="https://www.linkedin.com/in/elizabethannelemoine" target="_blank" rel="noopener" class="cred-item" aria-label="Elizabeth Lemoine on LinkedIn">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-              LinkedIn
-            </a>
-            <a href="https://www.threads.com/@northlightcomms" target="_blank" rel="noopener" class="cred-item" aria-label="Northlight on Threads">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.312-.883-2.371-.887h-.018c-.87 0-1.952.26-2.716 1.294l-1.694-1.252c1.083-1.464 2.715-2.193 4.41-2.193h.023c3.016.016 4.877 1.913 5.115 5.19.238.071.471.15.698.234 1.947.713 3.008 2.163 3.225 4.225.179 1.702-.198 4.403-2.628 6.797-1.82 1.79-4.133 2.684-6.835 2.706l-.034.001z"/></svg>
-              Threads
-            </a>
-            <a href="https://www.digitalreference.co/resume/elizabeth-lemoine-6zzlbgcq" target="_blank" rel="noopener" class="cred-item" aria-label="Elizabeth Lemoine on Digital Reference">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg>
-              Digital Reference
-            </a>
-            <a href="https://www.everyexpert.com/elizabethlemoine" target="_blank" rel="noopener" class="cred-item" aria-label="Elizabeth Lemoine on EveryExpert">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
-              EveryExpert
-            </a>
-            <a href="https://www.gofractional.com/r/elizabeth-anne-randell-lemoine" target="_blank" rel="noopener" class="cred-item" aria-label="Elizabeth Lemoine on GoFractional">
-              <svg width="14" height="14" viewBox="0 0 147 195" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M0 0h97.912v48.75H48.956V97.5H0V0Zm48.956 97.5h97.911v48.75H97.912V195H48.956V97.5Z"/></svg>
-              GoFractional
-            </a>
-            <a href="https://clutch.co/profile/northlight-advisory-services" target="_blank" rel="noopener" class="cred-item" aria-label="Northlight Advisory Services on Clutch">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1.5 14l-3.5-3.5 1.41-1.41L10.5 12.17l5.59-5.59L17.5 8l-7 7z"/></svg>
-              Clutch
-            </a>
-            <a href="https://www.crunchbase.com/organization/northlight-advisory-services" target="_blank" rel="noopener" class="cred-item" aria-label="Northlight Advisory Services on Crunchbase">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 0H2.4A2.41 2.41 0 0 0 0 2.4v19.2A2.41 2.41 0 0 0 2.4 24h19.2a2.41 2.41 0 0 0 2.4-2.4V2.4A2.41 2.41 0 0 0 21.6 0zM7.045 14.465A2.11 2.11 0 0 0 9.84 13.42h1.66a3.69 3.69 0 1 1 0-1.75H9.84a2.11 2.11 0 1 0-2.795 2.795zm11.345.845a3.55 3.55 0 0 1-1.06.63 3.68 3.68 0 0 1-3.39-.38v.38h-1.51V5.37h1.5v4.11a3.74 3.74 0 0 1 1.8-.63H16a3.67 3.67 0 0 1 2.39 6.46zm-.223-2.766a2.104 2.104 0 1 1-4.207 0 2.104 2.104 0 0 1 4.207 0z"/></svg>
-              Crunchbase
-            </a>
-            <span class="cred-item cred-item--static" aria-label="ClickUp Power User">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 18.439l3.69-2.828c1.961 2.56 4.044 3.739 6.363 3.739 2.307 0 4.33-1.166 6.203-3.704L22 18.405C19.298 22.065 15.941 24 12.053 24 8.178 24 4.788 22.078 2 18.439zM12.04 6.15l-6.568 5.66-3.036-3.52L12.055 0l9.543 8.296-3.05 3.509z"/></svg>
-              ClickUp Power User
-            </span>
-          </div>
-        </div>
+<div class="ab-main">
+  <h1>Fractional COO and AI adoption advisor for Canadian small businesses</h1>
+  <p class="ab-sub">Working with Canadian founder-led organisations to clarify direction, restructure operations, and adopt AI, with one person accountable from start to finish.</p>
 
-        <!-- Bio column -->
-        <div class="bio-col">
-          <p class="bio-eyebrow">Northlight Advisory Services · Founded 2026</p>
-          <h1 class="bio-headline">
-            <span>Elizabeth Lemoine —</span> Fractional COO and AI Adoption Advisor for Canadian Small Businesses
-          </h1>
-          <p class="bio-subhead">Working with Canadian founder-led organisations to clarify direction, restructure operations, and adopt AI — with one person accountable from start to finish.</p>
+  <div class="ab-stats">
+    <div class="ab-stat"><b>10+</b><span>years of director-level operations</span></div>
+    <div class="ab-stat"><b>6</b><span>regional offices in 6 countries, one operating model</span></div>
+    <div class="ab-stat"><b>115+</b><span>countries reached through events and programs</span></div>
+    <div class="ab-stat"><b>300+</b><span>complex initiatives led</span></div>
+    <div class="ab-stat"><b>$4M+</b><span>in annual financial oversight</span></div>
+    <div class="ab-stat"><b>3</b><span>production tools built and used daily</span></div>
+  </div>
+  <div class="ab-recog">
+    <img src="/assets/dr-badge-best-coo-2026.png" alt="Digital Reference: Best Fractional COO Services in Canada 2026" width="78" height="78">
+    <p><b>Digital Reference, 2026:</b> Best Fractional COO Services in Canada. <a href="/news/digital-reference-best-coo-2026.html">Read the feature →</a></p>
+  </div>
+  <p class="ab-ind">Professional services · nonprofits · faith-based organisations · education technology · membership organisations · founder-led businesses</p>
 
-          <!-- At a Glance -->
-          <div class="glance-box">
-            <p class="glance-eyebrow">At a Glance</p>
-            <ul class="glance-list">
-              <li>Elizabeth Lemoine is the founder and principal of Northlight Advisory Services, based in Halifax, Nova Scotia, Canada.</li>
-              <li>10+ years of director-level operations across nonprofit, tech, and global organisations — six countries, 300+ initiatives.</li>
-              <li>Credentials: PMI member · CAPM candidate · Google Project Management · IBM Generative AI Specializations (PM, Programs, Marketing) · Anthropic Claude · Cloud Computing Law (U of Penn) · ClickUp Expert.</li>
-              <li>Northlight Advisory Services serves Canadian founders and operations leaders, typically at organisations under 50 people.</li>
-            </ul>
-          </div>
+  <h2 class="ab-label">Which one sounds like your week?</h2>
+  <div class="ab-cards">
+    <a class="ab-card" href="/who-we-help/alone-at-the-top.html"><h4>Alone at the Top</h4><p>For the founder without a trusted team.</p><span class="ab-more">Read more →</span></a>
+    <a class="ab-card" href="/who-we-help/stuck-on-consensus.html"><h4>Stuck on Consensus</h4><p>For the leader with a team around them.</p><span class="ab-more">Read more →</span></a>
+    <a class="ab-card" href="/who-we-help/the-self-reliant-builder.html"><h4>The Self-Reliant Builder</h4><p>For the founder who decides alone, and wants a second pair of eyes.</p><span class="ab-more">Read more →</span></a>
+  </div>
+  <p style="margin:12px 0 0;font-size:14.5px">Not sure which is yours? <a href="/who-we-help.html">Take the one-minute quiz →</a></p>
 
-          <div class="bio-body">
-            <p>I'm Elizabeth Lemoine, founder of Northlight Advisory Services, based in Halifax, Nova Scotia. I work across strategy, software adoption, operations, and applied AI tools — not because I chase every new thing, but because those four things are almost always connected to the same problem.</p>
+  <h2 class="ab-label">Who I am</h2>
+  <p>I'm Elizabeth Lemoine, founder of Northlight Advisory Services in Halifax, Nova Scotia. I work across strategy, software adoption, operations, and applied AI, because those four things are almost always connected to the same problem.</p>
+  <div class="ab-quote">“Most organisations aren't drowning in problems. They're drowning in information and starving for direction.”</div>
+  <p>Northlight Advisory Services exists so new CEOs and founders have the support and resources they need to grow their ideas into the products and services that actually change things for the better.</p>
+  <p>I look at the whole picture, without an agenda, and work out what's going on, what matters, and what you do next. That might be a strategy decision, an operational redesign, an AI adoption plan, or a tool we build together. Most engagements touch more than one.</p>
+  <p>I build operations around Canadian privacy requirements: <a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/" target="_blank" rel="noopener">PIPEDA</a> federally, <a href="https://www.cai.gouv.qc.ca/protection-renseignements-personnels/sujets-et-domaines-dinteret/principaux-changements-loi-25" target="_blank" rel="noopener">Quebec's Law 25</a>, and the private-sector privacy acts in <a href="https://oipc.ab.ca/" target="_blank" rel="noopener">Alberta</a> and <a href="https://www.oipc.bc.ca/" target="_blank" rel="noopener">British Columbia</a>.</p>
+  <p>If you're one of the founders who should have that support and those resources, I'd genuinely like to hear what you're building. No jargon. No fog. Just the work.</p>
 
-            <blockquote class="bio-pull">
-              "Most organisations aren't drowning in problems. They're drowning in information and starving for direction."
-            </blockquote>
+  <h2 class="ab-label">What I've done and built</h2>
+  <div class="ab-cards">
+    <div class="ab-card"><h4>Strategy &amp; executive leadership</h4><ul>
+      <li>Executive partner to CEOs and executive directors: priority management, board materials, contract drafting, and strategic thought partnership across global organisations.</li>
+      <li>Advised founders, boards, and senior leadership on operational structure, systems design, and organisational decision-making.</li></ul></div>
+    <div class="ab-card"><h4>Systems &amp; technology</h4><ul>
+      <li>Led an organisation-wide ClickUp implementation, from needs assessment to a staff training guide adopted across every department.</li>
+      <li>Migrated Google Workspace to Microsoft 365, and Sage to Xero, with zero business interruption.</li>
+      <li>Led a Salesforce implementation covering programs, fundraising, and data integrity.</li></ul></div>
+    <div class="ab-card"><h4>Governance &amp; risk</h4><ul>
+      <li>Held executive responsibility for financial operations in a global nonprofit with more than $4M in annual revenue.</li>
+      <li>Authored governance manuals and board policies still in active use.</li>
+      <li>Established data protection and compliance frameworks aligned to regional requirements.</li></ul></div>
+    <div class="ab-card"><h4>People &amp; operations</h4><ul>
+      <li>Built employee handbooks, HR frameworks, and onboarding from scratch.</li>
+      <li>Served as executive operations partner to the CEO and CTO during a growth-stage SaaS platform transition.</li></ul></div>
+    <div class="ab-card"><h4>Operations at scale</h4><ul>
+      <li>Directed delivery of 300+ complex initiatives reaching 115+ countries: international conferences, executive programs, and global webinars.</li>
+      <li>Designed a federated operating model across six regional offices, covering charitable registration, payroll, compliance, and HR.</li></ul></div>
+    <div class="ab-card ab-built"><h4>Tools I've built</h4>
+      <a href="/case-studies/northlight-vault.html">Northlight Vault<span>Free, privacy-first cloud file browser →</span></a>
+      <a href="/meetings.html">Northlight Meetings<span>Call recording and AI action routing →</span></a>
+      <a href="/case-studies/northlight-os.html">Northlight OS<span>The practice's AI-native operating system →</span></a></div>
+  </div>
+  <p style="font-size:14.5px;margin:14px 0 0">Three production tools I use every day. It means I can act as the go-between for your team and a developer.</p>
+  <details class="ab-full-exp"><summary>Full experience breakdown</summary>
+    <p>Over the past decade, I've helped founder-led businesses, nonprofits, and growth-stage organisations turn strategy into operational reality. The industries have varied. The work has remained remarkably consistent: bringing clarity to complexity by designing systems, strengthening operations, and helping leadership teams execute with confidence.</p>
+    <h5>Strategy &amp; executive leadership</h5><ul><li>Executive partner to CEOs and executive directors: priority management, board materials, contract drafting, and strategic thought partnership across global organisations.</li><li>Translated strategic priorities into operational plans, governance frameworks, systems, and measurable execution across distributed teams.</li><li>Advised founders, boards, and senior leadership on operational structure, systems design, and organisational decision-making.</li></ul>
+    <h5>Systems &amp; technology</h5><ul><li>Managed the full migration from Google Workspace to Microsoft 365: transition planning, system configuration, OneDrive and SharePoint setup, and staff training, with zero business interruption.</li><li>Led a Sage to Xero migration during active operations: historical data migration, new chart of accounts, reporting infrastructure, and accounting systems rebuilt with external accountants.</li><li>Led an organisation-wide ClickUp implementation: needs assessment, full project charter, cross-department stakeholder engagement, an external implementation partner, and a staff training guide adopted across every department.</li><li>Led a Salesforce implementation covering programs, fundraising, and data integrity.</li></ul>
+    <h5>Governance &amp; risk</h5><ul><li>Held executive responsibility for financial operations within a global nonprofit with more than $4M in annual revenue, including budgeting, forecasting, board reporting, invoicing, collections, and charitable receipting.</li><li>Authored governance manuals, board policies, and board onboarding processes across multiple organisations, still in active use.</li><li>Established data protection and compliance frameworks, including Event Management Agreements and Data Processing Agreements aligned to regional regulatory requirements.</li><li>Supported charitable registration, payroll, HR, and financial infrastructure for new offices in the UK, Australia, and the United States.</li><li>Formalised financial controls, authority matrices, and budgeting processes for a provincial nonprofit.</li></ul>
+    <h5>People &amp; operations</h5><ul><li>Developed employee handbooks, HR frameworks, and onboarding processes from scratch for early-stage and growing organisations.</li><li>Served as executive operations partner to the CEO and CTO during a growth-stage SaaS platform transition, coordinating operational readiness across teams.</li><li>Oversaw 20+ multi-stakeholder civic and government engagement initiatives.</li></ul>
+    <h5>Operations at scale</h5><ul><li>Directed operational delivery for more than 300 complex initiatives across 115 countries, including international conferences, executive programs, and global webinars. Built the governance, logistics, vendor management, staffing, budgeting, and risk management systems required to operate consistently at international scale.</li></ul>
+  </details>
 
-            <p>Northlight Advisory Services exists so new CEOs and founders have the support and resources they need to grow their ideas into the products and services that actually change things for the better.</p>
+  <h2 class="ab-label">How we work</h2>
+  <div class="ab-steps">
+    <div class="ab-step"><b>A free Coffee Chat</b><p>Thirty minutes, no pitch. Tell me what you're working on and we'll see whether there's a fit.</p></div>
+    <div class="ab-step"><b>A second conversation</b><p>Before any recommendations, I get a clear picture of what's actually happening, including the problem underneath the one described.</p></div>
+    <div class="ab-step"><b>A plan we both agree on</b><p>Scope, hours, and what “done” looks like, settled before any work starts.</p></div>
+    <div class="ab-step"><b>Work that holds</b><p>Embedded Advisory (about 20 hours a month) or On-Call Advisory (up to 5 hours a month, flat monthly rate). Built to survive contact with reality.</p></div>
+  </div>
 
-            <p>I look at the whole picture — without an agenda — and work out what's actually going on, what matters, and what you do next. That might be a strategy decision, an operational redesign, an AI adoption plan, or a tool we build together. Most engagements end up touching more than one.</p>
+  <h2 class="ab-label">Credentials and learning</h2>
+  <div class="ab-cred">
+    <a href="https://www.credly.com/users/elizabeth-randell-lemoine" target="_blank" rel="noopener">PMI member · PMI learning badges</a>
+    <a href="https://www.salesforce.com/trailblazer/erandell" target="_blank" rel="noopener">Salesforce Trailblazer · Ranger · 163 badges</a>
+    <a href="https://www.credly.com/users/elizabeth-randell-lemoine" target="_blank" rel="noopener">Google Cloud: Gemini Enterprise application</a>
+    <a href="https://me.developers.google.com/u/105920909428240486985" target="_blank" rel="noopener">Google Developer Program</a>
+    <span>ClickUp Expert</span>
+  </div>
+  <p class="ab-credlabel">Selected certificates</p>
+  <div class="ab-cred">
+    <a href="https://verify.skilljar.com/c/bk88yzfwuj7t" target="_blank" rel="noopener">Claude 101 (Anthropic)</a>
+    <a href="https://verify.skilljar.com/c/x9tpn7n2q38i" target="_blank" rel="noopener">Introduction to agent skills (Anthropic)</a>
+    <a href="https://verify.skilljar.com/c/5ov6pi4cvawq" target="_blank" rel="noopener">Introduction to Claude Cowork (Anthropic)</a>
+    <a href="https://www.coursera.org/account/accomplishments/specialization/6WUENOK9LTB5" target="_blank" rel="noopener">IBM Generative AI for Program Managers</a>
+    <a href="https://www.coursera.org/account/accomplishments/specialization/1I4TBUMWAQMJ" target="_blank" rel="noopener">IBM Generative AI for Project Managers</a>
+    <a href="https://www.coursera.org/account/accomplishments/specialization/16M6JEJBL9HX" target="_blank" rel="noopener">IBM Generative AI for Digital Marketing</a>
+    <a href="https://www.coursera.org/account/accomplishments/specialization/V4K4CTY98QBS" target="_blank" rel="noopener">Google Project Management Professional Certificate</a>
+    <a href="https://www.coursera.org/account/accomplishments/specialization/4I6FQE9T9EID" target="_blank" rel="noopener">Regulatory Compliance (University of Pennsylvania)</a>
+    <a href="https://www.coursera.org/account/accomplishments/specialization/L6SFSPE6BCP5" target="_blank" rel="noopener">Cloud Computing Law (Queen Mary University of London)</a>
+    <a href="https://www.coursera.org/account/accomplishments/verify/JPQ3C7N6B2TS" target="_blank" rel="noopener">OKR Certification: Leadership and Goal Setting</a>
+    <a href="https://www.coursera.org/account/accomplishments/verify/N3AKW2JWPLP8" target="_blank" rel="noopener">Agile Project Management (Google)</a>
+  </div>
 
-            <h2 class="bio-niche-heading">Fractional COO services for Canadian founder-led businesses.</h2>
-
-            <div class="answer-block"><p>Elizabeth Lemoine is the founder of Northlight Advisory Services, a Halifax-based fractional advisory and AI adoption practice for Canadian small businesses. She brings 10+ years of director-level operations experience across 300+ initiatives and 115+ countries. Northlight Advisory Services is a registered Canadian business serving founders and operators navigating strategic and operational complexity.</p></div>
-
-            <p>I've spent over a decade in director-level operations — building governance frameworks, implementing enterprise systems, and running programs across six countries. That's the experience I bring. But I also build: Northlight Vault, Northlight Meetings, and Northlight OS are three production tools I've shipped and use daily. The AI thinking I bring to client work isn't theoretical. It's running.</p>
-
-            <div class="build-row">
-              <div class="build-row-inner">
-                <span class="build-eyebrow">What I've built</span>
-                <div class="build-tools">
-                  <div class="build-tool">
-                    <span class="build-tool-name">Northlight Vault</span>
-                    <span class="build-desc">Privacy-first cloud file browser — Google Drive, OneDrive, and Dropbox in one read-only app.</span>
-                  </div>
-                  <div class="build-tool">
-                    <span class="build-tool-name">Northlight Meetings</span>
-                    <span class="build-desc">Call-recording and AI analysis — captures audio, transcribes, extracts action items, routes output.</span>
-                  </div>
-                  <div class="build-tool">
-                    <span class="build-tool-name">Northlight OS</span>
-                    <span class="build-desc">AI-native operating system for the practice — ClickUp, Gmail, Slack, and Claude in one system.</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <p>If you're one of the founders who should have that support and those resources, I'd genuinely like to hear what you're building. No jargon. No fog. Just the work.</p>
-          </div>
-        </div>
-
-      </div>
+  <h2 class="ab-label">What people say</h2>
+  <div class="ab-say">
+      <blockquote class="ab-q"><p>“She has been an operational and administrative maestro. She sees the whole picture from a vision, to strategy, to operations.”</p><cite>Danny Graham, Chief Engagement Officer, Engage Nova Scotia</cite><details><summary>Read the full quote</summary><p class="ab-full">In my work with Elizabeth Lemoine she has been an operational and administrative maestro. She sees the whole picture from a vision, to strategy, to operations. She understands organizational dynamics and ensures work is properly prioritized and completed to a high standard. She was an important reason for our early success at Engage Nova Scotia &#8211; acting as a &#8220;Swiss Army knife&#8221;, for financial controls, board support, and was a wise advisor &#8211; ensuring consistent whole team alignment.</p></details></blockquote>
+      <blockquote class="ab-q"><p>“Elizabeth is masterful at sizing up the problems of start-up and small organizations and then getting them solved.”</p><cite>Anna Stuart, Executive Coach &amp; Leadership Mentor</cite><details><summary>Read the full quote</summary><p class="ab-full">Elizabeth is masterful at sizing up the problems of start-up and small organizations and then getting them solved. She has a long track record of creating and introducing right-sized systems and then skillfully equipping others to work within them. She is hardwired to serve others and there is yet to be a problem that she can&#8217;t tackle!</p></details></blockquote>
+      <blockquote class="ab-q"><p>“If you are thinking of it, need it or ask for it, she's either planning it, doing it or has it already done.”</p><cite>Danny King, Co-founder &amp; CEO, Accredible</cite><details><summary>Read the full quote</summary><p class="ab-full">If you are thinking of it, need it or ask for it, she's either planning it, doing it or has it already done. She's always willing to learn and grow, to be flexible, and to take on new challenges. I recommend her highly.</p></details></blockquote>
+      <blockquote class="ab-q"><p>“She understands that policies and frameworks have to work in the real world — not just look good on paper.”</p><cite>Donna Davis, Global Operations Manager, Divine Renovation</cite><details><summary>Read the full quote</summary><p class="ab-full">Elizabeth approaches governance, compliance, safeguarding, and data protection as much more than boxes to check. She understands that policies and frameworks have to work in the real world &#8212; not just look good on paper. She cares about getting things right, not simply getting them done, and I always knew I could trust her with work where the stakes were high. Elizabeth was excellent at creating processes that support real work and real growth, not theoretical policies or binders that sit unread on a shelf. She is someone I trusted deeply as a colleague, and I would wholeheartedly recommend her to any organization looking for someone of sound judgment, strong operational thinking, and commitment to building things that last.</p></details></blockquote>
+  </div>
+  <details style="margin-top:14px"><summary>Read more from clients and colleagues</summary>
+    <div class="ab-more-list">
+      <blockquote class="ab-q ab-q-more"><p>“Elizabeth is a hard-working talented team member. It&#8217;s tricky to balance both human caring and focused tenacity but Elizabeth is able to bring both to a team and to an organization. Elizabeth can be relied on to make things move and has a gift for seeing and naming details in larger complex projects. She is great at mapping out work not just for herself, but for teams around her. I&#8217;ve seen Elizabeth thrive at being the centre of an organization, traffic copping work and keeping people connected. In my years of working with Elizabeth, I was personally always grateful when she turned her tenacity in my direction to ensure that I wasn&#8217;t letting important things slip out of my line of sight.”</p><cite>Dan O&#8217;Rourke, Founder &amp; Former CEO</cite></blockquote>
+      <blockquote class="ab-q ab-q-more"><p>“She is able to take open ended aims and turn them into action independently. She is a great communicator and a natural organiser. Elizabeth brings humour, honesty and integrity to the team and combines that with an enviable work ethic.”</p><cite>Alan Heppenstall, CTO &amp; Co-founder, Accredible</cite></blockquote>
     </div>
+  </details>
 
-    <div class="aurora-divider" role="presentation"></div>
+  <h2 class="ab-label">Questions</h2>
+  <div class="ab-faq">
+    <details><summary>What does Northlight Advisory Services do?</summary><p>It helps Canadian founders and small leadership teams make clearer decisions, run better operations, use AI well, and handle Canadian privacy requirements. Most clients work with Elizabeth through Embedded Advisory (about 20 hours a month) or On-Call Advisory (up to 5 hours a month for a flat monthly rate).</p></details>
+    <details><summary>Who does Elizabeth work with?</summary><p>Primarily Canadian founders, directors, and operations leaders at small to mid-sized organisations, typically under 50 people, who have an operational challenge and need clear thinking they can act on quickly.</p></details>
+    <details><summary>How does an engagement start?</summary><p>With a free 30-minute Coffee Chat, then a second conversation, then a plan we both agree on before any work begins.</p></details>
+    <details><summary>What is fractional leadership?</summary><p>Bringing in a senior operator, here Elizabeth, as an embedded part of your team for a defined period, without hiring a full-time executive. It suits organisations that need director-level operations or strategy capacity now but aren't ready to hire permanently.</p></details>
+    <details><summary>Does Northlight Advisory Services build tools as well as advise?</summary><p>Yes. Elizabeth has built and uses three production tools, Northlight Vault, Northlight Meetings, and Northlight OS, and can act as the go-between for your team and a developer.</p></details>
+    <details><summary>Where is Northlight Advisory Services based?</summary><p>Founded and led by Elizabeth Lemoine in Halifax, Nova Scotia. Engagements are remote, with a focus on Canadian organisations, though geography is negotiable when the problem is specific.</p></details>
+  </div>
+</div>
 
-    <!-- ═══ CREDENTIALS ═══ -->
-    <section class="section-padded" aria-labelledby="credentials-label">
-      <h2 class="section-label" id="credentials-label">Experience &amp; background</h2>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:2px;">
-        <div class="credential-card">
-          <p class="credential-number">10+</p>
-          <p class="credential-label">Years in director-level operations</p>
-          <p class="credential-desc">Leading cross-functional delivery, enterprise systems, and organisational design across nonprofit, tech, and global organisations.</p>
-        </div>
-        <div class="credential-card">
-          <p class="credential-number">6</p>
-          <p class="credential-label">Regional offices under one operating model</p>
-          <p class="credential-desc">Designed and implemented a federated governance model — charitable registration, payroll, compliance, and HR across six countries.</p>
-        </div>
-        <div class="credential-card">
-          <p class="credential-number">115+</p>
-          <p class="credential-label">Countries reached through events</p>
-          <p class="credential-desc">300+ events — in-person sessions from 15 to 200, conferences of 450 to 800, global webinars to 7,000+. 5,000+ registrants annually.</p>
-        </div>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:2px;">
-        <div class="credential-card">
-          <p class="credential-number">PMI</p>
-          <p class="credential-label">Member · Google PM · OKR · Agile</p>
-          <p class="credential-desc">Google PM Specialization · OKR Leadership · Agile PM · Cloud Computing Law (U of Penn) · ClickUp Expert.</p>
-        </div>
-        <div class="credential-card">
-          <p class="credential-number">AI</p>
-          <p class="credential-label">Certified Practitioner · Builder</p>
-          <p class="credential-desc">IBM Gen AI Specializations (PM, Programs &amp; Marketing) · Anthropic Claude · Google Cloud Gen AI · Vibe Coding with Claude Code. Three production tools shipped.</p>
-        </div>
-      </div>
-    </section>
-
-    <div class="aurora-divider" role="presentation"></div>
-
-    <!-- ═══ SELECTED RESULTS ═══ -->
-    <section class="section-padded" aria-labelledby="results-label">
-      <h2 class="section-label" id="results-label">What this experience looks like in practice</h2>
-
-      <div style="max-width: 700px; display: flex; flex-direction: column; gap: 20px; margin-bottom: 48px; font-family: 'Outfit', sans-serif; font-size: 16px; color: var(--cloud); line-height: 1.8;">
-        <p>Over the past decade, I've helped founder-led businesses, nonprofits, and growth-stage organisations turn strategy into operational reality. The work has ranged from executive leadership and governance to technology implementations, financial oversight, AI adoption, and building the systems that allow organisations to scale confidently.</p>
-        <p>The industries have varied. The work has remained remarkably consistent: bringing clarity to complexity by designing systems, strengthening operations, and helping leadership teams execute with confidence.</p>
-      </div>
-
-      <button class="exp-toggle" onclick="toggleExperience(this)" aria-expanded="false">See experience breakdown ↓</button>
-      <div class="exp-wrapper collapsed">
-      <div class="experience-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; margin-bottom: 2px; margin-top: 10px;">
-        <div class="how-card">
-          <p class="results-cap-heading">Strategy &amp; Executive Leadership</p>
-          <ul class="glance-list">
-            <li>Executive partner to CEOs and executive directors — priority management, board materials, contract drafting, and strategic thought partnership across global organisations</li>
-            <li>Translated strategic priorities into operational plans, governance frameworks, systems, and measurable execution across distributed teams</li>
-            <li>Advised founders, boards, and senior leadership on operational structure, systems design, and organisational decision-making</li>
-          </ul>
-        </div>
-        <div class="how-card">
-          <p class="results-cap-heading">Systems &amp; Technology</p>
-          <ul class="glance-list">
-            <li>Managed full migration from Google Workspace to Microsoft 365 — transition planning, system configuration, OneDrive and SharePoint setup, and staff training delivered with zero business interruption</li>
-            <li>Led Sage to Xero migration during active operations — historical data migration, new chart of accounts, reporting infrastructure, and accounting systems rebuilt with external accountants</li>
-            <li>Led organisation-wide ClickUp implementation — needs assessment, full project charter, cross-department stakeholder engagement, external implementation partner, and a staff training guide adopted across every department</li>
-            <li>Led Salesforce implementation covering programs, fundraising, and data integrity</li>
-          </ul>
-        </div>
-        <div class="how-card">
-          <p class="results-cap-heading">Governance &amp; Risk</p>
-          <ul class="glance-list">
-            <li>Held executive responsibility for financial operations within a global nonprofit with more than $4M in annual revenue, including budgeting, forecasting, board reporting, invoicing, collections, and charitable receipting</li>
-            <li>Authored governance manuals, board policies, and board onboarding processes across multiple organisations — documentation still in active use</li>
-            <li>Established data protection and compliance frameworks including Event Management Agreements and Data Processing Agreements aligned to regional regulatory requirements</li>
-            <li>Supported charitable registration, payroll, HR, and financial infrastructure for new offices in the UK, Australia, and the United States</li>
-            <li>Formalised financial controls, authority matrices, and budgeting processes for a provincial nonprofit</li>
-          </ul>
-        </div>
-        <div class="how-card">
-          <p class="results-cap-heading">People &amp; Operations</p>
-          <ul class="glance-list">
-            <li>Developed employee handbooks, HR frameworks, and onboarding processes from scratch for early-stage and growing organisations</li>
-            <li>Served as executive operations partner to the CEO and CTO during a growth-stage SaaS platform transition, coordinating operational readiness across teams</li>
-            <li>Oversaw 20+ multi-stakeholder civic and government engagement initiatives</li>
-          </ul>
-        </div>
-        <div class="how-card">
-          <p class="results-cap-heading">Operations at Scale</p>
-          <ul class="glance-list">
-            <li>Directed operational delivery for more than 300 complex initiatives across 115 countries, including international conferences, executive programs, and global webinars. Built the governance, logistics, vendor management, staffing, budgeting, and risk management systems required to operate consistently at international scale.</li>
-          </ul>
-        </div>
-        <div class="how-card">
-          <p class="results-cap-heading">AI &amp; Product Development</p>
-          <ul class="glance-list">
-            <li>Designed, built, and use three production AI applications to operate Northlight Advisory Services every day: Northlight Vault (cloud file browser), Northlight Meetings (AI transcription and action routing), and Northlight OS (practice operating system connecting ClickUp, Gmail, Slack, and Claude)</li>
-          </ul>
-        </div>
-      </div>
-      </div>
-
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:24px;">
-        <div class="glance-box">
-        <p class="glance-eyebrow">At a Glance</p>
-          <ul class="glance-list">
-            <li>300+ operational initiatives led</li>
-            <li>Teams working across 115+ countries</li>
-            <li>$4M+ in annual financial oversight</li>
-            <li>Microsoft 365, Salesforce, ClickUp, Xero, and AI implementations</li>
-            <li>Governance frameworks, HR systems, and board operations</li>
-            <li>Three production AI applications built and used daily</li>
-          </ul>
-        </div>
-        <div class="glance-box">
-          <p class="glance-eyebrow">Experience across industries</p>
-          <ul class="glance-list">
-            <li>Professional services</li>
-            <li>Nonprofits</li>
-            <li>Faith-based organisations</li>
-            <li>Education technology</li>
-            <li>Membership organisations</li>
-            <li>Founder-led businesses</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <div class="aurora-divider" role="presentation"></div>
-
-    <!-- ═══ HOW NORTHLIGHT WORKS + CTA ═══ -->
-    <section class="section-padded" style="padding-bottom: 0;" aria-labelledby="how-label">
-      <h2 class="section-label" id="how-label">How Northlight works</h2>
-      <div class="how-grid" style="margin-bottom: 2px;">
-        <div class="how-card">
-          <p class="how-step">Step 01</p>
-          <h3 class="how-title">A direct conversation</h3>
-          <p class="how-body">Email is the best place to start. Tell me what you're working on — a paragraph is enough. No intake form, no automated sequence. A real conversation about whether there's a fit.</p>
-        </div>
-        <div class="how-card">
-          <p class="how-step">Step 02</p>
-          <h3 class="how-title">Clarity before anything else</h3>
-          <p class="how-body">Before any recommendations, I get a clear picture of what's actually happening — not just the problem as it was described, but the problem underneath it. That's usually where the real work is.</p>
-        </div>
-        <div class="how-card">
-          <p class="how-step">Step 03</p>
-          <h3 class="how-title">Work that holds</h3>
-          <p class="how-body">Strategy, systems, or tools — whatever you need, built to survive contact with reality. Decisions you can stand behind. Structures that scale.</p>
-        </div>
-      </div>
-      <div class="everyexpert-card" aria-labelledby="everyexpert-label">
-        <div class="everyexpert-text">
-          <h3 id="everyexpert-label">Ready when you are.</h3>
-          <p>45 minutes, one operational decision made. No framework to read later — just a clear next step.</p>
-        </div>
-        <a href="https://www.everyexpert.com/elizabethlemoine" class="btn-clarity" target="_blank" rel="noopener">
-          Book an Operational Clarity Call — $99
-        </a>
-      </div>
-    </section>
-
-    <div class="aurora-divider" role="presentation" style="margin-top: 72px;"></div>
-
-    <!-- ═══ RECOGNITION ═══ -->
-    <section class="section-padded" aria-labelledby="recognition-label">
-      <h2 class="section-label" id="recognition-label">Recognition</h2>
-      <div class="recognition-card">
-        <img src="/assets/dr-badge-best-coo-2026.png" alt="Digital Reference — Best Fractional COO Services in Canada 2026" class="recognition-badge" width="72" loading="lazy">
-        <div class="recognition-card-body">
-          <p class="recognition-card-source"><span>Digital Reference</span> &nbsp;·&nbsp; 2026</p>
-          <p class="recognition-card-headline">Best Fractional COO Services in Canada</p>
-          <p class="recognition-card-desc">Northlight Advisory Services named on Digital Reference's national list of top fractional COO practices, alongside recognition of Elizabeth Lemoine as a Founder to Watch in 2026.</p>
-          <a href="/news/digital-reference-best-coo-2026.html" class="recognition-card-link">Read the feature →</a>
-        </div>
-      </div>
-    </section>
-
-    <div class="aurora-divider" role="presentation"></div>
-
-    <!-- ═══ TESTIMONIALS ═══ -->
-    <section class="section-padded" aria-labelledby="testimonials-label">
-      <h2 class="section-label" id="testimonials-label">What people have said about working with Elizabeth</h2>
-      <div class="testimonial-list">
-        <div class="testimonial-card">
-          <p class="testimonial-quote">Elizabeth is masterful at sizing up the problems of start-up and small organizations and then getting them solved. She has a long track record of creating and introducing right-sized systems and then skillfully equipping others to work within them. She is hardwired to serve others and there is yet to be a problem that she can&#8217;t tackle!</p>
-          <div class="testimonial-attribution">
-            <a href="https://www.linkedin.com/in/elizabethannelemoine" class="testimonial-name" target="_blank" rel="noopener">Anna Stuart</a>
-            <span class="testimonial-dot">·</span>
-            <span class="testimonial-role">Executive Coach &amp; Leadership Mentor</span>
-          </div>
-        </div>
-        <div id="testimonials-more" style="display:none;">
-        <div class="testimonial-card">
-          <p class="testimonial-quote">Elizabeth is a hard-working talented team member. It&#8217;s tricky to balance both human caring and focused tenacity but Elizabeth is able to bring both to a team and to an organization. Elizabeth can be relied on to make things move and has a gift for seeing and naming details in larger complex projects. She is great at mapping out work not just for herself, but for teams around her. I&#8217;ve seen Elizabeth thrive at being the centre of an organization, traffic copping work and keeping people connected. In my years of working with Elizabeth, I was personally always grateful when she turned her tenacity in my direction to ensure that I wasn&#8217;t letting important things slip out of my line of sight.</p>
-          <div class="testimonial-attribution">
-            <a href="https://www.linkedin.com/in/elizabethannelemoine" class="testimonial-name" target="_blank" rel="noopener">Dan O&#8217;Rourke</a>
-            <span class="testimonial-dot">·</span>
-            <span class="testimonial-role">Founder &amp; Former CEO</span>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <p class="testimonial-quote">In my work with Elizabeth Lemoine she has been an operational and administrative maestro. She sees the whole picture from a vision, to strategy, to operations. She understands organizational dynamics and ensures work is properly prioritized and completed to a high standard. She was an important reason for our early success at Engage Nova Scotia &#8211; acting as a &#8220;Swiss Army knife&#8221;, for financial controls, board support, and was a wise advisor &#8211; ensuring consistent whole team alignment.</p>
-          <div class="testimonial-attribution">
-            <a href="https://www.linkedin.com/in/elizabethannelemoine" class="testimonial-name" target="_blank" rel="noopener">Danny Graham</a>
-            <span class="testimonial-dot">·</span>
-            <span class="testimonial-role">Chief Engagement Officer, Engage Nova Scotia</span>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <p class="testimonial-quote">If you are thinking of it, need it or ask for it, she's either planning it, doing it or has it already done. She's always willing to learn and grow, to be flexible, and to take on new challenges. I recommend her highly.</p>
-          <div class="testimonial-attribution">
-            <a href="https://www.linkedin.com/in/elizabethannelemoine" class="testimonial-name" target="_blank" rel="noopener">Danny King</a>
-            <span class="testimonial-dot">·</span>
-            <span class="testimonial-role">Co-founder &amp; CEO, Accredible</span>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <p class="testimonial-quote">She is able to take open ended aims and turn them into action independently. She is a great communicator and a natural organiser. Elizabeth brings humour, honesty and integrity to the team and combines that with an enviable work ethic.</p>
-          <div class="testimonial-attribution">
-            <a href="https://www.linkedin.com/in/elizabethannelemoine" class="testimonial-name" target="_blank" rel="noopener">Alan Heppenstall</a>
-            <span class="testimonial-dot">·</span>
-            <span class="testimonial-role">CTO &amp; Co-founder, Accredible</span>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <p class="testimonial-quote">Elizabeth approaches governance, compliance, safeguarding, and data protection as much more than boxes to check. She understands that policies and frameworks have to work in the real world &#8212; not just look good on paper. She cares about getting things right, not simply getting them done, and I always knew I could trust her with work where the stakes were high. Elizabeth was excellent at creating processes that support real work and real growth, not theoretical policies or binders that sit unread on a shelf. She is someone I trusted deeply as a colleague, and I would wholeheartedly recommend her to any organization looking for someone of sound judgment, strong operational thinking, and commitment to building things that last.</p>
-          <div class="testimonial-attribution">
-            <span class="testimonial-name">Donna Davis</span>
-            <span class="testimonial-dot">·</span>
-            <span class="testimonial-role">Global Operations Manager, Divine Renovation</span>
-          </div>
-        </div>
-        </div><!-- /testimonials-more -->
-        <button class="exp-toggle" onclick="toggleTestimonials(this)" aria-expanded="false" style="margin-top:16px;">Show 5 more testimonials ↓</button>
-      </div>
-    </section>
-
-    <div class="aurora-divider" role="presentation"></div>
-
-    <!-- ═══ FAQ ═══ -->
-    <section class="section-padded" aria-labelledby="faq-label">
-      <h2 class="section-label" id="faq-label">Frequently asked questions about Northlight Advisory Services</h2>
-      <div class="faq-list" role="list">
-
-        <div class="faq-item" role="listitem">
-          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-            <span class="faq-q-text">What does Northlight Advisory Services actually do?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer" role="region">
-            <div class="faq-answer-inner">Northlight Advisory Services works with Canadian businesses and organisations navigating real decisions — clarity problems, operational bottlenecks, AI adoption, and fractional leadership. The four service areas are Strategy, Advisory &amp; Fractional, AI Adoption, and Apps. In practice, most engagements touch more than one.</div>
-          </div>
-        </div>
-
-        <div class="faq-item" role="listitem">
-          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-            <span class="faq-q-text">Who does Elizabeth Lemoine work with?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer" role="region">
-            <div class="faq-answer-inner">Primarily Canadian founders, directors, and operations leaders at small-to-mid-sized organisations — typically under 50 people — who have an operational challenge and need clear thinking they can act on quickly. The ideal client is experienced, time-poor, and wants results instead of another report.</div>
-          </div>
-        </div>
-
-        <div class="faq-item" role="listitem">
-          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-            <span class="faq-q-text">What is fractional leadership and does Northlight offer it?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer" role="region">
-            <div class="faq-answer-inner">Fractional leadership means bringing in a senior operator — in this case, Elizabeth — as an embedded part of your team for a defined period, without hiring a full-time executive. It's well-suited to organisations that need director-level operations or strategy capacity right now but aren't ready to hire permanently. Northlight offers this as part of the Advisory service. <a href="/blog/what-is-fractional-executive-guide-canadian-businesses.html">Read: What Is a Fractional Executive? →</a></div>
-          </div>
-        </div>
-
-        <div class="faq-item" role="listitem">
-          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-            <span class="faq-q-text">Is Northlight a consulting firm?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer" role="region">
-            <div class="faq-answer-inner">Technically yes, though the work looks different from what that usually means. The work is direct and specific — built to end in a decision made, a system built, or a next step you can act on right away.</div>
-          </div>
-        </div>
-
-        <div class="faq-item" role="listitem">
-          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
-            <span class="faq-q-text">Where is Northlight based?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer" role="region">
-            <div class="faq-answer-inner">Northlight Advisory Services is founded and led by Elizabeth Lemoine, based in Halifax, Nova Scotia, Canada. All engagements are conducted remotely. The focus is Canadian organisations, though geography is negotiable when the problem is specific enough.</div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <div class="aurora-divider" role="presentation"></div>
-
-    <!-- ═══ CTA BAND ═══ -->
-    <div class="cta-band">
-      <div class="cta-band-left">
-        <h2>Ready to talk?</h2>
-        <p>Tell me what you're working on — a paragraph is enough. No intake form. No automated sequence. Just a direct conversation about whether there's a fit.</p>
-      </div>
-      <a href="mailto:support@bynorthlight.ca" class="cta-primary">Email Elizabeth</a>
-    </div>
-  <p style="font-family: 'Outfit', sans-serif; font-size: 12px; color: var(--structural); text-align: right; max-width: 1280px; margin: 12px auto; padding: 0 64px;">Last updated August 2026 &nbsp;·&nbsp; Halifax, Nova Scotia, Canada</p>
-
+</div>
 </main>
 
 <script>
