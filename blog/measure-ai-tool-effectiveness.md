@@ -123,5 +123,5 @@ You don't need a consultant to build an AI measurement practice. You need 30 min
 
 Thirty minutes, once a month, written down somewhere the team can see it. Over six months, you'll have a picture of what's working, what isn't, and what you should do next. That picture is worth far more than a vague sense that AI is probably helping.
 
-Not sure where to start? An AI assessment is a structured look at what tools you're using, whether they're delivering, and what a measurement approach looks like for your specific team. [Book a 30-minute coffee meeting](/coffee) and we'll build the picture together.
+Not sure where to start? An AI assessment is a structured look at what tools you're using, whether they're delivering, and what a measurement approach looks like for your specific team. [Book a free 30-minute Coffee Chat](/coffee) and we'll build the picture together.
 

@@ -104,5 +104,5 @@ What's worth paying for is understanding how your business is currently being de
 
 The businesses I see doing this well didn't get there through a single audit. They got there by treating content clarity as an ongoing practice — the same way they'd treat their Google profile or their website copy. It requires the same discipline, and it compounds the same way.
 
-If you want to talk through what this looks like for your specific business, [book a 30-minute coffee meeting](/coffee). We can start with what the models currently say about your category and work from there.
+If you want to talk through what this looks like for your specific business, [book a free 30-minute Coffee Chat](/coffee). We can start with what the models currently say about your category and work from there.
 

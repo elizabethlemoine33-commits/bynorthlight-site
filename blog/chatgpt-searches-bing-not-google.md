@@ -87,5 +87,5 @@ That's a different conversation — about how to write content that AI models ca
 
 But the Bing setup? Do that first. It's free, it takes ten minutes, and most of your competitors haven't done it yet.
 
-If you want to talk through what AI search visibility looks like for your specific business, [book a 30-minute coffee meeting](/coffee).
+If you want to talk through what AI search visibility looks like for your specific business, [book a free 30-minute Coffee Chat](/coffee).
 

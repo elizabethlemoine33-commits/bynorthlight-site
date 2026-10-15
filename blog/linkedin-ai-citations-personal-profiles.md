@@ -77,5 +77,5 @@ The businesses I see building AI citation footprints intentionally are not doing
 
 The alternative — putting everything through your company page and hoping — isn't a strategy. It's a habit.
 
-If you want to think through what a personal LinkedIn content strategy could look like for your specific business, [book a 30-minute coffee meeting](/coffee). This is one of the more accessible wins available right now, and it doesn't require a budget.
+If you want to think through what a personal LinkedIn content strategy could look like for your specific business, [book a free 30-minute Coffee Chat](/coffee). This is one of the more accessible wins available right now, and it doesn't require a budget.
 

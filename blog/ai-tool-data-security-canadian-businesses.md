@@ -123,5 +123,5 @@ You don't need a consultant to do an initial pass at this. Here's a straightforw
 
 That's a complete audit for a business that has never done one. It won't surface everything; it will surface the things that matter most.
 
-The downloadable checklist walks through these five checks in a format you can use with your team — including a quarterly review and a team onboarding section. If you'd like to discuss what a more thorough audit engagement looks like for your business, [book a 30-minute coffee meeting](/coffee) and we'll talk through it.
+The downloadable checklist walks through these five checks in a format you can use with your team — including a quarterly review and a team onboarding section. If you'd like to discuss what a more thorough audit engagement looks like for your business, [book a free 30-minute Coffee Chat](/coffee) and we'll talk through it.
 
