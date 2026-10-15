@@ -214,4 +214,4 @@ And for Northlight, I didn't need to choose it again.
 
 I'd already chosen it.
 
-<div class="callout">If you're working through this for your own practice and want to think it through with someone who's been there — <a href="/coffee.html">book a call</a>. Coffee, no pitch.</div>
+<div class="callout">If you're working through this for your own practice and want to think it through with someone who's been there — <a href="/coffee">book a call</a>. Coffee, no pitch.</div>
