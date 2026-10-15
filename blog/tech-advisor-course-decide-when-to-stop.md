@@ -76,4 +76,4 @@ I'm considering hosting a small, reasonably priced gathering for founders and fr
 - What time of day?
 - Does it need to be kid friendly?
 
-If you'd like to be part of something like this, [reach out](mailto:support@bynorthlight.ca). And if you'd rather start with a conversation, a [coffee chat](/coffee.html) is a good place to begin.
+If you'd like to be part of something like this, [reach out](mailto:support@bynorthlight.ca). And if you'd rather start with a conversation, a [coffee chat](/coffee) is a good place to begin.

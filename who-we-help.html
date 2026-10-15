@@ -265,7 +265,7 @@ head_extra: |
       <div class="cta-block">
         <p style="font-family:'Jost',sans-serif;font-size:18px;font-weight:600;color:var(--text);margin:0 0 8px;">Whichever one is yours, it starts getting better the same way.</p>
         <p style="font-size:15px;color:var(--haze);line-height:1.7;margin:0 0 18px;">A free 30-minute Coffee Chat. If it feels like a fit, we have a second, longer conversation and agree on a plan. Nothing starts until you're satisfied.</p>
-        <a href="/coffee.html" class="cta-direct">Book a Coffee Chat</a>
+        <a href="/coffee" class="cta-direct">Book a Coffee Chat</a>
         <p class="cta-supporting">Thirty minutes, free, no prep.</p>
       </div>
       <p class="hub-links">Want the detail on what the work looks like? Read <a href="/services.html">how we work together</a>.</p>
@@ -396,7 +396,7 @@ head_extra: |
       html += '<p class="quiz-result-label">This sounds like a mix</p><h3>' + winners.map(function (k) { return QUIZ_PAGES[k].name; }).join(' and ') + '</h3><p>More than one fits, which is common. Read both and see which sounds more like your week.</p>';
       winners.forEach(function (k) { html += '<a class="quiz-go" href="' + QUIZ_PAGES[k].url + '">' + QUIZ_PAGES[k].name + '</a> '; });
     }
-    html += '<p class="quiz-after">Either way, it starts with a free 30-minute <a href="/coffee.html">Coffee Chat</a>.</p>' +
+    html += '<p class="quiz-after">Either way, it starts with a free 30-minute <a href="/coffee">Coffee Chat</a>.</p>' +
             '<button type="button" class="quiz-again" onclick="quizReset()">Start over</button>';
     var out = document.getElementById('quiz-result');
     out.innerHTML = html;
