@@ -112,6 +112,11 @@ permalink: /coffee
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
     .section-intro { font-size: 15px; color: var(--haze); line-height: 1.7; margin-bottom: 40px; }
+    .coffee-faq { padding-top: 24px; }
+    .coffee-faq-title { font-family: 'Jost', sans-serif; font-weight: 600; font-size: 26px; letter-spacing: 0.03em; color: #FFFFFF; margin: 0 0 24px; }
+    .coffee-faq-q { font-family: 'Jost', sans-serif; font-weight: 600; font-size: 17px; letter-spacing: 0.03em; color: #FFFFFF; margin: 0 0 8px; }
+    .answer-block { background: #12121E; border: 1px solid #2A2A48; border-left: 3px solid #4FC3C8; border-radius: 0 6px 6px 0; padding: 14px 20px; margin: 0 0 24px; max-width: 780px; }
+    .answer-block p { font-family: 'Outfit', sans-serif; font-size: 15px; color: #BCC2DC; line-height: 1.7; margin: 0; }
 
     .calendar-wrap {
       background: #ffffff; border: 1px solid var(--border); border-radius: 10px;
@@ -174,6 +179,38 @@ permalink: /coffee
   .dropdown-menu a:hover { color: var(--text); background: var(--border); }
   .dropdown-divider { height: 1px; background: var(--border); margin: 4px 0; }
 </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is the Coffee Chat really free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The 30-minute conversation is free, with no pitch and no obligation. If it makes sense to keep talking, the next step is a second conversation and a plan we both agree on before any work begins."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens on the call?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We talk about what is stuck in your business: operations, a decision you are facing, how to use AI well, or privacy requirements that are slowing you down. I take notes, or record the call if you agree."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens after the Coffee Chat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If it feels like a fit, we book a second, longer conversation, and then I put together a plan we both agree on before any work begins. If it is not a fit, we leave it there."
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 
@@ -225,6 +262,16 @@ permalink: /coffee
       </div>
 
       <p class="calendar-fallback">If the scheduler doesn't load, <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1O--hmKjOKJCgIA4eaQeAhr5wJQwUe7osm45SUshS1oiu1X7Kv8DVqASoAraefaM1ZnDcb3wkX?gv=true" target="_blank" rel="noopener">book directly on Google Calendar</a>. Or reach us at <a href="mailto:support@bynorthlight.ca">support@bynorthlight.ca</a>.</p>
+    </section>
+
+    <section class="section-padded coffee-faq" aria-labelledby="coffee-faq-heading">
+      <h2 class="coffee-faq-title" id="coffee-faq-heading">Before you book</h2>
+      <h3 class="coffee-faq-q">Is the Coffee Chat really free?</h3>
+      <div class="answer-block"><p>Yes. The 30-minute conversation is free, with no pitch and no obligation. If it makes sense to keep talking, the next step is a second conversation and a plan we both agree on before any work begins.</p></div>
+      <h3 class="coffee-faq-q">What happens on the call?</h3>
+      <div class="answer-block"><p>We talk about what is stuck in your business: operations, a decision you are facing, how to use AI well, or privacy requirements that are slowing you down. I take notes, or record the call if you agree.</p></div>
+      <h3 class="coffee-faq-q">What happens after the Coffee Chat?</h3>
+      <div class="answer-block"><p>If it feels like a fit, we book a second, longer conversation, and then I put together a plan we both agree on before any work begins. If it is not a fit, we leave it there.</p></div>
     </section>
 
   </main>
