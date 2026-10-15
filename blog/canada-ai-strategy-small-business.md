@@ -100,4 +100,4 @@ That's the signal. Everything else, for now, is noise.
 
 If you're weighing this for your own business — whether LIFT fits, whether you have a real use case, or what to say to a sceptical client — reply to this Brief. Happy to think through it with you, no pitch attached.
 
-Or if you want to understand whether Northlight Advisory Services is the right fit for where you are right now, [start here](/who-we-help.html).
+Or if you want to understand whether Northlight Advisory Services is the right fit for where you are right now, [start here](/who-we-help).

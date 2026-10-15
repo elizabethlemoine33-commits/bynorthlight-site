@@ -192,4 +192,4 @@ You've thought about hiring a full-time COO, done the salary research, and reali
 
 If that's where you are, a fractional model might be exactly what fits. You get operational leadership when you need it, [structured as a retainer](https://kamyarshah.com/fractional-coo-rates-cost-breakdown/){:rel="noopener"} that scales with the work, without the overhead of a full-time executive hire.
 
-At Northlight, we work with businesses in Halifax, across Nova Scotia, and throughout Atlantic Canada to build the operational systems that let founders get back to the work they're best at. If you want to talk through whether fractional makes sense for your business specifically, [start here](/who-we-help.html).
+At Northlight, we work with businesses in Halifax, across Nova Scotia, and throughout Atlantic Canada to build the operational systems that let founders get back to the work they're best at. If you want to talk through whether fractional makes sense for your business specifically, [start here](/who-we-help).

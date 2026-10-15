@@ -46,7 +46,7 @@ faq:
   "author": {
     "@type": "Person",
     "name": "Elizabeth Lemoine",
-    "url": "https://bynorthlight.ca/about.html"
+    "url": "https://bynorthlight.ca/about"
   },
   "publisher": {
     "@type": "Organization",
@@ -125,4 +125,4 @@ That's the kind of organisation I want to build — one that has less to answer 
 
 *Northlight Vault is free to download at [bynorthlight.ca](/vault.html). If you have thoughts on this — or on privacy design more broadly — [just reply](mailto:elizabeth@bynorthlight.ca). I'd like to hear them.*
 
-If you're curious about the advisory and strategy side of what Northlight Advisory Services does — beyond the tools — [this is the right place to start](/who-we-help.html).
+If you're curious about the advisory and strategy side of what Northlight Advisory Services does — beyond the tools — [this is the right place to start](/who-we-help).

@@ -49,11 +49,11 @@ faq:
   "founder": {
     "@type": "Person",
     "name": "Elizabeth Lemoine",
-    "url": "https://bynorthlight.ca/about.html",
+    "url": "https://bynorthlight.ca/about",
     "jobTitle": "Founder and Principal",
     "sameAs": [
       "https://www.linkedin.com/in/elizabethannelemoine",
-      "https://bynorthlight.ca/about.html"
+      "https://bynorthlight.ca/about"
     ]
   },
   "address": {
@@ -80,7 +80,7 @@ faq:
   "givenName": "Elizabeth",
   "familyName": "Lemoine",
   "jobTitle": "Founder and Principal, Northlight Advisory Services",
-  "url": "https://bynorthlight.ca/about.html",
+  "url": "https://bynorthlight.ca/about",
   "worksFor": {
     "@type": "Organization",
     "name": "Northlight Advisory Services",
@@ -94,7 +94,7 @@ faq:
   },
   "sameAs": [
     "https://www.linkedin.com/in/elizabethannelemoine",
-    "https://bynorthlight.ca/about.html"
+    "https://bynorthlight.ca/about"
   ],
   "knowsAbout": ["business strategy", "operations", "AI adoption", "fractional COO", "nonprofit management", "Canadian business"]
 }

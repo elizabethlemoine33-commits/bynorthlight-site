@@ -51,7 +51,7 @@ faq:
   "author": {
     "@type": "Person",
     "name": "Elizabeth Lemoine",
-    "url": "https://bynorthlight.ca/about.html"
+    "url": "https://bynorthlight.ca/about"
   },
   "publisher": {
     "@type": "Organization",

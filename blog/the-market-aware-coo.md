@@ -37,7 +37,7 @@ faq:
     a: "If your COO cannot tell you what your top clients said about your service last quarter, what your conversion rate is at the point where prospects typically disappear, or what your marketing is learning about the market right now — that is worth paying attention to. It does not mean your COO is failing. It may mean the role has been defined too narrowly."
 ---
 
-<p class="author-note"><em>Elizabeth Lemoine is a fractional COO with 10+ years of director-level operations experience. <a href="/about.html">About Elizabeth →</a></em></p>
+<p class="author-note"><em>Elizabeth Lemoine is a fractional COO with 10+ years of director-level operations experience. <a href="/about">About Elizabeth →</a></em></p>
 
 I want to make an argument that might make some of my peers uncomfortable.
 
