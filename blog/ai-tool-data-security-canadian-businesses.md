@@ -47,6 +47,10 @@ This post is a practical guide to auditing your AI stack before you have a reaso
 
 ## Why tool connections are where most AI security risk lives
 
+<div class="answer-block">
+<p>For a small business using several AI tools, the biggest security risk is often the connections themselves. When you approve an AI tool's access to Google Workspace, you may be granting it your entire Drive, calendar, contacts and email history, depending on the permissions approved. Several such connections create data channels nobody designed or audited. NOVIPRO's 2026 IT Trends Report found that 82% of Canadian companies have security tools but only 58% have security policies and governance frameworks.</p>
+</div>
+
 The conversation about AI security usually starts with what AI tools can do wrong — hallucinations, biased outputs, overconfident recommendations. Those are real issues. But for a small business that's integrated five or six AI tools into its daily operations, the more pressing risk is simpler: the connections themselves.
 
 When you grant an AI tool access to your Google Workspace, you're not just giving it access to the file you're working on. Depending on the OAuth scope you approved — probably while clicking through a setup wizard at speed — you may have given it access to your entire Drive, your calendar, your contacts, your email history. The tool needs that access to function well; that's not a design flaw in how AI tools work. But it means the data available to the tool, and by extension to the vendor behind it, is often much broader than most users realize.
@@ -68,6 +72,10 @@ The mechanism is worth understanding, because once you see it you can't unsee it
 **Training data.** Some AI tools are explicit that user data improves the model. Others are opt-out. A few are opt-in only. This matters particularly if your team is feeding the tool proprietary information — client strategies, pricing models, unreleased product plans — because in some configurations, that content could theoretically inform outputs for other users.
 
 ## Five things to check before connecting any new tool
+
+<div class="answer-block">
+<p>Before connecting any new AI tool, check five things: what the OAuth grant actually includes, where data is stored and for how long, who on your team has admin access, the vendor's breach notification policy, and whether you have an incident response plan that covers AI tools. Do these checks before adopting the tool, not after.</p>
+</div>
 
 Make these five checks a standard part of your vendor evaluation — not after you've adopted the tool, but before.
 
@@ -92,6 +100,10 @@ Under [PIPEDA](https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/t
 If one of your integrated AI tools was breached tomorrow, what would you do in the first 24 hours? If the answer is "figure it out," you don't have an incident response plan. The [Canadian Centre for Cybersecurity](https://cyber.gc.ca/){:target="_blank" rel="noopener"} has practical incident response guidance for small and medium-sized organizations if you need a starting point.
 
 ## What PIPEDA says about sharing Canadian data with AI platforms
+
+<div class="answer-block">
+<p>Under PIPEDA, using client data in an AI tool needs a valid basis such as consent, disclosure to a third-party vendor needs appropriate safeguards (typically a data processing agreement), and cross-border transfers do not remove your accountability. Your privacy policy should reflect how personal data actually flows through your AI tools.</p>
+</div>
 
 Canada's federal [Personal Information Protection and Electronic Documents Act](https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/){:target="_blank" rel="noopener"} governs how organizations collect, use, and disclose personal information in the course of commercial activity. If you're a Canadian business handling personal information about Canadian individuals — which most businesses are — PIPEDA applies to you.
 
