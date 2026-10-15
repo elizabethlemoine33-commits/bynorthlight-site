@@ -22,7 +22,7 @@ FM_NOINDEX = re.compile(r"^noindex:\s*true\s*$", re.MULTILINE)
 def get_priority_and_freq(url_path):
     if url_path == "/":
         return "1.0", "weekly"
-    if url_path in ("/about.html", "/vault.html"):
+    if url_path in ("/about", "/vault.html"):
         return "0.9", "monthly"
     if url_path == "/blog/":
         return "0.8", "weekly"
@@ -101,7 +101,7 @@ def collect_urls():
 
 def sort_key(url):
     path = url[len(BASE_URL):]
-    fixed = {"/": 0, "/about.html": 1, "/vault.html": 2,
+    fixed = {"/": 0, "/about": 1, "/vault.html": 2,
              "/case-studies/": 3, "/blog/": 4}
     if path in fixed:
         return (fixed[path], path)

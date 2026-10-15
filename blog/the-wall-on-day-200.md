@@ -45,7 +45,7 @@ faq:
   "author": {
     "@type": "Person",
     "name": "Elizabeth Lemoine",
-    "url": "https://bynorthlight.ca/about.html"
+    "url": "https://bynorthlight.ca/about"
   },
   "publisher": {
     "@type": "Organization",
@@ -111,4 +111,4 @@ You're going to find out the thing won't work the way you thought it would. That
 
 Most of the founders who come to Northlight Advisory Services arrive around this point — not day one, when everything is still a sketch, but somewhere in the middle, when the thing is real enough that the constraints have become visible and the cost of getting it wrong has started to matter. That's the juncture fractional advisory work is built for: not to tell you what you should have done differently, but to help you scope the options clearly from where you actually are.
 
-If you're at one of those moments — re-examining a direction, a model, a plan — and want a thinking partner who's been inside organisations at that juncture, [start here to see if Northlight Advisory Services is the right fit](/who-we-help.html).
+If you're at one of those moments — re-examining a direction, a model, a plan — and want a thinking partner who's been inside organisations at that juncture, [start here to see if Northlight Advisory Services is the right fit](/who-we-help).

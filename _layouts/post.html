@@ -33,7 +33,7 @@
     "description": {{ page.description | jsonify }},
     "datePublished": "{{ page.date | date: '%Y-%m-%d' }}",
     "dateModified": "{{ page.date_modified | default: page.date | date: '%Y-%m-%d' }}",
-    "author": { "@type": "Person", "name": "Elizabeth Lemoine", "url": "https://bynorthlight.ca/about.html" },
+    "author": { "@type": "Person", "name": "Elizabeth Lemoine", "url": "https://bynorthlight.ca/about" },
     "publisher": { "@type": "Organization", "name": "Northlight Advisory Services", "url": "https://bynorthlight.ca" },
     "image": "https://bynorthlight.ca/northlight-og-image.png",
     "url": {{ page.url | prepend: site.url | jsonify }}
@@ -313,7 +313,7 @@
       <span class="source-label {{ page.source_class | default: 'source-aurora' }}">{{ page.source_label }}</span>
       {% endif %}
       <h1 class="post-title">{{ page.title }}</h1>
-      <p class="post-byline">By <a href="/about.html">Elizabeth Lemoine</a></p>
+      <p class="post-byline">By <a href="/about">Elizabeth Lemoine</a></p>
       <p class="post-date-line"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%B %-d, %Y" }}</time></p>
       <div class="aurora-divider" role="presentation"></div>
 

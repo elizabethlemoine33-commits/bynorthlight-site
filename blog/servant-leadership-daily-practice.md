@@ -38,7 +38,7 @@ faq:
     a: "You walk alongside them and build from what they are genuinely capable of. You create low-stakes opportunities to grow on harder things, without trying to manufacture the opposite of who someone is. And you pay attention — not just to the work, but to what the work is costing them, and whether the conditions around them are set up to let them succeed."
 ---
 
-<p class="author-note"><em>Elizabeth Lemoine is a fractional COO with 10+ years of director-level operations experience. <a href="/about.html">About Elizabeth →</a></em></p>
+<p class="author-note"><em>Elizabeth Lemoine is a fractional COO with 10+ years of director-level operations experience. <a href="/about">About Elizabeth →</a></em></p>
 
 There are some genuinely interesting principles inside the concept of servant leadership. Not all of them survive contact with the real world — but several do, and the ones that do are worth building into how you lead, every day.
 

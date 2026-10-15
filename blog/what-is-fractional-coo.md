@@ -51,7 +51,7 @@ faq:
   "author": {
     "@type": "Person",
     "name": "Elizabeth Lemoine",
-    "url": "https://bynorthlight.ca/about.html"
+    "url": "https://bynorthlight.ca/about"
   },
   "publisher": {
     "@type": "Organization",
@@ -64,7 +64,7 @@ faq:
 
 <div class="at-a-glance" aria-label="At a glance"><h2>At a glance</h2><ul><li>A fractional COO is a part-time operations executive who owns outcomes and stays accountable — not a consultant who delivers a report and exits</li><li>Typical engagements run 10–20 hours per week; pricing is scope-dependent and varies by business complexity and hours</li><li>You need one if you're the operational bottleneck and your team has outgrown your systems — but it's too early if you're still finding product-market fit</li><li>Fractional COOs work directly with your leadership team, make operational decisions, and build systems that let your business scale without you</li></ul></div>
 
-<p class="author-note"><em>Elizabeth Lemoine is a fractional COO with 10+ years of director-level operations experience working with Canadian businesses. <a href="/about.html">About Elizabeth →</a></em></p>
+<p class="author-note"><em>Elizabeth Lemoine is a fractional COO with 10+ years of director-level operations experience working with Canadian businesses. <a href="/about">About Elizabeth →</a></em></p>
 
 A fractional COO is a type of [fractional executive](/blog/what-is-fractional-executive-guide-canadian-businesses.html) — a senior operator who joins your executive team part-time and owns outcomes, rather than a consultant who hands you a deck and leaves. That's the whole answer. The rest of this post is for Canadian founders trying to figure out whether they actually need one.
 

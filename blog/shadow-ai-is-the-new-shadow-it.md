@@ -117,4 +117,4 @@ Shadow AI isn't going away. The tools are too useful, the behaviour is too embed
 
 You don't need a 40-page policy. You don't need a ban. You need to know what's happening. Start there.
 
-If you're trying to figure out whether Northlight Advisory Services is the right fit for where your organisation is right now, [start here](/who-we-help.html).
+If you're trying to figure out whether Northlight Advisory Services is the right fit for where your organisation is right now, [start here](/who-we-help).
