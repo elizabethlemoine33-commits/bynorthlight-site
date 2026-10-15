@@ -49,6 +49,10 @@ EOS Rocks exist to solve exactly this problem. A Rock is a specific, 90-day prio
 
 ## What Rocks Are
 
+<div class="answer-block">
+<p>An EOS Rock is a specific, 90-day priority: the most important thing one person must finish this quarter to move the business forward. A good Rock is specific, completable in 90 days, binary (done or not done), owned by one person, and genuinely important. Gino Wickman introduced the term in his 2011 book *Traction*, adapting the jar metaphor in which the big rocks go in first.</p>
+</div>
+
 The name comes from a metaphor most commonly associated with Stephen Covey's time-management work: if you need to fit rocks, pebbles, and sand into a jar, you have to put the big rocks in first. The pebbles fill in around them. The sand fills in around the pebbles. Start with the sand — the small urgent stuff — and the rocks never fit.
 
 Gino Wickman adapted this metaphor in his 2011 book [*Traction*](https://www.eosworldwide.com/traction-book), which introduced the Entrepreneurial Operating System (EOS). In EOS, a Rock is a specific, 90-day priority: the most important thing one person or team must complete this quarter to move the business forward.
@@ -62,6 +66,10 @@ Rocks share a few defining characteristics:
 5. **They are genuinely important.** Not tasks that would get done anyway, but priorities that require deliberate protection to survive the quarter.
 
 ## Why 90 Days
+
+<div class="answer-block">
+<p>EOS uses 90-day cycles because Wickman argues that roughly 90 days is as long as people can hold a single sprint of focused effort: long enough to accomplish something meaningful, short enough to keep urgency. A year is too long to hold one priority with focus, and a month is often too short to finish something substantial. Four quarters also give four deliberate moments a year to review what was accomplished and decide what matters next.</p>
+</div>
 
 The 90-day cycle is not arbitrary. Wickman argues in *Traction* that the human capacity to hold a single sprint of focused effort is roughly 90 days — long enough to accomplish something meaningful, short enough to maintain urgency.
 
@@ -132,6 +140,10 @@ Rocks that are never mentioned in a weekly meeting are Rocks that die quietly by
 
 ## The 80% Target
 
+<div class="answer-block">
+<p>In EOS, the target is to complete 80% of your Rocks in a quarter. A Rock set so that 100% completion is guaranteed is not ambitious enough, and a system that demands 100% teaches people to sandbag. Consistently at 100% suggests Rocks are too easy or off-track status is being underreported. Consistently below 80% suggests Rocks are too ambitious, too numerous, crowded out by business as usual, or lacking accountability.</p>
+</div>
+
 In EOS, Wickman's target is completing 80% of your Rocks in a given quarter — a number he set deliberately to reflect how businesses actually work, not as a consolation prize for missed goals.
 
 That number surprises people who are accustomed to goal-setting systems that treat anything less than 100% as failure. Wickman's logic is practical: a Rock set at a level of difficulty where 100% completion is guaranteed is not ambitious enough. The value of Rocks comes partly from the discipline of protecting real priorities — and real priorities sometimes lose, especially in smaller businesses where a single unexpected client issue or hiring delay can reshape a quarter.
@@ -145,6 +157,10 @@ What your completion rate tells you:
 A system that demands 100% will teach your team to sandbag — to set Rocks they know they'll finish, rather than Rocks that matter. The 80% target is a more honest accounting of how businesses actually work.
 
 ## Why Rock Implementations Fail
+
+<div class="answer-block">
+<p>Rock implementations usually fail for the same reasons: Rocks are set but never reviewed, there are too many of them (three to seven is a meaningful limit), they are tasks rather than priorities, there is no clear definition of done, ownership is shared, they are disconnected from strategy, or there is no parking lot for ideas that did not make the cut.</p>
+</div>
 
 The failure patterns for Rocks are as consistent as they are predictable.
 

@@ -128,6 +128,10 @@ The exercise works for any priority — pick something important you're carrying
 
 ## When to Use EOS Rocks
 
+<div class="answer-block">
+<p>Choose EOS Rocks when your main problem is execution discipline: the right priorities are already identified but keep dying mid-quarter. Rocks suit businesses of roughly 10 to 150 people, teams that want a simple shared language (done or not done), and leaders who want a full operating system rather than only a goal-setting layer.</p>
+</div>
+
 Choose Rocks when your primary problem is execution discipline — when the right priorities are already identified, but they keep dying mid-quarter.
 
 1. **Priorities are crowded out by business-as-usual.** If the important keeps losing to the urgent, the L10 accountability rhythm solves this in a way that's hard to replicate with OKRs alone.
@@ -138,6 +142,10 @@ Choose Rocks when your primary problem is execution discipline — when the righ
 
 ## When to Use OKRs
 
+<div class="answer-block">
+<p>Choose OKRs when your main problem is alignment and measurement: the team is unsure what success looks like, or different parts of the organisation are pulling in different directions. OKRs fit when you need to connect team work to company goals, measure outcomes rather than only completion, and have the capacity to write strong Key Results.</p>
+</div>
+
 Choose OKRs when your primary problem is alignment and measurement — when the team isn't sure what success looks like, or when different parts of the organisation are pulling in different directions.
 
 1. **You need cross-team strategic alignment.** OKRs make it possible to connect individual and team-level work to company-level goals in a visible, traceable way. Rocks don't do this.
@@ -147,6 +155,10 @@ Choose OKRs when your primary problem is alignment and measurement — when the 
 5. **You have the capacity to write strong Key Results.** The value of OKRs is in the Key Results. Vague Key Results — activities dressed up as outcomes — produce a weak OKR practice. This is the most common implementation failure and the thing worth being honest about before you start.
 
 ## Can You Use Both?
+
+<div class="answer-block">
+<p>Yes, if the scope of each is clearly separated. One pattern is Rocks for quarterly execution and OKRs for annual strategic goals; another is OKRs for company-level alignment and Rocks for individual accountability. The risk is overhead and ambiguity, so make clear which one governs what. This combination tends to become relevant at around 50 people and above; below that, one framework run well usually outperforms two run in parallel.</p>
+</div>
 
 Yes, and the combination can work well when the scope of each framework is clearly separated.
 

@@ -114,6 +114,10 @@ The other test worth applying: are your Key Results measuring *outcomes* or *out
 
 ## Why OKR Implementations Fail
 
+<div class="answer-block">
+<p>Research from the OKR Institute estimates that 60 to 70% of OKR implementations fail. The most common causes are trying to write perfect OKRs before running a first cycle, letting business as usual crowd out the work, setting too many OKRs, tying OKRs to compensation, writing Key Results that read like to-do lists, losing the link to strategy, and having no parking lot for good ideas that are not current priorities.</p>
+</div>
+
 [Research from the OKR Institute](https://okrinstitute.org/) estimates that 60–70% of OKR implementations fail. Some sources put the abandonment rate at 70% within two years. In advisory practice, the patterns are consistent and predictable.
 
 The most common failure modes, in order:
