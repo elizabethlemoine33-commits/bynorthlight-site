@@ -14,6 +14,7 @@ CANONICAL_PATTERN = re.compile(
     re.IGNORECASE
 )
 FM_PERMALINK = re.compile(r"^permalink:\s*(.+?)\s*$", re.MULTILINE)
+FM_CANONICAL = re.compile(r'^canonical:\s*["\']?(https?://[^"\'\s]+)["\']?\s*$', re.MULTILINE)
 FM_ROBOTS_NOINDEX = re.compile(r"^robots:.*noindex", re.MULTILINE)
 FM_UNPUBLISHED = re.compile(r"^published:\s*false\s*$", re.MULTILINE)
 FM_NOINDEX = re.compile(r"^noindex:\s*true\s*$", re.MULTILINE)
@@ -50,10 +51,16 @@ def collect_urls():
 
         # Get canonical URL
         canonical_match = CANONICAL_PATTERN.search(content)
-        if canonical_match:
-            canonical = canonical_match.group(1).rstrip("/")
+        canonical_value = canonical_match.group(1) if canonical_match else None
+        if canonical_value is None:
+            # Pages on a layout carry the canonical in front matter, not as a <link> tag
+            fm_match = FM_CANONICAL.search(content[:2000])
+            if fm_match:
+                canonical_value = fm_match.group(1)
+        if canonical_value:
+            canonical = canonical_value.rstrip("/")
             # Normalise trailing slash for index pages
-            if canonical_match.group(1).endswith("/"):
+            if canonical_value.endswith("/"):
                 canonical += "/"
             if not canonical.startswith(BASE_URL):
                 continue
