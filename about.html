@@ -158,117 +158,16 @@ head_extra: |
   }
   </script>
 
-  <style>
-    .ab-wrap{max-width:1240px;margin:0 auto;padding:56px 32px 24px;display:grid;grid-template-columns:290px 1fr;gap:52px}
-    @media(max-width:900px){.ab-wrap{grid-template-columns:1fr;padding:32px 24px 16px}}
-    .ab-rail{position:sticky;top:24px;align-self:start;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px 24px;text-align:center}
-    @media(max-width:900px){.ab-rail{position:static}}
-    .ab-photo{position:relative;width:170px;height:170px;margin:0 auto 18px}
-    .ab-photo:before{content:'';position:absolute;inset:-3px;border-radius:50%;background:linear-gradient(135deg,#4FC3C8 0%,#5B8DD9 33%,#8B6FD4 66%,#C46FAA 100%);opacity:.5;filter:blur(12px)}
-    .ab-photo img{position:relative;width:100%;height:100%;border-radius:50%;object-fit:cover;border:3px solid var(--surface-2)}
-    .ab-rail h2{font-family:'Jost',sans-serif;font-weight:600;font-size:24px;color:var(--text);margin:0 0 6px;line-height:1.3}
-    .ab-titles{list-style:none;margin:0 0 14px;padding:0;font-size:14px;color:var(--cloud);line-height:1.5}
-    .ab-titles li{padding:3px 0}
-    .ab-titles li.ab-org{color:var(--text);font-weight:500}
-    .ab-loc{font-size:13px;color:var(--muted);margin-bottom:18px}
-    .ab-btn{display:block;background:linear-gradient(105deg,#4FC3C8 0%,#5B8DD9 33%,#8B6FD4 66%,#C46FAA 100%);color:#fff !important;font-family:'Jost',sans-serif;font-weight:600;font-size:14px;letter-spacing:.04em;padding:13px 18px;border-radius:10px;margin-bottom:6px;text-decoration:none}
-    .ab-btn:visited,.ab-btn:hover{color:#fff !important}
-    .ab-btn small{display:block;font-family:'Outfit',sans-serif;font-weight:400;font-size:12px}
-    .ab-links{margin-top:18px;padding-top:16px;border-top:1px solid var(--border);font-size:13px;display:flex;flex-wrap:wrap;gap:8px 14px;justify-content:center}
-    .ab-links a{color:var(--muted);text-decoration:none}
-    .ab-links a:hover,.ab-links a:visited:hover{color:var(--text)}
-    .ab-links a:visited{color:var(--muted)}
-    .ab-main a{color:var(--glacial);text-decoration:none}
-    .ab-main a:hover{color:var(--text)}
-    .ab-main h1{font-family:'Jost',sans-serif;font-weight:600;font-size:clamp(26px,3.4vw,36px);line-height:1.2;color:var(--text);margin:0 0 14px}
-    .ab-sub{font-size:18px;color:var(--cloud);margin:0 0 30px;max-width:760px}
-    .ab-label{font-family:'Jost',sans-serif;font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--glacial);margin:52px 0 16px}
-    .ab-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 20px}
-    @media(max-width:700px){.ab-stats{grid-template-columns:repeat(2,1fr)}}
-    .ab-stat{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px 18px}
-    .ab-stat b{display:inline-block;font-family:'Jost',sans-serif;font-weight:600;font-size:38px;background:linear-gradient(105deg,#4FC3C8 0%,#5B8DD9 33%,#8B6FD4 66%,#C46FAA 100%);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.1}
-    .ab-stat span{font-size:13.5px;color:var(--muted);line-height:1.4;display:block;margin-top:4px}
-    .ab-recog{display:flex;flex-wrap:wrap;gap:16px;align-items:center;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px 20px;margin:0 0 14px}
-    .ab-recog img{height:78px;width:auto;border-radius:8px}
-    .ab-recog p{margin:0;font-size:14.5px;flex:1;min-width:220px}
-    .ab-recog b{color:var(--text)}
-    .ab-ind{font-size:13px;color:var(--muted);margin:0}
-    .ab-quote{border-left:3px solid var(--dusk);padding:4px 0 4px 18px;margin:22px 0;font-size:18px;color:var(--text)}
-    .ab-main p{margin:0 0 14px}
-    .ab-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    @media(max-width:1000px){.ab-cards{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:640px){.ab-cards{grid-template-columns:1fr}}
-    .ab-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;display:block}
-    .ab-card h3{font-family:'Jost',sans-serif;font-weight:600;font-size:17px;color:var(--text);margin:0 0 8px}
-    .ab-card ul{margin:0;padding-left:18px;font-size:14.5px}
-    .ab-card li{margin-bottom:6px}
-    .ab-card p{margin:0;font-size:14.5px;color:var(--cloud)}
-    .ab-card .ab-more{display:block;margin-top:10px;font-size:13px;color:var(--glacial)}
-    .ab-built{border-color:rgba(79,195,200,.35)}
-    .ab-built a{display:block;padding:7px 0;border-top:1px solid var(--border);font-size:14.5px}
-    .ab-built a:first-of-type{border-top:0}
-    .ab-built a span{display:block;color:var(--muted);font-size:13px}
-    .ab-main details summary{cursor:pointer;color:var(--glacial);font-size:14px;margin-top:6px}
-    .ab-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:s}
-    @media(max-width:1000px){.ab-steps{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:560px){.ab-steps{grid-template-columns:1fr}}
-    .ab-step{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;counter-increment:s}
-    .ab-step:before{content:counter(s);display:flex;width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,#4FC3C8 0%,#5B8DD9 33%,#8B6FD4 66%,#C46FAA 100%);color:#fff;font-family:'Jost',sans-serif;font-weight:600;align-items:center;justify-content:center;margin-bottom:10px}
-    .ab-step b{display:block;font-family:'Jost',sans-serif;color:var(--text);margin-bottom:4px}
-    .ab-step p{margin:0;font-size:14.5px}
-    .ab-cred{display:flex;flex-wrap:wrap;gap:8px}
-    .ab-cred a,.ab-cred span{background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:6px 14px;font-size:13px;color:var(--cloud)}
-    .ab-cred a:visited{color:var(--cloud)}
-    .ab-cred a:hover,.ab-cred a:visited:hover{border-color:var(--glacial);color:var(--text)}
-    .ab-credlabel{font-size:13px;color:var(--muted);margin:16px 0 8px !important}
-    .ab-say{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-    @media(max-width:700px){.ab-say{grid-template-columns:1fr}}
-    .ab-q{margin:0;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;font-size:15.5px;color:var(--text)}
-    .ab-q p{margin:0;color:var(--text)}
-    .ab-q cite{display:block;margin-top:12px;font-style:normal;font-size:13px;color:var(--muted)}
-    .ab-q .ab-full{font-size:14px;margin:8px 0 0;color:var(--cloud)}
-    .ab-more-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:14px}
-    @media(max-width:700px){.ab-more-list{grid-template-columns:1fr}}
-    .ab-faq details{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 18px;margin-bottom:10px}
-    .ab-faq summary{margin:0 !important;color:var(--text) !important;font-family:'Jost',sans-serif;font-weight:500;font-size:16px !important}
-    .ab-faq p{margin:10px 0 0;font-size:15px}
-    .ab-faq .answer-block{background:none;border:0;border-radius:0;padding:0;margin:0}
-    .ab-faq .answer-block p{margin:10px 0 0;font-size:15px;font-family:Outfit,sans-serif;color:rgb(200,204,224);line-height:1.75}
-    .ab-full-exp{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:6px 20px;margin-top:14px}
-    .ab-full-exp summary{font-size:15px !important;padding:12px 0;margin:0 !important}
-    .ab-full-exp h4{font-family:'Jost',sans-serif;font-weight:600;font-size:15px;color:var(--text);margin:18px 0 6px}
-    .ab-full-exp ul{margin:0 0 6px;padding-left:18px;font-size:14.5px}
-    .ab-full-exp li{margin-bottom:5px}
-    .ab-full-exp p{font-size:14.5px;color:var(--muted)}
-  </style>
 
 ---
+{% include about-styles.html %}
 <main id="main-content">
 <div class="ab-wrap">
 
-<aside class="ab-rail">
-  <div class="ab-photo"><img src="/EL-aurora.png" alt="Elizabeth Lemoine, Fractional COO and Founder of Northlight Advisory Services" width="170" height="170"></div>
-  <h2>Elizabeth Lemoine</h2>
-  <ul class="ab-titles">
-    <li>Fractional COO</li>
-    <li>Founder &amp; Principal</li>
-    <li class="ab-org">Northlight Advisory Services</li>
-  </ul>
-  <div class="ab-loc">Halifax, Nova Scotia · Remote</div>
-  <a class="ab-btn" href="/coffee">Book a free Coffee Chat<small>Thirty minutes, free, no pitch</small></a>
-  <div class="ab-links">
-    <a href="https://www.linkedin.com/in/elizabethannelemoine" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="https://www.digitalreference.co/resume/elizabeth-lemoine-6zzlbgcq" target="_blank" rel="noopener">Digital Reference</a>
-    <a href="https://www.everyexpert.com/elizabethlemoine" target="_blank" rel="noopener">EveryExpert</a>
-    <a href="https://www.gofractional.com/r/elizabeth-anne-randell-lemoine" target="_blank" rel="noopener">GoFractional</a>
-    <a href="https://clutch.co/profile/northlight-advisory-services" target="_blank" rel="noopener">Clutch</a>
-    <a href="https://www.crunchbase.com/organization/northlight-advisory-services" target="_blank" rel="noopener">Crunchbase</a>
-    <a href="https://www.outsourceaccelerator.com/company/northlight-advisory-services/" target="_blank" rel="noopener">Outsource Accelerator</a>
-    <a href="https://techbehemoths.com/company/northlight-advisory-services" target="_blank" rel="noopener" data-techbehemoths-verification>Verified on TechBehemoths</a>
-  </div>
-</aside>
+{% include about-rail.html %}
 
 <div class="ab-main">
+<section class="ab-sec" style="padding-top:0">
   <h1>Fractional COO and AI adoption advisor for Canadian small businesses</h1>
   <p class="ab-sub">Working with Canadian founder-led organisations to clarify direction, restructure operations, and adopt AI, with one person accountable from start to finish.</p>
 
@@ -280,16 +179,23 @@ head_extra: |
     <div class="ab-stat"><b>$4M+</b><span>in annual financial oversight</span></div>
     <div class="ab-stat"><b>3</b><span>production tools built and used daily</span></div>
   </div>
-  <div class="ab-recog">
-    <img src="/assets/dr-badge-best-coo-2026.png" alt="Digital Reference: Best Fractional COO Services in Canada 2026" width="78" height="78">
-    <p><b>Digital Reference, 2026:</b> Best Fractional COO Services in Canada. <a href="/news/digital-reference-best-coo-2026.html">Read the feature →</a></p>
-  </div>
-  <div class="ab-recog">
-    <p><b>Tech Advisor Program, September 2026:</b> completed through the Centre for Women in Business. <a href="/learning#tech-advisor">See the certificate →</a></p>
-  </div>
   <p class="ab-ind">Professional services · nonprofits · faith-based organisations · education technology · membership organisations · founder-led businesses</p>
+</section>
 
-  <h2 class="ab-label">Which one sounds like your week?</h2>
+<section class="ab-sec" id="who-i-am">
+  <h2 class="ab-h2">Who I am</h2>
+  <p>I'm Elizabeth Lemoine, founder of Northlight Advisory Services in Halifax, Nova Scotia. I first wrote about leadership and organizational behaviour in 1999, in a chapter of a community handbook, and I continue to write essays on strategy, AI adoption, and more on the <a href="/blog/">blog</a>, on <a href="https://www.linkedin.com/in/elizabethannelemoine/recent-activity/articles/" target="_blank" rel="noopener">LinkedIn</a>, and in the <a href="https://aurora-brief.kit.com/110f173cf7" target="_blank" rel="noopener">Aurora Brief</a>.</p>
+  <p>I work across strategy, software adoption, operations, and applied AI, because those four things are almost always connected to the same problem.</p>
+  <div class="ab-quote">“Most organisations aren't drowning in problems. They're drowning in information and starving for direction.”</div>
+  <p>I look at the whole picture, without an agenda, and work out what's going on, what matters, and what you do next. That might be a strategy decision, an operational redesign, an AI adoption plan, or a tool we build together. Most engagements touch more than one.</p>
+  <p>I build operations around Canadian privacy requirements: <a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/" target="_blank" rel="noopener">PIPEDA</a> federally, <a href="https://www.cai.gouv.qc.ca/protection-renseignements-personnels/sujets-et-domaines-dinteret/principaux-changements-loi-25" target="_blank" rel="noopener">Quebec's Law 25</a>, and the private-sector privacy acts in <a href="https://oipc.ab.ca/" target="_blank" rel="noopener">Alberta</a> and <a href="https://www.oipc.bc.ca/" target="_blank" rel="noopener">British Columbia</a>.</p>
+  <p>Northlight Advisory Services exists so (new) CEOs and founders have the support and resources they need to grow their ideas into the products and services that actually change things for the better.</p>
+  <p>If you're one of the founders who should have that support and those resources, I'd genuinely like to hear what you're building.</p>
+</section>
+
+<section class="ab-band">
+  <h2 class="ab-h2">Which one sounds like your week?</h2>
+  <p class="ab-lede">Most people who find me recognise one of these three.</p>
   <div class="ab-cards">
     <a class="ab-card" href="/who-we-help/alone-at-the-top"><h3>Alone at the Top</h3><p>For the founder without a trusted team.</p><span class="ab-more">Read more →</span></a>
     <a class="ab-card" href="/who-we-help/stuck-on-consensus"><h3>Stuck on Consensus</h3><p>For the leader with a team around them.</p><span class="ab-more">Read more →</span></a>
@@ -297,16 +203,19 @@ head_extra: |
   </div>
   <p style="margin:12px 0 0;font-size:14.5px">Not sure which is yours? <a href="/who-we-help">Take the one-minute quiz →</a></p>
 
-  <h2 class="ab-label">Who I am</h2>
-  <p>I'm Elizabeth Lemoine, founder of Northlight Advisory Services in Halifax, Nova Scotia. I work across strategy, software adoption, operations, and applied AI, because those four things are almost always connected to the same problem.</p>
-  <div class="ab-quote">“Most organisations aren't drowning in problems. They're drowning in information and starving for direction.”</div>
-  <p>Northlight Advisory Services exists so new CEOs and founders have the support and resources they need to grow their ideas into the products and services that actually change things for the better.</p>
-  <p>I look at the whole picture, without an agenda, and work out what's going on, what matters, and what you do next. That might be a strategy decision, an operational redesign, an AI adoption plan, or a tool we build together. Most engagements touch more than one.</p>
-  <p>I build operations around Canadian privacy requirements: <a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/" target="_blank" rel="noopener">PIPEDA</a> federally, <a href="https://www.cai.gouv.qc.ca/protection-renseignements-personnels/sujets-et-domaines-dinteret/principaux-changements-loi-25" target="_blank" rel="noopener">Quebec's Law 25</a>, and the private-sector privacy acts in <a href="https://oipc.ab.ca/" target="_blank" rel="noopener">Alberta</a> and <a href="https://www.oipc.bc.ca/" target="_blank" rel="noopener">British Columbia</a>.</p>
-  <p>I first wrote about leadership and organizational behaviour in 1999, in a chapter of a community handbook. I continue to write essays on strategy, AI adoption, and more on the <a href="/blog/">blog</a>, on <a href="https://www.linkedin.com/in/elizabethannelemoine/recent-activity/articles/" target="_blank" rel="noopener">LinkedIn</a>, and in the <a href="https://aurora-brief.kit.com/110f173cf7" target="_blank" rel="noopener">Aurora Brief</a>.</p>
-  <p>If you're one of the founders who should have that support and those resources, I'd genuinely like to hear what you're building. No jargon. No fog. Just the work.</p>
+  <h2 class="ab-h2" style="margin-top:60px">Whichever it is, this is how we work</h2>
+  <p class="ab-lede">Four steps, and you decide at each one.</p>
+  <div class="ab-steps">
+    <div class="ab-step"><b>A free Coffee Chat</b><p>Thirty minutes, no pitch. Tell me what you're working on and we'll see whether there's a fit.</p></div>
+    <div class="ab-step"><b>A second conversation</b><p>Before any recommendations, I get a clear picture of what's actually happening, including the problem underneath the one described.</p></div>
+    <div class="ab-step"><b>A plan we both agree on</b><p>Scope, hours, and what “done” looks like, settled before any work starts.</p></div>
+    <div class="ab-step"><b>Work that holds</b><p>Embedded Advisory (about 20 hours a month) or On-Call Advisory (up to 5 hours a month, flat monthly rate). Built to survive contact with reality.</p></div>
+  </div>
+</section>
 
-  <h2 class="ab-label">What I've done and built</h2>
+<section class="ab-sec ab-done">
+  <h2 class="ab-h2">What I've done and built</h2>
+  <p class="ab-lede">The short version. Every role and project is on the <a href="/experience">full experience page</a>.</p>
   <div class="ab-cards">
     <div class="ab-card"><h3>Strategy &amp; executive leadership</h3><ul>
       <li>Executive partner to CEOs and executive directors: priority management, board materials, contract drafting, and strategic thought partnership across global organisations.</li>
@@ -331,64 +240,28 @@ head_extra: |
       <a href="/case-studies/northlight-os.html">Northlight OS<span>The practice's AI-native operating system →</span></a></div>
   </div>
   <p style="font-size:14.5px;margin:14px 0 0">Three production tools I use every day. It means I can act as the go-between for your team and a developer.</p>
-  <details class="ab-full-exp"><summary>Full experience breakdown</summary>
-    <p>Over the past decade, I've helped founder-led businesses, nonprofits, and growth-stage organisations turn strategy into operational reality. The industries have varied. The work has remained remarkably consistent: bringing clarity to complexity by designing systems, strengthening operations, and helping leadership teams execute with confidence.</p>
-    <h4>Strategy &amp; executive leadership</h4><ul><li>Executive partner to CEOs and executive directors: priority management, board materials, contract drafting, and strategic thought partnership across global organisations.</li><li>Translated strategic priorities into operational plans, governance frameworks, systems, and measurable execution across distributed teams.</li><li>Advised founders, boards, and senior leadership on operational structure, systems design, and organisational decision-making.</li></ul>
-    <h4>Systems &amp; technology</h4><ul><li>Managed the full migration from Google Workspace to Microsoft 365: transition planning, system configuration, OneDrive and SharePoint setup, and staff training, with zero business interruption.</li><li>Led a Sage to Xero migration during active operations: historical data migration, new chart of accounts, reporting infrastructure, and accounting systems rebuilt with external accountants.</li><li>Led an organisation-wide ClickUp implementation: needs assessment, full project charter, cross-department stakeholder engagement, an external implementation partner, and a staff training guide adopted across every department.</li><li>Led a Salesforce implementation covering programs, fundraising, and data integrity.</li></ul>
-    <h4>Governance &amp; risk</h4><ul><li>Held executive responsibility for financial operations within a global nonprofit with more than $4M in annual revenue, including budgeting, forecasting, board reporting, invoicing, collections, and charitable receipting.</li><li>Authored governance manuals, board policies, and board onboarding processes across multiple organisations, still in active use.</li><li>Established data protection and compliance frameworks, including Event Management Agreements and Data Processing Agreements aligned to regional regulatory requirements.</li><li>Supported charitable registration, payroll, HR, and financial infrastructure for new offices in the UK, Australia, and the United States.</li><li>Formalised financial controls, authority matrices, and budgeting processes for a provincial nonprofit.</li></ul>
-    <h4>People &amp; operations</h4><ul><li>Developed employee handbooks, HR frameworks, and onboarding processes from scratch for early-stage and growing organisations.</li><li>Served as executive operations partner to the CEO and CTO during a growth-stage SaaS platform transition, coordinating operational readiness across teams.</li><li>Oversaw 20+ multi-stakeholder civic and government engagement initiatives.</li></ul>
-    <h4>Operations at scale</h4><ul><li>Directed operational delivery for more than 300 complex initiatives across 115 countries, including international conferences, executive programs, and global webinars. Built the governance, logistics, vendor management, staffing, budgeting, and risk management systems required to operate consistently at international scale.</li></ul>
-  </details>
+  <p style="font-size:14.5px;margin:10px 0 0"><a href="/experience">Read the full experience breakdown →</a></p>
+</section>
 
-  <h2 class="ab-label">How we work</h2>
-  <div class="ab-steps">
-    <div class="ab-step"><b>A free Coffee Chat</b><p>Thirty minutes, no pitch. Tell me what you're working on and we'll see whether there's a fit.</p></div>
-    <div class="ab-step"><b>A second conversation</b><p>Before any recommendations, I get a clear picture of what's actually happening, including the problem underneath the one described.</p></div>
-    <div class="ab-step"><b>A plan we both agree on</b><p>Scope, hours, and what “done” looks like, settled before any work starts.</p></div>
-    <div class="ab-step"><b>Work that holds</b><p>Embedded Advisory (about 20 hours a month) or On-Call Advisory (up to 5 hours a month, flat monthly rate). Built to survive contact with reality.</p></div>
-  </div>
-
-  <h2 class="ab-label">Credentials and learning</h2>
-  <div class="ab-cred">
-    <a href="/learning#tech-advisor">Tech Advisor Program · Centre for Women in Business</a>
-    <a href="https://www.credly.com/users/elizabeth-randell-lemoine" target="_blank" rel="noopener">PMI member · PMI learning badges</a>
-    <a href="https://www.salesforce.com/trailblazer/erandell" target="_blank" rel="noopener">Salesforce Trailblazer · Ranger · 163 badges</a>
-    <a href="https://www.credly.com/users/elizabeth-randell-lemoine" target="_blank" rel="noopener">Google Cloud: Gemini Enterprise application</a>
-    <a href="https://me.developers.google.com/u/105920909428240486985" target="_blank" rel="noopener">Google Developer Program</a>
-    <a href="https://verify.skilljar.com/c/ty6usqg9d5dr" target="_blank" rel="noopener">ClickUp Expert</a>
-  </div>
-  <p class="ab-credlabel">Selected certificates · <a href="/learning">See all 250+ on the Learning page →</a></p>
-  <div class="ab-cred">
-    <a href="https://verify.skilljar.com/c/bk88yzfwuj7t" target="_blank" rel="noopener">Claude 101 (Anthropic)</a>
-    <a href="https://verify.skilljar.com/c/x9tpn7n2q38i" target="_blank" rel="noopener">Introduction to agent skills (Anthropic)</a>
-    <a href="https://verify.skilljar.com/c/5ov6pi4cvawq" target="_blank" rel="noopener">Introduction to Claude Cowork (Anthropic)</a>
-    <a href="https://www.coursera.org/account/accomplishments/specialization/6WUENOK9LTB5" target="_blank" rel="noopener">IBM Generative AI for Program Managers</a>
-    <a href="https://www.coursera.org/account/accomplishments/specialization/1I4TBUMWAQMJ" target="_blank" rel="noopener">IBM Generative AI for Project Managers</a>
-    <a href="https://www.coursera.org/account/accomplishments/specialization/16M6JEJBL9HX" target="_blank" rel="noopener">IBM Generative AI for Digital Marketing</a>
-    <a href="https://www.coursera.org/account/accomplishments/specialization/V4K4CTY98QBS" target="_blank" rel="noopener">Google Project Management Professional Certificate</a>
-    <a href="https://www.coursera.org/account/accomplishments/specialization/4I6FQE9T9EID" target="_blank" rel="noopener">Regulatory Compliance (University of Pennsylvania)</a>
-    <a href="https://www.coursera.org/account/accomplishments/specialization/L6SFSPE6BCP5" target="_blank" rel="noopener">Cloud Computing Law (Queen Mary University of London)</a>
-    <a href="https://www.coursera.org/account/accomplishments/verify/JPQ3C7N6B2TS" target="_blank" rel="noopener">OKR Certification: Leadership and Goal Setting</a>
-    <a href="https://www.coursera.org/account/accomplishments/verify/N3AKW2JWPLP8" target="_blank" rel="noopener">Agile Project Management (Google)</a>
-    <a href="https://verify.skilljar.com/c/fsaamc4mf2j5" target="_blank" rel="noopener">ClickUp AI: Knowledge Certification</a>
-    <a href="https://verify.skilljar.com/c/oh26ma7p8xhr" target="_blank" rel="noopener">ClickUp Admin Essentials: Certification Exam</a>
-  </div>
-
-  <h2 class="ab-label" id="what-people-say">What people say</h2>
+<section class="ab-band">
+  <h2 class="ab-h2" id="what-people-say">What people say</h2>
+  <p class="ab-lede">From colleagues and leaders I've worked with.</p>
   <div class="ab-say">
       <blockquote class="ab-q"><p>“She has been an operational and administrative maestro. She sees the whole picture from a vision, to strategy, to operations.”</p><cite>Danny Graham, Chief Engagement Officer, Engage Nova Scotia</cite><details><summary>Read the full quote</summary><p class="ab-full">In my work with Elizabeth Lemoine she has been an operational and administrative maestro. She sees the whole picture from a vision, to strategy, to operations. She understands organizational dynamics and ensures work is properly prioritized and completed to a high standard. She was an important reason for our early success at Engage Nova Scotia &#8211; acting as a &#8220;Swiss Army knife&#8221;, for financial controls, board support, and was a wise advisor &#8211; ensuring consistent whole team alignment.</p></details></blockquote>
       <blockquote class="ab-q"><p>“Elizabeth is masterful at sizing up the problems of start-up and small organizations and then getting them solved.”</p><cite>Anna Stuart, Executive Coach &amp; Leadership Mentor</cite><details><summary>Read the full quote</summary><p class="ab-full">Elizabeth is masterful at sizing up the problems of start-up and small organizations and then getting them solved. She has a long track record of creating and introducing right-sized systems and then skillfully equipping others to work within them. She is hardwired to serve others and there is yet to be a problem that she can&#8217;t tackle!</p></details></blockquote>
-      <blockquote class="ab-q"><p>“If you are thinking of it, need it or ask for it, she's either planning it, doing it or has it already done.”</p><cite>Danny King, Co-founder &amp; CEO, Accredible</cite><details><summary>Read the full quote</summary><p class="ab-full">If you are thinking of it, need it or ask for it, she's either planning it, doing it or has it already done. She's always willing to learn and grow, to be flexible, and to take on new challenges. I recommend her highly.</p></details></blockquote>
       <blockquote class="ab-q"><p>“She understands that policies and frameworks have to work in the real world — not just look good on paper.”</p><cite>Donna Davis, Global Operations Manager, Divine Renovation</cite><details><summary>Read the full quote</summary><p class="ab-full">Elizabeth approaches governance, compliance, safeguarding, and data protection as much more than boxes to check. She understands that policies and frameworks have to work in the real world &#8212; not just look good on paper. She cares about getting things right, not simply getting them done, and I always knew I could trust her with work where the stakes were high. Elizabeth was excellent at creating processes that support real work and real growth, not theoretical policies or binders that sit unread on a shelf. She is someone I trusted deeply as a colleague, and I would wholeheartedly recommend her to any organization looking for someone of sound judgment, strong operational thinking, and commitment to building things that last.</p></details></blockquote>
   </div>
-  <details style="margin-top:14px"><summary>Read more from clients and colleagues</summary>
+  <details style="margin-top:18px"><summary>Read more from clients and colleagues</summary>
     <div class="ab-more-list">
-      <blockquote class="ab-q ab-q-more"><p>“Elizabeth is a hard-working talented team member. It&#8217;s tricky to balance both human caring and focused tenacity but Elizabeth is able to bring both to a team and to an organization. Elizabeth can be relied on to make things move and has a gift for seeing and naming details in larger complex projects. She is great at mapping out work not just for herself, but for teams around her. I&#8217;ve seen Elizabeth thrive at being the centre of an organization, traffic copping work and keeping people connected. In my years of working with Elizabeth, I was personally always grateful when she turned her tenacity in my direction to ensure that I wasn&#8217;t letting important things slip out of my line of sight.”</p><cite>Dan O&#8217;Rourke, Founder &amp; Former CEO</cite></blockquote>
-      <blockquote class="ab-q ab-q-more"><p>“She is able to take open ended aims and turn them into action independently. She is a great communicator and a natural organiser. Elizabeth brings humour, honesty and integrity to the team and combines that with an enviable work ethic.”</p><cite>Alan Heppenstall, CTO &amp; Co-founder, Accredible</cite></blockquote>
+      <blockquote class="ab-q"><p>“If you are thinking of it, need it or ask for it, she's either planning it, doing it or has it already done.”</p><cite>Danny King, Co-founder &amp; CEO, Accredible</cite><details><summary>Read the full quote</summary><p class="ab-full">If you are thinking of it, need it or ask for it, she's either planning it, doing it or has it already done. She's always willing to learn and grow, to be flexible, and to take on new challenges. I recommend her highly.</p></details></blockquote>
+      <blockquote class="ab-q"><p>“Elizabeth is a hard-working talented team member. It&#8217;s tricky to balance both human caring and focused tenacity but Elizabeth is able to bring both to a team and to an organization. Elizabeth can be relied on to make things move and has a gift for seeing and naming details in larger complex projects. She is great at mapping out work not just for herself, but for teams around her. I&#8217;ve seen Elizabeth thrive at being the centre of an organization, traffic copping work and keeping people connected. In my years of working with Elizabeth, I was personally always grateful when she turned her tenacity in my direction to ensure that I wasn&#8217;t letting important things slip out of my line of sight.”</p><cite>Dan O&#8217;Rourke, Founder &amp; Former CEO</cite></blockquote>
+      <blockquote class="ab-q"><p>“She is able to take open ended aims and turn them into action independently. She is a great communicator and a natural organiser. Elizabeth brings humour, honesty and integrity to the team and combines that with an enviable work ethic.”</p><cite>Alan Heppenstall, CTO &amp; Co-founder, Accredible</cite></blockquote>
     </div>
   </details>
+</section>
 
-  <h2 class="ab-label">Questions</h2>
+<section class="ab-sec">
+  <h2 class="ab-h2">Questions</h2>
   <div class="ab-faq">
     <details><summary>What does Northlight Advisory Services do?</summary><div class="answer-block"><p>It helps Canadian founders and small leadership teams make clearer decisions, run better operations, use AI well, and handle Canadian privacy requirements. Most clients work with Elizabeth through Embedded Advisory (about 20 hours a month) or On-Call Advisory (up to 5 hours a month for a flat monthly rate).</p></div></details>
     <details><summary>Who does Elizabeth work with?</summary><div class="answer-block"><p>Primarily Canadian founders, directors, and operations leaders at small to mid-sized organisations, typically under 50 people, who have an operational challenge and need clear thinking they can act on quickly.</p></div></details>
@@ -399,10 +272,19 @@ head_extra: |
     <details><summary>Can you help with operations and an AI roadmap at the same time?</summary><div class="answer-block"><p>Yes. Most engagements touch more than one area. Fixing how work gets done and deciding where AI fits are usually the same conversation, so I treat them as one plan.</p></div></details>
     <details><summary>Do you work with businesses outside Halifax?</summary><div class="answer-block"><p>Yes. Engagements are remote, so location does not limit who I work with. I work with Canadian organisations across the country, and I am based in Halifax.</p></div></details>
   </div>
-</div>
+  <p style="margin-top:14px"><a href="/faq.html">See the full FAQ →</a></p>
+</section>
+
+<section class="ab-band">
+  <h2 class="ab-h2">Ready to talk?</h2>
+  <p class="ab-lede">A free 30-minute Coffee Chat. Tell me what you're working on and we'll see whether there's a fit.</p>
+  <a class="ab-btn ab-btn-inline" href="/coffee">Book a free Coffee Chat</a>
+</section>
 
 </div>
+</div>
 </main>
+
 
 <script>
   function toggleExperience(btn) {
