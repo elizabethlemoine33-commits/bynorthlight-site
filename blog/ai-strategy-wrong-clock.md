@@ -110,4 +110,4 @@ The question you need to answer isn't "Do I have an AI strategy?" You do. The qu
 
 If it's not, fix the clock. The rest will follow.
 
-**Want to keep thinking about this?** [Aurora Brief](https://bynorthlight.ca/aurora-brief) is where I work through questions like this — what's changing, what it means, and what to do about it.
+**Want to keep thinking about this?** [Aurora Brief](https://aurora-brief.kit.com/110f173cf7) is where I work through questions like this — what's changing, what it means, and what to do about it.
