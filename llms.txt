@@ -9,6 +9,7 @@ Northlight Advisory Services is a Halifax, Nova Scotia–based strategy, operati
 - [Home](https://bynorthlight.ca/): Overview of Northlight Advisory Services — who we work with, what we do, and how to get in touch.
 - [Services](https://bynorthlight.ca/services): How Northlight works with clients: a free 30-minute Coffee Chat, a plan we agree on, then Embedded Advisory (about 20 hours a month inside your company) or On-Call Advisory (up to 5 hours a month of one-to-one access). Support hours and cancellation policy.
 - [About](https://bynorthlight.ca/about): Elizabeth Lemoine — founder, 10+ years director-level operations experience, 300+ initiatives across 115+ countries.
+- [Experience](https://bynorthlight.ca/experience): Elizabeth Lemoine's full experience breakdown: strategy, systems and technology, governance and risk, people and operations, and operations at scale.
 - [Learning](https://bynorthlight.ca/learning): More than 250 certificates, courses, and badges behind Elizabeth Lemoine's work, including the Centre for Women in Business Tech Advisor Program, with links to each certificate.
 - [Who We Help](https://bynorthlight.ca/who-we-help): Three kinds of leaders Northlight works with, each with their own page.
   - [Alone at the Top](https://bynorthlight.ca/who-we-help/alone-at-the-top): For the founder without a trusted team.
