@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Which AI Assistant Is PIPEDA Compliant? None of Them — Northlight</title>
+  <meta name="description" content="No AI tool is PIPEDA compliant on its own. Learn what Canadian businesses must do: policy, team tools, vendor documents, and shadow AI breaches.">
+  <meta name="author" content="Elizabeth Lemoine">
+  <link rel="canonical" href="https://bynorthlight.ca/blog/which-ai-assistant-is-pipeda-compliant.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Which AI Assistant Is PIPEDA Compliant? None of Them">
+  <meta property="og:description" content="No AI tool is PIPEDA compliant on its own. Learn what Canadian businesses must do: policy, team tools, vendor documents, and shadow AI breaches.">
+  <meta property="og:image" content="https://bynorthlight.ca/northlight-og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://bynorthlight.ca/blog/which-ai-assistant-is-pipeda-compliant.html">
+  <meta property="og:site_name" content="Northlight">
+  <meta property="article:author" content="Elizabeth Lemoine">
+  <meta property="article:published_time" content="2026-11-12T00:00:00.000Z">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Which AI Assistant Is PIPEDA Compliant? None of Them">
+  <meta name="twitter:description" content="No AI tool is PIPEDA compliant on its own. Learn what Canadian businesses must do: policy, team tools, vendor documents, and shadow AI breaches.">
+  <meta name="twitter:image" content="https://bynorthlight.ca/northlight-og-image.png">
+
+  <!-- Article schema JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Which AI Assistant Is PIPEDA Compliant? None of Them",
+    "description": "No AI tool is PIPEDA compliant on its own. Learn what Canadian businesses must do: policy, team tools, vendor documents, and shadow AI breaches.",
+    "datePublished": "2026-11-12",
+    "dateModified": "2026-10-27T00:00:00Z",
+    "image": "https://bynorthlight.ca/northlight-og-image.png",
+    "author": { "@type": "Person", "name": "Elizabeth Lemoine", "url": "https://bynorthlight.ca/about.html" },
+    "publisher": { "@type": "Organization", "name": "Northlight", "url": "https://bynorthlight.ca" },
+    "url": "https://bynorthlight.ca/blog/which-ai-assistant-is-pipeda-compliant.html"
+  }
+  </script>
+
+  <!-- BreadcrumbList schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://bynorthlight.ca/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://bynorthlight.ca/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Which AI Assistant Is PIPEDA Compliant? None of Them", "item": "https://bynorthlight.ca/blog/which-ai-assistant-is-pipeda-compliant.html" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "Which AI assistant is PIPEDA compliant?", "acceptedAnswer": {"@type": "Answer", "text": "None of them, on their own. PIPEDA compliance depends on what your organisation does with a tool, not on a certification the tool holds. The OPC's principles for generative AI put responsibility on the organisation using it.\nFAQ_QUESTION\nDoes \"we don't train on your data\" mean an AI tool is safe for personal information?\nFAQ_ANSWER\nNot necessarily. Training settings can be switched on or off later, and details differ by plan. Read the vendor's terms of service, data addendum, data processing agreements, and privacy policy against each other.\nFAQ_QUESTION\nDoes storing data in Canada protect it from foreign laws?\nFAQ_ANSWER\nNot by itself. One Canadian law firm notes that storing data in Canada does not on its own prevent access under foreign laws such as the US CLOUD Act. Who controls the data matters more than where it sits.\nFAQ_QUESTION\nIs an employee using a personal AI account for work a data breach?\nFAQ_ANSWER\nIn my reading, it is likely a data breach of some sort, though that is not settled law. The OPC's breach guidance doesn't address personal AI accounts specifically. I'd treat it as a breach, follow your breach protocol, and investigate fully.\nFAQ_QUESTION\nHow long do I need to keep breach records in Canada?\nFAQ_ANSWER\nThe OPC guidance says you must keep records of all breaches for two years, whether or not there is a real risk of significant harm. Reporting to the OPC and notifying affected people apply when there is a real risk of significant harm."}}
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --midnight:#0E0E14;--surface:#12121E;--surface-2:#10101C;
+      --border:#1E2035;--border-2:#2A2A48;
+      --text:#FFFFFF;--cloud:#C8CCE0;--haze:#B0B8D8;--muted:#8A92A8;--structural:#5A6080;
+      --glacial:#4FC3C8;--boreal:#5B8DD9;--dusk:#8B6FD4;--aurora:#C46FAA;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{background:var(--midnight);color:var(--cloud);font-family:'Outfit',sans-serif;min-height:100vh;}
+
+    .skip-nav{position:absolute;top:-100px;left:0;background:var(--dusk);color:#fff;padding:10px 20px;font-family:'Jost',sans-serif;font-size:13px;font-weight:600;letter-spacing:.06em;text-decoration:none;border-radius:0 0 6px 0;z-index:9999;transition:top .2s;}
+    .skip-nav:focus{top:0;}
+
+    /* Site header */
+    .site-header{display:flex;align-items:center;padding:18px 48px;border-bottom:1px solid var(--border);}
+    .wordmark{font-family:'Jost',sans-serif;font-weight:600;font-size:20px;letter-spacing:.08em;background:linear-gradient(105deg,#4fc3c8 0%,#5b8dd9 33%,#8b6fd4 66%,#c46faa 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none;}
+    .top-bar{height:3px;background:linear-gradient(90deg,#4fc3c8 0%,#5b8dd9 30%,#8b6fd4 65%,#c46faa 100%);}
+
+    /* Four-column shell */
+    .blog-shell{display:grid;grid-template-columns:1fr min(680px,100%) 300px 1fr;min-height:calc(100vh - 60px);}
+    .blog-left-wing{grid-column:1;background:var(--midnight);position:relative;overflow:hidden;}
+    .blog-reading{grid-column:2;border-left:1px solid var(--border);border-right:1px solid var(--border);padding:52px 56px 100px;}
+    .blog-sidebar{grid-column:3;border-right:1px solid var(--border);padding:52px 0 100px 32px;position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;}
+    .blog-right-wing{grid-column:4;background:var(--midnight);position:relative;overflow:hidden;}
+
+    /* Left wing elements */
+    .left-glow{position:absolute;right:0;top:0;width:160px;height:100%;background:linear-gradient(90deg,transparent 0%,rgba(79,195,200,.03) 50%,rgba(91,141,217,.07) 100%);pointer-events:none;}
+    .aurora-rail-wrap{position:absolute;right:28px;top:52px;bottom:40px;width:3px;}
+    .aurora-rail-line{width:3px;height:100%;background:linear-gradient(180deg,#4fc3c8 0%,#5b8dd9 22%,#8b6fd4 55%,#c46faa 82%,transparent 100%);border-radius:2px;opacity:.7;}
+    .aurora-rail-dot{width:9px;height:9px;border-radius:50%;background:linear-gradient(135deg,#4fc3c8,#8b6fd4);position:absolute;top:-3px;left:-3px;box-shadow:0 0 8px rgba(79,195,200,.4);}
+    .left-label{position:absolute;right:48px;top:60px;font-family:'Jost',sans-serif;font-size:9px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:#2A2A48;writing-mode:vertical-rl;transform:rotate(180deg);user-select:none;}
+
+    /* Right wing elements */
+    .right-glow{position:absolute;left:0;top:0;width:160px;height:100%;background:linear-gradient(270deg,transparent 0%,rgba(139,111,212,.04) 60%,rgba(196,111,170,.05) 100%);pointer-events:none;}
+    .right-dots-wrap{position:absolute;top:72px;left:36px;}
+    .dot{width:3px;height:3px;border-radius:50%;background:#8B6FD4;position:absolute;opacity:.15;}
+
+    /* Reading column */
+    .post-back{font-family:'Jost',sans-serif;font-weight:500;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);text-decoration:none;display:block;margin-bottom:28px;}
+    .post-back:hover{color:var(--cloud);}
+    .source-label{font-family:'Jost',sans-serif;font-weight:500;font-size:10px;letter-spacing:.28em;text-transform:uppercase;display:block;margin-bottom:16px;}
+    .source-aurora{color:var(--dusk);}
+    .source-essay{color:var(--boreal);}
+    .post-title{font-family:'Jost',sans-serif;font-weight:600;font-size:34px;line-height:1.1;letter-spacing:.01em;color:var(--text);margin-bottom:12px;}
+    .post-date-line{font-family:'Outfit',sans-serif;font-size:13px;color:var(--muted);margin-bottom:28px;}
+    .aurora-divider{height:1px;background:linear-gradient(90deg,#4fc3c8 0%,#5b8dd9 30%,#8b6fd4 65%,#c46faa 100%);opacity:.3;margin-bottom:36px;}
+
+    /* Body copy */
+    .post-body p{font-family:'Outfit',sans-serif;font-size:16px;line-height:1.85;color:var(--cloud);margin-bottom:1.4em;}
+    .post-body h2{font-family:'Jost',sans-serif;font-weight:600;font-size:20px;letter-spacing:.03em;color:var(--glacial);margin:2em 0 .6em;}
+    .post-body h3{font-family:'Jost',sans-serif;font-weight:600;font-size:15px;letter-spacing:.04em;color:var(--aurora);margin:1.6em 0 .4em;}
+    .post-body blockquote{border-left:3px solid var(--dusk);padding-left:22px;margin:1.4em 0;font-style:italic;color:var(--haze);}
+    .post-body .callout{background:rgba(139,111,212,.08);border-left:3px solid var(--dusk);border-radius:0 6px 6px 0;padding:14px 20px;margin:1.6em 0;font-family:'Jost',sans-serif;font-size:17px;font-weight:500;color:var(--haze);line-height:1.4;}
+    .post-body ul,.post-body ol{color:var(--cloud);font-size:16px;line-height:1.8;padding-left:1.4em;margin-bottom:1.4em;}
+    .post-body strong{color:var(--text);font-weight:600;}
+    .post-body a{color:var(--glacial);text-decoration:none;border-bottom:1px solid rgba(79,195,200,.25);}
+    .post-body a:visited{color:var(--glacial);}
+    .post-body a:hover{color:var(--text);border-bottom-color:rgba(255,255,255,.3);}
+
+    /* AEO blocks */
+    .at-a-glance{background:var(--surface);border:1px solid var(--border-2);border-left:3px solid var(--glacial);border-radius:8px;padding:20px 24px;margin-bottom:48px;}
+    .at-a-glance h2{font-family:'Jost',sans-serif;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--glacial);margin:0 0 12px;}
+    .at-a-glance ul{list-style:none;padding:0;margin:0;}
+    .at-a-glance li{font-size:14px;color:var(--haze);padding:4px 0 4px 16px;position:relative;}
+    .at-a-glance li::before{content:'→';position:absolute;left:0;color:var(--glacial);font-size:12px;top:5px;}
+    .post-body .answer-block{background:var(--surface);border:1px solid var(--border-2);border-left:3px solid var(--glacial);border-radius:0 8px 8px 0;padding:16px 20px;margin:0 0 1.6em;}
+    .post-body .answer-block p{font-family:'Outfit',sans-serif;font-size:15px;color:var(--haze);margin:0;line-height:1.7;}
+    .post-body .callout-block{background:var(--surface);border:1px solid var(--border-2);border-left:3px solid var(--aurora);border-radius:0 8px 8px 0;padding:16px 20px;margin:1.6em 0;}
+    .post-body .callout-block p{font-family:'Outfit',sans-serif;font-size:14px;color:var(--haze);margin:0;line-height:1.7;}
+    .post-body .callout-block strong{color:var(--aurora);}
+    .faq-section{margin-top:56px;padding-top:40px;border-top:1px solid var(--border);}
+    .faq-section>h2{font-family:'Jost',sans-serif;font-size:22px;font-weight:600;color:var(--cloud);margin:0 0 24px;letter-spacing:.01em;}
+    .faq-item{border-bottom:1px solid var(--border);padding:20px 0;}
+    .faq-item:last-child{border-bottom:none;}
+    .related-reading{margin-top:48px;padding-top:32px;border-top:1px solid var(--border);}
+    .related-label{font-family:'Jost',sans-serif;font-weight:600;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;}
+    .related-links{display:flex;flex-direction:column;gap:8px;}
+    .related-link{font-family:'Outfit',sans-serif;font-size:15px;color:var(--haze);text-decoration:none;padding:12px 16px;background:var(--surface);border:1px solid var(--border);border-radius:6px;display:block;transition:border-color .15s,color .15s;}
+    .related-link:hover{border-color:var(--dusk);color:var(--cloud);}
+    .related-link-arrow{color:var(--dusk);}
+    .faq-q{font-family:'Jost',sans-serif;font-size:16px;font-weight:600;color:var(--cloud);margin-bottom:10px;}
+    .faq-a{font-size:15px;color:var(--muted);line-height:1.7;}
+
+    /* Sidebar */
+    .sidebar-label{font-family:'Jost',sans-serif;font-weight:600;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
+    .sidebar-section{margin-bottom:32px;}
+
+    /* Published card */
+    .pub-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:16px;text-align:center;}
+    .pub-day{font-family:'Jost',sans-serif;font-weight:600;font-size:28px;color:var(--text);line-height:1;}
+    .pub-year{font-family:'Outfit',sans-serif;font-size:13px;color:var(--muted);margin-top:2px;margin-bottom:10px;}
+    .pub-rule{border:none;border-top:1px solid var(--border);margin:10px 0;}
+    .pub-readtime{font-family:'Outfit',sans-serif;font-size:13px;color:var(--muted);}
+    .pub-readtime strong{color:var(--cloud);}
+
+    /* Aurora card */
+    .aurora-card{background:linear-gradient(150deg,rgba(79,195,200,.05) 0%,rgba(139,111,212,.08) 55%,rgba(196,111,170,.04) 100%);border:1px solid var(--border-2);border-radius:8px;padding:16px;}
+    .aurora-card p{font-family:'Outfit',sans-serif;font-size:13px;line-height:1.65;color:var(--haze);margin-bottom:10px;}
+    .aurora-card a{font-family:'Jost',sans-serif;font-weight:500;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--dusk);text-decoration:none;}
+    .aurora-card a:hover{color:var(--glacial);}
+
+    /* Topic tags */
+    .topics-wrap{display:flex;flex-wrap:wrap;gap:6px;}
+    .topic-tag{font-family:'Jost',sans-serif;font-weight:500;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:4px 10px;}
+
+    /* Footer */
+    .site-footer{grid-column:1/-1;border-top:1px solid var(--border);padding:24px 56px;display:flex;justify-content:space-between;align-items:center;}
+    .footer-copy{font-family:'Outfit',sans-serif;font-size:13px;color:var(--structural);}
+    .footer-nav{display:flex;gap:24px;}
+    .footer-link{font-family:'Jost',sans-serif;font-weight:500;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;}
+    .footer-link:hover{color:var(--cloud);}
+    .footer-link.active{color:var(--dusk);}
+
+    /* Responsive */
+    @media(max-width:1100px){
+      .blog-shell{grid-template-columns:0 1fr 260px 0;}
+      .blog-left-wing,.blog-right-wing{display:none;}
+      .blog-reading{padding:40px 40px 64px;}
+    }
+    @media(max-width:800px){
+      .site-header{padding:14px 24px;}
+      .blog-shell{grid-template-columns:1fr;}
+      .blog-sidebar{grid-column:1;border:none;border-top:1px solid var(--border);padding:32px 24px;position:static;max-height:none;}
+      .blog-reading{grid-column:1;padding:32px 24px 48px;border:none;}
+      .post-title{font-size:26px;}
+      .site-footer{grid-column:1;padding:20px 24px;flex-direction:column;gap:12px;text-align:center;}
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
+  <header class="site-header">
+    <a href="/" class="wordmark">Northlight</a>
+  </header>
+  <div class="top-bar" role="presentation"></div>
+
+  <div class="blog-shell">
+
+    <!-- Left wing -->
+    <div class="blog-left-wing" role="presentation">
+      <div class="left-glow" role="presentation"></div>
+      <div class="aurora-rail-wrap" role="presentation">
+        <div class="aurora-rail-dot" role="presentation"></div>
+        <div class="aurora-rail-line" role="presentation"></div>
+      </div>
+      <div class="left-label" aria-hidden="true">bynorthlight.ca</div>
+    </div>
+
+    <!-- Reading column -->
+    <main class="blog-reading" id="main-content">
+      <a href="/blog/" class="post-back">← All posts</a>
+      <span class="source-label source-essay">Essay</span>
+      <h1 class="post-title">Which AI Assistant Is PIPEDA Compliant? None of Them</h1>
+      <p class="post-date-line"><time datetime="2026-11-12">November 12, 2026</time></p>
+      <div class="aurora-divider" role="presentation"></div>
+
+      <div class="post-body">
+        <div class="at-a-glance" aria-label="At a glance"><h2>At a glance</h2><ul><li>No AI assistant is PIPEDA compliant on its own. Compliance depends on what your organisation does with the tool.</li><li>"We don't train on your data" isn't enough. Read the plan details, the vendor's documents, and who owns the tool.</li><li>Write a policy, give your team a tool you can see into, make personal data hard to export, and read vendor documents against each other.</li><li>Staff using personal AI accounts for organisational data should be treated as a possible data breach.</li></ul></div>
+    <p>Which AI assistant is <a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/">PIPEDA</a> compliant? None of them. And the question is the wrong one, which is why you get unhelpful answers.</p>
+    <p>If you typed some version of that question into a search bar, you were probably hoping someone would name a tool, hand you a checkmark, and let you get back to work. I understand the hope. I also think you have suspected it wouldn't be that simple, which is why you're still reading.</p>
+    <h2>Can an AI tool be PIPEDA compliant?</h2>
+    <div class="answer-block"><p>No. Compliance isn't a certification a tool holds; it depends on what your organisation does with the tool. Under the OPC's principles, responsibility sits with the organisation using it.</p></div>
+    <p>No tool certification makes you compliant. It's always about what you do. <a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/">PIPEDA</a> (the Personal Information Protection and Electronic Documents Act) is federal privacy law, and the Office of the Privacy Commissioner of Canada (OPC) explains how it works in its <a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/pipeda_brief/">PIPEDA requirements in brief</a>.</p>
+    <p>The OPC's <a href="https://www.priv.gc.ca/en/privacy-topics/technology/artificial-intelligence/gd_principles_ai/">principles for generative AI</a> put the responsibility on the organisation using the tool, not on the tool, and say organisations should choose tools that respect privacy law.</p>
+    <blockquote><p>It stops being "is this tool safe?" and becomes "what are we doing with it, who decided, and can we see it?"</p></blockquote>
+    <p>Read that as a business owner and the question changes. Our <a href="https://bynorthlight.ca/blog/ai-adoption-checklist-canadian-businesses-2026.html">AI adoption checklist for Canadian businesses</a> is built around those questions. If a tool can't be compliant on its own, the licence owner is responsible. If your staff are using personal accounts for the organisation's data, the organisation is responsible too.</p>
+    <p>One note on provinces. Some provinces have their own private-sector privacy laws that apply instead of <a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/">PIPEDA</a> for information collected, used, and disclosed within the province, while <a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/">PIPEDA</a> still covers cross-border and interprovincial transfers. The OPC page above explains which is which; check it for where you operate.</p>
+    <h2>Why isn't "we don't train on your data" enough?</h2>
+    <div class="answer-block"><p>Because training settings can be switched on or off later, and details differ by plan. A promise on a vendor's front page and the fine print don't always match, and where the tool is owned matters as much as where it is hosted.</p></div>
+    <p>Vendors will tell you they don't train on your data. I'd still read further, because you can switch training settings on or off later, and details differ by plan.</p>
+    <p>OpenAI's <a href="https://help.openai.com/en/articles/8798634-managing-data-sharing-and-privacy-in-chatgpt-business">help page for ChatGPT Business</a> says business workspace data is excluded from training by default. It also says members don't automatically see each other's chats, and that the workspace owner can export a member's data. Anthropic's <a href="https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training">help page on model training</a> says that conversations flagged for safety review may still be used to improve its models even when you have opted out of training. That page covers its consumer products, so read the business terms for whatever plan you use.</p>
+    <p>I'm not pointing at these two to say one is better. I'm pointing them out because a promise on the front page and the details further down aren't always the same. As long as your information has the potential to be leaked, I'm hesitant to put it in.</p>
+    <div class="callout-block"><p>Where the tool lives matters, and who owns it matters more. Storing data in Canada does not, by itself, prevent access under foreign laws.</p></div>
+    <p>Where the tool lives matters, and who owns it matters more. A Canadian-owned tool on Canadian servers is one thing. An American tool on a Canadian server is still an American tool: in the words of one Canadian law firm, <a href="https://www.blg.com/en/insights/2026/04/data-sovereignty-and-the-cloud-act-what-canadian-organizations-should-know">storing data in Canada does not, by itself, prevent access under foreign laws</a>, and who controls the data matters more than where it sits. That is the <a href="https://www.blg.com/en/insights/2026/04/data-sovereignty-and-the-cloud-act-what-canadian-organizations-should-know">US CLOUD Act</a> at work. American tools can still be a reasonable choice, as long as you tell people. Your <a href="https://bynorthlight.ca/blog/pipeda-privacy-first-ai-canada.html">privacy policy</a> should say their data may be processed by AI, and in another country.</p>
+    <h2>What steps should a Canadian business take to use AI responsibly?</h2>
+    <div class="answer-block"><p>Write an AI policy, give the team a tool you can see into, block exports of personal data where you can't rely on people, and read all of a vendor's documents against each other. It also takes real investment in your team, policies, procedures, and tools.</p></div>
+    <p>Here are four steps, in the order I'd do them.</p>
+    <ol><li><strong>Write a policy for what can and can't go into AI.</strong> It needs consequences, sign-off, and awareness by everyone. My own gut test is simple: does this data contain personal information? If yes, then the answer is just no. If you want a starting point, we have an <a href="https://bynorthlight.ca/blog/ai-policy-template-canadian-small-business.html">AI policy template</a> and a <a href="https://bynorthlight.ca/blog/pipeda-ai-compliance-checklist-printable.html">printable PIPEDA checklist</a>.</li><li><strong>Give the team a team AI tool.</strong> Claude, ChatGPT, or something else. Check what your plan lets the owner see before you choose. Claude's <a href="https://claude.com/pricing">plan comparison</a> lists usage analytics and spend controls on its team plan, with <a href="https://support.claude.com/en/articles/9970975-access-audit-logs">audit logs</a> and the compliance API on enterprise. OpenAI's <a href="https://help.openai.com/en/articles/8798634-managing-data-sharing-and-privacy-in-chatgpt-business">ChatGPT Business page</a> describes workspace usage and spend controls, and its <a href="https://help.openai.com/en/articles/9261474-openai-compliance-platform-for-enterprise-and-edu-customers">compliance platform</a> is for enterprise and Edu workspaces. People are excited and they want to try.</li><li><strong>Where you can't trust people to follow the policy, make it so they can't.</strong> Block exports and copy-paste of personal data.</li><li><strong>Read all of a vendor's documents against each other.</strong> That means the terms of service, the data addendum, the data processing and sharing agreements, and the privacy policy. Pull all the papers out, go through it, highlight, post-it note. Documents drift, and they can say different things. What you find should shape your own privacy policy, your terms and agreements, and what you tell clients, partners, and participants.</li></ol>
+    <p>There is a real cost. If you choose to use AI, you need to invest in your team, your policies, your procedures, and your tools. There's no way around it.</p>
+    <h2>What happens when someone uses a personal AI account for work?</h2>
+    <div class="answer-block"><p>In my reading, it's at best unauthorised use of data and likely a data breach of some sort. Treat it as a breach: follow your breach protocol, investigate fully, and keep a record.</p></div>
+    <p>This is the quiet one, often called shadow AI, and it's the part I most want you to hear. Our posts on <a href="https://bynorthlight.ca/blog/shadow-ai-is-the-new-shadow-it.html">shadow AI</a> and the <a href="https://bynorthlight.ca/blog/shadow-ai-governance-checklist-printable.html">shadow AI governance checklist</a> go further. People get excited about AI and try everything through it. I don't think they're doing something they believe is wrong. They aren't stopping to consider what they can and can't upload. People have uploaded spreadsheets of financial data for advice without checking whether it is secure.</p>
+    <p>But if someone puts the organisation's data into a personal AI account, that's at best unauthorised use of data. I believe it's a data breach of some sort. That is my reading, not settled law. The OPC defines a breach of security safeguards as the loss of, unauthorised access to, or unauthorised disclosure of personal information, and its <a href="https://www.priv.gc.ca/en/privacy-topics/business-privacy/breaches-and-safeguards/privacy-breaches-at-your-business/gd_pb_201810/">breach guidance</a> doesn't address staff using personal AI accounts specifically.</p>
+    <p>I'd treat it as a breach. Follow your breach protocol and the law that applies to you. Investigate fully:</p>
+    <ul><li>What happened, and what data was involved.</li><li>Whether training was switched off on that account.</li><li>Whether there is reputational risk.</li><li>Whether your data insurance needs to be told.</li><li>What else that person has done with it.</li></ul>
+    <p>After investigating, there may be consequences, up to and including someone losing their job. It depends on how far it went and what was disclosed.</p>
+    <p>Keep a log of every breach. The OPC guidance says you must keep records of all breaches for two years, whether or not there is a real risk of significant harm. Reporting to the OPC and notifying the people affected apply when there is a real risk of significant harm. That test governs reporting and notifying; your own due diligence still applies as if the harm were real.</p>
+    <h2>What should you take away from this?</h2>
+    <div class="answer-block"><p>There's no blanket answer, in either direction. Because this changes daily, make informed choices: write the policy, give your team a tool you can see into, make personal data hard to export, and read the documents against each other.</p></div>
+    <p>There's no blanket answer, in either direction. This changes daily, so you have to make informed choices. Write the policy. Give your team a tool you can see into. Make personal data hard to export. Read the documents against each other. And if you'd like help writing or auditing an AI policy, email support@bynorthlight.ca.</p>
+    <p>This isn't legal advice. The pages I've linked are where you can check what applies to you.</p>
+      </div>
+      
+      <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item"><div class="faq-q">Which AI assistant is PIPEDA compliant?</div><div class="faq-a">None of them, on their own. PIPEDA compliance depends on what your organisation does with a tool, not on a certification the tool holds. The OPC's principles for generative AI put responsibility on the organisation using it.
+FAQ_QUESTION
+Does "we don't train on your data" mean an AI tool is safe for personal information?
+FAQ_ANSWER
+Not necessarily. Training settings can be switched on or off later, and details differ by plan. Read the vendor's terms of service, data addendum, data processing agreements, and privacy policy against each other.
+FAQ_QUESTION
+Does storing data in Canada protect it from foreign laws?
+FAQ_ANSWER
+Not by itself. One Canadian law firm notes that storing data in Canada does not on its own prevent access under foreign laws such as the US CLOUD Act. Who controls the data matters more than where it sits.
+FAQ_QUESTION
+Is an employee using a personal AI account for work a data breach?
+FAQ_ANSWER
+In my reading, it is likely a data breach of some sort, though that is not settled law. The OPC's breach guidance doesn't address personal AI accounts specifically. I'd treat it as a breach, follow your breach protocol, and investigate fully.
+FAQ_QUESTION
+How long do I need to keep breach records in Canada?
+FAQ_ANSWER
+The OPC guidance says you must keep records of all breaches for two years, whether or not there is a real risk of significant harm. Reporting to the OPC and notifying affected people apply when there is a real risk of significant harm.</div></div>
+      </div>
+      
+      <div class="related-reading">
+        <p class="related-label">Related reading</p>
+        <div class="related-links">
+          <a href="/blog/shadow-ai-is-the-new-shadow-it.html" class="related-link">Shadow AI Is the New Shadow IT — What Leaders Need to Know <span class="related-link-arrow">→</span></a>
+          <a href="/blog/how-we-built-northlight-vault-privacy-first.html" class="related-link">How We Built Northlight Vault: Privacy-First Thinking in a World of Unnecessary Data <span class="related-link-arrow">→</span></a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Sidebar -->
+    <aside class="blog-sidebar" aria-label="Post sidebar">
+
+      <div class="sidebar-section">
+        <p class="sidebar-label">Published</p>
+        <div class="pub-card">
+          <div class="pub-day">12</div>
+          <div class="pub-year">November 2026</div>
+          <hr class="pub-rule">
+          <p class="pub-readtime"><strong>6</strong> min read</p>
+        </div>
+      </div>
+      
+      
+      <div class="sidebar-section">
+        <p class="sidebar-label">Topics</p>
+        <div class="topics-wrap">
+          <span class="topic-tag">pipeda</span>
+        <span class="topic-tag">ai compliance</span>
+        <span class="topic-tag">privacy</span>
+        <span class="topic-tag">shadow ai</span>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- Right wing -->
+    <div class="blog-right-wing" role="presentation">
+      <div class="right-glow" role="presentation"></div>
+      <div class="right-dots-wrap" role="presentation" aria-hidden="true">
+        <div class="dot" style="top:0;left:0"></div>
+        <div class="dot" style="top:20px;left:24px"></div>
+        <div class="dot" style="top:48px;left:8px"></div>
+        <div class="dot" style="top:68px;left:38px"></div>
+        <div class="dot" style="top:96px;left:16px"></div>
+        <div class="dot" style="top:120px;left:46px"></div>
+        <div class="dot" style="top:150px;left:4px"></div>
+        <div class="dot" style="top:176px;left:30px"></div>
+        <div class="dot" style="top:206px;left:52px"></div>
+        <div class="dot" style="top:234px;left:18px"></div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p class="footer-copy">© 2026 Northlight</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/" class="footer-link">Home</a>
+        <a href="/vault.html" class="footer-link">Northlight Vault</a>
+        <a href="/northlight-privacy.html" class="footer-link">Privacy Policy</a>
+      </nav>
+    </footer>
+
+  </div>
+
+  <!-- Plausible Analytics -->
+  <script defer data-domain="bynorthlight.ca" src="https://plausible.io/js/script.js"></script>
+</body>
+</html>
