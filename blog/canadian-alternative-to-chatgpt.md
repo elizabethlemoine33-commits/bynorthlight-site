@@ -50,7 +50,7 @@ I went looking for a Canadian alternative to ChatGPT this year because it matter
 ## What does "Canadian" actually mean for an AI tool?
 
 <div class="answer-block">
-<p>"Canadian" covers three separate questions: who owns the tool, where the data sits, and whose model runs underneath. A tool can satisfy one and fail the others.</p>
+<p>"Canadian" covers three separate questions: who owns the tool, where the data sits, and whose model runs underneath.</p>
 </div>
 
 When I say I want Canadian tools wherever possible, there are three questions underneath: who owns the tool, where the data sits, and whose model runs underneath.
@@ -62,7 +62,7 @@ I wrote about [AI tool data security for Canadian businesses](/blog/ai-tool-data
 ## Is there a Canadian alternative to ChatGPT?
 
 <div class="answer-block">
-<p>Not an obvious one. Cohere's North and Compass are priced by getting in touch, and Augure is the one Canadian tool Elizabeth has used. Its quality was very good, but the free limits were frustrating.</p>
+<p>Cohere's North and Compass are priced by getting in touch, and Augure is the one Canadian tool Elizabeth has used. Its quality was very good, but the free limits were frustrating.</p>
 </div>
 
 Cohere comes up a lot when I read about AI, mostly on Threads. I had not looked at its site in a while, so I did. The [pricing page](https://cohere.com/pricing){:rel="noopener"} lists North and Compass, both with "Get in touch for custom enterprise pricing." Nothing on the site is built for a person or a small team the way ChatGPT or Claude is.
@@ -96,5 +96,3 @@ If it looks like today, only on a Canadian tool, that's okay.
 Then test. Same information, same prompt, how does it perform? Run it in both tools and compare. It may make sense to switch one use case and not others. I also wrote an AI adoption checklist for Canadian businesses [here](/blog/ai-adoption-checklist-canadian-businesses-2026.html).
 
 > Name a tool for what it is.
-
-Whatever you choose, know who owns it, where the data sits, and whose model runs underneath.
