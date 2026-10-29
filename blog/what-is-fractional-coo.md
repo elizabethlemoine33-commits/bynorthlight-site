@@ -23,6 +23,8 @@ related_reading:
     url: /blog/fractional-coo-vs-hiring-full-time-canada.html
   - title: "What Is a Fractional Executive? Guide for Canadian Businesses"
     url: /blog/what-is-fractional-executive-guide-canadian-businesses.html
+  - title: "Fractional COO Services in Canada: What You Get and What It Costs"
+    url: /blog/fractional-coo-services-canada.html
 faq:
   - q: "What does a fractional COO actually do?"
     a: "A fractional COO owns operational outcomes in your business on a part-time basis — typically 10–20 hours per week. They attend your leadership meetings, work directly with your team leads, build systems and processes, and make operational decisions. They're not an advisor who weighs in from a distance; they're embedded in your operations and held accountable for what they own."
