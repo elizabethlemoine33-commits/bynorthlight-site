@@ -74,7 +74,7 @@ permalink: /blog/ai-adoption-checklist-printable.html
     <li><div class="check-box"></div>Confirm what personal information you collect and process</li>
     <li><div class="check-box"></div>Check whether your AI tool will process or store that data, and where (Canadian servers, US servers, or unclear)</li>
     <li><div class="check-box"></div>Review your privacy policy — does it cover AI use and cross-border transfers?</li>
-    <li><div class="check-box"></div>If you have Quebec clients or employees, confirm your Law 25 obligations around cross-border data transfers</li>
+    <li><div class="check-box"></div>If you have Quebec clients or employees, check your Law 25 obligations around cross-border data transfers with the <a href="https://www.cai.gouv.qc.ca/" rel="noopener">Commission d'accès à l'information du Québec</a> (this checklist is not legal advice)</li>
     <li><div class="check-box"></div>If you're in a regulated sector, find your regulator's AI guidance and read it</li>
     <li><div class="check-box"></div>Assign one person responsible for ongoing compliance</li>
   </ul>

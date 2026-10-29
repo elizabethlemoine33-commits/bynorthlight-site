@@ -29,7 +29,7 @@ permalink: /blog/ai-agent-deployment-checklist-printable.html
   <ul class="checklist">
     <li><div class="check-box"></div>Agent has its own identity, separate from any human developer</li>
     <li><div class="check-box"></div>Agent permissions are explicitly defined and documented</li>
-    <li><div class="check-box"></div>Agent is operating at the appropriate autonomy level (1–4) for the task</li>
+    <li><div class="check-box"></div>Agent is operating at the appropriate autonomy level (1–4) for the task (levels are described in <a href="/blog/your-agents-need-a-chain-of-command.html">Your Agents Need a Chain of Command</a>)</li>
     <li><div class="check-box"></div>High-stakes actions require explicit human approval before execution</li>
   </ul>
 </div>
