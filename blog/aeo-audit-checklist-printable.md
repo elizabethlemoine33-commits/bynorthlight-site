@@ -91,10 +91,10 @@ permalink: /blog/aeo-audit-checklist-printable.html
     <li><div class="check-box"></div>Article or BlogPosting schema is present on every blog post, with headline, datePublished, author, and publisher</li>
     <li><div class="check-box"></div>Organization schema is present on the homepage with name, url, and sameAs links to your social profiles</li>
     <li><div class="check-box"></div>sitemap.xml is accessible and up to date — includes all published pages and posts</li>
-    <li><div class="check-box"></div>robots.txt is not blocking AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended)</li>
+    <li><div class="check-box"></div>robots.txt is not blocking the AI crawlers you want citing your site (check each AI company's own documentation for its current crawler names)</li>
     <li><div class="check-box"></div>llms.txt is present at /llms.txt — lists your key pages and their purpose in plain language</li>
     <li><div class="check-box"></div>All canonical URLs are correct and match the live URL — no canonical pointing to a 404</li>
-    <li><div class="check-box"></div>Page load time is under 3 seconds — slow pages are less likely to be crawled fully</li>
+    <li><div class="check-box"></div>Pages load quickly on a normal connection</li>
   </ul>
 </div>
 
@@ -110,7 +110,7 @@ permalink: /blog/aeo-audit-checklist-printable.html
     <li><div class="check-box"></div>At least one post on your highest-traffic topic includes a link to a primary source (research, official publication, or industry body)</li>
     <li><div class="check-box"></div>Your business entity (full legal name) is consistent across the website, Google Business Profile, LinkedIn, and schema</li>
     <li><div class="check-box"></div>Contact information is findable and crawlable — a visible email address or form, not hidden behind obfuscation</li>
-    <li><div class="check-box"></div>Run an AI visibility tool (MentionScout, Profound, or similar) to see how often you're being cited — baseline before optimizing</li>
+    <li><div class="check-box"></div>Ask the AI assistants your customers use the questions they would ask, and note whether your site is cited — a baseline before optimizing</li>
   </ul>
 </div>
 
