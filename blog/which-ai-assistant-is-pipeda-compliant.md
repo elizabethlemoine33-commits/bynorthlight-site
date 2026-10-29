@@ -63,7 +63,7 @@ The OPC's [principles for generative AI](https://www.priv.gc.ca/en/privacy-topic
 
 Read that as a business owner and the question changes. It stops being "is this tool safe?" and becomes "what are we doing with it, who decided, and can we see it?" Our [AI adoption checklist for Canadian businesses](/blog/ai-adoption-checklist-canadian-businesses-2026.html) is built around those questions. If a tool can't be compliant on its own, the licence owner is responsible. If your staff are using personal accounts for the organisation's data, the organisation is responsible too.
 
-One note on provinces. Some provinces have their own private-sector privacy laws that apply instead of [PIPEDA](https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/){:rel="noopener"} for information collected, used, and disclosed within the province, while [PIPEDA](https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/){:rel="noopener"} still covers cross-border and interprovincial transfers. The OPC page above explains which is which; check it for where you operate.
+One note on provinces. Some provinces have their own private-sector privacy laws that apply instead of PIPEDA for information collected, used, and disclosed within the province, while PIPEDA still covers cross-border and interprovincial transfers. The OPC page above explains which is which; check it for where you operate.
 
 ## Why isn't "we don't train on your data" enough?
 

@@ -41,6 +41,7 @@ faq:
     <li>"Canadian" is at least three questions: who owns the tool, where the data sits, and whose model runs underneath.</li>
     <li>Cohere's North and Compass are priced by getting in touch, so nothing there is built for an individual or small team.</li>
     <li>Augure, the one Canadian tool Elizabeth tested, produced a travel plan comparable to Claude's, but its free limits were frustrating.</li>
+    <li>In my use, Augure suits Canadian and Quebec law work; I would move for it if coding were part of the package and affordable.</li>
     <li>Before switching, assess your data, use cases, seats, budget and what life looks like afterward, then test both tools side by side.</li>
   </ul>
 </div>
@@ -76,6 +77,16 @@ I tested it on a real task: a travel plan for a week in Newfoundland. It asked g
 Augure's own assistant, its website, and its privacy policy disagreed on where the AI runs, so I asked. Its founder replied that Mistral in the EU is only a backup, that Canadian systems come first, and that the policy is being updated.
 
 I have a paid subscription, and my notes are in one place. Claude is an American tool, and I'm a hypocrite just as much as anyone else. It hasn't been worth switching off Claude for me, but I keep my eyes open when I feel compelled to make changes.
+
+I would absolutely use Augure if coding were more part of it. I don't need so much of a ChatGPT; I need a Codex or Claude Code alternative. When that is part of the package and it's affordable, that's when I'll look to make my move.
+
+## Who is Augure for?
+
+<div class="answer-block">
+<p>In my use, anyone working with Canadian law. For coding, I would wait.</p>
+</div>
+
+If you are doing things in Canadian law, Augure has some great resources. Canadian and Quebec law are already in there, and some of it is very well done. If you need a Codex or Claude Code alternative, it is not there for me yet.
 
 ## Should your business switch to a Canadian AI tool?
 
