@@ -158,7 +158,7 @@ If you founded the company and hired the team, it is hard to see the forest for 
 <p>It can. If you need someone's certification to be compliant, a fractional hire may not cover it.</p>
 </div>
 
-Some industries have compliance requirements. If you need someone's certification to be compliant, such as a first-class engineer for a power plant, having them fractionally may not be enough. Be clear about what you need from them. Otherwise it matters that they understand your business.
+Some industries have compliance requirements. If you need someone's certification to be compliant, such as a first-class engineer for a power plant, having them fractionally may not be enough. Be clear about what you need from them, and do your research. Contact your insurance and the regulatory bodies that apply to you, and ask the compliance questions up front. They matter more than people think: you need to know that what you want to do is doable. Keep checking what the requirements are. Otherwise it matters that they understand your business.
 
 > Hire toward your gaps, not your comfort zone.
 
