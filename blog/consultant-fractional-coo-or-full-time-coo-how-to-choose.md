@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Consultant, Fractional COO or Full-Time COO? How to Choose"
-seo_title: "Consultant, Fractional COO or Full-Time COO?"
+title: "Consultant, Fractional COO or Full-Time COO in Canada? How to Choose"
+seo_title: "Consultant, Fractional COO or Full-Time COO in Canada?"
 description: "Not sure whether to hire a consultant, fractional COO or full-time COO? Decide what you need, what to ask, how much authority to give and what to agree."
-og_title: "Consultant, Fractional COO or Full-Time COO? How to Choose"
+og_title: "Consultant, Fractional COO or Full-Time COO in Canada? How to Choose"
 og_description: "Not sure whether to hire a consultant, fractional COO or full-time COO? Decide what you need, what to ask, how much authority to give and what to agree."
 date: 2026-10-29
 date_modified: "2026-10-29"
@@ -74,11 +74,11 @@ A consultant also suits a short-term deliverable, such as a strategic plan, a do
 
 In my experience, consultants often do the research and the interviews, then give you a plan. They describe your issue back, build a great plan and facilitate great meetings, but they don't actually stick around to do the fix. Tech consultants are different: they build the tool. In my experience that can come with a never-ending series of meetings, and it can take months.
 
-A fractional COO comes in, works out the problem and does the work. As I wrote in [What Is a Fractional Executive?](/blog/what-is-fractional-executive-guide-canadian-businesses.html), a fractional executive is accountable for results, not just insights. They are not there full-time, and how much time varies: ten or 20 hours a week, five hours a week, or 15 to 30 hours a month. It depends on what is needed.
+A fractional COO comes in, works out the problem and does the work. As I wrote in [What Is a Fractional Executive?](/blog/what-is-fractional-executive-guide-canadian-businesses.html), a fractional executive is accountable for results, not just insights. They are not there full-time, and how much time varies: ten or 20 hours a week, five hours a week, or 15 to 30 hours a month. It depends on what is needed. Go Fractional's [rate benchmark for COOs](https://www.gofractional.com/insights/rates/coo){:rel="noopener"} puts a typical engagement at about 12 hours a week, which sits inside that spread. For what it costs in Canada, see [fractional COO vs hiring full-time in Canada](/blog/fractional-coo-vs-hiring-full-time-canada.html).
 
 They come in, they step in, they do the thing, they step back. Fractional fits when you have specific problems that need solving as a short-term thing, or you just want that layer to see what is happening, or you cannot afford a full-time COO but you do need some support.
 
-A full-time COO sits above your directors, who are each specific to their field: operations, sales, production, marketing. They see what is happening across all of the areas and make sure the business moves in one direction, not four, five or six. You may need that when the business has grown a lot and people are siloed.
+A full-time COO sits above your directors, who are each specific to their field: operations, sales, production, marketing. They see what is happening across all of the areas and make sure the business moves in one direction, not four, five or six. You may need that when the business has grown a lot and people are siloed. In Canada, [PayScale lists an average base salary of about C$143,000](https://www.payscale.com/research/CA/Job=Chief_Operating_Officer_(COO)/Salary){:rel="noopener"} for a COO, before bonus, benefits or equity.
 
 <div class="callout-block">
 <p>A full-time COO is a big commitment: salary, benefits and potentially equity or bonuses. The business needs to be in a sweet spot to support it.</p>
