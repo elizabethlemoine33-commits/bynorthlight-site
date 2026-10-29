@@ -1,0 +1,53 @@
+name: Blog checks
+
+# Pre-publish checks for blog posts written in Claude Code or by hand (posts from the Northlight OS
+# dispatcher are checked there). Deterministic only: no model call, no secrets. Only the post files
+# changed in the pull request or push are checked. Independent of the Jekyll deploy workflow.
+
+on:
+  pull_request:
+    paths: ['blog/*.md']
+  push:
+    branches: [main]
+    paths: ['blog/*.md']
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: List changed post files
+        id: files
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            BASE="${{ github.event.pull_request.base.sha }}"
+          else
+            BASE="${{ github.event.before }}"
+            git cat-file -e "$BASE^{commit}" 2>/dev/null || BASE="$(git rev-parse HEAD~1)"
+          fi
+          git diff --name-only --diff-filter=AM "$BASE" HEAD -- 'blog/*.md' > changed.txt
+          cat changed.txt
+
+      - name: Run the checks
+        id: checks
+        continue-on-error: true
+        run: xargs -a changed.txt -r node .github/scripts/blog-checks/run.js
+
+      - name: Comment on the pull request
+        if: github.event_name == 'pull_request' && hashFiles('blog-checks-report.md') != ''
+        continue-on-error: true   # a pull request from a fork cannot comment; the job result still shows the failure
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh pr comment "${{ github.event.pull_request.number }}" --body-file blog-checks-report.md --edit-last --create-if-none
+
+      - name: Fail if any post failed its checks
+        if: steps.checks.outcome == 'failure'
+        run: exit 1
