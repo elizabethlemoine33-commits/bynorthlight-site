@@ -5,9 +5,9 @@ seo_title: "Consultant, Fractional COO or Full-Time COO?"
 description: "Not sure whether to hire a consultant, fractional COO or full-time COO? Decide what you need, what to ask, how much authority to give and what to agree."
 og_title: "Consultant, Fractional COO or Full-Time COO? How to Choose"
 og_description: "Not sure whether to hire a consultant, fractional COO or full-time COO? Decide what you need, what to ask, how much authority to give and what to agree."
-date: 2026-10-28
-date_modified: "2026-10-28"
-published_time: "2026-10-28T00:00:00.000Z"
+date: 2026-10-29
+date_modified: "2026-10-29"
+published_time: "2026-10-29T00:00:00.000Z"
 permalink: /blog/consultant-fractional-coo-or-full-time-coo-how-to-choose.html
 source_label: "Blog · Essay"
 source_class: source-essay
@@ -53,7 +53,7 @@ Before you compare advisors, think about whether you really need someone at all.
 ## Do you really need an advisor?
 
 <div class="answer-block">
-<p>Only if you can say what you want them to do and which outcomes they will be responsible for. Decide that first.</p>
+<p>Start by deciding whether you need someone, what you want them to do, and which outcomes they will be responsible for.</p>
 </div>
 
 **Start by deciding whether you really need someone, what you want them to do, and which outcomes they will be responsible for.**
