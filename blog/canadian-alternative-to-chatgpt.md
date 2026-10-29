@@ -86,7 +86,7 @@ I would absolutely use Augure if coding were more part of it. I don't need so mu
 <p>In my use, anyone working with Canadian law. For coding, I would wait.</p>
 </div>
 
-If you are doing things in Canadian law, Augure has some great resources. Canadian and Quebec law are already in there, and some of it is very well done. If you need a Codex or Claude Code alternative, it is not there for me yet.
+If you are doing things in Canadian law, Augure has some great resources. Canadian and Quebec law are already in there, and some of it is very well done. Augure Legal, a separate product for Canadian law firms, [reviews contracts against your firm's playbook](https://augureai.ca/products/legal){:rel="noopener"}. Its page says it is native in Quebec French and English, with Law 25, PIPEDA and CanLII built in, and that the solo plan starts at $149 a month. Augure's site also lists a Code product, which I have not tried. If you need a Codex or Claude Code alternative, that is the one I would look at.
 
 ## Should your business switch to a Canadian AI tool?
 
