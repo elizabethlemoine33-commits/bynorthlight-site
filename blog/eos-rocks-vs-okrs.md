@@ -6,7 +6,7 @@ seo_title: "EOS Rocks vs. OKRs: Which Should You Use?"
 og_title: "EOS Rocks vs. OKRs: Which Goal-Setting Framework Is Right for Your Business? | Northlight Advisory Services"
 og_description: "OKRs and EOS Rocks both solve the priority problem — but they solve different versions of it. A direct comparison for Canadian small business operators."
 date: 2026-08-10
-date_modified: "2026-10-06"
+date_modified: "2026-10-29"
 published_time: "2026-08-10T00:00:00.000Z"
 permalink: /blog/eos-rocks-vs-okrs.html
 source_label: "Blog · Guide"
@@ -72,7 +72,7 @@ If you've read [OKRs for Canadian Small Businesses](/blog/okrs-for-canadian-smal
 | **Parking lot** | Explicit in EOS methodology | Not formalised |
 | **Comes with** | Full operating system — L10, scorecard, accountability chart | Standalone framework |
 | **Primary strength** | Execution discipline | Outcome measurement and strategic alignment |
-| **Sweet spot** | 10–200 people, execution-focused | 50–200+ people, alignment-complex |
+| **Sweet spot** | 10–250 people, execution-focused | 50–200+ people, alignment-complex |
 
 ## The Same Priorities, Two Frameworks
 
@@ -129,7 +129,7 @@ The exercise works for any priority — pick something important you're carrying
 ## When to Use EOS Rocks
 
 <div class="answer-block">
-<p>Choose EOS Rocks when your main problem is execution discipline: the right priorities are already identified but keep dying mid-quarter. Rocks suit businesses of roughly 10 to 150 people, teams that want a simple shared language (done or not done), and leaders who want a full operating system rather than only a goal-setting layer.</p>
+<p>Choose EOS Rocks when your main problem is execution discipline: the right priorities are already identified but keep dying mid-quarter. Rocks suit businesses of roughly 10 to 250 people, the range <a href="https://www.eosworldwide.com/what-is-eos" rel="noopener">EOS Worldwide</a> says EOS is designed for, teams that want a simple shared language (done or not done), and leaders who want a full operating system rather than only a goal-setting layer.</p>
 </div>
 
 Choose Rocks when your primary problem is execution discipline — when the right priorities are already identified, but they keep dying mid-quarter.
@@ -137,7 +137,7 @@ Choose Rocks when your primary problem is execution discipline — when the righ
 1. **Priorities are crowded out by business-as-usual.** If the important keeps losing to the urgent, the L10 accountability rhythm solves this in a way that's hard to replicate with OKRs alone.
 2. **Your team needs a simple shared language.** Binary done/not-done is easy to explain, easy to review, and hard to game.
 3. **You want a full operating system.** Rocks don't stand alone — they're one component of EOS, which provides L10, the accountability chart, the scorecard, and the quarterly planning rhythm. If you want all of that, Rocks are the goal-setting layer of a broader system.
-4. **You're running a business with 10–150 people.** EOS was designed for this range — a leadership team that can hold the whole business in view and review all Rocks in five minutes.
+4. **You're running a business with 10–250 people.** EOS was designed for this range — a leadership team that can hold the whole business in view and review all Rocks in five minutes.
 5. **You're not yet confident writing measurable outcomes.** Rocks are forgiving on this. The commitment to finish something is itself valuable, and the L10 review doesn't require you to score Key Results.
 
 ## When to Use OKRs
