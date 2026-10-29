@@ -26,7 +26,7 @@ related_reading:
     url: /blog/consultant-fractional-coo-or-full-time-coo-how-to-choose.html
 faq:
   - q: "What does a fractional COO cost in Canada?"
-    a: "There is no single price. It depends on the scope, the hours and the length of the engagement. Go Fractional's benchmark is not Canadian-specific, and PayScale's average COO base salary of about C$143,000 is for a full-time role. Read any quote against a defined scope."
+    a: "There is no single price. It depends on the scope, the hours and the length of the engagement. Go Fractional's benchmark is in US dollars and not Canadian-specific, and PayScale's average COO base salary of about C$143,000 is for a full-time role. Read any quote against a defined scope."
   - q: "How many hours does a fractional COO work?"
     a: "It depends on what is needed. Examples are ten or 20 hours a week, five hours a week, or 15 to 30 hours a month."
   - q: "Is a fractional COO available 24/7?"
@@ -43,7 +43,7 @@ faq:
     <li>What a fractional COO costs depends on what you ask them to do, for how long, and how it ends, so a quote only makes sense next to a defined scope.</li>
     <li>You are buying someone who works out a specific problem (or a series of them), takes decisions off your plate, does the work and steps back.</li>
     <li>Hours vary with need: ten or 20 hours a week, five hours a week, or 15 to 30 hours a month. Check whether you are reading weeks or months.</li>
-    <li>Go Fractional publishes a COO rate benchmark, but it is not Canadian-specific, so treat it as context and not as a quote.</li>
+    <li>Go Fractional publishes a COO rate benchmark, but its figures are in US dollars and not Canadian-specific, so treat it as context and not as a quote.</li>
     <li>Agree when you can reach them, on which channels and how fast they reply, and put it in the contract.</li>
   </ul>
 </div>
