@@ -23,6 +23,8 @@ related_reading:
     url: /blog/fractional-coo-atlantic-canada.html
   - title: "Fractional Advisory Services in Canada: Types, Costs and How to Choose"
     url: /blog/best-fractional-advisory-services-canada.html
+  - title: "Fractional COO Services in Canada: What You Get and What It Costs"
+    url: /blog/fractional-coo-services-canada.html
 faq:
   - q: "How Much Does a Full-Time COO Cost in Canada?"
     a: "A full-time COO in Canada costs an average base salary around C$144,000, with total compensation including bonuses, benefits, and equity commonly reaching C$300,000 or more for experienced operators. In Atlantic Canada, expect C$150,000–$220,000 in total compensation before onboarding costs and the six-month ramp before they know where anything is. And you need enough work to keep a senior executive engaged — which most businesses under C$5M in revenue don't have."

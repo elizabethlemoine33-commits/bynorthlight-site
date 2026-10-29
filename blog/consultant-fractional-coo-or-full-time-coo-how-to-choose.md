@@ -24,6 +24,8 @@ related_reading:
     url: /blog/servant-leadership-daily-practice.html
   - title: "What I Learned About Being a COO From a Book Written for CEOs"
     url: /blog/what-i-learned-being-a-coo-from-a-ceos-book.html
+  - title: "Fractional COO Services in Canada: What You Get and What It Costs"
+    url: /blog/fractional-coo-services-canada.html
 faq:
   - q: "Do I need a consultant or a fractional COO?"
     a: "It depends on what you need. A consultant fits facilitation, such as when your directors disagree, or a short-term document such as a strategic plan. A fractional COO comes in to solve a specific problem, does the work, and then steps back."
