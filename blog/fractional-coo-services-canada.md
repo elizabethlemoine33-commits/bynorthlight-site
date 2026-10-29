@@ -108,7 +108,7 @@ Ask each quote these questions:
 
 For market context, Go Fractional publishes a [COO rate benchmark](https://www.gofractional.com/insights/rates/coo){:rel="noopener"} built from public job posts and candidate profiles over 90 days: 4 job posts and 832 candidate profiles, last updated October 29, 2026.
 
-It reports an average of $192 an hour, a middle half of $150 to $225 an hour, and an estimated monthly retainer of $7,200 to $10,800 at roughly 12 hours a week. The page does not state a currency, and its full-time comparison uses US labour data. It is a benchmark, not a Canadian price and not a quote.
+It reports an average of US$192 an hour, a middle half of US$150 to US$225 an hour, and an estimated monthly retainer of US$7,200 to US$10,800 at roughly 12 hours a week. These are US dollars, and its full-time comparison uses US labour data. It is a benchmark, not a Canadian price and not a quote.
 
 <div class="callout-block">
 <p>Fractional can suit a business that cannot afford a full-time COO but needs support.</p>
