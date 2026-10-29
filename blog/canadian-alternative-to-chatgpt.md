@@ -2,9 +2,9 @@
 layout: post
 title: "Canadian Alternative to ChatGPT? What I Found"
 seo_title: "Canadian Alternative to ChatGPT?"
-description: "Looking for a Canadian alternative to ChatGPT? What \"Canadian\" really means for AI tools, what I found testing Augure, and how to decide."
+description: "Looking for a Canadian alternative to ChatGPT? What Canadian really means for AI tools, what I found testing Augure, and how to decide."
 og_title: "Canadian Alternative to ChatGPT? What I Found"
-og_description: "Looking for a Canadian alternative to ChatGPT? What \"Canadian\" really means for AI tools, what I found testing Augure, and how to decide."
+og_description: "Looking for a Canadian alternative to ChatGPT? What Canadian really means for AI tools, what I found testing Augure, and how to decide."
 date: 2026-10-28
 date_modified: "2026-10-28"
 published_time: "2026-10-28T00:00:00.000Z"
