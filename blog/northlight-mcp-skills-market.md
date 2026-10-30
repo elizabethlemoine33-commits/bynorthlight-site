@@ -115,7 +115,7 @@ Running a solo advisory practice means there's no project manager checking the q
 
 This one solves the problem I had before it existed: Claude would draft content in a competent, professional voice. Just not mine. And then I'd spend time editing it back toward how I actually sound. The bigger problem is what happens if you don't catch it — you publish content that reads like everyone else using the same AI prompt templates. The internet is already full of that. I don't want to add to it.
 
-Strategic Voice Framework means Claude drafts in my voice from the start. And if I have a day where I'm rushing and I write something that doesn't sound like me, the framework flags it. That guardrail is worth a lot when you're stressed and moving fast.
+Strategic Voice Framework means Claude drafts in my voice from the start. On the days when I'm rushing, that is worth a lot: I'm editing a draft that already sounds like me, not rebuilding one that doesn't.
 
 <div class="callout-block">
 <p><strong><a href="https://mcpmarket.com/tools/skills/mp-mcp-market-publisher-prep-skills-for-sale-0f9749a7" target="_blank" rel="noopener">MCP Market Publisher</a></strong> — $19</p>
