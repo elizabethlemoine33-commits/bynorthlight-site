@@ -45,7 +45,7 @@ faq:
   </ul>
 </div>
 
-It is past midnight and the quote is open on your screen. You are the only one who has read it. There is nobody to ask, so you either press send or leave it in drafts and decide tomorrow. When you decide most things alone, the big ones look just like the small ones. Nobody says wait. Nobody asks the question, and not because the answer is hard. It is because you cannot see the question from where you are standing.
+It is past midnight and the quote is open on your screen. You are the only one who has read it. There is nobody to ask, so you either press send or leave it in drafts and decide tomorrow. When you decide most things alone, the big ones look just like the small ones. Nobody says wait. Nobody asks the question, and not because the answer is hard. It is because you cannot see the question from where you are standing. I run Northlight Advisory Services, and I came to it from running operations inside organizations, so I have been on both sides of a decision like this.
 
 ## What question is missing when you price a quote alone?
 
@@ -60,6 +60,8 @@ Things went sideways with the event planning team, and I was asked to step in to
 I probably worked 40 hours a week for six months. I should have either said no, or said yes at a different rate. I have made the underpriced-quote mistake myself, and I learned from it.
 
 Looking back, the question I needed was a plain one: is this still the job we agreed to? Nobody asked it, including me. And when the answer is no, you ask to have the contract change, or you say, okay, that means I can't do Y and Z. It can be as simple as: my understanding was you wanted X, and this has now become X, Y and Z. We need to renegotiate. There is something okay about doing that. I had to learn it the hard way.
+
+Scope changes are common. The Project Management Institute found in its [2018 Pulse of the Profession](https://www.pmi.org/learning/library/scope-creep-rising-11308) that 52% of projects had scope creep or uncontrolled changes, up from 43% five years earlier. That is about organizational projects, not one-person quotes, but it shows how normal the problem is.
 
 One way to catch it earlier is a premortem. Gary Klein described it in Harvard Business Review in 2007: the team assumes the project [has just failed](https://hbr.org/2007/09/performing-a-project-premortem) and lists the reasons why. He argues that projects fail partly because people hold back their doubts, and that the exercise gives them permission to say them. You can run a small version on a quote with someone you trust. Where did this go wrong?
 
@@ -99,7 +101,7 @@ Then say it out loud: we need to make this decision, and I am struggling with it
 <p>Before the big ones, ask someone to read it and ask the question. You stay the one who decides.</p>
 </div>
 
-1. Before a quote goes out, ask someone to read it and ask: is this still the job we agreed to?
+1. Before a quote goes out, ask someone to read it and ask three questions: Is this still the job we agreed to? What would make this go wrong? What will we do if they ask for more?
 2. When the work grows, say so and renegotiate, or name what you can no longer do.
 3. When a choice has been sitting for weeks, say out loud to someone you trust what is stopping you.
 4. Remember that deferring does not make it easier.
