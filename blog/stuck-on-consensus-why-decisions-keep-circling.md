@@ -41,7 +41,7 @@ faq:
   <ul>
     <li>A circling decision is rarely short of facts or opinions. It is usually short of someone who acts.</li>
     <li>A decision is not an action. A yes from three groups does not start anything.</li>
-    <li>Asking for more input can feel like progress while it costs nothing. The cost shows up later.</li>
+    <li>The cost is not in asking. It is in asking the wrong people, or not asking the right ones.</li>
     <li>Count who has been consulted, then name the one person responsible for acting.</li>
     <li>Ask the questions below before you ask for another round.</li>
   </ul>
@@ -67,15 +67,21 @@ Then ask the harder question. What does it cost to keep waiting? Every time you 
 
 I saw this with a program we had already committed to putting in place, and which was required anyway. Two of us worked out what it needed: who had to be trained, how the reporting and follow-up would work, and where it sat in the budget. We took the plan to three different groups, including the board. Every question was answered. Nothing happened.
 
-It happened when an event needed it, and something there tested what we had. We had most of it, but not all of it. We had never rehearsed the process, so we pieced parts of it together while it was already unfolding.
+It happened when a circumstance required it, and that tested what we had. We had most of it, but not all of it. We had never rehearsed the process, so we pieced parts of it together while it was already unfolding. The best time to test a process is before you need it, and that goes double for an emergency process.
 
-The delay kept costing us. At later events we hired the training in each time. Training a few of our own people to train others would have been the cheaper investment.
+The delay kept costing us. On later occasions we hired the training in each time. Training a few of our own people to train others would have been the cheaper investment.
 
-## What does it cost to keep asking for input?
+It is not an unusual story. Researcher Paul Nutt studied more than 400 real decisions, and about half were [not fully put to use within two years](https://news.osu.edu/half-of-business-decisions-fail-because-of-managements-blunders-new-study-finds/). A third were never used at all.
+
+## What does it cost to ask the wrong people, or to skip the right ones?
 
 <div class="answer-block">
-<p>More than it looks like. Asking for more input feels like progress and spends nothing, while the cost shows up later and somewhere else.</p>
+<p>More than it looks like. Too much input and the wrong input are two sides of the same coin: the loud voices get heard but nothing follows, and the people who would have to act are never asked. Either way, asking feels like progress while the cost shows up later and somewhere else.</p>
 </div>
+
+Think about who has actually been asked. Some people are loud, and they are being heard, and their input is not leading to action. Others ought to have a say because they are the ones who will do the work, and they have not been asked at all.
+
+Nutt's research points the same way. Decisions made by involving the people affected [succeeded more than 80% of the time](https://news.osu.edu/half-of-business-decisions-fail-because-of-managements-blunders-new-study-finds/), yet that approach was used in only about one decision in five. The cost is not in asking. It is in failing to ask the right people.
 
 In another organization we ran an engagement survey. It took months to share the results. Each team was meant to take its results and make a plan. Very little happened.
 
@@ -86,8 +92,10 @@ Which fix on your list is cheap, and which is expensive? Which one did you do?
 ## Why does a team stop telling you the true thing?
 
 <div class="answer-block">
-<p>Because they have learned it does not land. A team that hesitates to raise a question on a low-risk decision may say nothing at all when the stakes are high.</p>
+<p>Often because they have learned it does not land. A team that hesitates to raise a question on a low-risk decision may say nothing at all when the stakes are high.</p>
 </div>
+
+Research from Harvard Business School finds that when people judge speaking up to be [unsafe or futile](https://www.library.hbs.edu/working-knowledge/do-i-dare-say-something), they say less, and that fear can show up even where the leader has done nothing wrong. So silence is not always a sign of a bad environment. Sometimes speaking up to anyone with authority just feels risky.
 
 I do not think a circling decision always means people feel unsafe. But it is worth asking. If something here were failing, would anyone tell you? If shipping something could hurt someone, would they say so? If everyone is going along to get along, what have you allowed to continue, even if you did not start it?
 
@@ -103,7 +111,7 @@ When the front door closes, information finds another route. I kept sending the 
 
 This is where RACI matters. Responsible is who does the work. Accountable is who owns the outcome and makes the call. Consulted is who gives input before the decision. Informed is who is told after.
 
-A stuck decision often has too many people consulted and no one responsible. Everyone has been asked, and nobody has been told to begin. Count the people who have been consulted. Then name the one person responsible for acting. If you cannot, that may be why it is stuck.
+A stuck decision often has too many people consulted and no one responsible. Everyone has been asked, and nobody has been told to begin. Count the people who have been consulted. Then name the one person responsible for acting. If you cannot, that may be why it is stuck. Bain's [work on decision roles](https://www.bain.com/insights/who-has-the-d/) makes the same point with a different tool: one person holds the final call, and too many people giving input slows everything down.
 
 Keep the numbers right. Consult only the people whose input changes the decision. Inform everyone else, as much as they need. Put a date on it.
 
