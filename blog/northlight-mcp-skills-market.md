@@ -33,7 +33,7 @@ faq:
   - q: "What MCP skills does Northlight Advisory Services offer?"
     a: "Northlight Advisory Services has three skills on MCP Market: ClickUp Task Builder ($19), which has Claude build complete ClickUp tasks every time, each with a start date, due date, assignee, priority and a detailed description; Strategic Voice Framework ($19), which captures your brand voice and applies it consistently with Claude; and MCP Market Publisher ($19), which standardizes the process of listing skills on MCP Market. All three are at mcpmarket.com/sellers/northlight-skills."
   - q: "What does the Strategic Voice Framework MCP skill do?"
-    a: "The Strategic Voice Framework captures your brand voice — tone, vocabulary, style, what you avoid — and applies it consistently when Claude drafts content. It flags drift too: if you write something off-brand, it can identify and correct it. For consultants producing a lot of written content, it is the difference between content that sounds like you and content that sounds like everyone else using the same AI defaults."
+    a: "The Strategic Voice Framework captures your brand voice — tone, vocabulary, style, what you avoid — and applies it consistently when Claude drafts content. It is a template you make your own: you fill in real examples from your writing, such as signature phrases, things you never say and before-and-after samples. For consultants producing a lot of written content, it is the difference between content that sounds like you and content that sounds like everyone else using the same AI defaults."
   - q: "Why did Northlight list on MCP Market rather than selling directly?"
     a: "MCP Market handled the infrastructure — Stripe integration, listing, discovery — so we didn't have to build a sales channel from scratch. They have a strong reputation in the MCP community and are an established place where people already look for skills. For tools this specific, being findable by people already looking for MCP skills matters more than owning the transaction layer."
   - q: "What is the MCP Market Publisher skill?"
@@ -98,7 +98,7 @@ So we listed.
 ## What does each skill actually do?
 
 <div class="answer-block">
-<p>Three skills: ClickUp Task Builder ($19) has Claude create complete ClickUp tasks every time: start date, due date, assignee, priority and a detailed description. Strategic Voice Framework ($19) applies your specific brand voice when Claude drafts content and flags when you drift off-brand. MCP Market Publisher ($19) standardises the process of preparing and listing a skill on MCP Market, eliminating the friction of learning it fresh each time.</p>
+<p>Three skills: ClickUp Task Builder ($19) has Claude create complete ClickUp tasks every time: start date, due date, assignee, priority and a detailed description. Strategic Voice Framework ($19) applies your specific brand voice when Claude drafts content. MCP Market Publisher ($19) standardises the process of preparing and listing a skill on MCP Market, eliminating the friction of learning it fresh each time.</p>
 </div>
 
 <div class="callout-block">
@@ -110,7 +110,7 @@ Running a solo advisory practice means there's no project manager checking the q
 
 <div class="callout-block">
 <p><strong><a href="https://mcpmarket.com/tools/skills/mp-strategic-voice-framework-8e9198aa" target="_blank" rel="noopener">Strategic Voice Framework</a></strong> — $19</p>
-<p>Captures your specific brand voice and applies it consistently when Claude drafts posts, blog content, or anything else you write. Also holds you to it: if you write something off-brand, it flags the drift and brings you back.</p>
+<p>Captures your specific brand voice and applies it consistently when Claude drafts posts, blog content, or anything else you write. You fill in the template with real examples from your own writing, and Claude drafts from those, not from a generic AI voice.</p>
 </div>
 
 This one solves the problem I had before it existed: Claude would draft content in a competent, professional voice. Just not mine. And then I'd spend time editing it back toward how I actually sound. The bigger problem is what happens if you don't catch it — you publish content that reads like everyone else using the same AI prompt templates. The internet is already full of that. I don't want to add to it.
