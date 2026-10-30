@@ -119,6 +119,8 @@ A stuck decision often has too many people consulted and no one responsible. Eve
 
 Keep the numbers right. Consult only the people whose input changes the decision. Inform everyone else, as much as they need. Put a date on it.
 
+Here is what that would have looked like for the program I described. We took the plan to three groups. The board's answer mattered because the budget sat there, so the board would be consulted once. The other groups would be informed. One person would be named responsible for getting our own people trained to train others, with a date for the first session. One person would be accountable for the program as a whole. Same plan, but the training would not have waited for the event.
+
 Then let them do the work. Ownership without authority is only a title. If you hand someone a task and then take it back, you have not given them the job. I make the same point about [how much authority to give a fractional COO](/blog/consultant-fractional-coo-or-full-time-coo-how-to-choose.html).
 
 ## What would I do first?
