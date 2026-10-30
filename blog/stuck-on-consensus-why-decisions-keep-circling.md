@@ -87,6 +87,8 @@ In another organization we ran an engagement survey. It took months to share the
 
 What stuck was the cheapest thing on the list: half an hour every couple of weeks for the team to get together and talk, so people knew each other better. It was good, and it built some trust. The bigger issues the survey found were mostly ignored. Fixing them meant investing in technology or training, or having open conversations about what was and was not working. Those cost real money and time.
 
+It is a common pattern. Gallup reports that only [8% of employees strongly agree](https://www.gallup.com/workplace/467504/administered-employee-engagement-survey.aspx) that their organization takes action on surveys. In a 2018 UK workplace study of about 2,000 people, [a third of employees reported](https://www.linkedin.com/pulse/when-employee-surveys-go-silent-hidden-cost-doing-nothing-dan-wardle-s23rc/) they had not noticed any change as a result of their employer's survey, and their engagement scores ran about ten points lower than the UK average. The researcher is careful to say the silence is not what made those scores low. The survey was reporting what working there already felt like. But when nothing visibly happens, it confirms what people suspected: that no one is listening.
+
 Which fix on your list is cheap, and which is expensive? Which one did you do?
 
 ## Why does a team stop telling you the true thing?
