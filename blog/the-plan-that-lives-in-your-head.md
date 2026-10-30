@@ -45,7 +45,7 @@ faq:
   </ul>
 </div>
 
-You know what is in motion. Some of it is nearly done, some of it stalled two weeks ago, and one or two things are quietly dead. You are the only one who can tell which is which. I have been the person holding it together, so I know how it happens. And I know what it costs, because I have paid it three different ways.
+You know what is in motion. Some of it is nearly done, some of it stalled two weeks ago, and one or two things are quietly dead. You are the only one who can tell which is which. I have been the person holding it together, so I know how it happens. I run Northlight Advisory Services, and I came to it from running operations inside organizations, so I have been on both sides of this. And I know what it costs, because I have paid it three different ways.
 
 ## What does it cost when the plan only lives in your head?
 
@@ -83,7 +83,7 @@ The second cost is your time. A plan that lives in your head usually comes with 
 
 For a long time, I was the person who got a recurring set of data ready to be imported into our CRM.
 
-Every time, I exported the data and cleaned it up. I changed the date formats, found the IDs for leads and contacts, created the organization records and built the upload files. A regular round took anywhere from one to eight hours. A big one could take a week.
+Every time, I exported the data, cleaned it up and built the upload files. A regular round took anywhere from one to eight hours. A big one could take a week.
 
 While I was doing that, I was not doing strategic work, which was part of my job. The people who owned the work did not have the time or the training. So the data went in slowly, and that held up everything that depended on it: contacting people, follow-up messages, and accurate reports at the end of a quarter.
 
@@ -106,6 +106,8 @@ There was pushback from the beginning.
 So we grouped steps together and built standard processes. One task on the list might hide seven things for one team or twenty for another, and they knew what was inside it. Twice a year, each of us checked with our people and we talked as a group about what was and was not working. Then we edited the document together.
 
 It ended up at about 35 tasks. It worked because there were SOPs behind the tasks, and each task had a description that carried the information. Nobody had to tick off a long checklist. The SOPs were embedded, so the information was there when they opened the task.
+
+For example, a task called "Send the monthly status update" holds the list of what goes in it, where each number comes from, who receives it, and a link to the SOP. Whoever opens it can start without asking you.
 
 That is the version of getting it out of your head I would aim for. Not a complete record, but a plan someone else can pick up. I wrote about [what happens when a hire does not clear the bottleneck](/blog/you-hired-them-now-what.html) if that is where you are.
 
