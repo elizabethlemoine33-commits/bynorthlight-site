@@ -25,7 +25,7 @@ related_reading:
     url: /blog/consultant-fractional-coo-or-full-time-coo-how-to-choose.html
 faq:
   - q: "Why does my team keep circling on a decision?"
-    a: "Usually one of four things: nobody has been told the call is theirs, the room does not share the same information, a no was quietly overruled by silence, or there is a real disagreement nobody has said out loud. Ask which one is true before you ask for another round of input."
+    a: "In my experience, usually one of four things: nobody has been told the call is theirs, the room does not share the same information, a no was quietly overruled by silence, or there is a real disagreement nobody has said out loud. Ask which one is true before you ask for another round of input."
   - q: "What is the difference between a decision and an action?"
     a: "A decision is a choice. An action is someone starting the work. A yes from the people you asked does not give you a start date or an owner."
   - q: "How do I use RACI to unstick a decision?"
@@ -52,12 +52,14 @@ When the same item keeps showing up on your agenda, stop and ask why. What is ac
 ## Why does a decision keep circling when the team has all the facts?
 
 <div class="answer-block">
-<p>Usually one of four things: nobody has been told the call is theirs, the room does not share the same information, a no was quietly overruled by silence, or there is a real disagreement nobody has said out loud.</p>
+<p>In my experience, usually one of four things: nobody has been told the call is theirs, the room does not share the same information, a no was quietly overruled by silence, or there is a real disagreement nobody has said out loud.</p>
 </div>
 
 If you have a capable team, plenty of opinions and a decision that keeps circling, the [Stuck on Consensus page](/who-we-help/stuck-on-consensus) walks through those four. Which one is true here?
 
 Then ask the harder question. What does it cost to keep waiting? Every time you defer, something else does not move. Are you aware of what is moving and what is not?
+
+You are probably not alone. In [McKinsey's 2019 decision-making survey](https://www.mckinsey.com/capabilities/people-and-organization/our-insights/decision-making-in-the-age-of-urgency), only 20% of respondents said their organizations excel at decision making, and a majority said much of the time they spend on decisions is used ineffectively.
 
 ## When is a decision not enough?
 
@@ -65,13 +67,13 @@ Then ask the harder question. What does it cost to keep waiting? Every time you 
 <p>When nobody acts on it. A decision is one thing and acting on it is another. A yes from the people you asked does not give you a start date, or someone told to begin.</p>
 </div>
 
-I saw this with a program we had already committed to putting in place, and which was required anyway. Two of us worked out what it needed: who had to be trained, how the reporting and follow-up would work, and where it sat in the budget. We took the plan to three different groups, including the board. Every question was answered. Nothing happened.
+I have run operations inside organizations, and I have seen this more than once. In one, we had a program we had already committed to putting in place, and which was required anyway. Two of us worked out what it needed: who had to be trained, how the reporting and follow-up would work, and where it sat in the budget. We took the plan to three different groups, including the board. Every question was answered. Nothing happened.
 
 It happened when a circumstance required it, and that tested what we had. We had most of it, but not all of it. We had never rehearsed the process, so we pieced parts of it together while it was already unfolding. The best time to test a process is before you need it, and that goes double for an emergency process.
 
 The delay kept costing us. On later occasions we hired the training in each time. Training a few of our own people to train others would have been the cheaper investment.
 
-It is not an unusual story. Researcher Paul Nutt studied more than 400 real decisions, and about half were [not fully put to use within two years](https://news.osu.edu/half-of-business-decisions-fail-because-of-managements-blunders-new-study-finds/). A third were never used at all.
+It is not an unusual story. In a study published in 2002, researcher Paul Nutt followed more than 400 real decisions, and about half were [not fully put to use within two years](https://news.osu.edu/half-of-business-decisions-fail-because-of-managements-blunders-new-study-finds/). A third were never used at all.
 
 ## What does it cost to ask the wrong people, or to skip the right ones?
 
@@ -87,7 +89,7 @@ In another organization we ran an engagement survey. It took months to share the
 
 What stuck was the cheapest thing on the list: half an hour every couple of weeks for the team to get together and talk, so people knew each other better. It was good, and it built some trust. The bigger issues the survey found were mostly ignored. Fixing them meant investing in technology or training, or having open conversations about what was and was not working. Those cost real money and time.
 
-It is a common pattern. Gallup reports that only [8% of employees strongly agree](https://www.gallup.com/workplace/467504/administered-employee-engagement-survey.aspx) that their organization takes action on surveys. In a 2018 UK workplace study of about 2,000 people, [a third of employees reported](https://www.linkedin.com/pulse/when-employee-surveys-go-silent-hidden-cost-doing-nothing-dan-wardle-s23rc/) they had not noticed any change as a result of their employer's survey, and their engagement scores ran about ten points lower than the UK average. The researcher is careful to say the silence is not what made those scores low. The survey was reporting what working there already felt like. But when nothing visibly happens, it confirms what people suspected: that no one is listening.
+It is a common pattern. Gallup reported in 2023 that only [8% of employees strongly agree](https://www.gallup.com/workplace/467504/administered-employee-engagement-survey.aspx) that their organization takes action on surveys. In a 2018 UK workplace study of about 2,000 people, [a third of employees reported](https://www.linkedin.com/pulse/when-employee-surveys-go-silent-hidden-cost-doing-nothing-dan-wardle-s23rc/) they had not noticed any change as a result of their employer's survey, and their engagement scores ran about ten points lower than the UK average. The researcher is careful to say the silence is not what made those scores low. The survey was reporting what working there already felt like. But when nothing visibly happens, it confirms what people suspected: that no one is listening.
 
 Which fix on your list is cheap, and which is expensive? Which one did you do?
 
