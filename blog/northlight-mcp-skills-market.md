@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "I Built Three AI Tools for My Own Work. Now They're on MCP Market."
-description: "How three MCP skills — Morning Briefing Pro, Strategic Voice Framework, and MCP Market Publisher — went from personal tools for a one-woman advisory practice to listed products on MCP Market."
+description: "Three AI tools I built for my own advisory work, now on MCP Market: what Morning Briefing Pro, Strategic Voice Framework and Publisher do."
 og_title: "I Built Three AI Tools for My Own Work. Now They're on MCP Market."
 og_description: "Morning Briefing Pro, Strategic Voice Framework, and MCP Market Publisher — what each one does, why I built it, and what the iterative process actually looked like."
 date: 2026-07-11
@@ -77,7 +77,7 @@ faq:
 </ul>
 </div>
 
-Northlight Advisory Services has three MCP skills listed on [MCP Market](https://mcpmarket.com/sellers/northlight-skills){:target="_blank" rel="noopener"}: Morning Briefing Pro ($19), Strategic Voice Framework ($19), and MCP Market Publisher ($19). None of them were designed to be products. Each one started as something I built to make running a one-person advisory practice more manageable — wearing 72 hats, needing to be skilled in a lot of topics, needing to produce real work every day.
+Northlight Advisory Services has three MCP skills listed on [MCP Market](https://mcpmarket.com/sellers/northlight-skills){:target="_blank" rel="noopener"}: Morning Briefing Pro ($19), Strategic Voice Framework ($19), and MCP Market Publisher ($19). None of them were designed to be products. Each one started as something I built to make running a [one-person advisory practice](/about.html) more manageable — wearing 72 hats, needing to be skilled in a lot of topics, needing to produce real work every day.
 
 MCP — short for [Model Context Protocol](https://www.anthropic.com/news/model-context-protocol){:rel="noopener"}, the open standard Anthropic released in late 2024 — is what makes this kind of extensibility possible. Instead of building integrations from scratch every time, MCP gives AI assistants like Claude a standard way to connect to external tools, data, and processes. The skills market is a direct consequence of that: if the protocol is standardized, the tools built on top of it can be shared.
 
