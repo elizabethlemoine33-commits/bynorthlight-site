@@ -61,6 +61,8 @@ By the time it was all said and done, the restructuring came about a year later 
 
 Here is what I took from it. Waiting did not make the decision easier. It did not make it easier if people had to be let go, and it did not help to hide that a reset was being considered. People need to hear that concerns are being weighed and that their feedback is going to the right place. Being open about that builds trust all around.
 
+Silence like that is common. Research from Harvard Business School finds that when people judge speaking up to be [unsafe or futile](https://www.library.hbs.edu/working-knowledge/do-i-dare-say-something), they say less, so what a leader most needs to hear can stay unsaid.
+
 ## What should you hand over first?
 
 <div class="answer-block">
@@ -74,6 +76,8 @@ Every time, I exported the data and cleaned it up. I changed the date formats, f
 While I was doing that, I was not doing strategic work, which was part of my job. The people who owned the work did not have the time or the training. So the data went in slowly, and that held up everything that depended on it: contacting people, follow-up messages, and accurate reports at the end of a quarter.
 
 Eventually, two people on my team were trained well enough and had the capacity. I still reviewed their work. One of them enjoyed it, and took over most of it. That gave me back time for strategy, planning, documentation, reports and supporting the rest of the team. It was a big reduction in stress.
+
+It fits what Paul Nutt found in a [2002 study of more than 400 decisions](https://news.osu.edu/half-of-business-decisions-fail-because-of-managements-blunders-new-study-finds/). Decisions made by involving the people affected succeeded more than 80% of the time, yet that approach was used in only about one decision in five.
 
 ## How much of the plan has to go on paper?
 
@@ -110,5 +114,7 @@ Then say it out loud: we need to make this decision, and I am struggling with it
 3. Pick the recurring job that always waits for you, and teach it to someone.
 4. Give each decision an owner, so someone other than you knows what the next call is.
 5. Agree what "done" looks like, so nobody has to argue about it later.
+
+Bain's work on [decision roles](https://www.bain.com/insights/who-has-the-d/) points the same way: one person holds final authority and commits the organization to act, and too many people giving input slows decisions down.
 
 If this sounds like your week, the [Alone at the Top page](/who-we-help/alone-at-the-top) describes how I work with someone in this spot, and you can [get in touch](/contact.html) when you are ready to talk it through.
