@@ -58,6 +58,8 @@ Things went sideways with the event planning team, and I was asked to step in to
 
 I probably worked 40 hours a week for six months. I should have either said no, or said yes at a different rate. I have made the underpriced-quote mistake myself, and I learned from it.
 
+One way to catch it earlier is a premortem. Gary Klein described it in Harvard Business Review in 2007: the team assumes the project [has just failed](https://hbr.org/2007/09/performing-a-project-premortem) and lists the reasons why. He argues that projects fail partly because people hold back their doubts, and that the exercise gives them permission to say them. You can run a small version on a quote with someone you trust. Where did this go wrong?
+
 ## What do you do when the scope changes?
 
 <div class="answer-block">
@@ -84,6 +86,8 @@ I had lost confidence in the product, in the process and, if I am honest, in mys
 
 Did waiting help anything? No. Do I feel better now that I have decided? Yes. Did I carry that extra weight for far too long? Also yes. Those were real costs. There were nights I was working until the small hours, and I wished I had someone to have a conversation with, or someone to tell me not to be working then.
 
+Psychologist Christopher Anderson's [2003 review in Psychological Bulletin](https://pubmed.ncbi.nlm.nih.gov/12555797/) names choice deferral as one of four ways people avoid decisions. It finds anticipated regret and difficulty choosing among the factors behind them.
+
 ## What would I do first?
 
 <div class="answer-block">
@@ -91,6 +95,8 @@ Did waiting help anything? No. Do I feel better now that I have decided? Yes. Di
 </div>
 
 I would tell a founder to build a group of trusted people around them, so they lead out of a team instead of alone. A team forces conversations to happen. If they are the right people, they are not just saying yes because you said you wanted to do something. They think it through.
+
+You are not unusual. In a [2012 survey of 100 CEOs](https://fortune.com/2012/06/29/why-ceo-loneliness-is-bad-for-business/) by the consulting firm RHR International, 41% said they felt lonely in their jobs. Its chairman suggested a trusted advisor whose only agenda is the CEO's and the company's best interest, or a peer group.
 
 1. Before a quote goes out, ask someone to read it and tell you what has changed since you priced it.
 2. When the work grows, say so and renegotiate, or name what you can no longer do.
