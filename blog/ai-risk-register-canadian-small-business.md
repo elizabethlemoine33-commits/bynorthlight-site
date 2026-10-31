@@ -46,7 +46,7 @@ faq:
 
 Canada has no AI-specific law yet, and that is not the same as having no responsibility. If your team uses AI tools, you are still accountable for what goes into them and what comes out. The simplest way to show that you know what you are using, and how, is a risk register.
 
-I keep one for Northlight Advisory Services. It is part of a set of policies and procedures I wrote while working through ISO standards, without going for certification. This is what a register is, how the main frameworks compare, and how to build your own.
+I keep one for Northlight Advisory Services. I started it on September 1, 2026. The practice has only been around for about half a year, so I made it a priority early. It is part of a set of policies and procedures I wrote while working through ISO standards, without going for certification. This is what a register is, how the main frameworks compare, and how to build your own.
 
 ## What is an AI risk register?
 
@@ -62,7 +62,7 @@ I keep one for Northlight Advisory Services. It is part of a set of policies and
 <p>Because the law that already exists still applies, and a register is how you show you know what you are using. The federal government's own page says there is currently no regulatory framework in Canada specific to AI. That does not mean AI sits outside the rules.</p>
 </div>
 
-The government's page on the proposed Artificial Intelligence and Data Act [describes it as proposed](https://ised-isde.canada.ca/site/innovation-better-canada/en/artificial-intelligence-and-data-act){:rel="noopener"} and says "currently, there is no regulatory framework in Canada specific to AI." The page is archived, so check the current status before you rely on it. In the meantime, the Office of the Privacy Commissioner and provincial commissioners [said in December 2023](https://www.priv.gc.ca/en/privacy-topics/technology/artificial-intelligence/gd_principles_ai/){:rel="noopener"} that generative AI does not sit outside current legislative frameworks. They say organizations stay accountable for decisions their systems influence. That is guidance, not law.
+The government's page on the proposed Artificial Intelligence and Data Act [describes it as proposed](https://ised-isde.canada.ca/site/innovation-better-canada/en/artificial-intelligence-and-data-act){:rel="noopener"} and says "currently, there is no regulatory framework in Canada specific to AI." The page is archived, so check the current status before you rely on it (last checked October 31, 2026). In the meantime, the Office of the Privacy Commissioner and provincial commissioners [said in December 2023](https://www.priv.gc.ca/en/privacy-topics/technology/artificial-intelligence/gd_principles_ai/){:rel="noopener"} that generative AI does not sit outside current legislative frameworks. They say organizations stay accountable for decisions their systems influence. That is guidance, not law.
 
 So until something is handed down, what I recommend is simple: know what you have, consider the risk, map it out. The first step is an inventory. I wrote about that in [shadow AI and how to audit it](/blog/shadow-ai-is-the-new-shadow-it.html). A register is the step after the audit.
 
@@ -78,7 +78,7 @@ So until something is handed down, what I recommend is simple: know what you hav
 | **How it sorts risk** | Govern, map, measure and manage. You set your own tolerance. | Four fixed levels: unacceptable (banned), high, limited (transparency duties) and minimal | A structured way to manage AI risks and opportunities |
 | **Who it covers** | Anyone who chooses to use it | AI developers and deployers, with fines for non-compliance | Organizations of any size that develop, provide or use AI |
 
-[NIST](https://airc.nist.gov/airmf-resources/airmf/5-sec-core/){:rel="noopener"} asks you to document your risk tolerance, assess the most significant risks first, and respond by mitigating, transferring, avoiding or accepting each one. The [European Commission](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai){:rel="noopener"} says the AI Act entered into force on 1 August 2024. Its ban on prohibited practices and its AI literacy duties started on 2 February 2025, and most of the rest applies from 2 August 2026. For high-risk systems in listed areas, such as recruitment and credit scoring, the dates run to 2 December 2027. [ISO describes ISO/IEC 42001](https://www.iso.org/standard/42001){:rel="noopener"} as the first AI management system standard, for organizations of any size.
+[NIST](https://airc.nist.gov/airmf-resources/airmf/5-sec-core/){:rel="noopener"} asks you to document your risk tolerance, assess the most significant risks first, and respond by mitigating, transferring, avoiding or accepting each one. The [European Commission](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai){:rel="noopener"} says the AI Act entered into force on 1 August 2024. Its ban on prohibited practices and its AI literacy duties started on 2 February 2025, and most of the rest applies from 2 August 2026. For high-risk systems in listed areas, such as recruitment and credit scoring, the dates run to 2 December 2027. I last checked these dates against the Commission's page on October 31, 2026. [ISO describes ISO/IEC 42001](https://www.iso.org/standard/42001){:rel="noopener"} as the first AI management system standard, for organizations of any size.
 
 ### Why a Canadian business should care about the EU
 
@@ -109,6 +109,11 @@ The inherent score, before any treatment, and the residual score, after it, tell
 
 I review mine every year, and whenever an AI system changes materially. Adding a new tool, or letting a tool take on a new job, is a reason to reassess before you go live, not after.
 
+<figure style="margin:28px 0">
+<img src="/assets/blog/ai-risk-register-example.png" alt="Example AI risk register with five rows. For each risk it shows the score before treatment, what reduces the risk, and the score after. Client personal information in prompts scores 8 before and 4 after. Wrong content reaching clients scores 9 before and 6 after. Dependence on one provider scores 6 before and 4 after. Undisclosed AI use scores 8 before and 4 after. Adopting a tool without reassessing scores 6 before and 4 after." style="max-width:100%;height:auto;border-radius:10px" loading="lazy" width="1500" height="862">
+<figcaption style="font-size:14px;margin-top:8px">Five illustrative rows, simplified from my own register. Scores are likelihood times impact, each from 1 to 5.</figcaption>
+</figure>
+
 ## Which risks should you start with?
 
 <div class="answer-block">
@@ -138,6 +143,8 @@ The federal government's [voluntary code of conduct](https://ised-isde.canada.ca
 3. **Write down the risks,** starting with the list above, one row each.
 4. **Score them,** using a 1 to 5 scale for likelihood and impact, and decide what you will accept.
 5. **Set a review date,** once a year and whenever your tools change.
+
+If you also need a written policy to sit alongside the register, I have a [template AI policy for Canadian small businesses](/blog/ai-policy-template-canadian-small-business.html), and a guide to [using AI without breaking Canadian privacy law](/blog/pipeda-privacy-first-ai-canada.html).
 
 You can do the first pass in an afternoon. Do not wait for a perfect framework. Pick the one that suits your size, and keep it simple enough that you will actually update it.
 
