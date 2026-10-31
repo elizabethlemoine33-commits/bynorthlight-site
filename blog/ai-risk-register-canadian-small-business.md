@@ -46,7 +46,7 @@ faq:
 
 Canada has no AI-specific law yet, and that is not the same as having no responsibility. If your team uses AI tools, you are still accountable for what goes into them and what comes out. The simplest way to show that you know what you are using, and how, is a risk register.
 
-I keep one for Northlight. It is part of a set of policies and procedures I wrote while working through ISO standards, without going for certification. This is what a register is, how the main frameworks compare, and how to build your own.
+I keep one for Northlight Advisory Services. It is part of a set of policies and procedures I wrote while working through ISO standards, without going for certification. This is what a register is, how the main frameworks compare, and how to build your own.
 
 ## What is an AI risk register?
 
