@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "AI for All: Open Programmes for Nova Scotia Businesses"
-description: "Which AI funding programmes are actually open to Nova Scotia SMEs right now, how much they offer, and what your next step looks like."
+description: "Which AI funding programmes Nova Scotia SMEs can use now, what each requires, and which have closed. Checked November 1, 2026."
 og_title: "AI for All: Open Programmes for Nova Scotia Businesses"
-og_description: "Which AI funding programmes are actually open to Nova Scotia SMEs right now, how much they offer, and what your next step looks like."
+og_description: "Which AI funding programmes Nova Scotia SMEs can use now, what each requires, and which have closed. Checked November 1, 2026."
 date: 2026-06-15
-date_modified: "2026-07-09"
+date_modified: "2026-11-01"
 published_time: "2026-06-15T00:00:00.000Z"
 permalink: /blog/ai-for-all-programmes-nova-scotia-businesses.html
 source_label: "Blog · Essay"
@@ -25,11 +25,11 @@ related_reading:
     url: /blog/canada-ai-strategy-small-business.html
 faq:
   - q: "What did the AI for All announcement actually include?"
-    a: "Canada's AI for All strategy, launched June 4, 2026 by Prime Minister Carney, targets $200 billion in economic growth over five years and 250,000 new jobs. The pieces that matter for Nova Scotia businesses: $200 million in regional funding delivered through ACOA via the Regional Artificial Intelligence Initiative, and BDC's LIFT program for loans of $25,000–$5M for AI adoption. Those are the fundable programmes that exist now."
+    a: "Canada's AI for All strategy, launched June 4, 2026 by Prime Minister Carney, targets $200 billion in economic growth over five years and 250,000 new jobs. The pieces that matter for Nova Scotia businesses: the Regional Artificial Intelligence Initiative (RAII), delivered in Atlantic Canada by ACOA, and BDC's LIFT program, which has an AI stream. ACOA says RAII now has $700 million in total federal funding."
   - q: "Which AI funding programmes are open to Nova Scotia SMEs right now?"
-    a: "Two programmes are currently open: the Regional Artificial Intelligence Initiative (RAII) through ACOA — $250,000 to $5M per project for AI adoption or commercialisation, accepting applications on an ongoing basis; and BDC's LIFT program — loans of $25,000 to $5M for AI adoption, available to businesses with $1M+ in annual sales, paired with an AI advisor. Most other programmes in the AI for All announcement are not yet launched or have closed intake."
+    a: "As of November 1, 2026, two federal programmes could apply. RAII through ACOA is taking expressions of interest through an Atlantic-wide call that closes November 20, 2026. Contributions are repayable and start at $1 million, so it suits large projects. BDC's LIFT program has an AI stream for businesses with at least $1M in revenue, paired with BDC Advisory Services; BDC's page gives no intake dates. Digital Nova Scotia's AI programmes (the AI Digital Adoption Program, the StFX microcredential and AI for Export) are closed."
   - q: "What is the Regional Artificial Intelligence Initiative (RAII)?"
-    a: "RAII is a $200 million national fund for AI adoption and commercialisation, delivered through regional development agencies — for Nova Scotia businesses, that means ACOA. It funds implementing AI tools, developing AI-enabled products, or scaling AI solutions. For businesses: repayable, interest-free contributions covering up to 50% of eligible project costs, $250,000 to $5M per project, up to three years. Applications accepted on an ongoing basis."
+    a: "RAII is a federal fund for AI projects, part of AI for All. In Atlantic Canada, ACOA delivers it. It supports businesses adopting AI, Canadian AI companies commercialising and scaling, and the organisations that support adoption. ACOA says an additional $500 million over five years brings total federal funding to $700 million. For Atlantic Canadian SMEs that meet the Regional Economic Growth through Innovation (REGI) requirements, the minimum contribution is $1 million and it is repayable. ACOA's page does not state a maximum, a cost-share percentage or a project length. The expression of interest call closes November 20, 2026 at 11:59 p.m. ADT."
   - q: "Which AI programmes aren't currently open?"
     a: "The AI Compute Access Fund — which provided subsidised access to GPU clusters and cloud compute for Canadian SMEs and researchers — closed applications July 31, 2025, with no confirmed reopening date. The AI for All announcement included $700M for sovereign compute for SMEs, which may mean the fund reopens, but no timeline is confirmed."
   - q: "What is the AI Compute Access Fund?"
@@ -37,14 +37,16 @@ faq:
   - q: "How can Northlight Advisory Services help Nova Scotia businesses apply for AI funding?"
     a: "Northlight can help you scope the work, assess whether eligibility is plausible, and decide whether pursuing an application is worth your time. Elizabeth Lemoine works with Nova Scotia businesses on AI adoption and governance — helping identify what to solve, who owns decisions, and what guardrails make implementation trustworthy."
   - q: "What's the first step for Nova Scotia businesses exploring AI funding?"
-    a: "Read the RAII programme applicant guide and the <a href='https://www.bdc.ca/en/solutions/lift' target='_blank' rel='noopener'>BDC LIFT terms</a> — not the AI for All press releases. If RAII looks plausible and your project is in the $250K+ range, contact your nearest ACOA office to discuss it. If LIFT fits your scale and you have a real use case with a Canadian tool vendor, start with a BDC advisor. If neither fits right now, close the tab. The strategy is ten years long. You have time."
+    a: "Read ACOA's RAII page and the <a href='https://www.bdc.ca/en/solutions/lift' target='_blank' rel='noopener'>BDC LIFT terms</a>, not the AI for All press releases. If AI is central to your project and it is $1 million or more, submit an expression of interest to ACOA before November 20, 2026. If LIFT fits (at least $1M in revenue and a real AI use case), start with a BDC advisor. If neither fits right now, close the tab. The strategy is ten years long. You have time."
 ---
 
 <p style="font-size:15px;color:#B0B8D8;background:rgba(79,195,200,0.07);border-left:3px solid #4FC3C8;padding:12px 16px;border-radius:4px;margin:0 0 28px 0;line-height:1.6;">Northlight Advisory Services breaks down which AI funding programmes are actually open to Nova Scotia SMEs right now — translated from press-release language into something you can use on a Wednesday afternoon.</p>
 
+*Last checked November 1, 2026. Programme details change, so confirm with the programme before you act.*
+
 The Prime Minister announced $200 billion. You've got a business to run.
 
-Here's the part of that announcement that actually matters this month — which AI funding programmes are open to a Nova Scotia SME right now, which are closed, and what the next step looks like for each.
+Here's the part of that announcement that actually matters — which AI funding programmes are open to a Nova Scotia SME right now, which are closed, and what the next step looks like for each.
 
 I can't tell you if you qualify without knowing your business. I can tell you what exists, what's open, and what to read next. This isn't a complete guide to every AI programme in Canada — it's a working list of the federal programmes most relevant to small and mid-sized businesses in Nova Scotia, translated from the press-release language into something you can actually use on a Wednesday afternoon.
 
@@ -54,7 +56,7 @@ The door is open. Here's where it leads.
 
 ## What Did the AI for All Announcement Actually Include?
 
-<div class="answer-block"><p>Canada's AI for All strategy, launched June 4, 2026 by Prime Minister Carney, targets $200 billion in economic growth over five years and 250,000 new jobs. The pieces that matter for Nova Scotia businesses: $200 million in regional funding delivered through ACOA via the Regional Artificial Intelligence Initiative, and <a href="https://www.bdc.ca/en/solutions/lift" target="_blank" rel="noopener">BDC's LIFT program</a> for loans of $25,000–$5M for AI adoption. Those are the fundable programmes that exist now.</p></div>
+<div class="answer-block"><p>Canada's AI for All strategy, launched June 4, 2026 by Prime Minister Carney, targets $200 billion in economic growth over five years and 250,000 new jobs. The pieces that matter for Nova Scotia businesses: the Regional Artificial Intelligence Initiative (RAII), delivered in Atlantic Canada by ACOA, and <a href="https://www.bdc.ca/en/solutions/lift" target="_blank" rel="noopener">BDC's LIFT program</a>, which has an AI stream. ACOA says RAII now has $700 million in total federal funding.</p></div>
 
 On June 4, 2026, Prime Minister Carney launched [AI for All](https://www.pm.gc.ca/en/news/news-releases/2026/06/04/prime-minister-carney-launches-ai-all-canadas-new-national-artificial), Canada's new national artificial intelligence strategy. The headline target: $200 billion in economic growth over five years, with 250,000 new jobs created. The strategy includes $500 million in LIFT financing for AI-enabled infrastructure, $200 million for health AI, and $700 million for sovereign AI compute access for SMEs.
 
@@ -62,44 +64,69 @@ That's the big number. Here's what it means for a business in Nova Scotia.
 
 ## Which AI Funding Programmes Are Open to Nova Scotia SMEs Right Now?
 
-<div class="answer-block"><p>Two programmes are currently open: the Regional Artificial Intelligence Initiative (RAII) through ACOA — $250,000 to $5M per project for AI adoption or commercialisation, accepting applications on an ongoing basis; and <a href="https://www.bdc.ca/en/solutions/lift" target="_blank" rel="noopener">BDC's LIFT program</a> — loans of $25,000 to $5M for AI adoption, available to businesses with $1M+ in annual sales, paired with an AI advisor. Most other programmes in the AI for All announcement are not yet launched or have closed intake.</p></div>
+<div class="answer-block"><p>As of November 1, 2026, two federal programmes could apply. RAII through ACOA is taking expressions of interest through an Atlantic-wide call that closes November 20, 2026. Contributions are repayable and start at $1 million, so it suits large projects. <a href="https://www.bdc.ca/en/solutions/lift" target="_blank" rel="noopener">BDC's LIFT program</a> has an AI stream for businesses with at least $1M in revenue, paired with BDC Advisory Services; BDC's page gives no intake dates. Digital Nova Scotia's AI programmes are closed.</p></div>
 
-These programmes are accepting applications now or have a clear intake process. Each one includes what it funds, who's eligible, how much is available, how to apply, and what your next step looks like.
+Here is where each one stands. The honest summary: the money that is open is aimed at larger projects, and the programmes built for smaller businesses have closed for now.
 
 ## What Is the Regional Artificial Intelligence Initiative (RAII)?
 
-<div class="answer-block"><p>RAII is a $200 million national fund for AI adoption and commercialisation, delivered through regional development agencies — for Nova Scotia businesses, that means ACOA. It funds implementing AI tools, developing AI-enabled products, or scaling AI solutions. Not basic research. For businesses: repayable, interest-free contributions covering up to 50% of eligible project costs, $250,000 to $5M per project, up to three years. Applications accepted on an ongoing basis.</p></div>
+<div class="answer-block"><p>RAII is a federal fund for AI projects, part of AI for All. In Atlantic Canada, ACOA delivers it. ACOA says an additional $500 million over five years brings total federal funding to $700 million. Contributions are repayable and start at $1 million, so it suits larger projects, not a first pilot. ACOA is taking expressions of interest through an Atlantic-wide call that closes November 20, 2026 at 11:59 p.m. ADT.</p></div>
 
-This is the headline programme from AI for All for small and mid-sized businesses. It's a $200 million national fund delivered through Canada's regional development agencies — which means if you're in Nova Scotia, you're working with ACOA (Atlantic Canada Opportunities Agency).
+RAII is part of AI for All. In Atlantic Canada it is delivered by ACOA, the Atlantic Canada Opportunities Agency. [ACOA's RAII page](https://www.canada.ca/en/atlantic-canada-opportunities/services/regional-artificial-intelligence-initiative.html){:rel="noopener"} says it funds three things: businesses adopting AI, Canadian AI companies commercialising and scaling their products, and the organisations and networks that support adoption.
 
-RAII funds AI adoption and commercialisation projects. That means implementing AI tools in your operations, developing AI-enabled products or services, or scaling an existing AI solution. It doesn't fund basic research; it funds real deployment.
+The page describes two streams. The adoption stream is the one most Nova Scotia businesses would look at.
 
-**What it funds:**
+**What the adoption stream covers:**
 
-- AI adoption projects (implementing AI tools in your business operations)
-- AI commercialisation projects (developing or scaling AI-enabled products or services)
-- Eligible costs include technology acquisition, professional services, training, and project management
+- AI implementation, automation, predictive analytics, operational improvements, data modernization and process optimization
+- Readiness activities such as change management, workforce awareness, and cybersecurity or responsible AI measures
 
-**Who's eligible:**
+**What ACOA says it does not support:**
 
-- For-profit businesses (sole proprietorships, partnerships, corporations, cooperatives)
-- Not-for-profit organisations
-- Indigenous organisations
-- Must be majority Canadian-owned
-- Must operate in Atlantic Canada (for ACOA delivery)
+- Routine software purchases and standard ERP implementations
+- General IT modernization
+- Training-only initiatives
+- Projects where AI is not central to the outcomes
+
+**Who is eligible:**
+
+- Atlantic Canadian small and medium-sized businesses that meet the eligibility requirements of the Regional Economic Growth through Innovation (REGI) program
+- ACOA's page lists no further conditions, so check the REGI requirements before you assume you qualify
 
 **How much:**
 
-- Contributions between $250,000 and $5 million per project
-- Projects can run up to three years
-- For businesses: repayable contributions (interest-free) covering up to 50% of eligible project costs
-- For not-for-profits: non-repayable contributions covering up to 90% of eligible project costs
+- The minimum contribution is $1 million
+- The page states no maximum, no cost-share percentage and no project length
+- The funding is a repayable contribution, and applicants need to show the project can generate sustainable business growth and economic returns
 
-**How to apply:** Read the [RAII programme applicant guide](https://www.canada.ca/en/prairies-economic-development/services/funding/regional-artificial-intelligence-initiative/program-applicant-guide.html) first — it's detailed but defines eligible costs, application requirements, and assessment criteria clearly. Then contact your nearest ACOA office to discuss your project, and complete and submit an application following the directions on the [How to apply for financial assistance](https://www.acoa-apeca.gc.ca/en/business/financial-information/Pages/HowtoApply.aspx) page.
+**How to apply:** Complete the expression of interest form, linked from the "Get started" button on [ACOA's RAII page](https://www.canada.ca/en/atlantic-canada-opportunities/services/regional-artificial-intelligence-initiative.html){:rel="noopener"}. ACOA also links an RAII FAQ from that page.
 
-**Status:** Open — applications being accepted on an ongoing basis
+**Status:** Open. The call closes November 20, 2026 at 11:59 p.m. ADT.
 
-**Next step:** Read the applicant guide. If the eligibility looks plausible and your project is in the $250K+ range, contact ACOA. If you're not sure whether your project qualifies or you need help scoping it before approaching ACOA, email me — that's the conversation I'm here for.
+**Next step:** If AI is central to your project and it is $1 million or more, read ACOA's page and submit an expression of interest before the call closes. If your project is smaller, RAII is probably not your route. If you are not sure whether your project qualifies or you need help scoping it before you approach ACOA, email me. That is the conversation I am here for.
+
+## What Digital Nova Scotia Programmes Can a Small Business Use?
+
+<div class="answer-block"><p>As of November 1, 2026, the AI programmes Digital Nova Scotia has run for Nova Scotia businesses are closed: the AI Digital Adoption Program, the AI microcredential program with StFX, and AI for Export. What Digital Nova Scotia lists for 2027 is Next Level Skills, which is open to paid Digital Nova Scotia members and funds up to 75% of direct training costs.</p></div>
+
+Digital Nova Scotia has run several AI programmes for businesses in the province. As of November 1, 2026, these are closed:
+
+- AI Digital Adoption Program
+- Microcredential Program: Practical Utilization of AI, with St. Francis Xavier University
+- AI for Export, which ran April 27 to June 8, 2026
+
+Digital Nova Scotia's 2027 offer is [Next Level Skills](https://digitalnovascotia.com/programs){:rel="noopener"}, which it describes as training for people working in Nova Scotia's tech sector. Four virtual courses are listed. Prices below are what eligible members pay, plus HST:
+
+- CISSP Training for Cybersecurity Professionals, January 20 to March 23, 2027: $406
+- AI for Project Management, February 4 to March 11, 2027: $332.38
+- Digital Change Leadership Lab, March 2 to April 6, 2027: $225
+- Data Analytics and Interactive Reporting for SMEs, April 6 to May 18, 2027: $351.10
+
+**Who can apply:** your organization must be a paid Digital Nova Scotia member before the program start date, be located in Nova Scotia, and be registered with the Nova Scotia Registry of Joint Stocks (or incorporated by an act of the legislature) for at least one year.
+
+**What it pays:** funding covers up to 75% of direct training costs, to a maximum of $10,000. Anything over $10,000 is cost-shared at 50%. The member prices above already include this funding. Employees must be receiving full-time compensation while in training.
+
+**Next step:** because Next Level Skills is described as tech-sector training, ask Digital Nova Scotia whether your business and your people qualify before you pay for membership. Check [the Digital Nova Scotia programs page](https://digitalnovascotia.com/programs){:rel="noopener"} for new AI intakes.
 
 ## Which AI Programmes Aren't Currently Open?
 
@@ -140,16 +167,18 @@ I won't pretend I can tell you if you qualify without knowing what you're buildi
 
 I also work with businesses on AI adoption and governance — helping you figure out what to solve, who owns decisions, and what guardrails make it trustworthy. If the funding conversation surfaces a bigger question about whether AI makes sense for your business at all, we can talk through that too.
 
+If you do move ahead with AI, set the guardrails before the money arrives. Two places to start: the [AI acceptable use policy template](/blog/ai-policy-template-canadian-small-business.html) and the [AI risk register starter](/blog/ai-risk-register-canadian-small-business.html).
+
 Email me at [elizabeth@bynorthlight.ca](mailto:elizabeth@bynorthlight.ca). No hard sell. Just the work.
 
 ## What's the First Step for Nova Scotia Businesses Exploring AI Funding?
 
-<div class="answer-block"><p>Read the RAII programme applicant guide and the <a href="https://www.bdc.ca/en/solutions/lift" target="_blank" rel="noopener">BDC LIFT terms</a> — not the AI for All press releases. If RAII looks plausible and your project is in the $250K+ range, contact your nearest ACOA office to discuss it. If LIFT fits your scale and you have a real use case with a Canadian tool vendor, start with a BDC advisor. If neither fits right now, close the tab. The strategy is ten years long. You have time.</p></div>
+<div class="answer-block"><p>Read ACOA's RAII page and the <a href="https://www.bdc.ca/en/solutions/lift" target="_blank" rel="noopener">BDC LIFT terms</a>, not the AI for All press releases. If AI is central to your project and it is $1 million or more, submit an expression of interest to ACOA before November 20, 2026. If LIFT fits (at least $1M in revenue and a real AI use case), start with a BDC advisor. If neither fits right now, close the tab. The strategy is ten years long. You have time.</p></div>
 
-The $200 billion number is real. So is the $200 million in RAII funding being delivered through ACOA. The question isn't whether the funding exists — it's whether it's worth your time to find out if it fits.
+The $200 billion number is real. So is the RAII funding delivered through ACOA, now $700 million in total by ACOA's count. The question isn't whether the funding exists. It's whether it's worth your time to find out if it fits.
 
 > If you're running a business in Nova Scotia and you've been half-watching the AI headlines, wondering if there's something in it for you — there might be.
 
-Read the guides. Make the phone call. Or forward this to someone who should.
+Read the programme pages. Submit the expression of interest if your project is large enough. Or forward this to someone who should.
 
 The big number matters. The small decision is yours.
