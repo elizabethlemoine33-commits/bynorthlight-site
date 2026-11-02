@@ -200,7 +200,7 @@ Most small businesses can adapt this template and run with it. You don't need a 
 
 Where it helps to have a second pair of eyes: regulated industries (healthcare, legal, financial services), businesses handling personal data at significant scale, businesses using AI in ways that directly affect employee or customer rights, or any situation where you're not confident the policy you've drafted reflects your actual obligations under [PIPEDA](https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/){:rel="noopener"} or your provincial privacy law.
 
-If that's you, a working session with someone who knows the Canadian legal landscape can make sure the policy you put in front of your team actually holds up. Reach out at [elizabeth@bynorthlight.ca](mailto:elizabeth@bynorthlight.ca) or book directly at [bynorthlight.ca](https://bynorthlight.ca).
+If that's you, a working session with someone who knows the Canadian legal landscape can make sure the policy you put in front of your team actually holds up. Reach out at [support@bynorthlight.ca](mailto:support@bynorthlight.ca) or book directly at [bynorthlight.ca](https://bynorthlight.ca).
 
 <div class="faq-section">
   <h2 class="faq-heading">Frequently Asked Questions</h2>
