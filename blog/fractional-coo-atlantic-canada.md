@@ -34,7 +34,7 @@ faq:
   - q: "How much does a fractional COO cost in Atlantic Canada?"
     a: "Fractional COO retainers in Atlantic Canada typically run $6,000–$16,000 per month, reflecting regional market conditions. For context, a full-time COO in Canada costs $150,000–$220,000+ in total annual compensation. Most engagements are structured at 10–20 hours per week — enough to build real systems without the cost of a full-time executive role."
   - q: "How do I get started with a fractional COO in Halifax or Atlantic Canada?"
-    a: "The first step is a 30-minute conversation to assess whether fractional is the right model for your business. At Northlight Advisory Services, we start by understanding where you are operationally, what problems need solving, and whether the engagement scope makes sense for your stage and budget. If it's a fit, we define the scope, hours, and timeline together — and get to work. Email elizabeth@bynorthlight.ca to start."
+    a: "The first step is a 30-minute conversation to assess whether fractional is the right model for your business. At Northlight Advisory Services, we start by understanding where you are operationally, what problems need solving, and whether the engagement scope makes sense for your stage and budget. If it's a fit, we define the scope, hours, and timeline together — and get to work. Email support@bynorthlight.ca to start."
 ---
 
 <script type="application/ld+json">
@@ -160,4 +160,4 @@ Some clients work with me for six months and then run with what we've built. Oth
 
 Northlight is built on the belief that clarity is kindness — that naming where you're going, defining what a win looks like, and treating people like adults is both moral and practical. I don't do jargon. I don't do reports that go in a drawer. I do real operations work that changes how your business runs.
 
-If that sounds like what you're looking for, email me at elizabeth@bynorthlight.ca. Let's talk.
+If that sounds like what you're looking for, email me at support@bynorthlight.ca. Let's talk.

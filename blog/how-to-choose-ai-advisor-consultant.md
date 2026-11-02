@@ -137,4 +137,4 @@ That's what most useful AI looks like in a small business: small, specific, and 
 
 If you're looking for someone to help you adopt AI thoughtfully — someone who'll do the kind of work I've described here — that's the kind of work I do. I'm not going to sell you a platform. I'm not going to guarantee ROI. But I will look at your operation, ask about Judy and her spreadsheets, and help you figure out where a small, practical win might be hiding.
 
-If that sounds like what you need: [elizabeth@bynorthlight.ca](mailto:elizabeth@bynorthlight.ca)
+If that sounds like what you need: [support@bynorthlight.ca](mailto:support@bynorthlight.ca)
