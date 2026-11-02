@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.seo_title | default: page.title }} — Northlight Advisory Services</title>
+  {% assign page_title = page.seo_title | default: page.title %}
+  {% assign full_title = page_title | append: " — Northlight Advisory Services" %}
+  <title>{% if full_title.size > 70 %}{{ page_title }}{% else %}{{ full_title }}{% endif %}</title>
   <meta name="description" content="{{ page.description }}">
   <meta name="author" content="Elizabeth Lemoine">
   <link rel="canonical" href="{{ page.url | prepend: site.url }}">
