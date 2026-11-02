@@ -7,7 +7,7 @@ og_description: "Why the constraints that kill your plan only show up once you'r
 date: 2026-06-04
 date_modified: "2026-08-07"
 published_time: "2026-06-04T00:00:00.000Z"
-permalink: /blog/the-wall-on-day-200.html
+permalink: /blog/the-wall-on-day-200
 source_label: "Blog · Essay"
 source_class: source-essay
 read_time: 6
@@ -18,11 +18,11 @@ tags:
   - building
 related_reading:
   - title: "Growth Is No Longer the Hard Part"
-    url: /blog/growth-is-no-longer-the-hard-part.html
+    url: /blog/growth-is-no-longer-the-hard-part
   - title: "You Hired Them. Now What? When New Hires Don't Clear the Bottleneck"
-    url: /blog/you-hired-them-now-what.html
+    url: /blog/you-hired-them-now-what
   - title: "Fractional COO vs. Hiring a COO: What's Right for Canadian Business?"
-    url: /blog/fractional-coo-vs-hiring-full-time-canada.html
+    url: /blog/fractional-coo-vs-hiring-full-time-canada
 faq:
   - q: "What do you do when things don't go to plan?"
     a: "The wall — the legal constraint, the regulatory reality, the structural problem that wasn't visible from day one — usually shows up around day 200, not day one. That's not a planning failure; it's how building works. Real constraints only become visible once you're close enough to bump into them. The discipline that matters is building in regular checkpoints before sunk cost gets a vote: a short, honest question about whether what you're building is still the thing, and whether the assumptions you started with are still true."
@@ -54,7 +54,7 @@ faq:
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://bynorthlight.ca/blog/the-wall-on-day-200.html"
+    "@id": "https://bynorthlight.ca/blog/the-wall-on-day-200"
   }
 }
 </script>

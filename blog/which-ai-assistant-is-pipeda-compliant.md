@@ -8,7 +8,7 @@ og_description: "No AI tool is PIPEDA compliant on its own. Learn what Canadian 
 date: 2026-10-27
 date_modified: "2026-10-27"
 published_time: "2026-10-27T00:00:00.000Z"
-permalink: /blog/which-ai-assistant-is-pipeda-compliant.html
+permalink: /blog/which-ai-assistant-is-pipeda-compliant
 source_label: "Blog · Essay"
 source_class: source-essay
 read_time: 6
@@ -19,11 +19,11 @@ tags:
   - Compliance
 related_reading:
   - title: "Implementing AI Without Breaking Canadian Privacy Law: A PIPEDA Guide for Business Owners"
-    url: /blog/pipeda-privacy-first-ai-canada.html
+    url: /blog/pipeda-privacy-first-ai-canada
   - title: "Shadow AI Is the New Shadow IT — What Leaders Need to Know"
-    url: /blog/shadow-ai-is-the-new-shadow-it.html
+    url: /blog/shadow-ai-is-the-new-shadow-it
   - title: "AI Adoption Checklist for Canadian Businesses (2026)"
-    url: /blog/ai-adoption-checklist-canadian-businesses-2026.html
+    url: /blog/ai-adoption-checklist-canadian-businesses-2026
 faq:
   - q: "Which AI assistant is PIPEDA compliant?"
     a: "None of them, on their own. PIPEDA compliance depends on what your organisation does with a tool, not on a certification the tool holds. The OPC's principles for generative AI put responsibility on the organisation using it."
@@ -61,7 +61,7 @@ No tool certification makes you compliant. It's always about what you do. [PIPED
 
 The OPC's [principles for generative AI](https://www.priv.gc.ca/en/privacy-topics/technology/artificial-intelligence/gd_principles_ai/){:rel="noopener"} put the responsibility on the organisation using the tool, not on the tool, and say organisations should choose tools that respect privacy law.
 
-Read that as a business owner and the question changes. It stops being "is this tool safe?" and becomes "what are we doing with it, who decided, and can we see it?" Our [AI adoption checklist for Canadian businesses](/blog/ai-adoption-checklist-canadian-businesses-2026.html) is built around those questions. If a tool can't be compliant on its own, the licence owner is responsible. If your staff are using personal accounts for the organisation's data, the organisation is responsible too.
+Read that as a business owner and the question changes. It stops being "is this tool safe?" and becomes "what are we doing with it, who decided, and can we see it?" Our [AI adoption checklist for Canadian businesses](/blog/ai-adoption-checklist-canadian-businesses-2026) is built around those questions. If a tool can't be compliant on its own, the licence owner is responsible. If your staff are using personal accounts for the organisation's data, the organisation is responsible too.
 
 One note on provinces. Some provinces have their own private-sector privacy laws that apply instead of PIPEDA for information collected, used, and disclosed within the province, while PIPEDA still covers cross-border and interprovincial transfers. The OPC page above explains which is which; check it for where you operate.
 
@@ -77,7 +77,7 @@ OpenAI's [help page for ChatGPT Business](https://help.openai.com/en/articles/87
 
 I'm not pointing at these two to say one is better. I'm pointing them out because a promise on the front page and the details further down aren't always the same. As long as your information has the potential to be leaked, I'm hesitant to put it in.
 
-Where the tool lives matters, and who owns it matters more. A Canadian-owned tool on Canadian servers is one thing. An American tool on a Canadian server is still an American tool: in the words of one Canadian law firm, [storing data in Canada does not, by itself, prevent access under foreign laws](https://www.blg.com/en/insights/2026/04/data-sovereignty-and-the-cloud-act-what-canadian-organizations-should-know){:rel="noopener"}, and who controls the data matters more than where it sits. That is the [US CLOUD Act](https://www.blg.com/en/insights/2026/04/data-sovereignty-and-the-cloud-act-what-canadian-organizations-should-know){:rel="noopener"} at work. American tools can still be a reasonable choice, as long as you tell people. Your [privacy policy](/blog/pipeda-privacy-first-ai-canada.html) should say their data may be processed by AI, and in another country.
+Where the tool lives matters, and who owns it matters more. A Canadian-owned tool on Canadian servers is one thing. An American tool on a Canadian server is still an American tool: in the words of one Canadian law firm, [storing data in Canada does not, by itself, prevent access under foreign laws](https://www.blg.com/en/insights/2026/04/data-sovereignty-and-the-cloud-act-what-canadian-organizations-should-know){:rel="noopener"}, and who controls the data matters more than where it sits. That is the [US CLOUD Act](https://www.blg.com/en/insights/2026/04/data-sovereignty-and-the-cloud-act-what-canadian-organizations-should-know){:rel="noopener"} at work. American tools can still be a reasonable choice, as long as you tell people. Your [privacy policy](/blog/pipeda-privacy-first-ai-canada) should say their data may be processed by AI, and in another country.
 
 ## What steps should a Canadian business take to use AI responsibly?
 
@@ -87,7 +87,7 @@ Where the tool lives matters, and who owns it matters more. A Canadian-owned too
 
 Here are four steps, in the order I'd do them.
 
-1. **Write a policy for what can and can't go into AI.** It needs consequences, sign-off, and awareness by everyone. My own gut test is simple: does this data contain personal information? If yes, then the answer is just no. If you want a starting point, we have an [AI policy template](/blog/ai-policy-template-canadian-small-business.html) and a [printable PIPEDA checklist](/blog/pipeda-ai-compliance-checklist-printable.html).
+1. **Write a policy for what can and can't go into AI.** It needs consequences, sign-off, and awareness by everyone. My own gut test is simple: does this data contain personal information? If yes, then the answer is just no. If you want a starting point, we have an [AI policy template](/blog/ai-policy-template-canadian-small-business) and a [printable PIPEDA checklist](/blog/pipeda-ai-compliance-checklist-printable).
 2. **Give the team a team AI tool.** Claude, ChatGPT, or something else. Check what your plan lets the owner see before you choose. Claude's [plan comparison](https://claude.com/pricing){:rel="noopener"} lists usage analytics and spend controls on its team plan, with [audit logs](https://support.claude.com/en/articles/9970975-access-audit-logs){:rel="noopener"} and the compliance API on enterprise. OpenAI's [ChatGPT Business page](https://help.openai.com/en/articles/8798634-managing-data-sharing-and-privacy-in-chatgpt-business){:rel="noopener"} describes workspace usage and spend controls, and its [compliance platform](https://help.openai.com/en/articles/9261474-openai-compliance-platform-for-enterprise-and-edu-customers){:rel="noopener"} is for enterprise and Edu workspaces. People are excited and they want to try.
 3. **Where you can't trust people to follow the policy, make it so they can't.** Block exports and copy-paste of personal data.
 4. **Read all of a vendor's documents against each other.** That means the terms of service, the data addendum, the data processing and sharing agreements, and the privacy policy. Pull all the papers out, go through it, highlight, post-it note. Documents drift, and they can say different things. What you find should shape your own privacy policy, your terms and agreements, and what you tell clients, partners, and participants.
@@ -100,7 +100,7 @@ There is a real cost. If you choose to use AI, you need to invest in your team, 
 <p>At the least, it's a misuse of your organisation's data, and possibly an unauthorised disclosure. In my reading, treat it as a data breach: follow your breach protocol, investigate fully, and keep a record. That is not settled law.</p>
 </div>
 
-This is the quiet one, often called shadow AI, and it's the part I most want you to hear. Our posts on [shadow AI](/blog/shadow-ai-is-the-new-shadow-it.html) and the [shadow AI governance checklist](/blog/shadow-ai-governance-checklist-printable.html) go further. People get excited about AI and try everything through it. I don't think they're doing something they believe is wrong. They aren't stopping to consider what they can and can't upload. People have uploaded spreadsheets of financial data for advice without checking whether it is secure.
+This is the quiet one, often called shadow AI, and it's the part I most want you to hear. Our posts on [shadow AI](/blog/shadow-ai-is-the-new-shadow-it) and the [shadow AI governance checklist](/blog/shadow-ai-governance-checklist-printable) go further. People get excited about AI and try everything through it. I don't think they're doing something they believe is wrong. They aren't stopping to consider what they can and can't upload. People have uploaded spreadsheets of financial data for advice without checking whether it is secure.
 
 But if someone puts the organisation's data into a personal AI account, that is, at the least, a misuse of that data, and it may be an unauthorised disclosure of it. I believe that makes it a data breach of some sort. That is my reading, not settled law. The OPC defines a breach of security safeguards as the loss of, unauthorised access to, or unauthorised disclosure of personal information, and its [breach guidance](https://www.priv.gc.ca/en/privacy-topics/business-privacy/breaches-and-safeguards/privacy-breaches-at-your-business/gd_pb_201810/){:rel="noopener"} doesn't address staff using personal AI accounts specifically.
 

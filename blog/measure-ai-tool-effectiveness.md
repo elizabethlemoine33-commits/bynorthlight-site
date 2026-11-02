@@ -7,7 +7,7 @@ og_description: "97% of Canadian SMEs that adopted AI report tangible benefits. 
 date: 2026-10-06
 date_modified: "2026-10-06"
 published_time: "2026-10-06T00:00:00.000Z"
-permalink: /blog/measure-ai-tool-effectiveness.html
+permalink: /blog/measure-ai-tool-effectiveness
 source_label: "Blog · Guide"
 source_class: source-guide
 read_time: 7
@@ -19,13 +19,13 @@ tags:
   - AI adoption
 related_reading:
   - title: "58% of Canadian Businesses Use AI. Got a Strategy?"
-    url: /blog/canadian-businesses-ai-adoption-strategy.html
+    url: /blog/canadian-businesses-ai-adoption-strategy
   - title: "The Real ROI of AI for Canadian SMBs"
-    url: /blog/ai-roi-canadian-smb.html
+    url: /blog/ai-roi-canadian-smb
   - title: "Shadow AI Is the New Shadow IT"
-    url: /blog/shadow-ai-is-the-new-shadow-it.html
+    url: /blog/shadow-ai-is-the-new-shadow-it
   - title: "Your AI Isn't Underperforming. It's Working Blind."
-    url: /blog/ai-isnt-underperforming-working-blind.html
+    url: /blog/ai-isnt-underperforming-working-blind
 faq:
   - q: "How do I know if my AI tools are actually working?"
     a: "The honest answer is: if you can't point to a specific number, you probably don't know. Most businesses adopt AI tools and then evaluate them based on how the team feels about them — which is useful qualitative data, but not the same as measurement. Four metrics that give you something concrete: task completion time before and after, revision rate on AI output, quality as assessed by whoever receives the work, and cost per outcome compared to the alternative. None of these require a data team to implement."

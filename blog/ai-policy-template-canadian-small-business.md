@@ -7,14 +7,14 @@ og_description: "A free, Canada-specific AI acceptable use policy template for s
 date: 2026-07-23
 date_modified: "2026-07-23"
 published_time: "2026-07-23T00:00:00.000Z"
-permalink: /blog/ai-policy-template-canadian-small-business.html
+permalink: /blog/ai-policy-template-canadian-small-business
 source_label: "Blog · Guide"
 source_class: source-essay
 read_time: 9
 download_label: "Download"
 download_title: "AI Policy Template"
 download_desc: "Open the clean version to print, or paste into Word or Google Docs to make it editable."
-download_url: /blog/ai-policy-template-printable.html
+download_url: /blog/ai-policy-template-printable
 tags:
   - AI Policy
   - PIPEDA
@@ -24,11 +24,11 @@ tags:
   - SMB
 related_reading:
   - title: "PIPEDA and AI: What Canadian Businesses Need to Know"
-    url: /blog/pipeda-privacy-first-ai-canada.html
+    url: /blog/pipeda-privacy-first-ai-canada
   - title: "Shadow AI Is the New Shadow IT — What Leaders Need to Know"
-    url: /blog/shadow-ai-is-the-new-shadow-it.html
+    url: /blog/shadow-ai-is-the-new-shadow-it
   - title: "How to Prepare Your Business for AI Adoption: A Canadian Checklist"
-    url: /blog/ai-adoption-checklist-canadian-businesses-2026.html
+    url: /blog/ai-adoption-checklist-canadian-businesses-2026
 faq:
   - q: "What is an AI acceptable use policy?"
     a: "An AI acceptable use policy tells your team which AI tools are approved, what data can go into those tools, what outputs require human review before use, and who is accountable for keeping the policy current. It makes 'use AI responsibly' mean something specific enough to act on."
@@ -89,7 +89,7 @@ An AI policy isn't preparing you for a future regulatory wave. It's operationali
 
 <div class="policy-download-bar">
   <p>Open the clean version to print, or select all text and paste into Word or Google Docs to make it editable.</p>
-  <a href="/blog/ai-policy-template-printable.html" class="btn-dl" target="_blank">Open clean version →</a>
+  <a href="/blog/ai-policy-template-printable" class="btn-dl" target="_blank">Open clean version →</a>
 </div>
 
 <div class="policy-doc">
@@ -188,7 +188,7 @@ An AI policy isn't preparing you for a future regulatory wave. It's operationali
 
 **Keep the structure.** The five sections cover the questions that come up when something goes wrong: Was this tool approved? Should that data have gone in? Did anyone review it before it went out? Did we disclose what we needed to? Who owns this? If your policy can answer all five, it's doing its job.
 
-**Set a calendar reminder.** Quarterly. The policy you write today will need updating — new tools get adopted, regulations evolve, your team's practices change. A quarterly check-in keeps it current. If you're still in the early stages of figuring out how AI fits into your operations, the [AI Adoption Checklist for Canadian Businesses](/blog/ai-adoption-checklist-canadian-businesses-2026.html) is a good place to start before you write the policy — it covers the groundwork that makes a policy like this easier to fill in accurately.
+**Set a calendar reminder.** Quarterly. The policy you write today will need updating — new tools get adopted, regulations evolve, your team's practices change. A quarterly check-in keeps it current. If you're still in the early stages of figuring out how AI fits into your operations, the [AI Adoption Checklist for Canadian Businesses](/blog/ai-adoption-checklist-canadian-businesses-2026) is a good place to start before you write the policy — it covers the groundwork that makes a policy like this easier to fill in accurately.
 
 <div class="answer-block">
 <p>A policy is good enough if it answers five questions when something goes wrong: Was this tool approved? Should that data have gone in? Did someone review the output before it went out? Did you disclose what was required? Who owns this? If your adapted version answers all five for how your business actually operates — not how you intend to — it's doing its job.</p>

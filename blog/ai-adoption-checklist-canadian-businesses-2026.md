@@ -8,7 +8,7 @@ og_description: "An AI readiness checklist for Canadian small and medium busines
 date: 2026-07-29
 date_modified: "2026-07-29"
 published_time: "2026-07-29T00:00:00.000Z"
-permalink: /blog/ai-adoption-checklist-canadian-businesses-2026.html
+permalink: /blog/ai-adoption-checklist-canadian-businesses-2026
 redirect_from:
   - /blog/ai-adoption-checklist-canadian-businesses.html
 source_label: "Blog · Guide"
@@ -17,7 +17,7 @@ read_time: 12
 download_label: "Download"
 download_title: "AI Readiness Checklist"
 download_desc: "All 7 steps on one page — print it, share it with your team, or save as PDF before your next planning session."
-download_url: /blog/ai-adoption-checklist-printable.html
+download_url: /blog/ai-adoption-checklist-printable
 tags:
   - AI adoption
   - Canadian business
@@ -26,9 +26,9 @@ tags:
   - small business
 related_reading:
   - title: "Best AI Tools for Canadian Small Businesses (2026)"
-    url: /blog/best-ai-tools-canadian-small-businesses-2026.html
+    url: /blog/best-ai-tools-canadian-small-businesses-2026
   - title: "Shadow AI Is the New Shadow IT — What Leaders Need to Know"
-    url: /blog/shadow-ai-is-the-new-shadow-it.html
+    url: /blog/shadow-ai-is-the-new-shadow-it
 faq:
   - q: "What's the biggest mistake Canadian businesses make when adopting AI?"
     a: "The biggest mistake is adopting AI because they feel they should, not because they've identified a specific problem it will solve. KPMG Canada found that only 2% of Canadian businesses have seen a return on their AI investments. Businesses that succeed start by naming one concrete operational pain point and defining what success looks like in measurable terms before they evaluate any tools."
@@ -122,7 +122,7 @@ The biggest compliance risk: adopting AI tools that send Canadian data to foreig
 <li>Assign one person responsible for ensuring AI use stays compliant — don't assume the IT team knows privacy law and don't assume the lawyer knows how the tool works</li>
 </ul>
 
-<div class="callout">Looking for Canadian-hosted AI tools that reduce your cross-border data exposure? See our guide: <a href="/blog/best-ai-tools-canadian-small-businesses-2026.html">Best AI Tools for Canadian Small Businesses (2026)</a>.</div>
+<div class="callout">Looking for Canadian-hosted AI tools that reduce your cross-border data exposure? See our guide: <a href="/blog/best-ai-tools-canadian-small-businesses-2026">Best AI Tools for Canadian Small Businesses (2026)</a>.</div>
 
 ## Step 5: How should you structure your first AI pilot?
 
@@ -155,7 +155,7 @@ Most businesses skip this step because it feels like paperwork. It isn't. It's t
 <li>Check whether shadow AI is already happening — see below</li>
 </ul>
 
-<div class="callout"><strong><a href="/blog/shadow-ai-is-the-new-shadow-it.html">Shadow AI:</a></strong> Before you set guardrails, ask what's already happening without them. Shadow AI — employees using personal AI subscriptions, voice tools, or ChatGPT in their workflow without organizational knowledge or approval — is common in Canadian businesses, and it often predates any formal AI policy. It's not always malicious. But it means your data policies may already be violated before you've written them. One of the first questions to ask is: what are people already doing?</div>
+<div class="callout"><strong><a href="/blog/shadow-ai-is-the-new-shadow-it">Shadow AI:</a></strong> Before you set guardrails, ask what's already happening without them. Shadow AI — employees using personal AI subscriptions, voice tools, or ChatGPT in their workflow without organizational knowledge or approval — is common in Canadian businesses, and it often predates any formal AI policy. It's not always malicious. But it means your data policies may already be violated before you've written them. One of the first questions to ask is: what are people already doing?</div>
 
 ## Step 7: How do you prepare your team for AI adoption?
 
@@ -175,7 +175,7 @@ If you don't plan for the people side, you'll get resistance, confusion, or quie
 
 ## The Complete Checklist
 
-All 7 steps consolidated into one printable page — work through it before you evaluate a single tool. [Download it](/blog/ai-adoption-checklist-printable.html), share it with your team, or print it and use it in your next planning session.
+All 7 steps consolidated into one printable page — work through it before you evaluate a single tool. [Download it](/blog/ai-adoption-checklist-printable), share it with your team, or print it and use it in your next planning session.
 
 ## What to Do If You're Stuck
 

@@ -8,7 +8,7 @@ og_description: "EOS Rocks are a deceptively simple tool for quarterly execution
 date: 2026-08-10
 date_modified: "2026-10-06"
 published_time: "2026-08-10T00:00:00.000Z"
-permalink: /blog/eos-rocks-practical-guide.html
+permalink: /blog/eos-rocks-practical-guide
 source_label: "Blog · Guide"
 source_class: source-essay
 read_time: 11
@@ -19,13 +19,13 @@ tags:
   - Strategy
 related_reading:
   - title: "OKRs for Canadian Small Businesses: A Practical Guide to Focusing on What Actually Matters"
-    url: /blog/okrs-for-canadian-small-businesses.html
+    url: /blog/okrs-for-canadian-small-businesses
   - title: "EOS Rocks vs. OKRs: Which Goal-Setting Framework Is Right for Your Business?"
-    url: /blog/eos-rocks-vs-okrs.html
+    url: /blog/eos-rocks-vs-okrs
   - title: "What Is a Fractional COO? (And How to Know If You Need One)"
-    url: /blog/what-is-fractional-coo.html
+    url: /blog/what-is-fractional-coo
   - title: "The Market-Aware COO"
-    url: /blog/the-market-aware-coo.html
+    url: /blog/the-market-aware-coo
 faq:
   - q: "What is an EOS Rock?"
     a: "A Rock is a 90-day priority that is specific enough to have a clear done state, binary in its assessment (done or not done — no partial credit), and important enough to the business that it needs dedicated protection this quarter. The name comes from Stephen Covey's time-management metaphor: when you need to fit rocks, pebbles, and sand into a jar, you put the big rocks in first. Gino Wickman adapted this in Traction to describe the highest-priority projects and commitments each quarter."
@@ -182,7 +182,7 @@ The failure patterns for Rocks are as consistent as they are predictable.
 
 The clearest way to make this concrete is to see what Rocks actually look like for a practice like Northlight — a consulting and advisory business where client delivery, content, and new service development all compete for attention each quarter.
 
-These are related in intention to the OKR examples in [OKRs for Canadian Small Businesses](/blog/okrs-for-canadian-small-businesses.html) — the same underlying priorities expressed differently. Where the OKR version stacks measurable Key Results under each Objective, the Rock version bakes the completion criteria directly into the Rock. No sub-measures, no scoring ranges. Done or not done.
+These are related in intention to the OKR examples in [OKRs for Canadian Small Businesses](/blog/okrs-for-canadian-small-businesses) — the same underlying priorities expressed differently. Where the OKR version stacks measurable Key Results under each Objective, the Rock version bakes the completion criteria directly into the Rock. No sub-measures, no scoring ranges. Done or not done.
 
 ---
 
@@ -215,7 +215,7 @@ Run the AI governance workshop pilot with two clients, collect structured feedba
 
 What you'll notice: there are no Key Results underneath each Rock, no scoring ranges, no aspirational or committed designations. Each Rock is a thing to be completed. The intention behind each one is the same as its OKR counterpart — the method and the accountability mechanism are entirely different.
 
-If that comparison is useful, [EOS Rocks vs. OKRs](/blog/eos-rocks-vs-okrs.html) goes deeper on when to use each one and how they can work in tandem.
+If that comparison is useful, [EOS Rocks vs. OKRs](/blog/eos-rocks-vs-okrs) goes deeper on when to use each one and how they can work in tandem.
 
 ## Getting Started: A Practical Sequence
 
@@ -239,8 +239,8 @@ Your first quarter will be imperfect. That's expected and fine. Rock-setting get
 
 To help you get your first set of Rocks on paper, we've put together a Rocks Quarterly Planning Template with structure for company Rocks, individual Rocks, and your parking lot.
 
-[Download the Rocks Quarterly Planning Template](/downloads/rocks-quarterly-planning-template.html)
+[Download the Rocks Quarterly Planning Template](/downloads/rocks-quarterly-planning-template)
 
 ---
 
-If you're weighing Rocks against OKRs — or wondering which framework fits where your business is right now — read [EOS Rocks vs. OKRs: Which Goal-Setting Framework Is Right for Your Business?](/blog/eos-rocks-vs-okrs.html)
+If you're weighing Rocks against OKRs — or wondering which framework fits where your business is right now — read [EOS Rocks vs. OKRs: Which Goal-Setting Framework Is Right for Your Business?](/blog/eos-rocks-vs-okrs)

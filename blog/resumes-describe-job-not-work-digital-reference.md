@@ -7,7 +7,7 @@ og_description: "Why achievement-based profiles matter more than job titles, and
 date: 2026-07-16
 date_modified: "2026-08-07"
 published_time: "2026-07-16T00:00:00.000Z"
-permalink: /blog/resumes-describe-job-not-work-digital-reference.html
+permalink: /blog/resumes-describe-job-not-work-digital-reference
 source_label: "Blog · Essay"
 source_class: source-essay
 read_time: 4
@@ -18,11 +18,11 @@ tags:
   - professional development
 related_reading:
   - title: "What I Learned Optimizing for AI Search: AEO Checklist 2026"
-    url: /blog/aeo-optimization-lessons-2026.html
+    url: /blog/aeo-optimization-lessons-2026
   - title: "How to Choose an AI Advisor for Your Canadian Business"
-    url: /blog/how-to-choose-ai-advisor-consultant.html
+    url: /blog/how-to-choose-ai-advisor-consultant
   - title: "About Northlight Advisory Services — Who We Are and What We Do"
-    url: /blog/about-northlight-advisory-services.html
+    url: /blog/about-northlight-advisory-services
 faq:
   - q: "Why do most resumes still describe the job rather than the work?"
     a: "Because job-description formatting — responsibilities, scope, team size — is the default template most of us learned to follow. It captures what you were asked to do, not what you actually did. Achievement-based profiles ask a different question: what did you build, fix, or change, and what's different because you were there? Most people have those answers. Very few have written them down in a form anyone can read."

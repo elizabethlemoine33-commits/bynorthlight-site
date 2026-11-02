@@ -4,12 +4,12 @@ title: "AI Agent Deployment Go/No-Go Checklist"
 description: "A pre-deployment checklist for AI agents — covering identity, permissions, boundaries, auditability, and readiness. Use before giving any agent autonomous access."
 og_title: "AI Agent Deployment Go/No-Go — Northlight Advisory Services"
 og_description: "Pre-deployment checklist for AI agents: identity, permissions, boundaries, containment, auditability, and readiness. Free from Northlight Advisory Services."
-permalink: /blog/ai-agent-deployment-checklist-printable.html
+permalink: /blog/ai-agent-deployment-checklist-printable
 ---
 
 <div class="no-print-bar">
   <p>Use your browser's Print function to save as PDF — File → Print → Save as PDF.</p>
-  <a href="/blog/your-agents-need-a-chain-of-command.html">← Back to post</a>
+  <a href="/blog/your-agents-need-a-chain-of-command">← Back to post</a>
 </div>
 
 <div class="print-header">
@@ -29,7 +29,7 @@ permalink: /blog/ai-agent-deployment-checklist-printable.html
   <ul class="checklist">
     <li><div class="check-box"></div>Agent has its own identity, separate from any human developer</li>
     <li><div class="check-box"></div>Agent permissions are explicitly defined and documented</li>
-    <li><div class="check-box"></div>Agent is operating at the appropriate autonomy level (1–4) for the task (levels are described in <a href="/blog/your-agents-need-a-chain-of-command.html">Your Agents Need a Chain of Command</a>)</li>
+    <li><div class="check-box"></div>Agent is operating at the appropriate autonomy level (1–4) for the task (levels are described in <a href="/blog/your-agents-need-a-chain-of-command">Your Agents Need a Chain of Command</a>)</li>
     <li><div class="check-box"></div>High-stakes actions require explicit human approval before execution</li>
   </ul>
 </div>

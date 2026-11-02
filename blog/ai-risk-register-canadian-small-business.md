@@ -8,7 +8,7 @@ og_description: "Canada has no AI-specific law yet. Here is how to build an AI r
 date: 2026-10-31
 date_modified: "2026-10-31"
 published_time: "2026-10-31T00:00:00.000Z"
-permalink: /blog/ai-risk-register-canadian-small-business.html
+permalink: /blog/ai-risk-register-canadian-small-business
 source_label: "Blog · Guide"
 source_class: source-essay
 read_time: 8
@@ -18,11 +18,11 @@ tags:
   - "Operations"
 related_reading:
   - title: "Shadow AI Is the New Shadow IT: What Leaders Need to Know"
-    url: /blog/shadow-ai-is-the-new-shadow-it.html
+    url: /blog/shadow-ai-is-the-new-shadow-it
   - title: "AI Policy Template for Canadian Small Business"
-    url: /blog/ai-policy-template-canadian-small-business.html
+    url: /blog/ai-policy-template-canadian-small-business
   - title: "Implementing AI Without Breaking Canadian Privacy Law: A PIPEDA Guide"
-    url: /blog/pipeda-privacy-first-ai-canada.html
+    url: /blog/pipeda-privacy-first-ai-canada
 faq:
   - q: "What is an AI risk register?"
     a: "A central record of the risks that come from the AI you use: what could go wrong, how likely and how bad it would be, what you decided to do about it, and who owns it. NIST defines a risk register as a central record of current risks and related information for a given scope or organization."
@@ -64,7 +64,7 @@ I keep one for Northlight Advisory Services. I started it on September 1, 2026. 
 
 The government's page on the proposed Artificial Intelligence and Data Act [describes it as proposed](https://ised-isde.canada.ca/site/innovation-better-canada/en/artificial-intelligence-and-data-act){:rel="noopener"} and says "currently, there is no regulatory framework in Canada specific to AI." The page is archived, so check the current status before you rely on it (last checked October 31, 2026). In the meantime, the Office of the Privacy Commissioner and provincial commissioners [said in December 2023](https://www.priv.gc.ca/en/privacy-topics/technology/artificial-intelligence/gd_principles_ai/){:rel="noopener"} that generative AI does not sit outside current legislative frameworks. They say organizations stay accountable for decisions their systems influence. That is guidance, not law.
 
-So until something is handed down, what I recommend is simple: know what you have, consider the risk, map it out. The first step is an inventory. I wrote about that in [shadow AI and how to audit it](/blog/shadow-ai-is-the-new-shadow-it.html). A register is the step after the audit.
+So until something is handed down, what I recommend is simple: know what you have, consider the risk, map it out. The first step is an inventory. I wrote about that in [shadow AI and how to audit it](/blog/shadow-ai-is-the-new-shadow-it). A register is the step after the audit.
 
 ## How do NIST, the EU AI Act and ISO 42001 compare?
 
@@ -144,7 +144,7 @@ The federal government's [voluntary code of conduct](https://ised-isde.canada.ca
 4. **Score them,** using a 1 to 5 scale for likelihood and impact, and decide what you will accept.
 5. **Set a review date,** once a year and whenever your tools change.
 
-If you also need a written policy to sit alongside the register, I have a [template AI policy for Canadian small businesses](/blog/ai-policy-template-canadian-small-business.html), and a guide to [using AI without breaking Canadian privacy law](/blog/pipeda-privacy-first-ai-canada.html).
+If you also need a written policy to sit alongside the register, I have a [template AI policy for Canadian small businesses](/blog/ai-policy-template-canadian-small-business), and a guide to [using AI without breaking Canadian privacy law](/blog/pipeda-privacy-first-ai-canada).
 
 You can do the first pass in an afternoon. Do not wait for a perfect framework. Pick the one that suits your size, and keep it simple enough that you will actually update it.
 

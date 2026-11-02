@@ -7,7 +7,7 @@ og_description: "Your Google SEO work won't help you in ChatGPT. Here's why — 
 date: 2026-09-08
 date_modified: "2026-09-08"
 published_time: "2026-09-08T00:00:00.000Z"
-permalink: /blog/ai-search-visibility-canadian-businesses.html
+permalink: /blog/ai-search-visibility-canadian-businesses
 source_label: "Blog · Guide"
 source_class: source-guide
 read_time: 6
@@ -19,13 +19,13 @@ tags:
   - search visibility
 related_reading:
   - title: "ChatGPT Does Not Search Google"
-    url: /blog/chatgpt-searches-bing-not-google.html
+    url: /blog/chatgpt-searches-bing-not-google
   - title: "AEO Optimization Lessons 2026"
-    url: /blog/aeo-optimization-lessons-2026.html
+    url: /blog/aeo-optimization-lessons-2026
   - title: "Shadow AI Is the New Shadow IT"
-    url: /blog/shadow-ai-is-the-new-shadow-it.html
+    url: /blog/shadow-ai-is-the-new-shadow-it
   - title: "Your AI Isn't Underperforming. It's Working Blind."
-    url: /blog/ai-isnt-underperforming-working-blind.html
+    url: /blog/ai-isnt-underperforming-working-blind
 faq:
   - q: "What is the difference between AEO and GEO?"
     a: "AEO (Answer Engine Optimization) is the older concept, originally developed around voice search and featured snippets — getting search engines to surface your content as a direct answer. GEO (Generative Engine Optimization) is specifically about how AI models like ChatGPT and Claude pull and cite content when constructing a response. In practice, the underlying question is the same: is your content clear enough that an AI can summarize what your business does — and accurate enough that you'd want it to?"
@@ -39,7 +39,7 @@ faq:
 
 Most of the business owners I talk to have been doing SEO for years — and doing it reasonably well. Their websites rank. Their content is consistent. Their Google Business profiles are current.
 
-None of that will help them when a potential client opens ChatGPT and asks it to recommend someone who does what they do — because [ChatGPT doesn't use Google to find the answer](/blog/chatgpt-searches-bing-not-google.html).
+None of that will help them when a potential client opens ChatGPT and asks it to recommend someone who does what they do — because [ChatGPT doesn't use Google to find the answer](/blog/chatgpt-searches-bing-not-google).
 
 This is the shift that most Canadian SMBs haven't caught up to yet; and it isn't a minor tweak to your content strategy. It's a fundamentally different question about where your business shows up when someone else is doing the searching for a buyer.
 

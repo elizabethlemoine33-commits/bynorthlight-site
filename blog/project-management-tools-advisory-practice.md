@@ -8,7 +8,7 @@ og_description: "I evaluated 12 PM tools for a large organisation in 2022 and ch
 date: 2026-08-10
 date_modified: "2026-08-10"
 published_time: "2026-08-10T00:00:00.000Z"
-permalink: /blog/project-management-tools-advisory-practice.html
+permalink: /blog/project-management-tools-advisory-practice
 source_label: "Blog · Guide"
 source_class: source-essay
 read_time: 9
@@ -18,11 +18,11 @@ tags:
   - Project Management
 related_reading:
   - title: "What Is a Fractional COO? (And How to Know If You Need One)"
-    url: /blog/what-is-fractional-coo.html
+    url: /blog/what-is-fractional-coo
   - title: "OKRs for Canadian Small Businesses: A Practical Guide"
-    url: /blog/okrs-for-canadian-small-businesses.html
+    url: /blog/okrs-for-canadian-small-businesses
   - title: "EOS Rocks: A Practical Guide for Small Business Operators"
-    url: /blog/eos-rocks-practical-guide.html
+    url: /blog/eos-rocks-practical-guide
 faq:
   - q: "What is the best project management tool for a small advisory practice?"
     a: "There is no single best tool — it depends on how you work. For a solo or small advisory practice that needs hierarchy, automation, calendar views, and AI or API integration, ClickUp is a strong choice. If you primarily need a to-do list, use something simpler. Todoist, Microsoft To Do, and similar tools are better fits when you don't have genuine projects with dates, dependencies, and multiple moving parts."

@@ -6,7 +6,7 @@ og_title: "You Hired Them. Now What? When New Hires Don't Clear the Bottleneck"
 og_description: "You made the hire. They're qualified. But you're still doing their work at 11pm. The problem isn't the person — it's the missing structure."
 date: 2026-07-10
 published_time: "2026-07-10T00:00:00.000Z"
-permalink: /blog/you-hired-them-now-what.html
+permalink: /blog/you-hired-them-now-what
 source_label: "Blog · Essay"
 source_class: source-essay
 read_time: 6
@@ -17,11 +17,11 @@ tags:
   - organizational structure
 related_reading:
   - title: "Fractional COO vs. Hiring a COO: What's Right for Canadian Business?"
-    url: /blog/fractional-coo-vs-hiring-full-time-canada.html
+    url: /blog/fractional-coo-vs-hiring-full-time-canada
   - title: "Growth Is No Longer the Hard Part"
-    url: /blog/growth-is-no-longer-the-hard-part.html
+    url: /blog/growth-is-no-longer-the-hard-part
   - title: "The Wall on Day 200: When Plans Don't Go to Plan"
-    url: /blog/the-wall-on-day-200.html
+    url: /blog/the-wall-on-day-200
 faq:
   - q: "Why doesn't hiring alone clear the founder bottleneck?"
     a: "Hiring fills a role but doesn't build the structures that let a new person actually do the job: clear authority, explicit decision rights, documented processes. Without those, the founder remains the default approval gate, the new hire stays tentative, and the bottleneck moves sideways rather than clearing. Adding headcount to a system that hasn't defined ownership just adds coordination overhead — more meetings, more handoffs, more places for things to fall through."

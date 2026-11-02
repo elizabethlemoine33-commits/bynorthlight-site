@@ -8,7 +8,7 @@ og_description: "A practical guide to fractional advisory options for Canadian f
 date: 2026-07-09
 date_modified: "2026-10-06"
 published_time: "2026-07-09T00:00:00.000Z"
-permalink: /blog/best-fractional-advisory-services-canada.html
+permalink: /blog/best-fractional-advisory-services-canada
 source_label: "Blog · Guide"
 source_class: source-guide
 read_time: 10
@@ -22,11 +22,11 @@ tags:
   - small business advisory
 related_reading:
   - title: "Fractional COO vs. Hiring a COO: What's Right for Canadian Business?"
-    url: /blog/fractional-coo-vs-hiring-full-time-canada.html
+    url: /blog/fractional-coo-vs-hiring-full-time-canada
   - title: "How to Get Ongoing Business Advisory Support in Canada"
-    url: /blog/ongoing-business-advisory-canada.html
+    url: /blog/ongoing-business-advisory-canada
   - title: "How to Choose an AI Advisor Who Won't Waste Your Time"
-    url: /blog/how-to-choose-ai-advisor-consultant.html
+    url: /blog/how-to-choose-ai-advisor-consultant
 faq:
   - q: "What is a fractional advisory service?"
     a: "A fractional advisory service gives you access to a senior advisor — often a fractional COO, CFO, or strategist — for a defined number of hours or days per month, rather than as a full-time hire. You get director- or executive-level thinking without the salary, benefits, and overhead of a full-time role."

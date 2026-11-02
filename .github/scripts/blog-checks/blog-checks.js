@@ -133,8 +133,9 @@ function checkMarkdown(md, { slug = '', expectedDate = null, now = new Date() } 
 
   // Canonical comes from permalink
   const permalink = fm.permalink || '';
-  const okPermalink = /^\/blog\/[a-z0-9-]+\.html$/.test(permalink) && (!slug || permalink === `/blog/${slug}.html`);
-  checks.push(okPermalink ? pass('canonical', 'Canonical URL', permalink) : fail('canonical', 'Canonical URL', `permalink "${permalink}" is not /blog/${slug || '<slug>'}.html.`, { retry: !slug }));
+  // The clean address (/blog/<slug>) is the standard since clean URLs batch 3; the old .html form is still accepted.
+  const okPermalink = /^\/blog\/[a-z0-9-]+(\.html)?$/.test(permalink) && (!slug || permalink === `/blog/${slug}` || permalink === `/blog/${slug}.html`);
+  checks.push(okPermalink ? pass('canonical', 'Canonical URL', permalink) : fail('canonical', 'Canonical URL', `permalink "${permalink}" is not /blog/${slug || '<slug>'}.`, { retry: !slug }));
 
   // Dates
   const today = halifaxToday(now);
@@ -194,7 +195,7 @@ function tagAttrs(tag) {
 
 function checkHtml(html, { slug = '', url = '', expectedDate = null } = {}) {
   html = String(html || '');
-  const canonicalExpected = url || (slug ? `${SITE}/blog/${slug}.html` : '');
+  const canonicalExpected = url || (slug ? `${SITE}/blog/${slug}` : '');
   const checks = [];
   const metas = [...html.matchAll(/<meta\b[^>]*>/gi)].map(m => tagAttrs(m[0]));
   const meta = (key, val) => metas.find(a => a[key] === val)?.content;

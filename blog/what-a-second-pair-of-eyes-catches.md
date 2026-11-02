@@ -8,7 +8,7 @@ og_description: "When you decide alone, nobody asks the question you cannot see 
 date: 2026-10-30
 date_modified: "2026-10-30"
 published_time: "2026-10-30T00:00:00.000Z"
-permalink: /blog/what-a-second-pair-of-eyes-catches.html
+permalink: /blog/what-a-second-pair-of-eyes-catches
 source_label: "Blog · Essay"
 source_class: source-essay
 read_time: 5
@@ -18,11 +18,11 @@ tags:
   - "Strategy"
 related_reading:
   - title: "Consultant, Fractional COO or Full-Time COO in Canada? How to Choose"
-    url: /blog/consultant-fractional-coo-or-full-time-coo-how-to-choose.html
+    url: /blog/consultant-fractional-coo-or-full-time-coo-how-to-choose
   - title: "Why Does a Decision Keep Circling When the Team Has the Facts?"
-    url: /blog/stuck-on-consensus-why-decisions-keep-circling.html
+    url: /blog/stuck-on-consensus-why-decisions-keep-circling
   - title: "The Wall on Day 200: When Plans Don't Go to Plan"
-    url: /blog/the-wall-on-day-200.html
+    url: /blog/the-wall-on-day-200
 faq:
   - q: "What does a second pair of eyes catch when I decide alone?"
     a: "The question you cannot see from inside your own business. On a quote, that question is whether it is still the job you agreed to. On a choice you keep putting off, it is what is actually stopping you."
@@ -65,7 +65,7 @@ Scope changes are common. The Project Management Institute found in its [2018 Pu
 
 One way to catch it earlier is a premortem. Gary Klein described it in Harvard Business Review in 2007: the team assumes the project [has just failed](https://hbr.org/2007/09/performing-a-project-premortem) and lists the reasons why. He argues that projects fail partly because people hold back their doubts, and that the exercise gives them permission to say them. You can run a small version on a quote with someone you trust. Where did this go wrong?
 
-If you are the one hiring, the same point holds from your side. [Agree time and scope before the work starts](/blog/consultant-fractional-coo-or-full-time-coo-how-to-choose.html), and agree what happens when either one changes.
+If you are the one hiring, the same point holds from your side. [Agree time and scope before the work starts](/blog/consultant-fractional-coo-or-full-time-coo-how-to-choose), and agree what happens when either one changes.
 
 ## What question is missing when you keep putting a decision off?
 

@@ -7,7 +7,7 @@ og_description: "What a fractional COO does, what it costs, and who should hire 
 date: 2026-07-21
 date_modified: "2026-08-08"
 published_time: "2026-07-21T00:00:00.000Z"
-permalink: /blog/fractional-coo-atlantic-canada.html
+permalink: /blog/fractional-coo-atlantic-canada
 source_label: "Blog · Essay"
 source_class: source-essay
 read_time: 8
@@ -17,9 +17,9 @@ tags:
   - Atlantic Canada Business
 related_reading:
   - title: "What Is a Fractional Executive? Guide for Canadian Businesses"
-    url: /blog/what-is-fractional-executive-guide-canadian-businesses.html
+    url: /blog/what-is-fractional-executive-guide-canadian-businesses
   - title: "Fractional COO vs. Full-Time COO: Cost & Value in Canada"
-    url: /blog/fractional-coo-vs-hiring-full-time-canada.html
+    url: /blog/fractional-coo-vs-hiring-full-time-canada
 faq:
   - q: "What's the difference between a fractional COO and a consultant?"
     a: "A consultant typically delivers a report or recommendations and leaves. A fractional COO does the actual work — building systems, running operations processes, integrating with your leadership team, and implementing change over months, not weeks. You're hiring execution and ongoing leadership, not advice."
@@ -53,7 +53,7 @@ faq:
     "name": "Atlantic Canada"
   },
   "serviceType": "Fractional COO Advisory",
-  "url": "https://bynorthlight.ca/blog/fractional-coo-atlantic-canada.html"
+  "url": "https://bynorthlight.ca/blog/fractional-coo-atlantic-canada"
 }
 </script>
 
@@ -144,7 +144,7 @@ Fractional COO work fits best for businesses in a specific stage and structure. 
 
 I work with professional services firms, tech startups past seed stage, established trades and marine businesses, nonprofits that have outgrown their founding structure, and agencies that have grown fast and need operational backbone to hold it. [The mix of industries across Halifax, Moncton, and Fredericton](https://atlanticcanadabusinessgrants.com/nova-scotia/halifax-industries/){:rel="noopener"} — from ocean tech to creative services to healthcare — means the operational challenges are varied, but the fundamentals are the same: clear structure, defined ownership, systems that don't break when someone goes on vacation.
 
-<div class="callout-block"><p><strong>Wondering if you're ready for a fractional COO?</strong> The <a href="/fractional-readiness-check.html">Fractional Executive Readiness Check</a> walks through the question in about two minutes — no email required, results on the page.</p></div>
+<div class="callout-block"><p><strong>Wondering if you're ready for a fractional COO?</strong> The <a href="/fractional-readiness-check">Fractional Executive Readiness Check</a> walks through the question in about two minutes — no email required, results on the page.</p></div>
 
 **What working with Northlight looks like**
 

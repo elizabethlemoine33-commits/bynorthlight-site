@@ -8,7 +8,7 @@ og_description: "OKRs and EOS Rocks both solve the priority problem — but they
 date: 2026-08-10
 date_modified: "2026-10-29"
 published_time: "2026-08-10T00:00:00.000Z"
-permalink: /blog/eos-rocks-vs-okrs.html
+permalink: /blog/eos-rocks-vs-okrs
 source_label: "Blog · Guide"
 source_class: source-essay
 read_time: 12
@@ -19,13 +19,13 @@ tags:
   - Strategy
 related_reading:
   - title: "OKRs for Canadian Small Businesses: A Practical Guide to Focusing on What Actually Matters"
-    url: /blog/okrs-for-canadian-small-businesses.html
+    url: /blog/okrs-for-canadian-small-businesses
   - title: "EOS Rocks: A Practical Guide for Small Business Operators"
-    url: /blog/eos-rocks-practical-guide.html
+    url: /blog/eos-rocks-practical-guide
   - title: "What Is a Fractional COO? (And How to Know If You Need One)"
-    url: /blog/what-is-fractional-coo.html
+    url: /blog/what-is-fractional-coo
   - title: "The Market-Aware COO"
-    url: /blog/the-market-aware-coo.html
+    url: /blog/the-market-aware-coo
 faq:
   - q: "Which is better — OKRs or EOS Rocks?"
     a: "Neither is categorically better. OKRs optimise for measurable outcomes and cross-team alignment; EOS Rocks optimise for execution discipline and quarterly accountability. If your biggest problem is teams pulling in different directions or not knowing what to measure, OKRs address that. If your biggest problem is priorities dying mid-quarter because business-as-usual crowds them out, Rocks address that. The right framework is the one that solves the problem you actually have."
@@ -53,7 +53,7 @@ OKRs and EOS Rocks solve different problems. OKRs are designed to answer *what d
 <p>EOS Rocks and OKRs answer different questions. Rocks are 90-day, done-or-not-done commitments — three to seven per person or team, each with one owner — built to make sure you finish your most important work; a healthy quarter is about 80% of Rocks complete. OKRs pair a qualitative Objective with 2–5 measurable Key Results scored from 0 to 1.0, built to define what success looks like and whether you are reaching far enough. If your problem is finishing what you have already identified, start with Rocks. If it is defining and measuring the outcomes, start with OKRs.</p>
 </div>
 
-If you've read [OKRs for Canadian Small Businesses](/blog/okrs-for-canadian-small-businesses.html) and [EOS Rocks: A Practical Guide for Small Business Operators](/blog/eos-rocks-practical-guide.html), you already know the mechanics. The short version:
+If you've read [OKRs for Canadian Small Businesses](/blog/okrs-for-canadian-small-businesses) and [EOS Rocks: A Practical Guide for Small Business Operators](/blog/eos-rocks-practical-guide), you already know the mechanics. The short version:
 
 **EOS Rocks** — from Gino Wickman's [*Traction*](https://www.eosworldwide.com/traction-book) (2011) — are 90-day commitments with a binary done/not-done assessment. Three to seven per person or team per quarter. Each Rock has one owner and a clear done definition written in advance. Progress is reviewed weekly in the L10 meeting: on track or off track, nothing more. Healthy completion is 80% — not 100%, which would mean the Rocks weren't ambitious enough.
 
@@ -184,6 +184,6 @@ Neither framework fixes unclear strategy, diffuse accountability, or a team that
 
 ---
 
-Both [OKRs for Canadian Small Businesses](/blog/okrs-for-canadian-small-businesses.html) and [EOS Rocks: A Practical Guide for Small Business Operators](/blog/eos-rocks-practical-guide.html) walk through the implementation sequence in detail, with Northlight examples and printable worksheets for each.
+Both [OKRs for Canadian Small Businesses](/blog/okrs-for-canadian-small-businesses) and [EOS Rocks: A Practical Guide for Small Business Operators](/blog/eos-rocks-practical-guide) walk through the implementation sequence in detail, with Northlight examples and printable worksheets for each.
 
-The [OKR Starter Worksheet](/downloads/okr-starter-worksheet.html) and the [Rocks Quarterly Planning Template](/downloads/rocks-quarterly-planning-template.html) are both available free — no email, no sign-up.
+The [OKR Starter Worksheet](/downloads/okr-starter-worksheet) and the [Rocks Quarterly Planning Template](/downloads/rocks-quarterly-planning-template) are both available free — no email, no sign-up.

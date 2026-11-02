@@ -7,7 +7,7 @@ og_description: "Hands-on lessons from two phases of AEO work on a real Canadian
 date: 2026-07-09
 date_modified: "2026-07-09"
 published_time: "2026-07-09T00:00:00.000Z"
-permalink: /blog/aeo-optimization-lessons-2026.html
+permalink: /blog/aeo-optimization-lessons-2026
 source_label: "Blog · Guide"
 source_class: source-essay
 read_time: 12
@@ -22,11 +22,11 @@ tags:
   - Gemini
 related_reading:
   - title: "I Built Three AI Tools for My Own Work. Now They're on MCP Market."
-    url: /blog/northlight-mcp-skills-market.html
+    url: /blog/northlight-mcp-skills-market
   - title: "Your AI Strategy Is Running on the Wrong Clock"
-    url: /blog/ai-strategy-wrong-clock.html
+    url: /blog/ai-strategy-wrong-clock
   - title: "How We Built Northlight Vault: Privacy-First Thinking"
-    url: /blog/how-we-built-northlight-vault-privacy-first.html
+    url: /blog/how-we-built-northlight-vault-privacy-first
 faq:
   - q: "What is Answer Engine Optimization (AEO)?"
     a: "Answer Engine Optimization (AEO) is the practice of optimizing a website so AI-powered answer engines — ChatGPT, Perplexity, Gemini, Claude — can find, understand, and cite it accurately. Unlike traditional SEO, AI systems don't rank pages; they synthesize answers from what they can read and verify. The goal is to be the clearest, most extractable source for a given topic — not just the most linked."

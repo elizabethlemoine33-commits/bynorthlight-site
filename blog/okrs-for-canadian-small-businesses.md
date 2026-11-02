@@ -8,7 +8,7 @@ og_description: "OKRs are one of the most talked-about goal-setting frameworks �
 date: 2026-08-10
 date_modified: "2026-08-10"
 published_time: "2026-08-10T00:00:00.000Z"
-permalink: /blog/okrs-for-canadian-small-businesses.html
+permalink: /blog/okrs-for-canadian-small-businesses
 source_label: "Blog · Guide"
 source_class: source-essay
 read_time: 12
@@ -19,13 +19,13 @@ tags:
   - Strategy
 related_reading:
   - title: "EOS Rocks: A Practical Guide for Small Business Operators"
-    url: /blog/eos-rocks-practical-guide.html
+    url: /blog/eos-rocks-practical-guide
   - title: "EOS Rocks vs. OKRs: Which Goal-Setting Framework Is Right for Your Business?"
-    url: /blog/eos-rocks-vs-okrs.html
+    url: /blog/eos-rocks-vs-okrs
   - title: "What Is a Fractional COO? (And How to Know If You Need One)"
-    url: /blog/what-is-fractional-coo.html
+    url: /blog/what-is-fractional-coo
   - title: "The Market-Aware COO"
-    url: /blog/the-market-aware-coo.html
+    url: /blog/the-market-aware-coo
 faq:
   - q: "What does OKR stand for?"
     a: "OKR stands for Objectives and Key Results. An Objective is a qualitative statement of what you want to achieve — inspiring, directional, and time-bound. Key Results are the specific, measurable outcomes that tell you whether you've reached that Objective. Together, they answer two questions: where are we going, and how will we know we've arrived?"
@@ -211,7 +211,7 @@ Grading expectation: Success means we have a clear answer — yes, no, or not ye
 
 What these illustrate: the committed OKR has no flexibility built in, the aspirational one sets a bar we'd be proud to hit 70% of, and the learning one is judged entirely by whether we made a decision, not by how any numbers landed. Different expectations, different grading, same discipline.
 
-The [OKR Starter Worksheet](/downloads/okr-starter-worksheet.html) below uses these as a filled-in sample, then gives you space to write your own.
+The [OKR Starter Worksheet](/downloads/okr-starter-worksheet) below uses these as a filled-in sample, then gives you space to write your own.
 
 ---
 
@@ -219,8 +219,8 @@ The [OKR Starter Worksheet](/downloads/okr-starter-worksheet.html) below uses th
 
 To help you get your first cycle off the ground, we've put together a one-page OKR Starter Worksheet. It walks through each OKR type with the Northlight examples above as a model, then gives you space to draft your own Objectives, Key Results, committed/aspirational designation, and end-of-cycle grading.
 
-[Download the OKR Starter Worksheet](/downloads/okr-starter-worksheet.html)
+[Download the OKR Starter Worksheet](/downloads/okr-starter-worksheet)
 
 ---
 
-If you're weighing OKRs against EOS Rocks or wondering which framework fits where your business is right now, read [EOS Rocks vs. OKRs: Which Goal-Setting Framework Is Right for Your Business?](/blog/eos-rocks-vs-okrs.html) We've run both and have a clear view on where each one earns its place.
+If you're weighing OKRs against EOS Rocks or wondering which framework fits where your business is right now, read [EOS Rocks vs. OKRs: Which Goal-Setting Framework Is Right for Your Business?](/blog/eos-rocks-vs-okrs) We've run both and have a clear view on where each one earns its place.

@@ -7,14 +7,14 @@ og_description: "98% of organisations have employees using unapproved AI tools. 
 date: 2026-01-01
 date_modified: "2026-07-09"
 published_time: "2026-01-01T00:00:00.000Z"
-permalink: /blog/shadow-ai-is-the-new-shadow-it.html
+permalink: /blog/shadow-ai-is-the-new-shadow-it
 source_label: "Blog · Essay"
 source_class: source-essay
 read_time: 6
 download_label: "Download"
 download_title: "Shadow AI Governance Checklist"
 download_desc: "The four-question audit and follow-up framework for surfacing unsanctioned AI use in your organisation. No sign-up required."
-download_url: /blog/shadow-ai-governance-checklist-printable.html
+download_url: /blog/shadow-ai-governance-checklist-printable
 tags:
   - ai governance
   - shadow ai
@@ -22,13 +22,13 @@ tags:
   - organizational strategy
 related_reading:
   - title: "How to Prepare Your Business for AI Adoption: A Canadian Checklist"
-    url: /blog/ai-adoption-checklist-canadian-businesses-2026.html
+    url: /blog/ai-adoption-checklist-canadian-businesses-2026
   - title: "Implementing AI Without Breaking Canadian Privacy Law: A PIPEDA Guide"
-    url: /blog/pipeda-privacy-first-ai-canada.html
+    url: /blog/pipeda-privacy-first-ai-canada
   - title: "Your Agents Need a Chain of Command"
-    url: /blog/your-agents-need-a-chain-of-command.html
+    url: /blog/your-agents-need-a-chain-of-command
   - title: "Your AI Isn't Underperforming. It's Working Blind."
-    url: /blog/ai-isnt-underperforming-working-blind.html
+    url: /blog/ai-isnt-underperforming-working-blind
 faq:
   - q: "What does shadow AI actually look like in a small business?"
     a: "Your marketing manager pastes customer lists into ChatGPT to draft segmentation copy. Your finance analyst runs forecasting data through a personal Claude account. Three developers use GitHub Copilot on company code through their personal Gmail. None asked permission — because nobody told them what was acceptable, what data could leave the perimeter, or who to ask. Seventy-eight per cent of AI users bring their own tools to work. They're solving problems now, not waiting for IT."
@@ -111,7 +111,7 @@ That person is probably you.
 
 I built a governance audit checklist — the actual questions to ask, the format to capture answers in, and the follow-up decision tree that tells you what to do with what you find. It's designed for someone who's running this audit for the first time, in an organisation that doesn't have an AI policy yet and isn't sure it needs one.
 
-[Download the Shadow AI Governance Checklist →](/blog/shadow-ai-governance-checklist-printable.html)
+[Download the Shadow AI Governance Checklist →](/blog/shadow-ai-governance-checklist-printable)
 
 Shadow AI isn't going away. The tools are too useful, the behaviour is too embedded, and the next wave — agentic AI that takes actions on your behalf, not just generates text — is going to make this ten times harder if you don't have the basics sorted now.
 

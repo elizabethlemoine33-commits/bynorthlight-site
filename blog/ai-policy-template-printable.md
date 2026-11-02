@@ -4,7 +4,7 @@ title: "AI Acceptable Use Policy Template"
 description: "A printable AI acceptable use policy template for Canadian small businesses — 5 sections covering approved tools, data handling, output review, disclosure, and policy ownership."
 og_title: "AI Acceptable Use Policy Template for Canadian Small Business"
 og_description: "A printable, fill-in-the-blank AI acceptable use policy template for Canadian small businesses — approved tools, data handling, PIPEDA compliance, output review, and disclosure."
-permalink: /blog/ai-policy-template-printable.html
+permalink: /blog/ai-policy-template-printable
 ---
 
 <style>
@@ -29,7 +29,7 @@ permalink: /blog/ai-policy-template-printable.html
 
 <div class="no-print-bar">
   <p>To print or save as PDF: File → Print → Save as PDF. &nbsp;|&nbsp; To edit: Select All (Ctrl+A / Cmd+A), copy, paste into Word or Google Docs.</p>
-  <a href="/blog/ai-policy-template-canadian-small-business.html">← Back to post</a>
+  <a href="/blog/ai-policy-template-canadian-small-business">← Back to post</a>
 </div>
 
 <div class="print-header">

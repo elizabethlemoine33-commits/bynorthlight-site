@@ -7,7 +7,7 @@ og_description: "When AI makes work faster, who benefits? The distribution quest
 date: 2026-07-08
 date_modified: "2026-07-09"
 published_time: "2026-07-08T00:00:00.000Z"
-permalink: /blog/growth-is-no-longer-the-hard-part.html
+permalink: /blog/growth-is-no-longer-the-hard-part
 source_label: "Blog · Essay"
 source_class: source-aurora
 read_time: 6
@@ -18,11 +18,11 @@ tags:
   - Organizational Change
 related_reading:
   - title: "You Hired Them. Now What? When New Hires Don't Clear the Bottleneck"
-    url: /blog/you-hired-them-now-what.html
+    url: /blog/you-hired-them-now-what
   - title: "The Real ROI of AI for Canadian SMBs (It's Not Hours Saved)"
-    url: /blog/ai-roi-canadian-smb.html
+    url: /blog/ai-roi-canadian-smb
   - title: "The Wall on Day 200: When Plans Don't Go to Plan"
-    url: /blog/the-wall-on-day-200.html
+    url: /blog/the-wall-on-day-200
 faq:
   - q: "What Is the Real Operations Challenge for Fast-Growing Small Businesses?"
     a: "AI makes output cheaper and faster inside your organisation. The operations challenge is deciding who benefits from that efficiency gain — and naming that decision explicitly rather than answering it by default. Does a team member whose work got faster get their hours back? Does the time savings flow to customers as faster turnaround, or stay inside as margin? These questions are being answered every week in your business. The only variable is whether you're answering them intentionally."

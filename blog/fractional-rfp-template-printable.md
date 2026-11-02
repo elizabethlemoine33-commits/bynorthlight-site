@@ -4,12 +4,12 @@ title: "Fractional Executive RFP Template"
 description: "A fill-in-the-blank template for defining what you need from a fractional COO, CMO, or CFO before you start conversations with candidates."
 og_title: "Fractional Executive RFP Template — Northlight Advisory Services"
 og_description: "Define scope, time commitment, success criteria, and budget before you engage a fractional executive. Printable template for Canadian business operators."
-permalink: /blog/fractional-rfp-template-printable.html
+permalink: /blog/fractional-rfp-template-printable
 ---
 
 <div class="no-print-bar">
   <p>Use your browser's Print function to save as PDF — File → Print → Save as PDF.</p>
-  <a href="/blog/what-is-fractional-executive-guide-canadian-businesses.html">← Back to post</a>
+  <a href="/blog/what-is-fractional-executive-guide-canadian-businesses">← Back to post</a>
 </div>
 
 <div class="print-header">
@@ -165,5 +165,5 @@ permalink: /blog/fractional-rfp-template-printable.html
 
 <div class="print-footer">
   <span class="footer-note">© 2026 Northlight Advisory Services. For the full guide, visit bynorthlight.ca</span>
-  <span class="footer-url">bynorthlight.ca/blog/fractional-rfp-template-printable.html</span>
+  <span class="footer-url">bynorthlight.ca/blog/fractional-rfp-template-printable</span>
 </div>

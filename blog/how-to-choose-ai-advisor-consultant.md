@@ -7,7 +7,7 @@ og_description: "Most AI consultants don't actually use AI. Here's how to find o
 date: 2026-06-12
 date_modified: "2026-07-09"
 published_time: "2026-06-12T00:00:00.000Z"
-permalink: /blog/how-to-choose-ai-advisor-consultant.html
+permalink: /blog/how-to-choose-ai-advisor-consultant
 source_label: "Blog · Guide"
 source_class: source-aurora
 read_time: 8
@@ -17,11 +17,11 @@ tags:
   - Consulting
 related_reading:
   - title: "AI Adoption Checklist for Canadian Businesses (2026)"
-    url: /blog/ai-adoption-checklist-canadian-businesses-2026.html
+    url: /blog/ai-adoption-checklist-canadian-businesses-2026
   - title: "Best AI Tools for Canadian Small Businesses (2026)"
-    url: /blog/best-ai-tools-canadian-small-businesses-2026.html
+    url: /blog/best-ai-tools-canadian-small-businesses-2026
   - title: "How to Choose an AI Implementation Partner: A Canadian Guide"
-    url: /blog/how-to-choose-ai-implementation-partner.html
+    url: /blog/how-to-choose-ai-implementation-partner
 faq:
   - q: "What do AI adoption statistics actually tell you?"
     a: "Statistics Canada says 12% of Canadian businesses use AI in core operations. Employee surveys say 50% use it for work. Other surveys say 66% use it for at least one function. All three are true because 'use AI' means different things — from integrated into operations to personal ChatGPT on a lunch break. If you're a small business owner, you're being sold against the 66% number and measured against the 12% one. The gap between those two is where most of the bad advice lives."

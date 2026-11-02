@@ -7,7 +7,7 @@ og_description: "Practical evaluation criteria, red flags, and a ready-to-use RF
 date: 2026-07-11
 date_modified: "2026-07-11"
 published_time: "2026-07-11T00:00:00.000Z"
-permalink: /blog/how-to-choose-ai-implementation-partner.html
+permalink: /blog/how-to-choose-ai-implementation-partner
 source_label: "Blog · Guide"
 source_class: source-essay
 read_time: 11
@@ -22,11 +22,11 @@ tags:
   - AI adoption Canada
 related_reading:
   - title: "How to Choose an AI Advisor Who Won't Waste Your Time"
-    url: /blog/how-to-choose-ai-advisor-consultant.html
+    url: /blog/how-to-choose-ai-advisor-consultant
   - title: "Implementing AI Without Breaking Canadian Privacy Law: A PIPEDA Guide"
-    url: /blog/pipeda-privacy-first-ai-canada.html
+    url: /blog/pipeda-privacy-first-ai-canada
   - title: "Your AI Isn't Underperforming. It's Working Blind."
-    url: /blog/ai-isnt-underperforming-working-blind.html
+    url: /blog/ai-isnt-underperforming-working-blind
 faq:
   - q: "What is an AI implementation partner — and how is that different from an AI consultant?"
     a: "An AI implementation partner builds and deploys — they construct an AI-powered system inside your operations and hand off something working. An AI strategy consultant delivers recommendations. A tool vendor sells their own product. Most Canadian SMEs ready to act on AI don't need more strategy: they need someone who will actually build it. The gap between 'we have a strategy' and 'this is running in our operations' is where implementation partners live."

@@ -7,7 +7,7 @@ og_description: "What Canadian businesses need to know about PIPEDA, Quebec's La
 date: 2026-07-11
 date_modified: "2026-07-11"
 published_time: "2026-07-11T00:00:00.000Z"
-permalink: /blog/pipeda-privacy-first-ai-canada.html
+permalink: /blog/pipeda-privacy-first-ai-canada
 source_label: "Blog · Guide"
 source_class: source-guide
 read_time: 10
@@ -22,11 +22,11 @@ tags:
   - privacy-first AI
 related_reading:
   - title: "Shadow AI Is the New Shadow IT: What Leaders Need to Know"
-    url: /blog/shadow-ai-is-the-new-shadow-it.html
+    url: /blog/shadow-ai-is-the-new-shadow-it
   - title: "Your Agents Need a Chain of Command"
-    url: /blog/your-agents-need-a-chain-of-command.html
+    url: /blog/your-agents-need-a-chain-of-command
   - title: "How We Built Northlight Vault: Privacy-First Thinking"
-    url: /blog/how-we-built-northlight-vault-privacy-first.html
+    url: /blog/how-we-built-northlight-vault-privacy-first
 faq:
   - q: "Does PIPEDA apply to AI systems in Canada?"
     a: "Yes. PIPEDA applies to any AI system that collects, uses, or discloses personal information in the course of commercial activity. If your AI system processes names, contact details, behavioural data, purchase history, employee records, or any other information about an identifiable individual, PIPEDA applies. The law does not distinguish between AI-powered and traditional data processing."

@@ -7,7 +7,7 @@ og_description: "Meltwater's analysis of 9 million AI citations found LinkedIn i
 date: 2026-09-15
 date_modified: "2026-09-15"
 published_time: "2026-09-15T00:00:00.000Z"
-permalink: /blog/linkedin-ai-citations-personal-profiles.html
+permalink: /blog/linkedin-ai-citations-personal-profiles
 source_label: "Blog · Essay"
 source_class: source-essay
 read_time: 5
@@ -19,11 +19,11 @@ tags:
   - AI search
 related_reading:
   - title: "Your Site Ranks on Google. AI Search Doesn't Know It Exists."
-    url: /blog/ai-search-visibility-canadian-businesses.html
+    url: /blog/ai-search-visibility-canadian-businesses
   - title: "ChatGPT Does Not Search Google"
-    url: /blog/chatgpt-searches-bing-not-google.html
+    url: /blog/chatgpt-searches-bing-not-google
   - title: "AEO Optimization Lessons 2026"
-    url: /blog/aeo-optimization-lessons-2026.html
+    url: /blog/aeo-optimization-lessons-2026
 faq:
   - q: "Why do personal LinkedIn profiles get more AI citations than company pages?"
     a: "AI models are trained to look for credible sources saying something specific. Company page content typically reads like marketing — announcements, curated articles, branded posts. Individual profiles, when used well, contain experience-based perspective: specific observations, claims backed by evidence, a stated point of view. That's the content a model draws from when constructing an answer. Meltwater's analysis of 9 million AI citations found 75% of LinkedIn's AI citations come from individual profiles, not company pages — this isn't arbitrary; it reflects what the models are trained to prefer."

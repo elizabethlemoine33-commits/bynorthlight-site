@@ -7,14 +7,14 @@ og_description: "AI agents without defined authority create compliance gaps, per
 date: 2026-07-18
 date_modified: "2026-07-18"
 published_time: "2026-07-18T00:00:00Z"
-permalink: /blog/your-agents-need-a-chain-of-command.html
+permalink: /blog/your-agents-need-a-chain-of-command
 source_label: "Blog · Essay"
 source_class: source-essay
 read_time: 9
 download_label: "Download"
 download_title: "AI Agent Deployment Go/No-Go"
 download_desc: "Pre-deployment checklist covering identity, permissions, containment, auditability, and operational readiness. No sign-up required."
-download_url: /blog/ai-agent-deployment-checklist-printable.html
+download_url: /blog/ai-agent-deployment-checklist-printable
 tags:
   - AI Governance
   - AI Agents
@@ -23,11 +23,11 @@ tags:
   - Risk
 related_reading:
   - title: "Shadow AI Is the New Shadow IT: What Leaders Need to Know"
-    url: /blog/shadow-ai-is-the-new-shadow-it.html
+    url: /blog/shadow-ai-is-the-new-shadow-it
   - title: "Implementing AI Without Breaking Canadian Privacy Law: A PIPEDA Guide"
-    url: /blog/pipeda-privacy-first-ai-canada.html
+    url: /blog/pipeda-privacy-first-ai-canada
   - title: "Your AI Strategy Is Running on the Wrong Clock"
-    url: /blog/ai-strategy-wrong-clock.html
+    url: /blog/ai-strategy-wrong-clock
 faq:
   - q: "What is the difference between an autonomous agent and a supervised one?"
     a: "A supervised agent (Level 1 or 2) executes tasks but pauses for human review at defined checkpoints. An autonomous agent (Level 3 or 4) operates independently within boundaries or across full workflows with minimal human interaction. The governance requirements increase significantly with each level — what works for Level 2 is insufficient for Level 3 or above."
@@ -103,5 +103,5 @@ The [OECD Principles on Artificial Intelligence](https://oecd.ai/en/ai-principle
 <div class="callout-block">
 <p><strong>AI Agent Deployment Go / No-Go</strong></p>
 <p>A free pre-deployment checklist covering identity and permissions, boundaries and containment, auditability, and operational readiness. Built for the people making the deployment decision — not just the developers configuring the environment. No sign-up required.</p>
-<p><a href="/blog/ai-agent-deployment-checklist-printable.html">Download the checklist →</a></p>
+<p><a href="/blog/ai-agent-deployment-checklist-printable">Download the checklist →</a></p>
 </div>

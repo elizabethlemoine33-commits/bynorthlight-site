@@ -7,7 +7,7 @@ og_description: "Which AI funding programmes Nova Scotia SMEs can use now, what 
 date: 2026-06-15
 date_modified: "2026-11-01"
 published_time: "2026-06-15T00:00:00.000Z"
-permalink: /blog/ai-for-all-programmes-nova-scotia-businesses.html
+permalink: /blog/ai-for-all-programmes-nova-scotia-businesses
 source_label: "Blog · Essay"
 source_class: source-essay
 read_time: 6
@@ -20,9 +20,9 @@ related_reading:
   - title: "AI Adoption Checklist for Canadian Businesses (2026)"
     url: /blog/ai-adoption-checklist-canadian-businesses.html
   - title: "Best AI Tools for Canadian Small Businesses (2026)"
-    url: /blog/best-ai-tools-canadian-small-businesses-2026.html
+    url: /blog/best-ai-tools-canadian-small-businesses-2026
   - title: "Canada's AI Strategy: What Small Businesses Actually Need to Know"
-    url: /blog/canada-ai-strategy-small-business.html
+    url: /blog/canada-ai-strategy-small-business
 faq:
   - q: "What did the AI for All announcement actually include?"
     a: "Canada's AI for All strategy, launched June 4, 2026 by Prime Minister Carney, targets $200 billion in economic growth over five years and 250,000 new jobs. The pieces that matter for Nova Scotia businesses: the Regional Artificial Intelligence Initiative (RAII), delivered in Atlantic Canada by ACOA, and BDC's LIFT program, which has an AI stream. ACOA says RAII now has $700 million in total federal funding."
@@ -167,7 +167,7 @@ I won't pretend I can tell you if you qualify without knowing what you're buildi
 
 I also work with businesses on AI adoption and governance — helping you figure out what to solve, who owns decisions, and what guardrails make it trustworthy. If the funding conversation surfaces a bigger question about whether AI makes sense for your business at all, we can talk through that too.
 
-If you do move ahead with AI, set the guardrails before the money arrives. Two places to start: the [AI acceptable use policy template](/blog/ai-policy-template-canadian-small-business.html) and the [AI risk register starter](/blog/ai-risk-register-canadian-small-business.html).
+If you do move ahead with AI, set the guardrails before the money arrives. Two places to start: the [AI acceptable use policy template](/blog/ai-policy-template-canadian-small-business) and the [AI risk register starter](/blog/ai-risk-register-canadian-small-business).
 
 Email me at [elizabeth@bynorthlight.ca](mailto:elizabeth@bynorthlight.ca). No hard sell. Just the work.
 

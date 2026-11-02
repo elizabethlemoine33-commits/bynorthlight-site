@@ -4,12 +4,12 @@ title: "AEO Audit Checklist"
 description: "A printable checklist for auditing your website content for Answer Engine Optimization — structured for AI citation across ChatGPT, Perplexity, Claude, and Google AI Overviews."
 og_title: "AEO Audit Checklist — Is Your Content Built to Be Cited?"
 og_description: "Six-area audit to check whether your website is structured for AI answer engines. Printable for Canadian business operators."
-permalink: /blog/aeo-audit-checklist-printable.html
+permalink: /blog/aeo-audit-checklist-printable
 ---
 
 <div class="no-print-bar">
   <p>Use your browser's Print function to save as PDF — File → Print → Save as PDF.</p>
-  <a href="/blog/aeo-optimization-lessons-2026.html">← Back to post</a>
+  <a href="/blog/aeo-optimization-lessons-2026">← Back to post</a>
 </div>
 
 <div class="print-header">
@@ -116,5 +116,5 @@ permalink: /blog/aeo-audit-checklist-printable.html
 
 <div class="print-footer">
   <span class="footer-note">© 2026 Northlight Advisory Services. AEO = Answer Engine Optimization. For the full guide, visit bynorthlight.ca</span>
-  <span class="footer-url">bynorthlight.ca/blog/aeo-audit-checklist-printable.html</span>
+  <span class="footer-url">bynorthlight.ca/blog/aeo-audit-checklist-printable</span>
 </div>

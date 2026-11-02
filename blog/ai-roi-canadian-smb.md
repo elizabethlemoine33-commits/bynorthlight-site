@@ -7,7 +7,7 @@ og_description: "The organisations getting real, lasting value from AI aren't th
 date: 2026-07-11
 date_modified: "2026-07-11"
 published_time: "2026-07-11T00:00:00.000Z"
-permalink: /blog/ai-roi-canadian-smb.html
+permalink: /blog/ai-roi-canadian-smb
 source_label: "Blog · Essay"
 source_class: source-essay
 read_time: 8
@@ -21,11 +21,11 @@ tags:
   - AI productivity
 related_reading:
   - title: "Your AI Strategy Is Running on the Wrong Clock"
-    url: /blog/ai-strategy-wrong-clock.html
+    url: /blog/ai-strategy-wrong-clock
   - title: "Your AI Isn't Underperforming. It's Working Blind."
-    url: /blog/ai-isnt-underperforming-working-blind.html
+    url: /blog/ai-isnt-underperforming-working-blind
   - title: "Canada's AI Strategy: What Small Businesses Actually Need to Know"
-    url: /blog/canada-ai-strategy-small-business.html
+    url: /blog/canada-ai-strategy-small-business
 faq:
   - q: "What is the realistic ROI of AI for a Canadian SMB?"
     a: "The time savings are real — that part lives up to the billing. But the organisations getting lasting ROI aren't measuring hours saved. They're measuring whose time was freed, on which tasks, to do what instead. That specificity — before deployment, not after — is what determines whether AI changes how work actually gets done or just changes what the output looks like."

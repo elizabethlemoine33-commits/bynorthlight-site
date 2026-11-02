@@ -8,7 +8,7 @@ og_description: "Honest recommendations for PIPEDA-compliant AI tools — Canadi
 date: 2026-07-25
 date_modified: "2026-10-06"
 published_time: "2026-07-25T00:00:00.000Z"
-permalink: /blog/best-ai-tools-canadian-small-businesses-2026.html
+permalink: /blog/best-ai-tools-canadian-small-businesses-2026
 source_label: "Blog · Guide"
 source_class: source-essay
 read_time: 12
@@ -19,11 +19,11 @@ tags:
   - Tools
 related_reading:
   - title: "AI Adoption Checklist for Canadian Businesses (2026)"
-    url: /blog/ai-adoption-checklist-canadian-businesses-2026.html
+    url: /blog/ai-adoption-checklist-canadian-businesses-2026
   - title: "What Is a Fractional Executive? Guide for Canadian Businesses"
-    url: /blog/what-is-fractional-executive-guide-canadian-businesses.html
+    url: /blog/what-is-fractional-executive-guide-canadian-businesses
   - title: "How to Choose an AI Advisor Who Won't Waste Your Time"
-    url: /blog/how-to-choose-ai-advisor-consultant.html
+    url: /blog/how-to-choose-ai-advisor-consultant
 faq:
   - q: "Can I legally use ChatGPT for my Canadian small business?"
     a: "Yes, but not for client data. If you're using ChatGPT for general brainstorming or internal drafting without client information, you're fine. If you're pasting client names, financial details, or anything covered under PIPEDA into ChatGPT (which is US-hosted), you're disclosing personal information to a third party and need to document that risk, strip identifying details, or use a Canadian-hosted alternative like Augure instead."
