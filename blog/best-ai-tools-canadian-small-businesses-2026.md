@@ -182,6 +182,6 @@ Here's how to use American tools responsibly if you have to:
 
 The Canadian AI tools landscape in 2026 is not the same as it was in 2025, and it won't be the same in 2027. Augure didn't have a coding agent six months ago; now it does. Tools I can't recommend today might become viable next quarter.
 
-I'll update this post as the market moves. If you're reading this a year from now and something feels outdated, [email me](mailto:elizabeth@bynorthlight.ca) — I'd rather know than let stale recommendations sit here.
+I'll update this post as the market moves. If you're reading this a year from now and something feels outdated, [email me](mailto:support@bynorthlight.ca) — I'd rather know than let stale recommendations sit here.
 
-And if you want help figuring out which of these tools actually fits your business — or which job to solve first — that's what Northlight Advisory Services does. [Reach out](mailto:elizabeth@bynorthlight.ca).
+And if you want help figuring out which of these tools actually fits your business — or which job to solve first — that's what Northlight Advisory Services does. [Reach out](mailto:support@bynorthlight.ca).

@@ -169,7 +169,7 @@ I also work with businesses on AI adoption and governance — helping you figure
 
 If you do move ahead with AI, set the guardrails before the money arrives. Two places to start: the [AI acceptable use policy template](/blog/ai-policy-template-canadian-small-business.html) and the [AI risk register starter](/blog/ai-risk-register-canadian-small-business.html).
 
-Email me at [elizabeth@bynorthlight.ca](mailto:elizabeth@bynorthlight.ca). No hard sell. Just the work.
+Email me at [support@bynorthlight.ca](mailto:support@bynorthlight.ca). No hard sell. Just the work.
 
 ## What's the First Step for Nova Scotia Businesses Exploring AI Funding?
 
