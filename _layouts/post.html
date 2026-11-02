@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.seo_title | default: page.title }} — Northlight Advisory Services</title>
+  <title>{{ page.seo_title | default: page.title }}{% unless page.no_title_suffix %} — Northlight Advisory Services{% endunless %}</title>
   <meta name="description" content="{{ page.description }}">
   <meta name="author" content="Elizabeth Lemoine">
   <link rel="canonical" href="{{ page.url | prepend: site.url }}">

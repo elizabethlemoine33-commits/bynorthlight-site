@@ -2,6 +2,7 @@
 layout: post
 title: "Best AI Tools for Canadian Small Businesses (2026)"
 seo_title: "10+ Best AI Tools for Canadian Small Businesses (2026)"
+no_title_suffix: true
 description: "Which AI tools keep client data in Canada? Honest picks for chat, storage, email and coding, and what to do when no Canadian option exists."
 og_title: "Best AI Tools for Canadian Small Businesses (2026)"
 og_description: "Honest recommendations for PIPEDA-compliant AI tools — Canadian-hosted options for chat, transcription, storage, and when to use US tools carefully."
