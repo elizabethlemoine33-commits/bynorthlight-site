@@ -7,7 +7,7 @@ og_description: "ClickUp Task Builder, Strategic Voice Framework, and MCP Market
 date: 2026-07-11
 date_modified: "2026-10-30"
 published_time: "2026-07-11T00:00:00.000Z"
-permalink: /blog/northlight-mcp-skills-market.html
+permalink: /blog/northlight-mcp-skills-market
 source_label: "Blog · Essay"
 source_class: source-essay
 read_time: 7
@@ -22,11 +22,11 @@ tags:
   - Claude MCP
 related_reading:
   - title: "How We Built Northlight Vault: Privacy-First Thinking"
-    url: /blog/how-we-built-northlight-vault-privacy-first.html
+    url: /blog/how-we-built-northlight-vault-privacy-first
   - title: "What I Learned Optimizing for AI Search: AEO Checklist 2026"
-    url: /blog/aeo-optimization-lessons-2026.html
+    url: /blog/aeo-optimization-lessons-2026
   - title: "Your Agents Need a Chain of Command"
-    url: /blog/your-agents-need-a-chain-of-command.html
+    url: /blog/your-agents-need-a-chain-of-command
 faq:
   - q: "What is an MCP skill?"
     a: "An MCP skill is a packaged AI workflow built on the [Model Context Protocol](https://modelcontextprotocol.io){:rel=\"noopener\"} — the standard that lets AI assistants like Claude connect to external tools, data, and processes. MCP skills are reusable and sold on platforms like MCP Market. You install a skill and it extends what your AI assistant can do — automating a specific workflow, applying a framework, or accessing specific data — without building the underlying logic yourself."
@@ -60,7 +60,7 @@ faq:
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://bynorthlight.ca/blog/northlight-mcp-skills-market.html"
+    "@id": "https://bynorthlight.ca/blog/northlight-mcp-skills-market"
   }
 }
 </script>
@@ -161,4 +161,4 @@ If you have a project manager setting up your tasks, a brand strategist managing
 
 We listed these three because they were ready. More will follow as we build tools for ourselves that turn out to be worth sharing. The Skills Market isn't a product roadmap with planned releases — it's what happens when something we use internally becomes good enough that keeping it to ourselves feels like a waste.
 
-A related read: [Your Agents Need a Chain of Command](/blog/your-agents-need-a-chain-of-command.html). You can browse the current listings at [mcpmarket.com/sellers/northlight-skills](https://mcpmarket.com/sellers/northlight-skills){:target="_blank" rel="noopener"}. The full case study on how the Skills Market was built is on the [Work page](/case-studies/northlight-skills-market.html).
+A related read: [Your Agents Need a Chain of Command](/blog/your-agents-need-a-chain-of-command). You can browse the current listings at [mcpmarket.com/sellers/northlight-skills](https://mcpmarket.com/sellers/northlight-skills){:target="_blank" rel="noopener"}. The full case study on how the Skills Market was built is on the [Work page](/case-studies/northlight-skills-market).

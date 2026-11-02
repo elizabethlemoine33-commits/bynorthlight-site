@@ -7,7 +7,7 @@ og_description: "Most leaders have an AI strategy. The problem isn't the plan �
 date: 2026-07-08
 date_modified: "2026-07-09"
 published_time: "2026-07-08T00:00:00.000Z"
-permalink: /blog/ai-strategy-wrong-clock.html
+permalink: /blog/ai-strategy-wrong-clock
 source_label: "Blog · Essay"
 source_class: source-aurora
 read_time: 6
@@ -18,11 +18,11 @@ tags:
   - Governance
 related_reading:
   - title: "Your AI Isn't Underperforming. It's Working Blind."
-    url: /blog/ai-isnt-underperforming-working-blind.html
+    url: /blog/ai-isnt-underperforming-working-blind
   - title: "The Real ROI of AI for Canadian SMBs (It's Not Hours Saved)"
-    url: /blog/ai-roi-canadian-smb.html
+    url: /blog/ai-roi-canadian-smb
   - title: "How to Choose an AI Advisor Who Won't Waste Your Time"
-    url: /blog/how-to-choose-ai-advisor-consultant.html
+    url: /blog/how-to-choose-ai-advisor-consultant
 faq:
   - q: "Why does annual AI strategy planning break down?"
     a: "Annual planning works when capability changes predictably. AI capability doesn't — it's improving on a scaling-law curve, not a linear one. A strategy written in January is answering questions about a world that may no longer exist by September. By the time you've gone through procurement, contract, and deployment, the capability you specified in Q1 may be two generations behind. You didn't plan badly. You planned on the wrong clock."

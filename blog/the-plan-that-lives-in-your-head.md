@@ -8,7 +8,7 @@ og_description: "When only you hold the plan, only you can carry it out. What th
 date: 2026-10-30
 date_modified: "2026-10-30"
 published_time: "2026-10-30T00:00:00.000Z"
-permalink: /blog/the-plan-that-lives-in-your-head.html
+permalink: /blog/the-plan-that-lives-in-your-head
 source_label: "Blog · Essay"
 source_class: source-essay
 read_time: 5
@@ -18,11 +18,11 @@ tags:
   - "Strategy"
 related_reading:
   - title: "You Hired Them. Now What? When New Hires Don't Clear the Bottleneck"
-    url: /blog/you-hired-them-now-what.html
+    url: /blog/you-hired-them-now-what
   - title: "The Wall on Day 200: When Plans Don't Go to Plan"
-    url: /blog/the-wall-on-day-200.html
+    url: /blog/the-wall-on-day-200
   - title: "Consultant, Fractional COO or Full-Time COO in Canada? How to Choose"
-    url: /blog/consultant-fractional-coo-or-full-time-coo-how-to-choose.html
+    url: /blog/consultant-fractional-coo-or-full-time-coo-how-to-choose
 faq:
   - q: "Why does the plan end up living in my head?"
     a: "Often because you have been holding it together for a long time, and the people who could help carry it have never been handed the whole picture, or you have not yet decided who to trust with it."
@@ -109,7 +109,7 @@ It ended up at about 35 tasks. It worked because there were SOPs behind the task
 
 For example, a task called "Send the monthly status update" holds the list of what goes in it, where each number comes from, who receives it, and a link to the SOP. Whoever opens it can start without asking you.
 
-That is the version of getting it out of your head I would aim for. Not a complete record, but a plan someone else can pick up. I wrote about [what happens when a hire does not clear the bottleneck](/blog/you-hired-them-now-what.html) if that is where you are.
+That is the version of getting it out of your head I would aim for. Not a complete record, but a plan someone else can pick up. I wrote about [what happens when a hire does not clear the bottleneck](/blog/you-hired-them-now-what) if that is where you are.
 
 ## What would I do first?
 

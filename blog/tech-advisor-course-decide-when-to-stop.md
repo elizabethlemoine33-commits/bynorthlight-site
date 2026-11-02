@@ -8,7 +8,7 @@ og_description: "What the Tech Advisor Training Program taught me about exit str
 date: 2026-10-13
 date_modified: "2026-10-13"
 published_time: "2026-10-13T00:00:00.000Z"
-permalink: /blog/tech-advisor-course-decide-when-to-stop.html
+permalink: /blog/tech-advisor-course-decide-when-to-stop
 source_label: "Blog · Essay"
 source_class: source-essay
 read_time: 5
@@ -18,11 +18,11 @@ tags:
   - Canadian business
 related_reading:
   - title: "The Wall on Day 200: When Plans Don't Go to Plan"
-    url: /blog/the-wall-on-day-200.html
+    url: /blog/the-wall-on-day-200
   - title: "Ongoing Business Advisory Support for Canadian Operators"
-    url: /blog/ongoing-business-advisory-canada.html
+    url: /blog/ongoing-business-advisory-canada
   - title: "How I Chose a Project Management Tool for My Advisory Practice"
-    url: /blog/project-management-tools-advisory-practice.html
+    url: /blog/project-management-tools-advisory-practice
 faq:
   - q: "What is the Tech Advisor Training Program?"
     a: "A self-paced online program from the RBC Centre for Women in Business at Mount Saint Vincent University, for Canadian women tech founders and those supporting them. I finished it on September 19, 2026."

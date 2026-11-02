@@ -8,7 +8,7 @@ og_description: "What a fractional COO does in Canada, how scope and hours are s
 date: 2026-10-29
 date_modified: "2026-10-29"
 published_time: "2026-10-29T00:00:00.000Z"
-permalink: /blog/fractional-coo-services-canada.html
+permalink: /blog/fractional-coo-services-canada
 source_label: "Blog · Essay"
 source_class: source-essay
 read_time: 7
@@ -19,11 +19,11 @@ tags:
   - "Leadership"
 related_reading:
   - title: "What Is a Fractional Executive? Guide for Canadian Businesses"
-    url: /blog/what-is-fractional-executive-guide-canadian-businesses.html
+    url: /blog/what-is-fractional-executive-guide-canadian-businesses
   - title: "Fractional COO vs. Full-Time COO: The Canadian Decision"
-    url: /blog/fractional-coo-vs-hiring-full-time-canada.html
+    url: /blog/fractional-coo-vs-hiring-full-time-canada
   - title: "Consultant, Fractional COO or Full-Time COO in Canada? How to Choose"
-    url: /blog/consultant-fractional-coo-or-full-time-coo-how-to-choose.html
+    url: /blog/consultant-fractional-coo-or-full-time-coo-how-to-choose
 faq:
   - q: "What does a fractional COO cost in Canada?"
     a: "There is no single price. It depends on the scope, the hours and the length of the engagement. Go Fractional's benchmark is in US dollars and not Canadian-specific, and PayScale's average COO base salary of about C$143,000 is for a full-time role. Read any quote against a defined scope."
@@ -56,11 +56,11 @@ What a fractional COO costs depends on what you want done, how long it takes and
 <p>You get someone who works out a specific problem, or a series of them, takes issues and decisions off your plate and does the work.</p>
 </div>
 
-A fractional COO comes in and solves a specific problem. Or a series of specific problems. They jump in and actually do the work. They meet your staff, make staffing changes if need be, assign work, and look at what the business actually needs and what is and is not supporting it. They make calls on your behalf. For how the role works week to week, see [what a fractional COO is](/blog/what-is-fractional-coo.html).
+A fractional COO comes in and solves a specific problem. Or a series of specific problems. They jump in and actually do the work. They meet your staff, make staffing changes if need be, assign work, and look at what the business actually needs and what is and is not supporting it. They make calls on your behalf. For how the role works week to week, see [what a fractional COO is](/blog/what-is-fractional-coo).
 
 They will tell you the truth about what is happening, and then they will work that truth. A good one owns the problem. That means setting conditions so people know who is responsible, accountable, consulted and informed, who can decide and action what, with good documentation, and changing the processes so the problem does not come back.
 
-In my experience, consultants often describe the problem back and give you next steps. A fractional COO gets hands-on with the issue and the team and makes real decisions, to ensure the problem is no longer a problem. Both have a place; [how to choose between them](/blog/consultant-fractional-coo-or-full-time-coo-how-to-choose.html) is its own post.
+In my experience, consultants often describe the problem back and give you next steps. A fractional COO gets hands-on with the issue and the team and makes real decisions, to ensure the problem is no longer a problem. Both have a place; [how to choose between them](/blog/consultant-fractional-coo-or-full-time-coo-how-to-choose) is its own post.
 
 ## How is a fractional COO engagement scoped?
 
@@ -114,7 +114,7 @@ It reports an average of US$192 an hour, a middle half of US$150 to US$225 an ho
 <p>Fractional can suit a business that cannot afford a full-time COO but needs support.</p>
 </div>
 
-A full-time COO means salary, benefits and potentially equity or bonuses. In Canada, [PayScale lists an average base salary of about C$143,000](https://www.payscale.com/research/CA/Job=Chief_Operating_Officer_(COO)/Salary){:rel="noopener"}, before any of those. For more on that comparison, see [fractional COO vs hiring full-time in Canada](/blog/fractional-coo-vs-hiring-full-time-canada.html).
+A full-time COO means salary, benefits and potentially equity or bonuses. In Canada, [PayScale lists an average base salary of about C$143,000](https://www.payscale.com/research/CA/Job=Chief_Operating_Officer_(COO)/Salary){:rel="noopener"}, before any of those. For more on that comparison, see [fractional COO vs hiring full-time in Canada](/blog/fractional-coo-vs-hiring-full-time-canada).
 
 ## How do you set availability and on-call expectations?
 
@@ -137,7 +137,7 @@ There is a difference between an emergency and a 2:30 a.m. brainwave. If the bui
 <p>Trust them, give them authority, step back, and keep doing your own part.</p>
 </div>
 
-It works provided you trust your fractional COO and empower them. If you do not give a fractional leader authority, you might as well not hire them; the [consultant post](/blog/consultant-fractional-coo-or-full-time-coo-how-to-choose.html) has more on how much to give.
+It works provided you trust your fractional COO and empower them. If you do not give a fractional leader authority, you might as well not hire them; the [consultant post](/blog/consultant-fractional-coo-or-full-time-coo-how-to-choose) has more on how much to give.
 
 Then step back. You can't be the one that everybody comes to afterwards to complain. Not everyone will like the changes, and the COO builds the relationships and sometimes deals with the villagers with their pitchforks. Let them.
 
@@ -149,6 +149,6 @@ A good COO frees you to do other things, but you still have to do the things.
 <p>Agree how you will know the outcome is reached, and renegotiate if the scope changes.</p>
 </div>
 
-Time and outcome are both part of the ask. Settle what wrapping up looks like and whether you get progress reports. If the work grows past what you agreed, ask to have the contract changed, or the COO says what can no longer be done. I had to learn that one the hard way. Also decide what information they can access and what they sign. The [consultant post](/blog/consultant-fractional-coo-or-full-time-coo-how-to-choose.html) covers all three in more detail.
+Time and outcome are both part of the ask. Settle what wrapping up looks like and whether you get progress reports. If the work grows past what you agreed, ask to have the contract changed, or the COO says what can no longer be done. I had to learn that one the hard way. Also decide what information they can access and what they sign. The [consultant post](/blog/consultant-fractional-coo-or-full-time-coo-how-to-choose) covers all three in more detail.
 
-I also wrote about [what a fractional COO is](/blog/what-is-fractional-coo.html), [fractional COO vs hiring full-time in Canada](/blog/fractional-coo-vs-hiring-full-time-canada.html) and [how to choose between a consultant, a fractional COO and a full-time COO](/blog/consultant-fractional-coo-or-full-time-coo-how-to-choose.html). If you want to talk through a scope, [get in touch](/contact.html).
+I also wrote about [what a fractional COO is](/blog/what-is-fractional-coo), [fractional COO vs hiring full-time in Canada](/blog/fractional-coo-vs-hiring-full-time-canada) and [how to choose between a consultant, a fractional COO and a full-time COO](/blog/consultant-fractional-coo-or-full-time-coo-how-to-choose). If you want to talk through a scope, [get in touch](/contact.html).

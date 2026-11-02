@@ -7,7 +7,7 @@ og_description: "A fractional executive provides part-time leadership, owning ou
 date: 2026-07-27
 date_modified: "2026-08-07"
 published_time: "2026-07-27T00:00:00.000Z"
-permalink: /blog/what-is-fractional-executive-guide-canadian-businesses.html
+permalink: /blog/what-is-fractional-executive-guide-canadian-businesses
 source_label: "Blog · Guide"
 source_class: source-essay
 read_time: 12
@@ -18,11 +18,11 @@ tags:
   - hiring
 related_reading:
   - title: "Fractional COO Services in Atlantic Canada"
-    url: /blog/fractional-coo-atlantic-canada.html
+    url: /blog/fractional-coo-atlantic-canada
   - title: "Fractional COO vs. Full-Time COO: Cost & Value in Canada"
-    url: /blog/fractional-coo-vs-hiring-full-time-canada.html
+    url: /blog/fractional-coo-vs-hiring-full-time-canada
   - title: "Best AI Tools for Canadian Small Businesses (2026)"
-    url: /blog/best-ai-tools-canadian-small-businesses-2026.html
+    url: /blog/best-ai-tools-canadian-small-businesses-2026
 faq:
   - q: "What's the difference between a fractional executive and a consultant?"
     a: "A consultant provides advice, recommendations, and strategic plans that you implement yourself. A fractional executive sits inside your business, owns the function, makes decisions, builds systems, and is accountable for results — not just insights. The distinction is about ownership, not hours or pay structure."
@@ -92,7 +92,7 @@ A fractional COO builds the operational backbone of your business — the system
 
 Common scenario: the business is growing, but operations are held together by one long-tenured person who knows where all the bodies are buried, and if that person leaves, the whole thing collapses. A fractional COO comes in, documents what's actually happening, builds repeatable processes, distributes the knowledge, and exits once the operational risk is manageable.
 
-If you're weighing the difference between a fractional COO and a full-time hire, I wrote a longer comparison [here](/blog/fractional-coo-vs-hiring-full-time-canada.html).
+If you're weighing the difference between a fractional COO and a full-time hire, I wrote a longer comparison [here](/blog/fractional-coo-vs-hiring-full-time-canada).
 
 ## How do you know which type of fractional executive you actually need?
 
@@ -142,7 +142,7 @@ A fractional executive is not the right answer in every situation, and pretendin
 
 If any of those apply, full-time is probably the right call, or you're not ready yet. That's fine. Knowing when you don't need something is just as useful as knowing when you do.
 
-<div class="callout-block"><p><strong>Not sure which role fits — or whether you're ready at all?</strong> The <a href="/fractional-readiness-check.html">Fractional Executive Readiness Check</a> walks you through both questions in about two minutes. Results on the page, no email required.</p></div>
+<div class="callout-block"><p><strong>Not sure which role fits — or whether you're ready at all?</strong> The <a href="/fractional-readiness-check">Fractional Executive Readiness Check</a> walks you through both questions in about two minutes. Results on the page, no email required.</p></div>
 
 ### If You're Still Weighing It
 

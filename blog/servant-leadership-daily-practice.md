@@ -8,7 +8,7 @@ og_description: "The principles inside servant leadership are more useful than t
 date: 2026-08-15
 date_modified: "2026-08-15"
 published_time: "2026-08-15T00:00:00.000Z"
-permalink: /blog/servant-leadership-daily-practice.html
+permalink: /blog/servant-leadership-daily-practice
 source_label: "Blog · Essay"
 source_class: source-essay
 read_time: 10
@@ -18,13 +18,13 @@ tags:
   - Fractional Leadership
 related_reading:
   - title: "The Second in Command: Unleash the Power of Your COO — A Review"
-    url: /blog/review-2ic-cameron-herold.html
+    url: /blog/review-2ic-cameron-herold
   - title: "The Market-Aware COO: Why Looking Inward Is Only Half the Job"
-    url: /blog/the-market-aware-coo.html
+    url: /blog/the-market-aware-coo
   - title: "You Hired Them. Now What? When New Hires Don't Clear the Bottleneck"
-    url: /blog/you-hired-them-now-what.html
+    url: /blog/you-hired-them-now-what
   - title: "What Is a Fractional COO? (And How to Know If You Need One)"
-    url: /blog/what-is-fractional-coo.html
+    url: /blog/what-is-fractional-coo
 faq:
   - q: "What is servant leadership?"
     a: "Servant leadership is a framework developed from Robert Greenleaf's 1970 essay 'The Servant as Leader.' Subsequent scholars — notably Larry Spears — distilled it into ten key characteristics. The term itself is complicated, but several of the underlying principles are genuinely worth keeping and worth practising every day."

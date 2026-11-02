@@ -7,7 +7,7 @@ og_description: "Northlight Advisory Services is a Halifax, Nova Scotia strategy
 date: 2026-07-09
 date_modified: "2026-07-09"
 published_time: "2026-07-09T00:00:00.000Z"
-permalink: /blog/about-northlight-advisory-services.html
+permalink: /blog/about-northlight-advisory-services
 source_label: "Northlight · About"
 source_class: source-essay
 read_time: 5
@@ -19,11 +19,11 @@ tags:
   - Canadian business
 related_reading:
   - title: "Fractional COO vs. Hiring a COO: What's Right for Canadian Business?"
-    url: /blog/fractional-coo-vs-hiring-full-time-canada.html
+    url: /blog/fractional-coo-vs-hiring-full-time-canada
   - title: "How to Choose an AI Advisor Who Won't Waste Your Time"
-    url: /blog/how-to-choose-ai-advisor-consultant.html
+    url: /blog/how-to-choose-ai-advisor-consultant
   - title: "How to Get Ongoing Business Advisory Support in Canada"
-    url: /blog/ongoing-business-advisory-canada.html
+    url: /blog/ongoing-business-advisory-canada
 faq:
   - q: "What is Northlight Advisory Services?"
     a: "Northlight Advisory Services is a Halifax, Nova Scotia–based strategy, AI adoption, and fractional COO advisory practice. It was founded by Elizabeth Lemoine to provide direct, practical advisory work to Canadian founders and operators at small-to-mid-sized organisations. It is not a technology platform, a software company, or a large consulting firm."
@@ -151,7 +151,7 @@ Northlight Advisory Services provides practical AI implementation guidance for C
 
 ### Apps and tools
 
-Northlight Advisory Services builds small, purposeful tools that solve real workflow problems. [Northlight Vault](/vault.html) is a free Windows desktop application that lets users browse files across Google Drive, OneDrive, and Dropbox in a single interface. [Northlight Skills](https://mcpmarket.com/sellers/northlight-skills){:rel="noopener"} is a collection of purpose-built MCP skills for Claude, available on MCP Market. App development is also offered as a client service when the problem is specific enough to deserve a real solution.
+Northlight Advisory Services builds small, purposeful tools that solve real workflow problems. [Northlight Vault](/vault) is a free Windows desktop application that lets users browse files across Google Drive, OneDrive, and Dropbox in a single interface. [Northlight Skills](https://mcpmarket.com/sellers/northlight-skills){:rel="noopener"} is a collection of purpose-built MCP skills for Claude, available on MCP Market. App development is also offered as a client service when the problem is specific enough to deserve a real solution.
 
 ## Who Elizabeth Lemoine is
 

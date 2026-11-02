@@ -7,7 +7,7 @@ og_description: "Full-time COOs cost C$150K–$220K+ in Canada. Most Canadian bu
 date: 2026-07-08
 date_modified: "2026-10-06"
 published_time: "2026-07-08T00:00:00.000Z"
-permalink: /blog/fractional-coo-vs-hiring-full-time-canada.html
+permalink: /blog/fractional-coo-vs-hiring-full-time-canada
 source_label: "Blog · Guide"
 source_class: source-essay
 read_time: 10
@@ -18,13 +18,13 @@ tags:
   - Atlantic Canada Business
 related_reading:
   - title: "What Is a Fractional Executive? Guide for Canadian Businesses"
-    url: /blog/what-is-fractional-executive-guide-canadian-businesses.html
+    url: /blog/what-is-fractional-executive-guide-canadian-businesses
   - title: "Fractional COO Services in Atlantic Canada"
-    url: /blog/fractional-coo-atlantic-canada.html
+    url: /blog/fractional-coo-atlantic-canada
   - title: "Fractional Advisory Services in Canada: Types, Costs and How to Choose"
-    url: /blog/best-fractional-advisory-services-canada.html
+    url: /blog/best-fractional-advisory-services-canada
   - title: "Fractional COO Services in Canada: What You Get and What It Costs"
-    url: /blog/fractional-coo-services-canada.html
+    url: /blog/fractional-coo-services-canada
 faq:
   - q: "How Much Does a Full-Time COO Cost in Canada?"
     a: "A full-time COO in Canada costs an average base salary around C$144,000, with total compensation including bonuses, benefits, and equity commonly reaching C$300,000 or more for experienced operators. In Atlantic Canada, expect C$150,000–$220,000 in total compensation before onboarding costs and the six-month ramp before they know where anything is. And you need enough work to keep a senior executive engaged — which most businesses under C$5M in revenue don't have."

@@ -4,13 +4,13 @@ title: "AI Stack Security Checklist"
 description: "Three-part checklist for auditing new AI tool connections, quarterly reviews, and team onboarding. Free from Northlight Advisory Services."
 og_title: "AI Stack Security Checklist — Northlight Advisory Services"
 og_description: "Three-part checklist for auditing new AI tool connections, quarterly reviews, and team onboarding. Free from Northlight Advisory Services."
-permalink: /blog/ai-stack-security-checklist-printable.html
+permalink: /blog/ai-stack-security-checklist-printable
 date: 2026-10-13
 ---
 
 <div class="no-print-bar">
   <p>Use your browser's Print function to save as PDF — File → Print → Save as PDF.</p>
-  <a href="/blog/ai-tool-data-security-canadian-businesses.html">← Back to post</a>
+  <a href="/blog/ai-tool-data-security-canadian-businesses">← Back to post</a>
 </div>
 
 <div class="print-header">

@@ -7,7 +7,7 @@ og_description: "91% of Canadian organizations report IT HR challenges. The IT s
 date: 2026-10-27
 date_modified: "2026-10-27"
 published_time: "2026-10-27T00:00:00.000Z"
-permalink: /blog/canada-it-skills-gap-business-problem.html
+permalink: /blog/canada-it-skills-gap-business-problem
 source_label: "Blog · Essay"
 source_class: source-essay
 read_time: 5
@@ -19,11 +19,11 @@ tags:
   - AI adoption
 related_reading:
   - title: "58% of Canadian Businesses Use AI. Got a Strategy?"
-    url: /blog/canadian-businesses-ai-adoption-strategy.html
+    url: /blog/canadian-businesses-ai-adoption-strategy
   - title: "How to Know If Your AI Tools Are Actually Working"
-    url: /blog/measure-ai-tool-effectiveness.html
+    url: /blog/measure-ai-tool-effectiveness
   - title: "How to Choose an AI Advisor for Your Canadian Business"
-    url: /blog/how-to-choose-ai-advisor-consultant.html
+    url: /blog/how-to-choose-ai-advisor-consultant
 faq:
   - q: "How significant is Canada's IT skills gap?"
     a: "The ICTC Digital Talent Outlook 2025 projected 2.26 million digital economy jobs in Canada by 2025 against a 3.3% unemployment rate in the sector — with an estimated 250,000 positions that could not be filled. CompTIA estimates approximately 1.5 million tech workers in Canada. The gap isn't evenly distributed: it's most acute in AI, cloud, and cybersecurity — exactly the areas where adoption is accelerating. For small businesses competing with larger organizations for the same talent, this is not a background condition; it's an active constraint."
@@ -77,7 +77,7 @@ Specifically, they've done three things:
 
 **Managed their external IT relationships as vendor relationships.** Defined scope, defined escalation, documented configurations, a backup plan. The same rigour you'd apply to any other key supplier.
 
-**Used AI tools strategically to extend capacity without requiring specialist staff.** The irony of the IT skills gap is that the tools designed to help close it — AI tools that automate routine tasks, surface patterns in data, draft documentation — are often adopted without the governance structure that makes them safe to use. The businesses using AI effectively are the ones who went in with a plan, even a simple one. (If you haven't built that plan yet, [the post on AI strategy](/blog/canadian-businesses-ai-adoption-strategy.html) is a reasonable place to start.)
+**Used AI tools strategically to extend capacity without requiring specialist staff.** The irony of the IT skills gap is that the tools designed to help close it — AI tools that automate routine tasks, surface patterns in data, draft documentation — are often adopted without the governance structure that makes them safe to use. The businesses using AI effectively are the ones who went in with a plan, even a simple one. (If you haven't built that plan yet, [the post on AI strategy](/blog/canadian-businesses-ai-adoption-strategy) is a reasonable place to start.)
 
 The IT skills gap is real, it's worsening, and it's not going to be solved by the national talent pipeline in time to help your business in the next 12 months. What you can control is how you manage the dependency you already have — and whether you're building the internal decision-making capability that keeps your operations resilient regardless of what's happening in the talent market.
 

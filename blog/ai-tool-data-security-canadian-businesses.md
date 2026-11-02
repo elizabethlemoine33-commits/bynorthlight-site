@@ -7,14 +7,14 @@ og_description: "Every AI tool you connect to another app opens a data channel. 
 date: 2026-10-13
 date_modified: "2026-10-13"
 published_time: "2026-10-13T00:00:00.000Z"
-permalink: /blog/ai-tool-data-security-canadian-businesses.html
+permalink: /blog/ai-tool-data-security-canadian-businesses
 source_label: "Blog · Guide"
 source_class: source-guide
 read_time: 6
 download_label: "Download"
 download_title: "AI Stack Security Checklist"
 download_desc: "Three-part checklist for auditing new AI tool connections, quarterly reviews, and team onboarding. No sign-up required."
-download_url: /blog/ai-stack-security-checklist-printable.html
+download_url: /blog/ai-stack-security-checklist-printable
 tags:
   - AI security
   - data privacy
@@ -23,13 +23,13 @@ tags:
   - AI governance
 related_reading:
   - title: "58% of Canadian Businesses Use AI. Got a Strategy?"
-    url: /blog/canadian-businesses-ai-adoption-strategy.html
+    url: /blog/canadian-businesses-ai-adoption-strategy
   - title: "Your Cybersecurity Confidence Is Probably Wrong"
-    url: /blog/cybersecurity-confidence-gap-canadian-smb.html
+    url: /blog/cybersecurity-confidence-gap-canadian-smb
   - title: "Implementing AI Without Breaking Canadian Privacy Law"
-    url: /blog/pipeda-privacy-first-ai-canada.html
+    url: /blog/pipeda-privacy-first-ai-canada
   - title: "Shadow AI Is the New Shadow IT"
-    url: /blog/shadow-ai-is-the-new-shadow-it.html
+    url: /blog/shadow-ai-is-the-new-shadow-it
 faq:
   - q: "What does PIPEDA say about using AI tools that process Canadian personal information?"
     a: "Canada's Personal Information Protection and Electronic Documents Act governs how organizations collect, use, and disclose personal information in the course of commercial activity. Using AI tools that process client or employee data means you need a valid basis for that processing (consent or contractual necessity), appropriate contractual safeguards with the vendor (typically a data processing agreement), and a privacy policy that reflects what you're actually doing. Cross-border transfers to US-based vendors also require disclosure in your privacy policy and documentation that the vendor is protecting the data appropriately."

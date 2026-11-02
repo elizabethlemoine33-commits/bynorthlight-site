@@ -7,7 +7,7 @@ og_description: "A practical guide for Canadian founders and operators on findin
 date: 2026-07-09
 date_modified: "2026-10-06"
 published_time: "2026-07-09T00:00:00.000Z"
-permalink: /blog/ongoing-business-advisory-canada.html
+permalink: /blog/ongoing-business-advisory-canada
 source_label: "Blog · Guide"
 source_class: source-guide
 read_time: 9
@@ -21,11 +21,11 @@ tags:
   - founder support
 related_reading:
   - title: "Fractional COO vs. Hiring a COO: What's Right for Canadian Business?"
-    url: /blog/fractional-coo-vs-hiring-full-time-canada.html
+    url: /blog/fractional-coo-vs-hiring-full-time-canada
   - title: "Fractional Advisory Services in Canada: Types, Costs and How to Choose"
-    url: /blog/best-fractional-advisory-services-canada.html
+    url: /blog/best-fractional-advisory-services-canada
   - title: "How to Choose an AI Advisor Who Won't Waste Your Time"
-    url: /blog/how-to-choose-ai-advisor-consultant.html
+    url: /blog/how-to-choose-ai-advisor-consultant
 faq:
   - q: "What is ongoing business advisory support?"
     a: "Ongoing business advisory support is a regular engagement with a senior advisor — typically monthly — where they act as a thinking partner for your business decisions. Unlike project-based consulting, it's a continuing relationship that builds context over time. The value compounds: after three months, a good ongoing advisor knows your business well enough to pressure-test your thinking in real time, not just in formal meetings."

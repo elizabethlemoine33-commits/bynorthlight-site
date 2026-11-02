@@ -8,7 +8,7 @@ og_description: "Elizabeth Lemoine reads Cameron Herold's The Second in Command 
 date: 2026-08-15
 date_modified: "2026-08-15"
 published_time: "2026-08-15T00:00:00.000Z"
-permalink: /blog/what-i-learned-being-a-coo-from-a-ceos-book.html
+permalink: /blog/what-i-learned-being-a-coo-from-a-ceos-book
 source_label: "Blog · Essay"
 source_class: source-essay
 read_time: 12
@@ -20,13 +20,13 @@ tags:
   - Book Review
 related_reading:
   - title: "The Second in Command by Cameron Herold — A Review"
-    url: /blog/review-2ic-cameron-herold.html
+    url: /blog/review-2ic-cameron-herold
   - title: "What Is a Fractional COO? (And How to Know If You Need One)"
-    url: /blog/what-is-fractional-coo.html
+    url: /blog/what-is-fractional-coo
   - title: "The Market-Aware COO"
-    url: /blog/the-market-aware-coo.html
+    url: /blog/the-market-aware-coo
   - title: "Fractional COO vs. Hiring Full-Time: What Makes Sense for Your Business?"
-    url: /blog/fractional-coo-vs-hiring-full-time-canada.html
+    url: /blog/fractional-coo-vs-hiring-full-time-canada
 ---
 
 I was not expecting a physical book.
@@ -117,7 +117,7 @@ The team members who were still in place — those not yet on their own holiday 
 
 That is the test. Not whether you can stay on top of things — any capable person can stay on top of things. The test is whether the people you have grown, and the systems you have built, can operate without you in the room. If they cannot, you have not built something. You have built dependency, and eventually that dependency will be a problem either for the organization or for you. The COO's job is to increase the capacity of an organization to function without their constant presence — to grow people who can solve their own problems, to create structures that do not require intervention at every turn, to leave something that runs when you are gone. That is a different model of leadership than becoming the organization's indispensable problem-solver. It is also considerably harder.
 
-It is not coincidentally the most direct connection between COO work and [fractional COO work](/blog/what-is-fractional-coo.html). When you come in for a season, the systems have to be able to run when you leave. If they cannot, you have not done the job.
+It is not coincidentally the most direct connection between COO work and [fractional COO work](/blog/what-is-fractional-coo). When you come in for a season, the systems have to be able to run when you leave. If they cannot, you have not done the job.
 
 ## Where the book gets complicated
 
@@ -137,4 +137,4 @@ If you are an existing second-in-command, read it to understand what your CEO is
 
 **Verdict:** One of the few books that earns a genuine recommendation — not because every sentence is perfect, but because it gives unusually clear language to a role that is almost always poorly defined. I have already recommended it to people on both sides of the relationship.
 
-*If you want a shorter take or are looking for where to get a copy, I also wrote a [standalone review](/blog/review-2ic-cameron-herold.html).*
+*If you want a shorter take or are looking for where to get a copy, I also wrote a [standalone review](/blog/review-2ic-cameron-herold).*

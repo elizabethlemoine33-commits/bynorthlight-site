@@ -7,7 +7,7 @@ og_description: "ChatGPT searches Bing, not Google. Most Canadian businesses hav
 date: 2026-09-22
 date_modified: "2026-09-22"
 published_time: "2026-09-22T00:00:00.000Z"
-permalink: /blog/chatgpt-searches-bing-not-google.html
+permalink: /blog/chatgpt-searches-bing-not-google
 source_label: "Blog · Guide"
 source_class: source-guide
 read_time: 5
@@ -19,11 +19,11 @@ tags:
   - search visibility
 related_reading:
   - title: "Your Site Ranks on Google. AI Search Doesn't Know It Exists."
-    url: /blog/ai-search-visibility-canadian-businesses.html
+    url: /blog/ai-search-visibility-canadian-businesses
   - title: "AEO Optimization Lessons 2026"
-    url: /blog/aeo-optimization-lessons-2026.html
+    url: /blog/aeo-optimization-lessons-2026
   - title: "Your AI Isn't Underperforming. It's Working Blind."
-    url: /blog/ai-isnt-underperforming-working-blind.html
+    url: /blog/ai-isnt-underperforming-working-blind
 faq:
   - q: "What search engine does ChatGPT use?"
     a: "ChatGPT uses Bing, not Google. This is a commonly misunderstood point — most people assume AI tools search the same index they used before AI, which for most Canadians is Google. But Microsoft's integration of Bing into ChatGPT means that if your website isn't indexed in Bing, ChatGPT can't surface it when answering questions in your category."
@@ -83,7 +83,7 @@ Making sure Bing knows you exist is the baseline. It's a necessary condition, no
 
 Even if your pages are fully indexed on Bing, AI models still need content that's structured clearly enough to cite. A page that's in the index but organized around vague headings and inconsistent naming won't get pulled into an answer any more reliably than a page that isn't indexed at all. The indexing step gets you into the pool; the content structure is what gets you cited.
 
-That's a different conversation — about how to write content that AI models can actually use, how entity naming works, and what structured data can do for your visibility across every platform that indexes you. It's also a longer one, and it's covered in full in [this post on AI search visibility](/blog/ai-search-visibility-canadian-businesses.html).
+That's a different conversation — about how to write content that AI models can actually use, how entity naming works, and what structured data can do for your visibility across every platform that indexes you. It's also a longer one, and it's covered in full in [this post on AI search visibility](/blog/ai-search-visibility-canadian-businesses).
 
 But the Bing setup? Do that first. It's free, it takes ten minutes, and most of your competitors haven't done it yet.
 

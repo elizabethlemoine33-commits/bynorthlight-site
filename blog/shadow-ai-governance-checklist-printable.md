@@ -4,12 +4,12 @@ title: "Shadow AI Governance Checklist"
 description: "A four-question audit for surfacing unsanctioned AI use in your organisation — with follow-up actions for each answer. Run it in an afternoon."
 og_title: "Shadow AI Governance Checklist — Northlight Advisory Services"
 og_description: "Four questions to surface what AI your team is actually using, what data is going in, and who owns the decision. Free from Northlight Advisory Services."
-permalink: /blog/shadow-ai-governance-checklist-printable.html
+permalink: /blog/shadow-ai-governance-checklist-printable
 ---
 
 <div class="no-print-bar">
   <p>Use your browser's Print function to save as PDF — File → Print → Save as PDF.</p>
-  <a href="/blog/shadow-ai-is-the-new-shadow-it.html">← Back to post</a>
+  <a href="/blog/shadow-ai-is-the-new-shadow-it">← Back to post</a>
 </div>
 
 <div class="print-header">
@@ -92,5 +92,5 @@ permalink: /blog/shadow-ai-governance-checklist-printable.html
 
 <div class="print-footer">
   <span class="footer-note">© 2026 Northlight Advisory Services. For the full guide, visit bynorthlight.ca</span>
-  <span class="footer-url">bynorthlight.ca/blog/shadow-ai-is-the-new-shadow-it.html</span>
+  <span class="footer-url">bynorthlight.ca/blog/shadow-ai-is-the-new-shadow-it</span>
 </div>

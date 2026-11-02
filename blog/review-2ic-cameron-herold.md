@@ -8,7 +8,7 @@ og_description: "A COO reads a CEO's guide and finds a mirror. Elizabeth Lemoine
 date: 2026-08-15
 date_modified: "2026-08-15"
 published_time: "2026-08-15T00:00:00.000Z"
-permalink: /blog/review-2ic-cameron-herold.html
+permalink: /blog/review-2ic-cameron-herold
 source_label: "Blog · Review"
 source_class: source-essay
 read_time: 4
@@ -20,13 +20,13 @@ tags:
   - Book Review
 related_reading:
   - title: "What Is a Fractional COO? (And How to Know If You Need One)"
-    url: /blog/what-is-fractional-coo.html
+    url: /blog/what-is-fractional-coo
   - title: "Fractional COO vs. Hiring Full-Time: What Makes Sense for Your Business?"
-    url: /blog/fractional-coo-vs-hiring-full-time-canada.html
+    url: /blog/fractional-coo-vs-hiring-full-time-canada
   - title: "The Market-Aware COO"
-    url: /blog/the-market-aware-coo.html
+    url: /blog/the-market-aware-coo
   - title: "What Is a Fractional Executive? A Guide for Canadian Businesses"
-    url: /blog/what-is-fractional-executive-guide-canadian-businesses.html
+    url: /blog/what-is-fractional-executive-guide-canadian-businesses
 faq:
   - q: "What is The Second in Command about?"
     a: "It is a guide for CEOs and founders — how to recognize when you need a second-in-command, how to define the role, hire the right person, onboard them, and make the relationship work. Cameron Herold draws on his experience as COO of 1-800-GOT-JUNK? and years of advising through the COO Alliance. The book is primarily written for CEOs, though COOs will find it just as useful from a different angle."

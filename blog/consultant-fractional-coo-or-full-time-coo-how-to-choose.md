@@ -8,7 +8,7 @@ og_description: "Not sure whether to hire a consultant, fractional COO or full-t
 date: 2026-10-29
 date_modified: "2026-10-29"
 published_time: "2026-10-29T00:00:00.000Z"
-permalink: /blog/consultant-fractional-coo-or-full-time-coo-how-to-choose.html
+permalink: /blog/consultant-fractional-coo-or-full-time-coo-how-to-choose
 source_label: "Blog · Essay"
 source_class: source-essay
 read_time: 7
@@ -19,13 +19,13 @@ tags:
   - "Leadership"
 related_reading:
   - title: "The Second in Command: Unleash the Power of Your COO — A Review"
-    url: /blog/review-2ic-cameron-herold.html
+    url: /blog/review-2ic-cameron-herold
   - title: "I Don't Love the Term 'Servant Leadership.' Here's What I Keep."
-    url: /blog/servant-leadership-daily-practice.html
+    url: /blog/servant-leadership-daily-practice
   - title: "What I Learned About Being a COO From a Book Written for CEOs"
-    url: /blog/what-i-learned-being-a-coo-from-a-ceos-book.html
+    url: /blog/what-i-learned-being-a-coo-from-a-ceos-book
   - title: "Fractional COO Services in Canada: What You Get and What It Costs"
-    url: /blog/fractional-coo-services-canada.html
+    url: /blog/fractional-coo-services-canada
 faq:
   - q: "Do I need a consultant or a fractional COO?"
     a: "It depends on what you need. A consultant fits facilitation, such as when your directors disagree, or a short-term document such as a strategic plan. A fractional COO comes in to solve a specific problem, does the work, and then steps back."
@@ -62,7 +62,7 @@ Before you compare advisors, think about whether you really need someone at all.
 
 Know this before you hire. You will be happier if you know what success looks like in a year or six months, or whatever the time frame happens to be.
 
-In [my review of Cameron Herold's The Second in Command](/blog/review-2ic-cameron-herold.html), I wrote that Herold asks a CEO to do an honest inventory of their own tasks, to understand what the CEO is actually willing to give up. Hire toward your gaps, not your comfort zone.
+In [my review of Cameron Herold's The Second in Command](/blog/review-2ic-cameron-herold), I wrote that Herold asks a CEO to do an honest inventory of their own tasks, to understand what the CEO is actually willing to give up. Hire toward your gaps, not your comfort zone.
 
 ## Do you need a consultant, a fractional COO or a full-time COO?
 
@@ -76,7 +76,7 @@ A consultant also suits a short-term deliverable, such as a strategic plan, a do
 
 In my experience, consultants often do the research and the interviews, then give you a plan. They describe your issue back, build a great plan and facilitate great meetings, but they don't actually stick around to do the fix. Tech consultants are different: they build the tool. In my experience that can come with a never-ending series of meetings, and it can take months.
 
-A fractional COO comes in, works out the problem and does the work. As I wrote in [What Is a Fractional Executive?](/blog/what-is-fractional-executive-guide-canadian-businesses.html), a fractional executive is accountable for results, not just insights. They are not there full-time, and how much time varies: ten or 20 hours a week, five hours a week, or 15 to 30 hours a month. It depends on what is needed. Go Fractional's [rate benchmark for COOs](https://www.gofractional.com/insights/rates/coo){:rel="noopener"} puts a typical engagement at about 12 hours a week, which sits inside that spread. For what it costs in Canada, see [fractional COO vs hiring full-time in Canada](/blog/fractional-coo-vs-hiring-full-time-canada.html).
+A fractional COO comes in, works out the problem and does the work. As I wrote in [What Is a Fractional Executive?](/blog/what-is-fractional-executive-guide-canadian-businesses), a fractional executive is accountable for results, not just insights. They are not there full-time, and how much time varies: ten or 20 hours a week, five hours a week, or 15 to 30 hours a month. It depends on what is needed. Go Fractional's [rate benchmark for COOs](https://www.gofractional.com/insights/rates/coo){:rel="noopener"} puts a typical engagement at about 12 hours a week, which sits inside that spread. For what it costs in Canada, see [fractional COO vs hiring full-time in Canada](/blog/fractional-coo-vs-hiring-full-time-canada).
 
 They come in, they step in, they do the thing, they step back. Fractional fits when you have specific problems that need solving as a short-term thing, or you just want that layer to see what is happening, or you cannot afford a full-time COO but you do need some support.
 
@@ -162,4 +162,4 @@ Some industries have compliance requirements. If you need someone's certificatio
 
 > Hire toward your gaps, not your comfort zone.
 
-I also wrote about [how to choose an AI advisor for your Canadian business](/blog/how-to-choose-ai-advisor-consultant.html) and [fractional advisory services in Canada: types, costs and how to choose](/blog/best-fractional-advisory-services-canada.html).
+I also wrote about [how to choose an AI advisor for your Canadian business](/blog/how-to-choose-ai-advisor-consultant) and [fractional advisory services in Canada: types, costs and how to choose](/blog/best-fractional-advisory-services-canada).

@@ -7,7 +7,7 @@ og_description: "Canada announced a $2.3-billion AI strategy. Most of it doesn't
 date: 2026-06-13
 date_modified: "2026-07-09"
 published_time: "2026-06-13T00:00:00.000Z"
-permalink: /blog/canada-ai-strategy-small-business.html
+permalink: /blog/canada-ai-strategy-small-business
 source_label: "Blog · Essay"
 source_class: source-essay
 read_time: 5
@@ -17,11 +17,11 @@ tags:
   - Business Funding
 related_reading:
   - title: "AI for All: Open Programmes for Nova Scotia Businesses"
-    url: /blog/ai-for-all-programmes-nova-scotia-businesses.html
+    url: /blog/ai-for-all-programmes-nova-scotia-businesses
   - title: "The Real ROI of AI for Canadian SMBs (It's Not Hours Saved)"
-    url: /blog/ai-roi-canadian-smb.html
+    url: /blog/ai-roi-canadian-smb
   - title: "How to Choose an AI Advisor for Your Canadian Business"
-    url: /blog/how-to-choose-ai-advisor-consultant.html
+    url: /blog/how-to-choose-ai-advisor-consultant
 faq:
   - q: "What does Canada's $2.3 billion AI investment actually mean?"
     a: "Only 12% of Canadian businesses use AI in core operations. The strategy targets 60% in ten years. But the framing misses the core problem: most non-adopters are not avoiding AI because it scares them — they genuinely cannot see how it applies to what they make or do. The strategy literacy programs solve the wrong problem for most small businesses they are trying to reach."

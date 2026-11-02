@@ -4,12 +4,12 @@ title: "AI Readiness Checklist"
 description: "A printable 7-step AI readiness checklist for Canadian businesses — use before your next AI adoption initiative."
 og_title: "AI Readiness Checklist — 7 Steps Before You Adopt AI in Your Canadian Business"
 og_description: "A printable checklist for Canadian business operators: 7 steps to take before adopting AI, from problem definition to team preparation."
-permalink: /blog/ai-adoption-checklist-printable.html
+permalink: /blog/ai-adoption-checklist-printable
 ---
 
 <div class="no-print-bar">
   <p>Use your browser's Print function to save as PDF — File → Print → Save as PDF.</p>
-  <a href="/blog/ai-adoption-checklist-canadian-businesses-2026.html">← Back to post</a>
+  <a href="/blog/ai-adoption-checklist-canadian-businesses-2026">← Back to post</a>
 </div>
 
 <div class="print-header">
@@ -107,7 +107,7 @@ permalink: /blog/ai-adoption-checklist-printable.html
     <li><div class="check-box"></div>Clarify who's responsible when AI makes a mistake</li>
     <li><div class="check-box"></div>Document how you'll handle hallucinations or unexpected outputs</li>
     <li><div class="check-box"></div>Train people on the guardrails before you turn the tool on</li>
-    <li><div class="check-box"></div>Check whether shadow AI is already happening in your organization — employees using personal AI tools without organizational knowledge (see: bynorthlight.ca/blog/shadow-ai-is-the-new-shadow-it.html)</li>
+    <li><div class="check-box"></div>Check whether shadow AI is already happening in your organization — employees using personal AI tools without organizational knowledge (see: bynorthlight.ca/blog/shadow-ai-is-the-new-shadow-it)</li>
   </ul>
 </div>
 
@@ -128,5 +128,5 @@ permalink: /blog/ai-adoption-checklist-printable.html
 
 <div class="print-footer">
   <span class="footer-note">© 2026 Northlight Advisory Services. For the full guide, visit bynorthlight.ca</span>
-  <span class="footer-url">bynorthlight.ca/blog/ai-adoption-checklist-canadian-businesses-2026.html</span>
+  <span class="footer-url">bynorthlight.ca/blog/ai-adoption-checklist-canadian-businesses-2026</span>
 </div>

@@ -8,7 +8,7 @@ og_description: "Looking for a Canadian alternative to ChatGPT? What Canadian re
 date: 2026-10-28
 date_modified: "2026-10-28"
 published_time: "2026-10-28T00:00:00.000Z"
-permalink: /blog/canadian-alternative-to-chatgpt.html
+permalink: /blog/canadian-alternative-to-chatgpt
 source_label: "Blog · Essay"
 source_class: source-essay
 read_time: 4
@@ -19,11 +19,11 @@ tags:
   - "AI Adoption"
 related_reading:
   - title: "Canada's IT Skills Gap Is Your Business Problem"
-    url: /blog/canada-it-skills-gap-business-problem.html
+    url: /blog/canada-it-skills-gap-business-problem
   - title: "How to Know If Your AI Tools Are Actually Working"
-    url: /blog/measure-ai-tool-effectiveness.html
+    url: /blog/measure-ai-tool-effectiveness
   - title: "58% of Canadian Businesses Use AI. Got a Strategy?"
-    url: /blog/canadian-businesses-ai-adoption-strategy.html
+    url: /blog/canadian-businesses-ai-adoption-strategy
 faq:
   - q: "Does Cohere have pricing for individuals or small teams?"
     a: "Cohere's North and Compass are priced by getting in touch. Elizabeth found nothing on the site built for a person or a small team the way ChatGPT or Claude is. She has not used Cohere, so this is based only on what its pages show."
@@ -58,7 +58,7 @@ When I say I want Canadian tools wherever possible, there are three questions un
 
 > To me, an American tool on a Canadian server is still an American tool.
 
-I wrote about [AI tool data security for Canadian businesses](/blog/ai-tool-data-security-canadian-businesses.html) if you want the longer version of the data question.
+I wrote about [AI tool data security for Canadian businesses](/blog/ai-tool-data-security-canadian-businesses) if you want the longer version of the data question.
 
 ## Is there a Canadian alternative to ChatGPT?
 
@@ -104,6 +104,6 @@ I'm not going to tell you to switch. It has to work for your business, and every
 
 If it looks like today, only on a Canadian tool, that's okay.
 
-Then test. Same information, same prompt, how does it perform? Run it in both tools and compare. It may make sense to switch one use case and not others. I also wrote an AI adoption checklist for Canadian businesses [here](/blog/ai-adoption-checklist-canadian-businesses-2026.html).
+Then test. Same information, same prompt, how does it perform? Run it in both tools and compare. It may make sense to switch one use case and not others. I also wrote an AI adoption checklist for Canadian businesses [here](/blog/ai-adoption-checklist-canadian-businesses-2026).
 
 > Name a tool for what it is.

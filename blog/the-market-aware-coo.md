@@ -7,7 +7,7 @@ og_description: "The COO who only looks inward is doing half the job. A Market-A
 date: 2026-08-09
 date_modified: "2026-08-09"
 published_time: "2026-08-09T00:00:00.000Z"
-permalink: /blog/the-market-aware-coo.html
+permalink: /blog/the-market-aware-coo
 source_label: "Blog · Essay"
 source_class: source-essay
 read_time: 11
@@ -17,11 +17,11 @@ tags:
   - Organisational Learning
 related_reading:
   - title: "What Is a Fractional COO? (And How to Know If You Need One)"
-    url: /blog/what-is-fractional-coo.html
+    url: /blog/what-is-fractional-coo
   - title: "Fractional COO vs. Full-Time COO: Cost & Value in Canada"
-    url: /blog/fractional-coo-vs-hiring-full-time-canada.html
+    url: /blog/fractional-coo-vs-hiring-full-time-canada
   - title: "Fractional COO Services in Atlantic Canada"
-    url: /blog/fractional-coo-atlantic-canada.html
+    url: /blog/fractional-coo-atlantic-canada
 faq:
   - q: "What is a Market-Aware COO?"
     a: "A Market-Aware COO is a Chief Operating Officer who understands the role requires looking both inward — at systems, processes, and organisational design — and outward, toward clients, the market, and the wider environment. They treat marketing as a source of organisational intelligence and use that intelligence to inform how the operating system is built and adapted."
@@ -47,7 +47,7 @@ Not the importance of operations — plenty of people have made that case. I mea
 
 The conventional definition goes something like this: the COO makes the business run. They build the systems, design the processes, create the org structure, and keep everything moving so the CEO can focus on strategy and growth. Internal focus. Execution orientation. Keep the trains running.
 
-*(Not familiar with the fractional COO model? [Start here →](/blog/what-is-fractional-coo.html))*
+*(Not familiar with the fractional COO model? [Start here →](/blog/what-is-fractional-coo))*
 
 That is a real and important part of the job. But it is only half of it.
 

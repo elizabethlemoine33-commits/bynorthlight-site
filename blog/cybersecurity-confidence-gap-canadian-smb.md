@@ -7,7 +7,7 @@ og_description: "92% of Canadian companies feel secure. Only 38% have tested the
 date: 2026-10-20
 date_modified: "2026-10-20"
 published_time: "2026-10-20T00:00:00.000Z"
-permalink: /blog/cybersecurity-confidence-gap-canadian-smb.html
+permalink: /blog/cybersecurity-confidence-gap-canadian-smb
 source_label: "Blog · Essay"
 source_class: source-essay
 read_time: 6
@@ -19,13 +19,13 @@ tags:
   - data privacy
 related_reading:
   - title: "Every AI Tool You Connect Opens a Data Channel"
-    url: /blog/ai-tool-data-security-canadian-businesses.html
+    url: /blog/ai-tool-data-security-canadian-businesses
   - title: "Shadow AI Is the New Shadow IT"
-    url: /blog/shadow-ai-is-the-new-shadow-it.html
+    url: /blog/shadow-ai-is-the-new-shadow-it
   - title: "Implementing AI Without Breaking Canadian Privacy Law"
-    url: /blog/pipeda-privacy-first-ai-canada.html
+    url: /blog/pipeda-privacy-first-ai-canada
   - title: "58% of Canadian Businesses Use AI. Got a Strategy?"
-    url: /blog/canadian-businesses-ai-adoption-strategy.html
+    url: /blog/canadian-businesses-ai-adoption-strategy
 faq:
   - q: "What is the cybersecurity confidence gap?"
     a: "It's the distance between how secure an organization believes it is and how secure it actually is. NOVIPRO's IT Trends 2026 report found 92% of Canadian companies feel confident in their cybersecurity posture — and 40% describe themselves as very confident. But only 38% have tested their business continuity plan in the past year, and 13% have never tested it at all. Confidence built on acquisition of tools rather than verification of preparedness is a gap that attackers exploit."
@@ -85,7 +85,7 @@ None of these require a security vendor, a consultant, or a budget conversation.
 
 **1. Check your company email addresses on [Have I Been Pwned](https://haveibeenpwned.com){:target="_blank" rel="noopener"}.** This free tool tells you whether any of your business email addresses appear in known data breaches — which means credentials from your organization may already be circulating. If you find hits, the immediate priority is ensuring those passwords have been changed and those accounts are protected by multi-factor authentication.
 
-**2. Review the third-party apps connected to your Google Workspace or Microsoft 365 account.** Most organizations have far more connections than they realize — tools that were integrated once for a specific project and never disconnected, apps that staff members authorized without a formal review process, integrations that may no longer be maintained by the vendor. Every connected application is a potential entry point. Reviewing this list and revoking anything unfamiliar or unused takes less than an hour. (If you've added AI tools to your stack, [those connections deserve particular scrutiny](/blog/ai-tool-data-security-canadian-businesses.html).)
+**2. Review the third-party apps connected to your Google Workspace or Microsoft 365 account.** Most organizations have far more connections than they realize — tools that were integrated once for a specific project and never disconnected, apps that staff members authorized without a formal review process, integrations that may no longer be maintained by the vendor. Every connected application is a potential entry point. Reviewing this list and revoking anything unfamiliar or unused takes less than an hour. (If you've added AI tools to your stack, [those connections deserve particular scrutiny](/blog/ai-tool-data-security-canadian-businesses).)
 
 **3. Confirm that multi-factor authentication is enabled across your entire organization** — not just for some people, not just for the executive team, but for every account that has access to business systems. MFA is one of the most effective controls available, and it costs nothing to implement for most Microsoft 365 and Google Workspace plans. If it isn't on across the board, that's the first fix.
 

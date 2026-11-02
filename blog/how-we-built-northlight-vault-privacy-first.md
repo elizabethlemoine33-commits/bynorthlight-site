@@ -7,7 +7,7 @@ og_description: "I have no idea who downloaded Northlight Vault this week. None.
 date: 2026-06-15
 date_modified: "2026-08-07"
 published_time: "2026-06-15T00:00:00.000Z"
-permalink: /blog/how-we-built-northlight-vault-privacy-first.html
+permalink: /blog/how-we-built-northlight-vault-privacy-first
 source_label: "Aurora Brief · Essay"
 source_class: source-aurora
 aurora_brief: true
@@ -21,11 +21,11 @@ tags:
   - data minimization
 related_reading:
   - title: "Implementing AI Without Breaking Canadian Privacy Law: A PIPEDA Guide"
-    url: /blog/pipeda-privacy-first-ai-canada.html
+    url: /blog/pipeda-privacy-first-ai-canada
   - title: "I Built Three AI Tools for My Own Work. Now They're on MCP Market."
-    url: /blog/northlight-mcp-skills-market.html
+    url: /blog/northlight-mcp-skills-market
   - title: "What I Learned Optimizing for AI Search: AEO Checklist 2026"
-    url: /blog/aeo-optimization-lessons-2026.html
+    url: /blog/aeo-optimization-lessons-2026
 faq:
   - q: "What user data does Northlight Vault not collect?"
     a: "Northlight Vault collects no personal information from users. You don't register, create an account, or give a name — the app doesn't report back which cloud accounts you've connected or what files you've viewed. The only analytics Northlight collects is aggregate, anonymised web data through Plausible: visitor counts, page views, approximate location, and operating system. No profiles. No individual tracking. If someone asks 'what do you know about me?', the answer is: nothing, unless they've chosen to share it."
@@ -55,7 +55,7 @@ faq:
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://bynorthlight.ca/blog/how-we-built-northlight-vault-privacy-first.html"
+    "@id": "https://bynorthlight.ca/blog/how-we-built-northlight-vault-privacy-first"
   }
 }
 </script>
@@ -123,6 +123,7 @@ What we can do is be trustworthy — actually, concretely, demonstrably trustwor
 
 That's the kind of organisation I want to build — one that has less to answer for because it asked less in the first place.
 
+*Northlight Vault is free to download at [bynorthlight.ca](/vault). If you have thoughts on this — or on privacy design more broadly — [just reply](mailto:support@bynorthlight.ca). I'd like to hear them.*
 *Northlight Vault is free to download at [bynorthlight.ca](/vault.html). If you have thoughts on this — or on privacy design more broadly — [just reply](mailto:support@bynorthlight.ca). I'd like to hear them.*
 
 If you're curious about the advisory and strategy side of what Northlight Advisory Services does — beyond the tools — [this is the right place to start](/who-we-help).

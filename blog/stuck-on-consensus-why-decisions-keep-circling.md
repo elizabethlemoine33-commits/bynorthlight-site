@@ -8,7 +8,7 @@ og_description: "A decision keeps circling when nobody acts on it. Why a team go
 date: 2026-10-30
 date_modified: "2026-10-30"
 published_time: "2026-10-30T00:00:00.000Z"
-permalink: /blog/stuck-on-consensus-why-decisions-keep-circling.html
+permalink: /blog/stuck-on-consensus-why-decisions-keep-circling
 source_label: "Blog · Essay"
 source_class: source-essay
 read_time: 6
@@ -18,11 +18,11 @@ tags:
   - "Operations"
 related_reading:
   - title: "You Hired Them. Now What? When New Hires Don't Clear the Bottleneck"
-    url: /blog/you-hired-them-now-what.html
+    url: /blog/you-hired-them-now-what
   - title: "EOS Rocks vs. OKRs: Which Goal-Setting Framework Is Right for Your Business?"
-    url: /blog/eos-rocks-vs-okrs.html
+    url: /blog/eos-rocks-vs-okrs
   - title: "Consultant, Fractional COO or Full-Time COO in Canada? How to Choose"
-    url: /blog/consultant-fractional-coo-or-full-time-coo-how-to-choose.html
+    url: /blog/consultant-fractional-coo-or-full-time-coo-how-to-choose
 faq:
   - q: "Why does my team keep circling on a decision?"
     a: "In my experience, usually one of four things: nobody has been told the call is theirs, the room does not share the same information, a no was quietly overruled by silence, or there is a real disagreement nobody has said out loud. Ask which one is true before you ask for another round of input."
@@ -121,7 +121,7 @@ Keep the numbers right. Consult only the people whose input changes the decision
 
 Here is what that would have looked like for the program I described. We took the plan to three groups. The board's answer mattered because the budget sat there, so the board would be consulted once. The other groups would be informed. One person would be named responsible for getting our own people trained to train others, with a date for the first session. One person would be accountable for the program as a whole. Same plan, but the training would not have waited for the event.
 
-Then let them do the work. Ownership without authority is only a title. If you hand someone a task and then take it back, you have not given them the job. I make the same point about [how much authority to give a fractional COO](/blog/consultant-fractional-coo-or-full-time-coo-how-to-choose.html).
+Then let them do the work. Ownership without authority is only a title. If you hand someone a task and then take it back, you have not given them the job. I make the same point about [how much authority to give a fractional COO](/blog/consultant-fractional-coo-or-full-time-coo-how-to-choose).
 
 ## What would I do first?
 
@@ -130,7 +130,7 @@ Then let them do the work. Ownership without authority is only a title. If you h
 </div>
 
 1. When the same item keeps returning, ask why, and decide yes or no.
-2. Know what is moving and what is not. Goals and a dashboard help, so it is not just a feeling. I wrote about [EOS Rocks and OKRs](/blog/eos-rocks-vs-okrs.html) for that.
+2. Know what is moving and what is not. Goals and a dashboard help, so it is not just a feeling. I wrote about [EOS Rocks and OKRs](/blog/eos-rocks-vs-okrs) for that.
 3. Build enough trust that someone can say, "We cannot move forward unless we do this." Treat delay as a risk you account for.
 4. Ask why you are not hearing the whole story.
 5. Name the one person responsible, the one accountable and the date.

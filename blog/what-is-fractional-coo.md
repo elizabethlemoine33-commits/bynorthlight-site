@@ -8,7 +8,7 @@ seo_title: "What Is a Fractional COO? A Guide for Canadian Founders"
 date: 2026-08-09
 date_modified: "2026-08-09"
 published_time: "2026-08-09T00:00:00.000Z"
-permalink: /blog/what-is-fractional-coo.html
+permalink: /blog/what-is-fractional-coo
 source_label: "Blog · Guide"
 source_class: source-essay
 read_time: 9
@@ -18,13 +18,13 @@ tags:
   - Canadian Business
 related_reading:
   - title: "Fractional COO Services in Atlantic Canada"
-    url: /blog/fractional-coo-atlantic-canada.html
+    url: /blog/fractional-coo-atlantic-canada
   - title: "Fractional COO vs. Full-Time COO: Cost & Value in Canada"
-    url: /blog/fractional-coo-vs-hiring-full-time-canada.html
+    url: /blog/fractional-coo-vs-hiring-full-time-canada
   - title: "What Is a Fractional Executive? Guide for Canadian Businesses"
-    url: /blog/what-is-fractional-executive-guide-canadian-businesses.html
+    url: /blog/what-is-fractional-executive-guide-canadian-businesses
   - title: "Fractional COO Services in Canada: What You Get and What It Costs"
-    url: /blog/fractional-coo-services-canada.html
+    url: /blog/fractional-coo-services-canada
 faq:
   - q: "What does a fractional COO actually do?"
     a: "A fractional COO owns operational outcomes in your business on a part-time basis — typically 10–20 hours per week. They attend your leadership meetings, work directly with your team leads, build systems and processes, and make operational decisions. They're not an advisor who weighs in from a distance; they're embedded in your operations and held accountable for what they own."
@@ -60,7 +60,7 @@ faq:
     "name": "Northlight Advisory Services",
     "url": "https://bynorthlight.ca"
   },
-  "url": "https://bynorthlight.ca/blog/what-is-fractional-coo.html"
+  "url": "https://bynorthlight.ca/blog/what-is-fractional-coo"
 }
 </script>
 
@@ -68,7 +68,7 @@ faq:
 
 <p class="author-note"><em>Elizabeth Lemoine is a fractional COO with 10+ years of director-level operations experience working with Canadian businesses. <a href="/about">About Elizabeth →</a></em></p>
 
-A fractional COO is a type of [fractional executive](/blog/what-is-fractional-executive-guide-canadian-businesses.html) — a senior operator who joins your executive team part-time and owns outcomes, rather than a consultant who hands you a deck and leaves. That's the whole answer. The rest of this post is for Canadian founders trying to figure out whether they actually need one.
+A fractional COO is a type of [fractional executive](/blog/what-is-fractional-executive-guide-canadian-businesses) — a senior operator who joins your executive team part-time and owns outcomes, rather than a consultant who hands you a deck and leaves. That's the whole answer. The rest of this post is for Canadian founders trying to figure out whether they actually need one.
 
 ## What is a fractional COO and how is it different from consulting?
 
@@ -170,4 +170,4 @@ Book a 30-minute conversation with me — no deck, no pitch, just a conversation
 
 [Book a call →](/coffee)
 
-If you want more on how fractional COO work shows up in Atlantic Canada specifically — including what the market looks like, what buyers are looking for, and how to evaluate fit — I've written about that here: [Fractional COO Services in Atlantic Canada](/blog/fractional-coo-atlantic-canada.html)
+If you want more on how fractional COO work shows up in Atlantic Canada specifically — including what the market looks like, what buyers are looking for, and how to evaluate fit — I've written about that here: [Fractional COO Services in Atlantic Canada](/blog/fractional-coo-atlantic-canada)

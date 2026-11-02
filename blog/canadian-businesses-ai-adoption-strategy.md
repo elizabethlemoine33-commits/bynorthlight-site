@@ -7,7 +7,7 @@ og_description: "58% of Canadian businesses are using AI. Most don't have a poli
 date: 2026-09-29
 date_modified: "2026-09-29"
 published_time: "2026-09-29T00:00:00.000Z"
-permalink: /blog/canadian-businesses-ai-adoption-strategy.html
+permalink: /blog/canadian-businesses-ai-adoption-strategy
 source_label: "Blog · Essay"
 source_class: source-essay
 read_time: 6
@@ -19,13 +19,13 @@ tags:
   - AI governance
 related_reading:
   - title: "How to Know If Your AI Tools Are Actually Working"
-    url: /blog/measure-ai-tool-effectiveness.html
+    url: /blog/measure-ai-tool-effectiveness
   - title: "Every AI Tool You Connect Opens a Data Channel"
-    url: /blog/ai-tool-data-security-canadian-businesses.html
+    url: /blog/ai-tool-data-security-canadian-businesses
   - title: "Shadow AI Is the New Shadow IT"
-    url: /blog/shadow-ai-is-the-new-shadow-it.html
+    url: /blog/shadow-ai-is-the-new-shadow-it
   - title: "The Real ROI of AI for Canadian SMBs"
-    url: /blog/ai-roi-canadian-smb.html
+    url: /blog/ai-roi-canadian-smb
 faq:
   - q: "What is the difference between the 58% and 19.2% AI adoption figures?"
     a: "They're measuring different things. NOVIPRO's 2026 IT Trends Report found 58% of Canadian companies are using AI solutions in any capacity — including pilots and early experiments. Statistics Canada's Q2 2026 data puts AI use in actual production of goods and services at 19.2%, which is a narrower, harder standard. Both figures are accurate. The 39-point gap between them is where most Canadian businesses actually live: using tools, without much structure around them."
@@ -63,7 +63,7 @@ An AI strategy has four components. Not a vision statement; not a slide deck abo
 
 **Governance.** Who decides which tools get adopted, and on what basis? Who's responsible if something goes wrong — a data breach, a compliance failure, an output that's factually wrong in a way that matters to a client? In most small businesses, this isn't anyone's specific job; which means it's implicitly everyone's job; which means it's actually no one's.
 
-**Measurement.** Is the tool producing better outcomes than what it replaced? "Everyone seems happier" and "things feel faster" aren't measurements. If you can't point to a number, you don't know if it's working. (That's the subject of [the next post in this series](/blog/measure-ai-tool-effectiveness.html) — I'll go deep on the measurement question there.)
+**Measurement.** Is the tool producing better outcomes than what it replaced? "Everyone seems happier" and "things feel faster" aren't measurements. If you can't point to a number, you don't know if it's working. (That's the subject of [the next post in this series](/blog/measure-ai-tool-effectiveness) — I'll go deep on the measurement question there.)
 
 **Vendor selection.** Are you choosing tools based on what they can actually do for how your team works — or based on what the vendor is demonstrating? These are very different questions, and the demo version of an AI tool is almost always more impressive than the Tuesday-at-3pm version.
 

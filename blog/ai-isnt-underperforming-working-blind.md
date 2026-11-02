@@ -7,14 +7,14 @@ og_description: "Your AI rollout didn't fail because of the tool. It failed beca
 date: 2026-07-08
 date_modified: "2026-07-09"
 published_time: "2026-07-08T00:00:00.000Z"
-permalink: /blog/ai-isnt-underperforming-working-blind.html
+permalink: /blog/ai-isnt-underperforming-working-blind
 source_label: "Blog · Essay"
 source_class: source-aurora
 read_time: 6
 download_label: "Download"
 download_title: "Is Your AI Context-Ready?"
 download_desc: "A 5-layer self-assessment to identify where your AI can't see — and what to fix first. No sign-up required."
-download_url: /blog/ai-context-ready-checklist-printable.html
+download_url: /blog/ai-context-ready-checklist-printable
 tags:
   - AI Adoption
   - Organizational Strategy
@@ -22,11 +22,11 @@ tags:
   - Context Management
 related_reading:
   - title: "Best AI Tools for Canadian Small Businesses (2026)"
-    url: /blog/best-ai-tools-canadian-small-businesses-2026.html
+    url: /blog/best-ai-tools-canadian-small-businesses-2026
   - title: "Your AI Strategy Is Running on the Wrong Clock"
-    url: /blog/ai-strategy-wrong-clock.html
+    url: /blog/ai-strategy-wrong-clock
   - title: "How to Choose an AI Implementation Partner: A Canadian Guide"
-    url: /blog/how-to-choose-ai-implementation-partner.html
+    url: /blog/how-to-choose-ai-implementation-partner
 faq:
   - q: "Why do most AI rollouts underperform in small businesses?"
     a: "Fewer than 40% of AI rollouts deliver measurable value, and only 30% of pilots scale beyond the initial team. The reason isn't the technology — it's that AI didn't receive the same onboarding a new hire would. Customer data lives in one system, project notes in another, decisions in Slack threads nobody searches. When AI produces generic or operationally useless output, that's not model failure. That's a context gap — the model working with incomplete information."
@@ -98,6 +98,6 @@ If you're reading this and recognising your organisation in at least two of thos
 
 It's not a vendor pitch. It's not a sales funnel. It's a tool to help you see what your AI can't see — so you can decide what to fix first.
 
-[Download the checklist →](/blog/ai-context-ready-checklist-printable.html)
+[Download the checklist →](/blog/ai-context-ready-checklist-printable)
 
 And if you finish the checklist and realise the gaps are bigger than you thought — or you're not sure where to start — that's a conversation Northlight can help with. But start with the checklist first. You need to see the problem clearly before you can solve it.

@@ -4,12 +4,12 @@ title: "PIPEDA AI Compliance Checklist"
 description: "A printable checklist for Canadian businesses to assess whether their AI tool use complies with PIPEDA — Canada's federal private-sector privacy law."
 og_title: "PIPEDA AI Compliance Checklist — Northlight Advisory Services"
 og_description: "Six-step compliance checklist for Canadian businesses using AI tools. Covers consent, data location, vendor accountability, and breach response under PIPEDA."
-permalink: /blog/pipeda-ai-compliance-checklist-printable.html
+permalink: /blog/pipeda-ai-compliance-checklist-printable
 ---
 
 <div class="no-print-bar">
   <p>Use your browser's Print function to save as PDF — File → Print → Save as PDF.</p>
-  <a href="/blog/pipeda-privacy-first-ai-canada.html">← Back to post</a>
+  <a href="/blog/pipeda-privacy-first-ai-canada">← Back to post</a>
 </div>
 
 <div class="print-header">
@@ -120,5 +120,5 @@ permalink: /blog/pipeda-ai-compliance-checklist-printable.html
 
 <div class="print-footer">
   <span class="footer-note">© 2026 Northlight Advisory Services. Not legal advice. See priv.gc.ca for authoritative PIPEDA guidance.</span>
-  <span class="footer-url">bynorthlight.ca/blog/pipeda-ai-compliance-checklist-printable.html</span>
+  <span class="footer-url">bynorthlight.ca/blog/pipeda-ai-compliance-checklist-printable</span>
 </div>

@@ -4,12 +4,12 @@ title: "Is Your AI Context-Ready?"
 description: "A 5-layer self-assessment for Canadian businesses — identify where your AI can't see and what to fix first before upgrading tools or expanding rollout."
 og_title: "Is Your AI Context-Ready? — Northlight Advisory Services"
 og_description: "Score your organisation across five context layers to see where your AI is working blind — and what to fix first. Free from Northlight Advisory Services."
-permalink: /blog/ai-context-ready-checklist-printable.html
+permalink: /blog/ai-context-ready-checklist-printable
 ---
 
 <div class="no-print-bar">
   <p>Use your browser's Print function to save as PDF — File → Print → Save as PDF.</p>
-  <a href="/blog/ai-isnt-underperforming-working-blind.html">← Back to post</a>
+  <a href="/blog/ai-isnt-underperforming-working-blind">← Back to post</a>
 </div>
 
 <div class="print-header">
@@ -100,5 +100,5 @@ permalink: /blog/ai-context-ready-checklist-printable.html
 
 <div class="print-footer">
   <span class="footer-note">© 2026 Northlight Advisory Services. For the full guide, visit bynorthlight.ca</span>
-  <span class="footer-url">bynorthlight.ca/blog/ai-isnt-underperforming-working-blind.html</span>
+  <span class="footer-url">bynorthlight.ca/blog/ai-isnt-underperforming-working-blind</span>
 </div>
