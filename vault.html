@@ -136,6 +136,16 @@ head_extra: |
       letter-spacing: 0.18em; text-transform: uppercase; color: var(--glacial);
       margin-top: 14px;
     }
+    .update-note {
+      margin-top: 20px; max-width: 480px; padding: 14px 16px;
+      border: 1px solid var(--border-2); border-left: 3px solid var(--glacial); border-radius: 4px;
+      background: var(--surface);
+      font-family: 'Outfit', sans-serif; font-size: 14px; line-height: 1.65; color: var(--cloud);
+    }
+    .update-note strong { font-family: 'Jost', sans-serif; font-weight: 600; letter-spacing: 0.03em; color: var(--text); }
+    .update-note a, .review-ask a { color: var(--glacial); text-decoration: none; border-bottom: 1px solid var(--border-2); }
+    .update-note a:hover, .review-ask a:hover { color: var(--text); }
+    .review-ask { margin-top: 12px; font-family: 'Outfit', sans-serif; font-size: 14px; line-height: 1.6; color: var(--haze); }
     .vault-hero-right {
       display: flex; justify-content: center; align-items: center;
     }
@@ -313,8 +323,14 @@ head_extra: |
         </div>
         <p class="free-badge">Free · Windows only</p>
         <p style="margin-top:8px; font-family:'Outfit',sans-serif; font-size:12px; color:var(--muted);">
-          Listed on <a href="https://www.capterra.com/p/10051421/Northlight-Vault/" target="_blank" rel="noopener" style="color:var(--glacial); text-decoration:none; border-bottom:1px solid var(--border-2);">Capterra</a>
+          Listed on <a href="https://www.g2.com/products/northlight-vault/reviews" target="_blank" rel="noopener" style="color:var(--glacial); text-decoration:none; border-bottom:1px solid var(--border-2);">G2</a> and <a href="https://www.capterra.com/p/10051421/Northlight-Vault/" target="_blank" rel="noopener" style="color:var(--glacial); text-decoration:none; border-bottom:1px solid var(--border-2);">Capterra</a>
         </p>
+        <p class="review-ask">Tried it? <a href="https://www.g2.com/contributor/vault-users-november-2026-94dfdeb2-2a3c-4c12-bfce-5cdd9402bc20" target="_blank" rel="noopener">Tell us what you think on G2</a>. Good, bad or ugly. It all gets read.</p>
+        <div class="update-note" role="note">
+          <strong>Already have Vault? Version 1.0.2 is out.</strong>
+          In Vault, choose Help, then Check for Updates. Or download the latest installer above and run it.
+          <a href="https://github.com/elizabethlemoine33-commits/Northlight-Vault/releases/tag/v1.0.2" target="_blank" rel="noopener">See what changed</a>.
+        </div>
       </div>
       <div class="vault-hero-right">
         <div class="vault-icon-display">
@@ -607,6 +623,7 @@ head_extra: |
         <a href="https://github.com/elizabethlemoine33-commits/Northlight-Vault/releases/latest/download/Northlight.Vault.Setup.exe"
            class="cta-primary">Download Northlight Vault</a>
         <p style="font-family:'Jost',sans-serif; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted);">Windows · Free</p>
+        <p class="review-ask" style="margin-top:0; text-align:right;">Tried it? <a href="https://www.g2.com/contributor/vault-users-november-2026-94dfdeb2-2a3c-4c12-bfce-5cdd9402bc20" target="_blank" rel="noopener">Review it on G2</a></p>
         <a href="/vault-docs" style="font-family:'Jost',sans-serif; font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); text-decoration:none; border-bottom:1px solid var(--border-2); transition:color 0.2s;">Help &amp; Documentation →</a>
       </div>
     </div>
