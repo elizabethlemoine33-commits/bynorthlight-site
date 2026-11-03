@@ -237,7 +237,7 @@ head_extra: |
 <main id="main-content">
 
   <h1 class="page-title">Privacy Policy</h1>
-  <p class="page-meta">Northlight Vault &nbsp;·&nbsp; Effective Date: May 17, 2026 &nbsp;·&nbsp; Last Updated: June 11, 2026</p>
+  <p class="page-meta">Northlight Vault &nbsp;·&nbsp; Effective Date: May 17, 2026 &nbsp;·&nbsp; Last Updated: November 3, 2026 &nbsp;·&nbsp; Applies to v1.0.2 and later</p>
   <div class="aurora-line" role="presentation"></div>
 
   <!-- 1. WHO WE ARE -->
@@ -265,7 +265,8 @@ head_extra: |
   <!-- 2. COMMITMENT -->
   <section>
     <h2>2. Our Commitment to Your Privacy</h2>
-    <p>Northlight Vault is designed with privacy as a default. The app does not collect, transmit, or store your personal information on any Northlight servers. Everything stays on your device.</p>
+    <p>Northlight Vault is designed with privacy as a default. Northlight does not touch your files. Vault does not download, copy, store or upload them, and nothing about your files or your account is sent to Northlight.</p>
+    <p>The app does send two kinds of information off your device, and both are explained below: a crash report to Sentry if the app crashes (Section 7), and a request to GitHub to check for a newer version (Section 7). Apart from your connections to your own cloud providers (Section 4), that is all.</p>
     <p>This policy explains how the app works with third-party cloud storage providers, what that means for your data, how we handle user feedback, and what rights you have as a Canadian user under the <a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/">Personal Information Protection and Electronic Documents Act (PIPEDA)</a>.</p>
   </section>
 
@@ -321,6 +322,9 @@ head_extra: |
 
     <h3>How it works</h3>
     <p>When you browse files in Vault, the app retrieves file lists and metadata — names, dates, folder structure, file types — directly from your connected cloud provider and displays them on your device. This data is processed locally and is not sent to Northlight or stored on Northlight servers.</p>
+
+    <h3>Your files</h3>
+    <p>Northlight does not touch your files. Vault is read-only. It cannot move, rename, edit, upload or delete a file, and it does not download or keep copies. When you open a file, it opens in your browser or its own app through your cloud provider. Neither the files nor their contents pass through Northlight.</p>
 
     <h3>Your cloud provider's responsibility</h3>
     <p>Each provider has its own privacy policy governing how they handle your data. We encourage you to review them:</p>
@@ -390,7 +394,7 @@ head_extra: |
     <p>Northlight Vault does not use analytics tools or collect data about how you use the app.</p>
 
     <h3>Crash Reporting — Sentry</h3>
-    <p>Northlight Vault uses Sentry to capture crash reports when the app encounters a critical error. This is the only data that leaves your device, and it is sent directly to Sentry — not to Northlight.</p>
+    <p>Northlight Vault uses Sentry to capture crash reports when the app encounters a critical error. Besides the update check below and your connections to your own cloud providers, this is the only data the app sends. It goes directly to Sentry, not to Northlight. Crash reports do not contain your files or their contents.</p>
 
     <div class="two-col">
       <div class="col-card">
@@ -407,7 +411,7 @@ head_extra: |
         <div class="col-label no">What Sentry does not collect</div>
         <ul>
           <li>OAuth tokens or credentials of any kind</li>
-          <li>File names, folder names, or any content from your cloud storage</li>
+          <li>The names or contents of the files and folders in your cloud storage</li>
           <li>Your search queries or browsing history</li>
           <li>Your email address or any personally identifying information</li>
         </ul>
@@ -422,7 +426,7 @@ head_extra: |
     <p><strong style="color:#ffffff;">Performance tracing:</strong> Performance tracing is disabled. Sentry only activates when a crash or unhandled error occurs — it does not continuously monitor or transmit data about normal app usage.</p>
 
     <h3>Software Updates</h3>
-    <p>Northlight Vault includes an automatic update check that connects to GitHub to determine whether a newer version is available. This request is made directly between your device and GitHub's servers. Northlight does not log or store connection data from update checks. <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement →</a></p>
+    <p>Northlight Vault checks GitHub for a newer version each time it starts, and again when you choose Help &gt; Check for Updates. This request is made directly between your device and GitHub's servers. Northlight does not log or store connection data from update checks. <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub Privacy Statement →</a></p>
   </section>
 
   <!-- 8. PIPEDA -->
