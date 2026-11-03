@@ -85,6 +85,18 @@ head_extra: |
     }
   ]
   }</script>
+  <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Northlight Vault: all your cloud storage in one place (free Windows app)",
+    "description": "A 50-second look at Northlight Vault, a free Windows app that shows Google Drive, OneDrive and Dropbox in one window, searches all of them at once, and is read-only by design.",
+    "thumbnailUrl": "https://bynorthlight.ca/northlight-vault-video-thumb.png",
+    "uploadDate": "2026-11-03",
+    "duration": "PT50S",
+    "contentUrl": "https://www.youtube.com/watch?v=1kgooSzrYY8",
+    "embedUrl": "https://www.youtube-nocookie.com/embed/1kgooSzrYY8",
+    "publisher": { "@type": "Organization", "name": "Northlight Advisory Services", "url": "https://bynorthlight.ca" }
+  }</script>
   <style>
     a:visited { color: var(--glacial); }
 
@@ -146,6 +158,40 @@ head_extra: |
     .update-note a, .review-ask a { color: var(--glacial); text-decoration: none; border-bottom: 1px solid var(--border-2); }
     .update-note a:hover, .review-ask a:hover { color: var(--text); }
     .review-ask { margin-top: 12px; font-family: 'Outfit', sans-serif; font-size: 14px; line-height: 1.6; color: var(--haze); }
+    .video-facade-wrap {
+      position: relative; max-width: 960px; aspect-ratio: 16 / 9; background: #000;
+      border: 1px solid var(--border-2); border-radius: 12px; overflow: hidden;
+    }
+    .video-facade { display: block; width: 100%; height: 100%; position: relative; text-decoration: none; }
+    .video-facade img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .video-play {
+      position: absolute; top: 50%; left: 50%; width: 88px; height: 88px; margin: -44px 0 0 -44px; border-radius: 50%;
+      background: linear-gradient(135deg, #4FC3C8 0%, #5B8DD9 33%, #8B6FD4 66%, #C46FAA 100%);
+      display: flex; align-items: center; justify-content: center; transition: transform 0.2s;
+    }
+    .video-play svg { width: 34px; height: 34px; margin-left: 5px; fill: #fff; }
+    .video-facade:hover .video-play { transform: scale(1.08); }
+    .video-facade:focus-visible { outline: 3px solid var(--dusk); outline-offset: -3px; }
+    .video-facade-wrap iframe { width: 100%; height: 100%; border: 0; display: block; }
+    .video-note { margin-top: 12px; font-family: 'Outfit', sans-serif; font-size: 14px; line-height: 1.6; color: var(--haze); }
+    .video-note a { color: var(--glacial); text-decoration: none; border-bottom: 1px solid var(--border-2); }
+    .g2-callout {
+      position: relative; display: flex; align-items: center; gap: 28px; flex-wrap: wrap;
+      margin: 8px 0 48px; padding: 32px 36px;
+      background: var(--surface); border: 1px solid var(--border-2); border-radius: 12px; overflow: hidden;
+    }
+    .g2-callout::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, #4FC3C8 0%, #5B8DD9 30%, #8B6FD4 65%, #C46FAA 100%);
+    }
+    .g2-callout-logo { flex: 0 0 auto; width: 76px; height: 76px; }
+    .g2-callout-logo svg { width: 76px; height: 76px; fill: #FF492C; display: block; }
+    .g2-callout-text { flex: 1 1 320px; min-width: 0; }
+    .g2-callout-text h2 {
+      font-family: 'Jost', sans-serif; font-size: 28px; font-weight: 600; letter-spacing: 0.02em;
+      line-height: 1.2; color: var(--text); margin-bottom: 8px;
+    }
+    .g2-callout-text p { font-family: 'Outfit', sans-serif; font-size: 16px; line-height: 1.7; color: var(--cloud); }
     .vault-hero-right {
       display: flex; justify-content: center; align-items: center;
     }
@@ -325,11 +371,10 @@ head_extra: |
         <p style="margin-top:8px; font-family:'Outfit',sans-serif; font-size:12px; color:var(--muted);">
           Listed on <a href="https://www.g2.com/products/northlight-vault/reviews" target="_blank" rel="noopener" style="color:var(--glacial); text-decoration:none; border-bottom:1px solid var(--border-2);">G2</a> and <a href="https://www.capterra.com/p/10051421/Northlight-Vault/" target="_blank" rel="noopener" style="color:var(--glacial); text-decoration:none; border-bottom:1px solid var(--border-2);">Capterra</a>
         </p>
-        <p class="review-ask">Tried it? <a href="https://www.g2.com/contributor/vault-users-november-2026-94dfdeb2-2a3c-4c12-bfce-5cdd9402bc20" target="_blank" rel="noopener">Tell us what you think on G2</a>. Good, bad or ugly. It all gets read.</p>
         <div class="update-note" role="note">
-          <strong>Already have Vault? Version 1.0.2 is out.</strong>
+          <strong>Already have Vault? Check you have the latest version.</strong>
           In Vault, choose Help, then Check for Updates. Or download the latest installer above and run it.
-          <a href="https://github.com/elizabethlemoine33-commits/Northlight-Vault/releases/tag/v1.0.2" target="_blank" rel="noopener">See what changed</a>.
+          <a href="https://github.com/elizabethlemoine33-commits/Northlight-Vault/releases/latest" target="_blank" rel="noopener">See what changed</a>.
         </div>
       </div>
       <div class="vault-hero-right">
@@ -340,6 +385,20 @@ head_extra: |
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- ═══ G2 REVIEW CALLOUT ═══ -->
+  <div class="page-wrap" style="padding-top: 0; padding-bottom: 0;">
+    <aside class="g2-callout" aria-labelledby="g2-callout-title">
+      <div class="g2-callout-logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><path d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Zm.122 5.143c.45 0 .9.044 1.342.132l-1.342 2.806C9.962 8.08 8.203 9.84 8.203 12s1.76 3.92 3.92 3.92c.937 0 1.844-.338 2.553-.951l1.483 2.572A6.856 6.856 0 0 1 5.266 12a6.856 6.856 0 0 1 6.856-6.856Zm3.498.49a1.262 1.262 0 0 1 .026 0c.427 0 .792.113 1.101.34.31.229.466.546.466.946 0 .639-.36 1.03-1.035 1.376l-.377.191c-.403.204-.602.385-.657.706h2.05v.85h-3.101v-.144c0-.526.103-.96.314-1.306.211-.345.576-.65 1.102-.917l.242-.117c.427-.216.538-.401.538-.625 0-.266-.228-.458-.6-.458-.44 0-.773.228-1.004.694l-.592-.595c.13-.279.338-.502.619-.675a1.7 1.7 0 0 1 .908-.266Zm-2.094 5.388h3.394l1.697 2.937-1.697 2.94-1.697-2.94H11.83l1.696-2.937Z"/></svg>
+      </div>
+      <div class="g2-callout-text">
+        <h2 id="g2-callout-title">Used Northlight Vault? Tell the next person what it is really like.</h2>
+        <p>We can't see who downloads Vault, so your review is how we find out what works and what doesn't. Good, bad or ugly. It takes about five minutes, and there is nothing in it for you.</p>
+      </div>
+      <a href="https://www.g2.com/contributor/vault-users-november-2026-94dfdeb2-2a3c-4c12-bfce-5cdd9402bc20" target="_blank" rel="noopener" class="cta-primary">Review on G2</a>
+    </aside>
   </div>
 
   <!-- ── AT A GLANCE ── -->
@@ -355,6 +414,20 @@ head_extra: |
       </ul>
     </div>
   </div>
+
+  <div class="aurora-divider" role="presentation"></div>
+
+  <!-- ═══ VIDEO ═══ -->
+  <section class="section-padded" aria-labelledby="video-label">
+    <h2 class="section-label" id="video-label">Watch it in under a minute</h2>
+    <div class="video-facade-wrap" id="vault-video-wrap">
+      <a class="video-facade" id="vault-video" href="https://www.youtube.com/watch?v=1kgooSzrYY8" target="_blank" rel="noopener" aria-label="Play the video: Northlight Vault in under a minute">
+        <img src="/northlight-vault-video-poster.jpg" alt="A frame from the video: Northlight Vault showing Google Drive, OneDrive and Dropbox in one sidebar" width="1600" height="900" loading="lazy">
+        <span class="video-play" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M8 5v14l11-7z"/></svg></span>
+      </a>
+    </div>
+    <p class="video-note">No sound, just captions. The video loads from YouTube only when you press play. Also on the <a href="https://www.youtube.com/@NorthlightAdvisoryServices" target="_blank" rel="noopener">Northlight Advisory Services channel</a>.</p>
+  </section>
 
   <div class="aurora-divider" role="presentation"></div>
 
@@ -704,6 +777,25 @@ head_extra: |
 
 <script>
   /* ── FAQ ── */
+  /* ── VIDEO: load YouTube only on click (privacy-enhanced embed) ── */
+  (function () {
+    const link = document.getElementById('vault-video');
+    if (!link) return;
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const wrap = document.getElementById('vault-video-wrap');
+      const f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/1kgooSzrYY8?autoplay=1&rel=0';
+      f.title = 'Northlight Vault in under a minute';
+      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      f.allowFullscreen = true;
+      f.referrerPolicy = 'strict-origin-when-cross-origin';
+      wrap.innerHTML = '';
+      wrap.appendChild(f);
+      f.focus();
+    });
+  })();
+
   function toggleFaq(btn) {
     const item = btn.closest('.faq-item');
     const isOpen = item.classList.contains('open');
