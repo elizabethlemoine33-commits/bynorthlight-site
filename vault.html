@@ -85,6 +85,18 @@ head_extra: |
     }
   ]
   }</script>
+  <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Northlight Vault: all your cloud storage in one place (free Windows app)",
+    "description": "A 50-second look at Northlight Vault, a free Windows app that shows Google Drive, OneDrive and Dropbox in one window, searches all of them at once, and is read-only by design.",
+    "thumbnailUrl": "https://bynorthlight.ca/northlight-vault-video-thumb.png",
+    "uploadDate": "2026-11-03",
+    "duration": "PT50S",
+    "contentUrl": "https://www.youtube.com/watch?v=1kgooSzrYY8",
+    "embedUrl": "https://www.youtube-nocookie.com/embed/1kgooSzrYY8",
+    "publisher": { "@type": "Organization", "name": "Northlight Advisory Services", "url": "https://bynorthlight.ca" }
+  }</script>
   <style>
     a:visited { color: var(--glacial); }
 
@@ -146,6 +158,23 @@ head_extra: |
     .update-note a, .review-ask a { color: var(--glacial); text-decoration: none; border-bottom: 1px solid var(--border-2); }
     .update-note a:hover, .review-ask a:hover { color: var(--text); }
     .review-ask { margin-top: 12px; font-family: 'Outfit', sans-serif; font-size: 14px; line-height: 1.6; color: var(--haze); }
+    .video-facade-wrap {
+      position: relative; max-width: 960px; aspect-ratio: 16 / 9; background: #000;
+      border: 1px solid var(--border-2); border-radius: 12px; overflow: hidden;
+    }
+    .video-facade { display: block; width: 100%; height: 100%; position: relative; text-decoration: none; }
+    .video-facade img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .video-play {
+      position: absolute; top: 50%; left: 50%; width: 88px; height: 88px; margin: -44px 0 0 -44px; border-radius: 50%;
+      background: linear-gradient(135deg, #4FC3C8 0%, #5B8DD9 33%, #8B6FD4 66%, #C46FAA 100%);
+      display: flex; align-items: center; justify-content: center; transition: transform 0.2s;
+    }
+    .video-play svg { width: 34px; height: 34px; margin-left: 5px; fill: #fff; }
+    .video-facade:hover .video-play { transform: scale(1.08); }
+    .video-facade:focus-visible { outline: 3px solid var(--dusk); outline-offset: -3px; }
+    .video-facade-wrap iframe { width: 100%; height: 100%; border: 0; display: block; }
+    .video-note { margin-top: 12px; font-family: 'Outfit', sans-serif; font-size: 14px; line-height: 1.6; color: var(--haze); }
+    .video-note a { color: var(--glacial); text-decoration: none; border-bottom: 1px solid var(--border-2); }
     .g2-callout {
       position: relative; display: flex; align-items: center; gap: 28px; flex-wrap: wrap;
       margin: 8px 0 48px; padding: 32px 36px;
@@ -385,6 +414,20 @@ head_extra: |
       </ul>
     </div>
   </div>
+
+  <div class="aurora-divider" role="presentation"></div>
+
+  <!-- ═══ VIDEO ═══ -->
+  <section class="section-padded" aria-labelledby="video-label">
+    <h2 class="section-label" id="video-label">Watch it in under a minute</h2>
+    <div class="video-facade-wrap" id="vault-video-wrap">
+      <a class="video-facade" id="vault-video" href="https://www.youtube.com/watch?v=1kgooSzrYY8" target="_blank" rel="noopener" aria-label="Play the video: Northlight Vault in under a minute">
+        <img src="/northlight-vault-video-poster.jpg" alt="A frame from the video: Northlight Vault showing Google Drive, OneDrive and Dropbox in one sidebar" width="1600" height="900" loading="lazy">
+        <span class="video-play" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M8 5v14l11-7z"/></svg></span>
+      </a>
+    </div>
+    <p class="video-note">No sound, just captions. The video loads from YouTube only when you press play. Also on the <a href="https://www.youtube.com/@NorthlightAdvisoryServices" target="_blank" rel="noopener">Northlight Advisory Services channel</a>.</p>
+  </section>
 
   <div class="aurora-divider" role="presentation"></div>
 
@@ -734,6 +777,25 @@ head_extra: |
 
 <script>
   /* ── FAQ ── */
+  /* ── VIDEO: load YouTube only on click (privacy-enhanced embed) ── */
+  (function () {
+    const link = document.getElementById('vault-video');
+    if (!link) return;
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const wrap = document.getElementById('vault-video-wrap');
+      const f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/1kgooSzrYY8?autoplay=1&rel=0';
+      f.title = 'Northlight Vault in under a minute';
+      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      f.allowFullscreen = true;
+      f.referrerPolicy = 'strict-origin-when-cross-origin';
+      wrap.innerHTML = '';
+      wrap.appendChild(f);
+      f.focus();
+    });
+  })();
+
   function toggleFaq(btn) {
     const item = btn.closest('.faq-item');
     const isOpen = item.classList.contains('open');
