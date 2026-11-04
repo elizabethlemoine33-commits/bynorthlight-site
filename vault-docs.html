@@ -145,6 +145,21 @@ head_extra: |
       color: var(--cloud);
     }
     .step-text strong { color: var(--text); font-weight: 600; }
+    .doc-figure { margin: 24px 0 0; }
+    .doc-figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid var(--border-2);
+      border-radius: 8px;
+    }
+    .doc-figure figcaption {
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--muted);
+      margin-top: 8px;
+    }
     .tip {
       background: var(--surface);
       border: 1px solid var(--border-2);
@@ -304,6 +319,10 @@ head_extra: |
           <p class="step-text">Click on any result to navigate to that file's location, or open it directly (see <a href="#open-file">How to open a file</a>).</p>
         </div>
       </div>
+      <figure class="doc-figure">
+        <img src="/northlight-vault-search-filters.png" alt="Northlight Vault search results for the word christmas, with three drop-down filters above the results: Type set to All types, Modified set to Any time and Account set to All accounts, and a Clear filters button. The count below reads 28 results for christmas." width="920" height="162" loading="lazy">
+        <figcaption>The filters sit above your results. Pick a file type, a date range or a single account, and the list narrows straight away.</figcaption>
+      </figure>
       <div class="tip">
         <p class="tip-label">Tip</p>
         <p>Search works across all connected accounts simultaneously. If you have three accounts connected, one search covers all three. Each account shows up to 100 matches. Google Drive and Dropbox match file names. OneDrive uses Microsoft's own search, so it can also match words inside your files.</p>
