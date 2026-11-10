@@ -2,3 +2,12 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 .sass-cache/
+
+# Claude Code saves approved commands (secrets included) in .claude/settings.local.json.
+# Keep the folder out of git; launch.json is tracked on purpose.
+.claude/*
+!.claude/launch.json
+# Other AI agent folders
+.cursor/
+.gemini/
+.specstory/
