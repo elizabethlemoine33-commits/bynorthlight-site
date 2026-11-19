@@ -26,7 +26,7 @@ related_reading:
     url: /blog/how-to-choose-ai-advisor-consultant
 faq:
   - q: "Can I legally use ChatGPT for my Canadian small business?"
-    a: "Yes, but not for client data. If you're using ChatGPT for general brainstorming or internal drafting without client information, you're fine. If you're pasting client names, financial details, or anything covered under PIPEDA into ChatGPT (which is US-hosted), you're disclosing personal information to a third party and need to document that risk, strip identifying details, or use a Canadian-hosted alternative like Augure instead."
+    a: "Yes, but not for client data. If you're using ChatGPT for general brainstorming or internal drafting without client information, you're fine. If you're pasting client names, financial details, or anything covered under PIPEDA into ChatGPT (which is US-hosted), you're sending personal information to a processor outside Canada. The Privacy Commissioner treats that as a transfer for processing, which usually needs no new consent, but you stay accountable for the information, must protect it by contract or other means, and must be open with clients that it may be processed abroad. Assess the risk, strip identifying details, or use a Canadian-hosted alternative like Augure instead."
   - q: "What happens if I violate PIPEDA or Law 25 by using the wrong AI tool?"
     a: "It depends on which law applies and what you did. Under PIPEDA, fines apply to specific offences, such as knowingly failing to report a breach or keep breach records, or obstructing the Privacy Commissioner: up to C$10,000 on summary conviction or C$100,000 on indictment (section 28). Using a US tool is not by itself one of those offences. Quebec's Law 25 goes further: administrative monetary penalties up to C$10 million or 2% of worldwide turnover (section 90.12), and penal fines of C$15,000 to C$25 million or 4% of worldwide turnover, whichever is greater, for offences such as communicating personal information contrary to the law, failing to report a confidentiality incident, or not taking the required security measures (section 91). Before sending personal information outside Quebec you must also complete a privacy impact assessment (section 17). Check the legislation, or a lawyer, for your own situation."
   - q: "Is there a Canadian alternative to Otter.ai or Fireflies for meeting transcription?"
@@ -65,9 +65,9 @@ Sometimes the honest recommendation is a Canadian tool. Sometimes it's an Americ
 
 ## Why Does Data Residency Matter for Canadian Businesses Using AI?
 
-<div class="answer-block"><p>If you're pasting client information into AI tools hosted outside Canada, you're disclosing personal information to a third party under <a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/" rel="noopener">PIPEDA</a> — and Quebec's Law 25 adds a privacy impact assessment before data leaves Quebec, with penal fines up to C$25 million or 4% of worldwide turnover.</p></div>
+<div class="answer-block"><p>If you're pasting client information into AI tools hosted outside Canada, you're transferring personal information to a third-party processor under <a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/" rel="noopener">PIPEDA</a> — and Quebec's Law 25 adds a privacy impact assessment before data leaves Quebec, with penal fines up to C$25 million or 4% of worldwide turnover.</p></div>
 
-If you're running a small business in Canada and your staff is pasting client information into ChatGPT to draft an email faster, you have a compliance problem. From [PIPEDA](https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/){:rel="noopener"}'s perspective — Canada's federal privacy law — that's disclosure of personal information to a third party. If you're in Quebec, Law 25 goes further: it requires a privacy impact assessment before personal information leaves Quebec, and its penal fines reach C$25 million or 4% of worldwide turnover.
+If you're running a small business in Canada and your staff is pasting client information into ChatGPT to draft an email faster, you have a compliance problem. From [PIPEDA](https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/){:rel="noopener"}'s perspective — Canada's federal privacy law — that's a transfer of personal information to a third-party processor. The Privacy Commissioner treats that as a use, not a disclosure, so you usually don't need new consent. But you stay accountable for the information, must protect it by contract or other means, and must be open with clients that it may be processed outside Canada (see the [Commissioner's guidelines on processing across borders](https://www.priv.gc.ca/en/privacy-topics/airports-and-borders/gl_dab_090127/){:rel="noopener"}). If you're in Quebec, Law 25 goes further: it requires a privacy impact assessment before personal information leaves Quebec, and its penal fines reach C$25 million or 4% of worldwide turnover.
 
 The fines reach less far than people think, and further in Quebec. Fines under [PIPEDA](https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/){:rel="noopener"} (up to C$100,000) apply to specific offences, such as knowingly failing to report a breach or keep breach records, or obstructing the Privacy Commissioner. Quebec's penalties are larger and cover unlawful communication of personal information, unreported incidents and missing security measures. You can read the offence sections yourself: [PIPEDA section 28](https://laws-lois.justice.gc.ca/eng/acts/p-8.6/FullText.html){:rel="noopener"} and [Quebec's private sector privacy act, sections 90.12 and 91](https://www.legisquebec.gouv.qc.ca/en/document/cs/P-39.1){:rel="noopener"}. Either way, the cost of a breach investigation in time and trust is often worse than the fine.
 
@@ -85,7 +85,7 @@ This is the "replace ChatGPT" category — the tool you reach for when you need 
 
 #### 🇨🇦 Augure AI — C$20/month (Pro) or C$80/month (Max), less if billed annually
 
-[Augure](https://augureai.ca/){:rel="noopener"} is a Canadian AI platform that says it stores your data and runs its models in Canada, under zero-retention agreements and never with US providers. It offers chat on its own Ossington models, a knowledge base where you can upload your own documents, and a separate Legal product aimed at Canadian legal work.
+[Augure](https://augureai.ca/){:rel="noopener"} is a Canadian AI platform that says it stores your data and runs its models in Canada, under zero-retention agreements and never with US providers. It offers chat on its own Ossington models, a knowledge base where you can upload your own documents, and a separate Legal product for contract review, aimed at Canadian law firms.
 
 I've tried Augure (my longer take is in [Canadian Alternative to ChatGPT? What I Found](/blog/canadian-alternative-to-chatgpt)). The chat works well; the legal tuning is legitimately differentiated if you're a law firm, accounting practice, or any professional service that needs to cite Canadian precedent accurately. The knowledge base feature means you can feed it your internal documentation and ask questions without sending anything outside the country.
 
@@ -123,7 +123,7 @@ If you're dictating internal thoughts, draft structures, or anything that doesn'
 
 I use it. I use it for my own thinking, not for client work.
 
-Free tier with a weekly word limit (the pricing page does not give a number). Pro: US$12/month billed annually or US$15/month billed monthly (checked Nov 19, 2026). Wispr says you can opt out of model training and delete stored data; read its Trust Center (trust.wispr.ai) before using it with anything sensitive. Not for client data.
+Free tier with a weekly word limit (the pricing page does not give a number). Pro: US$12/month billed annually or US$15/month billed monthly (checked Nov 19, 2026). Wispr says you can opt out of model training and delete stored data. Its [Trust Center](https://trust.wispr.ai/){:rel="noopener"} lists ISO 27001 and SOC 2 reports and shows Amazon Web Services as its infrastructure, but it does not say which region your audio is processed in. Not for client data.
 
 ### Coding & Building Internal Tools
 
@@ -141,7 +141,7 @@ Install from a terminal with `curl -fsSL https://augureai.ca/install.sh | sh` (r
 
 #### 🇺🇸 GitHub Copilot, Cursor, Replit — paid plans from about US$10/month
 
-The American defaults in this category. They work. They're good. Prices checked Nov 19, 2026: GitHub Copilot Pro is US$10 per user per month (Pro+ is US$39), and Replit Core is US$20/month (US$18 billed annually). I could not confirm Cursor's current plans, so check its pricing page. They're also processing your code — including variable names, file paths, comments, and context — on US servers.
+The American defaults in this category. They work. They're good. Prices checked Nov 19, 2026: GitHub Copilot Pro is US$10 per user per month (Pro+ is US$39), and Replit Core is US$20/month (US$18 billed annually). Cursor changes its plans often, so check its pricing page. They're also processing your code — including variable names, file paths, comments, and context — on US servers.
 
 If your code doesn't touch sensitive data and you're building general-purpose tools, these are fine. If you're writing scripts that query client databases or internal HR systems, you're creating the same compliance gap.
 
@@ -164,7 +164,7 @@ Sometimes the best tool for the job is American, and the Canadian alternative ei
 Here's how to use American tools responsibly if you have to:
 
 1. **Don't paste client data.** Strip identifying details before putting anything into a US-hosted tool. Client names become "Client A." Financial figures become ranges. Meeting transcripts get anonymised before you feed them to an AI for summary.
-2. **Check whether consent is needed.** If the data is sensitive and you're using a US tool to process it, consent and the cross-border rules may apply, and in Quebec a privacy impact assessment comes first. Check the law, or a lawyer, for your case, and document what you decided.
+2. **Be open with your clients.** Under the Privacy Commissioner's guidance, a transfer for processing usually needs no new consent if you use the information for the reason you collected it, but you should tell clients their information may be processed outside Canada. If a Quebec resident's information leaves Quebec, a privacy impact assessment comes first. Check the law, or a lawyer, for your case, and document what you decided.
 3. **Document your choices.** Keep a record of what tools you're using, why, and what risk assessment you did. If you're ever audited, "we didn't know" is not a defence. "We assessed the options, chose the best available tool, and documented our safeguards" is.
 4. **Revisit regularly.** The Canadian AI market is moving fast. A tool that doesn't exist today might launch in six months. Set a calendar reminder to check back.
 
