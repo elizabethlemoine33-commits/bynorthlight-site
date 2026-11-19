@@ -34,7 +34,7 @@ faq:
   - q: "How do I know if an AI tool stores data in Canada?"
     a: "Check the tool's data residency policy or privacy documentation: look for explicit statements about where data is processed and stored. Canadian tools like Augure and NorthMail state their Canadian hosting on their own sites. For US tools like ChatGPT or Google Workspace, assume data leaves Canada unless you've specifically configured Canadian residency (and verified it in your data processing agreement). Even then, a US company stays subject to US law."
   - q: "What should I do first if I want to use AI tools compliantly in my Canadian business?"
-    a: "Start by auditing what you're already using: identify any tools where staff might be pasting client data into US-hosted platforms. Then document your privacy practices: update your privacy policy to reflect AI tool usage, assess which tools need Canadian residency based on data sensitivity, and replace high-risk tools first (like general AI assistants and file storage). For everything else, strip identifying details before using US tools and document your choices."
+    a: "Start by auditing what you're already using: identify any tools where staff might be pasting client data into US-owned platforms. Then document your privacy practices: update your privacy policy to reflect AI tool usage, assess which tools need Canadian residency based on data sensitivity, and replace high-risk tools first (like general AI assistants and file storage). For everything else, strip identifying details before using US tools and document your choices."
 ---
 
 <div class="at-a-glance" role="note">
@@ -66,11 +66,11 @@ So I'm going to write it down.
 
 ## How Should You Choose AI Tools Based on Canadian Compliance Requirements?
 
-<div class="answer-block"><p>Choose AI tools by matching them to specific business tasks, checking their data residency honestly (Canadian, European, or American), and understanding what each location means for <a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/" rel="noopener">PIPEDA</a> and Law 25 compliance.</p></div>
+<div class="answer-block"><p>Choose AI tools by matching them to specific business tasks, checking their data residency and ownership honestly (Canadian, European, or American), and understanding what each location means for <a href="https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/" rel="noopener">PIPEDA</a> and Law 25 compliance.</p></div>
 
 This is not a ranked list of the twenty best AI tools for Canadian small businesses. Those lists exist everywhere, and they're all variations on the same American defaults with a vague closing line about "checking your compliance requirements."
 
-This list is organised by the job you actually need to do: taking meeting notes, drafting client communications, building internal tools, storing files. For each job, I'm naming 2–3 tools that work, flagging their data residency honestly (🇨🇦 Canadian-hosted, 🇪🇺 European, 🇺🇸 American), and telling you when the best tool for the job isn't Canadian yet and what that means for how you use it.
+This list is organised by the job you actually need to do: taking meeting notes, drafting client communications, building internal tools, storing files. For each job, I'm naming the tools I'd consider, flagging their data residency honestly (🇨🇦 Canadian-hosted, 🇪🇺 European, 🇺🇸 American), and telling you when the best tool for the job isn't Canadian yet and what that means for how you use it.
 
 Sometimes the honest recommendation is a Canadian tool. Sometimes it's an American one you need to use carefully. I'm going to say which is which, and why.
 
@@ -102,7 +102,7 @@ I've tried Augure (my longer take is in [Canadian Alternative to ChatGPT? What I
 
 If you're handling client data that falls under [PIPEDA](https://www.priv.gc.ca/en/privacy-topics/privacy-laws-in-canada/the-personal-information-protection-and-electronic-documents-act-pipeda/){:rel="noopener"} or Law 25, this is the honest first choice for a general-purpose AI assistant. The free tier exists (about 25 messages a day); Pro is CA$20/month, or CA$200 a year, with no message limits; Max is CA$80/month, or CA$800 a year, with four times Pro's weekly allowance and deep research agents. Prices are in Canadian dollars (checked Nov 19, 2026), and you can [read their sovereignty positioning here](https://augureai.ca/blog/augure-ai-canada){:rel="noopener"}.
 
-**Privacy-law flag:** Keeps client data in Canada if you use it within the Canadian-hosted environment, which removes the cross-border question. You still need to document your usage in your privacy policy.
+**Privacy-law flag:** If Augure's statements hold, this keeps client data in Canada when you use it within the Canadian-hosted environment, which removes the cross-border question. You still need to document your usage in your privacy policy.
 
 #### 🇺🇸 ChatGPT, Claude, Gemini: Free, with paid plans (current prices below)
 
@@ -120,13 +120,15 @@ Taking notes in client meetings is one of the highest-value uses of AI for small
 
 As of November 2026, there is no Canadian-hosted meeting transcription tool I can confidently recommend. Otter.ai, Fireflies, and Fathom are all US companies, so US law can reach your recordings wherever they are processed. If your meetings contain sensitive information, see the guidance below.
 
-<div class="callout-block"><p>If you need to transcribe meetings and the content is sensitive, your safest move is either taking manual notes or using a tool with explicit Canadian data residency and checking their DPA (data processing agreement). If no Canadian option exists yet, the honest answer is: you're choosing between convenience and compliance, and that's a decision you need to document.</p></div>
+<div class="callout-block"><p>If you need to transcribe meetings and the content is sensitive, your safest move is either taking manual notes or using a tool with Canadian data residency and, where possible, Canadian ownership, and checking their DPA (data processing agreement). If no Canadian option exists yet, the honest answer is: you're choosing between convenience and compliance, and that's a decision you need to document.</p></div>
+
+A practical middle path while no Canadian tool exists: take your own notes during the call, then dictate or type a short summary afterward with client names removed, and keep that summary instead of a recording.
 
 ### Voice Dictation (Getting Thoughts Out of Your Head)
 
 This is for getting words out of your brain and onto the page fast: emails, reports, documentation, anything where typing is the bottleneck.
 
-#### 🇺🇸 Wispr Flow: Free / Pro: US$12–15/month
+#### 🇺🇸 Wispr Flow: Free / Pro: US$12 to US$15/month
 
 I've tried [Wispr Flow](https://wisprflow.ai/){:rel="noopener"}. It works well: you can dictate anywhere on your computer, it transcribes in real time with solid accuracy, and it integrates across apps. Wispr is a US company, and its pricing page does not say where audio is processed. Treat your audio as reachable under US law either way.
 
@@ -158,7 +160,7 @@ If your code doesn't touch sensitive data and you're building general-purpose to
 
 ### File Storage & Email Infrastructure (The Foundation)
 
-This is foundational: where your files live and where your email is hosted. If you're using Google Workspace or Microsoft 365, your data is likely stored in the US unless you've explicitly configured Canadian residency (and even then, check your DPA).
+This is foundational: where your files live and where your email is hosted. If you're using Google Workspace or Microsoft 365, where your data is stored depends on your plan, your settings and your contract, so check your agreement and your data processing terms. Both are US companies, so US law can reach the data wherever it sits.
 
 #### 🇨🇦 NorthMail.ca: Canadian-hosted email and encrypted cloud storage
 
@@ -174,7 +176,7 @@ Sometimes the best tool for the job is American, and the Canadian alternative ei
 
 Here's how to use American tools responsibly if you have to:
 
-1. **Don't paste client data.** Strip identifying details before putting anything into a US-hosted tool. Client names become "Client A." Financial figures become ranges. Meeting transcripts get anonymised before you feed them to an AI for summary.
+1. **Don't paste client data.** Strip identifying details before putting anything into a US-owned tool. Client names become "Client A." Financial figures become ranges. Meeting transcripts get anonymised before you feed them to an AI for summary.
 2. **Be open with your clients.** Under the Privacy Commissioner's guidance, a transfer for processing usually needs no new consent if you use the information for the reason you collected it, but you should tell clients their information may be processed outside Canada. If a Quebec resident's information leaves Quebec, a privacy impact assessment comes first. Check the law, or a lawyer, for your case, and document what you decided.
 3. **Document your choices.** Keep a record of what tools you're using, why, and what risk assessment you did. If you're ever audited, "we didn't know" is not a defence. "We assessed the options, chose the best available tool, and documented our safeguards" is.
 4. **Revisit regularly.** The Canadian AI market is moving fast. A tool that doesn't exist today might launch in six months. Set a calendar reminder to check back.
