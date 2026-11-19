@@ -139,9 +139,9 @@ If you're writing code that references client databases, internal file structure
 
 Install from a terminal with `curl -fsSL https://augureai.ca/install.sh | sh` (read the script first, as with any install script). It runs on macOS and Linux, and on Windows through WSL. Every Augure plan includes it, Free included; an optional Ultra plan (C$200/month) is sized for full-time coding, and API keys are pay-per-use. Checked Nov 19, 2026.
 
-#### 🇺🇸 GitHub Copilot, Cursor, Replit — paid plans from about US$10/month
+#### 🇺🇸 GitHub Copilot, Cursor, Replit — paid plans from about US$8/month
 
-The American defaults in this category. They work. They're good. Prices checked Nov 19, 2026: GitHub Copilot Pro is US$10 per user per month (Pro+ is US$39), and Replit Core is US$20/month (US$18 billed annually). Cursor changes its plans often, so check its pricing page. They're also processing your code — including variable names, file paths, comments, and context — on US servers.
+The American defaults in this category. They work. They're good. Prices checked Nov 19, 2026: GitHub Copilot Pro is US$10 per user per month (Pro+ is US$39), and Replit Core is US$20/month (US$18 billed annually). Cursor lists Plus at US$8 a month (Grok models only), Premium at US$30 and Super at US$100, with third-party models billed separately; its plans change often, so check its pricing page. They're also processing your code — including variable names, file paths, comments, and context — on US servers.
 
 If your code doesn't touch sensitive data and you're building general-purpose tools, these are fine. If you're writing scripts that query client databases or internal HR systems, you're creating the same compliance gap.
 
