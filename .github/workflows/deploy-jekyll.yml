@@ -3,6 +3,11 @@ name: Deploy Jekyll site to GitHub Pages
 on:
   push:
     branches: [main]
+  # Rebuild once a year on Dec 16 (about 2:30 am in Halifax) so the TechBehemoths Awards widget,
+  # which stops being built after Dec 15 (see awards_vote_until in _config.yml), disappears on its own.
+  # Nothing is committed back; the site is rebuilt from main exactly as on a push.
+  schedule:
+    - cron: '30 6 16 12 *'
 
 permissions:
   contents: read

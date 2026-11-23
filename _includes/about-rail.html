@@ -18,9 +18,12 @@
     <a href="https://www.outsourceaccelerator.com/company/northlight-advisory-services/" target="_blank" rel="noopener">Outsource Accelerator</a>
     <a href="https://techbehemoths.com/company/northlight-advisory-services" target="_blank" rel="noopener" data-techbehemoths-verification>Verified on TechBehemoths</a>
   </div>
+  {% assign built_on = site.time | date: '%Y-%m-%d' %}
+  {% if built_on <= site.awards_vote_until %}
   <div class="ab-vote" style="margin-top:16px;" data-tb-embedded-award data-tb-embedded-award-id="northlight-advisory-services" data-tb-embedded-award-edition="2026" data-tb-embedded-award-style="compact" data-tb-embedded-award-theme="dark" data-tb-embedded-award-position="inline" data-tb-embedded-award-service="ai-strategy">
     <a href="https://techbehemoths.com/awards-2026/vote/northlight-advisory-services?service=ai-strategy" target="_blank" rel="noopener">Vote for Northlight Advisory Services in the TechBehemoths Awards 2026</a>
   </div>
+  {% endif %}
   <div class="ab-desk-only">
   {% include about-rail-extras.html %}
   </div>
