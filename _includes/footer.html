@@ -1,11 +1,14 @@
 <div class="footer-border">
   <footer>
+    {% assign built_on = site.time | date: '%Y-%m-%d' %}
+    {% if built_on <= site.awards_vote_until %}
     {% unless page.url contains "/vault" or page.url contains "/meetings" %}
     <div class="footer-vote" style="margin-bottom:24px;" data-tb-embedded-award data-tb-embedded-award-id="northlight-advisory-services" data-tb-embedded-award-edition="2026" data-tb-embedded-award-style="bar" data-tb-embedded-award-theme="dark" data-tb-embedded-award-service="ai-strategy">
       <a href="https://techbehemoths.com/awards-2026/vote/northlight-advisory-services?service=ai-strategy" target="_blank" rel="noopener">Vote for Northlight Advisory Services in the TechBehemoths Awards 2026</a>
     </div>
     <script async src="https://techbehemoths.com/scripts/embedded/awards.js"></script>
     {% endunless %}
+    {% endif %}
     <div class="footer-inner">
       <div class="footer-left">
         <p class="footer-copy">© 2026 Northlight Advisory Services</p>

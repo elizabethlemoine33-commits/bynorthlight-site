@@ -38,3 +38,8 @@ future: true
 
 # Don't show drafts
 show_drafts: false
+
+# TechBehemoths Awards vote widget: shown on pages built up to and including this date, then not built at all
+# (the privacy policy says it is removed after the awards close). The deploy workflow also rebuilds the site
+# on Dec 16 so it disappears without anyone having to push.
+awards_vote_until: '2026-12-15'
