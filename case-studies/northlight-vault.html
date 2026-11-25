@@ -400,8 +400,8 @@ permalink: /case-studies/northlight-vault
           <span class="stat-label">Cloud services unified</span>
         </div>
         <div class="stat-block">
-          <span class="stat-value">70+</span>
-          <span class="stat-label">Downloads, as of October 2026</span>
+          <span class="stat-value">{{ site.data.vault.downloads }}</span>
+          <span class="stat-label">Downloads, as of {{ site.data.vault.as_of }}</span>
         </div>
         <div class="stat-block">
           <span class="stat-value">Free</span>
@@ -518,7 +518,7 @@ permalink: /case-studies/northlight-vault
             <div class="workflow-mockup">
               <div class="check-row"><span class="check-icon check-yes">✓</span><span class="check-text">Browse files across Google Drive, OneDrive, and Dropbox</span></div>
               <div class="check-row"><span class="check-icon check-yes">✓</span><span class="check-text">Open files in your local default applications</span></div>
-              <div class="check-row"><span class="check-icon check-yes">✓</span><span class="check-text">Search across connected accounts</span></div>
+              <div class="check-row"><span class="check-icon check-yes">✓</span><span class="check-text">Search across connected accounts, and filter results by type, date and account</span></div>
               <div class="check-row"><span class="check-icon check-yes">✓</span><span class="check-text">Stay signed in between sessions</span></div>
               <div style="height:1px;background:var(--border);margin:12px 0;"></div>
               <div class="check-row"><span class="check-icon check-no">✕</span><span class="check-text">Move, rename, delete, or modify any files</span></div>
@@ -596,9 +596,10 @@ permalink: /case-studies/northlight-vault
     <div class="page-wrap">
       <section class="content-section" aria-labelledby="results-heading">
         <h2 class="section-label" id="results-heading">Results</h2>
-        <div class="answer-block"><p>As of October 2026 the installer has been downloaded more than 70 times, counted by GitHub, with no promotion.</p></div>
-        <p class="cs-lead">As of October 2026 the installer has been downloaded more than 70 times, counted by GitHub, with no promotion. That number includes repeat downloads and cannot show who installed the app or kept using it. By design, Vault sends nothing back to us, so we know the download count and little else.</p>
-        <p class="cs-lead">We haven't asked for enough feedback yet, nor have we received any (negative) feedback. Version 1.0.1 adds a feedback request inside the app.</p>
+        <div class="answer-block"><p>As of {{ site.data.vault.as_of }} the installer has been downloaded {{ site.data.vault.downloads }} times across {{ site.data.vault.updates_since_launch | plus: 1 }} releases, counted by GitHub, with no promotion.</p></div>
+        <p class="cs-lead">As of {{ site.data.vault.as_of }} the installer has been downloaded {{ site.data.vault.downloads }} times across {{ site.data.vault.updates_since_launch | plus: 1 }} releases, counted by GitHub, with no promotion. That number includes repeat downloads and cannot show who installed the app or kept using it. By design, Vault sends nothing back to us, so we know the download count and little else. The count is refreshed once a month.</p>
+        <p class="cs-lead">Since launch I have kept improving it. The latest version is {{ site.data.vault.latest_version }}, released {{ site.data.vault.latest_released }}. Version 1.0.4 added filters for search results (by file type, date modified and account), more results per search, and a readable What's New window. Version 1.0.5 made the text easier to read.</p>
+        <p class="cs-lead">We haven't asked for enough feedback yet. Since version 1.0.2, Vault asks for a review on G2, because that is the one way we can hear from people who use it.</p>
       </section>
     </div>
 
@@ -634,9 +635,9 @@ permalink: /case-studies/northlight-vault
           <div class="pmi-row"><span class="pmi-label">Project</span><span class="pmi-value">Northlight Vault: Cloud File Browser for Windows</span></div>
           <div class="pmi-row"><span class="pmi-label">Role</span><span class="pmi-value">Designer, Developer, and Product Owner (solo)</span></div>
           <div class="pmi-row"><span class="pmi-label">Industry</span><span class="pmi-value">Technology · Productivity Software</span></div>
-          <div class="pmi-row"><span class="pmi-label">Timeline</span><span class="pmi-value">Version 1.0.0 released May 2026. Version 1.0.1 released October 2026.</span></div>
+          <div class="pmi-row"><span class="pmi-label">Timeline</span><span class="pmi-value">Version 1.0.0 released May 2026. Latest version, {{ site.data.vault.latest_version }}, released {{ site.data.vault.latest_released }} ({{ site.data.vault.updates_since_launch }} updates since launch).</span></div>
           <div class="pmi-row"><span class="pmi-label">Scope</span><span class="pmi-value">Windows desktop application (Electron + Node.js) integrating three cloud storage APIs via OAuth 2.0. Read-only by design. No server-side infrastructure. Free distribution via direct download.</span></div>
-          <div class="pmi-row"><span class="pmi-label">Outcome</span><span class="pmi-value">A free Windows download with more than 70 downloads as of October 2026. Solves a daily friction point for multi-cloud users without requiring write access, server trust, or a subscription. Privacy practices are documented on the product page.</span></div>
+          <div class="pmi-row"><span class="pmi-label">Outcome</span><span class="pmi-value">A free Windows download with {{ site.data.vault.downloads }} downloads as of {{ site.data.vault.as_of }}. Solves a daily friction point for multi-cloud users without requiring write access, server trust, or a subscription. Privacy practices are documented on the product page.</span></div>
         </div>
       </section>
     </div>
