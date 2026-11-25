@@ -1,0 +1,61 @@
+name: Vault download stats
+
+# Once a month (and on demand) read the public GitHub release data for Northlight Vault, refresh
+# _data/vault.yml, and open a pull request. The Vault case study page reads that file, so merging
+# the pull request updates the download count, latest version and "as of" month together.
+# No secrets: the release data is public. Never pushes to main; a person merges the pull request.
+# Needs Settings > Actions > General > "Allow GitHub Actions to create and approve pull requests".
+
+on:
+  schedule:
+    - cron: '0 13 1 * *'   # 1st of each month, about 9 am in Halifax
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: vault-stats
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Read the release data
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/update_vault_stats.py
+
+      - name: Open a pull request if the numbers changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- _data/vault.yml; then
+            echo "No change to the Vault numbers; nothing to do."
+            exit 0
+          fi
+          BRANCH="vault-stats/$(date -u +%Y-%m-%d)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add _data/vault.yml
+          git commit -m "Vault case study: refresh download count and latest version"
+          git push origin "$BRANCH"
+          {
+            echo "Monthly refresh of the numbers on the Vault case study (case-studies/northlight-vault.html)."
+            echo
+            echo '```'
+            git diff HEAD~1 -- _data/vault.yml | grep -E '^[+-][^+-]' || true
+            echo '```'
+            echo
+            echo "Downloads are counted by GitHub: repeat downloads included, people not counted."
+            echo "Merging this updates the page's download count, latest version and \"as of\" month."
+          } > body.md
+          gh pr create --base main --head "$BRANCH" \
+            --title "Vault case study: refresh download count ($(date -u +%B\ %Y))" \
+            --body-file body.md

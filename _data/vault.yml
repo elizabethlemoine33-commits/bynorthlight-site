@@ -1,0 +1,15 @@
+# Written by .github/scripts/update_vault_stats.py (monthly workflow). Do not edit by hand:
+# the next run overwrites it. Read by case-studies/northlight-vault.html.
+downloads: 90
+as_of: "November 2026"
+latest_version: "1.0.7"
+latest_released: "November 2026"
+updates_since_launch: 6
+per_release:
+  - { version: "1.0.0", released: "2026-05-19", downloads: 75 }
+  - { version: "1.0.1", released: "2026-10-07", downloads: 4 }
+  - { version: "1.0.2", released: "2026-11-03", downloads: 3 }
+  - { version: "1.0.3", released: "2026-11-03", downloads: 2 }
+  - { version: "1.0.4", released: "2026-11-04", downloads: 3 }
+  - { version: "1.0.5", released: "2026-11-19", downloads: 3 }
+  - { version: "1.0.7", released: "2026-11-25", downloads: 0 }
